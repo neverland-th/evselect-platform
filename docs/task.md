@@ -1,0 +1,22 @@
+- `[/]` Phase 1: Foundation & Setup
+  - `[x]` Initialize Next.js project with App Router, TypeScript, and Tailwind
+  - `[x]` Set up Prisma ORM and configure PostgreSQL connection
+  - `[x]` Define UI layout shell (Sidebar navigation, Header, Main content area)
+- `[/]` Phase 2: Database Schema (Prisma)
+  - `[x]` Create Category, Vehicle, Product, Batch, and Fitment models
+  - `[x]` Generate and push Prisma schema
+- `[/]` Phase 3: Taxonomy & Categories UI
+  - `[x]` Build CRUD interface for Category mapping
+  - `[x]` Build CRUD interface for Vehicle taxonomy
+  - `[x]` Seed Thai market vehicle models
+- `[/]` Phase 4: Sourcing & Product UI
+  - `[x]` Build Product creation/edit interface
+  - `[x]` Build Batch management interface
+- `[/]` Phase 5: The Fitment Matrix UI
+  - `[x]` Build Fitment Matrix table/view
+  - `[x]` Implement status dropdowns and mutation API
+- `[/]` Phase 6: CSV Export Engine
+  - `[x]` Build API routes to compile data
+  - `[x]` Format Shopee mass-upload CSV
+  - `[x]` Format WooCommerce mass-upload CSV
+  - `[x]` Add Download buttons to UI
