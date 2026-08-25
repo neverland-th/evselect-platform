@@ -2,16 +2,32 @@ import { prisma } from '@/lib/prisma';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const activeBatches = await prisma.batch.findMany({
-    where: { status: 'ACTIVE' },
+  type ActiveBatch = Awaited<ReturnType<typeof prisma.batch.findMany<{
+    where: { status: 'ACTIVE' };
     include: {
-      product: { include: { category: true } },
+      product: { include: { category: true } };
       fitments: {
-        where: { status: 'PASSED' },
-        include: { vehicle: true }
+        where: { status: 'PASSED' };
+        include: { vehicle: true };
+      };
+    };
+  }>>>[number];
+
+  let activeBatches: ActiveBatch[] = [];
+  try {
+    activeBatches = await prisma.batch.findMany({
+      where: { status: 'ACTIVE' },
+      include: {
+        product: { include: { category: true } },
+        fitments: {
+          where: { status: 'PASSED' },
+          include: { vehicle: true }
+        }
       }
-    }
-  });
+    });
+  } catch {
+    activeBatches = [];
+  }
 
   const headers = ['SKU', 'Name', 'Description', 'Categories', 'Meta: fitment_vehicles'];
   

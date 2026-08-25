@@ -7,10 +7,20 @@ const STATUSES = ['SHORTLISTED', 'SAMPLE_ORDERED', 'SAMPLE_IN_TRANSIT', 'SAMPLE_
 
 export default async function ProductDetailsPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
-  const product = await prisma.product.findUnique({
-    where: { id: resolvedParams.id },
-    include: { category: true, batches: { orderBy: { createdAt: 'desc' } } }
-  });
+  type ProductWithBatch = Awaited<ReturnType<typeof prisma.product.findUnique<{
+    where: { id: string };
+    include: { category: true; batches: { orderBy: { createdAt: 'desc' } } };
+  }>>>;
+
+  let product: ProductWithBatch = null;
+  try {
+    product = await prisma.product.findUnique({
+      where: { id: resolvedParams.id },
+      include: { category: true, batches: { orderBy: { createdAt: 'desc' } } }
+    });
+  } catch {
+    product = null;
+  }
 
   if (!product) notFound();
 

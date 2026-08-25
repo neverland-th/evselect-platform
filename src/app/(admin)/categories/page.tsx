@@ -2,9 +2,14 @@ import { prisma } from '@/lib/prisma';
 import { createCategory, deleteCategory } from './actions';
 
 export default async function CategoriesPage() {
-  const categories = await prisma.category.findMany({
-    orderBy: { createdAt: 'desc' }
-  });
+  let categories: { id: string; name: string; shopeeId: string | null; wooId: string | null }[] = [];
+  try {
+    categories = await prisma.category.findMany({
+      orderBy: { createdAt: 'desc' }
+    });
+  } catch {
+    categories = [];
+  }
 
   return (
     <div className="p-8 max-w-4xl mx-auto">

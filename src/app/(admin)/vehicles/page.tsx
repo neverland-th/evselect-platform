@@ -2,9 +2,14 @@ import { prisma } from '@/lib/prisma';
 import { createVehicle, deleteVehicle, seedVehicles } from './actions';
 
 export default async function VehiclesPage() {
-  const vehicles = await prisma.vehicle.findMany({
-    orderBy: [{ make: 'asc' }, { model: 'asc' }, { year: 'asc' }, { variant: 'asc' }]
-  });
+  let vehicles: { id: string; make: string; model: string; year: string; variant: string }[] = [];
+  try {
+    vehicles = await prisma.vehicle.findMany({
+      orderBy: [{ make: 'asc' }, { model: 'asc' }, { year: 'asc' }, { variant: 'asc' }]
+    });
+  } catch {
+    vehicles = [];
+  }
 
   return (
     <div className="p-8 max-w-5xl mx-auto">

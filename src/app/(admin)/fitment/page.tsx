@@ -4,18 +4,33 @@ import { updateFitment } from './actions';
 const FITMENT_STATUSES = ['UNVERIFIED', 'TEST_SCHEDULED', 'PASSED', 'PASSED_WITH_MODIFICATION', 'FAILED', 'RETEST_REQUIRED'];
 
 export default async function FitmentPage() {
-  const activeBatches = await prisma.batch.findMany({
-    where: { status: { in: ['SAMPLE_RECEIVED', 'ACTIVE', 'RETEST_REQUIRED'] } },
-    include: {
-      product: true,
-      fitments: true
-    },
-    orderBy: { createdAt: 'desc' }
-  });
+  type AdminBatch = Awaited<ReturnType<typeof prisma.batch.findMany<{
+    where: { status: { in: ['SAMPLE_RECEIVED', 'ACTIVE', 'RETEST_REQUIRED'] } };
+    include: { product: true; fitments: true };
+  }>>>[number];
 
-  const vehicles = await prisma.vehicle.findMany({
-    orderBy: [{ make: 'asc' }, { model: 'asc' }, { year: 'asc' }, { variant: 'asc' }]
-  });
+  type AdminVehicle = Awaited<ReturnType<typeof prisma.vehicle.findMany>>[number];
+
+  let activeBatches: AdminBatch[] = [];
+  let vehicles: AdminVehicle[] = [];
+
+  try {
+    activeBatches = await prisma.batch.findMany({
+      where: { status: { in: ['SAMPLE_RECEIVED', 'ACTIVE', 'RETEST_REQUIRED'] } },
+      include: {
+        product: true,
+        fitments: true
+      },
+      orderBy: { createdAt: 'desc' }
+    });
+
+    vehicles = await prisma.vehicle.findMany({
+      orderBy: [{ make: 'asc' }, { model: 'asc' }, { year: 'asc' }, { variant: 'asc' }]
+    });
+  } catch {
+    activeBatches = [];
+    vehicles = [];
+  }
 
   return (
     <div className="p-8 max-w-7xl mx-auto">

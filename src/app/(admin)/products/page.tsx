@@ -3,12 +3,22 @@ import Link from 'next/link';
 import { createProduct } from './actions';
 
 export default async function ProductsPage() {
-  const products = await prisma.product.findMany({
-    include: { category: true, _count: { select: { batches: true } } },
-    orderBy: { createdAt: 'desc' }
-  });
+  type AdminProduct = Awaited<ReturnType<typeof prisma.product.findMany<{
+    include: { category: true; _count: { select: { batches: true } } }
+  }>>>[number];
 
-  const categories = await prisma.category.findMany({ orderBy: { name: 'asc' } });
+  let products: AdminProduct[] = [];
+  let categories: { id: string; name: string }[] = [];
+  try {
+    products = await prisma.product.findMany({
+      include: { category: true, _count: { select: { batches: true } } },
+      orderBy: { createdAt: 'desc' }
+    });
+    categories = await prisma.category.findMany({ orderBy: { name: 'asc' } });
+  } catch {
+    products = [];
+    categories = [];
+  }
 
   return (
     <div className="p-8 max-w-6xl mx-auto">

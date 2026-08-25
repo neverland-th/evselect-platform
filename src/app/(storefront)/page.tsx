@@ -22,10 +22,15 @@ import {
 export const revalidate = 0; // Dynamic server rendering
 
 export default async function StorefrontPage() {
-  // Fetch vehicles from database
-  let dbVehicles = await prisma.vehicle.findMany({
-    orderBy: [{ make: 'asc' }, { model: 'asc' }, { variant: 'asc' }]
-  });
+  // Fetch vehicles from database — graceful fallback if DB unavailable (e.g. on Vercel)
+  let dbVehicles: { id: string; make: string; model: string; year: string; variant: string }[] = [];
+  try {
+    dbVehicles = await prisma.vehicle.findMany({
+      orderBy: [{ make: 'asc' }, { model: 'asc' }, { variant: 'asc' }]
+    });
+  } catch {
+    // DB not available — use fallback data below
+  }
 
   // Fallback initial Thai EV vehicles if database hasn't been seeded yet
   const defaultVehicles: VehicleOption[] = [
@@ -49,26 +54,23 @@ export default async function StorefrontPage() {
     ? dbVehicles.map(v => ({ id: v.id, make: v.make, model: v.model, year: v.year, variant: v.variant }))
     : defaultVehicles;
 
-  // Fetch products and active batches with verified fitments
-  const dbProducts = await prisma.product.findMany({
+  // Fetch products and active batches with verified fitments — graceful fallback if DB unavailable
+  type DbProduct = Awaited<ReturnType<typeof prisma.product.findMany<{
     include: {
-      category: true,
+      category: true;
       batches: {
-        where: { status: { in: ['ACTIVE', 'SAMPLE_RECEIVED'] } },
+        where: { status: { in: ['ACTIVE', 'SAMPLE_RECEIVED'] } };
         include: {
           fitments: {
-            where: { status: 'PASSED' },
-            include: { vehicle: true }
-          }
-        }
-      }
-    },
-    orderBy: { createdAt: 'desc' }
-  });
+            where: { status: 'PASSED' };
+            include: { vehicle: true };
+          };
+        };
+      };
+    };
+  }>>>[number];
 
-  // Transform products for the storefront
-  let products: StorefrontProduct[] = dbProducts.map((p) => {
-    // Collect all passed fitment vehicles from active batches
+  function transformProduct(p: DbProduct): StorefrontProduct {
     const verifiedVehiclesMap = new Map<string, { vehicleId: string; make: string; model: string; year: string; variant: string; status: string }>();
     let representativeCost: number | null = null;
 
@@ -89,7 +91,6 @@ export default async function StorefrontPage() {
     });
 
     const costVal = representativeCost || 450;
-    // Calculate retail THB price estimation if not defined (approx 2.2x cost or standard retail)
     const priceThb = Math.round((costVal * 2.2) / 10) * 10 || 990;
 
     return {
@@ -104,7 +105,30 @@ export default async function StorefrontPage() {
       priceThb,
       verifiedVehicles: Array.from(verifiedVehiclesMap.values())
     };
-  });
+  }
+
+  let dbProducts: DbProduct[] = [];
+  try {
+    dbProducts = await prisma.product.findMany({
+      include: {
+        category: true,
+        batches: {
+          where: { status: { in: ['ACTIVE', 'SAMPLE_RECEIVED'] } },
+          include: {
+            fitments: {
+              where: { status: 'PASSED' },
+              include: { vehicle: true }
+            }
+          }
+        }
+      },
+      orderBy: { createdAt: 'desc' }
+    });
+  } catch {
+    // DB not available — products will fall through to curated demo data below
+  }
+
+  let products: StorefrontProduct[] = dbProducts.map(transformProduct);
 
   // If no products in DB yet, provide realistic curated starter accessories
   if (products.length === 0) {
