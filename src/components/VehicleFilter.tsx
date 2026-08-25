@@ -149,20 +149,20 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
       {/* Vehicle Finder Filter Card */}
       <div 
         id="vehicle-finder"
-        className="relative bg-gradient-to-b from-zinc-900 via-zinc-900/90 to-zinc-950 rounded-2xl p-6 md:p-8 border border-zinc-800 shadow-[0_0_50px_-10px_rgba(0,0,0,0.8)] overflow-hidden"
+        className="relative bg-white rounded-3xl p-6 md:p-8 border border-slate-200/90 shadow-md overflow-hidden"
       >
         <div className="absolute -top-24 -right-24 w-72 h-72 bg-lime-500/10 rounded-full blur-3xl pointer-events-none" />
         
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 border-b border-zinc-800 pb-5">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 border-b border-slate-100 pb-5">
           <div>
-            <div className="flex items-center gap-2 text-lime-400 font-mono text-xs font-semibold uppercase tracking-wider mb-1">
-              <Car className="w-4 h-4" />
+            <div className="flex items-center gap-2 text-lime-700 font-mono text-xs font-semibold uppercase tracking-wider mb-1">
+              <Car className="w-4 h-4 text-lime-600" />
               <span>ระบบค้นหาอุปกรณ์เสริมตรงรุ่น EV สเปกไทย</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
               เลือกรุ่นรถของคุณ เพื่อแสดงสินค้าที่ผ่านการทดสอบตรงรุ่น 100%
             </h3>
-            <p className="text-xs md:text-sm text-zinc-400 mt-1">
+            <p className="text-xs md:text-sm text-slate-600 mt-1">
               ระบบจะแสดงเฉพาะสินค้าที่ผ่านการทดสอบบนรถพวงมาลัยขวาในไทย ปลอดภัย ใส่ได้พอดีแน่นอน
             </p>
           </div>
@@ -170,7 +170,7 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
           {isFiltered && (
             <button
               onClick={handleReset}
-              className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white bg-zinc-800/80 hover:bg-zinc-800 px-3 py-1.5 rounded-lg border border-zinc-700 transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-300 transition-colors font-medium"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>ล้างตัวกรอง</span>
@@ -182,13 +182,13 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Make Dropdown */}
           <div>
-            <label className="block text-xs font-medium text-zinc-400 mb-1.5">
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               1. ยี่ห้อรถ (Brand)
             </label>
             <select
               value={selectedMake}
               onChange={(e) => handleMakeChange(e.target.value)}
-              className="w-full bg-zinc-950 border border-zinc-700/80 text-white rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 transition-colors font-medium"
+              className="w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-300 text-slate-900 rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-lime-600 focus:ring-1 focus:ring-lime-600 transition-colors font-medium shadow-xs"
             >
               <option value="ALL">ทุกยี่ห้อ (BYD, Tesla, Zeekr...)</option>
               {makes.map((make) => (
@@ -201,14 +201,14 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
           {/* Model Dropdown */}
           <div>
-            <label className="block text-xs font-medium text-zinc-400 mb-1.5">
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               2. รุ่นรถ (Model)
             </label>
             <select
               value={selectedModel}
               onChange={(e) => handleModelChange(e.target.value)}
               disabled={selectedMake === 'ALL' && models.length === 0}
-              className="w-full bg-zinc-950 border border-zinc-700/80 text-white rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 transition-colors disabled:opacity-50 font-medium"
+              className="w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-300 text-slate-900 rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-lime-600 focus:ring-1 focus:ring-lime-600 transition-colors disabled:opacity-50 font-medium shadow-xs"
             >
               <option value="ALL">
                 {selectedMake === 'ALL' ? 'ทุกรุ่น' : `ทุกรุ่นของ ${selectedMake}`}
@@ -223,14 +223,14 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
           {/* Variant / Trim Dropdown */}
           <div>
-            <label className="block text-xs font-medium text-zinc-400 mb-1.5">
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               3. สเปก / รุ่นย่อยในไทย (Variant)
             </label>
             <select
               value={selectedVariant}
               onChange={(e) => setSelectedVariant(e.target.value)}
               disabled={variants.length === 0}
-              className="w-full bg-zinc-950 border border-zinc-700/80 text-white rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 transition-colors disabled:opacity-50 font-medium"
+              className="w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-300 text-slate-900 rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-lime-600 focus:ring-1 focus:ring-lime-600 transition-colors disabled:opacity-50 font-medium shadow-xs"
             >
               <option value="ALL">ทุกรุ่นย่อยในไทย</option>
               {variants.map((v) => (
@@ -243,42 +243,42 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
           {/* Search Box */}
           <div>
-            <label className="block text-xs font-medium text-zinc-400 mb-1.5">
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               4. ค้นหาชื่อสินค้า / SKU
             </label>
             <div className="relative">
-              <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-zinc-500" />
+              <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="ถาดคอนโซล, พรม, ม่านบังแดด..."
-                className="w-full bg-zinc-950 border border-zinc-700/80 text-white rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-lime-500 focus:ring-1 focus:ring-lime-500 transition-colors placeholder:text-zinc-600"
+                className="w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-300 text-slate-900 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-lime-600 focus:ring-1 focus:ring-lime-600 transition-colors placeholder:text-slate-400 shadow-xs"
               />
             </div>
           </div>
         </div>
 
         {/* Selected Vehicle Badge Status */}
-        <div className="mt-5 pt-4 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="mt-5 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2">
-            <span className="text-zinc-500">รุ่นรถที่กำลังเลือก:</span>
+            <span className="text-slate-500 font-medium">รุ่นรถที่กำลังเลือก:</span>
             {selectedMake !== 'ALL' || selectedModel !== 'ALL' || selectedVariant !== 'ALL' ? (
-              <span className="inline-flex items-center gap-1.5 bg-lime-950/80 text-lime-400 border border-lime-800/60 font-semibold px-2.5 py-1 rounded-md">
-                <CheckCircle2 className="w-3.5 h-3.5 text-lime-400" />
+              <span className="inline-flex items-center gap-1.5 bg-lime-50 text-lime-800 border border-lime-300 font-semibold px-2.5 py-1 rounded-md">
+                <CheckCircle2 className="w-3.5 h-3.5 text-lime-600" />
                 <span>
                   {selectedMake !== 'ALL' ? selectedMake : ''} {selectedModel !== 'ALL' ? selectedModel : ''} {selectedVariant !== 'ALL' ? `• ${selectedVariant}` : ''}
                 </span>
               </span>
             ) : (
-              <span className="text-zinc-400 bg-zinc-800/60 px-2 py-0.5 rounded">
+              <span className="text-slate-600 bg-slate-100 px-2 py-0.5 rounded font-medium">
                 แสดงสินค้าสำหรับรถทุกรุ่น
               </span>
             )}
           </div>
 
-          <div className="text-zinc-400">
-            พบสินค้าตรงรุ่น <strong className="text-white font-mono">{filteredProducts.length}</strong> รายการ
+          <div className="text-slate-500">
+            พบสินค้าตรงรุ่น <strong className="text-slate-900 font-mono font-bold">{filteredProducts.length}</strong> รายการ
           </div>
         </div>
       </div>
@@ -286,8 +286,8 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
       {/* Category Pills Filter */}
       {categories.length > 1 && (
         <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-          <span className="text-xs text-zinc-500 font-medium shrink-0 flex items-center gap-1 mr-1">
-            <Tag className="w-3.5 h-3.5" /> หมวดหมู่:
+          <span className="text-xs text-slate-500 font-medium shrink-0 flex items-center gap-1 mr-1">
+            <Tag className="w-3.5 h-3.5 text-slate-400" /> หมวดหมู่:
           </span>
           {categories.map((cat) => (
             <button
@@ -295,8 +295,8 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
               onClick={() => setActiveCategory(cat)}
               className={`text-xs px-3.5 py-1.5 rounded-full font-medium transition-all shrink-0 ${
                 activeCategory === cat
-                  ? 'bg-lime-500 text-black shadow-[0_0_15px_-2px_rgba(132,204,22,0.5)] font-bold'
-                  : 'bg-zinc-900/80 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800'
+                  ? 'bg-lime-500 text-black shadow-xs font-bold'
+                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200'
               }`}
             >
               {cat === 'ALL' ? 'ทั้งหมด (All Categories)' : cat}
@@ -309,30 +309,30 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
       <div id="products">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
               <span>รายการอุปกรณ์เสริมผ่านการทดสอบตรงรุ่น</span>
-              <span className="text-xs font-mono font-normal bg-zinc-800 text-lime-400 border border-lime-800/40 px-2.5 py-0.5 rounded-full">
+              <span className="text-xs font-mono font-bold bg-lime-50 text-lime-700 border border-lime-200 px-2.5 py-0.5 rounded-full">
                 QC สเปกไทย
               </span>
             </h2>
-            <p className="text-sm text-zinc-400 mt-0.5">
+            <p className="text-sm text-slate-600 mt-0.5">
               มั่นใจได้ 100% ใส่ได้พอดี ไม่ติดขัด พร้อมสั่งซื้อบน Shopee หรือทักแชทสั่งตรง
             </p>
           </div>
         </div>
 
         {filteredProducts.length === 0 ? (
-          <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-12 text-center">
-            <div className="w-16 h-16 bg-zinc-800/80 text-zinc-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-12 text-center">
+            <div className="w-16 h-16 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4">
               <Car className="w-8 h-8" />
             </div>
-            <h4 className="text-lg font-bold text-white mb-1">ไม่พบสินค้าที่ตรงกับเงื่อนไขที่เลือก</h4>
-            <p className="text-sm text-zinc-400 max-w-md mx-auto mb-6">
+            <h4 className="text-lg font-bold text-slate-900 mb-1">ไม่พบสินค้าที่ตรงกับเงื่อนไขที่เลือก</h4>
+            <p className="text-sm text-slate-600 max-w-md mx-auto mb-6">
               ทางทีมงานอาจกำลังอยู่ในขั้นตอนการทดสอบสำหรับรุ่นรถนี้ หรือไม่มีสินค้าตรงกับคำค้นหา
             </p>
             <button
               onClick={handleReset}
-              className="inline-flex items-center gap-2 bg-lime-500 text-black text-xs font-bold px-4 py-2 rounded-lg hover:bg-lime-400 transition-colors"
+              className="inline-flex items-center gap-2 bg-lime-500 text-black text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-lime-400 transition-colors shadow-xs"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>แสดงสินค้าทั้งหมด</span>
@@ -343,11 +343,11 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="group relative bg-zinc-900/60 hover:bg-zinc-900/90 border border-zinc-800 hover:border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)]"
+                className="group relative bg-white hover:bg-white border border-slate-200 hover:border-slate-300 rounded-3xl overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-xs hover:shadow-xl"
               >
                 <div>
                   {/* Product Image */}
-                  <div className="relative w-full h-48 sm:h-52 bg-zinc-950 overflow-hidden border-b border-zinc-800/80">
+                  <div className="relative w-full h-48 sm:h-52 bg-slate-100 overflow-hidden border-b border-slate-100">
                     {product.imageUrl ? (
                       <Image
                         src={product.imageUrl}
@@ -357,19 +357,19 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-zinc-900/80 text-zinc-600">
+                      <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-400">
                         <Car className="w-12 h-12 stroke-[1.5]" />
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-black/30 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-black/10 pointer-events-none" />
 
                     {/* Overlay Badges */}
                     <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
-                      <span className="text-[11px] font-mono font-semibold uppercase tracking-wider bg-zinc-900/90 backdrop-blur-md text-zinc-200 px-2.5 py-1 rounded-md border border-zinc-700/80 shadow-sm">
+                      <span className="text-[11px] font-mono font-semibold uppercase tracking-wider bg-white/95 backdrop-blur-md text-slate-800 px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-xs">
                         {product.categoryName}
                       </span>
-                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-lime-400 bg-black/80 backdrop-blur-md border border-lime-800/80 px-2.5 py-1 rounded-full shadow-sm">
-                        <ShieldCheck className="w-3.5 h-3.5 text-lime-400" />
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-black bg-lime-400 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
+                        <ShieldCheck className="w-3.5 h-3.5 text-black" />
                         <span>ผ่านทดสอบตรงรุ่น</span>
                       </span>
                     </div>
@@ -377,23 +377,23 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
                   <div className="p-5 sm:p-6 pb-2">
                     {/* Title & SKU */}
-                    <h3 className="text-lg font-bold text-white group-hover:text-lime-400 transition-colors leading-snug mb-1">
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-lime-700 transition-colors leading-snug mb-1">
                       {product.title}
                     </h3>
-                    <p className="text-[11px] font-mono text-zinc-500 mb-3">
+                    <p className="text-[11px] font-mono text-slate-400 mb-3">
                       รหัสสินค้า: {product.sku}
                     </p>
 
                     {/* Description */}
                     {product.description && (
-                      <p className="text-xs text-zinc-400 line-clamp-2 leading-relaxed mb-4">
+                      <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
                         {product.description}
                       </p>
                     )}
 
                     {/* Verified Compatible Vehicles List */}
-                    <div className="space-y-1.5 mb-4 pt-3 border-t border-zinc-800/80">
-                      <span className="text-[10px] uppercase font-semibold text-zinc-500 tracking-wider block">
+                    <div className="space-y-1.5 mb-4 pt-3 border-t border-slate-100">
+                      <span className="text-[10px] uppercase font-semibold text-slate-400 tracking-wider block">
                         รองรับกับรุ่นรถสเปกไทย:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
@@ -401,14 +401,14 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                           product.verifiedVehicles.map((v) => (
                             <span
                               key={v.vehicleId}
-                              className="inline-flex items-center gap-1 text-[11px] bg-zinc-800/90 text-zinc-300 border border-zinc-700/60 px-2 py-0.5 rounded"
+                              className="inline-flex items-center gap-1 text-[11px] bg-slate-100 text-slate-700 border border-slate-200 px-2 py-0.5 rounded-md font-medium"
                             >
-                              <span className="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
+                              <span className="w-1.5 h-1.5 rounded-full bg-lime-500"></span>
                               <span>{v.make} {v.model} ({v.variant})</span>
                             </span>
                           ))
                         ) : (
-                          <span className="text-[11px] text-zinc-500 italic">อุปกรณ์เสริมสำหรับรถ EV ทั่วไป</span>
+                          <span className="text-[11px] text-slate-400 italic">อุปกรณ์เสริมสำหรับรถ EV ทั่วไป</span>
                         )}
                       </div>
                     </div>
@@ -416,11 +416,11 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                 </div>
 
                 {/* Price & Buy Action Buttons */}
-                <div className="p-5 sm:p-6 pt-0 border-t border-zinc-800/80 mt-2 space-y-3">
+                <div className="p-5 sm:p-6 pt-0 border-t border-slate-100 mt-2 space-y-3">
                   <div className="flex items-baseline justify-between pt-3">
-                    <span className="text-xs text-zinc-500">ราคาพิเศษในไทย:</span>
-                    <span className="text-xl font-extrabold text-white font-mono">
-                      ฿{product.priceThb.toLocaleString()} <span className="text-xs text-zinc-400 font-normal">บาท</span>
+                    <span className="text-xs text-slate-500">ราคาพิเศษในไทย:</span>
+                    <span className="text-xl font-extrabold text-slate-900 font-mono">
+                      ฿{product.priceThb.toLocaleString()} <span className="text-xs text-slate-500 font-normal">บาท</span>
                     </span>
                   </div>
 
@@ -429,7 +429,7 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                       href={`https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-sm"
+                      className="inline-flex items-center justify-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-xs"
                     >
                       <ShoppingBag className="w-3.5 h-3.5" />
                       <span>ซื้อบน Shopee</span>
@@ -439,9 +439,9 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                       href={`https://m.me?ref=${encodeURIComponent(`สอบถามสินค้า SKU: ${product.sku}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-semibold py-2.5 px-3 rounded-xl border border-zinc-700 transition-all"
+                      className="inline-flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold py-2.5 px-3 rounded-xl border border-slate-300 transition-all"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 text-blue-400" />
+                      <MessageCircle className="w-3.5 h-3.5 text-blue-600" />
                       <span>แชทสั่งซื้อ (FB)</span>
                     </a>
                   </div>

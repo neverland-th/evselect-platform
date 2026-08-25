@@ -1,80 +1,67 @@
-# Project: EVSELECT Platform EV Review Articles
+# Project: EVSELECT Thai EV Review Articles Audit & Correction
 
 ## Architecture
-- **Framework**: Next.js 16.3.2 (App Router, Turbopack) with React 19.2.8 and TypeScript.
-- **Styling & Theme**: Tailwind CSS v4 (`@import "tailwindcss"`, `@theme inline`), dark theme palette (`#09090b` background, `#84cc16` lime primary accent, `zinc-800/900` surfaces, Google Font `Prompt`).
-- **Icons**: Lucide React (`lucide-react`).
-- **Routing Structure**:
-  - Main Index: `src/app/(storefront)/articles/page.tsx`
-  - Review Articles: `src/app/(storefront)/articles/<slug>/page.tsx`
-- **Asset Pipeline**: `public/images/reviews/[model]-[view].jpg` with Next.js `<Image>` component optimization.
-- **Modern Web Guidelines**:
-  - `text-wrap: balance` on all article headlines and section titles.
-  - `content-visibility: auto` with `contain-intrinsic-size` on long below-the-fold content blocks.
-  - LCP image optimization (`priority`, `sizes`, explicit aspect ratios) on hero covers.
-  - Opaque-box editorial design mirroring CarExpert structure with localized Thai market specs & pricing.
+- **Framework**: Next.js (App Router), TypeScript, Tailwind CSS, Lucide React.
+- **Storefront Review Articles**: `src/app/(storefront)/articles/`
+  - `page.tsx`: Catalog index listing all EV reviews with badges, specs summary, and Thai pricing.
+  - `tesla-model-3-highland-review/page.tsx`: In-depth review of Tesla Model 3 Highland (Standard RWD, Long Range AWD, Performance AWD).
+  - `byd-seal-review/page.tsx`: In-depth review of BYD Seal (Dynamic, Premium, AWD Performance).
+  - `zeekr-x-review/page.tsx`: In-depth review of Zeekr X (Standard RWD, Flagship AWD).
+  - `mg4-electric-review/page.tsx`: In-depth review of MG4 Electric (Standard D/X, Long Range V, XPOWER AWD).
+  - `deepal-s07-review/page.tsx`: In-depth review of Changan Deepal S07 (Standard BEV, S07 L Long Range).
+  - `byd-atto-3-review/page.tsx`: In-depth review of BYD Atto 3 (Dynamic/Premium Standard Range, Extended Range).
+  - `deepal-s05-review/page.tsx`: In-depth review of Changan Deepal S05 (Standard BEV, Smart Tech Edition).
+  - `geely-ex2-review/page.tsx`: In-depth review of Geely EX2 / Xingyuan (EX2 Pro, EX2 Max).
+  - `ev-battery-care/page.tsx`: Educational guide for EV battery charging and maintenance in Thailand.
+- **Static Assets**: `public/images/reviews/` and `public/images/`.
 
 ## Feature Inventory
-| # | Feature | Description | Milestone | Source |
-|---|---------|-------------|-----------|--------|
-| 1 | CarExpert 10-Section Article Layout | Reusable editorial review layout with Executive Scorecard, Trims/Pricing, Exterior, Interior, Powertrain, Ride/NVH, Battery/Charging, ADAS, Pros/Cons, and EVSELECT Verdict | M1 | Survey |
-| 2 | Modern Web Typography & Performance | Implementation of `text-wrap: balance`, `content-visibility: auto`, Next.js `<Image priority>` and CLS prevention wrappers | M1 | Survey |
-| 3 | BYD Seal Review Article | In-depth Thai review for BYD Seal (Dynamic, Premium, AWD Performance) at `/articles/byd-seal-review/page.tsx` | M2 | Survey |
-| 4 | Tesla Model 3 Highland Review Article | In-depth Thai review for Tesla Model 3 Highland (RWD, Long Range, Performance) at `/articles/tesla-model-3-highland-review/page.tsx` | M2 | Survey |
-| 5 | BYD Atto 3 Review Article | In-depth Thai review for BYD Atto 3 (Dynamic, Extended Range) at `/articles/byd-atto-3-review/page.tsx` | M2 | Survey |
-| 6 | Zeekr X Review Article | In-depth Thai review for Zeekr X (Standard RWD, Flagship AWD) at `/articles/zeekr-x-review/page.tsx` | M2 | Survey |
-| 7 | Deepal S07 Review Article | In-depth Thai review for Changan Deepal S07 at `/articles/deepal-s07-review/page.tsx` | M3 | Survey |
-| 8 | MG4 Electric Review Article | In-depth Thai review for MG4 Electric (Standard, Long Range, XPOWER) at `/articles/mg4-electric-review/page.tsx` | M3 | Survey |
-| 9 | Deepal S05 Review Article | In-depth Thai review for Changan Deepal S05 at `/articles/deepal-s05-review/page.tsx` | M3 | Survey |
-| 10 | Geely EX2 Review Article | In-depth Thai review for Geely EX2 (CarExpert quick drive reference) at `/articles/geely-ex2-review/page.tsx` | M3 | Survey |
-| 11 | Main Articles Index Page Update | Updated `src/app/(storefront)/articles/page.tsx` with all 8 new review cards, category filtering, search/tags, and rich metadata | M4 | Survey |
-| 12 | EVSELECT Accessory Bridge Cards | Contextual promo cards in each review linking directly to EVSELECT verified accessories | M1, M2, M3 | Survey |
-| 13 | Quality Gate, Build & E2E Verification | TypeScript compilation, `npm run build` static generation, ESLint compliance, Challenger validation, and Forensic Integrity Audit | M5 | Survey |
+| # | Feature / Model | Description | Milestone | Status | Source |
+|---|-----------------|-------------|-----------|--------|--------|
+| 1 | Tesla Model 3 Highland Specs | Updated & aligned RWD (283 hp / 60 kWh), Long Range (498 hp / 78.1 kWh), Performance (460/627 hp / 78.1 kWh) with Thai WLTP ratings & CarExpert Thai adaptation | M1 | DONE | Survey & Follow-up |
+| 2 | BYD Seal Specs | Verified & aligned Dynamic (204 hp / 61.44 kWh), Premium (313 hp / 82.56 kWh), AWD (530 hp / 82.56 kWh) with Thai NEDC ratings | M1 | DONE | Survey |
+| 3 | Zeekr X Specs | Verified & aligned Standard RWD (272 hp / 66 kWh), Flagship AWD (428 hp / 66 kWh), 11 kW AC, Akebono brakes | M1 | DONE | Survey |
+| 4 | MG4 Electric Specs | Verified & aligned CKD Standard (170 hp / 49 kWh), Long Range (180-245 hp / 64 kWh), XPOWER (435 hp / 64 kWh) Thai specs | M1 | DONE | Survey |
+| 5 | Changan Deepal S07 Specs | Verified & aligned Standard (258 hp / 66.8 kWh), S07 L (218 hp / 79.97 kWh), NEDC 485/560 km, 125L frunk | M1 | DONE | Survey |
+| 6 | BYD Atto 3 Specs | Verified & aligned Standard (201 hp / 50.25 kWh), Extended (201 hp / 60.48 kWh), NEDC 410/480 km | M1 | DONE | Survey |
+| 7 | Changan Deepal S05 Specs | Verified & aligned Pure BEV 238 hp, 56.12 kWh LFP, 159L Frunk, 3C charging in 15 min | M1 | DONE | Survey |
+| 8 | Geely EX2 Specs | Corrected Chinese 58kW base trim to Thai EX2 Pro & Max (116 hp / 85 kW, 39.4 kWh, 395 km NEDC, 429,990 - 459,990 ฿) | M1 | DONE | Survey |
+| 9 | Catalog Index Alignment | Ensured `src/app/(storefront)/articles/page.tsx` price ranges, motor specs, and badges match individual review updates | M1 | DONE | Survey |
+| 10 | Tesla Model 3 Images | Replaced exterior, interior, details with authentic Highland assets | M2 | DONE | Survey |
+| 11 | BYD Seal Images | Replaced exterior, interior, details with authentic Seal assets | M2 | DONE | Survey |
+| 12 | Zeekr X Images | Replaced exterior, interior, details with authentic Zeekr X assets | M2 | DONE | Survey |
+| 13 | MG4 Electric Images | Replaced exterior, interior, details with authentic MG4 assets | M2 | DONE | Survey |
+| 14 | Changan Deepal S07 Images | Replaced exterior, interior, details with authentic Deepal S07 assets | M2 | DONE | Survey |
+| 15 | BYD Atto 3 Images | Replaced exterior, interior, details with authentic Atto 3 assets | M2 | DONE | Survey |
+| 16 | Changan Deepal S05 Images | Replaced hero, exterior, interior, details with authentic Deepal S05 assets | M2 | DONE | Survey |
+| 17 | Geely EX2 Images | Replaced hero, exterior, interior, details with authentic Geely EX2 assets | M2 | DONE | Survey |
+| 18 | Top-Level Asset Deepal S05 | Replaced `public/images/deepal-s05.jpg` with authentic Deepal S05 asset | M2 | DONE | Survey |
+| 19 | Independent Specs Verification | Reviewer 1 confirmed 100% Thai specs accuracy (Headlightmag, Autolifethailand, Official OEM) | M3 | DONE | Acceptance Criteria |
+| 20 | Independent Image Verification | Reviewer 2 confirmed 100% image accuracy, 0 placeholders, 32 unique hashes | M3 | DONE | Acceptance Criteria |
+| 21 | Clean Next.js Build & Typecheck | Challenger 1 & 2 verified clean `npm run build` and `npx tsc --noEmit` across all 20 routes | M3 | DONE | Acceptance Criteria |
+| 22 | Forensic Integrity Audit | Forensic Auditor confirmed CLEAN verdict, genuine logic, zero violations | M3 | DONE | Acceptance Criteria |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M1 | Review Article Shared Blueprint & Standards | Shared component blueprint, metadata types, modern web standards helpers, and asset validation | none | DONE |
-| M2 | EV Review Articles Batch 1 (4 Models) | Implementation of BYD Seal, Tesla Model 3 Highland, BYD Atto 3, and Zeekr X reviews with images & specs | M1 | DONE |
-| M3 | EV Review Articles Batch 2 (4 Models) | Implementation of Deepal S07, MG4 Electric, Deepal S05, and Geely EX2 reviews with images & specs | M1 | DONE |
-| M4 | Articles Index Page & Navigation Integration | Update `src/app/(storefront)/articles/page.tsx` with all articles, category pills, responsive grid, and metadata | M2, M3 | DONE |
-| M5 | Build Verification, Challenger Testing & Audit | Full Next.js build verification, Reviewer approval, Challenger adversarial tests, and Forensic Audit | M4 | DONE |
-
-## Interface Contracts
-### Review Article Page Structure (`src/app/(storefront)/articles/<slug>/page.tsx`)
-- Exports `metadata: Metadata` for Next.js SEO.
-- Default export React Server Component rendering:
-  - Breadcrumbs & back link to `/articles`
-  - Header: Category badge (`Car Review`), Date, Read time, `<h1>` with `textWrap: 'balance'`, and Executive Scorecard
-  - Hero image: Next.js `<Image priority fill sizes="100vw">`
-  - Overview & Thai Market Context
-  - Pricing & Trims Table (Thai Baht)
-  - Exterior Design & Dimensions
-  - Interior Cockpit, Screens & Storage
-  - Powertrain, Motors & 0-100 Performance
-  - Ride Quality, Suspension & NVH on Thai roads
-  - Battery, Real-World Range & Charging (AC/DC)
-  - Active Safety & ADAS Features
-  - Contextual EVSELECT Fitment Accessory recommendation card
-  - Pros & Cons (จุดเด่น & ข้อสังเกต)
-  - Final Verdict & EVSELECT Rating Scorecard
-  - Footer Share & Back to Articles
-
-### Articles Index Structure (`src/app/(storefront)/articles/page.tsx`)
-- Metadata with title & description
-- Hero banner: "บทความและรีวิวรถยนต์ไฟฟ้า"
-- Category filter pills ("ทั้งหมด", "รีวิวรถ EV", "คู่มือและเทคนิค")
-- Articles Grid mapping over all review articles + guides with cover images, tags, read times, ratings, and excerpts.
+| M1 | Thai Specs & Article Content Update | Audit & correct all 8 EV review articles & catalog index to strictly reflect Thai market specifications | Survey complete | **DONE** |
+| M2 | Image Assets Generation & Replacement | Generate and replace all 27 placeholder/mismatched image assets with authentic vehicle photos | Survey complete | **DONE** |
+| M3 | Multi-Agent Verification, Build & Audit | Independent Reviewers, Challengers, and Forensic Auditor verification | M1, M2 | **DONE** |
 
 ## Code Layout
-- Review Articles: `src/app/(storefront)/articles/<slug>/page.tsx`
-  - `src/app/(storefront)/articles/byd-seal-review/page.tsx`
-  - `src/app/(storefront)/articles/tesla-model-3-highland-review/page.tsx`
-  - `src/app/(storefront)/articles/byd-atto-3-review/page.tsx`
-  - `src/app/(storefront)/articles/zeekr-x-review/page.tsx`
-  - `src/app/(storefront)/articles/deepal-s07-review/page.tsx`
-  - `src/app/(storefront)/articles/mg4-electric-review/page.tsx`
-  - `src/app/(storefront)/articles/deepal-s05-review/page.tsx`
-  - `src/app/(storefront)/articles/geely-ex2-review/page.tsx`
-- Articles Index: `src/app/(storefront)/articles/page.tsx`
-- Shared Assets: `public/images/reviews/*.jpg`
+- `src/app/(storefront)/articles/`:
+  - `page.tsx` — Articles catalog index
+  - `tesla-model-3-highland-review/page.tsx` — Model 3 Highland review
+  - `byd-seal-review/page.tsx` — BYD Seal review
+  - `zeekr-x-review/page.tsx` — Zeekr X review
+  - `mg4-electric-review/page.tsx` — MG4 Electric review
+  - `deepal-s07-review/page.tsx` — Deepal S07 review
+  - `byd-atto-3-review/page.tsx` — BYD Atto 3 review
+  - `deepal-s05-review/page.tsx` — Deepal S05 review
+  - `geely-ex2-review/page.tsx` — Geely EX2 review
+  - `ev-battery-care/page.tsx` — Battery care guide
+- `public/images/reviews/`:
+  - 32 image files (`<model>-hero.jpg`, `<model>-exterior.jpg`, `<model>-interior.jpg`, `<model>-details.jpg`)
+- `public/images/`:
+  - `deepal-s05.jpg`
+  - accessory & banner images

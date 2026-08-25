@@ -1,31 +1,32 @@
-# BRIEFING — 2026-08-24T21:01:00Z
+# BRIEFING — 2026-08-25T07:55:39+07:00
 
 ## Mission
-Coordinate, monitor, and verify the SWE Light execution of the Shopee Seller Center automation project for EV select.
+Audit and correct content, Thai market specifications, and car images across all EV review articles in the Next.js platform.
 
 ## 🔒 My Identity
 - Archetype: sentinel
 - Working directory: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\sentinel
-- Orchestrator: 712428de-f9df-4610-bddb-2cae12dbc3aa (teamwork_preview_swe_1)
-- Victory Auditor: 8b8edfc6-8cd2-41bb-90a3-79e4cd14bee7 (teamwork_preview_victory_auditor_1)
+- Orchestrator: TBD
+- Victory Auditor: to be spawned on victory claim
 
 ## 🔒 Key Constraints
 - No technical decisions — relay only
 - Victory Audit is MANDATORY before reporting completion
-- Route: SWE Light (teamwork_preview_swe) per Routing Decision Table (single self-contained project, explicitly small/focused team requested)
+- Route: General (teamwork_preview_orchestrator) per Routing Decision Table (full team requested, multi-article audit & correction)
 
 ## User Context
-- **Last user request**: Shopee Seller Center automation script (Playwright/Puppeteer) for EV select shop profile in Thai.
+- **Last user request**: Audit and correct Thai market specifications and car images for all EV review articles in `src/app/(storefront)/articles`.
 - **Pending clarifications**: none
 - **Delivered results**: none
 
 ## Project Status
-- **Phase**: auditing
+- **Phase**: in progress
 
 ## Victory Audit Status
-- **Triggered**: yes
+- **Triggered**: no
 - **Verdict**: pending
 - **Retry count**: 0
 
 ## Artifact Index
 - .agents/ORIGINAL_REQUEST.md — Verbatim record of user request
+

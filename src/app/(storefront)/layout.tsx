@@ -19,32 +19,32 @@ export default function StorefrontLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen flex flex-col bg-[#09090b] text-[#f4f4f5] selection:bg-lime-500 selection:text-black">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-lime-500 selection:text-black">
       {/* Top Notification Announcement Bar */}
-      <div className="bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 border-b border-zinc-800 text-xs py-2.5 px-4 text-center flex flex-col sm:flex-row items-center justify-center gap-2">
+      <div className="bg-slate-900 border-b border-slate-800 text-xs py-2.5 px-4 text-center flex flex-col sm:flex-row items-center justify-center gap-2 text-white">
         <div className="flex items-center gap-2">
           <span className="flex h-2 w-2 relative shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
           </span>
-          <span className="text-zinc-300 leading-tight">
+          <span className="text-slate-200 leading-tight">
             <strong className="text-lime-400 font-semibold">การันตี Fitment ตรงรุ่น 100%</strong>
             <span className="hidden sm:inline"> — ทดสอบจริงบนรถ EV สเปกไทย</span>
           </span>
         </div>
-        <span className="hidden md:inline text-zinc-500">|</span>
-        <span className="hidden md:inline text-zinc-400">
+        <span className="hidden md:inline text-slate-600">|</span>
+        <span className="hidden md:inline text-slate-300">
           คัดเกรดตรงจากโรงงาน • จัดส่งไวจากกรุงเทพฯ • รับประกันเปลี่ยนคืนใน 7 วัน
         </span>
       </div>
 
       {/* Main Storefront Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/85 border-b border-zinc-800/80">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-200/90 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
             {/* Mobile Logo */}
-            <div className="md:hidden relative w-28 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-zinc-700/50 shadow-sm transition-all duration-300 group-hover:border-lime-500/50">
+            <div className="md:hidden relative w-28 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image
                 src="/logo.png"
                 alt="EVSELECT"
@@ -56,7 +56,7 @@ export default function StorefrontLayout({
             </div>
 
             {/* Desktop / PC Logo */}
-            <div className="hidden md:flex relative w-44 lg:w-52 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-zinc-700/50 shadow-md transition-all duration-300 group-hover:border-lime-500/80 group-hover:shadow-[0_0_25px_-5px_rgba(132,204,22,0.4)] group-hover:scale-[1.02]">
+            <div className="hidden md:flex relative w-44 lg:w-52 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
               <Image
                 src="/logo-desktop.png"
                 alt="EVSELECT - DRIVE BETTER. SELECT SMARTER."
@@ -69,23 +69,23 @@ export default function StorefrontLayout({
           </Link>
 
           {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
-            <a href="#vehicle-finder" className="hover:text-lime-400 transition-colors flex items-center gap-1.5">
-              <Car className="w-4 h-4 text-lime-400" />
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <a href="/#vehicle-finder" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
+              <Car className="w-4 h-4 text-lime-600" />
               เลือกรุ่นรถ (Vehicle Finder)
             </a>
-            <a href="#products" className="hover:text-lime-400 transition-colors">
+            <a href="/#products" className="hover:text-lime-600 transition-colors">
               สินค้าตรงรุ่น (Catalog)
             </a>
-            <a href="#fitment-assurance" className="hover:text-lime-400 transition-colors flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-lime-400" />
+            <a href="/#fitment-assurance" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-lime-600" />
               มาตรฐานการทดสอบ (QC)
             </a>
-            <a href="#ecosystem" className="hover:text-lime-400 transition-colors">
+            <a href="/#ecosystem" className="hover:text-lime-600 transition-colors">
               รุ่นรถที่รองรับ
             </a>
-            <Link href="/articles" className="hover:text-lime-400 transition-colors flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-lime-400" />
+            <Link href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
+              <Sparkles className="w-4 h-4 text-lime-600" />
               บทความ EV
             </Link>
           </nav>
@@ -97,7 +97,7 @@ export default function StorefrontLayout({
               href="https://shopee.co.th/shop/9535932"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 bg-orange-600/20 hover:bg-orange-600/30 text-orange-400 border border-orange-500/40 text-xs font-semibold px-3.5 py-2 rounded-lg transition-all"
+              className="hidden sm:inline-flex items-center gap-1.5 bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 text-xs font-semibold px-3.5 py-2 rounded-lg transition-all"
             >
               <ShoppingBag className="w-3.5 h-3.5" />
               <span>ร้าน Shopee TH</span>
@@ -108,7 +108,7 @@ export default function StorefrontLayout({
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/40 text-xs font-semibold px-3 py-2 rounded-lg transition-all"
+              className="inline-flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200 text-xs font-semibold px-3 py-2 rounded-lg transition-all"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">สอบถามทาง LINE / FB</span>
@@ -118,7 +118,7 @@ export default function StorefrontLayout({
             {/* Admin Portal Switch Button */}
             <Link
               href="/products"
-              className="inline-flex items-center gap-1.5 bg-lime-500 hover:bg-lime-400 text-black text-xs font-bold px-2 sm:px-3.5 py-2 rounded-lg shadow-sm hover:shadow-[0_0_20px_-3px_rgba(132,204,22,0.6)] transition-all"
+              className="inline-flex items-center gap-1.5 bg-lime-500 hover:bg-lime-400 text-black text-xs font-bold px-2.5 sm:px-3.5 py-2 rounded-lg shadow-xs hover:shadow-sm transition-all"
             >
               <Layers className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">ระบบหลังบ้าน</span>

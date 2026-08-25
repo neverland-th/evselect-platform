@@ -77,17 +77,17 @@ export default function TeslaModel3HighlandReviewPage() {
               <div className="bg-zinc-950/80 p-3.5 rounded-2xl border border-zinc-800/80">
                 <div className="text-xs text-zinc-400">ราคาเริ่มต้น</div>
                 <div className="text-base font-bold text-white mt-0.5">1,149,000 ฿</div>
-                <div className="text-[11px] text-zinc-500">รุ่น Standard RWD (MSRP)</div>
+                <div className="text-[11px] text-zinc-500">รุ่น Standard RWD (Promo)</div>
               </div>
               <div className="bg-zinc-950/80 p-3.5 rounded-2xl border border-zinc-800/80">
                 <div className="text-xs text-zinc-400">พละกำลังสูงสุด</div>
-                <div className="text-base font-bold text-lime-400 mt-0.5">627 hp</div>
+                <div className="text-base font-bold text-lime-400 mt-0.5">460 – 627 hp</div>
                 <div className="text-[11px] text-zinc-500">รุ่น Performance AWD</div>
               </div>
               <div className="bg-zinc-950/80 p-3.5 rounded-2xl border border-zinc-800/80 col-span-2 sm:col-span-1">
                 <div className="text-xs text-zinc-400">ระยะทางวิ่งสูงสุด</div>
                 <div className="text-base font-bold text-white mt-0.5">629 กม.</div>
-                <div className="text-[11px] text-zinc-500">WLTP (รุ่น Long Range)</div>
+                <div className="text-[11px] text-zinc-500">WLTP (รุ่น Long Range AWD)</div>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function TeslaModel3HighlandReviewPage() {
             2. ราคาจำหน่ายและรุ่นย่อยในประเทศไทย
           </h2>
           <p className="text-zinc-300 text-base mb-6">
-            เทสลา ประเทศไทย (Tesla Thailand) จำหน่าย Model 3 Highland ผ่านระบบออนไลน์และโชว์รูมทางการทั้งหมด 3 รุ่นย่อย:
+            เทสลา ประเทศไทย (Tesla Thailand) จำหน่าย Model 3 Highland สเปกพวงมาลัยขวา (ผลิตจาก Gigafactory Shanghai) ทั้งหมด 3 รุ่นย่อยอย่างเป็นทางการ:
           </p>
 
           <div className="overflow-x-auto border border-zinc-800 rounded-2xl bg-zinc-900/60 shadow-lg">
@@ -154,36 +154,36 @@ export default function TeslaModel3HighlandReviewPage() {
                   <td className="py-4 px-4 font-semibold text-white">Standard RWD</td>
                   <td className="py-4 px-3">มอเตอร์เดี่ยว RWD</td>
                   <td className="py-4 px-3">283 hp / 420 Nm</td>
-                  <td className="py-4 px-3">60.0 kWh (LFP)</td>
+                  <td className="py-4 px-3">60.0 kWh (CATL LFP)</td>
                   <td className="py-4 px-3">6.1 วินาที</td>
                   <td className="py-4 px-3">513 กม.</td>
-                  <td className="py-4 px-4 text-right font-bold text-white">1,149,000 ฿*</td>
+                  <td className="py-4 px-4 text-right font-bold text-white">1,149,000 – 1,599,000 ฿*</td>
                 </tr>
                 <tr className="hover:bg-zinc-800/40 transition-colors bg-lime-950/10 border-l-2 border-lime-400">
                   <td className="py-4 px-4 font-semibold text-white flex items-center gap-1.5">
                     Long Range AWD <span className="bg-lime-500/20 text-lime-400 text-[10px] px-1.5 py-0.5 rounded">แนะนำ</span>
                   </td>
-                  <td className="py-4 px-3 text-lime-400 font-medium">มอเตอร์คู่ AWD</td>
+                  <td className="py-4 px-3 text-lime-400 font-medium">มอเตอร์คู่ Dual Motor AWD</td>
                   <td className="py-4 px-3">498 hp / 493 Nm</td>
-                  <td className="py-4 px-3">78.1 kWh (NMC)</td>
+                  <td className="py-4 px-3">78.1 kWh (LG NMC)</td>
                   <td className="py-4 px-3">4.4 วินาที</td>
                   <td className="py-4 px-3 text-lime-400 font-semibold">629 กม.</td>
-                  <td className="py-4 px-4 text-right font-bold text-white">1,439,000 ฿*</td>
+                  <td className="py-4 px-4 text-right font-bold text-white">1,439,000 – 1,899,000 ฿*</td>
                 </tr>
                 <tr className="hover:bg-zinc-800/40 transition-colors">
                   <td className="py-4 px-4 font-semibold text-white">Performance AWD</td>
-                  <td className="py-4 px-3 text-lime-400 font-medium">มอเตอร์คู่ AWD</td>
-                  <td className="py-4 px-3 text-lime-400 font-bold">627 hp / 741 Nm</td>
-                  <td className="py-4 px-3">78.1 kWh (NMC)</td>
+                  <td className="py-4 px-3 text-lime-400 font-medium">มอเตอร์คู่ Performance AWD</td>
+                  <td className="py-4 px-3 text-lime-400 font-bold">460 – 627 hp / 741 Nm</td>
+                  <td className="py-4 px-3">78.1 kWh (LG NMC)</td>
                   <td className="py-4 px-3 text-lime-400 font-bold">3.1 วินาที</td>
                   <td className="py-4 px-3">528 กม.</td>
-                  <td className="py-4 px-4 text-right font-bold text-lime-400">1,799,000 ฿*</td>
+                  <td className="py-4 px-4 text-right font-bold text-lime-400">1,799,000 – 2,149,000 ฿*</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-xs text-zinc-500 mt-2 italic">
-            *หมายเหตุ: ราคาอย่างเป็นทางการ ณ ปัจจุบัน (ไม่รวมออปชัน Enhanced Autopilot +122,000 ฿ หรือ Full Self-Driving +244,000 ฿)
+            *หมายเหตุ: ราคาเริ่มต้นตามแคมเปญส่งเสริมการขายปัจจุบัน ถึงราคาตั้งเปิดตัว MSRP (ไม่รวมออปชัน Enhanced Autopilot +122,000 ฿ หรือ Full Self-Driving +244,000 ฿)
           </p>
         </section>
 
@@ -211,7 +211,7 @@ export default function TeslaModel3HighlandReviewPage() {
           </div>
 
           <p>
-            ไฟหน้าใหม่เป็นแบบ Matrix LED ทรงสลิมเพรียวบาง พร้อมไฟ DRL ส่องสว่างคมกริบ ด้านท้ายเปลี่ยนไฟท้ายเป็นแบบ C-Shape ชิ้นเดียวฝังอยู่บนฝากระโปรงท้าย ไม่มีรอยต่อแยกชิ้น ล้ออัลลอยขนาด 18 นิ้ว ลาย Photon พร้อมฝาครอบ Aero Cover ช่วยตัดลม (หรือเลือกอัปเกรดเป็นล้อ Nova 19 นิ้ว)
+            ไฟหน้าใหม่เป็นแบบ Matrix LED ทรงสลิมเพรียวบาง พร้อมไฟ DRL ส่องสว่างคมกริบ ด้านท้ายเปลี่ยนไฟท้ายเป็นแบบ C-Shape ชิ้นเดียวฝังอยู่บนฝากระโปรงท้าย ไม่มีรอยต่อแยกชิ้น ล้ออัลลอยขนาด 18 นิ้ว ลาย Photon พร้อมฝาครอบ Aero Cover ช่วยตัดลม (หรือเลือกอัปเกรดเป็นล้อ Nova 19 นิ้ว) และสำหรับรุ่น Performance AWD จะมาพร้อมกับล้อ Forged ลาย Warp ขนาด 20 นิ้วโดยเฉพาะ
           </p>
           <p>
             <strong>มิติตัวถัง (Dimensions):</strong>
@@ -261,8 +261,8 @@ export default function TeslaModel3HighlandReviewPage() {
             <strong>พื้นที่เก็บสัมภาระ:</strong>
           </p>
           <ul>
-            <li>ห้องเก็บสัมภาระด้านท้าย: <strong>425 ลิตร + ช่องหลุมลึกใต้พื้น 88 ลิตร (รวม 513 ลิตร)</strong></li>
-            <li>ช่องเก็บสัมภาระด้านหน้า (Frunk): <strong>81 ลิตร</strong> กว้างขวางและใส่กระเป๋าเดินทางขนาด Carry-on ได้สบาย</li>
+            <li>ห้องเก็บสัมภาระด้านท้าย: <strong>425 ลิตร + ช่องหลุมลึกใต้พื้น 88 ลิตร (รวม 594 ลิตร)</strong></li>
+            <li>ช่องเก็บสัมภาระด้านหน้า (Frunk): <strong>88 ลิตร</strong> กว้างขวางและใส่กระเป๋าเดินทางขนาด Carry-on หรือสายชาร์จฉุกเฉินได้สบาย</li>
           </ul>
         </section>
 
@@ -329,7 +329,7 @@ export default function TeslaModel3HighlandReviewPage() {
 
           <ul>
             <li>รุ่น Long Range AWD (เคลม 629 กม. WLTP): วิ่งจริงได้ระยะทางประมาณ <strong>520 - 545 กิโลเมตร</strong> อัตรากินไฟต่ำเพียง <strong>13.8 - 14.8 kWh/100km</strong></li>
-            <li>รุ่น Standard RWD (เคลม 513 กม. WLTP): วิ่งจริงได้ประมาณ <strong>420 - 440 กิโลเมตร</strong> (แบตเตอรี่ LFP ชาร์จ 100% ประจำวันได้โดยไม่เสื่อมง่าย)</li>
+            <li>รุ่น Standard RWD (เคลม 513 กม. WLTP): วิ่งจริงได้ประมาณ <strong>420 - 440 กิโลเมตร</strong> (แบตเตอรี่ LFP 60 kWh ชาร์จ 100% ประจำวันได้โดยไม่เสื่อมง่าย)</li>
           </ul>
           <p>
             <strong>ระบบชาร์จไฟและเครือข่าย Tesla Supercharger:</strong>
@@ -494,7 +494,7 @@ export default function TeslaModel3HighlandReviewPage() {
             <strong>Tesla Model 3 Highland</strong> คือหนึ่งในการปรับปรุงรถยนต์ที่ประสบความสำเร็จที่สุดของวงการยานยนต์ยุคใหม่ เทสลาสามารถรักษาจุดเด่นเรื่องสมรรถนะ ซอฟต์แวร์ และเครือข่าย Supercharger ไว้ได้อย่างเหนียวแน่น พร้อมกับอัปเกรดจุดด้อยเรื่องความกระด้างและเสียงรบกวนจนกลายเป็นรถที่นั่งสบายระดับแนวหน้าของคลาส
           </p>
           <p>
-            สำหรับผู้ซื้อชาวไทย <strong>Model 3 Long Range AWD (1,439,000 ฿)</strong> คือรุ่นที่สมบูรณ์แบบและคุ้มค่าที่สุดสำหรับการเดินทางไกลข้ามจังหวัด ด้วยระยะทางวิ่งจริงกว่า 530 กิโลเมตร และระบบขับเคลื่อนสี่ล้อที่มั่นคงในฤดูฝน ส่วนผู้ที่เน้นใช้งานในเมือง <strong>Standard RWD (1,149,000 ฿)</strong> ก็ถือเป็นจุดเริ่มต้นที่คุ้มราคาอย่างยิ่ง
+            สำหรับผู้ซื้อชาวไทย <strong>Model 3 Long Range AWD (1,439,000 – 1,899,000 ฿)</strong> คือรุ่นที่สมดุลและคุ้มค่าที่สุดสำหรับการเดินทางไกลข้ามจังหวัด ด้วยระยะทางวิ่งไกลถึง 629 กม. WLTP และระบบขับเคลื่อนสี่ล้อ 498 แรงม้า ในขณะที่ผู้ที่เน้นความแรงระดับซูเปอร์คาร์สามารถเลือกรุ่น <strong>Performance AWD (1,799,000 – 2,149,000 ฿)</strong> 0-100 ใน 3.1 วินาที ส่วนผู้ที่เน้นใช้งานในเมือง <strong>Standard RWD (1,149,000 – 1,599,000 ฿)</strong> ก็ถือเป็นจุดเริ่มต้นพรีเมียม EV ที่คุ้มราคาอย่างยิ่ง
           </p>
 
           {/* Detailed Scorecard */}

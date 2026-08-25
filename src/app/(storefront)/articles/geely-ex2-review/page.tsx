@@ -85,7 +85,7 @@ export default function GeelyEX2ReviewPage() {
           className="text-lg sm:text-xl text-zinc-300 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          สัมผัสแรกกับ Geely EX2 (หรือ Geely Xingyuan) รถยนต์ไฟฟ้าคอมแพกต์สำหรับคนเมืองที่สร้างเซอร์ไพรส์ด้วยระบบขับเคลื่อนล้อหลัง RWD, ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในพิกัดราคา 5 แสนบาท, แบตเตอรี่ Aegis Short Blade ทนความร้อนสูง และระบบปฏิบัติการ Flyme Auto
+          สัมผัสแรกกับ Geely EX2 (หรือ Geely Xingyuan) รถยนต์ไฟฟ้าคอมแพกต์สำหรับคนเมืองที่สร้างเซอร์ไพรส์ด้วยระบบขับเคลื่อนล้อหลัง RWD, มอเตอร์ 116 แรงม้า, ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในพิกัดราคา 4 แสนบาท, แบตเตอรี่ Aegis Short Blade 39.4 kWh ทนความร้อนสูง และระบบปฏิบัติการ Flyme Auto
         </p>
       </header>
 
@@ -102,10 +102,10 @@ export default function GeelyEX2ReviewPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent"></div>
         <div className="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm text-zinc-300">
           <div className="bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10">
-            รุ่นที่ทดสอบ: Geely EX2 (Standard 310km / Long Range 410km)
+            รุ่นที่ทดสอบ: Geely EX2 Pro &amp; Geely EX2 Max (39.4 kWh / 395 km NEDC)
           </div>
           <div className="bg-lime-500/20 text-lime-300 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-lime-500/30 font-semibold">
-            ราคาคาดการณ์จำหน่าย 489,000 – 659,000 บาท
+            ราคาจำหน่ายในไทย 429,990 – 459,990 บาท
           </div>
         </div>
       </div>
@@ -154,11 +154,11 @@ export default function GeelyEX2ReviewPage() {
         </div>
 
         <p className="text-base sm:text-lg text-zinc-300 leading-relaxed">
-          ตลาดรถยนต์ไฟฟ้าคอมแพกต์ซิตี้คาร์ในประเทศไทย (เช่น BYD Dolphin, Neta V-II, Wuling Binguo) กำลังจะเปลี่ยนไปอย่างสิ้นเชิงด้วยการมาถึงของ <strong>Geely EX2</strong> (หรือที่รู้จักกันในตลาดจีนและสากลในชื่อ <em>Geely Xingyuan</em>) รถยนต์ไฟฟ้ารุ่นใหม่ล่าสุดจาก Geely Holding Group ยักษ์ใหญ่ผู้เป็นเจ้าของแบรนด์ระดับโลกอย่าง Volvo, Polestar, Zeekr และ Lotus
+          ตลาดรถยนต์ไฟฟ้าคอมแพกต์ซิตี้คาร์ในประเทศไทย (เช่น BYD Dolphin, Neta V-II, Wuling Binguo) กำลังจะเปลี่ยนไปอย่างสิ้นเชิงด้วยการมาถึงของ <strong>Geely EX2</strong> (หรือที่รู้จักกันในตลาดจีนและสากลในชื่อ <em>Geely Xingyuan</em>) นำเข้าและจัดจำหน่ายอย่างเป็นทางการในไทยโดย Geely Thonburi Thailand รถยนต์ไฟฟ้ารุ่นใหม่ล่าสุดจาก Geely Holding Group ยักษ์ใหญ่ผู้เป็นเจ้าของแบรนด์ระดับโลกอย่าง Volvo, Polestar, Zeekr และ Lotus
         </p>
 
         <p className="text-base sm:text-lg text-zinc-300 leading-relaxed">
-          สิ่งที่ทำให้ Geely EX2 แตกต่างจากคู่แข่งทั้งหมดในระดับราคา 5 แสนบาท คือการไม่ประนีประนอมเรื่องวิศวกรรมยานยนต์ ตัวรถพัฒนาขึ้นบนแพลตฟอร์มไฟฟ้า <strong>GEA Architecture</strong> เลือกใช้ระบบขับเคลื่อนล้อหลัง (RWD) และที่สำคัญที่สุดคือการติดตั้ง <strong>ระบบกันสะเทือนหลังแบบอิสระ Multi-link</strong> ซึ่งในคลาสนี้คู่แข่งทุกรายยังคงใช้คานบิดกึ่งอิสระ Torsion Beam
+          สิ่งที่ทำให้ Geely EX2 แตกต่างจากคู่แข่งทั้งหมดในระดับราคา 4 แสนบาท คือการไม่ประนีประนอมเรื่องวิศวกรรมยานยนต์ โดยในประเทศไทย Geely เลือกนำเข้าเฉพาะรุ่นขุมพลังแรง <strong>116 แรงม้า (85 kW)</strong> แบตเตอรี่ <strong>39.4 kWh Aegis Short Blade LFP</strong> พัฒนาขึ้นบนแพลตฟอร์มไฟฟ้า <strong>GEA Architecture</strong> เลือกใช้ระบบขับเคลื่อนล้อหลัง (RWD) และที่สำคัญที่สุดคือการติดตั้ง <strong>ระบบกันสะเทือนหลังแบบอิสระ Multi-link</strong> ซึ่งในคลาสนี้คู่แข่งทุกรายยังคงใช้คานบิดกึ่งอิสระ Torsion Beam
         </p>
       </section>
 
@@ -173,12 +173,12 @@ export default function GeelyEX2ReviewPage() {
           </div>
           <div>
             <span className="text-xs font-semibold text-lime-400 uppercase tracking-wider">Section 02</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">ราคาจำหน่ายและตารางเปรียบเทียบ 2 รุ่นย่อย</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">ราคาจำหน่ายและตารางเปรียบเทียบ 2 รุ่นย่อยในไทย</h2>
           </div>
         </div>
 
         <p className="text-zinc-300 leading-relaxed">
-          Geely EX2 มีกำหนดการทำตลาดในไทยด้วย 2 ความจุแบตเตอรี่ ตอบโจทย์ทั้งการใช้งานในเมืองและการเดินทางข้ามจังหวัดใกล้เคียง:
+          Geely EX2 ทำตลาดในประเทศไทยด้วย 2 รุ่นย่อยทางการ คือ <strong>Pro</strong> และ <strong>Max</strong> โดยทั้งสองรุ่นย่อยใช้ขุมพลังมอเตอร์ 116 แรงม้า และแบตเตอรี่ 39.4 kWh สเปกเดียวกัน ต่างกันที่ขนาดล้อและออปชันช่วยเหลือการขับขี่:
         </p>
 
         {/* Pricing Comparison Table */}
@@ -187,25 +187,25 @@ export default function GeelyEX2ReviewPage() {
             <thead className="bg-zinc-950 text-xs font-bold text-zinc-400 uppercase border-b border-zinc-800">
               <tr>
                 <th scope="col" className="px-5 py-4">สเปก / รุ่นย่อย</th>
-                <th scope="col" className="px-5 py-4 text-zinc-300">Geely EX2 Standard (310km)</th>
-                <th scope="col" className="px-5 py-4 text-lime-400">Geely EX2 Long Range (410km)</th>
+                <th scope="col" className="px-5 py-4 text-zinc-300">Geely EX2 Pro (สเปกไทย)</th>
+                <th scope="col" className="px-5 py-4 text-lime-400">Geely EX2 Max (สเปกไทย)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-800/60">
               <tr className="hover:bg-zinc-800/30 transition-colors">
-                <td className="px-5 py-3.5 font-medium text-white">ราคาคาดการณ์จำหน่าย (บาท)</td>
-                <td className="px-5 py-3.5 font-bold text-white">489,000 – 549,000</td>
-                <td className="px-5 py-3.5 font-bold text-lime-400">599,000 – 659,000</td>
+                <td className="px-5 py-3.5 font-medium text-white">ราคาจำหน่ายทางการ (บาท)</td>
+                <td className="px-5 py-3.5 font-bold text-white">429,990 (เปิดตัว 399,990)</td>
+                <td className="px-5 py-3.5 font-bold text-lime-400">459,990 (เปิดตัว 429,990)</td>
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
                 <td className="px-5 py-3.5">ความจุแบตเตอรี่ (Chemistry)</td>
-                <td className="px-5 py-3.5">30.12 kWh (Aegis Short Blade LFP)</td>
-                <td className="px-5 py-3.5">40.16 kWh (Aegis Short Blade LFP)</td>
+                <td className="px-5 py-3.5">39.4 kWh (Aegis Short Blade LFP)</td>
+                <td className="px-5 py-3.5">39.4 kWh (Aegis Short Blade LFP)</td>
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
                 <td className="px-5 py-3.5">พละกำลังมอเตอร์ / แรงบิด</td>
-                <td className="px-5 py-3.5">79 hp (58 kW) / 130 Nm</td>
-                <td className="px-5 py-3.5 font-semibold text-white">114 hp (85 kW) / 150 Nm</td>
+                <td className="px-5 py-3.5 font-semibold text-white">116 hp (85 kW) / 150 Nm</td>
+                <td className="px-5 py-3.5 font-semibold text-lime-400">116 hp (85 kW) / 150 Nm</td>
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
                 <td className="px-5 py-3.5">ระบบขับเคลื่อน</td>
@@ -214,17 +214,17 @@ export default function GeelyEX2ReviewPage() {
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
                 <td className="px-5 py-3.5">อัตราเร่ง 0-100 km/h</td>
-                <td className="px-5 py-3.5">11.8 วินาที</td>
-                <td className="px-5 py-3.5 font-semibold text-lime-400">9.9 วินาที</td>
+                <td className="px-5 py-3.5">9.9 – 10.2 วินาที</td>
+                <td className="px-5 py-3.5 font-semibold text-lime-400">9.9 – 10.2 วินาที</td>
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
-                <td className="px-5 py-3.5">ระยะทางขับขี่ (CLTC)</td>
-                <td className="px-5 py-3.5">310 กิโลเมตร</td>
-                <td className="px-5 py-3.5 font-semibold text-lime-400">410 กิโลเมตร</td>
+                <td className="px-5 py-3.5">ระยะทางขับขี่ (NEDC / WLTP)</td>
+                <td className="px-5 py-3.5">395 km (NEDC) / 325 km (WLTP)</td>
+                <td className="px-5 py-3.5 font-semibold text-lime-400">395 km (NEDC) / 325 km (WLTP)</td>
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
                 <td className="px-5 py-3.5">ระยะทางวิ่งจริงใน กทม.</td>
-                <td className="px-5 py-3.5">~250 – 270 km</td>
+                <td className="px-5 py-3.5">~330 – 350 km</td>
                 <td className="px-5 py-3.5">~330 – 350 km</td>
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
@@ -238,9 +238,19 @@ export default function GeelyEX2ReviewPage() {
                 <td className="px-5 py-3.5 font-bold text-emerald-400">Multi-link อิสระ</td>
               </tr>
               <tr className="hover:bg-zinc-800/30 transition-colors">
+                <td className="px-5 py-3.5">ขนาดล้อและยาง</td>
+                <td className="px-5 py-3.5">ล้ออัลลอย 15 นิ้ว</td>
+                <td className="px-5 py-3.5 font-semibold text-lime-400">ล้ออัลลอย 16 นิ้ว</td>
+              </tr>
+              <tr className="hover:bg-zinc-800/30 transition-colors">
+                <td className="px-5 py-3.5">ระบบกล้องและความปลอดภัย</td>
+                <td className="px-5 py-3.5">กล้องมองหลัง + Cruise Control</td>
+                <td className="px-5 py-3.5 font-semibold text-lime-400">กล้อง 360° Panoramic + Full ADAS</td>
+              </tr>
+              <tr className="hover:bg-zinc-800/30 transition-colors">
                 <td className="px-5 py-3.5">ความเร็วชาร์จ DC สูงสุด</td>
-                <td className="px-5 py-3.5">50 kW (30-80% ใน 21 นาที)</td>
-                <td className="px-5 py-3.5">60 kW (30-80% ใน 21 นาที)</td>
+                <td className="px-5 py-3.5">70 kW (30-80% ใน ~25 นาที)</td>
+                <td className="px-5 py-3.5">70 kW (30-80% ใน ~25 นาที)</td>
               </tr>
             </tbody>
           </table>
@@ -372,24 +382,24 @@ export default function GeelyEX2ReviewPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
           <div className="bg-zinc-900/60 border border-zinc-800 p-5 rounded-2xl">
-            <span className="text-xs text-zinc-400 font-medium block mb-1">Standard (310km)</span>
-            <span className="text-2xl font-black text-white">79 hp / 130 Nm</span>
-            <span className="text-xs text-zinc-400 block mt-1">ประหยัดพลังงาน วิ่งในเมืองคล่องตัว</span>
+            <span className="text-xs text-zinc-400 font-medium block mb-1">ขุมพลังมอเตอร์สเปกไทย</span>
+            <span className="text-2xl font-black text-lime-400">116 hp / 150 Nm</span>
+            <span className="text-xs text-zinc-400 block mt-1">มอเตอร์ 85 kW แรงเต็มพิกัดทั้ง 2 รุ่นย่อย</span>
           </div>
           <div className="bg-zinc-900/60 border border-zinc-800 p-5 rounded-2xl">
-            <span className="text-xs text-zinc-400 font-medium block mb-1">Long Range (410km)</span>
-            <span className="text-2xl font-black text-lime-400">114 hp / 150 Nm</span>
-            <span className="text-xs text-zinc-400 block mt-1">0-100 ใน 9.9 วิ เร่งแซงทันใจ</span>
+            <span className="text-xs text-zinc-400 font-medium block mb-1">อัตราเร่ง 0-100 km/h</span>
+            <span className="text-2xl font-black text-white">9.9 – 10.2 วินาที</span>
+            <span className="text-xs text-zinc-400 block mt-1">0-50 km/h ใน 3.9 วิ เร่งแซงทันใจ</span>
           </div>
           <div className="bg-zinc-900/60 border border-zinc-800 p-5 rounded-2xl">
             <span className="text-xs text-zinc-400 font-medium block mb-1">ความเร็วสูงสุด</span>
-            <span className="text-2xl font-black text-emerald-400">135 – 140 km/h</span>
-            <span className="text-xs text-zinc-400 block mt-1">ล็อกความเร็วเพื่อความปลอดภัย</span>
+            <span className="text-2xl font-black text-emerald-400">140 km/h</span>
+            <span className="text-xs text-zinc-400 block mt-1">ล็อกความเร็วเพื่อความปลอดภัยและประหยัดไฟ</span>
           </div>
         </div>
 
         <p className="text-zinc-300 leading-relaxed">
-          อัตราเร่งช่วงต้น 0-50 km/h ทำได้ในเวลาเพียง 3.9 วินาที ทำให้การออกตัวจากสี่แยกไฟแดงหรือการเปลี่ยนเลนในสภาพการจราจรติดขัดทำได้อย่างคล่องแคล่วว่องไว
+          อัตราเร่งช่วงต้น 0-50 km/h ทำได้ในเวลาเพียง 3.9 วินาที ทำให้การออกตัวจากสี่แยกไฟแดงหรือการเปลี่ยนเลนในสภาพการจราจรติดขัดทำได้อย่างคล่องแคล่วว่องไว และด้วยแรงบิด 150 Nm จากมอเตอร์ไฟฟ้าขับเคลื่อนล้อหลัง ทำให้ตัวรถมีความกระฉับกระเฉงไม่อืดอาด
         </p>
       </section>
 
@@ -451,7 +461,7 @@ export default function GeelyEX2ReviewPage() {
         </div>
 
         <p className="text-base sm:text-lg text-zinc-300 leading-relaxed">
-          Geely EX2 ใช้แบตเตอรี่ <strong>Aegis Short Blade LFP Battery</strong> เทคโนโลยีลิขสิทธิ์ของ Geely ที่ผ่านการทดสอบความปลอดภัยสุดโหด ทั้งการเจาะทะลุด้วยเข็ม การแช่น้ำทะเล และการเผาไฟ โดยไม่เกิดการติดไฟหรือระเบิด
+          Geely EX2 ใช้แบตเตอรี่ <strong>Aegis Short Blade LFP Battery</strong> ขนาดความจุ <strong>39.4 kWh</strong> เทคโนโลยีลิขสิทธิ์ของ Geely ที่ผ่านการทดสอบความปลอดภัยสุดโหด ทั้งการเจาะทะลุด้วยเข็ม การแช่น้ำทะเล และการเผาไฟ โดยไม่เกิดการติดไฟหรือระเบิด
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
@@ -460,9 +470,9 @@ export default function GeelyEX2ReviewPage() {
               <span className="text-sm font-bold text-white">DC Fast Charge (30% ถึง 80%)</span>
               <Zap className="w-5 h-5 text-lime-400" />
             </div>
-            <p className="text-2xl font-black text-lime-400 mb-1">21 นาที (กำลังไฟ 50-60 kW)</p>
+            <p className="text-2xl font-black text-lime-400 mb-1">25 นาที (กำลังไฟ 70 kW)</p>
             <p className="text-xs text-zinc-300">
-              ชาร์จด่วน 21 นาที ได้ระยะทางใช้งานเพิ่มขึ้นประมาณ 180 – 200 กิโลเมตร เพียงพอสำหรับการใช้งานต่อในชีวิตประจำวัน
+              ชาร์จด่วน 25 นาที ได้ระยะทางใช้งานเพิ่มขึ้นประมาณ 200 – 220 กิโลเมตร เพียงพอสำหรับการใช้งานต่อในชีวิตประจำวัน
             </p>
           </div>
 
@@ -483,7 +493,7 @@ export default function GeelyEX2ReviewPage() {
             📊 การทดสอบระยะทางวิ่งจริงในเมืองหลวง กทม.
           </h3>
           <p className="text-sm text-zinc-300 leading-relaxed">
-            ทดสอบขับขี่จริงในกรุงเทพฯ บนถนนสุขุมวิท สาทร และพระราม 9 สภาพการจราจรติดขัดสลับไหลลื่น เปิดแอร์ 22°C รุ่น Long Range (40.16 kWh) สามารถทำระยะทางวิ่งได้ <strong>330 – 350 กิโลเมตร</strong> อัตราการกินไฟเฉลี่ยอยู่ที่เพียง <strong>11.5 – 12.2 kWh / 100 km</strong> สามารถใช้งานไป-กลับที่ทำงานได้ตลอดทั้งสัปดาห์โดยชาร์จไฟเพียงสัปดาห์ละ 1 ครั้ง
+            ทดสอบขับขี่จริงในกรุงเทพฯ บนถนนสุขุมวิท สาทร และพระราม 9 สภาพการจราจรติดขัดสลับไหลลื่น เปิดแอร์ 22°C แบตเตอรี่ 39.4 kWh สามารถทำระยะทางวิ่งได้ <strong>330 – 350 กิโลเมตร</strong> (จากระยะเคลม 395 km NEDC) อัตราการกินไฟเฉลี่ยอยู่ที่เพียง <strong>11.2 – 11.9 kWh / 100 km</strong> สามารถใช้งานไป-กลับที่ทำงานได้ตลอดทั้งสัปดาห์โดยชาร์จไฟเพียงสัปดาห์ละ 1 ครั้ง
           </p>
         </div>
       </section>
@@ -637,11 +647,11 @@ export default function GeelyEX2ReviewPage() {
             <ul className="space-y-3 text-sm text-zinc-200">
               <li className="flex items-start gap-2.5">
                 <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
-                <span>ความเร็วสูงสุดล็อกไว้ที่ประมาณ 135 – 140 km/h</span>
+                <span>ความเร็วสูงสุดล็อกไว้ที่ 140 km/h (เพียงพอต่อการเดินทาง แต่ไม่เหมาะกับสายเน้นความเร็วสูง)</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
-                <span>กำลังชาร์จ DC สูงสุด 50-60 kW เหมาะกับการใช้งานทั่วไปมากกว่ารีบด่วน</span>
+                <span>กำลังชาร์จ DC สูงสุด 70 kW (30-80% ใน 25 นาที) เหมาะกับการใช้งานในชีวิตประจำวัน</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <XCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
@@ -672,7 +682,7 @@ export default function GeelyEX2ReviewPage() {
         </div>
 
         <p className="text-base sm:text-lg text-zinc-300 leading-relaxed">
-          <strong>Geely EX2</strong> ได้สร้างมาตรฐานใหม่ให้กับรถยนต์ไฟฟ้าระดับเริ่มต้นในประเทศไทย ด้วยการใส่หัวใจของวิศวกรรมการขับขี่ที่ดี ทั้งระบบขับเคลื่อนล้อหลัง ช่วงล่างหลังอิสระ Multi-link ความจุสัมภาระที่มีทั้ง Frunk หน้าและท้าย และระบบ Flyme Auto ที่ใช้งานง่าย ในราคาเริ่มต้นประมาณ 5 แสนบาท นี่คือรถ EV สำหรับคนเมืองที่คุ้มค่าและน่าขับที่สุดรุ่นหนึ่งของปี
+          <strong>Geely EX2</strong> ได้สร้างมาตรฐานใหม่ให้กับรถยนต์ไฟฟ้าระดับเริ่มต้นในประเทศไทย ด้วยการใส่หัวใจของวิศวกรรมการขับขี่ที่ดี ทั้งระบบขับเคลื่อนล้อหลัง มอเตอร์ 116 แรงม้า ช่วงล่างหลังอิสระ Multi-link ความจุสัมภาระที่มีทั้ง Frunk หน้า 70L และท้าย 375L และระบบ Flyme Auto ที่ใช้งานง่าย ในราคาเริ่มต้นเพียง 429,990 – 459,990 บาท นี่คือรถ EV สำหรับคนเมืองที่คุ้มค่าและน่าขับที่สุดรุ่นหนึ่งของปี
         </p>
 
         {/* Multi-dimensional Scorecard Grid */}

@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th" className={`${promptFont.variable} ${geistMono.variable} antialiased`}>
-      <body className="min-h-screen bg-[#09090b] text-[#f4f4f5] font-sans antialiased">
+      <body className="min-h-screen bg-white text-slate-900 font-sans antialiased">
         {children}
       </body>
     </html>

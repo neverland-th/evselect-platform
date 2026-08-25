@@ -1,35 +1,36 @@
 # Original User Request
 
-## 2026-08-25T04:12:56+07:00
+## Initial Request — 2026-08-25T07:56:14+07:00
 
-# Teamwork Project Prompt — Draft
+You are the Project Orchestrator for the EVSELECT platform Thai EV review articles audit and correction project.
 
-> Status: Launched
-> Goal: Craft prompt → get user approval → delegate to teamwork_preview
-> Requested team: full team
+## Your Identity & Workspace
+- Archetype: project_orchestrator
+- Working directory: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\orchestrator_thai_specs_1
+- Authoritative user request file: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\ORIGINAL_REQUEST.md
+- Project Root: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform
 
-Write 5 to 10 comprehensive and engaging EV vehicle review articles for the EVSELECT platform, mimicking the expert, detailed review style of CarExpert (reference: https://www.carexpert.com.au/car-reviews/2026-geely-ex2-review-quick-drive). 
+## Mission & Requirements
+Audit and correct the content and images across all EV review articles in the Next.js platform to ensure they strictly use Thai market specifications and accurate images.
 
-Working directory: c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform
-Integrity mode: development
+### R1. Audit and Correct Thai Specifications
+Review all EV review articles in the `src/app/(storefront)/articles` directory (e.g., Tesla Model 3 Highland, MG4 Electric, BYD Seal, etc.). Update the specifications (horsepower, torque, 0-100 km/h acceleration, WLTP range, and drive systems) to strictly match the Thai market configurations. Discard any foreign market specifications.
 
-## Requirements
-
-### R1. Content Creation
-Research and write 5-10 in-depth EV vehicle reviews in Thai for the models supported on the platform as well as other popular EVs in Thailand (e.g., BYD Seal, Tesla Model 3 Highland, BYD Atto 3, Zeekr X, Deepal S05, Jaecoo 5, etc). The reviews must mirror the structured, expert format of the reference link (covering aspects like Performance, Interior, Ride Quality, and a Verdict).
-
-### R2. Page Implementation
-Implement each article as a hardcoded React page component inside `src/app/(storefront)/articles/` (e.g., `articles/byd-seal-review/page.tsx`). Apply modern web guidelines (e.g., `text-wrap: balance` for titles, `content-visibility` for blocks) for optimal rendering. Update the main articles index page (`src/app/(storefront)/articles/page.tsx`) to link to all newly created reviews.
-
-### R3. Image Sourcing
-Search the web to find and download new, specific, high-quality images for each vehicle being reviewed. Save these to the `public/images/` directory and integrate them properly into the respective article pages using the Next.js `<Image>` component.
+### R2. Replace Incorrect Images
+Check all images referenced in the review articles. Ensure the images accurately depict the specific car model being reviewed, replacing any incorrect models (such as the Porsche placeholder) with accurate, relevant images of the reviewed cars.
 
 ## Acceptance Criteria
+1. Specifications Accuracy: An independent reviewer agent confirms that the updated specifications in the codebase exactly match the data from reliable Thai automotive sources (e.g., Official sites, Autolifethailand, Headlightmag).
+2. Image Accuracy: An independent reviewer agent verifies that all image file paths and visual content correctly correspond to the car model being reviewed, with no placeholder images remaining.
 
-### Content & Pages
-- [ ] At least 5 new article directories containing a `page.tsx` file exist under `src/app/(storefront)/articles/`.
-- [ ] The `src/app/(storefront)/articles/page.tsx` file has been modified and contains `<Link>` elements pointing to all the new article routes.
+## Orchestration Guidelines
+- Create your working directory and maintain `BRIEFING.md`, `plan.md`, and `progress.md`.
+- Decompose the work and spawn specialist subagents (e.g. explorers/researchers, implementers/workers, and independent reviewers/challengers) according to teamwork conventions under `.agents/<type>_<round>/`.
+- Ensure independent reviewer validation against reliable Thai automotive sources and image verification before declaring victory.
+- Ensure Next.js builds/typechecks cleanly.
+- When all work is complete and verified, write `handoff.md` and report completion back to the Sentinel.
 
-### Assets
-- [ ] New image files corresponding to the reviews have been added to the `public/images/` directory.
-- [ ] The Next.js development server builds successfully without import or syntax errors.
+## Follow-up — 2026-08-25T01:00:52Z
+
+The user has provided an explicit instruction regarding the Tesla Model 3 page: "Please check the data on the Model 3 page very carefully. If the existing content is too inaccurate or problematic, you are authorized to pull a review from the CarExpert website, translate it to Thai, and then adapt the data to strictly match the Thai market specifications."
+
