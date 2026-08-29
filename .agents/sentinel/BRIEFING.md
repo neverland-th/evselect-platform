@@ -1,22 +1,22 @@
-# BRIEFING — 2026-08-25T07:55:39+07:00
+# BRIEFING — 2026-08-27T06:31:29+07:00
 
 ## Mission
-Audit and correct content, Thai market specifications, and car images across all EV review articles in the Next.js platform.
+Automated content generation system for the "EV Selection Thailand" Facebook page, creating high-quality, Thai-market specific EV reviews and news.
 
 ## 🔒 My Identity
 - Archetype: sentinel
-- Working directory: c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/sentinel
-- Orchestrator: f32fc6b1-74c3-4825-823a-576f36bd98a4 (orchestrator_thai_specs_1)
-- Victory Auditor: e8468f70-8d76-4413-b218-1e4171ecc239 (victory_auditor_thai_specs_1)
+- Working directory: c:/Users/rolf-/.gemini/antigravity/worktrees/evselect-platform/create_evselect_facebook_page/.agents/sentinel
+- Orchestrator: ec136971-2a48-40d4-8db2-bd27be8c3f0b (orchestrator_content_bot_1)
+- Victory Auditor: c054f9a6-0eb5-4a9e-8bf5-6ec9e9029e16 (victory_auditor_content_bot_1)
 
 ## 🔒 Key Constraints
 - No technical decisions — relay only
 - Victory Audit is MANDATORY before reporting completion
 - Must route and monitor orchestrator lifecycle
-- Route: General (teamwork_preview_orchestrator) per Routing Decision Table (full team requested, multi-article audit & correction)
+- Route: General (teamwork_preview_orchestrator) per Routing Decision Table
 
 ## User Context
-- **Last user request**: (Follow-up 2026-08-25T01:00:52Z) For Tesla Model 3 Highland, check data carefully; if existing content is problematic, authorized to pull CarExpert review, translate to Thai, and adapt data to strictly match Thai market specifications.
+- **Last user request**: Create an automated content generation system for the "EV Selection Thailand" Facebook page in ~/teamwork_projects/ev_selection_content_bot (or workspace directory) that generates Thai-market specific Facebook posts about electric vehicles and outputs them to a local file.
 - **Pending clarifications**: none
 - **Delivered results**: none
 
@@ -29,8 +29,12 @@ Audit and correct content, Thai market specifications, and car images across all
 - **Retry count**: 0
 
 ## Artifact Index
-- c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/ORIGINAL_REQUEST.md — Authoritative record of user requests
-- c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/orchestrator_thai_specs_1/handoff.md — Orchestrator project handoff
-- c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/victory_auditor_thai_specs_1/handoff.md — Victory Auditor report
+- c:/Users/rolf-/.gemini/antigravity/worktrees/evselect-platform/create_evselect_facebook_page/.agents/ORIGINAL_REQUEST.md — Authoritative record of user requests
+- c:/Users/rolf-/.gemini/antigravity/worktrees/evselect-platform/create_evselect_facebook_page/.agents/orchestrator_content_bot_1/handoff.md — Orchestrator project handoff
+- c:/Users/rolf-/.gemini/antigravity/worktrees/evselect-platform/create_evselect_facebook_page/.agents/victory_auditor_content_bot_1/handoff.md — Victory Auditor report
+- c:/Users/rolf-/.gemini/antigravity/worktrees/evselect-platform/create_evselect_facebook_page/posts.md — Formatted Facebook posts ready for copy-paste
+- c:/Users/rolf-/.gemini/antigravity/worktrees/evselect-platform/create_evselect_facebook_page/posts.json — Structured JSON feed of generated posts
+- c:/Users/rolf-/.gemini/antigravity/worktrees/evselect-platform/create_evselect_facebook_page/scripts/generate-posts.ts — CLI runner script
+
 
 

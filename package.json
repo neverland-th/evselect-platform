@@ -8,6 +8,7 @@
     "postinstall": "prisma generate",
     "start": "next start",
     "lint": "eslint",
+    "generate-posts": "tsx scripts/generate-posts.ts",
     "test:shopee": "node scripts/shopee_ev_select/test.js",
     "verify:shopee": "node scripts/shopee_ev_select/verify.test.js"
   },
@@ -30,6 +31,7 @@
     "playwright": "^1.62.1",
     "prisma": "^7.9.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.12",
     "typescript": "^5"
   }
 }

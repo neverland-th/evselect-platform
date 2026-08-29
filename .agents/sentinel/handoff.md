@@ -1,30 +1,33 @@
-# Sentinel Handoff Report: EV Review Articles Thai Specs & Images Audit
+# Sentinel Handoff Report: EV Selection Thailand Facebook Automated Content Generation System
 
 ## 1. Observation
-- **User Request**: Audit and correct content and images across all EV review articles in `src/app/(storefront)/articles` (e.g. Tesla Model 3 Highland, MG4 Electric, BYD Seal, Zeekr X, Deepal S07, BYD Atto 3, Deepal S05, Geely EX2) to strictly use Thai market configurations, discard foreign market specifications, and replace all mismatched/placeholder images.
+- **User Request**: Create an automated content generation system for the "EV Selection Thailand" Facebook page, producing high-quality, Thai-market specific EV reviews and news with output to local files (`posts.md` / `posts.json`), meeting execution and verification acceptance criteria.
 - **Execution Path**: Routed to General (`teamwork_preview_orchestrator`) per Routing Decision Table.
 - **Orchestration Execution**:
-  - Phase 0: Dispatched Explorers and Thai Spec Miners to survey all articles and build authoritative Thai market specification benchmarks.
-  - Phase 1 & 2: Dispatched Implementation Workers to update all 8 EV review articles and main catalog index with exact Thai specifications (horsepower, torque, 0-100 km/h acceleration, WLTP/NEDC range, battery chemistries, DC fast-charging limits, and Thai Baht pricing) and replaced all 27 placeholder/mismatched images with authentic vehicle photos.
-  - Phase 3: 5 independent subagents (Reviewer Thai Specs, Reviewer Images, Challenger Build, Challenger Consistency, Forensic Auditor) conducted adversarial verification and unanimously approved (5/5 PASS).
-  - Phase 4: Independent `teamwork_preview_victory_auditor` verified timeline, anti-cheating/anti-facade integrity, and ran independent test commands.
-- **Victory Audit Verdict**: **VICTORY CONFIRMED**.
+  - Phase 0: 3 Explorers surveyed repository data, Thai EV specifications, and generation engine architecture.
+  - Milestone 1: Built comprehensive Thai EV Data Catalog & Domain Models (`src/content-generator/data/` covering 13 EV models, 30 trim levels, THB pricing, tropical heat derating, 8 Thai charging networks, and 17 EVSELECT accessories).
+  - Milestone 2: Implemented Dual-Mode Generation Engine (Rule-based Mode A + AI Gemini Mode B) with 5 post templates (Review, Heat Guide, Charging Guide, Comparison, News).
+  - Milestone 3: Implemented CLI Runner (`scripts/generate-posts.ts`, `npm run generate-posts`) and Exporters (`posts.md`, `posts.json`).
+  - Milestone 4: Verification Swarm (2 Reviewers, 2 Challengers, 1 Internal Forensic Auditor) passed 227/227 test assertions.
+- **Victory Audit Verdict**: **VICTORY CONFIRMED** by independent `teamwork_preview_victory_auditor` (zero integrity violations, 227/227 tests passed, 16 full Thai posts generated, clean Next.js build across 20 routes).
 
 ## 2. Logic Chain
-1. User request and Model 3 CarExpert fallback directive recorded verbatim in `.agents/ORIGINAL_REQUEST.md`.
-2. Project Orchestrator dispatched and monitored via two recurring crons.
-3. Upon orchestrator completion claim, independent Post-Victory Auditor spawned with zero shared context.
-4. Independent verification proved 100% acceptance criteria fulfillment without regression.
-5. All crons killed and subagents cleaned up.
+1. User request recorded verbatim in `.agents/ORIGINAL_REQUEST.md`.
+2. Project Orchestrator dispatched and monitored via two recurring crons (Progress Reporting and Liveness).
+3. Upon orchestrator victory claim, independent Post-Victory Auditor spawned with zero shared context.
+4. Independent execution verified 100% acceptance criteria fulfillment without regression or fake logic.
+5. All background tasks and subagents cancelled/cleaned up.
 
 ## 3. Caveats
-- None. All pages compile with 0 TypeScript errors and prerender cleanly in Next.js Turbopack build.
+- AI generation mode (Gemini API) optionally uses `GEMINI_API_KEY`; when not provided, the engine seamlessly falls back to 100% rule-based offline generation with zero degradation in Thai content accuracy.
 
 ## 4. Conclusion
-Project deliverables are fully audited, corrected, independently verified, and confirmed complete.
+The EV Selection Thailand Facebook automated content generation system is fully implemented, thoroughly tested, independently audited, and ready for production use.
 
 ## 5. Verification Method
-- Independent Next.js production build (`npm run build`) compiled all 20 static/dynamic routes in 611ms with 0 type errors.
-- Consistency and forensic scripts (`scripts/challenger_consistency_test.mjs` and `scripts/victory_audit_check.mjs`) verified 235/235 assertions and 32/32 distinct JPEG image assets with 0 placeholders.
+- CLI Execution: `npm run generate-posts -- --all` generated 16 authentic Thai posts into `posts.md` and `posts.json`.
+- Test Suites: `npx tsx tests/content-generator.test.ts` & `npx tsx tests/challenger-adversarial-fuzz.ts` passed 227/227 assertions (100%).
+- Next.js Production Build: `npm run build` compiled 20/20 routes with 0 errors.
+
 
 

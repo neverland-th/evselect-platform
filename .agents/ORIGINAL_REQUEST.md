@@ -1,36 +1,15 @@
 # Original User Request
 
-## Initial Request — 2026-08-25T07:56:14+07:00
+## Initial Request — 2026-08-27T06:32:03+07:00
 
-You are the Project Orchestrator for the EVSELECT platform Thai EV review articles audit and correction project.
+Build an automated content generation system for the "EV Selection Thailand" Facebook page, creating high-quality, Thai-market specific EV reviews and news.
 
-## Your Identity & Workspace
-- Archetype: project_orchestrator
-- Working directory: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\orchestrator_thai_specs_1
-- Authoritative user request file: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\ORIGINAL_REQUEST.md
-- Project Root: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform
+### R1. Content Generation Engine
+A script that generates highly engaging, Thai-market specific Facebook posts about electric vehicles, using realistic specifications and addressing Thai market concerns (heat, charging stations, real-world driving range, local trim levels/pricing in THB).
 
-## Mission & Requirements
-Audit and correct the content and images across all EV review articles in the Next.js platform to ensure they strictly use Thai market specifications and accurate images.
-
-### R1. Audit and Correct Thai Specifications
-Review all EV review articles in the `src/app/(storefront)/articles` directory (e.g., Tesla Model 3 Highland, MG4 Electric, BYD Seal, etc.). Update the specifications (horsepower, torque, 0-100 km/h acceleration, WLTP range, and drive systems) to strictly match the Thai market configurations. Discard any foreign market specifications.
-
-### R2. Replace Incorrect Images
-Check all images referenced in the review articles. Ensure the images accurately depict the specific car model being reviewed, replacing any incorrect models (such as the Porsche placeholder) with accurate, relevant images of the reviewed cars.
+### R2. Output Format
+The system must output the generated posts to a local file (e.g., `posts.md` or `posts.json`) so the user can easily copy and paste them into Facebook.
 
 ## Acceptance Criteria
-1. Specifications Accuracy: An independent reviewer agent confirms that the updated specifications in the codebase exactly match the data from reliable Thai automotive sources (e.g., Official sites, Autolifethailand, Headlightmag).
-2. Image Accuracy: An independent reviewer agent verifies that all image file paths and visual content correctly correspond to the car model being reviewed, with no placeholder images remaining.
-
-## Orchestration Guidelines
-- Create your working directory and maintain `BRIEFING.md`, `plan.md`, and `progress.md`.
-- Decompose the work and spawn specialist subagents (e.g. explorers/researchers, implementers/workers, and independent reviewers/challengers) according to teamwork conventions under `.agents/<type>_<round>/`.
-- Ensure independent reviewer validation against reliable Thai automotive sources and image verification before declaring victory.
-- Ensure Next.js builds/typechecks cleanly.
-- When all work is complete and verified, write `handoff.md` and report completion back to the Sentinel.
-
-## Follow-up — 2026-08-25T01:00:52Z
-
-The user has provided an explicit instruction regarding the Tesla Model 3 page: "Please check the data on the Model 3 page very carefully. If the existing content is too inaccurate or problematic, you are authorized to pull a review from the CarExpert website, translate it to Thai, and then adapt the data to strictly match the Thai market specifications."
-
+- A sample script exists and runs without crashing.
+- Running the script produces at least one complete Facebook post in Thai, ready for manual review.
