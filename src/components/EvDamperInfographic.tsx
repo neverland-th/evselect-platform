@@ -202,14 +202,19 @@ function PhysicsSection() {
         onClick={() => setShowFormula(v => !v)}
         className="text-sm text-lime-400 hover:text-lime-300 underline underline-offset-2 transition-colors"
       >
-        {showFormula ? '▲ ซ่อนสูตรฟิสิกส์' : '▼ ดูสูตรฟิสิกส์ (สำหรับคนชอบเรื่องนี้)'}
+        {showFormula ? '▲ ซ่อนคำอธิบายเปรียบเทียบ' : '▼ ดูคำอธิบายเปรียบเทียบให้เห็นภาพง่ายๆ'}
       </button>
       {showFormula && (
-        <div className="bg-zinc-800 rounded-xl p-5 border border-zinc-700 text-sm space-y-2">
-          <div className="font-mono text-lime-300 text-base">Eₖ = ½ · m · v²</div>
-          <p className="text-zinc-400">พลังงานจลน์ (Eₖ) แปรผันตรงกับมวล (m) — เมื่อรถหนักขึ้น 40% พลังงานที่โช้คต้องดูดซับเพิ่มขึ้น 40% ด้วย</p>
-          <div className="font-mono text-zinc-300 text-sm mt-3">F_damping = C · (dx/dt)</div>
-          <p className="text-zinc-400">แรงหน่วง (F) = ค่าหน่วง (C) × ความเร็วการเคลื่อนที่ของโช้ค — การปรับ Bump/Rebound คือการปรับ C นี้เอง</p>
+        <div className="bg-zinc-800 rounded-xl p-5 border border-zinc-700 text-sm space-y-3">
+          <p className="text-zinc-300 leading-relaxed">
+            <span className="text-lime-400 font-bold">นึกภาพง่ายๆ:</span> ลองจินตนาการว่าคุณต้องเอามือรับ <span className="text-white font-bold">"ลูกปิงปอง"</span> เทียบกับรับ <span className="text-white font-bold">"ลูกเปตอง"</span> ที่โยนมาด้วยความเร็วเท่ากัน
+          </p>
+          <p className="text-zinc-400 leading-relaxed">
+            แน่นอนว่ารับลูกเปตองจะทำให้มือคุณเจ็บและสะท้านกว่ามาก เพราะมัน <strong>"หนักกว่า"</strong> พลังงานพุ่งเข้ามามากกว่า
+          </p>
+          <p className="text-zinc-400 leading-relaxed">
+            รถ EV ที่แบกแบตเตอรี่หนักๆ ก็เหมือนลูกเปตองครับ เมื่อตกหลุมหรือขึ้นลูกระนาด โช้คอัพ (แขนของคุณ) จะต้องรับภาระหนักกว่ารถน้ำมันทั่วไปมหาศาล โช้คเดิมจากโรงงานที่ตั้งค่ามากลางๆ จึงมักจะ <strong>"รับแรงกระแทกไม่ไหว"</strong> ทำให้รถเกิดอาการย้วย หรือเด้งไม่หยุดนั่นเอง
+          </p>
         </div>
       )}
     </div>
