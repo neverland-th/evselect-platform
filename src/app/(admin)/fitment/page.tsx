@@ -72,14 +72,18 @@ export default async function FitmentPage() {
                             const status = formData.get('status') as string;
                             await updateFitment(batch.id, vehicle.id, status);
                           }}>
-                            <select 
-                              name="status"
-                              defaultValue={currentStatus}
-                              onChange={(e) => e.target.form?.requestSubmit()}
-                              className="border border-gray-300 rounded-md p-1.5 text-sm bg-white"
-                            >
-                              {FITMENT_STATUSES.map(s => <option key={s} value={s}>{s.replace(/_/g, ' ')}</option>)}
-                            </select>
+                              <div className="flex items-center gap-2">
+                                <select 
+                                  name="status"
+                                  defaultValue={currentStatus}
+                                  className="border border-gray-300 rounded-md p-1.5 text-sm bg-white"
+                                >
+                                  {FITMENT_STATUSES.map(s => <option key={s} value={s}>{s.replace(/_/g, ' ')}</option>)}
+                                </select>
+                                <button type="submit" className="px-2 py-1 bg-blue-50 text-blue-600 rounded text-xs font-semibold hover:bg-blue-100">
+                                  Save
+                                </button>
+                              </div>
                           </form>
                         </td>
                       </tr>
