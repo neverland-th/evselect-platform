@@ -156,14 +156,14 @@ export default function BYDAtto3ReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว BYD Atto 3 สเปกไทย (Dynamic / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหนในปี 2026?
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิวเจาะลึกเอสยูวีไฟฟ้าขวัญใจมหาชนที่มียอดจดทะเบียนสะสมสูงที่สุดในไทย ทดสอบความทนทานของแบตเตอรี่ Blade Battery ความนุ่มนวลของช่วงล่างบนถนนเมืองไทย ม่านบังแดดไฟฟ้าสู้แดด และความคุ้มค่าหลังปรับโครงสร้างราคาใหม่
@@ -279,7 +279,7 @@ export default function BYDAtto3ReviewPage() {
         
         {/* Section 1: Overview */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. บทนำและภาพรวมในตลาดไทย
           </h2>
@@ -296,7 +296,7 @@ export default function BYDAtto3ReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -448,7 +448,7 @@ export default function BYDAtto3ReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '500px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก Dragon Face และมิติตัวถัง
           </h2>
@@ -499,7 +499,7 @@ export default function BYDAtto3ReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '550px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ภายในห้องโดยสาร Muscle Streamline, จอหมุน 15.6 นิ้ว และม่านไฟฟ้า
           </h2>
@@ -537,7 +537,7 @@ export default function BYDAtto3ReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '550px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ขุมพลังมอเตอร์ สมรรถนะ และฟีลลิ่งการขับขี่บนถนนไทย
           </h2>
@@ -553,22 +553,22 @@ export default function BYDAtto3ReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (จับเวลาจริง)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">7.32 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">7.32 วินาที</div>
                 <div className="text-[10px] text-slate-400">Extended Range ออกตัวทันใจ</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">4.85 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">4.85 วินาที</div>
                 <div className="text-[10px] text-slate-400">เร่งแซงคล่องตัว ปลอดภัย</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">66.5 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">66.5 dB(A)</div>
                 <div className="text-[10px] text-slate-400">ซับเสียงลมปานกลาง</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">37.8 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">37.8 เมตร</div>
                 <div className="text-[10px] text-slate-400">เบรกหยุดมั่นใจ ได้มาตรฐาน</div>
               </div>
             </div>
@@ -584,7 +584,7 @@ export default function BYDAtto3ReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '550px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. เปรียบเทียบกับคู่แข่งในกลุ่มคอมแพกต์เอสยูวี (Head-to-Head)
           </h2>
@@ -669,7 +669,7 @@ export default function BYDAtto3ReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '500px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. แบตเตอรี่ Blade Battery, ระยะทางวิ่งจริง และการชาร์จไฟ
           </h2>
@@ -710,7 +710,7 @@ export default function BYDAtto3ReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '400px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (ADAS)
           </h2>
@@ -774,7 +774,7 @@ export default function BYDAtto3ReviewPage() {
                 <Sparkles className="w-3.5 h-3.5" />
                 EVSELECT Recommended Upgrades
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+              <h3 className="text-lg sm:text-xl font-extrabold text-white">
                 อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ BYD Atto 3 สเปกไทย
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
@@ -803,7 +803,7 @@ export default function BYDAtto3ReviewPage() {
       {/* 8. CarExpert Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
           </h2>

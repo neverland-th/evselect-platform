@@ -108,14 +108,14 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           คู่มือการเลือกซื้อยาง (EV Tyres) และสตรัทปรับเกลียว (Coilovers) สำหรับรถ EV: สเปก, ค่าสปริงเรท, โหลดอินเด็กซ์ และการเลือกใช้งาน
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           คู่มือวิศวกรรมฉบับสมบูรณ์สำหรับเจ้าของรถยนต์ไฟฟ้า: ทำความเข้าใจมาตรฐานดัชนีรับน้ำหนัก <strong>HL (High Load) &amp; XL (Extra Load)</strong>, ชั้นโฟมซับเสียงลดเสียงก้องในห้องโดยสาร (Acoustic Foam), ค่าความต้านทานการหมุน (Rolling Resistance) เทียบกับระยะวิ่ง WLTP, หลักการเลือกสปริงเรทและอัตราทดช่วงล่าง (Motion Ratio), ข้อแตกต่างระหว่างสปริง <strong>Linear vs Progressive</strong>, การเลือกโช้คอัพ 1-Way, 2-Way, 3-Way และขีดจำกัดความสูงปลอดภัยสำหรับแบตเตอรี่ใต้ท้องรถ
@@ -193,7 +193,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             1. ศาสตร์แห่งยางรถ EV: ทำไมยางทั่วไปถึงรับน้ำหนักและแรงบิดรถไฟฟ้าไม่ไหว?
           </h2>
         </div>
@@ -307,7 +307,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             2. ไดอะแกรมวิศวกรรม: กราฟสปริง Linear vs Progressive และดัชนี Load Index
           </h2>
         </div>
@@ -470,7 +470,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             3. สตรัทปรับเกลียว (Coilovers): การเลือกค่า Spring Rate และอัตราทด Motion Ratio
           </h2>
         </div>
@@ -550,7 +550,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             4. ข้อควรระวัง: การโหลดเตี้ยกับความปลอดภัยของชุดแบตเตอรี่และ Roll Center
           </h2>
         </div>
@@ -591,7 +591,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             5. Decision Matrix: เลือกรุ่นยางและสตรัทตามลักษณะการใช้งานจริง
           </h2>
         </div>
@@ -676,7 +676,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             6. 10 ข้อเช็คลิสต์ก่อนรับรถออกจากศูนย์บริการช่วงล่าง EVSELECT
           </h2>
         </div>
@@ -732,7 +732,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/20 border border-lime-500/40 text-lime-400 text-xs font-bold rounded-full">
               <Sparkles className="w-3.5 h-3.5" /> EVSELECT Suspension Engineering
             </div>
-            <h3 className="text-xl sm:text-2xl font-black text-white">
+            <h3 className="text-lg sm:text-xl font-black text-white">
               อ่านต่อ: สูตรเซ็ตติ้งช่วงล่างรับมือถนนเมืองไทย คอสะพาน และน้ำท่วมขัง
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
@@ -742,7 +742,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
 
           <Link
             href="/articles/optimizing-ev-suspension-thai-roads"
-            className="px-6 py-3.5 bg-lime-500 hover:bg-lime-400 text-black font-black text-sm rounded-xl transition-all shadow-md flex items-center gap-2 shrink-0 group"
+            className="px-5 py-2.5 bg-lime-500 hover:bg-lime-400 text-black font-black text-sm rounded-xl transition-all shadow-md flex items-center gap-2 shrink-0 group"
           >
             <span>อ่านบทความ: เซ็ตช่วงล่างถนนไทย</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

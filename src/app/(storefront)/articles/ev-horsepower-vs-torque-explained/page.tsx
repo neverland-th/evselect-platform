@@ -103,14 +103,14 @@ export default function EVHorsepowerVsTorquePage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? เจาะลึกกราฟไดโน่และเกียร์ทดเดี่ยว
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           ไขข้อข้องใจอันดับหนึ่งของคนรักความเร็ว: เหตุใดรถยนต์ไฟฟ้าที่มีแรงม้า 500+ ตัว ถึงกระชากออกตัว 0-100 ได้เร็วกว่าซูเปอร์คาร์ แต่พอวิ่งแตะ 160 – 200 กม./ชม. อัตราเร่งกลับเริ่มแผ่วลง? วิเคราะห์ลึกถึง <strong>กราฟไดโน่มอเตอร์ไฟฟ้า 3 ช่วง</strong>, ปรากฏการณ์ <strong>Back-EMF</strong>, การฉีดกระแส <strong>Field Weakening</strong>, และฟิสิกส์ของ <strong>Single-Speed Reduction Gearbox</strong>
@@ -124,7 +124,7 @@ export default function EVHorsepowerVsTorquePage() {
             <div className="text-xs uppercase tracking-wider text-slate-400 font-bold mb-1 flex items-center gap-1.5">
               <Award className="w-4 h-4 text-lime-400" /> Powertrain Core Equation
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-lime-400 leading-tight">
+            <div className="text-lg sm:text-xl font-black text-lime-400 leading-tight">
               Tractive Force at Wheels
             </div>
             <p className="text-xs text-slate-300 mt-2 leading-relaxed">
@@ -226,7 +226,7 @@ export default function EVHorsepowerVsTorquePage() {
 
         {/* SECTION 1: PHYSICAL DEFINITIONS */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. นิยามทางฟิสิกส์: แรงบิด (Torque) vs แรงม้า (Horsepower)
           </h2>
@@ -278,7 +278,7 @@ export default function EVHorsepowerVsTorquePage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-lime-700 bg-lime-100 px-3 py-1 rounded-full">
                   Dyno Technical Diagram
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black text-slate-900 mt-2">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-2">
                   เปรียบเทียบกราฟไดโน่: ICE Turbo Engine vs Electric PMSM Motor
                 </h3>
               </div>
@@ -421,7 +421,7 @@ export default function EVHorsepowerVsTorquePage() {
 
         {/* SECTION 2: 3 PHASES OF MOTOR POWER */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. ผ่าโครงสร้าง 3 ช่วงการทำงานของมอเตอร์ไฟฟ้า
           </h2>
@@ -464,7 +464,7 @@ export default function EVHorsepowerVsTorquePage() {
 
         {/* SECTION 3: SINGLE-SPEED GEARBOX & TRACTIVE FORCE MATH */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. กลไกเกียร์ทดเดี่ยว (Single-Speed Gearbox) และที่มาของแรงขับมหาศาลที่ล้อ
           </h2>
@@ -545,7 +545,7 @@ export default function EVHorsepowerVsTorquePage() {
 
         {/* SECTION 4: 2-SPEED GEARBOX (PORSCHE TAYCAN CASE STUDY) */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. กรณีศึกษา: ระบบเกียร์ 2 สปีดใน Porsche Taycan ทำงานอย่างไร?
           </h2>
@@ -589,7 +589,7 @@ export default function EVHorsepowerVsTorquePage() {
 
         {/* SECTION 5: THERMAL DERATING & COOLING */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. การระบายความร้อน Hairpin Winding และ Thermal Derating
           </h2>
@@ -617,7 +617,7 @@ export default function EVHorsepowerVsTorquePage() {
 
         {/* SECTION 6: HIGHWAY DRIVING & POWER MANAGEMENT TIPS */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. คำแนะนำสำหรับผู้ใช้รถ: ขับทางไกลอย่างไรให้ได้ทั้งสมรรถนะและระยะทาง
           </h2>
@@ -664,7 +664,7 @@ export default function EVHorsepowerVsTorquePage() {
               <div className="flex items-center gap-2 text-lime-400 text-xs font-bold uppercase tracking-wider mb-2">
                 <Sparkles className="w-4 h-4" /> EVSELECT Performance &amp; Protection
               </div>
-              <h3 className="text-xl sm:text-2xl font-black text-white mb-3">
+              <h3 className="text-lg sm:text-xl font-black text-white mb-3">
                 อุปกรณ์เสริมเพื่อการปกป้องและสมรรถนะที่สมบูรณ์แบบ
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mb-6">

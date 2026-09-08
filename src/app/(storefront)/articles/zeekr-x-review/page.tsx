@@ -156,14 +156,14 @@ export default function ZeekrXReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว Zeekr X (Flagship AWD &amp; Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 428 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           สัมผัสความหรูหราสไตล์สแกนดิเนเวียจากแพลตฟอร์ม <strong>SEA (Sustainable Experience Architecture)</strong> ร่วมกับ Volvo EX30 ผสานความแรงระดับ <strong>428 แรงม้า</strong> อัตราเร่ง 0-100 ใน 3.8 วินาที ประตูไร้กรอบ (Frameless Doors), ระบบเสียง <strong>Yamaha 13 ลำโพง</strong> พร้อมลำโพงฝังพนักพิงศีรษะ และผลทดสอบสมรรถนะจริงบนถนนเมืองไทย
@@ -279,7 +279,7 @@ export default function ZeekrXReviewPage() {
 
         {/* SECTION 01 */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. บทนำและภาพรวมในตลาดไทย (Introduction & Market Context)
           </h2>
@@ -299,7 +299,7 @@ export default function ZeekrXReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -421,7 +421,7 @@ export default function ZeekrXReviewPage() {
 
         {/* SECTION 03 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก ประตูไร้กรอบ และมิติตัวถัง (Exterior & Frameless Doors)
           </h2>
@@ -474,7 +474,7 @@ export default function ZeekrXReviewPage() {
 
         {/* SECTION 04 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ภายในห้องโดยสาร ความสบาย และระบบอินโฟเทนเมนต์ (Interior Luxury)
           </h2>
@@ -509,7 +509,7 @@ export default function ZeekrXReviewPage() {
 
         {/* SECTION 05: REAL DRIVING DYNAMICS */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ประสบการณ์ขับขี่จริงบนถนนไทย: สมรรถนะและช่วงล่าง (Driving Dynamics & NVH)
           </h2>
@@ -525,22 +525,22 @@ export default function ZeekrXReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (Flagship AWD)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">3.82 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">3.82 วินาที</div>
                 <div className="text-[10px] text-slate-400">5.60s ในรุ่น Standard</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">2.45 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">2.45 วินาที</div>
                 <div className="text-[10px] text-slate-400">หลังติดเบาะทันที</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">64.8 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">64.8 dB(A)</div>
                 <div className="text-[10px] text-slate-400">ซีลขอบยางสองชั้น</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">34.5 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">34.5 เมตร</div>
                 <div className="text-[10px] text-slate-400">Akebono 4-Piston</div>
               </div>
             </div>
@@ -562,7 +562,7 @@ export default function ZeekrXReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '700px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. เปรียบเทียบตรงตัว: Zeekr X vs Volvo EX30 & BYD Atto 3
           </h2>
@@ -623,7 +623,7 @@ export default function ZeekrXReviewPage() {
 
         {/* SECTION 07: TECH & SAFETY */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (Zeekr AD)
           </h2>
@@ -687,7 +687,7 @@ export default function ZeekrXReviewPage() {
                   <Sparkles className="w-3.5 h-3.5" />
                   EVSELECT Recommended Upgrades
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+                <h3 className="text-lg sm:text-xl font-extrabold text-white">
                   อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Zeekr X สเปกไทย
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
@@ -716,7 +716,7 @@ export default function ZeekrXReviewPage() {
         {/* SECTION 09: PROS & CONS - CAREXPERT STYLE */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
               8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
             </h2>

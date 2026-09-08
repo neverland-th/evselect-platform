@@ -104,14 +104,14 @@ export default function HybridToEVChassisDynamicsPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           เจาะลึกการเปลี่ยนผ่านจาก Hybrid สู่ Full EV: พลศาสตร์แชสซี, การกระจายน้ำหนัก และฟีลลิ่งการขับขี่
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           เมื่อคุณก้าวข้ามจากรถยนต์ไฮบริด (HEV / PHEV) สู่รถยนต์ไฟฟ้าแบตเตอรี่ 100% (Pure BEV) ความแตกต่างไม่ได้มีเพียงแค่การเสียบปลั๊กแทนการเติมน้ำมัน แต่คือการปฏิวัติโครงสร้างทางวิศวกรรมครั้งใหญ่: จากแชสซีแบบดั้งเดิมที่หน้าหนัก สู่ <strong>Dedicated Skateboard Platform</strong> บาลานซ์ 50:50, อัตราตอบสนองแรงบิดระดับ <strong>10 มิลลิวินาที</strong>, และความท้าทายในการจูนเบรก <strong>Brake-by-Wire</strong>
@@ -125,7 +125,7 @@ export default function HybridToEVChassisDynamicsPage() {
             <div className="text-xs uppercase tracking-wider text-slate-400 font-bold mb-1 flex items-center gap-1.5">
               <Award className="w-4 h-4 text-lime-400" /> Engineering Core Verdict
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-lime-400 leading-tight">
+            <div className="text-lg sm:text-xl font-black text-lime-400 leading-tight">
               Skateboard Architecture
             </div>
             <p className="text-xs text-slate-300 mt-2 leading-relaxed">
@@ -227,7 +227,7 @@ export default function HybridToEVChassisDynamicsPage() {
 
         {/* SECTION 1: ARCHITECTURAL DIFFERENCES */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. ความแตกต่างเชิงสถาปัตยกรรม: HEV, PHEV และ Pure BEV Skateboard
           </h2>
@@ -292,7 +292,7 @@ export default function HybridToEVChassisDynamicsPage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-lime-700 bg-lime-100 px-3 py-1 rounded-full">
                   Technical Architecture Diagram
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black text-slate-900 mt-2">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-2">
                   เปรียบเทียบสถาปัตยกรรมแชสซี: Hybrid vs Dedicated Skateboard EV
                 </h3>
               </div>
@@ -456,7 +456,7 @@ export default function HybridToEVChassisDynamicsPage() {
 
         {/* SECTION 2: INSTANT TORQUE & ANTI-SQUAT */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. อัตราตอบสนองแรงบิด 10ms vs 300ms และผลกระทบต่อช่วงล่าง
           </h2>
@@ -494,7 +494,7 @@ export default function HybridToEVChassisDynamicsPage() {
 
         {/* SECTION 3: UNSPRUNG MASS & DAMPING */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ภาระมวลใต้สปริง (Unsprung Mass Penalty) และการเซ็ตติ้งโช้คอัพ
           </h2>
@@ -517,7 +517,7 @@ export default function HybridToEVChassisDynamicsPage() {
 
         {/* SECTION 4: BRAKE-BY-WIRE & BRAKE BLENDING */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ระบบเบรกไฟฟ้า Brake-by-Wire และเทคโนโลยี Brake Blending
           </h2>
@@ -554,7 +554,7 @@ export default function HybridToEVChassisDynamicsPage() {
 
         {/* SECTION 5: ENGINEERING COMPARISON MATRIX */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ตารางเปรียบเทียบเชิงวิศวกรรม: HEV vs PHEV vs Dedicated BEV
           </h2>
@@ -622,7 +622,7 @@ export default function HybridToEVChassisDynamicsPage() {
 
         {/* SECTION 6: DRIVER ADAPTATION GUIDELINES */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. คู่มือการปรับตัวสำหรับผู้ขับขี่ (Driver Adaptation Guidelines)
           </h2>
@@ -669,7 +669,7 @@ export default function HybridToEVChassisDynamicsPage() {
               <div className="flex items-center gap-2 text-lime-400 text-xs font-bold uppercase tracking-wider mb-2">
                 <Sparkles className="w-4 h-4" /> EVSELECT Transition Upgrades
               </div>
-              <h3 className="text-xl sm:text-2xl font-black text-white mb-3">
+              <h3 className="text-lg sm:text-xl font-black text-white mb-3">
                 อัปเกรดความสมบูรณ์แบบให้รถ EV ของคุณ
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mb-6">

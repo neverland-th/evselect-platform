@@ -689,7 +689,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]"
+          className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           บทความ คู่มือ และรีวิวเจาะลึก{' '}
@@ -699,7 +699,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
         </h1>
 
         <p
-          className="text-sm sm:text-base md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
+          className="text-sm sm:text-base md:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รวมรีวิวรถ EV สเปกไทยฉบับเจาะลึก 12 มิติตามมาตรฐาน CarExpert ทดสอบอัตราเร่ง 0-100 กม./ชม. ระยะทางวิ่งจริง 
@@ -913,7 +913,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   </div>
 
                   <h2
-                    className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 group-hover:text-lime-700 transition-colors leading-tight"
+                    className="text-lg sm:text-xl lg:text-3xl font-extrabold text-slate-900 group-hover:text-lime-700 transition-colors leading-tight"
                     style={{ textWrap: 'balance' } as React.CSSProperties}
                   >
                     <Link href={`/articles/${featuredArticle.slug}`}>
@@ -1025,7 +1025,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {group.title && (
                 <div className="flex items-center justify-between pb-4 border-b border-slate-200">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900">{group.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-black text-slate-900">{group.title}</h3>
                     <span className="bg-lime-100 text-lime-800 font-bold text-xs px-2.5 py-1 rounded-full">{group.items.length} บทความ</span>
                   </div>
                 </div>
@@ -1110,7 +1110,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700">{article.segmentName}</span>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance' }}>
+                  <h3 className="text-base sm:text-base font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance' }}>
                     <Link href={`/articles/${article.slug}`}>{article.title}</Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mb-4 line-clamp-2 leading-relaxed font-normal">{article.excerpt}</p>
@@ -1165,7 +1165,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <span>EVSELECT Lab Fitment Guarantee</span>
             </div>
             <h3
-              className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight"
+              className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight"
               style={{ textWrap: 'balance' } as React.CSSProperties}
             >
               กำลังมองหาอุปกรณ์เสริมตรงรุ่นสำหรับรถยนต์ไฟฟ้าของคุณ?

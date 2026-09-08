@@ -113,7 +113,7 @@ export default function EVCamberAdjustmentGuidePage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           การตั้งมุมแคมเบอร์ (Camber) และศูนย์ล้อสำหรับรถ EV: พื้นที่หน้าสัมผัสยาง, โรลเซนเตอร์ และการเข้าโค้งตามหลัก OptimumG
@@ -162,7 +162,7 @@ export default function EVCamberAdjustmentGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               1. กายวิภาคของมุมแคมเบอร์: Static Camber vs Dynamic Camber
             </h2>
           </div>
@@ -234,7 +234,7 @@ export default function EVCamberAdjustmentGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               2. ไดอะแกรมวิศวกรรม: การกระจายแรงกดหน้าสัมผัสยาง (Contact Patch Pressure)
             </h2>
           </div>
@@ -363,7 +363,7 @@ export default function EVCamberAdjustmentGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               3. Camber Thrust และความลับของจุดโรลเซนเตอร์ (Roll Center Kinematics)
             </h2>
           </div>
@@ -408,7 +408,7 @@ export default function EVCamberAdjustmentGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               4. ตารางสูตรตั้งศูนย์ล้อมาตรฐานสำหรับรถ EV (Alignment Setup Matrix)
             </h2>
           </div>
@@ -486,7 +486,7 @@ export default function EVCamberAdjustmentGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               5. การวิเคราะห์อุณหภูมิยาง 3 จุด (Tyre Pyrometer Diagnostics)
             </h2>
           </div>
@@ -548,7 +548,7 @@ export default function EVCamberAdjustmentGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               6. อุปกรณ์เสริมและชิ้นส่วนปรับตั้งแคมเบอร์ตรงรุ่น EVSELECT
             </h2>
           </div>

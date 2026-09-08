@@ -157,14 +157,14 @@ export default function TeslaModelY6SeaterReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัว 6 ที่นั่งที่สมบูรณ์แบบที่สุดในไทย?
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           การขยายระยะฐานล้อให้ยาวขึ้นและปรับเปลี่ยนโครงสร้างห้องโดยสารสู่เลย์เอาต์ <strong>2+2+2 เบาะ Captain Seats แถวสอง</strong> พร้อมช่องทางเดินตรงกลาง (Walkthrough) สู่แถวสาม ทำให้ <strong>Tesla Model Y L</strong> ยกระดับจากการเป็นครอสโอเวอร์สำหรับคนรุ่นใหม่ สู่รถครอบครัวตัวจริงที่ผสมผสานความคล่องตัว เทคโนโลยีล้ำสมัย และความอุ่นใจจากเครือข่าย <strong>Tesla Supercharger</strong> ในราคาต่ำกว่า 2 ล้านบาท
@@ -280,7 +280,7 @@ export default function TeslaModelY6SeaterReviewPage() {
 
         {/* SECTION 01 */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. บทนำและบริบทตลาด: การปฏิวัติรถครอบครัว 6 ที่นั่ง (Market Context)
           </h2>
@@ -300,7 +300,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึกการเปรียบเทียบไลน์อัป Model Y และความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -458,7 +458,7 @@ export default function TeslaModelY6SeaterReviewPage() {
 
         {/* SECTION 03 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก ฐานล้อยาวขึ้น และมิติตัวถัง (Exterior & Extended Dimensions)
           </h2>
@@ -498,7 +498,7 @@ export default function TeslaModelY6SeaterReviewPage() {
 
         {/* SECTION 04 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ห้องโดยสารระดับพรีเมียม เลย์เอาต์ 2+2+2 และเบาะ Captain Seats
           </h2>
@@ -516,7 +516,7 @@ export default function TeslaModelY6SeaterReviewPage() {
 
         {/* SECTION 05: REAL DRIVING & NVH */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ประสบการณ์ขับขี่จริงบนถนนไทย: ความนุ่มนวลและสมรรถนะ (Driving Dynamics & NVH)
           </h2>
@@ -532,22 +532,22 @@ export default function TeslaModelY6SeaterReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (Dual Motor AWD)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">5.02 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">5.02 วินาที</div>
                 <div className="text-[10px] text-slate-400">ออกตัวฉับไว ไร้รอยต่อ</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">2.84 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">2.84 วินาที</div>
                 <div className="text-[10px] text-slate-400">เร่งแซงปลอดภัย ทันใจ</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">64.2 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">64.2 dB(A)</div>
                 <div className="text-[10px] text-slate-400">กระจก Acoustic รอบคัน</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">35.2 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">35.2 เมตร</div>
                 <div className="text-[10px] text-slate-400">กระจายแรงเบรก 4 ล้อ</div>
               </div>
             </div>
@@ -569,7 +569,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '700px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. เปรียบเทียบตรงตัว: Tesla Model Y L vs คู่แข่งในตลาดไทย
           </h2>
@@ -636,7 +636,7 @@ export default function TeslaModelY6SeaterReviewPage() {
 
         {/* SECTION 07: TECH & SAFETY */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. เทคโนโลยี ความปลอดภัย และฮาร์ดแวร์ HW4 (Technology & Safety)
           </h2>
@@ -700,7 +700,7 @@ export default function TeslaModelY6SeaterReviewPage() {
                   <Sparkles className="w-3.5 h-3.5" />
                   EVSELECT Recommended Upgrades
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+                <h3 className="text-lg sm:text-xl font-extrabold text-white">
                   อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Tesla Model Y L (6 ที่นั่ง)
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
@@ -729,7 +729,7 @@ export default function TeslaModelY6SeaterReviewPage() {
         {/* SECTION 09: PROS & CONS - CAREXPERT STYLE */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
               8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
             </h2>

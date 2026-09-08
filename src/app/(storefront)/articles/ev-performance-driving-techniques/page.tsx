@@ -45,7 +45,7 @@ export default function EVPerformanceStoryPage() {
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+        <h1 className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-tight">
           ขับรถ EV อย่างไรให้ปลอดภัย?<br />
           <span className="text-lime-600">ฉบับการ์ตูนนิทาน เข้าใจง่ายใน 5 นาที 🚗⚡</span>
         </h1>

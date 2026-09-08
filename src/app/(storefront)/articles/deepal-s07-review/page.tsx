@@ -168,14 +168,14 @@ export default function DeepalS07ReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย วิ่งจริงไกลแค่ไหน?
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           เจาะลึกทุกรายละเอียดของ <strong>Changan Deepal S07</strong> เอสยูวีขุมพลังไฟฟ้า 100% สไตล์ล้ำยุค ทั้งสมรรถนะมอเตอร์หลัง 258 แรงม้า แบตเตอรี่ 66.8 – 79.97 kWh ความเร็วชาร์จ DC สูงสุด 167 kW และการทดสอบช่วงล่าง การเก็บเสียง NVH รวมถึงม่านบังแดดไฟฟ้าแท้ที่ตอบโจทย์สภาพอากาศเมืองไทยอย่างสมบูรณ์แบบ
@@ -291,14 +291,14 @@ export default function DeepalS07ReviewPage() {
         
         {/* SECTION 1: Overview */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. ภาพรวม &amp; บริบทในตลาดรถยนต์ไฟฟ้าไทย
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             นับตั้งแต่ Changan Automobile ประกาศเปิดตัวแบรนด์ <strong>DEEPAL (ดีพอล)</strong> ในประเทศไทยอย่างเป็นทางการ เอสยูวีรุ่น <strong>Deepal S07</strong> ได้กลายเป็นหนึ่งในรถยนต์ไฟฟ้าที่สร้างกระแสตอบรับอย่างล้นหลาม ด้วยงานออกแบบเส้นสายแบบไซเบอร์พังก์ที่เฉียบคม ประตูไร้กรอบ (Frameless Doors) และการวางตำแหน่งตัวรถในระดับ <strong>Mid-size D-SUV</strong> ที่ท้าชนทั้ง Tesla Model Y และ BYD Atto 3 / Sealion 7 โดยตรง
           </p>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed">
             ในตลาดประเทศไทย Deepal S07 ชูจุดขายที่เข้าใจผู้บริโภคชาวไทยอย่างมาก โดยเฉพาะการติดตั้ง <strong>ม่านบังแดดไฟฟ้าสำหรับหลังคากระจกพาโนรามา</strong> มาจากโรงงาน ซึ่งแก้ Pain Point เรื่องความร้อนสะสมในห้องโดยสารของรถ EV ที่เป็นหลังคาแก้วเปลือย นอกจากนี้ยังมีระบบ AR-HUD ขนาด 53 นิ้ว และหน้าจอกลางหมุนเอียงได้อัตโนมัติ ทำให้เป็นเอสยูวีที่โดดเด่นทั้งความสะดวกสบายและเทคโนโลยี
           </p>
         </section>
@@ -308,7 +308,7 @@ export default function DeepalS07ReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -430,11 +430,11 @@ export default function DeepalS07ReviewPage() {
 
         {/* SECTION 3: Exterior Design */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก ระบบไฟส่องสว่าง และมิติตัวถัง
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Deepal S07 ได้รับการออกแบบโดยทีมดีไซเนอร์ระดับนานาชาติในยุโรป ตัวรถมาพร้อมทรวดทรงแบบ Fastback Coupe SUV ด้านหน้าแบบ Shark Nose ปิดทึบไร้กระจังหน้า โดดเด่นด้วยไฟหน้า <strong>Interactive Light DRLs</strong> ที่ประกอบด้วยหลอด LED มากถึง 696 หลอด สามารถแสดงแอนิเมชันต้อนรับและข้อความกราฟิกได้
           </p>
 
@@ -474,11 +474,11 @@ export default function DeepalS07ReviewPage() {
 
         {/* SECTION 4: Interior & Sunflower Screen */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ห้องโดยสาร หน้าจอ Sunflower 15.6 นิ้ว และพื้นที่สัมภาระ
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             ก้าวเข้ามาสู่ภายในห้องโดยสาร จะสัมผัสได้ถึงความหรูหราแบบ Minimalist ไฮไลต์สูงสุดคือหน้าจอสัมผัสกลางขนาด <strong>15.6 นิ้ว แบบ Sunflower Touchscreen</strong> ที่ควบคุมด้วยมอเตอร์ไฟฟ้า สามารถเอียงหันหน้าจอเข้าหาคนขับหรือผู้โดยสารตอนหน้าได้อัตโนมัติ ±15 องศา ขับเคลื่อนด้วยชิปประมวลผลเรือธง <strong>Qualcomm Snapdragon 8155</strong> ตอบสนองได้ลื่นไหลไม่มีสะดุด
           </p>
 
@@ -520,11 +520,11 @@ export default function DeepalS07ReviewPage() {
 
         {/* SECTION 5: Powertrain & Driving */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ขุมพลังมอเตอร์ไฟฟ้า สมรรถนะ และอัตราเร่ง 0-100
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Changan Deepal S07 พัฒนาขึ้นบนแพลตฟอร์มไฟฟ้าเฉพาะตัว <strong>EPA1 Platform</strong> ติดตั้งมอเตอร์ไฟฟ้าแบบ Permanent Magnet Synchronous Motor วางที่เพลาขับหลัง (Rear-Wheel Drive) ให้ความรู้สึกกระฉับกระเฉงในการออกตัว
           </p>
 
@@ -553,11 +553,11 @@ export default function DeepalS07ReviewPage() {
 
         {/* SECTION 6: Suspension, NVH & Real Test Data */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. ฟีลลิ่งช่วงล่าง การซับแรงกระแทก และการเก็บเสียง NVH บนถนนไทย
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             ระบบช่วงล่างของ Deepal S07 ใช้ด้านหน้าแบบอิสระ <strong>MacPherson Strut</strong> พร้อมเหล็กกันโคลง และด้านหลังแบบอิสระ <strong>H-Arm Multi-Link</strong> ผลิตจากวัสดุอะลูมิเนียมน้ำหนักเบา
           </p>
 
@@ -601,22 +601,22 @@ export default function DeepalS07ReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (จับเวลาจริง)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">6.72 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">6.72 วินาที</div>
                 <div className="text-[10px] text-slate-400">รุ่น Standard แบตเตอรี่ 90%</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">4.18 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">4.18 วินาที</div>
                 <div className="text-[10px] text-slate-400">ตอบสนองคันเร่งฉับไว</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">63.2 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">63.2 dB(A)</div>
                 <div className="text-[10px] text-slate-400">กระจก Acoustic 2 ชั้น</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">36.8 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">36.8 เมตร</div>
                 <div className="text-[10px] text-slate-400">การทรงตัวนิ่งมั่นคง</div>
               </div>
             </div>
@@ -625,11 +625,11 @@ export default function DeepalS07ReviewPage() {
 
         {/* SECTION 7: Battery & Charging */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. แบตเตอรี่ ระยะทางวิ่งจริง และความเร็วในการชาร์จ AC / DC
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Deepal S07 ใช้แบตเตอรี่ Ternary Lithium (NMC) คุณภาพสูงจาก CATL พร้อมระบบจัดการอุณหภูมิของเหลวอัจฉริยะ (Liquid Cooling Thermal Management) ที่ช่วยรักษาอุณหภูมิเซลล์ให้คงที่แม้ขับขี่ท่ามกลางสภาพอากาศร้อนจัดของเมืองไทย
           </p>
 
@@ -669,11 +669,11 @@ export default function DeepalS07ReviewPage() {
 
         {/* SECTION 8: Active Safety & ADAS */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ระบบความปลอดภัยอัจฉริยะและระบบช่วยเหลือการขับขี่ ADAS L2+
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Deepal S07 ติดตั้งระบบความปลอดภัยขั้นสูงเต็มพิกัด ทำงานร่วมกับเรดาร์มิลลิเมตรเวฟ 3 ตัว, กล้องความละเอียดสูงรอบคัน 5 ตัว และอัลตราโซนิกเซนเซอร์ 12 จุด
           </p>
 
@@ -731,7 +731,7 @@ export default function DeepalS07ReviewPage() {
                 <Sparkles className="w-3.5 h-3.5" />
                 EVSELECT Recommended Upgrades
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+              <h3 className="text-lg sm:text-xl font-extrabold text-white">
                 อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Changan Deepal S07
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
@@ -760,7 +760,7 @@ export default function DeepalS07ReviewPage() {
       {/* 8. CarExpert Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
           </h2>

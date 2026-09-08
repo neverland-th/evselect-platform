@@ -105,14 +105,14 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รับมือรอยต่อสะพาน, คอสะพานทรุด, ลูกระนาด และน้ำท่วมขัง
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           ถอดรหัสฟิสิกส์ยานยนต์ขั้นสูง: ทำไมช่วงล่าง OEM ของรถยนต์ไฟฟ้าที่หนักกว่า 2 ตันและจุดศูนย์ถ่วงต่ำ ถึงมักมีอาการ <strong>&quot;เด้ง ดีด แข็งกระด้าง หรือยัน Bump Stop&quot;</strong> เมื่อเจอรอยต่อสะพานโทลล์เวย์ คอสะพานทรุด ลูกระนาดชัน และความร้อนผิวถนนกรุงเทพฯ 65°C พร้อมสูตรการคำนวณระยะยุบ (Bump Travel), วาล์วไดเกรสซีฟ (Digressive Valving) และตารางค่าเซ็ตติ้งเฉพาะรุ่นสำหรับ BYD Seal, Tesla Model Y, MG4, Deepal S07 และ Zeekr X
@@ -190,7 +190,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             1. สภาพถนนเมืองไทย: บททดสอบสุดหินของรถยนต์ไฟฟ้าน้ำหนัก 2 ตัน
           </h2>
         </div>
@@ -246,7 +246,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             2. อุณหภูมิผิวถนน 50–65°C: ศัตรูเงียบที่ทำให้น้ำมันโช้คเหลวและเกิด Cavitation
           </h2>
         </div>
@@ -306,7 +306,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             3. ไดอะแกรมวิศวกรรม: การวิเคราะห์ระยะยุบ (Bump Travel) และการชน Bump Stop
           </h2>
         </div>
@@ -483,7 +483,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             4. ศาสตร์แห่งวาล์วไดเกรสซีฟ (Digressive Valving): คุมตัวถัง 2 ตันนิ่งสนิท แต่ซับรอยต่อสะพานนุ่มมือ
           </h2>
         </div>
@@ -558,7 +558,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             5. มาตรการป้องกันสนิมและน้ำท่วมขัง: เลือกวัสดุอย่างไรให้อยู่รอดเกิน 5 ปีในไทย
           </h2>
         </div>
@@ -604,7 +604,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             6. Road Condition Setting Cheat Sheet: สูตรปรับคลิกช็อกอัพ 5 สภาพถนนไทย
           </h2>
         </div>
@@ -695,7 +695,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             7. คู่มือการเซ็ตติ้งเฉพาะรุ่นสำหรับ 5 รถยนต์ไฟฟ้ายอดนิยมในไทย
           </h2>
         </div>
@@ -846,7 +846,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       <section className="space-y-6 mb-16">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
             8. 7 ขั้นตอนตรวจเช็คก่อนส่งมอบรถ (EV Fitment &amp; QC Checklist)
           </h2>
         </div>
@@ -913,7 +913,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/20 border border-lime-500/40 text-lime-400 text-xs font-bold rounded-full">
               <Sparkles className="w-3.5 h-3.5" /> EVSELECT Suspension &amp; Fitment Hub
             </div>
-            <h3 className="text-xl sm:text-2xl font-black text-white">
+            <h3 className="text-lg sm:text-xl font-black text-white">
               ค้นหาชุดช่วงล่าง สตรัทปรับเกลียว และยางตรงรุ่นสำหรับรถคุณ
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
@@ -923,7 +923,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
 
           <Link
             href="/articles/ev-tyre-and-coilover-selection-guide"
-            className="px-6 py-3.5 bg-lime-500 hover:bg-lime-400 text-black font-black text-sm rounded-xl transition-all shadow-md flex items-center gap-2 shrink-0 group"
+            className="px-5 py-2.5 bg-lime-500 hover:bg-lime-400 text-black font-black text-sm rounded-xl transition-all shadow-md flex items-center gap-2 shrink-0 group"
           >
             <span>อ่านต่อ: คู่มือเลือกซื้อยางและสตรัท EV</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

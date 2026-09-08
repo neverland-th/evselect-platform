@@ -156,14 +156,14 @@ export default function TeslaModel3HighlandReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว Tesla Model 3 Highland (2024-2026): อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยีที่สมบูรณ์แบบที่สุด
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           การปรับโฉมครั้งประวัติศาสตร์ภายใต้รหัสพัฒนา <strong>&quot;Project Highland&quot;</strong> ที่ลบทุกคำสบประมาทเรื่องความกระด้างและเสียงรบกวน ด้วยกระจก Acoustic 360 องศา, ช่วงล่างใหม่ Frequency Response Dampers, เบาะเป่าลมเย็น (Ventilated Seats), จอหลัง 8 นิ้ว และความสะดวกสบายไร้กังวลจากเครือข่าย <strong>Tesla Supercharger</strong> ทั่วประเทศไทย
@@ -279,7 +279,7 @@ export default function TeslaModel3HighlandReviewPage() {
 
         {/* SECTION 01 */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. บทนำและภาพรวมในตลาดไทย (Introduction & Market Context)
           </h2>
@@ -299,7 +299,7 @@ export default function TeslaModel3HighlandReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึก 3 รุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -460,7 +460,7 @@ export default function TeslaModel3HighlandReviewPage() {
 
         {/* SECTION 03 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก แอโรไดนามิกส์ และมิติตัวถัง (Exterior & Aerodynamics)
           </h2>
@@ -515,7 +515,7 @@ export default function TeslaModel3HighlandReviewPage() {
 
         {/* SECTION 04 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ภายในห้องโดยสาร เบาะเป่าลมเย็น และจอหลัง 8 นิ้ว (Interior Luxury & Features)
           </h2>
@@ -552,7 +552,7 @@ export default function TeslaModel3HighlandReviewPage() {
 
         {/* SECTION 05: REAL DRIVING & NVH DATA */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ประสบการณ์ขับขี่จริงบนถนนไทย: ความเงียบ NVH และสมรรถนะ (Real Driving Dynamics)
           </h2>
@@ -568,22 +568,22 @@ export default function TeslaModel3HighlandReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (Long Range AWD)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">4.42 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">4.42 วินาที</div>
                 <div className="text-[10px] text-slate-400">3.10s ในรุ่น Performance</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">2.52 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">2.52 วินาที</div>
                 <div className="text-[10px] text-slate-400">ตอบสนองทันที ไม่รอรอบ</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">63.4 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">63.4 dB(A)</div>
                 <div className="text-[10px] text-slate-400">เงียบขึ้นกว่ารุ่นเดิม 30%</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">34.8 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">34.8 เมตร</div>
                 <div className="text-[10px] text-slate-400">เบรกหยุดมั่นใจ ไม่เป๋</div>
               </div>
             </div>
@@ -610,7 +610,7 @@ export default function TeslaModel3HighlandReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '700px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. เปรียบเทียบตรงตัว: Tesla Model 3 Highland vs BYD Seal & Deepal SL03
           </h2>
@@ -704,7 +704,7 @@ export default function TeslaModel3HighlandReviewPage() {
 
         {/* SECTION 07: ACTIVE SAFETY & ADAS */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (Tesla Vision &amp; Autopilot)
           </h2>
@@ -768,7 +768,7 @@ export default function TeslaModel3HighlandReviewPage() {
                   <Sparkles className="w-3.5 h-3.5" />
                   EVSELECT Recommended Upgrades
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+                <h3 className="text-lg sm:text-xl font-extrabold text-white">
                   อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Tesla Model 3 Highland
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
@@ -797,7 +797,7 @@ export default function TeslaModel3HighlandReviewPage() {
         {/* SECTION 09: PROS & CONS - CAREXPERT STYLE */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
               8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
             </h2>

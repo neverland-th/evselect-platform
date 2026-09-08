@@ -110,7 +110,7 @@ export default function ShockAbsorberTypesGuidePage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           เจาะลึกประเภทโช้คอัพ: Monotube vs Twin-tube vs Inverted vs ถุงลมอัจฉริยะ (Air Suspension) แบบไหนตอบโจทย์ EV มากที่สุด?
@@ -160,7 +160,7 @@ export default function ShockAbsorberTypesGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               1. ผ่าโครงสร้างภายใน: กายวิภาค Monotube vs Twin-tube vs Inverted
             </h2>
           </div>
@@ -339,7 +339,7 @@ export default function ShockAbsorberTypesGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               2. ตารางเปรียบเทียบสถาปัตยกรรมโช้คอัพ 5 รูปแบบ (Comprehensive Engineering Matrix)
             </h2>
           </div>
@@ -433,7 +433,7 @@ export default function ShockAbsorberTypesGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               3. สถาปัตยกรรมช่วงล่างอัจฉริยะ: CDC vs Magnetorheological vs Dual-Chamber Air
             </h2>
           </div>
@@ -493,7 +493,7 @@ export default function ShockAbsorberTypesGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               4. บทวิเคราะห์ความทนทานและการระบายความร้อนในสภาพภูมิอากาศเมืองไทย
             </h2>
           </div>
@@ -525,7 +525,7 @@ export default function ShockAbsorberTypesGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               5. คำแนะนำในการเลือกอัปเกรดโช้คอัพให้ตรงรุ่นรถ EV ของคุณ
             </h2>
           </div>

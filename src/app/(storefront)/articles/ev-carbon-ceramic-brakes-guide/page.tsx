@@ -65,7 +65,7 @@ export default function CarbonCeramicBrakesGuidePage() {
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight">
+        <h1 className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight">
           เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB): นวัตกรรม "หยุดโลก" หลักแสนที่ EV สายสนามต้องมี
         </h1>
 

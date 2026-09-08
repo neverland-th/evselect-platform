@@ -260,11 +260,11 @@ export default async function StorefrontPage() {
 
             {/* Main Headline */}
             <div className="space-y-3">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
                 DRIVE BETTER. <br />
                 <span className="text-gradient-lime">SELECT SMARTER.</span>
               </h1>
-              <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
                 อุปกรณ์เสริม EV คัดเกรดพรีเมียม <strong className="text-slate-900 font-semibold">ผ่านการทดสอบ Fitment จริงบนรถสเปกไทย 100%</strong> ไม่ต้องเสี่ยงเดา ไม่เจอปัญหาติดขัด ใส่ได้พอดีแน่นอน
               </p>
             </div>
@@ -273,7 +273,7 @@ export default async function StorefrontPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 w-full px-4 sm:px-0">
               <a
                 href="#vehicle-finder"
-                className="inline-flex justify-center items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black text-sm font-bold px-6 py-3.5 rounded-xl shadow-sm transition-all hover:scale-105 w-full sm:w-auto"
+                className="inline-flex justify-center items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm transition-all hover:scale-105 w-full sm:w-auto"
               >
                 <Car className="w-4 h-4" />
                 <span>เลือกรุ่นรถของคุณ</span>
@@ -284,7 +284,7 @@ export default async function StorefrontPage() {
                 href="https://shopee.co.th/shop/9535932"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 text-sm font-semibold px-6 py-3.5 rounded-xl border border-slate-300 shadow-xs backdrop-blur-md transition-all w-full sm:w-auto"
+                className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-300 shadow-xs backdrop-blur-md transition-all w-full sm:w-auto"
               >
                 <ShoppingBag className="w-4 h-4 text-orange-500" />
                 <span>ช้อปผ่าน Shopee Thailand</span>
@@ -354,7 +354,7 @@ export default async function StorefrontPage() {
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>จุดเด่นของ EVSELECT</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
+              <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-snug">
                 ทำไมของแต่ง EV ทั่วไปจากจีนถึงมักมีปัญหาเมื่อใส่ในไทย?
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
@@ -600,7 +600,7 @@ export default async function StorefrontPage() {
               href="https://shopee.co.th/shop/9535932"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-xs transition-all w-full sm:w-auto"
+              className="inline-flex justify-center items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-xs transition-all w-full sm:w-auto"
             >
               <ShoppingBag className="w-4 h-4" />
               <span>ไปยังร้านค้า Shopee Thailand</span>
@@ -610,7 +610,7 @@ export default async function StorefrontPage() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-xs transition-all w-full sm:w-auto"
+              className="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-xs transition-all w-full sm:w-auto"
             >
               <MessageCircle className="w-4 h-4" />
               <span>ทักแชทสั่งซื้อผ่าน Facebook / LINE</span>

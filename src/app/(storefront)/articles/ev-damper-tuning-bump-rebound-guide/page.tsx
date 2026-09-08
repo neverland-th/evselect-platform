@@ -110,7 +110,7 @@ export default function EVDamperTuningGuidePage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           คู่มือการปรับจูนแดมเปอร์ (Damper Tuning): ทำความเข้าใจ Bump, Rebound, Low-Speed vs High-Speed Damping ตามหลัก Suspension Secrets
@@ -159,7 +159,7 @@ export default function EVDamperTuningGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               1. ฟิสิกส์การหน่วงและอัตราส่วนความหน่วงที่เหมาะสม (Damping Ratio)
             </h2>
           </div>
@@ -225,7 +225,7 @@ export default function EVDamperTuningGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               2. ทำความเข้าใจ Bump, Rebound และย่านความเร็วลูกสูบ (Velocity Regimes)
             </h2>
           </div>
@@ -323,7 +323,7 @@ export default function EVDamperTuningGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               3. การอ่านกราฟ Force-Velocity (F-V Curve): Linear vs Digressive vs Progressive
             </h2>
           </div>
@@ -444,7 +444,7 @@ export default function EVDamperTuningGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               4. ตารางปรับคลิกแดมเปอร์แก้ Understeer / Oversteer ใน 3 ช่วงของโค้ง
             </h2>
           </div>
@@ -527,7 +527,7 @@ export default function EVDamperTuningGuidePage() {
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
               5. ขั้นตอน 4 สเต็ปการเซ็ตติ้งโช้คอัพสำหรับผู้เริ่มต้น (Baseline Setup Protocol)
             </h2>
           </div>

@@ -158,14 +158,14 @@ export default function Zeekr7XReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V ชาร์จไวสุดขีด 420kW ออปชันหรูระดับเรือธง
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           สัมผัสตัวจริงของ <strong>Zeekr 7X (2026)</strong> พรีเมียมสมาร์ทเอสยูวีขนาดกลาง (D-Segment) นำเข้าอย่างเป็นทางการโดย ZEEKR Thailand พัฒนาบนแพลตฟอร์ม <strong>SEA (Sustainable Experience Architecture)</strong> พร้อมสถาปัตยกรรมระบบไฟ <strong>800V Silicon Carbide (SiC)</strong> เต็มระบบ พละกำลังสูงสุด 646 แรงม้า ชิปประมวลผล Snapdragon 8295 ช่วงล่างถุงลมอัจฉริยะ CCD และผลทดสอบจริงบนสภาพถนนเมืองไทย
@@ -281,7 +281,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 01 */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. บทนำและภาพรวมในตลาดไทย (Introduction & Market Context)
           </h2>
@@ -301,7 +301,7 @@ export default function Zeekr7XReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึก 3 รุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -459,7 +459,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 03 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก แผงไฟ Stargate และมิติตัวถัง (Exterior Design & Dimensions)
           </h2>
@@ -519,7 +519,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 04 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ภายในห้องโดยสาร ความสบาย และความจุสัมภาระ (Interior Space & Practicality)
           </h2>
@@ -563,7 +563,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 05 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ระบบอินโฟเทนเมนต์ หน้าจอ และระบบเสียง (Infotainment, Screens & Audio Tech)
           </h2>
@@ -581,7 +581,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 06: REAL DRIVING PERFORMANCE & NVH */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. ขุมพลัง สมรรถนะ และการทดสอบขับขี่บนถนนไทย (Powertrain & Real Driving Performance)
           </h2>
@@ -597,22 +597,22 @@ export default function Zeekr7XReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (Performance AWD)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">3.82 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">3.82 วินาที</div>
                 <div className="text-[10px] text-slate-400">6.04s ในรุ่น RWD</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">2.48 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">2.48 วินาที</div>
                 <div className="text-[10px] text-slate-400">แซงขาดทันใจ ไม่รอรอบ</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">63.1 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">63.1 dB(A)</div>
                 <div className="text-[10px] text-slate-400">กระจก Acoustic 2 ชั้น</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">34.5 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">34.5 เมตร</div>
                 <div className="text-[10px] text-slate-400">Akebono 4-Piston</div>
               </div>
             </div>
@@ -628,7 +628,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 07 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. ช่วงล่างถุงลมอัจฉริยะ ความนุ่มนวล และการเก็บเสียง (Ride Quality, Suspension & NVH)
           </h2>
@@ -645,7 +645,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 08 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. สถาปัตยกรรม 800V แบตเตอรี่ และระบบชาร์จไวสุดขีด (800V Architecture & Charging)
           </h2>
@@ -689,7 +689,7 @@ export default function Zeekr7XReviewPage() {
 
         {/* SECTION 09 */}
         <section className="my-12">
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             9. ระบบช่วยเหลือการขับขี่และความปลอดภัย (Active Safety & ADAS - ZEEKR AD)
           </h2>
@@ -736,7 +736,7 @@ export default function Zeekr7XReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '550px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             10. ตารางเปรียบเทียบกับคู่แข่งในไทย (Competitor Comparison)
           </h2>
@@ -860,7 +860,7 @@ export default function Zeekr7XReviewPage() {
                   <Sparkles className="w-3.5 h-3.5" />
                   EVSELECT Recommended Upgrades
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+                <h3 className="text-lg sm:text-xl font-extrabold text-white">
                   อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Zeekr 7X 2026
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
@@ -889,7 +889,7 @@ export default function Zeekr7XReviewPage() {
         {/* SECTION 12: PROS & CONS - CAREXPERT STYLE */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
               11. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
             </h2>

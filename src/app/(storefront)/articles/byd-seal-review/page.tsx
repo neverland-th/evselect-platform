@@ -157,14 +157,14 @@ export default function BYDSealReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว BYD Seal สเปกไทย 3 รุ่นย่อย (Dynamic / Premium / AWD Performance): สปอร์ตซีดานไฟฟ้า 530 แรงม้า เขย่าบัลลังก์ D-Segment ยุโรป
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           การทดสอบสมรรถนะเจาะลึกสไตล์ CarExpert บนถนนเมืองไทย ตั้งแต่อัตราเร่ง 0-100 กม./ชม. ใน 3.8 วินาที ความแข็งแกร่งของแชสซี CTB โช้คอัพ FSD ความเงียบ NVH ไปจนถึงการใช้งานจริงในสภาพอากาศร้อนจัด
@@ -280,7 +280,7 @@ export default function BYDSealReviewPage() {
         
         {/* Section 1: Overview */}
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. บทนำและภาพรวมในตลาดไทย
           </h2>
@@ -297,7 +297,7 @@ export default function BYDSealReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -449,7 +449,7 @@ export default function BYDSealReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '500px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก แสงไฟ และมิติตัวถัง
           </h2>
@@ -503,7 +503,7 @@ export default function BYDSealReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '550px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ภายในห้องโดยสาร ความสบาย และระบบอินโฟเทนเมนต์
           </h2>
@@ -541,7 +541,7 @@ export default function BYDSealReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '550px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ขุมพลังมอเตอร์ สมรรถนะ และฟีลลิ่งการขับขี่
           </h2>
@@ -560,22 +560,22 @@ export default function BYDSealReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (จับเวลาจริง)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">3.84 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">3.84 วินาที</div>
                 <div className="text-[10px] text-slate-400">AWD Sport Mode</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">2.15 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">2.15 วินาที</div>
                 <div className="text-[10px] text-slate-400">ดึงหลังติดเบาะทันที</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">64.8 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">64.8 dB(A)</div>
                 <div className="text-[10px] text-slate-400">กระจก Acoustic 2 ชั้น</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">35.2 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">35.2 เมตร</div>
                 <div className="text-[10px] text-slate-400">เบรกจับแน่น ทรงตัวนิ่ง</div>
               </div>
             </div>
@@ -591,7 +591,7 @@ export default function BYDSealReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '550px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. เปรียบเทียบกับคู่แข่งโดยตรงในตลาดไทย (Head-to-Head)
           </h2>
@@ -676,7 +676,7 @@ export default function BYDSealReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '500px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. แบตเตอรี่ Blade Battery, ระยะทางวิ่งจริง และการชาร์จไฟ
           </h2>
@@ -716,7 +716,7 @@ export default function BYDSealReviewPage() {
           className="my-12"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '400px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (ADAS)
           </h2>
@@ -780,7 +780,7 @@ export default function BYDSealReviewPage() {
                 <Sparkles className="w-3.5 h-3.5" />
                 EVSELECT Recommended Upgrades
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+              <h3 className="text-lg sm:text-xl font-extrabold text-white">
                 อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ BYD Seal สเปกไทย
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
@@ -809,7 +809,7 @@ export default function BYDSealReviewPage() {
       {/* 8. CarExpert Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
           </h2>

@@ -129,14 +129,14 @@ export default function EVBatteryCareArticle() {
         </div>
 
         <h1 
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           5 วิธีดูแลแบตเตอรี่รถ EV ให้เสื่อมช้าลง และใช้ได้นานเกิน 10 ปี
         </h1>
         
         <p 
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           แบตเตอรี่คือหัวใจสำคัญและชิ้นส่วนที่มีมูลค่าสูงที่สุดของรถยนต์ไฟฟ้า การดูแลรักษาอย่างถูกวิธีไม่เพียงช่วยยืดอายุการใช้งานให้ทนทาน แต่ยังช่วยคงมูลค่าของตัวรถไว้ได้นานที่สุด
@@ -158,11 +158,11 @@ export default function EVBatteryCareArticle() {
       {/* 4. Article Body */}
       <div className="prose prose-slate prose-lg max-w-none prose-headings:text-slate-900 prose-a:text-lime-600 prose-strong:text-slate-900 text-slate-700">
         
-        <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
+        <p className="text-slate-700 leading-relaxed text-base sm:text-base">
           ผู้ใช้รถ EV มือใหม่หลายคนมักมีความกังวลเกี่ยวกับ <strong>&quot;แบตเตอรี่เสื่อม&quot; (Battery Degradation)</strong> ซึ่งเป็นปรากฏการณ์ทางเคมีตามธรรมชาติที่เกิดขึ้นกับแบตเตอรี่ลิเธียมไอออนทุกประเภท ไม่ว่าจะเป็นในสมาร์ทโฟนหรือยานยนต์ไฟฟ้า แต่ด้วยเทคโนโลยีระบบจัดการแบตเตอรี่ (BMS - Battery Management System) ในรถ EV ยุคปัจจุบัน การเสื่อมสภาพนั้นเกิดขึ้นช้ามาก หากเราใช้งานและปรับพฤติกรรมอย่างถูกวิธี
         </p>
 
-        <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
+        <p className="text-slate-700 leading-relaxed text-base sm:text-base">
           วันนี้ทีมบรรณาธิการ <strong>EVSELECT</strong> ขอแนะนำ 5 เทคนิคสำคัญที่คุณสามารถทำตามได้ง่ายๆ ในชีวิตประจำวัน เพื่อถนอมแบตเตอรี่รถยนต์ไฟฟ้าคันโปรดของคุณให้อยู่ในสภาพสมบูรณ์และใช้งานได้ยาวนานเกิน 10 ปี
         </p>
 
@@ -175,7 +175,7 @@ export default function EVBatteryCareArticle() {
               <BatteryCharging className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-0 mb-1.5">
+              <h2 className="text-lg sm:text-xl font-black text-slate-900 mt-0 mb-1.5">
                 1. รักษาระดับแบตเตอรี่ให้อยู่ระหว่าง 20% - 80%
               </h2>
               <p className="text-slate-600 text-sm sm:text-base font-medium">
@@ -200,7 +200,7 @@ export default function EVBatteryCareArticle() {
               <Zap className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-0 mb-1.5">
+              <h2 className="text-lg sm:text-xl font-black text-slate-900 mt-0 mb-1.5">
                 2. อย่าพึ่งพาการชาร์จเร็ว (DC Fast Charge) มากเกินไป
               </h2>
               <p className="text-slate-600 text-sm sm:text-base font-medium">
@@ -220,7 +220,7 @@ export default function EVBatteryCareArticle() {
               <ShieldAlert className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-0 mb-1.5">
+              <h2 className="text-lg sm:text-xl font-black text-slate-900 mt-0 mb-1.5">
                 3. หลีกเลี่ยงการจอดรถตากแดดจัดเป็นเวลานาน
               </h2>
               <p className="text-slate-600 text-sm sm:text-base font-medium">
@@ -273,7 +273,7 @@ export default function EVBatteryCareArticle() {
               <Settings className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-0 mb-1.5">
+              <h2 className="text-lg sm:text-xl font-black text-slate-900 mt-0 mb-1.5">
                 4. วางแผนหากต้องจอดรถทิ้งไว้หลายสัปดาห์
               </h2>
               <p className="text-slate-600 text-sm sm:text-base font-medium">
@@ -293,7 +293,7 @@ export default function EVBatteryCareArticle() {
               <Award className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-0 mb-1.5">
+              <h2 className="text-lg sm:text-xl font-black text-slate-900 mt-0 mb-1.5">
                 5. ขับขี่อย่างนุ่มนวล หลีกเลี่ยงการกระชากคันเร่งรุนแรงบ่อยครั้ง
               </h2>
               <p className="text-slate-600 text-sm sm:text-base font-medium">

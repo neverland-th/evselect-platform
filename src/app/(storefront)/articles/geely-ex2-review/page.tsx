@@ -166,14 +166,14 @@ export default function GeelyEX2ReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           สัมผัสแรกกับ <strong>Geely EX2</strong> (หรือ Geely Xingyuan) รถยนต์ไฟฟ้าคอมแพกต์สำหรับคนเมืองที่สร้างเซอร์ไพรส์ด้วยระบบขับเคลื่อนล้อหลัง RWD, มอเตอร์ 116 แรงม้า, ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในพิกัดราคา 4 แสนบาท, แบตเตอรี่ Aegis Short Blade 39.4 kWh ทนความร้อนสูง และระบบปฏิบัติการ Flyme Auto
@@ -289,14 +289,14 @@ export default function GeelyEX2ReviewPage() {
         
         {/* SECTION 1: Overview */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. ภาพรวม &amp; บริบทในตลาดรถยนต์ไฟฟ้าไทย
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             ตลาดรถยนต์ไฟฟ้าคอมแพกต์ซิตี้คาร์ในประเทศไทย (เช่น BYD Dolphin, Neta V-II, Wuling Binguo) กำลังจะเปลี่ยนไปอย่างสิ้นเชิงด้วยการมาถึงของ <strong>Geely EX2</strong> (หรือที่รู้จักกันในตลาดจีนและสากลในชื่อ <em>Geely Xingyuan</em>) นำเข้าและจัดจำหน่ายอย่างเป็นทางการในไทยโดย Geely Thonburi Thailand รถยนต์ไฟฟ้ารุ่นใหม่ล่าสุดจาก Geely Holding Group ยักษ์ใหญ่ผู้เป็นเจ้าของแบรนด์ระดับโลกอย่าง Volvo, Polestar, Zeekr และ Lotus
           </p>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed">
             สิ่งที่ทำให้ Geely EX2 แตกต่างจากคู่แข่งทั้งหมดในระดับราคา 4 แสนบาท คือการไม่ประนีประนอมเรื่องวิศวกรรมยานยนต์ โดยในประเทศไทย Geely เลือกนำเข้าเฉพาะรุ่นขุมพลังแรง <strong>116 แรงม้า (85 kW)</strong> แบตเตอรี่ <strong>39.4 kWh Aegis Short Blade LFP</strong> พัฒนาขึ้นบนแพลตฟอร์มไฟฟ้า <strong>GEA Architecture</strong> เลือกใช้ระบบขับเคลื่อนล้อหลัง (RWD) และที่สำคัญที่สุดคือการติดตั้ง <strong>ระบบกันสะเทือนหลังแบบอิสระ Multi-link</strong> ซึ่งในคลาสนี้คู่แข่งทุกรายยังคงใช้คานบิดกึ่งอิสระ Torsion Beam
           </p>
         </section>
@@ -306,7 +306,7 @@ export default function GeelyEX2ReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -438,11 +438,11 @@ export default function GeelyEX2ReviewPage() {
 
         {/* SECTION 3: Exterior Design & Dimensions */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก ความน่ารักทันสมัย และมิติตัวถัง
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             งานดีไซน์ของ Geely EX2 มาในธีม <em>&quot;Smiling Face &amp; Friendly Rounded Contours&quot;</em> มีรูปทรงโค้งมนเป็นมิตร ไฟหน้า LED รูปทรงหยดน้ำ ไฟท้าย LED ทรงแคปซูล มือจับประตูแบบ Semi-Hidden ช่วยลดแรงต้านอากาศ และหลังคาสีทูโทนตัดกับสีตัวถัง
           </p>
 
@@ -482,11 +482,11 @@ export default function GeelyEX2ReviewPage() {
 
         {/* SECTION 4: Interior, Flyme Auto & 36 Storage Points */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ห้องโดยสาร ระบบ Flyme Auto 14.6 นิ้ว และช่องเก็บของ 36 จุด
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             ภายในห้องโดยสารของ Geely EX2 ตกแต่งอย่างประณีตเหนือราคา ไฮไลต์คือหน้าจอสัมผัสขนาดใหญ่ถึง <strong>14.6 นิ้ว</strong> ที่ทำงานบนระบบปฏิบัติการ <strong>Flyme Auto OS</strong> ที่พัฒนาร่วมกับ Meizu หน้าจอมีความลื่นไหลระดับสมาร์ทโฟนเรือธง แอนิเมชันสวยงาม และรองรับการเชื่อมต่อกับสมาร์ทโฟนอย่างราบรื่น
           </p>
 
@@ -524,11 +524,11 @@ export default function GeelyEX2ReviewPage() {
 
         {/* SECTION 5: Powertrain & Driving */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ขุมพลัง 11-in-1 E-Drive ขับหลัง RWD และอัตราเร่ง
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Geely EX2 ติดตั้งชุดขับเคลื่อนอัจฉริยะ <strong>11-in-1 Smart Electric Drive</strong> ที่รวมมอเตอร์ อินเวอร์เตอร์ และระบบควบคุมไว้ในชุดเดียว มีน้ำหนักเบาและประสิทธิภาพสูงถึง 90.04% ขับเคลื่อนล้อหลัง (RWD) ให้สัมผัสการออกตัวที่เบาสบาย
           </p>
 
@@ -557,11 +557,11 @@ export default function GeelyEX2ReviewPage() {
 
         {/* SECTION 6: Suspension, Multi-link & Real Test Data */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. จุดเปลี่ยนเกม: ช่วงล่างหลังอิสระ Multi-link บนถนนเมืองไทย
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             นี่คือจุดที่ทำให้ Geely EX2 ชนะใจผู้ทดสอบทุกคน! รถยนต์ไฟฟ้าราคาประหยัดส่วนใหญ่ในไทยมักใช้ช่วงล่างหลังแบบคานแข็ง Torsion Beam ซึ่งจะมีอาการกระเด้งกระดอนเมื่อเจอลูกระนาดหรือรอยต่อถนนที่ไม่เรียบ แต่ EX2 เลือกติดตั้ง <strong>ช่วงล่างหลังอิสระ Multi-link</strong> มาให้
           </p>
 
@@ -595,22 +595,22 @@ export default function GeelyEX2ReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 50 km/h (ออกตัวในเมือง)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">3.88 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">3.88 วินาที</div>
                 <div className="text-[10px] text-slate-400">ออกตัวไฟแดงคล่องตัว</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (จับเวลาจริง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">9.92 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">9.92 วินาที</div>
                 <div className="text-[10px] text-slate-400">รุ่น Max แบตเตอรี่ 90%</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 100 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">61.8 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">61.8 dB(A)</div>
                 <div className="text-[10px] text-slate-400">ห้องโดยสารเงียบเกินราคา</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">38.4 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">38.4 เมตร</div>
                 <div className="text-[10px] text-slate-400">เบรกหยุดมั่นใจ</div>
               </div>
             </div>
@@ -619,11 +619,11 @@ export default function GeelyEX2ReviewPage() {
 
         {/* SECTION 7: Battery & Charging */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. แบตเตอรี่ Aegis Short Blade ทนความร้อนสูง และการชาร์จ DC
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Geely EX2 ใช้แบตเตอรี่ <strong>Aegis Short Blade LFP Battery</strong> ขนาดความจุ <strong>39.4 kWh</strong> เทคโนโลยีลิขสิทธิ์ของ Geely ที่ผ่านการทดสอบความปลอดภัยสุดโหด ทั้งการเจาะทะลุด้วยเข็ม การแช่น้ำทะเล และการเผาไฟ โดยไม่เกิดการติดไฟหรือระเบิด
           </p>
 
@@ -663,11 +663,11 @@ export default function GeelyEX2ReviewPage() {
 
         {/* SECTION 8: Safety & Build Quality */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ระบบความปลอดภัยและโครงสร้างตัวถัง High-Strength Steel
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Geely EX2 โครงสร้างตัวถังใช้เหล็กกล้าความแข็งแรงสูง High-Strength Steel มากถึง 72% พร้อมระบบช่วยเหลือการขับขี่ครบครันสำหรับรถซิตี้คาร์:
           </p>
 
@@ -725,7 +725,7 @@ export default function GeelyEX2ReviewPage() {
                 <Sparkles className="w-3.5 h-3.5" />
                 EVSELECT Recommended Upgrades
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+              <h3 className="text-lg sm:text-xl font-extrabold text-white">
                 ชุดอุปกรณ์เสริมตรงรุ่นสำหรับ Geely EX2
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
@@ -754,7 +754,7 @@ export default function GeelyEX2ReviewPage() {
       {/* 8. CarExpert Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
           </h2>

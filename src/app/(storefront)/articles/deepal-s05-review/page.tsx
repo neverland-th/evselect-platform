@@ -167,14 +167,14 @@ export default function DeepalS05ReviewPage() {
         </div>
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
+          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           รีวิว Changan Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง และ Frunk หน้า 159 ลิตร
         </h1>
 
         <p
-          className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
           ทดสอบจริง <strong>Changan Deepal S05</strong> เอสยูวีไฟฟ้าสำหรับสายครีเอเตอร์และครอบครัวยุคใหม่ อัดแน่นด้วยกล้อง 4K Gimbal Camera บนหลังคา ไฟหน้า DLP ฉายโปรเจกเตอร์ 120 นิ้ว มอเตอร์หลัง 238 แรงม้า ชาร์จ DC 3C เร็วสะใจ 15 นาที และช่องเก็บของหน้ารถใหญ่ที่สุดในโลก
@@ -290,14 +290,14 @@ export default function DeepalS05ReviewPage() {
         
         {/* SECTION 1: Overview */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             1. ภาพรวม &amp; บริบทในตลาดรถยนต์ไฟฟ้าไทย
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             หลังจากความสำเร็จของรุ่นพี่อย่าง S07 และ L07 แบรนด์ DEEPAL ได้ส่ง <strong>Deepal S05</strong> ลงทำตลาดในกลุ่มรถยนต์ไฟฟ้าคอมแพกต์เอสยูวี โดยวางตำแหน่งให้เป็น <em>&quot;Smart Tech &amp; Lifestyle Companion SUV&quot;</em> ที่ออกแบบมาเพื่อตอบสนองไลฟ์สไตล์ของคนรุ่นใหม่ สายท่องเที่ยว แคมปิ้ง และนักสร้างคอนเทนต์อย่างแท้จริง
           </p>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed">
             แม้จะมีขนาดตัวถังที่กะทัดรัดกว่า S07 เล็กน้อย แต่ Deepal S05 มาพร้อมระยะฐานล้อที่ยาวถึง <strong>2,880 มม.</strong> ซึ่งกว้างขวางเทียบเท่ากับรถ D-SUV และยังมีนวัตกรรมที่ไม่เคยมีในรถยนต์ระดับราคานี้มาก่อน เช่น <strong>กล้อง 4K Gimbal Camera อัจฉริยะบนหลังคา</strong> ที่ถ่ายวิดีโอ 4K 120fps และไฟหน้า <strong>DLP Projector</strong> ที่สามารถฉายภาพยนตร์หรือเล่นเกมกลางแจ้งได้ทุกที่
           </p>
         </section>
@@ -307,7 +307,7 @@ export default function DeepalS05ReviewPage() {
           className="my-12 not-prose"
           style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '650px' } as React.CSSProperties}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)
           </h2>
@@ -434,11 +434,11 @@ export default function DeepalS05ReviewPage() {
 
         {/* SECTION 3: Exterior Design & 4K Gimbal */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             3. ดีไซน์ภายนอก นวัตกรรมกล้อง 4K Gimbal &amp; มิติตัวถัง
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             การออกแบบภายนอกของ Deepal S05 นำแรงบันดาลใจมาจากปีกเครื่องบินและยานอวกาศ (Interstellar Wing) ไฟหน้าแบบสองชั้นคมเฉียบ พร้อมระบบไฟหน้าโปรเจกเตอร์ <strong>DEEPAL Megapixel DLP Projector</strong> ที่สามารถฉายภาพยนตร์ วิดีโอ หรือข้อความความกว้างถึง 120 นิ้ว ลงบนผนังอาคารหรือพื้นถนนได้อย่างคมชัด
           </p>
 
@@ -489,11 +489,11 @@ export default function DeepalS05ReviewPage() {
 
         {/* SECTION 4: Interior & Frunk */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             4. ห้องโดยสาร จอ Sunflower 15.4 นิ้ว และ Frunk หน้า 159 ลิตร
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             การออกแบบภายในของ Deepal S05 เน้นความโปร่งสบาย พื้นที่วางขากว้างขวางเป็นพิเศษด้วยระยะฐานล้อ 2,880 มม. คอนโซลกลางติดตั้งหน้าจอสัมผัสแบบ <strong>Sunflower Screen ขนาด 15.4 นิ้ว</strong> ความละเอียด 2.5K ปรับเอียงได้อัตโนมัติ ขับเคลื่อนด้วยชิป <strong>Qualcomm Snapdragon 8155</strong> พร้อมระบบ AR-HUD แสดงผลขนาด 50 นิ้วบนกระจกบังลมหน้า
           </p>
 
@@ -531,11 +531,11 @@ export default function DeepalS05ReviewPage() {
 
         {/* SECTION 5: Powertrain & Driving */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             5. ขุมพลังมอเตอร์ไฟฟ้าหลัง 238 แรงม้า และสมรรถนะ
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Deepal S05 วางมอเตอร์ไฟฟ้าเดี่ยวที่เพลาหลัง (RWD) ให้กำลังสูงสุด <strong>238 แรงม้า (175 kW)</strong> และแรงบิดมหาศาล <strong>320 Nm</strong> ตอบสนองทันทีโดยไม่ต้องรอรอบ
           </p>
 
@@ -564,11 +564,11 @@ export default function DeepalS05ReviewPage() {
 
         {/* SECTION 6: Suspension, Ground Clearance & Real Test Data */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             6. ช่วงล่าง การซับแรงสะเทือน และความสูงลุยน้ำท่วมขังในไทย
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             ช่วงล่างของ Deepal S05 เป็นแบบอิสระ 4 ล้อ ด้านหน้า MacPherson Strut และด้านหลังแบบ Multi-link เซ็ตติ้งเน้นความสมดุลระหว่างความนุ่มสบายและการทรงตัว
           </p>
 
@@ -602,22 +602,22 @@ export default function DeepalS05ReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (จับเวลาจริง)</div>
-                <div className="text-xl sm:text-2xl font-black text-lime-400">7.28 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">7.28 วินาที</div>
                 <div className="text-[10px] text-slate-400">แบตเตอรี่ 88% โหมด Sport</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">4.21 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">4.21 วินาที</div>
                 <div className="text-[10px] text-slate-400">มอเตอร์ตอบสนองไว</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">ระดับเสียงที่ 120 km/h</div>
-                <div className="text-xl sm:text-2xl font-black text-white">64.5 dB(A)</div>
+                <div className="text-lg sm:text-xl font-black text-white">64.5 dB(A)</div>
                 <div className="text-[10px] text-slate-400">กระจก Acoustic หน้า</div>
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-xl sm:text-2xl font-black text-white">37.2 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">37.2 เมตร</div>
                 <div className="text-[10px] text-slate-400">ดิสก์เบรก 4 ล้อแม่นยำ</div>
               </div>
             </div>
@@ -626,11 +626,11 @@ export default function DeepalS05ReviewPage() {
 
         {/* SECTION 7: Battery & 3C Charging */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             7. แบตเตอรี่ Golden Shield และการชาร์จเร็ว 3C ชาร์จ 15 นาที
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             Deepal S05 ติดตั้งแบตเตอรี่ <strong>Golden Shield Battery (LFP)</strong> ความจุ 56.12 kWh ที่รองรับเทคโนโลยี <strong>3C Super Charging</strong> สามารถรับกำลังไฟ DC Fast Charge สูงสุดถึง 160 kW
           </p>
 
@@ -670,11 +670,11 @@ export default function DeepalS05ReviewPage() {
 
         {/* SECTION 8: Active Safety & ADAS */}
         <section className="my-10 not-prose">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ระบบความปลอดภัยและระบบช่วยเหลือการขับขี่ ADAS L2
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-base leading-relaxed mb-4">
             ระบบช่วยเหลือการขับขี่ของ Deepal S05 ทำงานด้วยกล้องความละเอียด 8 ล้านพิกเซล และเรดาร์ตรวจจับวัตถุ 5 ตำแหน่งรอบคัน:
           </p>
 
@@ -732,7 +732,7 @@ export default function DeepalS05ReviewPage() {
                 <Sparkles className="w-3.5 h-3.5" />
                 EVSELECT Recommended Upgrades
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+              <h3 className="text-lg sm:text-xl font-extrabold text-white">
                 ชุดอุปกรณ์เสริมตรงรุ่นสำหรับ Changan Deepal S05
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
@@ -761,7 +761,7 @@ export default function DeepalS05ReviewPage() {
       {/* 8. CarExpert Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
             8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
           </h2>
