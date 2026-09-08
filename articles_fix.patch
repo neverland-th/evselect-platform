@@ -1,0 +1,737 @@
+diff --git a/src/app/(storefront)/articles/ev-camber-adjustment-wheel-alignment-guide/page.tsx b/src/app/(storefront)/articles/ev-camber-adjustment-wheel-alignment-guide/page.tsx
+index 3f3afaf..6d6c8a5 100644
+--- a/src/app/(storefront)/articles/ev-camber-adjustment-wheel-alignment-guide/page.tsx
++++ b/src/app/(storefront)/articles/ev-camber-adjustment-wheel-alignment-guide/page.tsx
+@@ -121,7 +121,7 @@ export default function EVCamberAdjustmentGuidePage() {
+ 
+         <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+           ทำไมรถยนต์ไฟฟ้า (EV) น้ำหนัก 2,000+ กก. ถึงกินยางด้านในเร็วผิดปกติ? หรือทำไมเมื่อเข้าโค้งหนักๆ หน้ายางถึงพับจนสูญเสียแรงยึดเกาะกะทันหัน? 
+-          เจาะลึกฟิสิกส์เรขาคณิตช่วงล่าง: <strong>Static vs Dynamic Camber</strong>, การเคลื่อนตัวของจุดศูนย์กลางการโคลง (<strong>Roll Center Kinematics</strong>), แรงผลักแคมเบอร์ (<strong>Camber Thrust</strong>) และสูตรการตั้งศูนย์ล้อ 3 สเต็ปสำหรับถนนเมืองไทยและสนามแข่ง
++          เจาะลึกฟิสิกส์เรขาคณิตช่วงล่าง: <strong>Static vs Dynamic Camber</strong>, การเคลื่อนตัวของจุดศูนย์กลางการโคลง (<strong>Roll Center Kinematics</strong>), แรงผลักแคมเบอร์ (<strong>Camber Thrust</strong>) และหลักการตั้งศูนย์ล้อ 3 สเต็ปสำหรับถนนเมืองไทยและสนามแข่ง
+         </p>
+ 
+         {/* Executive Summary Box */}
+@@ -137,7 +137,7 @@ export default function EVCamberAdjustmentGuidePage() {
+           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700 mb-0 pl-0 list-none">
+             <li className="flex items-start gap-2">
+               <CheckCircle2 className="w-4 h-4 text-lime-700 shrink-0 mt-0.5" />
+-              <span><strong>น้ำหนักตัวรถมหาศาล (Fz สูง):</strong> สเก็ตบอร์ดแบตเตอรี่สร้างแรงหนีศูนย์ Fy = m · ay สูงกว่ารถ ICE ถึง 25–40% บังคับให้แก้มยางบิดตัวรุนแรงกว่า</span>
++              <span><strong>น้ำหนักตัวรถมหาศาล:</strong> น้ำหนักตัวรถ (แทนด้วยตัวแปร m) ที่มหาศาลจากแบตเตอรี่ จะสร้างแรงเหวี่ยงหนีศูนย์ออกด้านข้างขณะเข้าโค้งรุนแรงกว่ารถเครื่องยนต์สันดาปทั่วไปถึง 25–40% บังคับให้แก้มยางบิดตัวรุนแรงกว่า</span>
+             </li>
+             <li className="flex items-start gap-2">
+               <CheckCircle2 className="w-4 h-4 text-lime-700 shrink-0 mt-0.5" />
+@@ -168,13 +168,13 @@ export default function EVCamberAdjustmentGuidePage() {
+           </div>
+ 
+           <p className="text-slate-700 leading-relaxed">
+-            ในเชิงกลศาสตร์ยานยนต์ (Vehicle Dynamics) ตามคำจำกัดความของ <em>OptimumG</em> และ <em>Claude Rouelle</em> <strong>มุมแคมเบอร์ (Camber Angle: &gamma;)</strong> คือมุมเอียงของระนาบกึ่งกลางล้อเมื่อเทียบกับแนวดิ่งตั้งฉากกับพื้นถนน:
++            ในเชิงกลศาสตร์ยานยนต์ (Vehicle Dynamics) ตามคำจำกัดความของ <em>OptimumG</em> และ <em>Claude Rouelle</em> <strong>มุมแคมเบอร์ (Camber Angle)</strong> คือมุมเอียงของระนาบกึ่งกลางล้อเมื่อเทียบกับแนวดิ่งตั้งฉากกับพื้นถนน:
+           </p>
+ 
+           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+               <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Negative Camber (แคมเบอร์ลบ)</div>
+-              <div className="text-xl font-extrabold text-lime-700 mb-2">&gamma; &lt; 0° (ยอดล้อหุบเข้า)</div>
++              <div className="text-xl font-extrabold text-lime-700 mb-2">แคมเบอร์ลบ (ยอดล้อหุบเข้า)</div>
+               <p className="text-xs text-slate-600 leading-normal">
+                 ด้านบนของล้อเอียงเข้าหาตัวถัง เป็นการเซ็ตติ้งมาตรฐานสำหรับรถสมรรถนะสูง เพื่อเตรียมรับแรงเมื่อตัวถังเกิดการโคลงในโค้ง
+               </p>
+@@ -182,7 +182,7 @@ export default function EVCamberAdjustmentGuidePage() {
+ 
+             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+               <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Zero Camber (แคมเบอร์ศูนย์)</div>
+-              <div className="text-xl font-extrabold text-slate-900 mb-2">&gamma; = 0° (ล้อตั้งฉาก 90°)</div>
++              <div className="text-xl font-extrabold text-slate-900 mb-2">แคมเบอร์ศูนย์ (ล้อตั้งฉาก 90 องศา)</div>
+               <p className="text-xs text-slate-600 leading-normal">
+                 หน้ายางสัมผัสพื้นราบเรียบ 100% ให้แรงเบรกและแรงเร่งทางตรงสูงสุด แต่จะสูญเสียการยึดเกาะทันทีที่ตัวถังเริ่มเอียงในโค้ง
+               </p>
+@@ -190,7 +190,7 @@ export default function EVCamberAdjustmentGuidePage() {
+ 
+             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+               <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Positive Camber (แคมเบอร์บวก)</div>
+-              <div className="text-xl font-extrabold text-rose-600 mb-2">&gamma; &gt; 0° (ยอดล้อบานออก)</div>
++              <div className="text-xl font-extrabold text-rose-600 mb-2">แคมเบอร์บวก (ยอดล้อบานออก)</div>
+               <p className="text-xs text-slate-600 leading-normal">
+                 ด้านบนของล้อบานออกด้านนอก มักพบเฉพาะในรถบรรทุกสำหรับชดเชยการบรรทุกหนัก หรือเป็นผลข้างเคียงจากช่วงล่างผิดรูป
+               </p>
+@@ -198,22 +198,34 @@ export default function EVCamberAdjustmentGuidePage() {
+           </div>
+ 
+           <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl">
+-            <h4 className="text-base font-extrabold text-slate-900 mb-3 flex items-center gap-2">
+-              <Activity className="w-4 h-4" />
+-              สมการ Dynamic Camber ภายใต้แรงเหวี่ยงหนีศูนย์ (OptimumG Formulation)
++            <h4 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
++              <Activity className="w-4 h-4 text-lime-400" />
++              กลไก Dynamic Camber: ทำไมองศาล้อขณะเลี้ยวจริงถึงไม่เท่ากับตอนจอดนิ่งบนแท่นตั้งศูนย์?
+             </h4>
+             <p className="text-sm text-slate-300 mb-4 leading-relaxed">
+-              มุมแคมเบอร์ที่แท้จริงระหว่างหน้ายางกับพื้นถนนขณะรถกำลังเข้าโค้ง (&gamma;<sub>dyn</sub>) ไม่ใช่ค่า Static ที่ตั้งไว้บนลิฟต์ตั้งศูนย์ แต่เป็นผลรวมเชิงฟังก์ชันของ:
++              มุมเอียงของหน้ายางที่แนบกับพื้นถนนขณะรถกำลังเข้าโค้งจริงๆ ไม่ใช่ตัวเลของศานิ่งๆ ที่ตั้งไว้ตอนจอดบนลิฟต์ตั้งศูนย์ แต่เป็นผลลัพธ์จากการทำงานประสานกันของ 5 ปัจจัยทางพลศาสตร์ช่วงล่าง:
+             </p>
+-            <div className="bg-slate-950 p-4 rounded-xl font-mono text-xs sm:text-sm text-lime-300 border border-slate-800 overflow-x-auto">
+-              &gamma;<sub>dyn</sub> = &gamma;<sub>0</sub> + (d&gamma;/dz &middot; z<sub>bump</sub>) - &phi;<sub>roll</sub> + &Delta;&gamma;<sub>steer</sub> + &Delta;&gamma;<sub>compliance</sub>
+-            </div>
+-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mt-4 text-xs text-slate-400">
+-              <div>• <strong className="text-slate-200">&gamma;<sub>0</sub>:</strong> มุมแคมเบอร์สแตติกขณะจอดนิ่ง (Static Camber)</div>
+-              <div>• <strong className="text-slate-200">d&gamma;/dz &middot; z<sub>bump</sub>:</strong> Camber Gain จากการยุบตัวของช่วงล่างในโค้ง</div>
+-              <div>• <strong className="text-slate-200">&phi;<sub>roll</sub>:</strong> องศาการเอียงของตัวถัง (Body Roll Angle)</div>
+-              <div>• <strong className="text-slate-200">&Delta;&gamma;<sub>steer</sub>:</strong> แคมเบอร์ที่เพิ่มขึ้นจากการเลี้ยว (Caster / KPI effect)</div>
+-              <div>• <strong className="text-slate-200">&Delta;&gamma;<sub>compliance</sub>:</strong> การบิดตัวของบูชยางและลูกหมากช่วงล่าง</div>
++            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 text-xs text-slate-300">
++              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
++                <strong className="text-lime-400 block mb-1">1. มุมแคมเบอร์สแตติกเดิม</strong>
++                องศาตั้งต้นที่ช่างตั้งไว้ขณะจอดนิ่งบนแท่นตั้งศูนย์
++              </div>
++              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
++                <strong className="text-lime-400 block mb-1">2. การยุบตัวของช่วงล่าง (Camber Gain)</strong>
++                เมื่อสปริงและโช้คนอกโค้งยุบตัว ปีกนกจะดึงให้ยอดล้อเอียงหลบตามเรขาคณิต
++              </div>
++              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
++                <strong className="text-lime-400 block mb-1">3. การเอียงของตัวถัง (Body Roll)</strong>
++                น้ำหนักรถที่เทไปด้านข้างจะพยายามดึงรั้งให้หน้ายางหงายตัวขึ้น
++              </div>
++              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800">
++                <strong className="text-lime-400 block mb-1">4. องศาการหักเลี้ยวพวงมาลัย (Caster Effect)</strong>
++                มุมแคสเตอร์จะช่วยกดหน้ายางให้เอียงจิกโค้งตามองศาการเลี้ยว
++              </div>
++              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 sm:col-span-2">
++                <strong className="text-lime-400 block mb-1">5. การยืดหยุ่นของบูชยางช่วงล่าง (Bushing Compliance)</strong>
++                บูชยางและลูกหมากจะเกิดการบิดตัวเล็กน้อยเมื่อรับแรงหนีศูนย์จากน้ำหนักตัวรถมหาศาล
++              </div>
+             </div>
+           </div>
+         </section>
+@@ -228,7 +240,7 @@ export default function EVCamberAdjustmentGuidePage() {
+           </div>
+ 
+           <p className="text-slate-700 leading-relaxed">
+-            แผนภาพเวกเตอร์จำลองพฤติกรรมของหน้ายางรถ EV (น้ำหนักกดต่อล้อ 500+ กก.) ขณะเลี้ยวรับแรงเหวี่ยง 1.0G: เปรียบเทียบระหว่างการเซ็ตติ้งล้อตรง (&gamma; = 0.0°) กับการชดเชยแคมเบอร์ลบ (&gamma; = -2.2°)
++            แผนภาพเวกเตอร์จำลองพฤติกรรมของหน้ายางรถ EV (น้ำหนักกดต่อล้อ 500+ กก.) ขณะเลี้ยวรับแรงเหวี่ยง 1.0G: เปรียบเทียบระหว่างการเซ็ตติ้งล้อตรง 0.0 องศา กับการชดเชยด้วยมุมแคมเบอร์ลบ -2.2 องศา
+           </p>
+ 
+           {/* Custom Inline SVG Technical Diagram */}
+@@ -357,7 +369,7 @@ export default function EVCamberAdjustmentGuidePage() {
+           </div>
+ 
+           <p className="text-slate-700 leading-relaxed">
+-            เมื่อล้อรถเอียงทำมุมแคมเบอร์ ยางรถยนต์จะเกิดแรงในแนวระนาบที่เรียกว่า <strong>Camber Thrust (F&gamma;)</strong> ซึ่งเกิดจากการที่ยางมีลักษณะคล้ายกรวยตัด (Cone rolling effect) พยายามเลี้ยวเข้าหาทิศทางที่ยอดล้อเอียงไป:
++            เมื่อล้อรถเอียงทำมุมแคมเบอร์ ยางรถยนต์จะเกิดแรงผลักในแนวระนาบที่เรียกว่า <strong>Camber Thrust</strong> ซึ่งเกิดจากการที่หน้ายางเมื่อเอียงจะมีรูปทรงคล้ายกรวยตัด พยายามกลิ้งเลี้ยวเข้าหาทิศทางที่ยอดล้อเอียงไปตามธรรมชาติ:
+           </p>
+ 
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+@@ -367,11 +379,8 @@ export default function EVCamberAdjustmentGuidePage() {
+                 Camber Thrust vs Cornering Force
+               </h3>
+               <p className="text-sm text-slate-600 leading-relaxed mb-3">
+-                แรงยึดเกาะทั้งหมดในแนวขวาง (Fy) ประกอบด้วยแรงที่เกิดจากมุม Slip Angle (&alpha;) บวกกับแรง Camber Thrust:
++                แรงยึดเกาะทั้งหมดในแนวขวางขณะเข้าโค้ง เกิดจากการผสานพลังของ 2 ส่วนสำคัญ: <strong>แรงเกาะจากการบิดตัวของหน้ายาง (ตามมุมเลี้ยวของพวงมาลัย)</strong> ผนวกกับ <strong>แรงผลักจากการเอียงล้อ (Camber Thrust)</strong>
+               </p>
+-              <div className="bg-white p-3 rounded-lg border border-slate-300 font-mono text-xs text-slate-800 mb-3">
+-                F<sub>y,total</sub> = F<sub>y</sub>(&alpha;) + C<sub>&gamma;</sub> &middot; &gamma;
+-              </div>
+               <p className="text-xs text-slate-500">
+                 ในรถ EV ที่มีน้ำหนักตกลงบนล้อสูง แรง Camber Thrust จะช่วยพยุงหน้ารถไม่ให้ไถลออกนอกโค้ง (Understeer) ได้อย่างมหาศาลโดยไม่ต้องเพิ่มมุมเลี้ยวพวงมาลัย
+               </p>
+@@ -383,13 +392,13 @@ export default function EVCamberAdjustmentGuidePage() {
+                 The Lowering Trap (กับดักการโหลดเตี้ย)
+               </h3>
+               <p className="text-sm text-slate-600 leading-relaxed mb-3">
+-                เมื่อโหลดเตี้ย EV ด้วยการตัดสปริงหรือใส่สปริงโหลดสั้น ปีกนกล่างจะชี้ชันขึ้นด้านบน ส่งผลให้จุด <strong>Roll Center (RC) ตกต่ำลงเร็วกว่าจุดศูนย์ถ่วง (h<sub>CG</sub>)</strong>
++                เมื่อโหลดเตี้ย EV ด้วยการตัดสปริงหรือใส่สปริงโหลดสั้น ปีกนกล่างจะชี้ชันขึ้นด้านบน ส่งผลให้จุดศูนย์กลางการโคลง (Roll Center) ตกต่ำลงเร็วกว่าจุดศูนย์ถ่วงของตัวรถ
+               </p>
+-              <div className="bg-white p-3 rounded-lg border border-slate-300 font-mono text-xs text-slate-800 mb-3">
+-                M<sub>roll</sub> = m &middot; a<sub>y</sub> &middot; (h<sub>CG</sub> - h<sub>RC</sub>)
++              <div className="bg-white p-3 rounded-lg border border-slate-300 text-xs text-slate-800 mb-3 leading-relaxed">
++                <strong>หลักการคานงัด:</strong> เมื่อรถเลี้ยวเข้าโค้ง แรงบิดที่ทำให้ตัวถังเอียงยวบจะเกิดขึ้นจากน้ำหนักตัวรถ (แทนด้วยตัวแปร m) ผสานกับแรงเหวี่ยงหนีศูนย์ และระยะห่างระหว่างจุดศูนย์ถ่วงกับจุดหมุนช่วงล่าง
+               </div>
+               <p className="text-xs text-slate-500">
+-                แขนโมเมนต์ (h<sub>CG</sub> - h<sub>RC</sub>) กว้างขึ้น ทำให้รถเกิดแรงบิดตัวถัง (Roll Moment) สูงขึ้น รถจะเอียงยวบยาบในโค้งมากกว่าเดิม แม้จุด CG จะต่ำลงก็ตาม!
++                เมื่อระยะห่างระหว่างจุดศูนย์ถ่วงกับจุดหมุนกว้างขึ้น เปรียบเสมือนด้ามคานงัดที่ยาวขึ้น น้ำหนักตัวรถ (m) จึงสามารถงัดให้ตัวถังเอียงยวบยาบในโค้งได้มากกว่าเดิมอย่างเห็นได้ชัด แม้จุดศูนย์ถ่วงจะเตี้ยลงก็ตาม!
+               </p>
+             </div>
+           </div>
+@@ -483,7 +492,7 @@ export default function EVCamberAdjustmentGuidePage() {
+           </div>
+ 
+           <p className="text-slate-700 leading-relaxed">
+-            วิธีเดียวที่จะตรวจสอบว่ามุมแคมเบอร์และแรงดันลมยางของคุณถูกต้อง 100% หรือไม่ คือการใช้ <strong>ไพโรมิเตอร์แบบหัวเข็ม (Needle Pyrometer)</strong> วัดอุณหภูมิเนื้อยางด้านใน 3 ตำแหน่งทันทีหลังจากวิ่งทดสอบ: <strong>ใน (Inside: Tin), กลาง (Middle: Tmid), นอก (Outside: Tout)</strong>
++            วิธีเดียวที่จะตรวจสอบว่ามุมแคมเบอร์และแรงดันลมยางของคุณถูกต้อง 100% หรือไม่ คือการใช้ <strong>ไพโรมิเตอร์แบบหัวเข็ม (Needle Pyrometer)</strong> วัดอุณหภูมิเนื้อยางด้านใน 3 ตำแหน่งทันทีหลังจากวิ่งทดสอบ: <strong>ฝั่งใน (Inside), ตรงกลาง (Middle), ฝั่งนอก (Outside)</strong>
+           </p>
+ 
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+@@ -492,8 +501,8 @@ export default function EVCamberAdjustmentGuidePage() {
+                 <Thermometer className="w-4 h-4 text-emerald-700" />
+                 แคมเบอร์สมบูรณ์แบบ (Optimal)
+               </div>
+-              <div className="font-mono text-xs bg-white p-2 rounded-lg border border-emerald-200 text-emerald-800 mb-2">
+-                Tin - Tout = +5°C ถึง +8°C
++              <div className="text-xs font-bold bg-white p-2 rounded-lg border border-emerald-200 text-emerald-800 mb-2">
++                ขอบในอุ่นกว่าขอบนอก +5°C ถึง +8°C
+               </div>
+               <p className="text-xs text-emerald-900/80">
+                 ฝั่งในอุ่นกว่าฝั่งนอกเล็กน้อย แสดงว่าเมื่อเข้าโค้งหนัก ยางจะกระจายความร้อนสม่ำเสมอเต็มหน้ากว้าง
+@@ -505,8 +514,8 @@ export default function EVCamberAdjustmentGuidePage() {
+                 <ShieldAlert className="w-4 h-4 text-rose-700" />
+                 แคมเบอร์ลบมากเกินไป (Over-Cambered)
+               </div>
+-              <div className="font-mono text-xs bg-white p-2 rounded-lg border border-rose-200 text-rose-800 mb-2">
+-                Tin - Tout &gt; 12°C
++              <div className="text-xs font-bold bg-white p-2 rounded-lg border border-rose-200 text-rose-800 mb-2">
++                ขอบในร้อนกว่าขอบนอกเกิน 12°C
+               </div>
+               <p className="text-xs text-rose-900/80">
+                 ขอบยางฝั่งในร้อนจัด หน้าสัมผัสไม่ถูกใช้งานเต็มที่ ระยะเบรกทางตรงจะยาวขึ้น และยางด้านในสึกหมดก่อนกำหนด
+@@ -518,8 +527,8 @@ export default function EVCamberAdjustmentGuidePage() {
+                 <AlertTriangle className="w-4 h-4 text-amber-700" />
+                 แคมเบอร์ไม่พอ (Under-Cambered)
+               </div>
+-              <div className="font-mono text-xs bg-white p-2 rounded-lg border border-amber-200 text-amber-800 mb-2">
+-                Tout &gt;= Tin
++              <div className="text-xs font-bold bg-white p-2 rounded-lg border border-amber-200 text-amber-800 mb-2">
++                ขอบนอกร้อนกว่าหรือเท่ากับขอบใน
+               </div>
+               <p className="text-xs text-amber-900/80">
+                 ขอบยางด้านนอกร้อนกว่าด้านใน เกิดอาการหน้ายางพับ (Shoulder rollover) เสี่ยงต่อการระเบิดและควบคุมรถไม่อยู่
+@@ -530,7 +539,7 @@ export default function EVCamberAdjustmentGuidePage() {
+           <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 text-xs text-slate-600 flex items-center gap-3">
+             <Info className="w-5 h-5 text-lime-700 shrink-0" />
+             <div>
+-              <strong>เกร็ดวิศวกรรมแรงดันลมยาง (Tmid):</strong> ถ้า Tmid &gt; (Tin + Tout) / 2 แสดงว่าเติมลมยางแข็งเกินไป (Over-inflated) หน้ากว้างตรงกลางนูน; ถ้า Tmid &lt; (Tin + Tout) / 2 แสดงว่าลมยางอ่อนเกินไป (Under-inflated)
++              <strong>เกร็ดวิศวกรรมแรงดันลมยาง:</strong> หากอุณหภูมิตรงกลางหน้ายางร้อนกว่าค่าเฉลี่ยของขอบยางทั้งสองฝั่ง แสดงว่าเติมลมยางแข็งเกินไป (Over-inflated) หน้ากว้างตรงกลางนูน แต่หากตรงกลางเย็นกว่าขอบยาง แสดงว่าลมยางอ่อนเกินไป (Under-inflated)
+             </div>
+           </div>
+         </section>
+diff --git a/src/app/(storefront)/articles/ev-carbon-ceramic-brakes-guide/page.tsx b/src/app/(storefront)/articles/ev-carbon-ceramic-brakes-guide/page.tsx
+index 157e316..2779891 100644
+--- a/src/app/(storefront)/articles/ev-carbon-ceramic-brakes-guide/page.tsx
++++ b/src/app/(storefront)/articles/ev-carbon-ceramic-brakes-guide/page.tsx
+@@ -133,8 +133,8 @@ export default function CarbonCeramicBrakesGuidePage() {
+ 
+         <h2>ทำไม EV ถึงกระหายระบบเบรกขั้นสุด? (The EV Braking Paradox)</h2>
+         <p>
+-          ตามหลักฟิสิกส์ พลังงานจลน์คำนวณจาก $E = \frac{1}{2}mv^2$ เมื่อนำสมการนี้มาปรับใช้กับโลกของรถยนต์ไฟฟ้า เราจะพบกับตัวแปรที่น่าตกใจ:
+-          รถ EV อย่าง BYD Seal AWD หรือ Tesla Model 3 Performance มีน้ำหนัก (m) มากกว่ารถสันดาปในคลาสเดียวกันราวๆ 20-30% (จากแบตเตอรี่) ในขณะที่มันทำความเร็ว (v) ได้เร็วกว่าหลายเท่าตัวจาก Instant Torque
++          ตามหลักฟิสิกส์ การเคลื่อนที่ของรถยนต์จะสะสมพลังงานมหาศาลไว้ในตัวถัง โดยมี 2 ปัจจัยชี้ขาดคือ <strong>น้ำหนักตัวรถ (แทนด้วยตัวแปร m)</strong> และ <strong>ความเร็วในการวิ่ง (แทนด้วยตัวแปร v)</strong> เมื่อนำสองสิ่งนี้มามองในโลกของรถยนต์ไฟฟ้า เราจะพบความจริงที่น่าตกใจ:
++          รถ EV อย่าง BYD Seal AWD หรือ Tesla Model 3 Performance แบกน้ำหนักตัวรถ (m) มากกว่ารถสันดาปในคลาสเดียวกันราวๆ 20-30% (จากแบตเตอรี่) ในขณะที่มันทำความเร็ว (v) ได้เร็วกว่าหลายเท่าตัวจาก Instant Torque และเมื่อความเร็ว (v) เพิ่มขึ้น พลังงานที่ระบบเบรกต้องแบกรับจะทวีคูณขึ้นอย่างมหาศาล ไม่ใช่แค่เพิ่มขึ้นทีละนิด
+         </p>
+         <p>
+           เมื่อคุณเบรกฉุกเฉินจากความเร็ว 160 กม./ชม. บน Track Day พลังงานทั้งหมดนี้ต้องถูกสลายกลายเป็น <strong>"ความร้อน"</strong> ระบบ Regenerative Braking ผ่านมอเตอร์ไฟฟ้านั้นไม่เพียงพอสำหรับแรง G ระดับ Track-Level ภาระทั้งหมดจึงถูกโยนไปที่ระบบ Mechanical Brake อย่างหลีกเลี่ยงไม่ได้ หากคุณใช้จานเบรกเหล็กหล่อธรรมดา (Cast Iron) อุณหภูมิที่พุ่งปรี๊ดจะทำให้เรซินในผ้าเบรกเดือด เกิดก๊าซคั่นกลางระหว่างผ้าและจาน เกิดเป็นอาการที่เรียกว่า <strong>Brake Fade</strong> หรือ "เบรกหาย" ในที่สุด
+diff --git a/src/app/(storefront)/articles/ev-damper-tuning-bump-rebound-guide/page.tsx b/src/app/(storefront)/articles/ev-damper-tuning-bump-rebound-guide/page.tsx
+index 90eddd9..dc77bb4 100644
+--- a/src/app/(storefront)/articles/ev-damper-tuning-bump-rebound-guide/page.tsx
++++ b/src/app/(storefront)/articles/ev-damper-tuning-bump-rebound-guide/page.tsx
+@@ -14,7 +14,7 @@ import {
+ 
+ export const metadata: Metadata = {
+   title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning): Bump, Rebound, Low-Speed vs High-Speed Damping สำหรับรถ EV | EVSELECT',
+-  description: 'เจาะลึกศาสตร์การปรับจูนโช้คอัพ (Damper Tuning) ตามหลัก Suspension Secrets: คำนวณ Critical Damping Ratio (ζ), กราฟ Force-Velocity (F-V Curve), วาล์ว Digressive และตารางปรับคลิกแก้ Oversteer/Understeer สำหรับรถ EV หนัก 2 ตัน',
++  description: 'เจาะลึกศาสตร์การปรับจูนโช้คอัพ (Damper Tuning) ตามหลัก Suspension Secrets: อัตราส่วนความหน่วงที่เหมาะสม (Damping Ratio), กราฟ Force-Velocity (F-V Curve), วาล์ว Digressive และตารางปรับคลิกแก้ Oversteer/Understeer สำหรับรถ EV หนัก 2 ตัน',
+   keywords: [
+     'Damper Tuning EV',
+     'Bump vs Rebound',
+@@ -30,7 +30,7 @@ export const metadata: Metadata = {
+   ],
+   openGraph: {
+     title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) รถ EV ตามหลัก Suspension Secrets | EVSELECT Guide',
+-    description: 'คู่มือวิศวกรรมการเซ็ตติ้ง Bump/Rebound, คำนวณค่า Zeta (ζ) และกราฟ F-V Curve แก้ปัญหาอาการย้วย/กระด้างในรถยนต์ไฟฟ้า',
++    description: 'คู่มือวิศวกรรมการเซ็ตติ้ง Bump/Rebound, อัตราส่วนความหน่วง Damping Ratio และกราฟ F-V Curve แก้ปัญหาอาการย้วย/กระด้างในรถยนต์ไฟฟ้า',
+     url: 'https://evselect.com/articles/ev-damper-tuning-bump-rebound-guide',
+     siteName: 'EVSELECT Thailand',
+     locale: 'th_TH',
+@@ -118,7 +118,7 @@ export default function EVDamperTuningGuidePage() {
+ 
+         <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+           ทำไมการปรับสตรัทปรับเกลียว (Coilovers) ในรถยนต์ไฟฟ้าที่มีน้ำหนัก 2 ตัน ถึงมักจบลงด้วยอาการ <strong>&ldquo;เด้งดีดจนเวียนหัว&rdquo;</strong> หรือ <strong>&ldquo;กระด้างตึงตังจนคอนโซลสะเทือน&rdquo;</strong>? 
+-          ไขรหัสลับกลศาสตร์การซับแรงสั่นสะเทือน: แยกแยะความแตกต่างระหว่างจังหวะยุบ (<strong>Bump</strong>) และจังหวะยืด (<strong>Rebound</strong>), การคำนวณอัตราส่วนความหน่วงวิกฤต (<strong>Critical Damping Ratio: &zeta;</strong>), การอ่านกราฟ <strong>Force-Velocity (F-V Curve)</strong> และตารางปรับคลิกแก้บาลานซ์อันเดอร์/โอเวอร์สเตียร์ในแต่ละช่วงของโค้ง
++          ไขรหัสลับกลศาสตร์การซับแรงสั่นสะเทือน: แยกแยะความแตกต่างระหว่างจังหวะยุบ (<strong>Bump</strong>) และจังหวะยืด (<strong>Rebound</strong>), อัตราส่วนความหน่วงที่เหมาะสม (<strong>Damping Ratio</strong>), การอ่านกราฟ <strong>Force-Velocity (F-V Curve)</strong> และตารางปรับคลิกแก้บาลานซ์อันเดอร์/โอเวอร์สเตียร์ในแต่ละช่วงของโค้ง
+         </p>
+ 
+         {/* Key Takeaways Card */}
+@@ -134,7 +134,7 @@ export default function EVDamperTuningGuidePage() {
+           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700 mb-0 pl-0 list-none">
+             <li className="flex items-start gap-2">
+               <CheckCircle2 className="w-4 h-4 text-lime-700 shrink-0 mt-0.5" />
+-              <span><strong>สปริงเก็บพลังงาน แดมเปอร์สลายพลังงาน:</strong> สปริงรับน้ำหนักนิ่ง (Fs = K &middot; x) แต่แดมเปอร์สร้างแรงต้านตามความเร็วแกนโช้ค (Fd = C &middot; v^n) เพื่อเปลี่ยนพลังงานจลน์เป็นความร้อน</span>
++              <span><strong>สปริงเก็บพลังงาน แดมเปอร์สลายพลังงาน:</strong> สปริงทำหน้าที่แบกรับน้ำหนักนิ่งและยุบตัวตามระยะทางที่ถูกกด ส่วนแดมเปอร์หรือโช้คอัพจะสร้างแรงต้านตามความเร็วการเคลื่อนที่ของลูกสูบโช้ค เพื่อเปลี่ยนพลังงานจากการกระแทกให้กลายเป็นความร้อนและกระจายทิ้งไป</span>
+             </li>
+             <li className="flex items-start gap-2">
+               <CheckCircle2 className="w-4 h-4 text-lime-700 shrink-0 mt-0.5" />
+@@ -142,7 +142,7 @@ export default function EVDamperTuningGuidePage() {
+             </li>
+             <li className="flex items-start gap-2">
+               <CheckCircle2 className="w-4 h-4 text-lime-700 shrink-0 mt-0.5" />
+-              <span><strong>แดมเปอร์ไม่เปลี่ยนน้ำหนักรวม:</strong> แดมเปอร์ควบคุมเฉพาะ <em>&ldquo;อัตราความเร็วในการถ่ายเทน้ำหนัก&rdquo; (dFz/dt)</em> ในช่วง Transient ไม่ใช่น้ำหนักรวมในโค้ง</span>
++              <span><strong>แดมเปอร์ไม่เปลี่ยนน้ำหนักรวม:</strong> แดมเปอร์ควบคุมเฉพาะ <em>&ldquo;อัตราความเร็วในการถ่ายเทน้ำหนัก&rdquo;</em> ในช่วงจังหวะเปลี่ยนผ่าน ไม่ใช่น้ำหนักรวมที่กดลงในโค้ง</span>
+             </li>
+             <li className="flex items-start gap-2">
+               <CheckCircle2 className="w-4 h-4 text-lime-700 shrink-0 mt-0.5" />
+@@ -160,57 +160,57 @@ export default function EVDamperTuningGuidePage() {
+           <div className="flex items-center gap-3">
+             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
+             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight m-0">
+-              1. ฟิสิกส์การหน่วงและการคำนวณ Critical Damping Ratio (&zeta;)
++              1. ฟิสิกส์การหน่วงและอัตราส่วนความหน่วงที่เหมาะสม (Damping Ratio)
+             </h2>
+           </div>
+ 
+           <p className="text-slate-700 leading-relaxed">
+-            ระบบช่วงล่างรถยนต์สามารถจำลองทางคณิตศาสตร์เป็นระบบมวล-สปริง-แดมเปอร์แบบ 1 ระดับความอิสระ (Quarter-Car Model) การสั่นสะเทือนของตัวถังรถ (Sprung Mass: m) หลังจากการตกหลุมจะถูกกำหนดโดย <strong>ความถี่ธรรมชาติ (Natural Frequency: &omega;<sub>n</sub>)</strong> และ <strong>สัมประสิทธิ์ความหน่วงวิกฤต (Critical Damping Coefficient: C<sub>crit</sub>)</strong>
++            ระบบช่วงล่างรถยนต์สามารถจำลองทำความเข้าใจได้ง่ายๆ ผ่านระบบมวลและสปริง เมื่อรถวิ่งตกหลุม ตัวถังรถซึ่งมี <strong>น้ำหนักตัวรถ (แทนด้วยตัวแปร m)</strong> จะเริ่มสั่นกระเพื่อมขึ้นลงตาม <strong>ความถี่ธรรมชาติของการดีดตัว</strong> และจะถูกสลายแรงสั่นสะเทือนด้วยความหน่วงของโช้คอัพ
+           </p>
+ 
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+             <div className="bg-slate-900 text-white p-6 rounded-2xl border border-slate-800">
+-              <h3 className="text-base font-extrabold text-slate-900 mb-3 flex items-center gap-2">
+-                <Activity className="w-4 h-4" />
+-                สูตรคำนวณความถี่ธรรมชาติ &amp; Damping Ratio
++              <h3 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
++                <Activity className="w-4 h-4 text-lime-400" />
++                หลักการทำงานของความถี่ธรรมชาติและอัตราส่วนความหน่วง
+               </h3>
+-              <div className="space-y-3 font-mono text-xs sm:text-sm">
+-                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-lime-300">
+-                  &omega;<sub>n</sub> = &radic;(K<sub>wheel</sub> / m<sub>corner</sub>) [rad/s] &rarr; f<sub>n</sub> = &omega;<sub>n</sub> / (2&pi;) [Hz]
++              <div className="space-y-3 text-xs sm:text-sm">
++                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
++                  <strong className="text-lime-400 block mb-1">• ความถี่ธรรมชาติ (Natural Frequency):</strong>
++                  ขึ้นอยู่กับความแข็งของสปริงเทียบกับน้ำหนักกดในแต่ละมุมล้อ (แทนด้วยตัวแปร m) หากสปริงแข็งเกินไปเทียบกับน้ำหนักรถ รถจะดีดถี่และกระด้าง แต่สำหรับ EV ที่มีน้ำหนัก (m) มาก สปริงต้องเฟิร์มพอดีเพื่อให้จังหวะการคืนตัวนุ่มสบาย
+                 </div>
+-                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-lime-300">
+-                  C<sub>crit</sub> = 2 &middot; &radic;(K<sub>wheel</sub> &middot; m<sub>corner</sub>) = 2 &middot; m<sub>corner</sub> &middot; &omega;<sub>n</sub>
++                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
++                  <strong className="text-lime-400 block mb-1">• แรงหน่วงวิกฤต (Critical Damping):</strong>
++                  คือแรงหน่วงในอุดมคติของโช้คอัพ ที่สามารถหยุดการดีดของสปริงได้สนิทในรอบเดียวโดยไม่ปล่อยให้รถเกิดการเด้งกระเพื่อมซ้ำ
+                 </div>
+-                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-lime-300">
+-                  &zeta; = C<sub>actual</sub> / C<sub>crit</sub> (Damping Ratio - ค่าเซต้า)
++                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
++                  <strong className="text-lime-400 block mb-1">• อัตราส่วนความหน่วง (Damping Ratio):</strong>
++                  สัดส่วนแรงต้านจริงของโช้คอัพ เพื่อให้รถมีความนุ่มนวลซับแรงกระแทกได้ดี ไม่แข็งตึงตังและไม่ย้วยโยน
+                 </div>
+               </div>
+-              <p className="text-xs text-slate-400 mt-4 leading-relaxed">
+-                โดย K<sub>wheel</sub> คือค่าความแข็งสปริงประสิทธิผลที่ดุมล้อ (N/m) และ m<sub>corner</sub> คือน้ำหนักกดต่อน้ำหนักล้อ 1 มุม (kg)
+-              </p>
+             </div>
+ 
+             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
+               <h3 className="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
+                 <Gauge className="w-5 h-5 text-lime-700" />
+-                เกณฑ์ค่าเป้าหมาย Zeta (&zeta;) สำหรับรถยนต์ไฟฟ้า
++                เกณฑ์ค่าเป้าหมายความหน่วงสำหรับรถยนต์ไฟฟ้า
+               </h3>
+               
+               <div className="space-y-2.5 text-xs text-slate-700">
+                 <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+-                  <span className="font-bold text-slate-900">Low-Speed Rebound (&zeta;<sub>reb</sub>):</span>
++                  <span className="font-bold text-slate-900">ความหน่วงจังหวะยืดความเร็วต่ำ (Low-Speed Rebound Ratio):</span>
+                   <span className="font-mono font-bold text-lime-700">0.65 – 0.75</span>
+                 </div>
+                 <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+-                  <span className="font-bold text-slate-900">Low-Speed Bump (&zeta;<sub>bump</sub>):</span>
++                  <span className="font-bold text-slate-900">ความหน่วงจังหวะยุบความเร็วต่ำ (Low-Speed Bump Ratio):</span>
+                   <span className="font-mono font-bold text-lime-700">0.25 – 0.35</span>
+                 </div>
+                 <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+-                  <span className="font-bold text-slate-900">Sprung Natural Freq (f<sub>n</sub>) Street:</span>
++                  <span className="font-bold text-slate-900">ความถี่ธรรมชาติสำหรับขับทั่วไปบนถนน (Street Frequency):</span>
+                   <span className="font-mono text-slate-900">1.3 – 1.6 Hz (นุ่มนวลนั่งสบาย)</span>
+                 </div>
+                 <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+-                  <span className="font-bold text-slate-900">Sprung Natural Freq (f<sub>n</sub>) Fast Road:</span>
++                  <span className="font-bold text-slate-900">ความถี่ธรรมชาติสายสปอร์ตเฟิร์มกระชับ (Fast Road Frequency):</span>
+                   <span className="font-mono text-slate-900">1.7 – 2.0 Hz (กระชับคุมง่าย)</span>
+                 </div>
+               </div>
+diff --git a/src/app/(storefront)/articles/ev-horsepower-vs-torque-explained/page.tsx b/src/app/(storefront)/articles/ev-horsepower-vs-torque-explained/page.tsx
+index 63175e5..423c6df 100644
+--- a/src/app/(storefront)/articles/ev-horsepower-vs-torque-explained/page.tsx
++++ b/src/app/(storefront)/articles/ev-horsepower-vs-torque-explained/page.tsx
+@@ -26,7 +26,7 @@ import {
+ 
+ export const metadata: Metadata = {
+   title: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? เจาะลึกกราฟไดโน่และเกียร์ทดเดี่ยว | EVSELECT',
+-  description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า PMSM และ Induction: อธิบายกราฟ Constant Torque ตั้งแต่ 0 RPM, โซน Constant Power, ปรากฏการณ์ Back-EMF, สูตรคำนวณแรงขับที่ล้อ และเปรียบเทียบเกียร์ 2 สปีดใน Taycan กับเกียร์ทดเดี่ยวใน Tesla และ BYD Seal',
++  description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า PMSM และ Induction: อธิบายกราฟ Constant Torque ตั้งแต่ 0 RPM, โซน Constant Power, ปรากฏการณ์ Back-EMF, หลักการถ่ายทอดแรงขับที่ล้อ และเปรียบเทียบเกียร์ 2 สปีดใน Taycan กับเกียร์ทดเดี่ยวใน Tesla และ BYD Seal',
+   keywords: [
+     'แรงม้า vs แรงบิด รถ EV',
+     'ทำไมรถ EV ปลายเหี่ยว',
+@@ -41,7 +41,7 @@ export const metadata: Metadata = {
+   ],
+   openGraph: {
+     title: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? | EVSELECT',
+-    description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า: กราฟไดโน่ 0 RPM, ปรากฏการณ์ Back-EMF, สูตรคำนวณแรงฉุดที่ล้อ และระบบเกียร์ทดเดี่ยว',
++    description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า: กราฟไดโน่ 0 RPM, ปรากฏการณ์ Back-EMF, หลักการถ่ายทอดแรงฉุดที่ล้อ และระบบเกียร์ทดเดี่ยว',
+     url: 'https://evselect.com/articles/ev-horsepower-vs-torque-explained',
+     siteName: 'EVSELECT Thailand',
+     locale: 'th_TH',
+@@ -207,7 +207,7 @@ export default function EVHorsepowerVsTorquePage() {
+               <TrendingUp className="w-4 h-4 text-amber-600 shrink-0" /> ปลายแผ่วเพราะ Back-EMF
+             </div>
+             <p className="text-slate-600 text-xs leading-relaxed">
+-              เมื่อรอบมอเตอร์หมุนเกิน 6,000 RPM แรงดันไฟฟ้าเหนี่ยวนำย้อนกลับจะสูงขึ้นจนเท่าแรงดันแบตเตอรี่ อินเวอร์เตอร์ต้องลดสนามแม่เหล็ก (Field Weakening) แรงบิดจึงลดลงตามสัดส่วน $1/\omega$
++              เมื่อรอบมอเตอร์หมุนเกิน 6,000 RPM แรงดันไฟฟ้าเหนี่ยวนำย้อนกลับจะสูงขึ้นจนเท่าแรงดันแบตเตอรี่ อินเวอร์เตอร์ต้องลดสนามแม่เหล็ก (Field Weakening) แรงบิดจึงค่อยๆ ลดฮวบลงสวนทางกับความเร็วรอบหมุนของมอเตอร์ที่เพิ่มสูงขึ้น
+             </p>
+           </div>
+           <div className="space-y-2">
+@@ -237,30 +237,35 @@ export default function EVHorsepowerVsTorquePage() {
+           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose my-8">
+             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-xs">
+               <div className="text-xs font-bold uppercase tracking-wider text-lime-700 bg-lime-100 px-3 py-1 rounded-full inline-block mb-3">
+-                แรงบิด (Torque - $\tau$)
++                แรงบิด (Torque)
+               </div>
+               <h4 className="text-lg font-black text-slate-900 mb-2">แรงบิดหมุนที่สร้างอัตราเร่ง</h4>
+               <p className="text-xs text-slate-600 leading-relaxed">
+-                แรงบิดวัดเป็น <strong>นิวตัน-เมตร ($N\cdot m$)</strong> คือขนาดของแรงหมุนที่มอเตอร์สามารถสร้างขึ้นได้รอบแกนหมุน เปรียบเสมือน <em>&quot;กล้ามเนื้อ&quot;</em> ที่ใช้ผลักดันน้ำหนัก 2 ตันให้เคลื่อนที่ออกจากจุดหยุดนิ่ง
++                แรงบิดวัดเป็นหน่วย <strong>นิวตัน-เมตร (Nm)</strong> คือขนาดของแรงหมุนที่มอเตอร์สร้างขึ้นได้รอบแกนหมุน เปรียบเสมือน <em>&quot;กล้ามเนื้อ&quot;</em> ที่ใช้ผลักดันน้ำหนักตัวรถ 2 ตันให้ออกตัวพุ่งทะยานจากจุดหยุดนิ่ง
+               </p>
+             </div>
+ 
+             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-xs">
+               <div className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-3 py-1 rounded-full inline-block mb-3">
+-                แรงม้า / กำลัง (Power - $P$)
++                แรงม้า / กำลัง (Power)
+               </div>
+               <h4 className="text-lg font-black text-slate-900 mb-2">อัตราการทำงานต่อหน่วยเวลา</h4>
+               <p className="text-xs text-slate-600 leading-relaxed">
+-                กำลังวัดเป็น <strong>กิโลวัตต์ ($kW$)</strong> หรือ <strong>แรงม้า ($HP / PS$)</strong> คำนวณได้จากผลคูณของแรงบิดและความเร็วรอบหมุน เป็นตัวกำหนด <em>&quot;ความสามารถในการรักษาความเร็วสูงอย่างต่อเนื่อง&quot;</em>
++                กำลังของมอเตอร์วัดเป็น <strong>กิโลวัตต์ (kW)</strong> หรือเทียบเคียงเป็น <strong>แรงม้า (HP หรือ PS)</strong> เกิดจากการทำงานร่วมกันระหว่างแรงบิดกับความเร็วรอบหมุนของมอเตอร์ เป็นตัวกำหนด <em>&quot;ความสามารถในการรักษาความเร็วสูงอย่างต่อเนื่อง&quot;</em>
+               </p>
+             </div>
+           </div>
+ 
+-          <div className="bg-slate-900 text-lime-400 p-5 rounded-2xl font-mono text-sm sm:text-base my-6 shadow-inner not-prose overflow-x-auto">
+-            <div className="text-slate-400 text-xs mb-1">// Fundamental Power Equation (SI Units)</div>
+-            $$P \, (kW) = \frac{'{ \\tau \\, (Nm) \\times \\omega \\, (RPM) }'}{'{9549}'} \qquad \text{'{และ}'} \qquad HP = \frac{'{ \\tau \\, (lb\\cdot ft) \\times RPM }'}{'{5252}'}$$
+-            <div className="text-slate-400 text-xs mt-3 pt-2 border-t border-slate-800">
+-              สังเกตว่า: หากรอบหมุน ($\omega$) ต่ำมากใกล้ 0 RPM แม้จะมีแรงบิด ($\tau$) มหาศาลเพียงใด ตัวเลขแรงม้า ($P$) ที่คำนวณได้ก็จะมีค่าน้อยมาก นี่คือเหตุผลว่าทำไมที่ความเร็ว 0-30 กม./ชม. EV ถึงมีแรงดึงมหาศาล ทั้งที่หน้าปัดแสดงว่าใช้กำลังไปเพียง 50-80 kW เท่านั้น
++          <div className="bg-slate-900 text-lime-400 p-6 rounded-2xl my-6 shadow-inner not-prose">
++            <div className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
++              <Zap className="w-4 h-4 text-lime-400" />
++              หลักการทำงาน: กำลังและแรงม้าสัมพันธ์กับแรงบิดอย่างไร?
++            </div>
++            <p className="text-slate-200 text-sm leading-relaxed mb-3">
++              กำลังหรือแรงม้าไม่ได้เกิดขึ้นมาเดี่ยวๆ แต่เกิดจาก <strong>แรงบิดในการหมุน</strong> ทำงานผสานกับ <strong>ความเร็วรอบหมุนของมอเตอร์</strong> ยิ่งรอบจัดและมีแรงบิดสูง กำลังขับเคลื่อนของรถก็จะยิ่งมหาศาล
++            </p>
++            <div className="text-slate-300 text-xs pt-3 border-t border-slate-800 leading-relaxed">
++              <strong>ข้อสังเกตสำคัญ:</strong> ในช่วงที่มอเตอร์เพิ่งเริ่มหมุนที่ความเร็วรอบต่ำมากๆ ใกล้ 0 RPM แม้มอเตอร์จะปล่อยแรงบิดเต็มพิกัดทันที แต่เนื่องจากความเร็วรอบยังน้อย กำลังหรือแรงม้าที่วัดได้บนหน้าปัดจึงยังดูน้อยตามไปด้วย นี่คือเหตุผลว่าทำไมที่ความเร็ว 0-30 กม./ชม. รถ EV ถึงกระชากหลังติดเบาะอย่างน่าทึ่ง ทั้งที่หน้าปัดแสดงว่าเพิ่งใช้กำลังไปเพียง 50-80 kW เท่านั้น
+             </div>
+           </div>
+         </section>
+@@ -370,7 +375,7 @@ export default function EVHorsepowerVsTorquePage() {
+                     EV Torque: 500 Nm คงที่ตั้งแต่ 0 RPM
+                   </text>
+                   <text x="510" y="230" fill="#a3e635" fontSize="10">
+-                    แรงบิดร่วงตาม 1/ω
++                    แรงบิดค่อยๆ ลดลงที่รอบสูง
+                   </text>
+ 
+                   {/* EV MOTOR POWER CURVE (CYAN - LINEAR RISE THEN FLAT) */}
+@@ -431,7 +436,7 @@ export default function EVHorsepowerVsTorquePage() {
+                 ช่วงที่ 1: Constant Torque Region (0 ถึง Base Speed ~5,000 RPM)
+               </div>
+               <p className="text-xs text-slate-600 leading-relaxed">
+-                ในช่วงนี้ อินเวอร์เตอร์จะถูกจำกัดด้วยกระแสไฟฟ้าสูงสุด ($I_{'{max}'}$) ที่มอเตอร์และสารกึ่งตัวนำ SiC/IGBT สามารถรับได้ อินเวอร์เตอร์จะจ่ายกระแสเพื่อสร้างสนามแม่เหล็กเต็มพิกัด ทำให้ <strong>แรงบิดมีค่าคงที่และเป็นค่าสูงสุดตั้งแต่ 0 RPM</strong> อัตราเร่งในช่วง 0-80 กม./ชม. จึงดุดันและกดหลังติดเบาะทันทีโดยไม่ต้องรอรอบ
++                ในช่วงนี้ อินเวอร์เตอร์จะถูกจำกัดด้วยเพดานกระแสไฟฟ้าสูงสุดที่มอเตอร์และสารกึ่งตัวนำ SiC/IGBT สามารถรับได้ อินเวอร์เตอร์จะจ่ายกระแสเพื่อสร้างสนามแม่เหล็กเต็มพิกัด ทำให้ <strong>แรงบิดมีค่าคงที่และเป็นค่าสูงสุดตั้งแต่ 0 RPM</strong> อัตราเร่งในช่วง 0-80 กม./ชม. จึงดุดันและกดหลังติดเบาะทันทีโดยไม่ต้องรอรอบ
+               </p>
+             </div>
+ 
+@@ -441,7 +446,7 @@ export default function EVHorsepowerVsTorquePage() {
+                 ช่วงที่ 2: Constant Power &amp; Field Weakening Region (~5,000 ถึง 16,000 RPM)
+               </div>
+               <p className="text-xs text-slate-600 leading-relaxed">
+-                เมื่อโรเตอร์หมุนเร็วขึ้น ขดลวดจะสร้าง <strong>แรงดันไฟฟ้าเหนี่ยวนำย้อนกลับ (Back-EMF: $V_{'{emf}'} = \omega \cdot \psi_m$)</strong> ซึ่งจะต้านแรงดันไฟฟ้ากระแสตรงจากแบตเตอรี่ ($V_{'{dc}'}$) เมื่อ Back-EMF สูงจนชนขีดจำกัดแรงดัน อินเวอร์เตอร์ต้องฉีดกระแส Direct-axis Current ในทิศทางลบ ($-I_d$) เข้าไปเพื่อ <em>&quot;ลดความเข้มของสนามแม่เหล็กถาวร&quot; (Field Weakening)</em> กำลัง ($kW$) จะคงที่ในระดับสูงสุด แต่แรงบิดจะลดลงตามสัดส่วน $1/\omega$
++                เมื่อโรเตอร์หมุนเร็วขึ้น ขดลวดจะสร้าง <strong>แรงดันไฟฟ้าเหนี่ยวนำย้อนกลับ (Back-EMF)</strong> ซึ่งจะวิ่งต้านแรงดันไฟฟ้ากระแสตรงจากแบตเตอรี่ และเมื่อแรงดันย้อนกลับนี้พุ่งสูงจนชนเพดานแรงดันของระบบ อินเวอร์เตอร์จึงต้องปรับกระแสควบคุมเพื่อ <em>&quot;ลดความเข้มของสนามแม่เหล็กถาวร&quot; (Field Weakening)</em> ส่งผลให้กำลังสูงสุดในหน่วยกิโลวัตต์ (kW) ยังคงที่ได้ แต่แรงบิดจะค่อยๆ ลดลงสวนทางกับความเร็วรอบที่สูงขึ้นเรื่อยๆ
+               </p>
+             </div>
+ 
+@@ -461,17 +466,22 @@ export default function EVHorsepowerVsTorquePage() {
+         <section>
+           <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900">
+             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
+-            3. กลไกเกียร์ทดเดี่ยว (Single-Speed Gearbox) และสมการแรงขับที่ล้อ
++            3. กลไกเกียร์ทดเดี่ยว (Single-Speed Gearbox) และที่มาของแรงขับมหาศาลที่ล้อ
+           </h2>
+           <p>
+             ในขณะที่รถยนต์สันดาปต้องใช้เกียร์อัตโนมัติ 7 – 10 สปีดเพื่อชดเชยช่วง Powerband ที่แคบของเครื่องยนต์ แต่รถยนต์ไฟฟ้ากว่า 98% ในท้องตลาดกลับใช้ <strong>เกียร์ทดเดี่ยว (Fixed Reduction Gear)</strong> เพียงอัตราทดเดียว:
+           </p>
+ 
+-          <div className="bg-slate-900 text-lime-400 p-5 rounded-2xl font-mono text-sm my-6 shadow-inner not-prose">
+-            <div className="text-slate-400 text-xs mb-1">// Wheel Tractive Force Equation</div>
+-            $$F_{'{wheel}'} = \frac{'{ \\tau_{motor} \\times i_{gear} \\times \\eta }'}{'{ r_{wheel} }'}$$
+-            <div className="text-slate-400 text-xs mt-3 pt-2 border-t border-slate-800">
+-              เมื่อ $\tau_{'{motor}'}$ = แรงบิดมอเตอร์ (Nm), $i_{'{gear}'}$ = อัตราทดเกียร์ (เช่น 9.0:1), $\eta$ = ประสิทธิภาพการส่งกำลัง (~0.97), $r_{'{wheel}'}$ = รัศมีวงล้อและยาง (~0.34 เมตร สำหรับยาง 245/45R19)
++          <div className="bg-slate-900 text-lime-400 p-6 rounded-2xl my-6 shadow-inner not-prose">
++            <div className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
++              <Compass className="w-4 h-4 text-lime-400" />
++              กลไกการถ่ายทอดกำลัง: ทำไมมอเตอร์ลูกเล็กถึงสร้างแรงขับที่ล้อได้มหาศาล?
++            </div>
++            <p className="text-slate-200 text-sm leading-relaxed mb-3">
++              แรงขับจริงที่ผลักดันให้รถพุ่งทะยานไปข้างหน้า ไม่ได้ขึ้นอยู่กับแรงบิดมอเตอร์เพียวๆ แต่เกิดจาก <strong>แรงบิดของมอเตอร์</strong> วิ่งผ่าน <strong>อัตราทดของเฟืองเกียร์</strong> (เช่น เกียร์ทดอัตรา 9 ต่อ 1 ซึ่งช่วยขยายแรงบิดมอเตอร์ให้สูงขึ้นถึง 9 เท่าตัว) หักลบการสูญเสียเล็กน้อยในระบบ แล้วถ่ายทอดลงสู่หน้าสัมผัสถนนผ่าน <strong>รัศมีวงล้อและยาง</strong>
++            </p>
++            <div className="text-slate-300 text-xs pt-3 border-t border-slate-800 leading-relaxed">
++              <strong>ตัวอย่างรถจริง:</strong> มอเตอร์ไฟฟ้าแรงบิด 450 นิวตัน-เมตร เมื่อผ่านชุดเกียร์ทด 9.0:1 จะสามารถสร้างแรงขับฉุดกระชากที่หน้ายางลงสู่พื้นถนนได้สูงถึง <strong>11,550 นิวตัน</strong> ในชั่วพริบตา
+             </div>
+           </div>
+ 
+@@ -487,8 +497,8 @@ export default function EVHorsepowerVsTorquePage() {
+                   <th className="p-3.5">รอบมอเตอร์ (RPM)</th>
+                   <th className="p-3.5">สถานะมอเตอร์</th>
+                   <th className="p-3.5">แรงบิดที่มอเตอร์</th>
+-                  <th className="p-3.5 text-lime-400">แรงขับที่ล้อ ($F_{'{wheel}'}$)</th>
+-                  <th className="p-3.5">แรงต้านอากาศ ($F_{'{aero}'}$)</th>
++                  <th className="p-3.5 text-lime-400">แรงขับที่ล้อ (นิวตัน)</th>
++                  <th className="p-3.5">แรงต้านอากาศ (นิวตัน)</th>
+                 </tr>
+               </thead>
+               <tbody className="divide-y divide-slate-200 bg-white">
+@@ -529,7 +539,7 @@ export default function EVHorsepowerVsTorquePage() {
+           </div>
+ 
+           <p>
+-            <strong>บทสรุปของตัวเลข:</strong> ที่ความเร็ว 180 กม./ชม. แรงบิดที่มอเตอร์เหลือเพียง 130 Nm ทำให้แรงขับที่ล้อตกลงเหลือ 3,330 นิวตัน ในขณะที่ <strong>แรงต้านอากาศ (Aerodynamic Drag: $F_{'{drag}'} = \frac{'{1}'}{'{2}'} \rho C_d A v^2$)</strong> พุ่งสูงขึ้นเป็น 1,900 นิวตัน แรงขับสุทธิที่เหลือใช้เร่งความเร็วจึงเหลือเพียงเล็กน้อย ทำให้คนขับรู้สึกว่า <em>&quot;ปลายเหี่ยว&quot;</em> นั่นเอง
++            <strong>บทสรุปของตัวเลข:</strong> ที่ความเร็ว 180 กม./ชม. แรงบิดของมอเตอร์ลดลงเหลือเพียง 130 Nm ส่งผลให้แรงขับที่ล้อตกลงเหลือ 3,330 นิวตัน ในขณะที่ <strong>แรงต้านอากาศ (Aerodynamic Drag)</strong> พุ่งสูงขึ้นอย่างก้าวกระโดดตามความเร็ว (แทนด้วยตัวแปร v) โดยเมื่อความเร็วเพิ่มขึ้นเป็นสองเท่า แรงต้านลมจะทวีคูณขึ้นถึงสี่เท่า จนกลืนกินแรงขับไปถึง 1,900 นิวตัน แรงขับสุทธิที่เหลือไว้ใช้เร่งแซงจึงเหลือน้อยมาก ทำให้คนขับรู้สึกว่าอัตราเร่งช่วงความเร็วปลายนั้นแผ่วลง หรือ <em>&quot;ปลายเหี่ยว&quot;</em> นั่นเอง
+           </p>
+         </section>
+ 
+diff --git a/src/app/(storefront)/articles/ev-tyre-and-coilover-selection-guide/page.tsx b/src/app/(storefront)/articles/ev-tyre-and-coilover-selection-guide/page.tsx
+index d35bba6..b31d737 100644
+--- a/src/app/(storefront)/articles/ev-tyre-and-coilover-selection-guide/page.tsx
++++ b/src/app/(storefront)/articles/ev-tyre-and-coilover-selection-guide/page.tsx
+@@ -30,7 +30,7 @@ import {
+ 
+ export const metadata: Metadata = {
+   title: 'คู่มือการเลือกซื้อยาง (EV Tyres) และสตรัทปรับเกลียว (Coilovers) สำหรับรถ EV: สเปก, ค่าสปริงเรท, โหลดอินเด็กซ์ และการเลือกใช้งาน | EVSELECT',
+-  description: 'เจาะลึกคู่มือการเลือกยางและสตรัทปรับเกลียวสำหรับรถยนต์ไฟฟ้า: มาตรฐาน HL & XL Load Index, ชั้นโฟมซับเสียงลดเสียงหอน, ค่า UTQG & Rolling Resistance, สูตรคำนวณสปริงเรท K_wheel = K_spring * MR^2, สปริง Linear vs Progressive, โช้ค 1-Way / 2-Way / 3-Way และระยะความสูงปลอดภัยสำหรับแบตเตอรี่',
++  description: 'เจาะลึกคู่มือการเลือกยางและสตรัทปรับเกลียวสำหรับรถยนต์ไฟฟ้า: มาตรฐาน HL & XL Load Index, ชั้นโฟมซับเสียงลดเสียงหอน, ค่า UTQG & Rolling Resistance, หลักการคำนวณสปริงเรทและอัตราทดช่วงล่าง Motion Ratio, สปริง Linear vs Progressive, โช้ค 1-Way / 2-Way / 3-Way และระยะความสูงปลอดภัยสำหรับแบตเตอรี่',
+   keywords: [
+     'ยางรถ EV',
+     'เลือกยางรถยนต์ไฟฟ้า',
+@@ -46,7 +46,7 @@ export const metadata: Metadata = {
+   ],
+   openGraph: {
+     title: 'คู่มือการเลือกซื้อยาง (EV Tyres) และสตรัทปรับเกลียว (Coilovers) สำหรับรถ EV | EVSELECT Expert Guide',
+-    description: 'คู่มือฉบับสมบูรณ์สำหรับเจ้าของรถ EV: โหลดอินเด็กซ์ HL/XL, โฟมซับเสียง, สูตรคำนวณสปริงเรท, สปริง Linear vs Progressive, โช้ค 1-Way/2-Way/3-Way และตารางเปรียบเทียบแบรนด์ชั้นนำ',
++    description: 'คู่มือฉบับสมบูรณ์สำหรับเจ้าของรถ EV: โหลดอินเด็กซ์ HL/XL, โฟมซับเสียง, หลักการเลือกค่าสปริงเรท, สปริง Linear vs Progressive, โช้ค 1-Way/2-Way/3-Way และตารางเปรียบเทียบแบรนด์ชั้นนำ',
+     url: 'https://evselect.com/articles/ev-tyre-and-coilover-selection-guide',
+     siteName: 'EVSELECT Thailand',
+     locale: 'th_TH',
+@@ -63,7 +63,7 @@ export const metadata: Metadata = {
+   twitter: {
+     card: 'summary_large_image',
+     title: 'คู่มือเลือกซื้อยางและสตรัทปรับเกลียวสำหรับรถ EV | EVSELECT',
+-    description: 'เจาะลึกสเปกยาง HL/XL โฟมซับเสียง สูตรคำนวณสปริงเรท และการเลือกโช้คอัพตรงรุ่นสำหรับรถยนต์ไฟฟ้าน้ำหนัก 2 ตัน',
++    description: 'เจาะลึกสเปกยาง HL/XL โฟมซับเสียง หลักการเลือกค่าสปริงเรท และการเลือกโช้คอัพตรงรุ่นสำหรับรถยนต์ไฟฟ้าน้ำหนัก 2 ตัน',
+     images: ['/images/hero-bg.jpg']
+   }
+ };
+@@ -118,7 +118,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
+           className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal"
+           style={{ textWrap: 'balance' } as React.CSSProperties}
+         >
+-          คู่มือวิศวกรรมฉบับสมบูรณ์สำหรับเจ้าของรถยนต์ไฟฟ้า: ทำความเข้าใจมาตรฐานดัชนีรับน้ำหนัก <strong>HL (High Load) &amp; XL (Extra Load)</strong>, ชั้นโฟมซับเสียงลดเสียงก้องในห้องโดยสาร (Acoustic Foam), ค่าความต้านทานการหมุน (Rolling Resistance) เทียบกับระยะวิ่ง WLTP, สูตรคำนวณสปริงเรท (K_wheel = K_spring &times; MR&sup2;), ข้อแตกต่างระหว่างสปริง <strong>Linear vs Progressive</strong>, การเลือกโช้คอัพ 1-Way, 2-Way, 3-Way และขีดจำกัดความสูงปลอดภัยสำหรับแบตเตอรี่ใต้ท้องรถ
++          คู่มือวิศวกรรมฉบับสมบูรณ์สำหรับเจ้าของรถยนต์ไฟฟ้า: ทำความเข้าใจมาตรฐานดัชนีรับน้ำหนัก <strong>HL (High Load) &amp; XL (Extra Load)</strong>, ชั้นโฟมซับเสียงลดเสียงก้องในห้องโดยสาร (Acoustic Foam), ค่าความต้านทานการหมุน (Rolling Resistance) เทียบกับระยะวิ่ง WLTP, หลักการเลือกสปริงเรทและอัตราทดช่วงล่าง (Motion Ratio), ข้อแตกต่างระหว่างสปริง <strong>Linear vs Progressive</strong>, การเลือกโช้คอัพ 1-Way, 2-Way, 3-Way และขีดจำกัดความสูงปลอดภัยสำหรับแบตเตอรี่ใต้ท้องรถ
+         </p>
+       </header>
+ 
+@@ -359,7 +359,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
+                   กราฟ 1: ความสัมพันธ์แรงสปริงเทียบกับระยะยุบ (Force vs Deflection)
+                 </text>
+                 <text x="0" y="18" fill="#94a3b8" fontSize="10">
+-                  เปรียบเทียบพฤติกรรมสปริง Linear (F=k&times;x) vs สปริง Progressive &amp; Tender Spring
++                  เปรียบเทียบพฤติกรรมสปริงขดตรง (Linear) ที่ยุบตัวสม่ำเสมอ vs สปริงสองสเต็ป (Progressive &amp; Tender Spring)
+                 </text>
+ 
+                 {/* Graph Axes */}
+@@ -471,39 +471,42 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
+         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
+           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
+           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+-            3. สตรัทปรับเกลียว (Coilovers): สูตรคำนวณ Spring Rate และ Motion Ratio
++            3. สตรัทปรับเกลียว (Coilovers): การเลือกค่า Spring Rate และอัตราทด Motion Ratio
+           </h2>
+         </div>
+ 
+         <p className="text-slate-700 leading-relaxed">
+-          ตามหลักการของ <strong>OptimumG</strong> ค่าความแข็งของสปริงที่ระบุบนกระบอก (เช่น 8 kgf/mm) ไม่ใช่ความแข็งจริงที่เกิดขึ้นที่ดุมล้อ เพราะตำแหน่งจุดยึดสปริงบนปีกนกมี <strong>Motion Ratio (MR = &Delta;d_spring / &Delta;d_wheel)</strong> และมุมเอียงในการติดตั้ง (&theta;) เข้ามาเกี่ยวข้อง:
++          ตามหลักวิศวกรรมช่วงล่าง ค่าความแข็งของสปริงที่ระบุไว้บนตัวกระบอก (เช่น 8 kgf/mm) ไม่ใช่ความแข็งจริงที่ดุมล้อได้รับ เพราะตำแหน่งจุดยึดสปริงบนปีกนกมี <strong>อัตราทดคานช่วงล่าง (Motion Ratio)</strong> และมุมเอียงในการติดตั้งเข้ามาเป็นตัวแปรสำคัญ:
+         </p>
+ 
+         {/* Math Calculation Card */}
+         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl my-6">
+-          <div className="text-xs uppercase font-extrabold text-slate-900 mb-2 flex items-center gap-2">
+-            <Wrench className="w-4 h-4" /> Mathematical Formula: Wheel Rate &amp; Natural Frequency
++          <div className="text-xs uppercase font-extrabold text-lime-400 mb-2 flex items-center gap-2">
++            <Wrench className="w-4 h-4" /> วิศวกรรมช่วงล่าง: แรงกดจริงที่ดุมล้อและความถี่การยุบตัว
+           </div>
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+-            <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 font-mono text-xs sm:text-sm space-y-2">
+-              <div className="text-lime-300">
+-                K_wheel = K_spring &times; (MR)&sup2; &times; cos(&theta;)
++            <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-xs sm:text-sm space-y-2.5 text-slate-200">
++              <div>
++                <strong className="text-lime-400 block">• อัตราทดคานปีกนก (Motion Ratio):</strong>
++                เนื่องจากสปริงไม่ได้วางอยู่บนดุมล้อโดยตรง แต่อยู่บนก้านปีกนก จึงเกิดผลกระทบจาก &apos;คานงัด&apos; ทำให้ความแข็งที่ล้อได้รับจริงจะลดลงเสมอ
+               </div>
+-              <div className="text-slate-400 text-xs">
+-                f_n = (1 / 2&pi;) &times; &radic;(K_wheel / m_corner) &nbsp; [Hz]
++              <div>
++                <strong className="text-lime-400 block">• ความถี่การเต้นของตัวถัง:</strong>
++                ขึ้นอยู่กับความแข็งจริงที่ดุมล้อเทียบกับ <strong>น้ำหนักกดในแต่ละมุมล้อ (แทนด้วยตัวแปร m)</strong>
+               </div>
+-              <div className="text-slate-400 text-xs">
+-                K_spring = (4 &times; &pi;&sup2; &times; f_n&sup2; &times; m_corner) / (MR)&sup2;
++              <div>
++                <strong className="text-lime-400 block">• การคำนวณสำหรับรถ EV:</strong>
++                เพราะรถยนต์ไฟฟ้ามีน้ำหนักตัวรถ (m) มาก จึงต้องเลือกสปริงที่ชดเชยแรงคานงัดของปีกนก เพื่อป้องกันไม่ให้ช่วงล่างยุบยันกระแทก
+               </div>
+             </div>
+ 
+             <div className="text-xs text-slate-300 space-y-2">
+-              <div><strong>ตัวอย่างคำนวณสำหรับ BYD Seal AWD (น้ำหนัก 2,185 กก.):</strong></div>
+-              <div>• น้ำหนักต่อมุมล้อหลัง (m_corner) = 550 กก.</div>
+-              <div>• อัตราทดช่วงล่างหลัง Multi-link (MR) = 0.82, มุมเอียง &theta; ประมาณ 5&deg;</div>
+-              <div>• ต้องการค่าความถี่ธรรมชาติสายสปอร์ตถนนไทย (f_n) = 1.75 Hz</div>
+-              <div className="text-slate-900 font-extrabold">
+-                &rarr; จะได้ค่าสปริงเรทที่ต้องสั่งผลิต = <strong>9.0 – 9.5 kgf/mm (ประมาณ 500–530 lbs/in)</strong>
++              <div><strong>ตัวอย่างการคำนวณจริงสำหรับ BYD Seal AWD (น้ำหนักรวม 2,185 กก.):</strong></div>
++              <div>• น้ำหนักกดเฉลี่ยที่มุมล้อหลัง (แทนด้วยตัวแปร m) = ประมาณ 550 กก.</div>
++              <div>• อัตราทดปีกนกหลัง Multi-link อยู่ที่ประมาณ 0.82 โดยมีมุมเอียงเล็กน้อย 5 องศา</div>
++              <div>• ต้องการฟีลลิ่งการขับขี่สไตล์สปอร์ตแน่นหนึบสำหรับถนนไทย (ความถี่กระชับคุมง่าย)</div>
++              <div className="text-lime-400 font-extrabold">
++                &rarr; จะได้ค่าสปริงเรทที่เหมาะสมสำหรับสั่งผลิต = <strong>9.0 – 9.5 kgf/mm (ประมาณ 500–530 lbs/in)</strong>
+               </div>
+             </div>
+           </div>
+@@ -573,7 +576,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
+               <span>กับดักเรขาคณิต Roll Center (Roll Moment Arm Trap)</span>
+             </div>
+             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+-              เมื่อโหลดเตี้ยโดยไม่แก้จุดยึดปีกนก ปีกนกตัวล่างจะชี้ขึ้นฟ้า ส่งผลให้จุดศูนย์กลางการโคลง (Roll Center - RC) ทรุดตัวต่ำลงเร็วกว่าจุดศูนย์ถ่วง (h_CG) ทำให้ <strong>แขนโมเมนต์การโคลง (h_CG - h_RC) ยาวขึ้น</strong> รถจะเอียงโคลงตัวในโค้งมากกว่าเดิม ทั้งที่รถเตี้ยลง!
++              เมื่อโหลดเตี้ยโดยไม่แก้จุดยึดปีกนก ปีกนกตัวล่างจะชี้ขึ้นฟ้า ส่งผลให้จุดศูนย์กลางการโคลง (Roll Center) ทรุดตัวต่ำลงเร็วกว่าจุดศูนย์ถ่วงของตัวรถ ทำให้ <strong>ระยะห่างระหว่างจุดศูนย์ถ่วงกับจุดหมุนกว้างขึ้น (แขนคานงัดยาวขึ้น)</strong> รถจะเอียงโคลงตัวในโค้งมากกว่าเดิม ทั้งที่รถเตี้ยลง!
+             </p>
+           </div>
+         </div>
+diff --git a/src/app/(storefront)/articles/hybrid-to-ev-chassis-dynamics-transition/page.tsx b/src/app/(storefront)/articles/hybrid-to-ev-chassis-dynamics-transition/page.tsx
+index c6645f4..4e919fd 100644
+--- a/src/app/(storefront)/articles/hybrid-to-ev-chassis-dynamics-transition/page.tsx
++++ b/src/app/(storefront)/articles/hybrid-to-ev-chassis-dynamics-transition/page.tsx
+@@ -386,7 +386,7 @@ export default function HybridToEVChassisDynamicsPage() {
+                     ล้อหลัง: 40% (760 kg)
+                   </text>
+                   <text x="180" y="365" fill="#cbd5e1" fontSize="10" textAnchor="middle">
+-                    มวลรวมกระจายห่างแกนหมุน = Yaw Inertia สูง
++                    มวลรวมกระจายห่างแกนหมุน → Yaw Inertia สูง
+                   </text>
+                 </g>
+ 
+@@ -442,7 +442,7 @@ export default function HybridToEVChassisDynamicsPage() {
+                     ล้อหลัง: 50% (1,050 kg)
+                   </text>
+                   <text x="180" y="365" fill="#a3e635" fontSize="10" textAnchor="middle" fontWeight="bold">
+-                    มวลรวมอยู่กึ่งกลางฐานล้อ = Turn-in ไว เลี้ยวคม
++                    มวลรวมอยู่กึ่งกลางฐานล้อ → Turn-in ไว เลี้ยวคม
+                   </text>
+                 </g>
+               </svg>
+@@ -478,7 +478,7 @@ export default function HybridToEVChassisDynamicsPage() {
+                 <div className="text-xs font-bold text-lime-700 uppercase">Electric Motor Step Response</div>
+                 <div className="text-2xl font-black text-lime-600 my-1">&lt; 10 – 15 ms</div>
+                 <p className="text-xs text-slate-700 leading-relaxed">
+-                  อินเวอร์เตอร์แบบ Field-Oriented Control (FOC) จ่ายกระแส Quadrature Current ($I_q$) เข้าสู่ขดลวดสเตเตอร์ สร้างแรงบิดเต็มพิกัดแทบจะในเสี้ยววินาทีเดียวกับที่เท้าแตะคันเร่ง
++                  อินเวอร์เตอร์แบบ Field-Oriented Control (FOC) จ่ายกระแสไฟฟ้าสร้างแรงบิด (Quadrature Current) ตรงเข้าสู่ขดลวดสเตเตอร์ สร้างแรงบิดเต็มพิกัดแทบจะในเสี้ยววินาทีเดียวกับที่เท้าแตะคันเร่ง
+                 </p>
+               </div>
+             </div>
+@@ -488,7 +488,7 @@ export default function HybridToEVChassisDynamicsPage() {
+             ความจำเป็นของ Anti-Squat Suspension Geometry
+           </h3>
+           <p>
+-            เมื่อแรงบิด 500 – 700 Nm ถูกส่งลงสู่ล้อหลังในเวลาเพียง 10 มิลลิวินาที จะทำให้เกิดแรงดึงตามแนวยาวกระแทกกลับมายังแชสซี หากช่วงล่างด้านหลังไม่มีการออกแบบเรขาคณิต <strong>Anti-Squat Geometry (อย่างน้อย 40% – 60%)</strong> ท้ายรถจะยุบตัวลงอย่างรวดเร็ว (Rear Squat - Δz) ส่งผลให้หน้ารถลอย หน้ายางหน้าสูญเสียแรงกด และคนขับจะรู้สึกว่าพวงมาลัยเบาหวิวขณะเร่งแซง
++            เมื่อแรงบิด 500 – 700 Nm ถูกส่งลงสู่ล้อหลังในเวลาเพียง 10 มิลลิวินาที จะทำให้เกิดแรงดึงตามแนวยาวกระแทกกลับมายังแชสซี หากช่วงล่างด้านหลังไม่มีการออกแบบเรขาคณิต <strong>Anti-Squat Geometry (อย่างน้อย 40% – 60%)</strong> ท้ายรถจะยุบตัวยวบลงอย่างรวดเร็ว (อาการท้ายยุบ หรือ Rear Squat) ส่งผลให้หน้ารถลอย หน้ายางหน้าสูญเสียแรงกด และคนขับจะรู้สึกว่าพวงมาลัยเบาหวิวขณะเร่งแซง
+           </p>
+         </section>
+ 
+@@ -532,7 +532,7 @@ export default function HybridToEVChassisDynamicsPage() {
+             <div className="space-y-4 text-xs sm:text-sm text-slate-300">
+               <div className="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
+                 <span className="font-bold text-white block mb-1">1. แป้นเหยียบตัดขาดจากระบบไฮดรอลิก (Decoupled Pedal)</span>
+-                เมื่อเหยียบแป้นเบรก ตัวจำลองสัมผัส (Pedal Feel Simulator) จะสร้างแรงต้านเท้าด้วยสปริงและยางไฮดรอลิกตามระยะกด ($s$) และความเร็วในการเหยียบ ($ds/dt$)
++                เมื่อเหยียบแป้นเบรก ตัวจำลองสัมผัส (Pedal Feel Simulator) จะสร้างแรงต้านเท้าด้วยสปริงและยางไฮดรอลิก แปรผันตามทั้งระยะความลึกที่กดแป้นเบรกลงไป และความเร็วในการกระทืบเบรกของคนขับ
+               </div>
+ 
+               <div className="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
+@@ -592,7 +592,7 @@ export default function HybridToEVChassisDynamicsPage() {
+                   <td className="p-3.5 font-bold text-emerald-700">50:50 หรือ 48:52</td>
+                 </tr>
+                 <tr className="hover:bg-slate-50">
+-                  <td className="p-3.5 font-bold text-slate-900">ความสูงจุดศูนย์ถ่วง (h_CG)</td>
++                  <td className="p-3.5 font-bold text-slate-900">ความสูงจุดศูนย์ถ่วง (Center of Gravity)</td>
+                   <td className="p-3.5 text-slate-600">560 – 600 mm</td>
+                   <td className="p-3.5 text-slate-600">520 – 550 mm</td>
+                   <td className="p-3.5 font-bold text-emerald-700">450 – 480 mm (ต่ำสุด)</td>
+diff --git a/src/app/(storefront)/articles/optimizing-ev-suspension-thai-roads/page.tsx b/src/app/(storefront)/articles/optimizing-ev-suspension-thai-roads/page.tsx
+index 0eb28e1..8c5e95d 100644
+--- a/src/app/(storefront)/articles/optimizing-ev-suspension-thai-roads/page.tsx
++++ b/src/app/(storefront)/articles/optimizing-ev-suspension-thai-roads/page.tsx
+@@ -196,7 +196,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
+         </div>
+ 
+         <p className="text-slate-700 leading-relaxed">
+-          ในมุมมองด้านวิศวกรรมพลศาสตร์ยานยนต์ (Vehicle Dynamics) รถยนต์ไฟฟ้า (BEV) มีคุณลักษณะทางกายภาพที่แตกต่างจากรถยนต์สันดาปภายใน (ICE) อย่างสิ้นเชิง <strong>จุดศูนย์ถ่วง (Center of Gravity - CG) ที่ต่ำมาก (h_CG ประมาณ 450 - 500 มม.)</strong> ร่วมกับ <strong>น้ำหนักตัวถังที่มหาศาล (2,000 – 2,600 กก.)</strong> จากชุดแบตเตอรี่แรงดันสูงใต้ท้องรถ ทำให้เมื่อล้อรถวิ่งผ่านความไม่สม่ำเสมอของผิวถนนในประเทศไทย พลังงานจลน์ (E_k = 0.5 &times; m &times; v&sup2;) และโมเมนตัมที่กระทำต่อระบบกันสะเทือนจะสูงกว่ารถเครื่องยนต์สันดาปทั่วไปถึง 20–35%
++          ในมุมมองด้านวิศวกรรมพลศาสตร์ยานยนต์ (Vehicle Dynamics) รถยนต์ไฟฟ้า (BEV) มีคุณลักษณะทางกายภาพที่แตกต่างจากรถยนต์สันดาปภายใน (ICE) อย่างสิ้นเชิง <strong>จุดศูนย์ถ่วง (Center of Gravity - CG) ที่ต่ำมาก (ประมาณ 450 - 500 มม.)</strong> ร่วมกับ <strong>น้ำหนักตัวถังที่มหาศาล (2,000 – 2,600 กก.)</strong> จากชุดแบตเตอรี่แรงดันสูงใต้ท้องรถ ทำให้เมื่อล้อรถวิ่งผ่านความไม่สม่ำเสมอของผิวถนนในประเทศไทย พลังงานจลน์และโมเมนตัมที่กระแทกเข้าสู่ระบบกันสะเทือนจะถูกขับเคลื่อนด้วย 2 ปัจจัยหลัก คือ <strong>น้ำหนักตัวรถ (แทนด้วยตัวแปร m)</strong> และ <strong>ความเร็วในการวิ่ง (แทนด้วยตัวแปร v)</strong> โดยเฉพาะเมื่อความเร็ว (v) เพิ่มขึ้น พลังงานการกระแทกจะทวีคูณขึ้นเป็นเท่าตัว ส่งผลให้ระบบช่วงล่างต้องรับภาระหนักกว่ารถเครื่องยนต์สันดาปทั่วไปถึง 20–35%
+         </p>
+ 
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
+@@ -206,7 +206,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
+               <span>รอยต่อสะพานและคอสะพานทรุด (Bridge Expansion Joints)</span>
+             </div>
+             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+-              รอยต่อเหล็กบนทางด่วน (เช่น ดอนเมืองโทลล์เวย์, ทางพิเศษเฉลิมมหานคร) และคอสะพานข้ามคลองที่ทรุดตัว สร้างแรงกระตุ้นในแนวดิ่งที่มี <strong>ความเร็วลูกสูบโช้คสูงลิ่ว (Shock Velocity v &gt; 300 - 500 mm/s)</strong> ภายในเวลาไม่ถึง 20 มิลลิวินาที หากโช้คอัพมีแรงหน่วงช่วงความเร็วสูงมากเกินไป แรงสะเทือนจะทะลุเข้าสู่โครงสร้างตัวถัง ทำให้ผู้โดยสารรู้สึกกระแทกหลังแอ่นและรถเสียอาการทรงตัว
++              รอยต่อเหล็กบนทางด่วน (เช่น ดอนเมืองโทลล์เวย์, ทางพิเศษเฉลิมมหานคร) และคอสะพานข้ามคลองที่ทรุดตัว สร้างแรงกระตุ้นในแนวดิ่งที่มี <strong>ความเร็วลูกสูบโช้คกระแทกขึ้นอย่างรวดเร็ว (ความเร็วการยุบตัวของแกนโช้คเกินกว่า 300 - 500 มม./วินาที)</strong> ภายในเวลาไม่ถึง 20 มิลลิวินาที หากโช้คอัพมีแรงหน่วงช่วงความเร็วสูงมากเกินไป แรงสะเทือนจะทะลุเข้าสู่โครงสร้างตัวถัง ทำให้ผู้โดยสารรู้สึกกระแทกหลังแอ่นและรถเสียอาการทรงตัว
+             </p>
+           </div>
+ 
+@@ -312,7 +312,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
+         </div>
+ 
+         <p className="text-slate-700 leading-relaxed">
+-          สาเหตุอันดับ 1 ที่ทำให้เจ้าของรถ EV บ่นว่า <strong>&quot;ช่วงล่างกระด้าง ตึงตัง หรือคอสะพานแล้วสะเทือนถึงกะโหลก&quot;</strong> ไม่ใช่เพราะสปริงแข็งเกินไป แต่เกิดจาก <strong>&quot;ระยะยุบอิสระของโช้คอัพหมดลง (Zero Free Bump Travel)&quot;</strong> จนตัวถังกดทับลงบนยางกันกระแทก (Micro-cellular Polyurethane Bump Stop) โดยตรง ซึ่งมีค่าความแข็งพุ่งสูงแบบเอกซ์โพเนนเชียล (K_bumpstop มากกว่า 30 kgf/mm)
++          สาเหตุอันดับ 1 ที่ทำให้เจ้าของรถ EV บ่นว่า <strong>&quot;ช่วงล่างกระด้าง ตึงตัง หรือคอสะพานแล้วสะเทือนถึงกะโหลก&quot;</strong> ไม่ใช่เพราะสปริงแข็งเกินไป แต่เกิดจาก <strong>&quot;ระยะยุบอิสระของโช้คอัพหมดลง (Zero Free Bump Travel)&quot;</strong> จนตัวถังกดทับลงบนยางกันกระแทก (Micro-cellular Polyurethane Bump Stop) โดยตรง ซึ่งตัวยางกันกระแทกนี้มีความแข็งสูงมาก เกินกว่า 30 กก./มม. ยิ่งยุบตัวยิ่งแข็งขึ้นอย่างก้าวกระโดด
+         </p>
+ 
+         {/* SVG Diagram Container */}
+diff --git a/src/app/(storefront)/articles/page.tsx b/src/app/(storefront)/articles/page.tsx
+index e42617d..91264f0 100644
+--- a/src/app/(storefront)/articles/page.tsx
++++ b/src/app/(storefront)/articles/page.tsx
+@@ -519,12 +519,12 @@ const ALL_ARTICLES: ArticleItem[] = [
+     rating: 9.7,
+     ratingText: 'OptimumG Damper Science',
+     priceRange: 'คู่มือเชิงลึก',
+-    performanceText: 'Damping Ratio ζ & F-V Curve',
++    performanceText: 'Damping Ratio & F-V Curve',
+     highlights: [
+       'Low-speed Damping (0-2 in/s Body Roll Control)',
+       'High-speed Damping (>6 in/s Road Imperfections)',
+       'Digressive Valve Profiles สำหรับถนนจริง',
+-      'Critical Damping Ratio ζ = 0.65 - 0.70'
++      'อัตราส่วนความหน่วง Damping Ratio 0.65 - 0.70'
+     ],
+     featured: false,
+     brand: 'OPTIMUMG DAMPER LAB',
+diff --git a/src/app/(storefront)/articles/shock-absorber-types-monotube-twintube-air-ev/page.tsx b/src/app/(storefront)/articles/shock-absorber-types-monotube-twintube-air-ev/page.tsx
+index 0da9cd7..0d05e0b 100644
+--- a/src/app/(storefront)/articles/shock-absorber-types-monotube-twintube-air-ev/page.tsx
++++ b/src/app/(storefront)/articles/shock-absorber-types-monotube-twintube-air-ev/page.tsx
+@@ -480,7 +480,7 @@ export default function ShockAbsorberTypesGuidePage() {
+                 3. Dual-Chamber Air Suspension
+               </h3>
+               <p className="text-xs text-slate-600 leading-relaxed">
+-                ถุงลมที่มี 2 ห้องปริมาตรแยกกัน ควบคุมด้วยโซลินอยด์วาล์ว สามารถตัดต่อห้องลมเพื่อเปลี่ยนค่าสปริงเรท (K<sub>air</sub>) ได้ในเสี้ยววินาที พร้อมปรับความสูงตัวรถ &plusmn;50 มม. เพื่อลุยน้ำท่วมหรือลดแรงต้านอากาศที่ความเร็วสูง
++                ถุงลมที่มี 2 ห้องปริมาตรแยกกัน ควบคุมด้วยโซลินอยด์วาล์ว สามารถตัดต่อห้องลมเพื่อเปลี่ยนค่าสปริงเรท (ความแข็งของถุงลม) ได้ในเสี้ยววินาที พร้อมปรับความสูงตัวรถ &plusmn;50 มม. เพื่อลุยน้ำท่วมหรือลดแรงต้านอากาศที่ความเร็วสูง
+               </p>
+               <div className="text-xs font-bold text-slate-500 pt-2 border-t border-slate-100">
+                 พบใน: Zeekr 7X, Zeekr 009, Porsche Taycan

@@ -1,3 +1,4 @@
+import MobileMenu from "@/components/MobileMenu";
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -41,8 +42,10 @@ export default function StorefrontLayout({
       {/* Main Storefront Header */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-200/90 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
+          {/* Mobile Menu & Logo */}
+          <div className="flex items-center gap-1 sm:gap-2">
+            <MobileMenu />
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
             {/* Mobile Logo */}
             <div className="md:hidden relative w-28 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image
@@ -67,6 +70,7 @@ export default function StorefrontLayout({
               />
             </div>
           </Link>
+          </div>
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
