@@ -109,7 +109,7 @@ export default function StorefrontLayout({
 
             {/* Facebook / Line Link */}
             <a
-              href="https://facebook.com"
+              href="https://m.me/evselects"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200 text-xs font-semibold px-3 py-2 rounded-lg transition-all"
@@ -183,7 +183,7 @@ export default function StorefrontLayout({
                   </a>
                 </li>
                 <li>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
+                  <a href="https://m.me/evselects" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
                     <MessageCircle className="w-3.5 h-3.5 text-blue-400" />
                     <span>Facebook Page & Marketplace</span>
                   </a>

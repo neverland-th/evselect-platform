@@ -537,7 +537,7 @@ export default function ShockAbsorberTypesGuidePage() {
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 <strong>แนะนำ:</strong> ชุดสตรัทปรับเกลียว <strong>Monotube พร้อม Digressive Valving</strong> ปรับแข็ง-อ่อนได้ 16–32 ระดับ ช่วยหยุดอาการดีดเด้งของท้ายรถและเพิ่มความมั่นใจในโค้งความเร็วสูง
               </p>
-              <Link href="/products" className="text-xs font-bold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1">
+              <Link href="/" className="text-xs font-bold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1">
                 ดูโช้คอัพ Monotube ตรงรุ่น <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
@@ -548,7 +548,7 @@ export default function ShockAbsorberTypesGuidePage() {
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 <strong>แนะนำ:</strong> โช้คอัพ <strong>Inverted Monotube (คู่หน้า) + Monotube Sub-tank (คู่หลัง)</strong> เสริมความทนทานต่อแรงกระแทกคอสะพาน และซับแรงกระเทือนเบาะแถวสองอย่างนุ่มนวล
               </p>
-              <Link href="/products" className="text-xs font-bold text-sky-700 hover:text-sky-800 inline-flex items-center gap-1">
+              <Link href="/" className="text-xs font-bold text-sky-700 hover:text-sky-800 inline-flex items-center gap-1">
                 ดูชุดอัปเกรดช่วงล่าง SUV <ArrowRight className="w-3 h-3" />
               </Link>
             </div>

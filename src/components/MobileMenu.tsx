@@ -180,7 +180,7 @@ export default function MobileMenu() {
                 Shopee Thailand
               </a>
               <a
-                href="https://facebook.com"
+                href="https://m.me/evselects"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-blue-600 hover:bg-blue-50 transition-colors text-sm font-medium"

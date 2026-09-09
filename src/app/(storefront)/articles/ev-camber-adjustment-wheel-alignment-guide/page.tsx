@@ -566,7 +566,7 @@ export default function EVCamberAdjustmentGuidePage() {
               <p className="text-xs text-slate-600 mb-3">
                 ปีกนกบนหน้าปรับแคมเบอร์และแคสเตอร์ได้ ผลิตจากอลูมิเนียมเกรดอากาศยาน 6061-T6 พร้อมบูชโพลียูรีเทนทนแรงบิดสูง
               </p>
-              <Link href="/products" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
+              <Link href="/" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
                 ดูปีกนกปรับแคมเบอร์ตรงรุ่น <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -579,7 +579,7 @@ export default function EVCamberAdjustmentGuidePage() {
               <p className="text-xs text-slate-600 mb-3">
                 อาร์มปรับแคมเบอร์และมุมโทหลัง ช่วยดึงล้อหลังให้กลับมาอยู่ในค่าสเปกมาตรฐานหลังจากโหลดเตี้ย หรือปรับเพิ่มความเกาะถนน
               </p>
-              <Link href="/products" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
+              <Link href="/" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
                 ดูชุดอาร์มหลังปรับมุมล้อ <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
