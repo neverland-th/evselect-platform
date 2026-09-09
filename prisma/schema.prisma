@@ -40,11 +40,16 @@ model Product {
   sku         String    @unique
   title       String
   description String?
-  categoryId  String
-  category    Category  @relation(fields: [categoryId], references: [id])
-  batches     Batch[]
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  categoryId         String
+  category           Category  @relation(fields: [categoryId], references: [id])
+  batches            Batch[]
+  shopeeItemId       String?
+  shopeeShopId       String?   @default("9535932")
+  shopeeStock        Int?
+  shopeePrice        Float?
+  shopeeLastSyncedAt DateTime?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
 }
 
 model Batch {

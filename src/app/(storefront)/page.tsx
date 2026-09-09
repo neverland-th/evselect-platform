@@ -100,6 +100,8 @@ export default async function StorefrontPage() {
       description: p.description,
       categoryName: p.category.name,
       shopeeId: p.category.shopeeId,
+      shopeeItemId: p.shopeeItemId,
+      shopeeShopId: p.shopeeShopId,
       wooId: p.category.wooId,
       cost: representativeCost,
       priceThb,
