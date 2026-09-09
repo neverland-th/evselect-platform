@@ -159,9 +159,9 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
               <Car className="w-4 h-4 text-lime-600" />
               <span>ระบบค้นหาอุปกรณ์เสริมตรงรุ่น EV สเปกไทย</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
               เลือกรุ่นรถของคุณ เพื่อแสดงสินค้าที่ผ่านการทดสอบตรงรุ่น 100%
-            </h3>
+            </h2>
             <p className="text-xs md:text-sm text-slate-600 mt-1">
               ระบบจะแสดงเฉพาะสินค้าที่ผ่านการทดสอบบนรถพวงมาลัยขวาในไทย ปลอดภัย ใส่ได้พอดีแน่นอน
             </p>
@@ -182,10 +182,12 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Make Dropdown */}
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+            <label htmlFor="make-select" className="block text-xs font-semibold text-slate-700 mb-1.5">
               1. ยี่ห้อรถ (Brand)
             </label>
             <select
+              id="make-select"
+              aria-label="เลือกยี่ห้อรถ (Brand)"
               value={selectedMake}
               onChange={(e) => handleMakeChange(e.target.value)}
               className="w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-300 text-slate-900 rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-lime-600 focus:ring-1 focus:ring-lime-600 transition-colors font-medium shadow-xs"
@@ -201,10 +203,12 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
           {/* Model Dropdown */}
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+            <label htmlFor="model-select" className="block text-xs font-semibold text-slate-700 mb-1.5">
               2. รุ่นรถ (Model)
             </label>
             <select
+              id="model-select"
+              aria-label="เลือกรุ่นรถ (Model)"
               value={selectedModel}
               onChange={(e) => handleModelChange(e.target.value)}
               disabled={selectedMake === 'ALL' && models.length === 0}
@@ -223,10 +227,12 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
           {/* Variant / Trim Dropdown */}
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+            <label htmlFor="variant-select" className="block text-xs font-semibold text-slate-700 mb-1.5">
               3. สเปก / รุ่นย่อยในไทย (Variant)
             </label>
             <select
+              id="variant-select"
+              aria-label="เลือกสเปก / รุ่นย่อยในไทย (Variant)"
               value={selectedVariant}
               onChange={(e) => setSelectedVariant(e.target.value)}
               disabled={variants.length === 0}
@@ -243,12 +249,14 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
           {/* Search Box */}
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+            <label htmlFor="search-input" className="block text-xs font-semibold text-slate-700 mb-1.5">
               4. ค้นหาชื่อสินค้า / SKU
             </label>
             <div className="relative">
               <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400" />
               <input
+                id="search-input"
+                aria-label="ค้นหาชื่อสินค้าหรือ SKU"
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -309,12 +317,12 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
       <div id="products">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
               <span>รายการอุปกรณ์เสริมผ่านการทดสอบตรงรุ่น</span>
               <span className="text-xs font-mono font-bold bg-lime-50 text-lime-700 border border-lime-200 px-2.5 py-0.5 rounded-full">
                 QC สเปกไทย
               </span>
-            </h2>
+            </h3>
             <p className="text-sm text-slate-600 mt-0.5">
               มั่นใจได้ 100% ใส่ได้พอดี ไม่ติดขัด พร้อมสั่งซื้อบน Shopee หรือทักแชทสั่งตรง
             </p>
@@ -377,9 +385,9 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
                   <div className="p-5 sm:p-6 pb-2">
                     {/* Title & SKU */}
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-lime-700 transition-colors leading-snug mb-1">
+                    <h4 className="text-lg font-bold text-slate-900 group-hover:text-lime-700 transition-colors leading-snug mb-1">
                       {product.title}
-                    </h3>
+                    </h4>
                     <p className="text-[11px] font-mono text-slate-400 mb-3">
                       รหัสสินค้า: {product.sku}
                     </p>

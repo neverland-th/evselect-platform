@@ -298,7 +298,7 @@ export default async function StorefrontPage() {
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <h5 className="text-xs font-bold text-slate-900">ทดสอบบนรถไทย</h5>
+                  <p className="text-xs font-bold text-slate-900">ทดสอบบนรถไทย</p>
                   <p className="text-[11px] text-slate-500">พวงมาลัยขวาใส่ได้ 100%</p>
                 </div>
               </div>
@@ -308,7 +308,7 @@ export default async function StorefrontPage() {
                   <Box className="w-5 h-5" />
                 </div>
                 <div>
-                  <h5 className="text-xs font-bold text-slate-900">คัดเกรดโรงงาน</h5>
+                  <p className="text-xs font-bold text-slate-900">คัดเกรดโรงงาน</p>
                   <p className="text-[11px] text-slate-500">ตรวจสอบ QC อย่างเข้มงวด</p>
                 </div>
               </div>
@@ -318,7 +318,7 @@ export default async function StorefrontPage() {
                   <Truck className="w-5 h-5" />
                 </div>
                 <div>
-                  <h5 className="text-xs font-bold text-slate-900">ส่งด่วนจากไทย</h5>
+                  <p className="text-xs font-bold text-slate-900">ส่งด่วนจากไทย</p>
                   <p className="text-[11px] text-slate-500">ศูนย์สต็อกกรุงเทพฯ</p>
                 </div>
               </div>
@@ -328,7 +328,7 @@ export default async function StorefrontPage() {
                   <RotateCcw className="w-5 h-5" />
                 </div>
                 <div>
-                  <h5 className="text-xs font-bold text-slate-900">รับประกัน Fitment</h5>
+                  <p className="text-xs font-bold text-slate-900">รับประกัน Fitment</p>
                   <p className="text-[11px] text-slate-500">เปลี่ยนคืนฟรีใน 7 วัน</p>
                 </div>
               </div>
@@ -413,7 +413,7 @@ export default async function StorefrontPage() {
                     1
                   </div>
                   <div>
-                    <h5 className="text-sm font-semibold text-slate-900">คัดสรรตรงจากโรงงานผู้ผลิตชั้นนำในจีน</h5>
+                    <h4 className="text-sm font-semibold text-slate-900">คัดสรรตรงจากโรงงานผู้ผลิตชั้นนำในจีน</h4>
                     <p className="text-xs text-slate-500">ตรวจสอบไฟล์แม่พิมพ์ 3D CAD และมาตรฐานวัสดุจากโรงงานผู้ผลิตโดยตรง</p>
                   </div>
                 </div>
@@ -423,7 +423,7 @@ export default async function StorefrontPage() {
                     2
                   </div>
                   <div>
-                    <h5 className="text-sm font-semibold text-slate-900">ส่งตัวอย่างด่วนสู่ศูนย์ปฏิบัติการในกรุงเทพฯ</h5>
+                    <h4 className="text-sm font-semibold text-slate-900">ส่งตัวอย่างด่วนสู่ศูนย์ปฏิบัติการในกรุงเทพฯ</h4>
                     <p className="text-xs text-slate-500">รับสินค้าตัวอย่างเข้ามาตรวจเช็กความเรียบร้อยและเนื้อวัสดุในแล็บ</p>
                   </div>
                 </div>
@@ -433,7 +433,7 @@ export default async function StorefrontPage() {
                     3
                   </div>
                   <div>
-                    <h5 className="text-sm font-semibold text-slate-900">ทดสอบติดตั้งจริงบนรถ EV สเปกไทย (Test-Fit)</h5>
+                    <h4 className="text-sm font-semibold text-slate-900">ทดสอบติดตั้งจริงบนรถ EV สเปกไทย (Test-Fit)</h4>
                     <p className="text-xs text-slate-500">ลองติดตั้งจริงบนรถพวงมาลัยขวา ตรวจสอบระยะกิ๊บล็อก ปุ่มกด ช่องสายไฟ</p>
                   </div>
                 </div>
@@ -443,7 +443,7 @@ export default async function StorefrontPage() {
                     4
                   </div>
                   <div>
-                    <h5 className="text-sm font-semibold text-slate-900">ทดสอบความทนทานต่อสภาพอากาศร้อนของไทย</h5>
+                    <h4 className="text-sm font-semibold text-slate-900">ทดสอบความทนทานต่อสภาพอากาศร้อนของไทย</h4>
                     <p className="text-xs text-slate-500">ตรวจสอบการทนความร้อน ไม่บิดงอ ไม่ละลาย และไร้กลิ่นกวนใจเมื่อจอดตากแดด</p>
                   </div>
                 </div>
@@ -453,7 +453,7 @@ export default async function StorefrontPage() {
                     5
                   </div>
                   <div>
-                    <h5 className="text-sm font-semibold text-slate-900">อนุมัติเครื่องหมาย &quot;ตรงรุ่น 100%&quot; และเปิดจำหน่าย</h5>
+                    <h4 className="text-sm font-semibold text-slate-900">อนุมัติเครื่องหมาย &quot;ตรงรุ่น 100%&quot; และเปิดจำหน่าย</h4>
                     <p className="text-xs text-slate-500">เฉพาะสินค้าที่ผ่านการทดสอบเท่านั้นที่จะได้รับสิทธิ์จำหน่าย พร้อมรับประกัน 7 วัน</p>
                   </div>
                 </div>
@@ -494,7 +494,7 @@ export default async function StorefrontPage() {
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Seal & Sealion 7</h4>
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Seal & Sealion 7</h3>
               <p className="text-[11px] text-slate-500">Dynamic, Premium, AWD Performance</p>
             </div>
           </div>
@@ -515,7 +515,7 @@ export default async function StorefrontPage() {
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Model 3 Highland</h4>
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Model 3 Highland</h3>
               <p className="text-[11px] text-slate-500">Model 3 & Model Y สเปกไทย (RHD)</p>
             </div>
           </div>
@@ -536,7 +536,7 @@ export default async function StorefrontPage() {
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Atto 3</h4>
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Atto 3</h3>
               <p className="text-[11px] text-slate-500">Standard & Extended Range</p>
             </div>
           </div>
@@ -557,7 +557,7 @@ export default async function StorefrontPage() {
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Zeekr X & 009</h4>
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Zeekr X & 009</h3>
               <p className="text-[11px] text-slate-500">Flagship Luxury Thai Trims</p>
             </div>
           </div>
@@ -578,7 +578,7 @@ export default async function StorefrontPage() {
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Deepal S05 / S07</h4>
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Deepal S05 / S07</h3>
               <p className="text-[11px] text-slate-500">Changan Thai Market Specs</p>
             </div>
           </div>
