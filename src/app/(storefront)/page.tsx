@@ -254,7 +254,7 @@ export default async function StorefrontPage() {
             <div className="inline-flex items-center gap-2 bg-white backdrop-blur-md border border-slate-200 rounded-full px-4 py-1.5 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-lime-500 animate-pulse"></span>
               <span className="text-xs font-mono font-medium text-slate-700">
-                แพลตฟอร์มอุปกรณ์แต่ง EV ตรงรุ่นสเปกไทย #1
+                แพลตฟอร์มชั้นนำ
               </span>
             </div>
 

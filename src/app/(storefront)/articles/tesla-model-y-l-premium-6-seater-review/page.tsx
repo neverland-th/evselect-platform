@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย: รถ EV ครอบครัว 6 ที่นั่ง เบาะ Captain Seats | EVSELECT',
-  description: 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย สไตล์ CarExpert เลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
+  description: 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย สไตล์ เลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
   keywords: [
     'Tesla Model Y L',
     'Tesla Model Y 6 ที่นั่ง',
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     'พรมปูพื้น Model Y L'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/tesla-model-y-l-premium-6-seater-review',
+    canonical: 'https://evselects.com/articles/tesla-model-y-l-premium-6-seater-review',
   },
   openGraph: {
     title: 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย | EVSELECT Reviews',
     description: 'ทดสอบจริง Tesla Model Y L 6 ที่นั่ง ฐานล้อยาว เบาะ Captain Seats แถวสอง มอเตอร์คู่ AWD 450 แรงม้า ตอบโจทย์ครอบครัวไทยสมบูรณ์แบบ',
-    url: 'https://evselect.com/articles/tesla-model-y-l-premium-6-seater-review',
+    url: 'https://evselects.com/articles/tesla-model-y-l-premium-6-seater-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -73,21 +73,21 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย: รถ EV ครอบครัว 6 ที่นั่ง เบาะ Captain Seats',
-  'reviewBody': 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย สไตล์ CarExpert เลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
+  'reviewBody': 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย สไตล์ เลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
   'datePublished': '2026-08-26T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'itemReviewed': {
@@ -99,7 +99,7 @@ const jsonLd = {
     },
     'model': 'Model Y L (Premium 6-Seater)',
     'vehicleConfiguration': 'Long Range Dual-Motor AWD (2+2+2)',
-    'image': 'https://evselect.com/images/reviews/tesla-model-y-l-hero.jpg'
+    'image': 'https://evselects.com/images/reviews/tesla-model-y-l-hero.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -135,7 +135,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
             <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
               <Car className="w-3.5 h-3.5 text-lime-600" />
-              CarExpert In-Depth Review
+              In-Depth Review
             </span>
             <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
               ทดสอบขับขี่จริงบนถนนไทย
@@ -726,12 +726,12 @@ export default function TeslaModelY6SeaterReviewPage() {
           </div>
         </section>
 
-        {/* SECTION 09: PROS & CONS - CAREXPERT STYLE */}
+        {/* SECTION 09: PROS & CONS - STYLE */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-              8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
+              8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
             </h2>
           </div>
 
@@ -805,11 +805,11 @@ export default function TeslaModelY6SeaterReviewPage() {
             </div>
           </div>
 
-          {/* CarExpert Takeaway Callout */}
+          {/* Takeaway Callout */}
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> CarExpert / EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 Tesla Model Y L คือคำตอบที่สมบูรณ์แบบที่สุดสำหรับครอบครัวไทยที่ต้องการรถ EV 6 ที่นั่ง เบาะ Captain Seats ในงบประมาณไม่เกิน 2 ล้านบาท

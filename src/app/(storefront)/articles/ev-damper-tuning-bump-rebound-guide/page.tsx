@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) รถ EV ตามหลัก Suspension Secrets | EVSELECT Guide',
     description: 'คู่มือวิศวกรรมการเซ็ตติ้ง Bump/Rebound, อัตราส่วนความหน่วง Damping Ratio และกราฟ F-V Curve แก้ปัญหาอาการย้วย/กระด้างในรถยนต์ไฟฟ้า',
-    url: 'https://evselect.com/articles/ev-damper-tuning-bump-rebound-guide',
+    url: 'https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article'
@@ -58,7 +58,7 @@ export default function EVDamperTuningGuidePage() {
       name: 'EVSELECT Thailand',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://evselect.com/logo.png'
+        url: 'https://evselects.com/logo.png'
       }
     },
     datePublished: '2026-08-27',

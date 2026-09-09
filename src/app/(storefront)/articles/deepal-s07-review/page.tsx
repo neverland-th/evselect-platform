@@ -35,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย | EVSELECT',
-  description: 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย สไตล์ CarExpert วิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
+  description: 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
   keywords: [
     'Changan Deepal S07',
     'รีวิว Deepal S07',
@@ -49,12 +49,12 @@ export const metadata: Metadata = {
     'อุปกรณ์เสริม Deepal S07'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/deepal-s07-review',
+    canonical: 'https://evselects.com/articles/deepal-s07-review',
   },
   openGraph: {
     title: 'รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย | EVSELECT',
     description: 'ทดสอบขับขี่จริงบนถนนเมืองไทย เจาะลึกความเงียบ NVH ความเร็วชาร์จ DC 167 kW มอเตอร์หลัง 258 แรงม้า และความคุ้มค่าของม่านบังแดดไฟฟ้าแท้จากโรงงาน',
-    url: 'https://evselect.com/articles/deepal-s07-review',
+    url: 'https://evselects.com/articles/deepal-s07-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'รีวิว Changan Deepal S07 สเปกไทย | EVSELECT',
-    description: 'เจาะลึกเอสยูวีไฟฟ้าดีไซน์ล้ำ มอเตอร์หลัง 258 แรงม้า จอ Sunflower 15.6 นิ้ว และม่านบังแดดไฟฟ้าแท้ สไตล์ CarExpert',
+    description: 'เจาะลึกเอสยูวีไฟฟ้าดีไซน์ล้ำ มอเตอร์หลัง 258 แรงม้า จอ Sunflower 15.6 นิ้ว และม่านบังแดดไฟฟ้าแท้ สไตล์ ',
     images: ['/images/reviews/deepal-s07-hero.jpg']
   }
 };
@@ -84,21 +84,21 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย',
-  'reviewBody': 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย สไตล์ CarExpert วิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
+  'reviewBody': 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'itemReviewed': {
@@ -110,7 +110,7 @@ const jsonLd = {
     },
     'model': 'Deepal S07',
     'vehicleConfiguration': 'Standard BEV / Long Range BEV',
-    'image': 'https://evselect.com/images/reviews/deepal-s07-hero.jpg'
+    'image': 'https://evselects.com/images/reviews/deepal-s07-hero.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -146,7 +146,7 @@ export default function DeepalS07ReviewPage() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
             <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
               <Car className="w-3.5 h-3.5 text-lime-600" />
-              CarExpert In-Depth Review
+              In-Depth Review
             </span>
             <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
               D-Segment Smart SUV
@@ -757,12 +757,12 @@ export default function DeepalS07ReviewPage() {
         </div>
       </section>
 
-      {/* 8. CarExpert Side-by-Side Pros & Cons */}
+      {/* 8. Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
+            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
           </h2>
         </div>
 
@@ -832,11 +832,11 @@ export default function DeepalS07ReviewPage() {
           </div>
         </div>
 
-        {/* CarExpert Takeaway Callout */}
+        {/* Takeaway Callout */}
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> CarExpert / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               หากคุณมองหา D-SUV ไฟฟ้าที่คุ้มค่าในงบ 1.1 – 1.3 ล้านบาท <strong>Deepal S07</strong> คือหนึ่งในตัวเลือกที่สมบูรณ์แบบที่สุด ม่านบังแดดไฟฟ้าและการชาร์จ DC 167 kW ตอบโจทย์การใช้งานในไทยแบบไร้ที่ติ

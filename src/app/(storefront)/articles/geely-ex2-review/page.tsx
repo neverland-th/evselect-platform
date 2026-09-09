@@ -34,7 +34,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link คุ้มค่าน่าใช้แค่ไหน? | EVSELECT',
-  description: 'เจาะลึกรีวิว Geely EX2 (Geely Xingyuan) สเปกไทย สไตล์ CarExpert ชูจุดเด่นขับหลัง RWD 116 แรงม้า ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในคลาส แบต Aegis Short Blade Frunk หน้า 70L และจอ Flyme Auto 14.6 นิ้ว',
+  description: 'เจาะลึกรีวิว Geely EX2 (Geely Xingyuan) สเปกไทย สไตล์ ชูจุดเด่นขับหลัง RWD 116 แรงม้า ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในคลาส แบต Aegis Short Blade Frunk หน้า 70L และจอ Flyme Auto 14.6 นิ้ว',
   keywords: [
     'Geely EX2',
     'รีวิว Geely EX2',
@@ -47,12 +47,12 @@ export const metadata: Metadata = {
     'อุปกรณ์เสริม Geely EX2'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/geely-ex2-review',
+    canonical: 'https://evselects.com/articles/geely-ex2-review',
   },
   openGraph: {
     title: 'รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link | EVSELECT',
     description: 'ทดสอบจริง Geely EX2 รถยนต์ไฟฟ้าคอมแพกต์สำหรับคนเมือง ขับหลัง RWD มอเตอร์ 116 แรงม้า ช่วงล่างหลัง Multi-link หนึ่งเดียวในพิกัดราคา 4 แสนบาท และระบบ Flyme Auto',
-    url: 'https://evselect.com/articles/geely-ex2-review',
+    url: 'https://evselects.com/articles/geely-ex2-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'รีวิว Geely EX2 สเปกไทย | EVSELECT',
-    description: 'เจาะลึกซิตี้คาร์ไฟฟ้าขับหลัง ช่วงล่างหลังอิสระ Multi-link และระบบ Flyme Auto สไตล์ CarExpert',
+    description: 'เจาะลึกซิตี้คาร์ไฟฟ้าขับหลัง ช่วงล่างหลังอิสระ Multi-link และระบบ Flyme Auto สไตล์ ',
     images: ['/images/reviews/geely-ex2-hero.jpg']
   }
 };
@@ -82,21 +82,21 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link คุ้มค่าน่าใช้แค่ไหน?',
-  'reviewBody': 'เจาะลึกรีวิว Geely EX2 (Geely Xingyuan) สเปกไทย สไตล์ CarExpert ชูจุดเด่นขับหลัง RWD 116 แรงม้า ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในคลาส แบต Aegis Short Blade Frunk หน้า 70L และจอ Flyme Auto 14.6 นิ้ว',
+  'reviewBody': 'เจาะลึกรีวิว Geely EX2 (Geely Xingyuan) สเปกไทย สไตล์ ชูจุดเด่นขับหลัง RWD 116 แรงม้า ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในคลาส แบต Aegis Short Blade Frunk หน้า 70L และจอ Flyme Auto 14.6 นิ้ว',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'itemReviewed': {
@@ -108,7 +108,7 @@ const jsonLd = {
     },
     'model': 'EX2',
     'vehicleConfiguration': 'EX2 Pro / EX2 Max',
-    'image': 'https://evselect.com/images/reviews/geely-ex2-hero.jpg'
+    'image': 'https://evselects.com/images/reviews/geely-ex2-hero.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -144,7 +144,7 @@ export default function GeelyEX2ReviewPage() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
             <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
               <Car className="w-3.5 h-3.5 text-lime-600" />
-              CarExpert In-Depth Review
+              In-Depth Review
             </span>
             <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
               Urban City EV
@@ -751,12 +751,12 @@ export default function GeelyEX2ReviewPage() {
         </div>
       </section>
 
-      {/* 8. CarExpert Side-by-Side Pros & Cons */}
+      {/* 8. Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
+            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
           </h2>
         </div>
 
@@ -826,11 +826,11 @@ export default function GeelyEX2ReviewPage() {
           </div>
         </div>
 
-        {/* CarExpert Takeaway Callout */}
+        {/* Takeaway Callout */}
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> CarExpert / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               ในงบประมาณ 4 แสนต้นๆ <strong>Geely EX2</strong> คือรถยนต์ไฟฟ้าสำหรับคนเมืองที่คุ้มค่าและขับขี่นุ่มนวลที่สุด แนะนำรุ่น <strong>EX2 Max</strong> เพื่อรับกล้อง 360° และระบบ ADAS ครบชุด

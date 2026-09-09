@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย | EVSELECT Engineering Guide',
     description: 'คู่มือวิศวกรรมช่วงล่างรถยนต์ไฟฟ้าสเปกไทย: รับมือรอยต่อสะพาน คอสะพานทรุด วาล์วไดเกรสซีฟ รักษาระยะ Bump Travel >45mm และตารางเซ็ตติ้งรถ EV ยอดนิยม 5 รุ่น',
-    url: 'https://evselect.com/articles/optimizing-ev-suspension-thai-roads',
+    url: 'https://evselects.com/articles/optimizing-ev-suspension-thai-roads',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',

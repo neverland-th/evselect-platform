@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard | EVSELECT',
-  description: 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย สไตล์ CarExpert เทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
+  description: 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย สไตล์ เทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
   keywords: [
     'ZEEKR 009',
     'รีวิว ZEEKR 009',
@@ -39,12 +39,12 @@ export const metadata: Metadata = {
     'อุปกรณ์เสริม Zeekr 009'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/zeekr-009-review',
+    canonical: 'https://evselects.com/articles/zeekr-009-review',
   },
   openGraph: {
     title: 'รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard | EVSELECT',
     description: 'ทดสอบขับจริงบนถนนไทย เจาะลึกความเงียบ NVH ช่วงล่างถุงลม Dual Chamber พละกำลัง 603 แรงม้า และเปรียบเทียบความคุ้มค่ากับ Toyota Alphard ละเอียดยิบ',
-    url: 'https://evselect.com/articles/zeekr-009-review',
+    url: 'https://evselects.com/articles/zeekr-009-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'รีวิว ZEEKR 009 สเปกไทย ท้าชน Toyota Alphard | EVSELECT',
-    description: 'เจาะลึกอัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ช่วงล่างถุงลมอัจฉริยะ และเบาะ Sofaro First Class สไตล์ CarExpert',
+    description: 'เจาะลึกอัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ช่วงล่างถุงลมอัจฉริยะ และเบาะ Sofaro First Class สไตล์ ',
     images: ['/images/reviews/zeekr-009-hero.jpg']
   }
 };
@@ -74,21 +74,21 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard',
-  'reviewBody': 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย สไตล์ CarExpert เทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
+  'reviewBody': 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย สไตล์ เทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
   'datePublished': '2026-08-26T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'itemReviewed': {
@@ -100,7 +100,7 @@ const jsonLd = {
     },
     'model': '009',
     'vehicleConfiguration': 'Flagship AWD / Premium AWD / Standard FWD',
-    'image': 'https://evselect.com/images/reviews/zeekr-009-hero.jpg'
+    'image': 'https://evselects.com/images/reviews/zeekr-009-hero.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -136,7 +136,7 @@ export default function Zeekr009ReviewPage() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
             <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
               <Car className="w-3.5 h-3.5 text-lime-600" />
-              CarExpert In-Depth Review
+              In-Depth Review
             </span>
             <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
               ทดสอบขับขี่จริงบนถนนเมืองไทย
@@ -896,12 +896,12 @@ export default function Zeekr009ReviewPage() {
           </div>
         </section>
 
-        {/* SECTION 09: PROS & CONS - CAREXPERT STYLE */}
+        {/* SECTION 09: PROS & CONS - STYLE */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-              8. ข้อดี & ข้อสังเกต (Pros & Cons - CarExpert Style)
+              8. ข้อดี & ข้อสังเกต (Pros & Cons - Style)
             </h2>
           </div>
 
@@ -975,11 +975,11 @@ export default function Zeekr009ReviewPage() {
             </div>
           </div>
 
-          {/* CarExpert Takeaway Callout */}
+          {/* Takeaway Callout */}
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> CarExpert / EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 หากคุณมองหารถตู้ผู้บริหารที่นุ่ม เงียบ แรง และคุ้มค่าที่สุดในไทย ZEEKR 009 คือคำตอบอันดับหนึ่งในคลาสหรูนี้ เลือกรุ่น <strong>Flagship AWD</strong> หากมีคนขับรถ หรือเลือกรุ่น <strong>Premium AWD</strong> หากขับเองกับครอบครัว

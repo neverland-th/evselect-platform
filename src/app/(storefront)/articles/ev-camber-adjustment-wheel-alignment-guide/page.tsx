@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'การตั้งมุมแคมเบอร์ (Camber) และศูนย์ล้อสำหรับรถ EV ตามหลัก OptimumG | EVSELECT Technical Guide',
     description: 'เจาะลึกฟิสิกส์การเกาะถนน: Static vs Dynamic Camber, Roll Center Kinematics และเทคนิคการตั้งศูนย์ล้อเพื่อหน้าสัมผัสยางสมบูรณ์แบบ',
-    url: 'https://evselect.com/articles/ev-camber-adjustment-wheel-alignment-guide',
+    url: 'https://evselects.com/articles/ev-camber-adjustment-wheel-alignment-guide',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article'
@@ -61,7 +61,7 @@ export default function EVCamberAdjustmentGuidePage() {
       name: 'EVSELECT Thailand',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://evselect.com/logo.png'
+        url: 'https://evselects.com/logo.png'
       }
     },
     datePublished: '2026-08-27',

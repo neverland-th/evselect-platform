@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'เจาะลึกประเภทโช้คอัพ Monotube vs Twin-tube vs Inverted สำหรับรถ EV | EVSELECT Engineering Review',
     description: 'ผ่าโครงสร้างภายใน วิเคราะห์การระบายความร้อน ปรากฏการณ์ฟองอากาศ (Aeration) และการเลือกโช้คอัพที่ทนทานต่อน้ำหนักแบตเตอรี่ EV',
-    url: 'https://evselect.com/articles/shock-absorber-types-monotube-twintube-air-ev',
+    url: 'https://evselects.com/articles/shock-absorber-types-monotube-twintube-air-ev',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article'
@@ -58,7 +58,7 @@ export default function ShockAbsorberTypesGuidePage() {
       name: 'EVSELECT Thailand',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://evselect.com/logo.png'
+        url: 'https://evselects.com/logo.png'
       }
     },
     datePublished: '2026-08-27',

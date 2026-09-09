@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'คู่มือการเลือกซื้อยาง (EV Tyres) และสตรัทปรับเกลียว (Coilovers) สำหรับรถ EV | EVSELECT Expert Guide',
     description: 'คู่มือฉบับสมบูรณ์สำหรับเจ้าของรถ EV: โหลดอินเด็กซ์ HL/XL, โฟมซับเสียง, หลักการเลือกค่าสปริงเรท, สปริง Linear vs Progressive, โช้ค 1-Way/2-Way/3-Way และตารางเปรียบเทียบแบรนด์ชั้นนำ',
-    url: 'https://evselect.com/articles/ev-tyre-and-coilover-selection-guide',
+    url: 'https://evselects.com/articles/ev-tyre-and-coilover-selection-guide',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? | EVSELECT',
     description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า: กราฟไดโน่ 0 RPM, ปรากฏการณ์ Back-EMF, หลักการถ่ายทอดแรงฉุดที่ล้อ และระบบเกียร์ทดเดี่ยว',
-    url: 'https://evselect.com/articles/ev-horsepower-vs-torque-explained',
+    url: 'https://evselects.com/articles/ev-horsepower-vs-torque-explained',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',

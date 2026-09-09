@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว Zeekr X (Flagship AWD & Standard) สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 428 แรงม้า | EVSELECT',
-  description: 'เจาะลึกรีวิว Zeekr X สเปกไทย สไตล์ CarExpert ทั้งรุ่น Standard RWD และ Flagship AWD 428 แรงม้า 0-100 ใน 3.8 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
+  description: 'เจาะลึกรีวิว Zeekr X สเปกไทย สไตล์ ทั้งรุ่น Standard RWD และ Flagship AWD 428 แรงม้า 0-100 ใน 3.8 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
   keywords: [
     'Zeekr X',
     'รีวิว Zeekr X',
@@ -37,12 +37,12 @@ export const metadata: Metadata = {
     'พรมปูพื้น Zeekr X'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/zeekr-x-review',
+    canonical: 'https://evselects.com/articles/zeekr-x-review',
   },
   openGraph: {
     title: 'รีวิว Zeekr X สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 428 แรงม้า | EVSELECT Reviews',
     description: 'ทดสอบสมรรถนะ Zeekr X สเปกไทย 428 แรงม้า อัตราเร่ง 0-100 ใน 3.8 วินาที ห้องโดยสารหรูหราวัสดุ Suede พร้อมอุปกรณ์เสริมตรงรุ่น',
-    url: 'https://evselect.com/articles/zeekr-x-review',
+    url: 'https://evselects.com/articles/zeekr-x-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -72,21 +72,21 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Zeekr X (Flagship AWD & Standard) สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์',
-  'reviewBody': 'เจาะลึกรีวิว Zeekr X สเปกไทย สไตล์ CarExpert ทั้งรุ่น Standard RWD และ Flagship AWD 428 แรงม้า 0-100 ใน 3.8 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
+  'reviewBody': 'เจาะลึกรีวิว Zeekr X สเปกไทย สไตล์ ทั้งรุ่น Standard RWD และ Flagship AWD 428 แรงม้า 0-100 ใน 3.8 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'itemReviewed': {
@@ -98,7 +98,7 @@ const jsonLd = {
     },
     'model': 'X',
     'vehicleConfiguration': 'Standard RWD / Flagship AWD',
-    'image': 'https://evselect.com/images/reviews/zeekr-x-hero.jpg'
+    'image': 'https://evselects.com/images/reviews/zeekr-x-hero.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -134,7 +134,7 @@ export default function ZeekrXReviewPage() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
             <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
               <Car className="w-3.5 h-3.5 text-lime-600" />
-              CarExpert In-Depth Review
+              In-Depth Review
             </span>
             <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
               ทดสอบขับขี่จริงบนถนนไทย
@@ -287,7 +287,7 @@ export default function ZeekrXReviewPage() {
             <strong>Zeekr (ซีเคอร์)</strong> คือแบรนด์ยานยนต์ไฟฟ้าระดับพรีเมียมในเครือ Geely Holding Group ซึ่งมีแบรนด์ยานยนต์ชั้นนำระดับโลกอย่าง Volvo, Polestar และ Lotus อยู่ในเครือเดียวกัน การเปิดตัว <strong>Zeekr X</strong> ในประเทศไทย ถือเป็นการนำเสนอตัวเลือกครอสโอเวอร์ไฟฟ้าขนาดกะทัดรัดที่ผสมผสานงานวิศวกรรมและดีไซน์จากศูนย์ออกแบบระดับโลกในเมืองโกเธนเบิร์ก ประเทศสวีเดน
           </p>
           <p>
-            Zeekr X พัฒนาขึ้นบนแพลตฟอร์ม <strong>SEA (Sustainable Experience Architecture)</strong> ซึ่งเป็นพื้นฐานเดียวกันกับ Volvo EX30 และ Smart #1 แต่ Zeekr X ถูกวางตำแหน่งให้มีความหรูหรา ใช้วัสดุห้องโดยสารเกรดพรีเมียม และมอบความกว้างขวางของพื้นที่ใช้สอยมากกว่าในระดับราคาที่จับต้องได้ง่าย
+            Zeekr X พัฒนาขึ้นบนแพลตฟอร์มชั้นนำ แต่ Zeekr X ถูกวางตำแหน่งให้มีความหรูหรา ใช้วัสดุห้องโดยสารเกรดพรีเมียม และมอบความกว้างขวางของพื้นที่ใช้สอยมากกว่าในระดับราคาที่จับต้องได้ง่าย
           </p>
           <p>
             ทุกคันที่จำหน่ายโดย <strong>Zeekr Thailand</strong> มาพร้อมการรับประกันคุณภาพตัวรถ <strong>5 ปี หรือ 150,000 กม.</strong>, รับประกันแบตเตอรี่และมอเตอร์ <strong>8 ปี หรือ 180,000 กม.</strong>, ฟรีประกันภัยชั้น 1 และฟรี Wallbox AC 22 kW พร้อมติดตั้ง
@@ -713,12 +713,12 @@ export default function ZeekrXReviewPage() {
           </div>
         </section>
 
-        {/* SECTION 09: PROS & CONS - CAREXPERT STYLE */}
+        {/* SECTION 09: PROS & CONS - STYLE */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-              8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
+              8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
             </h2>
           </div>
 
@@ -792,11 +792,11 @@ export default function ZeekrXReviewPage() {
             </div>
           </div>
 
-          {/* CarExpert Takeaway Callout */}
+          {/* Takeaway Callout */}
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> CarExpert / EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 Zeekr X คือคอมแพกต์ครอสโอเวอร์ไฟฟ้าที่คุ้มค่าที่สุดในงบ 1 ล้านบาท เลือกรุ่น <strong>Flagship AWD (1,049,000 ฿)</strong> เพื่อสัมผัสสมรรถนะ 428 แรงม้า และเบรก Akebono

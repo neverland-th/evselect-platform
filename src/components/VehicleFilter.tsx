@@ -436,7 +436,7 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                     </a>
 
                     <a
-                      href={`https://m.me?ref=${encodeURIComponent(`สอบถามสินค้า SKU: ${product.sku}`)}`}
+                      href={`https://m.me/evselects?ref=${encodeURIComponent(`สอบถามสินค้า SKU: ${product.sku}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold py-2.5 px-3 rounded-xl border border-slate-300 transition-all"

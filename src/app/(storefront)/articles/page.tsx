@@ -702,7 +702,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           className="text-sm sm:text-base md:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          รวมรีวิวรถ EV สเปกไทยฉบับเจาะลึก 12 มิติตามมาตรฐาน CarExpert ทดสอบอัตราเร่ง 0-100 กม./ชม. ระยะทางวิ่งจริง 
+          รวมรีวิวรถ EV สเปกไทยฉบับเจาะลึก 12 มิติตามมาตรฐาน ทดสอบอัตราเร่ง 0-100 กม./ชม. ระยะทางวิ่งจริง 
           การรับมือความร้อน 40°C และช่วงล่างบนถนนไทย พร้อมคำแนะนำอุปกรณ์เสริมตรงรุ่นผ่าน QC 100%
         </p>
 

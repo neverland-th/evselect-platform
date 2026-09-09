@@ -14,20 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`)
-    : process.env.VERCEL_URL
-    ? new URL(`https://${process.env.VERCEL_URL}`)
-    : new URL('http://localhost:3000'),
+  metadataBase: new URL('https://evselects.com'),
   title: 'EVSELECT | อุปกรณ์เสริมรถยนต์ไฟฟ้า คัดเกรดพรีเมียม ผ่านการทดสอบตรงรุ่น 100%',
   description: 'EVSELECT แพลตฟอร์มรวมอุปกรณ์เสริมและของแต่ง EV คัดเกรดตรงจากโรงงานชั้นนำ ผ่านการทดสอบ Fitment บนรถสเปกไทย 100% สำหรับ BYD, Tesla, Zeekr, Deepal, Geely',
   icons: {
     icon: '/logo.png',
   },
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'EVSELECT - DRIVE BETTER. SELECT SMARTER.',
     description: 'ศูนย์รวมอุปกรณ์เสริมและของแต่ง EV ตรงรุ่นสเปกไทย พร้อมบทความรีวิวเจาะลึก 12 มิติ',
-    url: 'https://evselect.com',
+    url: 'https://evselects.com',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'website',

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'เจาะลึกการเปลี่ยนผ่านจาก Hybrid สู่ Full EV: พลศาสตร์แชสซี และการกระจายน้ำหนัก | EVSELECT',
     description: 'วิเคราะห์ความแตกต่างเชิงวิศวกรรมระหว่าง HEV, PHEV และ Dedicated BEV: พลศาสตร์แชสซี, ระบบเบรก Brake-by-Wire และแรงบิด 10ms',
-    url: 'https://evselect.com/articles/hybrid-to-ev-chassis-dynamics-transition',
+    url: 'https://evselects.com/articles/hybrid-to-ev-chassis-dynamics-transition',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',

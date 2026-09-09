@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     'ม่านบังแดดรถ EV'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/ev-battery-care',
+    canonical: 'https://evselects.com/articles/ev-battery-care',
   },
   openGraph: {
     title: '5 วิธีดูแลแบตเตอรี่รถ EV ให้เสื่อมช้าลง และใช้ได้นานเกิน 10 ปี | EVSELECT',
     description: 'รวม 5 เทคนิคสำคัญในการถนอมแบตเตอรี่รถยนต์ไฟฟ้า ตั้งแต่พฤติกรรมการชาร์จ อุณหภูมิ ไปจนถึงการตั้งค่า Limit เพื่ออายุการใช้งานเกิน 10 ปี',
-    url: 'https://evselect.com/articles/ev-battery-care',
+    url: 'https://evselects.com/articles/ev-battery-care',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -67,26 +67,26 @@ const jsonLd = {
   '@type': 'Article',
   'headline': '5 วิธีดูแลแบตเตอรี่รถ EV ให้เสื่อมช้าลง และใช้ได้นานเกิน 10 ปี',
   'description': 'เรียนรู้เทคนิคการชาร์จที่ถูกต้อง การตั้งค่า Limit การชาร์จ และพฤติกรรมที่ควรหลีกเลี่ยงเพื่อยืดอายุแบตเตอรี่รถยนต์ไฟฟ้าของคุณ',
-  'image': 'https://evselect.com/images/reviews/ev-battery-hero-new.jpg',
+  'image': 'https://evselects.com/images/reviews/ev-battery-hero-new.jpg',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'mainEntityOfPage': {
     '@type': 'WebPage',
-    '@id': 'https://evselect.com/articles/ev-battery-care'
+    '@id': 'https://evselects.com/articles/ev-battery-care'
   }
 };
 

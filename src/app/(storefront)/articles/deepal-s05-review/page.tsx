@@ -35,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง Frunk หน้า 159L | EVSELECT',
-  description: 'เจาะลึกรีวิว Changan Deepal S05 สเปกไทย สไตล์ CarExpert ครบทุกนวัตกรรม กล้อง 4K Gimbal Camera บนหลังคา ไฟหน้า DLP ฉายหนัง 120 นิ้ว แบตเตอรี่ LFP ชาร์จ 3C ใน 15 นาที และช่องเก็บของ Frunk 159 ลิตร',
+  description: 'เจาะลึกรีวิว Changan Deepal S05 สเปกไทย สไตล์ ครบทุกนวัตกรรม กล้อง 4K Gimbal Camera บนหลังคา ไฟหน้า DLP ฉายหนัง 120 นิ้ว แบตเตอรี่ LFP ชาร์จ 3C ใน 15 นาที และช่องเก็บของ Frunk 159 ลิตร',
   keywords: [
     'Deepal S05',
     'รีวิว Deepal S05',
@@ -48,12 +48,12 @@ export const metadata: Metadata = {
     'อุปกรณ์เสริม Deepal S05'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/deepal-s05-review',
+    canonical: 'https://evselects.com/articles/deepal-s05-review',
   },
   openGraph: {
     title: 'รีวิว Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง Frunk หน้า 159L | EVSELECT',
     description: 'ทดสอบจริง Changan Deepal S05 เอสยูวีไฟฟ้าสำหรับสายครีเอเตอร์และแคมปิ้ง อัดแน่นด้วยกล้อง 4K บนหลังคา ไฟหน้า DLP ฉายโปรเจกเตอร์ 120 นิ้ว มอเตอร์หลัง 238 แรงม้า และชาร์จ 3C ใน 15 นาที',
-    url: 'https://evselect.com/articles/deepal-s05-review',
+    url: 'https://evselects.com/articles/deepal-s05-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'รีวิว Deepal S05 สเปกไทย | EVSELECT',
-    description: 'เจาะลึกเอสยูวีสายแคมปิ้ง กล้อง 4K Gimbal ไฟหน้าฉายหนัง และ Frunk 159 ลิตร สไตล์ CarExpert',
+    description: 'เจาะลึกเอสยูวีสายแคมปิ้ง กล้อง 4K Gimbal ไฟหน้าฉายหนัง และ Frunk 159 ลิตร สไตล์ ',
     images: ['/images/reviews/deepal-s05-hero.jpg']
   }
 };
@@ -83,21 +83,21 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง Frunk หน้า 159L',
-  'reviewBody': 'เจาะลึกรีวิว Changan Deepal S05 สเปกไทย สไตล์ CarExpert ครบทุกนวัตกรรม กล้อง 4K Gimbal Camera บนหลังคา ไฟหน้า DLP ฉายหนัง 120 นิ้ว แบตเตอรี่ LFP ชาร์จ 3C ใน 15 นาที และช่องเก็บของ Frunk 159 ลิตร',
+  'reviewBody': 'เจาะลึกรีวิว Changan Deepal S05 สเปกไทย สไตล์ ครบทุกนวัตกรรม กล้อง 4K Gimbal Camera บนหลังคา ไฟหน้า DLP ฉายหนัง 120 นิ้ว แบตเตอรี่ LFP ชาร์จ 3C ใน 15 นาที และช่องเก็บของ Frunk 159 ลิตร',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'itemReviewed': {
@@ -109,7 +109,7 @@ const jsonLd = {
     },
     'model': 'Deepal S05',
     'vehicleConfiguration': 'Smart Tech Edition / Standard BEV',
-    'image': 'https://evselect.com/images/reviews/deepal-s05-hero.jpg'
+    'image': 'https://evselects.com/images/reviews/deepal-s05-hero.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -145,7 +145,7 @@ export default function DeepalS05ReviewPage() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
             <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
               <Car className="w-3.5 h-3.5 text-lime-600" />
-              CarExpert In-Depth Review
+              In-Depth Review
             </span>
             <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
               Smart Tech &amp; Lifestyle SUV
@@ -758,12 +758,12 @@ export default function DeepalS05ReviewPage() {
         </div>
       </section>
 
-      {/* 8. CarExpert Side-by-Side Pros & Cons */}
+      {/* 8. Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
+            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
           </h2>
         </div>
 
@@ -833,11 +833,11 @@ export default function DeepalS05ReviewPage() {
           </div>
         </div>
 
-        {/* CarExpert Takeaway Callout */}
+        {/* Takeaway Callout */}
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> CarExpert / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               <strong>Deepal S05</strong> คือรถ EV ที่คุ้มค่าและสนุกที่สุดในงบ 8 แสนบาท ตอบโจทย์สายท่องเที่ยว แคมปิ้ง และคอนเทนต์ครีเอเตอร์อย่างไม่มีคู่แข่งเทียบได้

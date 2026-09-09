@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว BYD Atto 3 สเปกไทย (MY2024-2026): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน? | EVSELECT',
-  description: 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ CarExpert วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Dynamic, Premium, Extended Range) ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
+  description: 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Premium, Premium, Extended Range) ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
   keywords: [
     'BYD Atto 3',
     'รีวิว BYD Atto 3',
@@ -37,12 +37,12 @@ export const metadata: Metadata = {
     'อุปกรณ์เสริม BYD Atto 3'
   ],
   alternates: {
-    canonical: 'https://evselect.com/articles/byd-atto-3-review',
+    canonical: 'https://evselects.com/articles/byd-atto-3-review',
   },
   openGraph: {
     title: 'รีวิว BYD Atto 3 สเปกไทย: คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหนในปี 2026? | EVSELECT',
     description: 'ทดสอบขับจริงบนถนนเมืองไทย เจาะลึกความนุ่มนวล ช่วงล่าง ม่านไฟฟ้า และวิเคราะห์ความคุ้มค่าหลังปรับลดราคาพิเศษ',
-    url: 'https://evselect.com/articles/byd-atto-3-review',
+    url: 'https://evselects.com/articles/byd-atto-3-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'รีวิว BYD Atto 3 สเปกไทย สไตล์ CarExpert | EVSELECT',
+    title: 'รีวิว BYD Atto 3 สเปกไทย สไตล์ | EVSELECT',
     description: 'เจาะลึกเอสยูวีไฟฟ้ายอดนิยม ช่วงล่างนุ่ม แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
     images: ['/images/reviews/byd-atto-3-hero.jpg']
   }
@@ -71,22 +71,22 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
-  'name': 'รีวิว BYD Atto 3 สเปกไทย (Dynamic / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม',
-  'reviewBody': 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ CarExpert วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
+  'name': 'รีวิว BYD Atto 3 สเปกไทย (Premium / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม',
+  'reviewBody': 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
-    'url': 'https://evselect.com'
+    'url': 'https://evselects.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'EVSELECT Thailand',
-    'url': 'https://evselect.com',
+    'url': 'https://evselects.com',
     'logo': {
       '@type': 'ImageObject',
-      'url': 'https://evselect.com/logo-desktop.png'
+      'url': 'https://evselects.com/logo-desktop.png'
     }
   },
   'itemReviewed': {
@@ -97,8 +97,8 @@ const jsonLd = {
       'name': 'BYD'
     },
     'model': 'Atto 3',
-    'vehicleConfiguration': 'Extended Range / Premium / Dynamic',
-    'image': 'https://evselect.com/images/reviews/byd-atto-3-hero.jpg'
+    'vehicleConfiguration': 'Extended Range / Premium / Premium',
+    'image': 'https://evselects.com/images/reviews/byd-atto-3-hero.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -134,7 +134,7 @@ export default function BYDAtto3ReviewPage() {
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
             <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
               <Car className="w-3.5 h-3.5 text-lime-600" />
-              CarExpert In-Depth Review
+              In-Depth Review
             </span>
             <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
               ทดสอบขับขี่จริงบนถนนเมืองไทย
@@ -159,7 +159,7 @@ export default function BYDAtto3ReviewPage() {
           className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          รีวิว BYD Atto 3 สเปกไทย (Dynamic / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหนในปี 2026?
+          รีวิว BYD Atto 3 สเปกไทย (Premium / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหนในปี 2026?
         </h1>
 
         <p
@@ -210,7 +210,7 @@ export default function BYDAtto3ReviewPage() {
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">ราคาเริ่มต้น</div>
               <div className="text-base font-extrabold text-slate-900 mt-0.5">669,900 ฿</div>
-              <div className="text-[10px] text-slate-500">รุ่น Dynamic (MSRP)</div>
+              <div className="text-[10px] text-slate-500">รุ่น Premium (MSRP)</div>
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">พละกำลังสูงสุด</div>
@@ -318,7 +318,7 @@ export default function BYDAtto3ReviewPage() {
               <thead className="bg-slate-900 text-xs uppercase font-bold text-white border-b border-slate-800">
                 <tr>
                   <th className="py-4 px-4">รุ่นย่อย / คุณสมบัติ</th>
-                  <th className="py-4 px-3">Dynamic</th>
+                  <th className="py-4 px-3">Premium</th>
                   <th className="py-4 px-3">Premium</th>
                   <th className="py-4 px-3 text-lime-400 font-extrabold">Extended Range (ยอดนิยม)</th>
                 </tr>
@@ -384,7 +384,7 @@ export default function BYDAtto3ReviewPage() {
                     คุ้มค่างบประมาณ
                   </span>
                 </div>
-                <h3 className="text-xl font-extrabold text-slate-900 mb-2">BYD Atto 3 Dynamic</h3>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-2">BYD Atto 3 Premium</h3>
                 <div className="text-sm font-semibold text-lime-700 mb-3">669,900 ฿ (50.25 kWh / 410 km)</div>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   <strong>จุดเด่นความคุ้มค่า:</strong> ได้มอเตอร์ 201 แรงม้า ช่วงล่าง Multi-link และระบบความปลอดภัยพื้นฐานครบครันในราคาเพียง 6 แสนกลาง
@@ -692,7 +692,7 @@ export default function BYDAtto3ReviewPage() {
           </p>
           <ul>
             <li>รุ่น Extended Range 60.48 kWh (เคลม 480 กม. NEDC): วิ่งจริงที่ความเร็ว 100-110 กม./ชม. เปิดแอร์ 23°C ทำระยะทางได้ประมาณ <strong>380 - 410 กิโลเมตร</strong> ต่อการชาร์จเต็ม 100%</li>
-            <li>รุ่น Standard/Dynamic 50.25 kWh (เคลม 410 กม. NEDC): วิ่งจริงทำระยะได้ประมาณ <strong>310 - 330 กิโลเมตร</strong></li>
+            <li>รุ่น Standard/Premium 50.25 kWh (เคลม 410 กม. NEDC): วิ่งจริงทำระยะได้ประมาณ <strong>310 - 330 กิโลเมตร</strong></li>
             <li>อัตราสิ้นเปลืองเฉลี่ย: <strong>14.2 - 15.6 kWh/100km</strong> ประหยัดพลังงานมากสำหรับการใช้งานจริง</li>
           </ul>
           <p>
@@ -800,12 +800,12 @@ export default function BYDAtto3ReviewPage() {
         </div>
       </section>
 
-      {/* 8. CarExpert Side-by-Side Pros & Cons */}
+      {/* 8. Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - CarExpert Style)
+            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
           </h2>
         </div>
 
@@ -879,11 +879,11 @@ export default function BYDAtto3ReviewPage() {
           </div>
         </div>
 
-        {/* CarExpert Takeaway Callout */}
+        {/* Takeaway Callout */}
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> CarExpert / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               <strong>BYD Atto 3 Extended Range (799,900 ฿)</strong> คือรุ่นที่แนะนำให้เลือกซื้อมากที่สุด ได้แบตเตอรี่ใหญ่ วิ่งไกล 480 กม. จอหมุน 15.6 นิ้ว และออปชันครบในราคาที่จับต้องได้ง่าย
@@ -935,7 +935,7 @@ export default function BYDAtto3ReviewPage() {
 
             <div>
               <div className="flex justify-between text-sm font-semibold mb-1.5">
-                <span className="text-slate-700">สมรรถนะการขับขี่และอัตราเร่ง (Performance &amp; Dynamics)</span>
+                <span className="text-slate-700">สมรรถนะการขับขี่และอัตราเร่ง (Performance &amp; Premiums)</span>
                 <span className="text-lime-700 font-bold">8.5</span>
               </div>
               <div
