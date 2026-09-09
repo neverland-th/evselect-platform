@@ -4,14 +4,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  const { id } = await params;
   const product = await prisma.product.findUnique({
-    where: { id: params.id },
+    where: { id },
   });
 
   if (!product) {
@@ -27,8 +28,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
+  const { id } = await params;
   const product = await prisma.product.findUnique({
-    where: { id: params.id },
+    where: { id },
     include: {
       category: true,
       batches: {
@@ -100,13 +102,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <a href="#" className="flex-1 bg-orange-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-orange-600 transition-colors">
+              <a href={`https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-orange-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-orange-600 transition-colors">
                 Buy on Shopee
               </a>
-              <a href="#" className="flex-1 bg-green-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-green-600 transition-colors">
+              <a href="https://line.me/ti/p/~@evselect" target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-green-600 transition-colors">
                 Chat on LINE
               </a>
-              <a href="#" className="flex-1 bg-blue-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-blue-600 transition-colors">
+              <a href="https://m.me/evselect" target="_blank" rel="noopener noreferrer" className="flex-1 bg-blue-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-blue-600 transition-colors">
                 Messenger
               </a>
             </div>
