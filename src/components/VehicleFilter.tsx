@@ -436,7 +436,7 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
 
                   <div className="grid grid-cols-2 gap-2">
                     <a
-                      href={product.shopeeItemId ? `https://shopee.co.th/product/${product.shopeeShopId}/${product.shopeeItemId}` : `https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`}
+                      href={product.shopeeItemId ? `https://shopee.co.th/product/${product.shopeeShopId || '9535932'}/${product.shopeeItemId}` : `https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-xs"

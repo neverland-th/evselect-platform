@@ -145,14 +145,7 @@ export default function EVBatteryCareArticle() {
 
       {/* 3. Featured Image */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-14 border border-slate-200 bg-slate-100 shadow-md">
-        <Image
-          src="/images/reviews/ev-battery-hero-new.jpg"
-          alt="การชาร์จแบตเตอรี่รถยนต์ไฟฟ้า EV Battery Charging"
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, 900px"
-          className="object-cover"
-        />
+        <div className="w-full h-64 bg-slate-200 flex items-center justify-center rounded-2xl border border-slate-300 my-8"><span className="text-slate-500 font-medium">ภาพประกอบ: การชาร์จแบตเตอรี่รถยนต์ไฟฟ้า EV Battery Charging</span></div>
       </div>
 
       {/* 4. Article Body */}
@@ -235,13 +228,7 @@ export default function EVBatteryCareArticle() {
           {/* Sunroof Shade Accessory Card */}
           <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 my-6 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
             <div className="relative w-full sm:w-1/3 h-36 rounded-2xl overflow-hidden shrink-0 bg-slate-200 border border-slate-200">
-              <Image 
-                src="/images/sunroof-shade.jpg" 
-                alt="ม่านบังแดดหลังคาแก้วพาโนรามา EVSELECT" 
-                fill 
-                sizes="(max-width: 640px) 100vw, 250px"
-                className="object-cover" 
-              />
+              <div className="w-full h-64 bg-slate-200 flex items-center justify-center rounded-2xl border border-slate-300 my-8"><span className="text-slate-500 font-medium">ภาพประกอบ: ม่านบังแดดหลังคาแก้วพาโนรามา EVSELECT</span></div>
               <div className="absolute top-2.5 left-2.5 bg-lime-500 text-black text-[10px] font-black px-2 py-0.5 rounded">
                 Must-Have Item
               </div>
@@ -354,7 +341,7 @@ export default function EVBatteryCareArticle() {
               </div>
             </div>
             <div className="p-4 space-y-2">
-              <div className="text-[11px] text-lime-700 font-bold">In-Depth Review</div>
+              <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
               <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Changan Deepal S07: มอเตอร์ 258 แรงม้า ม่านบังแดดไฟฟ้าสู้แดดไทย
               </h4>
@@ -382,7 +369,7 @@ export default function EVBatteryCareArticle() {
               </div>
             </div>
             <div className="p-4 space-y-2">
-              <div className="text-[11px] text-lime-700 font-bold">In-Depth Review</div>
+              <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
               <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร
               </h4>
@@ -410,7 +397,7 @@ export default function EVBatteryCareArticle() {
               </div>
             </div>
             <div className="p-4 space-y-2">
-              <div className="text-[11px] text-lime-700 font-bold">In-Depth Review</div>
+              <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
               <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link
               </h4>

@@ -102,7 +102,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <a href={product.shopeeItemId ? `https://shopee.co.th/product/${product.shopeeShopId}/${product.shopeeItemId}` : `https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-orange-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-orange-600 transition-colors">
+              <a href={product.shopeeItemId ? `https://shopee.co.th/product/${product.shopeeShopId || '9535932'}/${product.shopeeItemId}` : `https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-orange-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-orange-600 transition-colors">
                 Buy on Shopee
               </a>
               <a href="https://line.me/ti/p/~@evselect" target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-green-600 transition-colors">
