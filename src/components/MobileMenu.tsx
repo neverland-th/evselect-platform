@@ -9,6 +9,7 @@ export default function MobileMenu() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const sheetRef = useRef<HTMLElement>(null);
   const openBtnRef = useRef<HTMLButtonElement>(null);
+  const isOpeningRef = useRef(false);
 
   useEffect(() => {
     const drawer = drawerRef.current;
@@ -16,6 +17,10 @@ export default function MobileMenu() {
     const sheet = sheetRef.current;
     const openBtn = openBtnRef.current;
     if (!drawer || !scroller || !sheet || !openBtn) return;
+    
+    if (!drawer.hasAttribute('popover')) {
+      drawer.setAttribute('popover', 'manual');
+    }
 
     const visibleThreshold = 1 / window.innerWidth;
     
@@ -25,21 +30,24 @@ export default function MobileMenu() {
     };
     
     const onDrawerClosed = () => {
-      drawer.hidePopover();
+      try { drawer.hidePopover(); } catch(e) {}
       openBtn.setAttribute('aria-expanded', 'false');
     };
 
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries.at(-1);
-        if (entry && entry.intersectionRatio < visibleThreshold) onDrawerClosed();
-        if (entry && entry.intersectionRatio === 1) onDrawerOpened();
+        if (entry && entry.intersectionRatio < visibleThreshold) {
+          if (!isOpeningRef.current) onDrawerClosed();
+        }
+        if (entry && entry.intersectionRatio === 1) {
+          onDrawerOpened();
+        }
       },
       { root: drawer, threshold: [0, visibleThreshold, 1] }
     );
     observer.observe(sheet);
 
-    // Initial state: drawer popover is closed
     return () => observer.disconnect();
   }, []);
 
@@ -48,25 +56,31 @@ export default function MobileMenu() {
     const scroller = scrollerRef.current;
     if (!drawer || !scroller) return;
     
+    isOpeningRef.current = true;
     try {
+        if (!drawer.hasAttribute('popover')) {
+            drawer.setAttribute('popover', 'manual');
+        }
         drawer.showPopover();
     } catch(e) {}
     
-    // Fallback for browsers without scroll-initial-target:
-    // When popover is first shown, it might be at scrollLeft=0.
-    // If we want it to animate in, it needs to start from closed.
-    if (scroller.scrollLeft === 0) {
-      scroller.scrollBy({ left: 100, behavior: 'instant' } as any);
-    }
+    // Jump to the closed position (right edge) so it can slide in
+    scroller.scrollTo({ left: scroller.scrollWidth, behavior: 'instant' });
 
-    // Now smooth scroll it into view
-    scroller.scrollTo({left: 0, behavior: 'smooth'});
+    // Smooth scroll to 0 (open position)
+    requestAnimationFrame(() => {
+      scroller.scrollTo({left: 0, behavior: 'smooth'});
+      // Re-enable observer closing after the animation is expected to complete
+      setTimeout(() => {
+        isOpeningRef.current = false;
+      }, 500);
+    });
   };
 
   const closeDrawer = () => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
-    scroller.scrollTo({left: scroller.offsetWidth, behavior: 'smooth'});
+    scroller.scrollTo({left: scroller.scrollWidth, behavior: 'smooth'});
   };
 
   const handleBackdropClick = (e: React.MouseEvent) => {
