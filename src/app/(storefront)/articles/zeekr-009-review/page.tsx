@@ -1142,13 +1142,12 @@ export default function Zeekr009ReviewPage() {
             className="group block bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:border-lime-500/50 hover:shadow-md transition-all"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
-              <Image
-                src="/images/reviews/zeekr-7x-hero.jpg"
-                alt="รีวิว Zeekr 7X 2026 สเปกไทย"
-                fill
-                sizes="(max-width: 640px) 100vw, 300px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Car className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                  <p className="text-[10px] font-medium text-slate-400">ภาพประกอบ: Zeekr 7X</p>
+                </div>
+              </div>
               <div className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded">
                 SUV ไฟฟ้า 800V
               </div>

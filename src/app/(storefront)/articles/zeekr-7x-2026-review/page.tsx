@@ -174,14 +174,12 @@ export default function Zeekr7XReviewPage() {
 
       {/* 3. Hero Banner Image (LCP Priority) */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
-        <Image
-          src="/images/reviews/zeekr-7x-hero.jpg"
-          alt="Zeekr 7X 2026 พรีเมียมเอสยูวีไฟฟ้า 800V สเปกไทย"
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, 900px"
-          className="object-cover group-hover:scale-105 transition-transform duration-700"
-        />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+          <div className="text-center">
+            <Car className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+            <p className="text-sm font-medium text-slate-400">ภาพประกอบ: Zeekr 7X</p>
+          </div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
           <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
@@ -469,13 +467,12 @@ export default function Zeekr7XReviewPage() {
 
           <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group">
             <div className="relative w-full aspect-video">
-              <Image
-                src="/images/reviews/zeekr-7x-exterior.jpg"
-                alt="ดีไซน์ภายนอกและไฟท้ายของ Zeekr 7X 2026 สเปกไทย"
-                fill
-                sizes="(max-width: 768px) 100vw, 850px"
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Car className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                  <p className="text-sm font-medium text-slate-400">ภาพประกอบ: ดีไซน์ภายนอก Zeekr 7X</p>
+                </div>
+              </div>
             </div>
             <figcaption className="text-center text-sm text-slate-500 mt-3 font-medium">
               มิติตัวถังยาว 4,787 มม. กว้าง 1,930 มม. ฐานล้อ 2,900 มม. พร้อมค่าสัมประสิทธิ์แรงต้านอากาศต่ำเพียง Cd 0.247
@@ -529,13 +526,12 @@ export default function Zeekr7XReviewPage() {
 
           <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group">
             <div className="relative w-full aspect-video">
-              <Image
-                src="/images/reviews/zeekr-7x-interior.jpg"
-                alt="ห้องโดยสารพรีเมียม จอ 16 นิ้ว Mini LED และพวงมาลัยขวา RHD ใน Zeekr 7X สเปกไทย"
-                fill
-                sizes="(max-width: 768px) 100vw, 850px"
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Car className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                  <p className="text-sm font-medium text-slate-400">ภาพประกอบ: ภายในห้องโดยสาร Zeekr 7X</p>
+                </div>
+              </div>
             </div>
             <figcaption className="text-center text-sm text-slate-500 mt-3 font-medium">
               ค็อกพิทพวงมาลัยขวา RHD หน้าจอกลาง 16 นิ้ว 3.5K Mini LED ขับเคลื่อนด้วยชิป Snapdragon 8295
@@ -655,13 +651,12 @@ export default function Zeekr7XReviewPage() {
 
           <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group">
             <div className="relative w-full aspect-video">
-              <Image
-                src="/images/reviews/zeekr-7x-details.jpg"
-                alt="ระบบชาร์จไฟ 800V Ultra-Fast DC และพอร์ตชาร์จ Zeekr 7X สเปกไทย"
-                fill
-                sizes="(max-width: 768px) 100vw, 850px"
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Car className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                  <p className="text-sm font-medium text-slate-400">ภาพประกอบ: รายละเอียด Zeekr 7X</p>
+                </div>
+              </div>
             </div>
             <figcaption className="text-center text-sm text-slate-500 mt-3 font-medium">
               สถาปัตยกรรม 800V SiC รองรับการชาร์จ DC สูงสุดถึง 420 kW ชาร์จ 10-80% ในเวลาเพียง 10.5 – 16 นาที
@@ -843,13 +838,12 @@ export default function Zeekr7XReviewPage() {
 
             <div className="flex flex-col lg:flex-row items-center gap-8 relative z-10">
               <div className="relative w-full lg:w-1/3 h-56 rounded-2xl overflow-hidden border border-slate-700/80 shrink-0 bg-black">
-                <Image
-                  src="/images/reviews/zeekr-7x-details.jpg"
-                  alt="อุปกรณ์เสริมตรงรุ่น Zeekr 7X EVSELECT"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 350px"
-                  className="object-cover"
-                />
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                  <div className="text-center">
+                    <Car className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                    <p className="text-sm font-medium text-slate-400">ภาพประกอบ: อุปกรณ์เสริม Zeekr 7X</p>
+                  </div>
+                </div>
                 <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
                   100% Direct Fitment
                 </div>
@@ -1160,13 +1154,12 @@ export default function Zeekr7XReviewPage() {
             className="group block bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:border-lime-500/50 hover:shadow-md transition-all"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
-              <Image
-                src="/images/reviews/tesla-model-y-l-hero.jpg"
-                alt="รีวิว Tesla Model Y L 6-Seater"
-                fill
-                sizes="(max-width: 640px) 100vw, 300px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Car className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                  <p className="text-[10px] font-medium text-slate-400">ภาพประกอบ: Tesla Model Y L</p>
+                </div>
+              </div>
               <div className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded">
                 6-Seater SUV
               </div>

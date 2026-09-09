@@ -1040,13 +1040,12 @@ export default function TeslaModel3HighlandReviewPage() {
             className="group block bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:border-lime-500/50 hover:shadow-md transition-all"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
-              <Image
-                src="/images/reviews/zeekr-7x-hero.jpg"
-                alt="รีวิว Zeekr 7X 2026"
-                fill
-                sizes="(max-width: 640px) 100vw, 300px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Car className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                  <p className="text-[10px] font-medium text-slate-400">ภาพประกอบ: Zeekr 7X</p>
+                </div>
+              </div>
               <div className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded">
                 800V SUV
               </div>
@@ -1068,13 +1067,12 @@ export default function TeslaModel3HighlandReviewPage() {
             className="group block bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:border-lime-500/50 hover:shadow-md transition-all"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
-              <Image
-                src="/images/reviews/tesla-model-y-l-hero.jpg"
-                alt="รีวิว Tesla Model Y L 6-Seater"
-                fill
-                sizes="(max-width: 640px) 100vw, 300px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
+                <div className="text-center">
+                  <Car className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                  <p className="text-[10px] font-medium text-slate-400">ภาพประกอบ: Tesla Model Y L</p>
+                </div>
+              </div>
               <div className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded">
                 6-Seater SUV
               </div>
