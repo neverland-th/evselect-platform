@@ -170,7 +170,12 @@ export default function HybridToEVChassisDynamicsPage() {
 
       {/* 4. Hero Banner Image */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
-        <div className="w-full h-64 bg-slate-200 flex items-center justify-center rounded-2xl border border-slate-300 my-8"><span className="text-slate-500 font-medium">ภาพประกอบ: การเปรียบเทียบสถาปัตยกรรมแชสซีรถยนต์ไฮบริดและรถยนต์ไฟฟ้าล้วน EVSELECT</span></div>
+        <Image
+          src="https://upload.wikimedia.org/wikipedia/commons/6/62/Volkswagen_ID.3_electric_car_chassis_DSC_0060_%2852146930872%29.jpg"
+          alt="EV Skateboard Chassis"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
           <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
