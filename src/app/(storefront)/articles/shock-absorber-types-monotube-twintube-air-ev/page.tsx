@@ -122,6 +122,22 @@ export default function ShockAbsorberTypesGuidePage() {
           ผ่าโครงสร้างภายในของ <strong>Monotube, Twin-tube, Inverted Monotube (โช้คหัวกลับ), Remote Reservoir และ Adaptive Air Suspension</strong> เพื่อหาคำตอบว่าสถาปัตยกรรมแบบไหนทนทาน ระบายความร้อน และควบคุมแชสซีรถ EV บนถนนเมืองไทยได้ดีที่สุด
         </p>
 
+        
+        {/* Hero Image */}
+        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Damper_1.jpg"
+            alt="Shock Absorber Components"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+          <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
+            <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
+              โครงสร้างภายในโช้คอัพ
+            </span>
+          </div>
+        </div>
+
         {/* Executive Comparison Summary */}
         <div className="bg-slate-50 border-l-4 border-lime-600 p-6 sm:p-7 rounded-r-2xl border-y border-r border-slate-200 shadow-xs">
           <div className="flex items-center gap-2.5 mb-3">
