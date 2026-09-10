@@ -358,9 +358,9 @@ export default function Zeekr009ReviewPage() {
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">พละกำลังสูงสุด</td>
-                  <td className="py-3.5 px-3">250 kW (335 hp / 340 PS)</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">450 kW (603 hp / 612 PS)</td>
-                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-lime-700">450 kW (603 hp / 612 PS)</td>
+                  <td className="py-3.5 px-3">250 kW (335 hp)</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">450 kW (603 hp)</td>
+                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-lime-700">450 kW (603 hp)</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">แรงบิดสูงสุด</td>
@@ -819,13 +819,13 @@ export default function Zeekr009ReviewPage() {
               <ShieldCheck className="w-5 h-5 text-lime-600 shrink-0 mt-0.5" />
               <div>
                 <div className="font-bold text-slate-900 text-sm">โครงสร้างท้ายหล่ออะลูมิเนียมชิ้นเดียว</div>
-                <div className="text-xs text-slate-600 mt-0.5">Single-Piece Integrated Die-Casting Aluminum ทนแรงกระแทกจากด้านหลังได้สูงสุด 36,450 kNm</div>
+                <div className="text-xs text-slate-600 mt-0.5">เทคโนโลยีการหล่ออะลูมิเนียมชิ้นเดียว (Single-Piece Die-Casting) ทนแรงกระแทกจากด้านหลังได้อย่างยอดเยี่ยม ช่วยปกป้องผู้โดยสารแถวที่สามให้ปลอดภัยสูงสุด</div>
               </div>
             </div>
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-start gap-3">
               <ShieldCheck className="w-5 h-5 text-lime-600 shrink-0 mt-0.5" />
               <div>
-                <div className="font-bold text-slate-900 text-sm">เสา A-Pillar เหล็กกล้า 2,000 MPa</div>
+                <div className="font-bold text-slate-900 text-sm">เสา A-Pillar เหล็กกล้าความแข็งแรงสูงพิเศษระดับเรือดำน้ำ</div>
                 <div className="text-xs text-slate-600 mt-0.5">เหล็กกล้าขึ้นรูปร้อนกำลังดึงสูงพิเศษ ป้องกันการยุบตัวของห้องโดยสารเมื่อเกิดการพลิกคว่ำ</div>
               </div>
             </div>

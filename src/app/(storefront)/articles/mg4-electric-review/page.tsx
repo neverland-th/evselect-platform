@@ -351,7 +351,10 @@ export default function MG4ElectricReviewPage() {
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">อัตราเร่ง 0-100 km/h</td>
                   <td className="py-3.5 px-3">7.7 วินาที</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">7.9 วินาที</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">
+                    7.9 วินาที
+                    <span className="block text-[10px] text-lime-800 font-normal mt-0.5">*ช้ากว่าเล็กน้อยเนื่องจากน้ำหนักแบตเตอรี่ NMC ที่เพิ่มขึ้น</span>
+                  </td>
                   <td className="py-3.5 px-3 bg-slate-50 font-bold text-slate-900">3.8 วินาที 🚀</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">

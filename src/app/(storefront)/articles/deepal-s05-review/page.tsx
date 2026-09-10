@@ -219,9 +219,9 @@ export default function DeepalS05ReviewPage() {
 
           <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-3.5">
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
-              <div className="text-[11px] text-slate-500 font-medium">ราคาจำหน่าย (คาดการณ์)</div>
+              <div className="text-[11px] text-slate-500 font-medium">ราคาเริ่มต้น</div>
               <div className="text-base font-extrabold text-slate-900 mt-0.5">799,000 ฿</div>
-              <div className="text-[10px] text-slate-500">เริ่มต้นรุ่น Standard BEV</div>
+              <div className="text-[10px] text-slate-500">รุ่น Standard BEV</div>
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500 font-medium">พละกำลังสูงสุด</div>
@@ -335,9 +335,9 @@ export default function DeepalS05ReviewPage() {
               </thead>
               <tbody className="divide-y divide-slate-100">
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">ราคาจำหน่ายในไทย (คาดการณ์)</td>
-                  <td className="py-3.5 px-3 font-semibold text-slate-900">799,000 – 849,000 ฿</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">899,000 – 949,000 ฿</td>
+                  <td className="py-3.5 px-4 font-bold text-slate-900">ราคาจำหน่าย (THB)</td>
+                  <td className="py-3.5 px-3 font-semibold text-slate-900">799,000 ฿</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">869,000 ฿</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">ความจุแบตเตอรี่ (Chemistry)</td>

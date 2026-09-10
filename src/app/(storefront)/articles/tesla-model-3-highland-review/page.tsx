@@ -214,8 +214,8 @@ export default function TeslaModel3HighlandReviewPage() {
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">พละกำลังสูงสุด</div>
-              <div className="text-base font-extrabold text-slate-900 mt-0.5">283 – 627 hp</div>
-              <div className="text-[10px] text-slate-500">แรงบิด 420 – 741 Nm</div>
+              <div className="text-base font-extrabold text-slate-900 mt-0.5">283 – 460 hp</div>
+              <div className="text-[10px] text-slate-500">แรงบิด 420 – 723 Nm</div>
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">อัตราเร่ง 0-100 km/h</div>
@@ -343,7 +343,7 @@ export default function TeslaModel3HighlandReviewPage() {
                   <td className="py-3.5 px-4 font-bold text-slate-900">พละกำลัง / แรงบิด</td>
                   <td className="py-3.5 px-3">283 hp / 420 Nm</td>
                   <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-slate-900">498 hp / 493 Nm</td>
-                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-lime-700">627 hp / 741 Nm</td>
+                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-lime-700">460 hp / 723 Nm</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">อัตราเร่ง 0-100 km/h</td>
@@ -445,9 +445,9 @@ export default function TeslaModel3HighlandReviewPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-extrabold text-white mb-2">Performance AWD</h3>
-                <div className="text-sm font-bold text-lime-400 mb-3">627 hp | 528 km (WLTP) | 0-100 ใน 3.1s</div>
+                <div className="text-sm font-bold text-lime-400 mb-3">460 hp | 528 km (WLTP) | 0-100 ใน 3.1s</div>
                 <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                  <strong>ที่สุดแห่งความแรงระดับซูเปอร์คาร์:</strong> ขุมพลัง 627 แรงม้า อัตราเร่ง 0-100 ใน 3.1 วินาที พร้อมช่วงล่าง Adaptive Damping พิเศษ, เบาะ Sport Seats โอบกระชับตัว, สปอยเลอร์หลังคาร์บอนไฟเบอร์ และล้อฟอร์จ Warp 20 นิ้ว
+                  <strong>ที่สุดแห่งความแรงระดับซูเปอร์คาร์:</strong> ขุมพลัง 460 แรงม้า อัตราเร่ง 0-100 ใน 3.1 วินาที พร้อมช่วงล่าง Adaptive Damping พิเศษ, เบาะ Sport Seats โอบกระชับตัว, สปอยเลอร์หลังคาร์บอนไฟเบอร์ และล้อฟอร์จ Warp 20 นิ้ว
                 </p>
               </div>
               <div className="border-t border-slate-800 pt-3">

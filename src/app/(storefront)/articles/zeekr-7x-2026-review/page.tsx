@@ -341,9 +341,9 @@ export default function Zeekr7XReviewPage() {
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">พละกำลัง / แรงบิด</td>
-                  <td className="py-3.5 px-3">310 kW (422 PS) / 440 Nm</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold text-slate-900">310 kW (422 PS) / 440 Nm</td>
-                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-lime-700">475 kW (646 PS) / 710 Nm</td>
+                  <td className="py-3.5 px-3">310 kW (415 hp) / 440 Nm</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold text-slate-900">310 kW (415 hp) / 440 Nm</td>
+                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-lime-700">475 kW (637 hp) / 710 Nm</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">อัตราเร่ง 0-100 km/h</td>
@@ -397,7 +397,7 @@ export default function Zeekr7XReviewPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-2">Standard RWD</h3>
-                <div className="text-sm font-semibold text-lime-700 mb-3">1,399,000 ฿ | 422 PS | 566 km</div>
+                <div className="text-sm font-semibold text-lime-700 mb-3">1,399,000 ฿ | 415 hp | 566 km</div>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   <strong>ความคุ้มค่าระดับเริ่มต้น:</strong> สถาปัตยกรรม 800V เต็มระบบ แบตเตอรี่ Golden Battery 75 kWh ชาร์จ DC ไวสุดขีด 10.5 นาที ได้ On-Board AC 22 kW และม่านหลังคาไฟฟ้าครบครัน เหมาะกับผู้ที่ต้องการ EV คุณภาพยุโรปในงบประหยัด
                 </p>
@@ -421,7 +421,7 @@ export default function Zeekr7XReviewPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-2">Long Range RWD</h3>
-                <div className="text-sm font-bold text-lime-800 mb-3">1,599,000 ฿ | 422 PS | 730 km</div>
+                <div className="text-sm font-bold text-lime-800 mb-3">1,599,000 ฿ | 415 hp | 730 km</div>
                 <p className="text-xs text-slate-700 leading-relaxed mb-4">
                   <strong>ความคุ้มค่าที่ลงตัวที่สุด (The Sweet Spot):</strong> อัปเกรดแบตเตอรี่ NMC 100 kWh วิ่งไกลที่สุดถึง 730 กม. (NEDC) ได้จอ AR-HUD 36.21 นิ้ว และระบบเสียง ZEEKR Sound 21 ลำโพง 2,160W ขับทางไกลข้ามจังหวัดโดยไม่ต้องกังวลเรื่องการชาร์จ
                 </p>
@@ -438,13 +438,13 @@ export default function Zeekr7XReviewPage() {
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Trim 03</span>
                   <span className="bg-lime-500 text-black text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                    เรือธง 646 PS
+                    เรือธง 637 hp
                   </span>
                 </div>
                 <h3 className="text-xl font-extrabold text-white mb-2">Performance AWD</h3>
-                <div className="text-sm font-bold text-lime-400 mb-3">1,799,000 ฿ | 646 PS | 635 km</div>
+                <div className="text-sm font-bold text-lime-400 mb-3">1,799,000 ฿ | 637 hp | 635 km</div>
                 <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                  <strong>ที่สุดแห่งสมรรถนะ:</strong> มอเตอร์คู่ 646 แรงม้า อัตราเร่ง 0-100 ใน 3.8 วินาที พร้อมช่วงล่างถุงลมอัจฉริยะ Dual-Chamber Air Suspension + CCD, แผงไฟ Stargate Interactive LED 93 นิ้ว และประตูไฟฟ้าอัตโนมัติ 4 บาน
+                  <strong>ที่สุดแห่งสมรรถนะ:</strong> มอเตอร์คู่ 637 แรงม้า อัตราเร่ง 0-100 ใน 3.8 วินาที พร้อมช่วงล่างถุงลมอัจฉริยะ Dual-Chamber Air Suspension + CCD, แผงไฟ Stargate Interactive LED 93 นิ้ว และประตูไฟฟ้าอัตโนมัติ 4 บาน
                 </p>
               </div>
               <div className="border-t border-slate-800 pt-3">
@@ -722,7 +722,7 @@ export default function Zeekr7XReviewPage() {
             </div>
           </div>
           <p>
-            โครงสร้างตัวถังนิรภัยใช้เหล็กกล้า Ultra-High Strength Steel ทนแรงดึงสูง <strong>2,000 MPa</strong> ผสานโครงสร้างชิ้นส่วนท้ายแบบหล่ออะลูมิเนียมชิ้นเดียว (Integrated Die-Casting Aluminum Subframe) มีความแข็งแกร่งต้านแรงบิดตัว (Torsional Rigidity) สูงถึง <strong>41,000+ Nm/degree</strong> และชุดแบตเตอรี่หุ้มเกราะกันกระแทกใต้ท้องรถผ่านมาตรฐานกันน้ำและฝุ่น <strong>IP68</strong>
+            โครงสร้างตัวถังนิรภัยใช้เหล็กกล้าความแข็งแรงสูงพิเศษระดับเรือดำน้ำ (Ultra-High Strength Steel) ผสานโครงสร้างชิ้นส่วนท้ายแบบหล่ออะลูมิเนียมชิ้นเดียว (Integrated Die-Casting Aluminum Subframe) ทำให้มีความแข็งแกร่งต้านการบิดตัวได้ในระดับเดียวกับซูเปอร์คาร์ และชุดแบตเตอรี่หุ้มเกราะกันกระแทกใต้ท้องรถผ่านมาตรฐานกันน้ำและฝุ่น <strong>IP68</strong>
           </p>
         </section>
 

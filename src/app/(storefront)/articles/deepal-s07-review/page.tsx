@@ -353,7 +353,10 @@ export default function DeepalS07ReviewPage() {
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">พละกำลังสูงสุด / แรงบิด</td>
                   <td className="py-3.5 px-3 font-semibold text-slate-900">258 hp (190 kW) / 320 Nm</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold text-slate-900">218 hp (160 kW) / 320 Nm</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold text-slate-900">
+                    218 hp (160 kW) / 320 Nm
+                    <span className="block text-[10px] text-lime-800 font-normal mt-0.5">*ลดแรงม้าลงจากรุ่น Standard เพื่อเน้นรีดระยะทางวิ่งสูงสุด (Efficiency)</span>
+                  </td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">อัตราเร่ง 0-100 km/h</td>
@@ -417,7 +420,7 @@ export default function DeepalS07ReviewPage() {
                 <h3 className="text-xl font-extrabold text-slate-900 mb-2">Deepal S07 L (Long Range)</h3>
                 <div className="text-sm font-bold text-lime-800 mb-3">แบตเตอรี่ 79.97 kWh / 560 km NEDC</div>
                 <p className="text-xs text-slate-700 leading-relaxed mb-4">
-                  <strong>ความคุ้มค่าที่ลงตัวที่สุด (The Sweet Spot):</strong> เพิ่มความจุแบตเตอรี่เป็นเกือบ 80 kWh วิ่งได้ไกล 560 km NEDC วิ่งทางไกลข้ามจังหวัดระดับ 450+ กม. จริงได้โดยไม่ต้องจอดแวะชาร์จกลางทาง
+                  <strong>ความคุ้มค่าที่ลงตัวที่สุด (The Sweet Spot):</strong> เพิ่มความจุแบตเตอรี่เป็นเกือบ 80 kWh วิ่งได้ไกล 560 km NEDC วิ่งทางไกลข้ามจังหวัดระดับ 450+ กม. จริงได้โดยไม่ต้องจอดแวะชาร์จกลางทาง (ข้อสังเกต: รุ่น Long Range จะถูกปรับลดแรงม้าลงเหลือ 218 hp เพื่อเน้นการจัดการพลังงานให้วิ่งได้ไกลที่สุด)
                 </p>
               </div>
               <div className="border-t border-lime-200 pt-3">

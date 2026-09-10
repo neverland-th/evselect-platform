@@ -357,6 +357,11 @@ export default function ZeekrXReviewPage() {
                   <td className="py-3.5 px-3 bg-lime-50/40 font-semibold">470 กิโลเมตร</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-slate-900">กำลังชาร์จ DC สูงสุด (10-80%)</td>
+                  <td className="py-3.5 px-3">150 kW (ประมาณ 28 นาที)</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold text-slate-900">150 kW (ประมาณ 28 นาที)</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">ระบบเบรกหน้า</td>
                   <td className="py-3.5 px-3">ดิสก์เบรกมาตรฐาน</td>
                   <td className="py-3.5 px-3 bg-slate-50 font-bold text-slate-900">Akebono 4-Piston สีสปอร์ต</td>

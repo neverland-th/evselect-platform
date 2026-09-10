@@ -545,7 +545,7 @@ export default function TeslaModelY6SeaterReviewPage() {
               </div>
               <div>
                 <div className="text-[11px] text-slate-400">100 – 0 km/h (ระยะเบรก)</div>
-                <div className="text-lg sm:text-xl font-black text-white">35.2 เมตร</div>
+                <div className="text-lg sm:text-xl font-black text-white">36.1 เมตร</div>
                 <div className="text-[10px] text-slate-400">กระจายแรงเบรก 4 ล้อ</div>
               </div>
             </div>

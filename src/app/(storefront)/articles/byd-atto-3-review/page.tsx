@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว BYD Atto 3 สเปกไทย (MY2024-2026): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน? | EVSELECT',
-  description: 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Premium, Premium, Extended Range) ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
+  description: 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard, Premium, Extended Range) ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
   keywords: [
     'BYD Atto 3',
     'รีวิว BYD Atto 3',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
-  'name': 'รีวิว BYD Atto 3 สเปกไทย (Premium / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม',
+  'name': 'รีวิว BYD Atto 3 สเปกไทย (Standard / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม',
   'reviewBody': 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
@@ -97,7 +97,7 @@ const jsonLd = {
       'name': 'BYD'
     },
     'model': 'Atto 3',
-    'vehicleConfiguration': 'Extended Range / Premium / Premium',
+    'vehicleConfiguration': 'Extended Range / Premium / Standard',
     'image': 'https://evselects.com/images/reviews/byd-atto-3-hero.jpg'
   },
   'reviewRating': {
@@ -159,7 +159,7 @@ export default function BYDAtto3ReviewPage() {
           className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          รีวิว BYD Atto 3 สเปกไทย (Premium / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหนในปี 2026?
+          รีวิว BYD Atto 3 สเปกไทย (Standard / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหนในปี 2026?
         </h1>
 
         <p
@@ -318,7 +318,7 @@ export default function BYDAtto3ReviewPage() {
               <thead className="bg-slate-900 text-xs uppercase font-bold text-white border-b border-slate-800">
                 <tr>
                   <th className="py-4 px-4">รุ่นย่อย / คุณสมบัติ</th>
-                  <th className="py-4 px-3">Premium</th>
+                  <th className="py-4 px-3">Standard</th>
                   <th className="py-4 px-3">Premium</th>
                   <th className="py-4 px-3 text-lime-400 font-extrabold">Extended Range (ยอดนิยม)</th>
                 </tr>
@@ -384,7 +384,7 @@ export default function BYDAtto3ReviewPage() {
                     คุ้มค่างบประมาณ
                   </span>
                 </div>
-                <h3 className="text-xl font-extrabold text-slate-900 mb-2">BYD Atto 3 Premium</h3>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-2">BYD Atto 3 Standard</h3>
                 <div className="text-sm font-semibold text-lime-700 mb-3">669,900 ฿ (50.25 kWh / 410 km)</div>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   <strong>จุดเด่นความคุ้มค่า:</strong> ได้มอเตอร์ 201 แรงม้า ช่วงล่าง Multi-link และระบบความปลอดภัยพื้นฐานครบครันในราคาเพียง 6 แสนกลาง
