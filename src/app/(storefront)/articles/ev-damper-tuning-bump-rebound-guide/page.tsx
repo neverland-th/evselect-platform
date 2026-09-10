@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowLeft,
   ArrowRight,
@@ -119,9 +120,18 @@ export default function EVDamperTuningGuidePage() {
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-          ทำไมการปรับสตรัทปรับเกลียว (Coilovers) ในรถยนต์ไฟฟ้าที่มีน้ำหนัก 2 ตัน ถึงมักจบลงด้วยอาการ <strong>&ldquo;เด้งดีดจนเวียนหัว&rdquo;</strong> หรือ <strong>&ldquo;กระด้างตึงตังจนคอนโซลสะเทือน&rdquo;</strong>? 
-          ไขรหัสลับกลศาสตร์การซับแรงสั่นสะเทือน: แยกแยะความแตกต่างระหว่างจังหวะยุบ (<strong>Bump</strong>) และจังหวะยืด (<strong>Rebound</strong>), อัตราส่วนความหน่วงที่เหมาะสม (<strong>Damping Ratio</strong>), การอ่านกราฟ <strong>Force-Velocity (F-V Curve)</strong> และตารางปรับคลิกแก้บาลานซ์อันเดอร์/โอเวอร์สเตียร์ในแต่ละช่วงของโค้ง
+          หลายคนเปลี่ยนโช้คอัพสตรัทปรับเกลียว (Coilovers) ให้กับรถ EV คันเก่ง หวังจะได้ช่วงล่างที่หนึบหนับขับสนุก แต่สุดท้ายกลับเจออาการ <strong>&ldquo;เด้งดีดจนเวียนหัว&rdquo;</strong> หรือ <strong>&ldquo;กระด้างตึงตังจนคอนโซลสะเทือน&rdquo;</strong> ซะอย่างงั้น! <br/><br/>
+          ทำไมรถยนต์ไฟฟ้าที่มีน้ำหนักกว่า 2 ตัน ถึงเซ็ตช่วงล่างยากกว่ารถน้ำมัน? บทความนี้จะพาคุณไปทำความรู้จักการปรับจูนโช้คอัพแบบง่ายๆ ตั้งแต่จังหวะยุบ (<strong>Bump</strong>) จังหวะยืด (<strong>Rebound</strong>) ไปจนถึงสูตรสำเร็จ 4 ขั้นตอนเบื้องต้นที่คุณสามารถทำเองได้ พร้อม <strong>Expert Section</strong> สำหรับผู้ที่ต้องการเจาะลึกไปถึงกราฟและกลศาสตร์ระดับวิศวกรรม
         </p>
+
+        <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group relative w-full aspect-[16/9] bg-slate-100">
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/3/37/Coilovers.jpg"
+            alt="ภาพประกอบชุดโช้คอัพและสตรัทปรับเกลียว (Coilovers)"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        </figure>
 
         {/* Key Takeaways Card */}
         <div className="bg-slate-50 border-l-4 border-lime-600 p-6 sm:p-7 rounded-r-2xl border-y border-r border-slate-200 shadow-xs">
@@ -157,78 +167,157 @@ export default function EVDamperTuningGuidePage() {
       {/* 3. Main Content Sections */}
       <div className="space-y-12">
 
-        {/* Section 1: Physics of Damping & Critical Damping Ratio */}
+        {/* Section 5: Step-by-Step Tuning Workflow for EV Owners */}
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
-              1. ฟิสิกส์การหน่วงและอัตราส่วนความหน่วงที่เหมาะสม (Damping Ratio)
+              1. ขั้นตอน 4 สเต็ปการเซ็ตติ้งโช้คอัพสำหรับผู้เริ่มต้น (เริ่มปรับเองได้ง่ายๆ)
             </h2>
           </div>
 
-          <p className="text-slate-700 leading-relaxed">
-            ระบบช่วงล่างรถยนต์สามารถจำลองทำความเข้าใจได้ง่ายๆ ผ่านระบบมวลและสปริง เมื่อรถวิ่งตกหลุม ตัวถังรถซึ่งมี <strong>น้ำหนักตัวรถ (แทนด้วยตัวแปร m)</strong> จะเริ่มสั่นกระเพื่อมขึ้นลงตาม <strong>ความถี่ธรรมชาติของการดีดตัว</strong> และจะถูกสลายแรงสั่นสะเทือนด้วยความหน่วงของโช้คอัพ
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-slate-900 text-white p-6 rounded-2xl border border-slate-800">
-              <h3 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
-                <Activity className="w-4 h-4 text-lime-400" />
-                หลักการทำงานของความถี่ธรรมชาติและอัตราส่วนความหน่วง
-              </h3>
-              <div className="space-y-3 text-xs sm:text-sm">
-                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
-                  <strong className="text-lime-400 block mb-1">• ความถี่ธรรมชาติ (Natural Frequency):</strong>
-                  ขึ้นอยู่กับความแข็งของสปริงเทียบกับน้ำหนักกดในแต่ละมุมล้อ (แทนด้วยตัวแปร m) หากสปริงแข็งเกินไปเทียบกับน้ำหนักรถ รถจะดีดถี่และกระด้าง แต่สำหรับ EV ที่มีน้ำหนัก (m) มาก สปริงต้องเฟิร์มพอดีเพื่อให้จังหวะการคืนตัวนุ่มสบาย
-                </div>
-                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
-                  <strong className="text-lime-400 block mb-1">• แรงหน่วงวิกฤต (Critical Damping):</strong>
-                  คือแรงหน่วงในอุดมคติของโช้คอัพ ที่สามารถหยุดการดีดของสปริงได้สนิทในรอบเดียวโดยไม่ปล่อยให้รถเกิดการเด้งกระเพื่อมซ้ำ
-                </div>
-                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
-                  <strong className="text-lime-400 block mb-1">• อัตราส่วนความหน่วง (Damping Ratio):</strong>
-                  สัดส่วนแรงต้านจริงของโช้คอัพ เพื่อให้รถมีความนุ่มนวลซับแรงกระแทกได้ดี ไม่แข็งตึงตังและไม่ย้วยโยน
-                </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
+                01
               </div>
+              <h4 className="font-bold text-slate-900 text-sm mb-1">หาจุด Full Stiff</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                หมุนปรับคลิกตามเข็มนาฬิกาจนสุด (ค่าแข็งสุด = คลิกที่ 0) <em>ห้ามขันอัดแรงเกินไปเพราะจะทำให้เข็มวาล์วภายในเสียหาย</em>
+              </p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
-              <h3 className="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
-                <Gauge className="w-5 h-5 text-lime-700" />
-                เกณฑ์ค่าเป้าหมายความหน่วงสำหรับรถยนต์ไฟฟ้า
-              </h3>
-              
-              <div className="space-y-2.5 text-xs text-slate-700">
-                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                  <span className="font-bold text-slate-900">ความหน่วงจังหวะยืดความเร็วต่ำ (Low-Speed Rebound Ratio):</span>
-                  <span className="font-mono font-bold text-lime-700">0.65 – 0.75</span>
-                </div>
-                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                  <span className="font-bold text-slate-900">ความหน่วงจังหวะยุบความเร็วต่ำ (Low-Speed Bump Ratio):</span>
-                  <span className="font-mono font-bold text-lime-700">0.25 – 0.35</span>
-                </div>
-                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                  <span className="font-bold text-slate-900">ความถี่ธรรมชาติสำหรับขับทั่วไปบนถนน (Street Frequency):</span>
-                  <span className="font-mono text-slate-900">1.3 – 1.6 Hz (นุ่มนวลนั่งสบาย)</span>
-                </div>
-                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
-                  <span className="font-bold text-slate-900">ความถี่ธรรมชาติสายสปอร์ตเฟิร์มกระชับ (Fast Road Frequency):</span>
-                  <span className="font-mono text-slate-900">1.7 – 2.0 Hz (กระชับคุมง่าย)</span>
-                </div>
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
+                02
               </div>
-              <p className="text-xs text-slate-500">
-                *สัดส่วนแรงหน่วง Rebound ต่อ Bump ในอุดมคติสำหรับรถ EV หนักคือประมาณ <strong>3:1 ถึง 2.5:1</strong> เพื่อปล่อยให้ล้อยุบหลบหลุมได้เร็ว แต่รั้งการดีดคืนตัวอย่างมั่นคง
+              <h4 className="font-bold text-slate-900 text-sm mb-1">ตั้งค่า Baseline กลาง</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                หมุนทวนเข็มนาฬิกาถอยหลังออกมาที่ค่ากึ่งกลาง เช่น โช้คปรับได้ 32 คลิก ให้ถอยออกมาที่ <strong>คลิกที่ 16 จากแข็งสุด</strong>
+              </p>
+            </div>
+
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
+                03
+              </div>
+              <h4 className="font-bold text-slate-900 text-sm mb-1">วิ่งทดสอบเส้นทางเดิม</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                ขับทดสอบบนเส้นทางที่มีทั้งรอยต่อสะพาน ทางตรงความเร็วสูง และโค้งต่อเนื่อง สังเกตการโยนตัวและอาการเด้งซ้ำ
+              </p>
+            </div>
+
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
+                04
+              </div>
+              <h4 className="font-bold text-slate-900 text-sm mb-1">ปรับทีละ 2 คลิก</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                ปรับเปลี่ยนค่าทีละ 1 หรือ 2 คลิกต่อครั้งเท่านั้น และจดบันทึกความเปลี่ยนแปลง ห้ามปรับคลิกหน้า-หลังพร้อมกันหลายจุด
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 2: Bump vs Rebound Mechanics & Velocity Regimes */}
+{/* Section 4: Understeer / Oversteer Damper Click Tuning Matrix */}
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
-              2. ทำความเข้าใจ Bump, Rebound และย่านความเร็วลูกสูบ (Velocity Regimes)
+              2. ตารางปรับคลิกแดมเปอร์แก้หน้าดื้อ/ท้ายปัด (ฉบับใช้งานจริง)
+            </h2>
+          </div>
+
+          <p className="text-slate-700 leading-relaxed">
+            แดมเปอร์มีผลต่อสมดุลการยึดเกาะเฉพาะช่วงที่มี <strong>การเคลื่อนไหวของน้ำหนัก (Dynamic Load Transfer)</strong> การปรับคลิกโช้คอัพต้องพิจารณาแยกตาม 3 เฟสของการเข้าโค้ง: <strong>Corner Entry (เริ่มหักเลี้ยว), Mid-Corner (จุดเอเปกซ์), และ Corner Exit (เริ่มเปิดคันเร่ง)</strong>
+          </p>
+
+          {/* Tuning Matrix Table */}
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+            <table className="w-full text-left text-sm text-slate-700 border-collapse">
+              <thead className="bg-slate-900 text-white text-xs uppercase font-bold tracking-wider">
+                <tr>
+                  <th className="p-4 border-b border-slate-800">ช่วงของการเข้าโค้ง (Corner Phase)</th>
+                  <th className="p-4 border-b border-slate-800 bg-rose-950 text-rose-300">อาการ: Understeer (หน้าดื้อ/เลี้ยวไม่เข้า)</th>
+                  <th className="p-4 border-b border-slate-800 bg-amber-950 text-amber-300">อาการ: Oversteer (ท้ายปัด/ท้ายออก)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 bg-white text-xs sm:text-sm">
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="p-4 font-bold text-slate-900 bg-slate-50/50">
+                    <div>1. Corner Entry (Turn-in &amp; Trail Braking)</div>
+                    <div className="text-xs text-slate-500 font-normal mt-0.5">ช่วงแตะเบรกและเริ่มหักพวงมาลัยเข้าโค้ง</div>
+                  </td>
+                  <td className="p-4 text-slate-800">
+                    <ul className="space-y-1 pl-0 list-none m-0">
+                      <li>• <strong>ลด Front Bump:</strong> คลายคลิกหน้าให้นุ่มลง 2–3 คลิก ให้หน้ารถยุบถ่ายน้ำหนักกดล้อหน้าได้เร็วขึ้น</li>
+                      <li>• <strong>เพิ่ม Rear Rebound:</strong> ขัน Rebound หลังให้หนืดขึ้น เพื่อรั้งท้ายไม่ให้ลอยเร็วเกินไป</li>
+                    </ul>
+                  </td>
+                  <td className="p-4 text-slate-800">
+                    <ul className="space-y-1 pl-0 list-none m-0">
+                      <li>• <strong>เพิ่ม Front Bump:</strong> ปรับ Bump หน้าแข็งขึ้น 2 คลิก ชะลออัตราการทิ่มของหน้ารถ</li>
+                      <li>• <strong>ลด Rear Rebound:</strong> คลาย Rebound หลังให้นุ่มลง เพื่อให้ล้อหลังยืดสัมผัสพื้นถนนได้เร็ว</li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="p-4 font-bold text-slate-900 bg-slate-50/50">
+                    <div>2. Mid-Corner (Apex / Steady State)</div>
+                    <div className="text-xs text-slate-500 font-normal mt-0.5">จุดกึ่งกลางโค้งที่ความเร็วคงที่</div>
+                  </td>
+                  <td className="p-4 text-slate-800">
+                    <div className="p-2.5 bg-amber-50 rounded-lg border border-amber-200 text-amber-900 text-xs">
+                      *ข้อควรจำ: ช่วง Steady-State แดมเปอร์ทำงานน้อยลง หากมีอาการดื้อโค้งหนัก ให้แก้ที่ <strong>Anti-Roll Bar หน้า (ปรับนิ่มลง)</strong> หรือ <strong>เพิ่ม Negative Camber หน้า</strong>
+                    </div>
+                  </td>
+                  <td className="p-4 text-slate-800">
+                    <div className="p-2.5 bg-amber-50 rounded-lg border border-amber-200 text-amber-900 text-xs">
+                      *แก้ที่ <strong>Anti-Roll Bar หลัง (ปรับนิ่มลง)</strong> หรือลดแรงดันลมยางหลังลง 1–2 PSI เพื่อเพิ่ม Contact Patch
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="p-4 font-bold text-slate-900 bg-slate-50/50">
+                    <div>3. Corner Exit (On-Throttle Acceleration)</div>
+                    <div className="text-xs text-slate-500 font-normal mt-0.5">ช่วงคลายพวงมาลัยและเติมคันเร่งออกจากโค้ง</div>
+                  </td>
+                  <td className="p-4 text-slate-800">
+                    <ul className="space-y-1 pl-0 list-none m-0">
+                      <li>• <strong>เพิ่ม Rear Bump:</strong> ขัน Bump หลังแข็งขึ้น เพื่อต้านไม่ให้ท้ายยุบฮวบจนล้อหน้าลอย</li>
+                      <li>• <strong>ลด Front Rebound:</strong> คลาย Rebound หน้าให้นุ่มลง ให้หน้ารถคืนตัวสัมผัสถนนได้อย่างราบรื่น</li>
+                    </ul>
+                  </td>
+                  <td className="p-4 text-slate-800">
+                    <ul className="space-y-1 pl-0 list-none m-0">
+                      <li>• <strong>ลด Rear Bump:</strong> คลาย Bump หลังให้นุ่มลง 2–3 คลิก เพื่อให้ล้อหลังยุบรับแรงบิด Instant Torque ได้นุ่มนวลขึ้น</li>
+                      <li>• <strong>เพิ่ม Front Rebound:</strong> ขัน Rebound หน้าหนืดขึ้น รั้งหน้ารถไม่ให้ยกตัวเร็วเกินไป</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        
+        {/* EXPERT SECTION DIVIDER */}
+        <div className="my-16 pt-12 border-t-2 border-slate-900 border-dashed relative">
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-6 py-1.5 rounded-full font-black text-sm tracking-wider shadow-md">
+            EXPERT SECTION : เจาะลึกฟิสิกส์ช่วงล่าง
+          </div>
+          <p className="text-center text-slate-500 text-sm mt-4 mb-8">
+            ส่วนนี้เนื้อหาจะมีความซับซ้อนระดับวิศวกรรม เหมาะสำหรับช่างปรับจูนหรือผู้ที่ต้องการทำความเข้าใจกลศาสตร์การซับแรงสั่นสะเทือนเชิงลึก
+          </p>
+        </div>
+{/* Section 2: Bump vs Rebound Mechanics & Velocity Regimes */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
+              เจาะลึก 1. กลไกเชิงลึก Bump, Rebound และย่านความเร็วลูกสูบ (Velocity Regimes)
             </h2>
           </div>
 
@@ -321,12 +410,78 @@ export default function EVDamperTuningGuidePage() {
           </div>
         </section>
 
+        {/* Section 1: Physics of Damping & Critical Damping Ratio */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
+              เจาะลึก 2. ฟิสิกส์การหน่วงและอัตราส่วนความหน่วงที่เหมาะสม (Damping Ratio)
+            </h2>
+          </div>
+
+          <p className="text-slate-700 leading-relaxed">
+            ระบบช่วงล่างรถยนต์สามารถจำลองทำความเข้าใจได้ง่ายๆ ผ่านระบบมวลและสปริง เมื่อรถวิ่งตกหลุม ตัวถังรถซึ่งมี <strong>น้ำหนักตัวรถ (แทนด้วยตัวแปร m)</strong> จะเริ่มสั่นกระเพื่อมขึ้นลงตาม <strong>ความถี่ธรรมชาติของการดีดตัว</strong> และจะถูกสลายแรงสั่นสะเทือนด้วยความหน่วงของโช้คอัพ
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-slate-900 text-white p-6 rounded-2xl border border-slate-800">
+              <h3 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
+                <Activity className="w-4 h-4 text-lime-400" />
+                หลักการทำงานของความถี่ธรรมชาติและอัตราส่วนความหน่วง
+              </h3>
+              <div className="space-y-3 text-xs sm:text-sm">
+                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
+                  <strong className="text-lime-400 block mb-1">• ความถี่ธรรมชาติ (Natural Frequency):</strong>
+                  ขึ้นอยู่กับความแข็งของสปริงเทียบกับน้ำหนักกดในแต่ละมุมล้อ (แทนด้วยตัวแปร m) หากสปริงแข็งเกินไปเทียบกับน้ำหนักรถ รถจะดีดถี่และกระด้าง แต่สำหรับ EV ที่มีน้ำหนัก (m) มาก สปริงต้องเฟิร์มพอดีเพื่อให้จังหวะการคืนตัวนุ่มสบาย
+                </div>
+                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
+                  <strong className="text-lime-400 block mb-1">• แรงหน่วงวิกฤต (Critical Damping):</strong>
+                  คือแรงหน่วงในอุดมคติของโช้คอัพ ที่สามารถหยุดการดีดของสปริงได้สนิทในรอบเดียวโดยไม่ปล่อยให้รถเกิดการเด้งกระเพื่อมซ้ำ
+                </div>
+                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-200 leading-relaxed">
+                  <strong className="text-lime-400 block mb-1">• อัตราส่วนความหน่วง (Damping Ratio):</strong>
+                  สัดส่วนแรงต้านจริงของโช้คอัพ เพื่อให้รถมีความนุ่มนวลซับแรงกระแทกได้ดี ไม่แข็งตึงตังและไม่ย้วยโยน
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
+              <h3 className="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
+                <Gauge className="w-5 h-5 text-lime-700" />
+                เกณฑ์ค่าเป้าหมายความหน่วงสำหรับรถยนต์ไฟฟ้า
+              </h3>
+              
+              <div className="space-y-2.5 text-xs text-slate-700">
+                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                  <span className="font-bold text-slate-900">ความหน่วงจังหวะยืดความเร็วต่ำ (Low-Speed Rebound Ratio):</span>
+                  <span className="font-mono font-bold text-lime-700">0.65 – 0.75</span>
+                </div>
+                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                  <span className="font-bold text-slate-900">ความหน่วงจังหวะยุบความเร็วต่ำ (Low-Speed Bump Ratio):</span>
+                  <span className="font-mono font-bold text-lime-700">0.25 – 0.35</span>
+                </div>
+                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                  <span className="font-bold text-slate-900">ความถี่ธรรมชาติสำหรับขับทั่วไปบนถนน (Street Frequency):</span>
+                  <span className="font-mono text-slate-900">1.3 – 1.6 Hz (นุ่มนวลนั่งสบาย)</span>
+                </div>
+                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                  <span className="font-bold text-slate-900">ความถี่ธรรมชาติสายสปอร์ตเฟิร์มกระชับ (Fast Road Frequency):</span>
+                  <span className="font-mono text-slate-900">1.7 – 2.0 Hz (กระชับคุมง่าย)</span>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500">
+                *สัดส่วนแรงหน่วง Rebound ต่อ Bump ในอุดมคติสำหรับรถ EV หนักคือประมาณ <strong>3:1 ถึง 2.5:1</strong> เพื่อปล่อยให้ล้อยุบหลบหลุมได้เร็ว แต่รั้งการดีดคืนตัวอย่างมั่นคง
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Section 3: Force-Velocity (F-V) Dyno Curves & Inline SVG */}
         <section className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
-              3. การอ่านกราฟ Force-Velocity (F-V Curve): Linear vs Digressive vs Progressive
+              เจาะลึก 3. การอ่านกราฟ Force-Velocity (F-V Curve)
             </h2>
           </div>
 
@@ -442,142 +597,7 @@ export default function EVDamperTuningGuidePage() {
           </div>
         </section>
 
-        {/* Section 4: Understeer / Oversteer Damper Click Tuning Matrix */}
-        <section className="space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
-              4. ตารางปรับคลิกแดมเปอร์แก้ Understeer / Oversteer ใน 3 ช่วงของโค้ง
-            </h2>
-          </div>
-
-          <p className="text-slate-700 leading-relaxed">
-            แดมเปอร์มีผลต่อสมดุลการยึดเกาะเฉพาะช่วงที่มี <strong>การเคลื่อนไหวของน้ำหนัก (Dynamic Load Transfer)</strong> การปรับคลิกโช้คอัพต้องพิจารณาแยกตาม 3 เฟสของการเข้าโค้ง: <strong>Corner Entry (เริ่มหักเลี้ยว), Mid-Corner (จุดเอเปกซ์), และ Corner Exit (เริ่มเปิดคันเร่ง)</strong>
-          </p>
-
-          {/* Tuning Matrix Table */}
-          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
-            <table className="w-full text-left text-sm text-slate-700 border-collapse">
-              <thead className="bg-slate-900 text-white text-xs uppercase font-bold tracking-wider">
-                <tr>
-                  <th className="p-4 border-b border-slate-800">ช่วงของการเข้าโค้ง (Corner Phase)</th>
-                  <th className="p-4 border-b border-slate-800 bg-rose-950 text-rose-300">อาการ: Understeer (หน้าดื้อ/เลี้ยวไม่เข้า)</th>
-                  <th className="p-4 border-b border-slate-800 bg-amber-950 text-amber-300">อาการ: Oversteer (ท้ายปัด/ท้ายออก)</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-200 bg-white text-xs sm:text-sm">
-                <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="p-4 font-bold text-slate-900 bg-slate-50/50">
-                    <div>1. Corner Entry (Turn-in &amp; Trail Braking)</div>
-                    <div className="text-xs text-slate-500 font-normal mt-0.5">ช่วงแตะเบรกและเริ่มหักพวงมาลัยเข้าโค้ง</div>
-                  </td>
-                  <td className="p-4 text-slate-800">
-                    <ul className="space-y-1 pl-0 list-none m-0">
-                      <li>• <strong>ลด Front Bump:</strong> คลายคลิกหน้าให้นุ่มลง 2–3 คลิก ให้หน้ารถยุบถ่ายน้ำหนักกดล้อหน้าได้เร็วขึ้น</li>
-                      <li>• <strong>เพิ่ม Rear Rebound:</strong> ขัน Rebound หลังให้หนืดขึ้น เพื่อรั้งท้ายไม่ให้ลอยเร็วเกินไป</li>
-                    </ul>
-                  </td>
-                  <td className="p-4 text-slate-800">
-                    <ul className="space-y-1 pl-0 list-none m-0">
-                      <li>• <strong>เพิ่ม Front Bump:</strong> ปรับ Bump หน้าแข็งขึ้น 2 คลิก ชะลออัตราการทิ่มของหน้ารถ</li>
-                      <li>• <strong>ลด Rear Rebound:</strong> คลาย Rebound หลังให้นุ่มลง เพื่อให้ล้อหลังยืดสัมผัสพื้นถนนได้เร็ว</li>
-                    </ul>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="p-4 font-bold text-slate-900 bg-slate-50/50">
-                    <div>2. Mid-Corner (Apex / Steady State)</div>
-                    <div className="text-xs text-slate-500 font-normal mt-0.5">จุดกึ่งกลางโค้งที่ความเร็วคงที่</div>
-                  </td>
-                  <td className="p-4 text-slate-800">
-                    <div className="p-2.5 bg-amber-50 rounded-lg border border-amber-200 text-amber-900 text-xs">
-                      *ข้อควรจำ: ช่วง Steady-State แดมเปอร์ทำงานน้อยลง หากมีอาการดื้อโค้งหนัก ให้แก้ที่ <strong>Anti-Roll Bar หน้า (ปรับนิ่มลง)</strong> หรือ <strong>เพิ่ม Negative Camber หน้า</strong>
-                    </div>
-                  </td>
-                  <td className="p-4 text-slate-800">
-                    <div className="p-2.5 bg-amber-50 rounded-lg border border-amber-200 text-amber-900 text-xs">
-                      *แก้ที่ <strong>Anti-Roll Bar หลัง (ปรับนิ่มลง)</strong> หรือลดแรงดันลมยางหลังลง 1–2 PSI เพื่อเพิ่ม Contact Patch
-                    </div>
-                  </td>
-                </tr>
-
-                <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="p-4 font-bold text-slate-900 bg-slate-50/50">
-                    <div>3. Corner Exit (On-Throttle Acceleration)</div>
-                    <div className="text-xs text-slate-500 font-normal mt-0.5">ช่วงคลายพวงมาลัยและเติมคันเร่งออกจากโค้ง</div>
-                  </td>
-                  <td className="p-4 text-slate-800">
-                    <ul className="space-y-1 pl-0 list-none m-0">
-                      <li>• <strong>เพิ่ม Rear Bump:</strong> ขัน Bump หลังแข็งขึ้น เพื่อต้านไม่ให้ท้ายยุบฮวบจนล้อหน้าลอย</li>
-                      <li>• <strong>ลด Front Rebound:</strong> คลาย Rebound หน้าให้นุ่มลง ให้หน้ารถคืนตัวสัมผัสถนนได้อย่างราบรื่น</li>
-                    </ul>
-                  </td>
-                  <td className="p-4 text-slate-800">
-                    <ul className="space-y-1 pl-0 list-none m-0">
-                      <li>• <strong>ลด Rear Bump:</strong> คลาย Bump หลังให้นุ่มลง 2–3 คลิก เพื่อให้ล้อหลังยุบรับแรงบิด Instant Torque ได้นุ่มนวลขึ้น</li>
-                      <li>• <strong>เพิ่ม Front Rebound:</strong> ขัน Rebound หน้าหนืดขึ้น รั้งหน้ารถไม่ให้ยกตัวเร็วเกินไป</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Section 5: Step-by-Step Tuning Workflow for EV Owners */}
-        <section className="space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
-              5. ขั้นตอน 4 สเต็ปการเซ็ตติ้งโช้คอัพสำหรับผู้เริ่มต้น (Baseline Setup Protocol)
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
-                01
               </div>
-              <h4 className="font-bold text-slate-900 text-sm mb-1">หาจุด Full Stiff</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                หมุนปรับคลิกตามเข็มนาฬิกาจนสุด (ค่าแข็งสุด = คลิกที่ 0) <em>ห้ามขันอัดแรงเกินไปเพราะจะทำให้เข็มวาล์วภายในเสียหาย</em>
-              </p>
-            </div>
-
-            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
-                02
-              </div>
-              <h4 className="font-bold text-slate-900 text-sm mb-1">ตั้งค่า Baseline กลาง</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                หมุนทวนเข็มนาฬิกาถอยหลังออกมาที่ค่ากึ่งกลาง เช่น โช้คปรับได้ 32 คลิก ให้ถอยออกมาที่ <strong>คลิกที่ 16 จากแข็งสุด</strong>
-              </p>
-            </div>
-
-            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
-                03
-              </div>
-              <h4 className="font-bold text-slate-900 text-sm mb-1">วิ่งทดสอบเส้นทางเดิม</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                ขับทดสอบบนเส้นทางที่มีทั้งรอยต่อสะพาน ทางตรงความเร็วสูง และโค้งต่อเนื่อง สังเกตการโยนตัวและอาการเด้งซ้ำ
-              </p>
-            </div>
-
-            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-lime-500 text-slate-950 font-black flex items-center justify-center text-sm mb-3">
-                04
-              </div>
-              <h4 className="font-bold text-slate-900 text-sm mb-1">ปรับทีละ 2 คลิก</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                ปรับเปลี่ยนค่าทีละ 1 หรือ 2 คลิกต่อครั้งเท่านั้น และจดบันทึกความเปลี่ยนแปลง ห้ามปรับคลิกหน้า-หลังพร้อมกันหลายจุด
-              </p>
-            </div>
-          </div>
-        </section>
-
-      </div>
 
       {/* Article Footer */}
       <footer className="mt-16 pt-8 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
