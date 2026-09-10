@@ -119,6 +119,22 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
         </p>
       </header>
 
+      
+      {/* 2.5 Hero Image */}
+      <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/67/Basic_Construction_of_Single_Wishbone_Suspension_System.jpg"
+          alt="EV Suspension Geometry"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+        <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
+          <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
+            Optimizing EV Suspension Setup
+          </span>
+        </div>
+      </div>
+
       {/* 3. Executive Verdict & Core Pillars Grid */}
       <div className="bg-slate-900 text-white border border-slate-800 p-6 md:p-8 rounded-3xl shadow-xl mb-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
