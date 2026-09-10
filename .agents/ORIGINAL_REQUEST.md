@@ -13,3 +13,27 @@ The system must output the generated posts to a local file (e.g., `posts.md` or 
 ## Acceptance Criteria
 - A sample script exists and runs without crashing.
 - Running the script produces at least one complete Facebook post in Thai, ready for manual review.
+
+## 2026-09-10T06:12:44Z
+
+Use a very large team of agents.
+Conduct a comprehensive UI/UX audit and bug-fix pass across the EVSELECT platform, focusing strictly on mobile/responsive design.
+
+Working directory: c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform
+Integrity mode: benchmark
+
+## Requirements
+
+### R1. Responsive UI/UX Audit & Fix
+Analyze the platform's layout across mobile, tablet, and desktop viewports. Identify and fix any overflow issues, overlapping elements, missing interactive targets, or broken responsive behaviors.
+
+### R2. Programmatic Verification via Playwright
+Develop automated UI tests using Playwright to verify layout integrity. The tests must capture extreme mobile widths (320px), standard tablets (768px), and desktop (1280px+).
+
+## Acceptance Criteria
+
+### Automated UI Testing
+- [ ] Playwright tests are successfully implemented and executed in the project.
+- [ ] Tests programmatically assert that there is zero horizontal scroll/overflow on mobile and tablet viewports.
+- [ ] Tests assert that the mobile navigation mechanism (hamburger menu) is visible and fully interactive on viewports < 1280px.
+- [ ] All Playwright tests pass (0 failures) after fixes are implemented.

@@ -2,13 +2,13 @@ import { Download } from 'lucide-react';
 
 export default function ExportPage() {
   return (
-    <div className="p-8 max-w-4xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Export CSVs</h1>
         <p className="text-gray-500">Generate mass-upload CSV files for your sales channels.</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow p-6 border border-gray-200 text-center">
           <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <Download className="w-8 h-8" />

@@ -34,12 +34,14 @@ export const metadata: Metadata = {
     url: 'https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
-    type: 'article'
+    type: 'article',
+    images: [{ url: '/images/articles/damper_tuning_hero.jpg' }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) สำหรับรถ EV | EVSELECT',
-    description: 'ศาสตร์แห่งการเซ็ตติ้ง Bump & Rebound และการอ่านกราฟ Dyno โช้คอัพ'
+    title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) รถ EV | EVSELECT',
+    description: 'คู่มือวิศวกรรมการเซ็ตติ้ง Bump/Rebound และกราฟ F-V Curve',
+    images: ['/images/articles/damper_tuning_hero.jpg']
   }
 };
 

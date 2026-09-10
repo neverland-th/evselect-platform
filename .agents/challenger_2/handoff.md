@@ -1,119 +1,150 @@
-# Handoff Report — Challenger 2: Adversarial Content & Structure Verification
-
-**Verdict**: **APPROVE**  
-**Date**: 2026-08-25T04:26:30+07:00  
-**Target Milestone**: M5 (Build Verification, Challenger Testing & Audit)  
-**Assigned Scope**: Adversarial content, structure, Thai depth, and asset validation across all 8 EV review pages and the articles index page.
-
----
+# Handoff Report: Challenger 2 — Adversarial Mobile Ergonomics & Focus Trap Verification
 
 ## 1. Observation
 
-### Target Files Audited:
-1. `src/app/(storefront)/articles/byd-seal-review/page.tsx` (589 lines, 47,876 bytes)
-2. `src/app/(storefront)/articles/tesla-model-3-highland-review/page.tsx` (582 lines, 46,230 bytes)
-3. `src/app/(storefront)/articles/byd-atto-3-review/page.tsx` (580 lines, 45,910 bytes)
-4. `src/app/(storefront)/articles/zeekr-x-review/page.tsx` (592 lines, 47,120 bytes)
-5. `src/app/(storefront)/articles/deepal-s07-review/page.tsx` (788 lines, 44,195 bytes, 7,075 Thai chars)
-6. `src/app/(storefront)/articles/mg4-electric-review/page.tsx` (791 lines, 43,763 bytes, 6,468 Thai chars)
-7. `src/app/(storefront)/articles/deepal-s05-review/page.tsx` (790 lines, 42,940 bytes, 5,920 Thai chars)
-8. `src/app/(storefront)/articles/geely-ex2-review/page.tsx` (779 lines, 42,615 bytes, 6,287 Thai chars)
-9. `src/app/(storefront)/articles/page.tsx` (740 lines, 41,116 bytes)
+### 1.1 Direct Test Execution Commands & Results
+The adversarial verification suite was executed via Playwright against the local Next.js instance across all 6 project viewports (`extreme-mobile-320`, `ios-mobile-390`, `tablet-portrait-768`, `tablet-landscape-1024`, `desktop-xl-1280`, `desktop-wide-1440`):
 
-### Empirical Test Runs & Commands Executed:
-
-#### A. Comprehensive Automated Review Test Suite (`node scripts/verify_ev_reviews.mjs`):
+**Command:**
+```bash
+npx playwright test tests/e2e/adversarial-mobile-ergonomics.spec.ts --workers=2
 ```
-======================================================================
-EVSELECT ADVERSARIAL CONTENT & STRUCTURE VERIFICATION HARNESS
-======================================================================
-...
-======================================================================
-SUMMARY: Total: 172, Passed: 172, Failed: 0
-======================================================================
-ALL 8 EV REVIEWS EMPIRICALLY VERIFIED AND APPROVED!
+
+**Overall Test Suite Output:**
 ```
-- Total test assertions: **172 passed, 0 failed**.
-- Placeholders check: **0 occurrences** of `lorem`, `ipsum`, `dolor`, `placeholder`, `dummy`, `todo`, `tbd`, `xxx`, `sample text`, `coming soon` across all review files.
-
-#### B. Section Depth & Content Audit (`node scripts/test_deep_sections.mjs`):
-- All 8 reviews contain verified, in-depth sections covering:
-  1. Pricing table with realistic Thai Baht (`฿` / `บาท`) prices per trim.
-  2. Powertrain specs (motors, power in `hp`/`kW`, torque in `Nm`, battery capacity in `kWh`).
-  3. 0-100 km/h acceleration testing figures.
-  4. Thai road condition ride testing (suspension behavior over potholes, concrete seams, speed bumps, NVH at 120 km/h).
-  5. Charging speeds (DC Fast Charging max kW, 10/30-80% times, AC Home Charging, and V2L).
-  6. Active Safety & ADAS L2/L2+ systems (ACC Stop & Go, Lane Centering, 360°/540° cameras, AEB, Airbags).
-  7. EVSELECT contextual fitment recommendation card (direct link to vehicle accessories with 3D scan guarantee).
-  8. Pros & Cons (จุดเด่น & ข้อสังเกต side-by-side cards with 4-5 bullet points each).
-  9. EVSELECT Verdict Scorecard with multi-category breakdown and weighted rating out of 10.
-
-#### C. Image Asset Integrity Test (`node scripts/test_images_integrity.mjs`):
-- All 36+ image paths referenced in review pages (`/images/reviews/*-hero.jpg`, `*-exterior.jpg`, `*-interior.jpg`, `*-details.jpg`, and accessory images) exist on disk in `public/images/` and are non-empty with valid file sizes ranging from 31.2 KB to 841.5 KB.
-
-#### D. Production Build Execution (`npm run build`):
+42 passed, 9 failed, 45 skipped (total 96 test assertions across 6 viewport profiles)
 ```
-▲ Next.js 16.3.2 (Turbopack)
-✓ Compiled successfully in 651ms
-  Running TypeScript ...
-  Finished TypeScript in 1254ms ...
-  Generating static pages using 19 workers (20/20) in 585ms
 
-Route (app)
-├ ○ /articles
-├ ○ /articles/byd-atto-3-review
-├ ○ /articles/byd-seal-review
-├ ○ /articles/deepal-s05-review
-├ ○ /articles/deepal-s07-review
-├ ○ /articles/ev-battery-care
-├ ○ /articles/geely-ex2-review
-├ ○ /articles/mg4-electric-review
-├ ○ /articles/tesla-model-3-highland-review
-├ ○ /articles/zeekr-x-review
+### 1.2 Verification Matrix Across All 5 Directives
+
+| # | Directive / Test Dimension | Target Component | Observed Value / Behavior | Status |
+|---|----------------------------|-------------------|---------------------------|--------|
+| 1.1 | Closed Drawer Inertness | `nav[aria-label="เมนูหลัก"]` | 40 sequential `Tab` key presses never enter drawer links (`inert` and `invisible` active). | **PASS** |
+| 1.2 | Drawer Initial Focus | `button[aria-label="ปิดเมนู"]` | Focus immediately lands on close button upon opening drawer. | **PASS** |
+| 1.3 | Forward Focus Trapping | Drawer elements | 25+ consecutive `Tab` presses cycle strictly within drawer and wrap back to close button. | **PASS** |
+| 1.4 | Backward Shift+Tab Trapping | Drawer elements | `Shift+Tab` from close button wraps to last link (`/privacy`) and cycles backward strictly. | **PASS** |
+| 1.5 | Escape Focus Restoration | `button[aria-label="เปิดเมนู"]` | Pressing `Escape` closes drawer and restores focus directly to hamburger button. | **PASS** |
+| 1.6 | Close Button Focus Restoration | `button[aria-label="เปิดเมนู"]` | Clicking close button hides drawer and restores focus directly to hamburger button. | **PASS** |
+| 2.1 | Body Scroll Lock State | `document.body.style.overflow` | Verified `overflow === "hidden"` when open, restored to `""` when closed. | **PASS** |
+| 3.1 | Hamburger Touch Target | `button[aria-label="เปิดเมนู"]` | Bounding box measured: `44.0 × 44.0 px`. | **PASS** |
+| 3.2 | Close Button Touch Target | `button[aria-label="ปิดเมนู"]` | Bounding box measured: `44.0 × 44.0 px`. | **PASS** |
+| 3.3 | Drawer Nav Links Target | `nav[aria-label="เมนูหลัก"] a` | Bounding box measured: `height = 44.0 px` across all 6+ links. | **PASS** |
+| 3.4 | Footer Contact Links Target | `footer a` in `(storefront)/layout.tsx` | Bounding box measured: `height = 32.0 px` (Requirement: `>= 40 px`). | **FAIL** |
+| 3.5 | Header Action Buttons Target | `header .flex a/button` in `(storefront)/layout.tsx` | Bounding box measured: `height = 34.0 px` (Requirement: `>= 40 px` / `>= 36 px`). | **FAIL** |
+| 4.1 | 320px Drawer Responsive Width | `nav[aria-label="เมนูหลัก"]` | Bounding box measured: `width = 256.0 px` (`min(20rem, 80vw)`). Remaining backdrop: `64.0 px`. | **PASS** |
+| 4.2 | 320px Comparison Table Swipe | Review comparison tables | `overflow-x-auto` regions swipe smoothly (`scrollLeft` > 150px) with 0px root document overflow. | **PASS** |
+| 4.3 | 320px Text Clipping & Overflow | Headings & cards on 320px | All headings and card elements fit inside 320px viewport without clipping or overlap. | **PASS** |
+
+### 1.3 Verbatim Error Traces for Failed Assertions
+
+#### Failure 1: Footer Contact Links Touch Target Undersized (32px vs >= 40px)
 ```
-Result: All 8 review pages and the main articles index prerendered cleanly as static routes with zero TypeScript or build errors.
+Error: Footer link "ร้านค้าทางการบน Shopee Thailand" height (32px) must be >= 40px
+
+expect(received).toBeGreaterThanOrEqual(expected)
+Expected: >= 39.5
+Received:    32
+
+  309 |             box.height,
+  310 |             `Footer link "${text?.trim()}" height (${box.height}px) must be >= 40px`
+> 311 |           ).toBeGreaterThanOrEqual(39.5);
+```
+**Occurrences:** Failed on `extreme-mobile-320`, `ios-mobile-390`, `tablet-landscape-1024`, `desktop-xl-1280`, `desktop-wide-1440`.
+
+#### Failure 2: Header Mobile Action Buttons Undersized (34px vs >= 36px/40px)
+```
+Error: Header action "สอบถามทาง LINE / FBแชท" height (34px) is below minimum 36px/40px touch ergonomic target
+
+expect(received).toBeGreaterThanOrEqual(expected)
+Expected: >= 36
+Received:    34
+
+  333 |             box.height,
+  334 |             `Header action "${text?.trim()}" height (${box.height}px) is below minimum 36px/40px touch ergonomic target`
+> 335 |           ).toBeGreaterThanOrEqual(36);
+```
+**Occurrences:** Failed on `extreme-mobile-320`, `ios-mobile-390`, `tablet-portrait-768`, `tablet-landscape-1024`.
 
 ---
 
 ## 2. Logic Chain
 
-1. **Placeholder Absence**: Regular expression scans for dummy tokens (`lorem`, `ipsum`, `placeholder`, `TODO`, `TBD`, etc.) returned 0 matches across all 8 files.
-2. **Editorial Depth**: Each review contains between 580 and 791 lines of code, with between 5,900 and 7,100 Thai characters per page, featuring detailed analysis written in fluent Thai automotive journalism tone.
-3. **Required Specifications**: Real-world Thai specifications (MSRP in THB, local charging stations like PEA Volta / EA Anywhere / Tesla Supercharger, climate impact of 40°C heat, suspension on Bangkok roads) are present and accurate for each respective EV model.
-4. **Layout & Modern Web Compliance**: Every review page includes `export const metadata`, `textWrap: 'balance'` on headlines, `contentVisibility: 'auto'` on below-the-fold blocks, and optimized Next.js `<Image priority>` on hero elements.
-5. **Index Page Navigation**: `src/app/(storefront)/articles/page.tsx` correctly links to all 8 review routes with category filters, search segment pills, ratings, and summary cards.
-6. **Build Stability**: Next.js production build completes with exit code 0 and all static pages prerendered.
+1. **Directive Requirement**:
+   - The dispatch specification explicitly mandates:
+     - *"4. Touch target bounding boxes: hamburger, close, links, footer buttons (all >= 44x44px or >= 40px)."*
+     - *"Footer contact links: height must be >= 40 px."*
+2. **Inspecting Source Code (`src/app/(storefront)/layout.tsx`)**:
+   - Lines 180–190:
+     ```tsx
+     <a href="https://shopee.co.th/shop/9535932" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 py-2 hover:text-orange-400 transition-colors">
+     ```
+     - Uses `text-xs` (line height 16px) and `py-2` (padding top/bottom 8px + 8px = 16px).
+     - Total computed height = `16px + 16px = 32px`.
+   - Line 213:
+     ```tsx
+     <Link href="/products" className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 px-3 py-2 rounded">
+     ```
+     - Uses `text-xs`, `py-2`, and 1px border. Total computed height = `34px`.
+   - Lines 111–130 (Header Action Buttons):
+     ```tsx
+     <a href="https://m.me/evselects" className="inline-flex items-center gap-1.5 bg-blue-50 ... text-xs font-semibold px-3 py-2 rounded-lg transition-all">
+     <Link href="/products" className="inline-flex items-center gap-1.5 bg-lime-500 ... text-xs font-bold px-2.5 sm:px-3.5 py-2 rounded-lg ...">
+     ```
+     - Computed height = `34px`.
+3. **Empirical Measurement**:
+   - In Chromium headless execution across `extreme-mobile-320` and `ios-mobile-390`, Playwright computed bounding boxes:
+     - `ร้านค้าทางการบน Shopee Thailand`: 32.0 px height.
+     - `Facebook Page & Marketplace`: 32.0 px height.
+     - `แชท / สอบถามทาง LINE / FB`: 34.0 px height.
+     - `ร้าน Shopee TH`: 34.0 px height.
+     - `ระบบหลังบ้าน`: 34.0 px height.
+4. **Ergonomic Impact**:
+   - On mobile touch devices, target heights of 32px and 34px fall below the WCAG 2.5.5 touch target standard (44×44px) and fail the project's explicit >= 40px requirement. They present a high likelihood of touch error on mobile touch screens, especially when placed in close proximity.
 
 ---
 
 ## 3. Caveats
 
-- Pre-existing ESLint warnings/errors in legacy admin files (`src/app/(admin)/vehicles/page.tsx`, `src/app/(storefront)/articles/ev-battery-care/page.tsx`) were observed, but none are in any of the 8 new EV review pages or the main articles index.
-- No other caveats.
+- **CSS Viewport Scroll Propagation**:
+  When `html, body { overflow-x: clip; }` is applied in `globals.css`, setting `document.body.style.overflow = 'hidden'` stops user mouse wheel and touch scrolling, but imperative JavaScript calls like `window.scrollBy(0, 300)` can still alter `window.scrollY`. For complete bulletproof scroll locking across all platforms, setting `overflow: hidden` on both `document.documentElement` and `document.body` or applying `touch-action: none` to the modal backdrop is recommended.
+- **Review-Only Constraint**:
+  In accordance with Challenger 2's strict `Review-only — do NOT modify implementation code` constraint, no changes were made to `src/app/(storefront)/layout.tsx` or `src/components/MobileMenu.tsx`. The fix must be applied by the implementation worker.
 
 ---
 
 ## 4. Conclusion
 
-**Verdict: APPROVE**
+**Verdict: REQUEST_CHANGES**
 
-All 8 EV review articles (`byd-seal-review`, `tesla-model-3-highland-review`, `byd-atto-3-review`, `zeekr-x-review`, `deepal-s07-review`, `mg4-electric-review`, `deepal-s05-review`, `geely-ex2-review`) and the articles index page meet all architectural, content, structural, and performance requirements without placeholders or dummy data.
+While the mobile drawer navigation, focus trapping (Tab/Shift+Tab cycles, Escape restoration), body scroll lock, and extreme 320px table horizontal swiping are exceptionally well-implemented and pass 100% of empirical tests, the touch targets in `src/app/(storefront)/layout.tsx` fail the required bounding box dimensions:
+
+### Required Changes for Implementation Worker:
+1. **Footer Contact Links (`src/app/(storefront)/layout.tsx`)**:
+   - Lines 180, 186: Replace `py-2` with `min-h-[44px] py-2.5` or `min-h-[40px]`.
+   - Line 213 (`PIM` button): Add `min-h-[40px]` or `min-h-[44px]`.
+2. **Header Action Buttons (`src/app/(storefront)/layout.tsx`)**:
+   - Lines 104, 115, 125: Add `min-h-[40px]` (or `min-h-[44px]`) to ensure comfortable thumb ergonomics on touch viewports.
 
 ---
 
 ## 5. Verification Method
 
-To independently verify this evaluation, run the following commands:
-```powershell
-# Run the automated review content & structure verification harness (172 assertions)
-node scripts/verify_ev_reviews.mjs
+To independently verify these findings:
 
-# Run the section depth & Thai content audit
-node scripts/test_deep_sections.mjs
-
-# Run the image asset presence check
-node scripts/test_images_integrity.mjs
-
-# Run the Next.js production build
-npm run build
-```
+1. Inspect `tests/e2e/adversarial-mobile-ergonomics.spec.ts`.
+2. Run the touch target test suite:
+   ```bash
+   npx playwright test tests/e2e/adversarial-mobile-ergonomics.spec.ts -g "Touch Target Ergonomics" --project=extreme-mobile-320
+   ```
+   **Expected Violation Output:**
+   ```
+   Error: Footer link "ร้านค้าทางการบน Shopee Thailand" height (32px) must be >= 40px
+   Error: Header action "สอบถามทาง LINE / FBแชท" height (34px) is below minimum 36px/40px touch ergonomic target
+   ```
+3. To verify the focus trap and 320px swiping passing tests:
+   ```bash
+   npx playwright test tests/e2e/adversarial-mobile-ergonomics.spec.ts -g "Focus Trapping"
+   npx playwright test tests/e2e/adversarial-mobile-ergonomics.spec.ts -g "Extreme 320px" --project=extreme-mobile-320
+   ```
+4. Invalidation condition:
+   Applying `min-h-[44px]` (or `min-h-[40px]`) to the offending links in `src/app/(storefront)/layout.tsx` will cause all tests in `adversarial-mobile-ergonomics.spec.ts` to pass with 0 failures across all 6 viewports.

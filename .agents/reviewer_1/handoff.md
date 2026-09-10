@@ -1,157 +1,212 @@
-# Quality & Adversarial Review Report: EV Review Articles
+# Handoff Report: Reviewer 1 — Mobile Navigation, Responsive Architecture, A11y & Next.js Configuration
 
-**Reviewer**: Reviewer 1 (`reviewer_1`)  
-**Roles**: Reviewer, Adversarial Critic  
-**Working Directory**: `c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/reviewer_1`  
-**Date**: 2026-08-25T04:26:00+07:00  
-**Parent Agent**: Orchestrator (`b74d8c01-1023-432b-bc68-a0aeedac01c1`)  
-
----
-
-## 1. Executive Summary & Verdict
-
-**Verdict**: **APPROVE**  
-**Integrity Audit**: **PASS** (Zero facade implementations, zero dummy mocks, authentic technical content)  
-**Build Status**: **PASS** (`npm run build` static generation of 20/20 routes with 0 errors)  
-**Target Lint Status**: **PASS** (0 errors, 0 warnings across all 8 review pages and articles catalog)  
-
-The implementation of the 8 EV review articles and the main articles catalog page represents an outstanding, production-grade automotive journalism deliverable. Every review strictly follows the CarExpert 12-section editorial structure with deep, localized Thai automotive context (40°C heat management, glass roof solar rejection, suspension NVH on Thai concrete/expressway roads, ground clearance over Bangkok humps/monsoon flash floods, and DC fast charging on local networks).
+**Agent:** `reviewer_1`  
+**Roles:** Reviewer, Adversarial Critic  
+**Working Directory:** `c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\reviewer_1`  
+**Project Root:** `c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform`  
+**Date:** 2026-09-10  
+**Verdict:** **APPROVE**  
 
 ---
 
-## 2. Review Findings & Verification Details
+## 1. Observation
 
-### 2.1 Scope & Completeness Verification (CarExpert 12-Section Architecture)
-Each of the 8 review article pages was inspected line-by-line and verified to contain the complete 12-section blueprint:
+### 1.1 Code Modifications Audited
+Direct observations across the 5 target files from git diff and source inspections:
 
-| # | Section Required | Verified Status | Notes / Highlights |
-|---|------------------|-----------------|-------------------|
-| 1 | Article Header & Score Pill | ✅ PASS | Badges (`Car Review`, `ทดสอบขับขี่จริง`, Date, Read Time), Scorecard Pill (e.g. 9.3/10) |
-| 2 | Hero Image (LCP Priority) | ✅ PASS | Next.js `<Image priority fill sizes="...">` with tested trim & price callouts |
-| 3 | Executive Verdict 3-Column Card | ✅ PASS | จุดเด่น, ข้อพิจารณาก่อนซื้อ, เหมาะกับใคร |
-| 4 | Section 1: ภาพรวม & บริบทในตลาดไทย | ✅ PASS | Deep market positioning & technical platform background (CTB, SEA, Nebula MSP, GEA) |
-| 5 | Section 2: ราคาจำหน่าย & ตารางเปรียบเทียบรุ่นย่อย | ✅ PASS | Detailed specs table in THB, Battery kWh, Motor hp/Nm, 0-100 km/h, NEDC/WLTP/Real-world |
-| 6 | Section 3: ดีไซน์ภายนอก & มิติตัวถัง | ✅ PASS | Headlights, Cd drag coefficient, LxWxH, Wheelbase, Ground clearance (Thai road safety context) |
-| 7 | Section 4: ห้องโดยสาร & อินโฟเทนเมนต์ | ✅ PASS | Ventilated seats, Screen size/OS, Sound system (Dynaudio/Yamaha), Frunk & Trunk liter capacity |
-| 8 | Section 5: ขุมพลัง & สมรรถนะการขับขี่ | ✅ PASS | Motor kW/hp, torque delivery, 0-100 acceleration, handling & pedal response |
-| 9 | Section 6: ฟีลลิ่งช่วงล่าง & NVH บนถนนไทย | ✅ PASS | Suspension setup (Double Wishbone/Multi-link/5-Link/FSD), concrete expressway NVH, acoustic glass |
-| 10 | Section 7: แบตเตอรี่, ระยะทางจริง & ระบบชาร์จ | ✅ PASS | LFP/NMC chemistry, Real-world test route (กทม.-พัทยา-ระยอง / กทม.-เขาใหญ่), DC kW speeds, PEA Volta / PTT / EA / Supercharger |
-| 11 | Section 8: ระบบความปลอดภัย ADAS | ✅ PASS | ADAS L2/L2+, ACC Stop&Go, 360° cameras, Sentry Mode, Euro NCAP 5-star ratings |
-| 12 | Section 9: กล่องแนะนำอุปกรณ์เสริม EVSELECT | ✅ PASS | Contextual fitment cards linking to Nano-Silver sunroof shades, 3D TPE mats, screen protectors |
-| 13 | Section 10: จุดเด่น & ข้อสังเกต (Pros & Cons) | ✅ PASS | Side-by-side green (Pros) and red (Cons) evaluation cards |
-| 14 | Section 11: บทสรุปส่งท้าย & EVSELECT Scorecard | ✅ PASS | Multi-dimensional 5-6 category score breakdown (Performance, Comfort, Tech, Range, Value) |
-| 15 | Section 12: Footer Share & Back Links | ✅ PASS | Clean breadcrumb navigation and social share triggers |
+1. **`src/components/MobileMenu.tsx`:**
+   - **Focus Management & Trap (lines 8–81):** Added `triggerRef`, `navRef`, `closeButtonRef`, and `prevIsOpenRef`. On open (`isOpen === true`), locks body scroll (`document.body.style.overflow = "hidden"`) and schedules focus onto `closeButtonRef.current?.focus()` after 50ms. On close, restores focus to `triggerRef.current?.focus()`.
+   - **Keyboard Listener (lines 45–81):** Intercepts `Escape` to close drawer and prevent default. Intercepts `Tab` and `Shift+Tab` to trap focus between `firstElement` (`closeButtonRef`) and `lastElement` inside `navRef.current`.
+   - **Off-screen Hiding & Inert (lines 97–114):**
+     ```tsx
+     {/* Backdrop */}
+     <div
+       className={`fixed inset-0 z-[100] bg-black/50 transition-opacity duration-300 ${
+         isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none invisible"
+       }`}
+       onClick={close}
+       aria-hidden="true"
+     />
+
+     {/* Slide-in Drawer */}
+     <nav
+       ref={navRef}
+       className={`fixed top-0 left-0 z-[101] h-full w-[min(20rem,80vw)] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
+         isOpen ? "translate-x-0" : "-translate-x-full invisible"
+       }`}
+       aria-label="เมนูหลัก"
+       aria-hidden={!isOpen}
+       inert={!isOpen ? true : undefined}
+     >
+     ```
+   - **Touch Targets & Normalized Icons (lines 89, 123, 135–213):** Hamburger button and close button have `min-h-[44px] min-w-[44px] inline-flex items-center justify-center p-2`. All navigation and external links have `min-h-[44px] px-3 py-3`. All Lucide icon widths are normalized from non-standard `w-4.5 h-4.5` to `w-5 h-5`.
+
+2. **`src/app/globals.css` (lines 21–40):**
+   - Added root overflow rule:
+     ```css
+     html,
+     body {
+       overflow-x: clip;
+     }
+     ```
+   - Added cross-browser scrollbar utility:
+     ```css
+     .scrollbar-none {
+       -ms-overflow-style: none;
+       scrollbar-width: none;
+     }
+     .scrollbar-none::-webkit-scrollbar {
+       display: none;
+     }
+     ```
+
+3. **`src/app/layout.tsx` (lines 1–9):**
+   - Exported explicit viewport configuration:
+     ```tsx
+     export const viewport: Viewport = {
+       width: "device-width",
+       initialScale: 1,
+       maximumScale: 5,
+     };
+     ```
+
+4. **`src/app/(storefront)/layout.tsx` (lines 47–95, 180–214):**
+   - Header navigation breakpoint updated from `md` (`768px`) to `xl` (`1280px`):
+     - Mobile menu & logo: `xl:hidden`
+     - Desktop nav & logo: `hidden xl:flex`
+   - Touch target padding `py-2` added to footer links (Shopee, Messenger, Line, PIM).
+
+5. **`next.config.ts` (lines 7, 17–24):**
+   - Authorized Unsplash host under `images.remotePatterns`:
+     ```ts
+     images: {
+       remotePatterns: [
+         {
+           protocol: 'https',
+           hostname: 'images.unsplash.com',
+         },
+       ],
+     },
+     ```
+   - Updated Content Security Policy `img-src` header:
+     ```
+     img-src 'self' blob: data: https://images.unsplash.com;
+     ```
+
+### 1.2 Independent Verification Tool Runs
+1. **`npm run build`:**
+   ```
+   > evselect-platform@0.1.0 build
+   > prisma generate && next build
+
+   ✔ Generated Prisma Client (7.9.1) to .\src\generated\prisma in 47ms
+   ▲ Next.js 16.3.2 (Turbopack)
+   ✓ Running next.config.ts took 24ms
+   ✓ Compiled successfully in 927ms
+   ✓ Finished TypeScript in 1934ms ...
+   ✓ Generating static pages using 19 workers (40/40) in 640ms
+   Exit code: 0
+   ```
+2. **`npx playwright test`:**
+   ```
+   2 skipped
+   190 passed (2.9m)
+   Exit code: 0
+   ```
+   All 190 test assertions passed across 6 viewport tiers (`extreme-mobile-320`, `ios-mobile-390`, `tablet-portrait-768`, `tablet-landscape-1024`, `desktop-xl-1280`, `desktop-wide-1440`).
+
+3. **Integrity Violations Check:**
+   - No hardcoded test results, test bypasses, or environment-specific short-circuits.
+   - No dummy or facade implementations; all focus trapping, inert application, and CSS styling are production-grade implementations.
+   - Zero integrity violations detected.
 
 ---
 
-### 2.2 Target Files Verified
+## 2. Logic Chain
 
-1. **`src/app/(storefront)/articles/page.tsx`** (740 lines)
-   - Dynamic searchParams filtering by category (`reviews`, `guides`) and vehicle segment (`sedan`, `suv`, `hatchback`, `city`).
-   - Featured top spotlight card (Tesla Model 3 Highland).
-   - 3-column responsive card grid mapping over all 9 articles with real image covers, price ranges, rating badges, and balanced typography.
-   - Bottom conversion banner linking directly to vehicle finder and product catalog.
+1. **Off-Screen Focus Leak Remediation:**
+   - *Observation:* `MobileMenu.tsx` previously used `-translate-x-full` without `invisible` or `inert`.
+   - *Inference:* Off-screen elements remained in the accessibility tree and keyboard tab order, causing tabbing to disappear into invisible elements.
+   - *Validation:* By combining `invisible` (CSS `visibility: hidden`), `inert={!isOpen ? true : undefined}`, and `aria-hidden={!isOpen}`, the drawer is completely removed from keyboard navigation and screen readers when closed. Stress testing confirmed 40 continuous `Tab` presses never leak into the closed drawer.
 
-2. **`src/app/(storefront)/articles/byd-seal-review/page.tsx`** (589 lines)
-   - Model: BYD Seal (Dynamic 61.4 kWh, Premium 82.5 kWh, AWD Performance 530 hp 0-100 in 3.8s).
-   - Key highlights: CTB 40,500 Nm/deg rigidity, 120mm ground clearance caution on Thai humps, FSD dampers, Blade battery nail penetration test, 150 kW DC charging, Dynaudio 12 speakers.
+2. **Focus Management & Focus Trapping:**
+   - *Observation:* Opening the drawer shifts focus to `closeButtonRef` after a 50ms frame delay; closing via `Escape`, close button, or backdrop restores focus to `triggerRef`.
+   - *Inference:* Preserves logical focus order (WCAG 2.4.3) and prevents keyboard users from getting lost on the page.
+   - *Validation:* Keyboard listener traps focus between `firstElement` and `lastElement`. Stress testing verified 25 forward `Tab` cycles and 15 reverse `Shift+Tab` cycles without escaping the drawer.
 
-3. **`src/app/(storefront)/articles/tesla-model-3-highland-review/page.tsx`** (582 lines)
-   - Model: Tesla Model 3 Highland (Standard RWD 60 kWh LFP, Long Range AWD 78.1 kWh NMC 498 hp, Performance 627 hp 0-100 in 3.1s).
-   - Key highlights: 360° Laminated Acoustic Glass (-30% wind noise), rear 8-inch entertainment screen, ventilated seats, HW4 Tesla Vision, Bangkok-Khao Yai real-world range test (13.8 kWh/100km), 250 kW Supercharger V3/V4.
+3. **Global Horizontal Overflow Standard:**
+   - *Observation:* `globals.css` sets `html, body { overflow-x: clip; }`.
+   - *Inference:* `overflow-x: clip` suppresses horizontal scrolling without creating an independent scroll container that breaks `position: sticky` on iOS Safari WebKit.
+   - *Validation:* Automated zero-scroll tests evaluated 30 routes across 6 viewports (320px to 1440px) and confirmed `document.documentElement.scrollWidth <= document.documentElement.clientWidth` and `document.body.scrollWidth <= window.innerWidth` across all routes.
 
-4. **`src/app/(storefront)/articles/byd-atto-3-review/page.tsx`** (584 lines)
-   - Model: BYD Atto 3 (Dynamic / Premium 50.25 kWh, Extended Range 60.48 kWh 201 hp).
-   - Key highlights: MY2024-2026 updates (15.6" screen, Conti tires), electric panoramic sunshade, soft comfort suspension on rough Thai roads, Blade battery longevity.
-
-5. **`src/app/(storefront)/articles/zeekr-x-review/page.tsx`** (580 lines)
-   - Model: Zeekr X (Standard RWD 272 hp 66 kWh, Flagship AWD 428 hp 0-100 in 3.8s).
-   - Key highlights: SEA platform shared with Volvo EX30, frameless electric doors, Yamaha 13-speaker audio, premium interior materials, firm European ride.
-
-6. **`src/app/(storefront)/articles/deepal-s07-review/page.tsx`** (788 lines)
-   - Model: Changan Deepal S07 (Standard 66.8 kWh, Long Range 79.97 kWh 258 hp RWD).
-   - Key highlights: Mid-size D-SUV cyberpunk styling, factory electric sunshade, 15.6" Sunflower swivel screen, 125L front frunk, DC 167 kW fast charging.
-
-7. **`src/app/(storefront)/articles/mg4-electric-review/page.tsx`** (791 lines)
-   - Model: MG4 Electric (Standard 49 kWh, Long Range 64 kWh, XPOWER AWD 435 hp 0-100 in 3.8s).
-   - Key highlights: Nebula MSP platform, 50:50 weight distribution, rear-wheel drive, Five-Link rear independent suspension, driver's car dynamics under 1M THB.
-
-8. **`src/app/(storefront)/articles/deepal-s05-review/page.tsx`** (790 lines)
-   - Model: Changan Deepal S05 (56.12 kWh BEV 238 hp RWD).
-   - Key highlights: 4K Gimbal Camera on roof (120fps video recording), 120" DLP projector headlights, class-leading 159L front frunk, 3C fast charge in 15 mins.
-
-9. **`src/app/(storefront)/articles/geely-ex2-review/page.tsx`** (779 lines)
-   - Model: Geely EX2 / Xingyuan (Standard 310km, Long Range 410km RWD).
-   - Key highlights: GEA platform, exclusive rear Multi-link independent suspension in 500k THB class, Aegis Short Blade thermal battery, Flyme Auto OS, 70L front frunk.
+4. **Next.js Image & CSP Configuration:**
+   - *Observation:* `next.config.ts` was missing `images.remotePatterns` for `images.unsplash.com` and matching CSP `img-src`.
+   - *Inference:* `next/image` throws runtime errors when rendering external images from unauthorized hosts, and CSP blocks requests.
+   - *Validation:* Adding `remotePatterns` and updating CSP allows Unsplash assets to prerender and load cleanly during `npm run build` and route visits.
 
 ---
 
-## 3. Build, Lint & Technical Verification
+## 3. Findings & Observations
 
-### 3.1 Next.js Static Production Compilation (`npm run build`)
+### [Minor] Finding 1: Storefront Footer Contact Touch Target Height
+- **What:** Footer contact links have a computed bounding box height of ~32px (`py-2` with `text-xs`).
+- **Where:** `src/app/(storefront)/layout.tsx:180-201`
+- **Why:** While the mobile drawer links and buttons strictly achieve `>= 44px`, the secondary footer links on the storefront render at 32px. This satisfies WCAG 2.5.8 Target Size Minimum (24px) but falls short of the recommended 44px touch target standard.
+- **Suggestion:** For future ergonomics optimization, add `min-h-[44px]` or `py-3` to footer contact links.
+
+### [Minor] Finding 2: Document Element Wheel Scroll During Open Drawer
+- **What:** On viewports with mouse wheel support (e.g. tablet landscape 1024px), mouse wheel events on `document.documentElement` can scroll the background page while the drawer is open.
+- **Where:** `src/components/MobileMenu.tsx:20`
+- **Why:** Only `document.body.style.overflow = "hidden"` is set; `document.documentElement.style.overflow` remains unconstrained.
+- **Suggestion:** In `MobileMenu.tsx`, lock both `document.body.style.overflow` and `document.documentElement.style.overflow = "hidden"` when open.
+
+### [Minor] Finding 3: Window Resize Across 1280px While Drawer Open
+- **What:** If a user opens the mobile menu at `< 1280px` and resizes the viewport to `>= 1280px` without closing, body scroll remains locked until the window is resized back or closed.
+- **Where:** `src/components/MobileMenu.tsx`
+- **Suggestion:** Add a `window.matchMedia('(min-width: 1280px)')` listener to auto-close the drawer on breakpoint transitions.
+
+### [Low / Out of Scope] Finding 4: Sub-320px Viewport (280px Galaxy Fold) Header Action Overflow
+- **What:** At ultra-narrow 280px width (Galaxy Fold cover screen), the header action buttons (`div.flex.items-center.gap-2.5`) measure 296px, producing a 16px horizontal overflow at 280px.
+- **Where:** `src/app/(storefront)/layout.tsx:98`
+- **Why:** The official design and test specification (`PROJECT.md` & `ORIGINAL_REQUEST.md`) designates `320px` as the minimum supported viewport boundary. Zero horizontal scroll is 100% verified down to 320px across all routes.
+- **Suggestion:** In future polish passes, add `hidden min-[320px]:inline-flex` or shrink gap on extreme sub-320px devices.
+
+---
+
+## 4. Caveats
+
+1. **Adversarial Non-Blocking Findings:** Findings 1–3 are minor edge cases discovered during adversarial stress testing. They do not block core functionality or cause regressions, and all official acceptance criteria and baseline test suites pass with 100% success.
+2. **Prisma SQLite Local State:** Production builds and Playwright tests run against the local SQLite database (`dev.db`).
+
+---
+
+## 5. Conclusion
+
+**Verdict: APPROVE**
+
+The work across `src/components/MobileMenu.tsx`, `src/app/globals.css`, `src/app/layout.tsx`, `src/app/(storefront)/layout.tsx`, and `next.config.ts` is verified to be:
+- **Correct**: Fixes off-screen focus leaks, restores focus properly, eliminates horizontal document overflow, and configures Next.js remote images and CSP.
+- **Complete**: All 5 assigned files implement the requirements specified in `PROJECT.md` and the dispatch.
+- **Robust**: Passes complete production build (`npm run build`) and 190 Playwright E2E test assertions across 6 viewports with 0 failures.
+- **Accessible**: Hamburger button, close button, and drawer links meet the 44x44px touch target standard, and off-screen navigation is fully inert and hidden from screen readers.
+- **Integrity Compliant**: 0 integrity violations detected.
+
+---
+
+## 6. Verification Method
+
+To independently reproduce verification:
+
 ```bash
-> evselect-platform@0.1.0 build
-> next build
-
-▲ Next.js 16.3.2 (Turbopack)
-✓ Running next.config.ts took 21ms
-✓ Compiled successfully in 603ms
-✓ Finished TypeScript in 1252ms ...
-✓ Generating static pages using 19 workers (20/20) in 519ms
-
-Route (app)
-├ ○ /articles/byd-atto-3-review
-├ ○ /articles/byd-seal-review
-├ ○ /articles/deepal-s05-review
-├ ○ /articles/deepal-s07-review
-├ ○ /articles/geely-ex2-review
-├ ○ /articles/mg4-electric-review
-├ ○ /articles/tesla-model-3-highland-review
-├ ○ /articles/zeekr-x-review
-├ ƒ /articles
-```
-**Status**: **PASS (0 compilation errors, 0 type errors)**
-
-### 3.2 ESLint Verification on Deliverables
-```bash
-npx eslint "src/app/(storefront)/articles/page.tsx" "src/app/(storefront)/articles/byd-seal-review/page.tsx" "src/app/(storefront)/articles/tesla-model-3-highland-review/page.tsx" "src/app/(storefront)/articles/byd-atto-3-review/page.tsx" "src/app/(storefront)/articles/zeekr-x-review/page.tsx" "src/app/(storefront)/articles/deepal-s07-review/page.tsx" "src/app/(storefront)/articles/mg4-electric-review/page.tsx" "src/app/(storefront)/articles/deepal-s05-review/page.tsx" "src/app/(storefront)/articles/geely-ex2-review/page.tsx"
-```
-**Status**: **PASS (Exit code 0, 0 errors, 0 warnings)**
-
-### 3.3 Minor Observational Finding (Pre-existing file outside target scope)
-- **Location**: `src/app/(storefront)/articles/ev-battery-care/page.tsx`
-- **Issue**: Pre-existing guide file contains unescaped quotes (`"`) and an explicit `any` type.
-- **Impact**: Non-blocking for the 8 review articles; the build succeeds completely.
-- **Recommendation**: Clean up unescaped entities in `ev-battery-care/page.tsx` in a subsequent maintenance sweep.
-
----
-
-## 4. Adversarial Critique & Stress-Testing
-
-1. **Modern Web Guidelines**:
-   - `text-wrap: balance`: Implemented on all `h1`, `h2`, and card titles.
-   - `content-visibility: auto` + `contain-intrinsic-size: 450px-550px`: Correctly applied to off-screen content blocks to maintain blazing fast initial layout and render times.
-   - LCP Image Optimization: `<Image priority fill sizes="...">` implemented on all above-the-fold hero banners.
-
-2. **Integrity & Authenticity**:
-   - No mock facades or templated placeholders.
-   - Content is written in fluent, native Thai automotive journalism vocabulary (e.g. *แรงบิดบิดตัว Torsional Rigidity, แดมเปอร์ FSD, คานบิด Torsion Beam, สัญญาณภาพ HUD, การชาร์จแบบ Plug & Charge*).
-
-3. **Responsive Stress Testing**:
-   - Complex specification tables are wrapped in `overflow-x-auto` with sticky headers.
-   - Pros & Cons cards and scorecard breakdown gracefully stack from 2 columns to 1 column on mobile viewports (<640px).
-
----
-
-## 5. Conclusion & Verification Method
-
-Milestones M1, M2, M3, and M4 are fully verified and meet all quality, structural, and performance criteria.
-
-### Independent Verification Commands:
-```bash
-# 1. Verify build
+# 1. Typecheck and production build
 npm run build
 
-# 2. Verify ESLint on all 8 reviews + catalog
-npx eslint "src/app/(storefront)/articles/page.tsx" "src/app/(storefront)/articles/byd-seal-review/page.tsx" "src/app/(storefront)/articles/tesla-model-3-highland-review/page.tsx" "src/app/(storefront)/articles/byd-atto-3-review/page.tsx" "src/app/(storefront)/articles/zeekr-x-review/page.tsx" "src/app/(storefront)/articles/deepal-s07-review/page.tsx" "src/app/(storefront)/articles/mg4-electric-review/page.tsx" "src/app/(storefront)/articles/deepal-s05-review/page.tsx" "src/app/(storefront)/articles/geely-ex2-review/page.tsx"
+# 2. Complete Playwright E2E suite
+npx playwright test
+
+# 3. Specific mobile navigation & focus verification
+npx playwright test tests/e2e/mobile-navigation.spec.ts
+
+# 4. Zero horizontal scroll verification across all 30 routes
+npx playwright test tests/e2e/responsive-scroll.spec.ts
 ```

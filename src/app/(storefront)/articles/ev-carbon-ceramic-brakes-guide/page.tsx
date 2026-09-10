@@ -36,6 +36,21 @@ export const metadata: Metadata = {
     'PCCB',
     'วัสดุศาสตร์เซรามิก'
   ],
+  openGraph: {
+    title: 'เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB) นวัตกรรมหยุดโลกที่ EV ตัวแรงต้องมี | EVSELECT',
+    description: 'บทความเจาะลึกทางวิศวกรรมระดับ Expert ทำความเข้าใจกระบวนการสร้าง วัสดุศาสตร์ และเหตุผลที่ Carbon Ceramic Brakes (CCB) ถึงเป็นออปชันหลักแสนที่จำเป็นสำหรับ EV น้ำหนัก 2 ตัน+',
+    url: 'https://evselects.com/articles/ev-carbon-ceramic-brakes-guide',
+    siteName: 'EVSELECT Thailand',
+    locale: 'th_TH',
+    type: 'article',
+    images: [{ url: '/images/articles/carbon_ceramic_brake_hero.jpg' }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB) | EVSELECT',
+    description: 'นวัตกรรมหยุดโลกที่ EV ตัวแรงต้องมี พร้อมวิเคราะห์ความคุ้มค่าบนถนนเมืองไทย',
+    images: ['/images/articles/carbon_ceramic_brake_hero.jpg']
+  }
 };
 
 export default function CarbonCeramicBrakesGuidePage() {
@@ -76,7 +91,7 @@ export default function CarbonCeramicBrakesGuidePage() {
 
       <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
         <img
-          src="/images/reviews/carbon_ceramic_brake_hero.jpg"
+          src="/images/articles/carbon_ceramic_brake_hero.jpg"
           alt="ระบบเบรก Carbon Ceramic (CCB) แบบเจาะลึก"
           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
         />

@@ -1,15 +1,53 @@
-## 2026-08-24T21:24:49Z
+# Dispatch: Reviewer 2 — Admin Platform, Navigation Contracts & Test Suite
 
-You are Reviewer 2 for the EVSELECT platform EV review articles project.
-Your working directory: c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/reviewer_2
-Original Request Path: c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/ORIGINAL_REQUEST.md
-Project Plan Path: c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/PROJECT.md
+## Role & Mission
+You are `reviewer_2` (Role: Code Reviewer, Type: `teamwork_preview_reviewer`).
+Your working directory is:
+`c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\reviewer_2`
+Project root:
+`c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform`
 
-Task:
-1. Review all 8 EV review pages and `src/app/(storefront)/articles/page.tsx` for Modern Web Standards & Performance:
-   - Verify `text-wrap: balance` on headlines/titles
-   - Verify `content-visibility: auto` with `contain-intrinsic-size` on below-the-fold sections
-   - Verify Next.js `<Image priority>` on hero banners and responsive `sizes` on section images
-   - Verify accessibility, semantic markup, and dark theme UI consistency
-2. Run `npm run build` and `npx eslint "src/app/(storefront)/articles/**"` to verify clean build.
-3. Record your explicit verdict (APPROVE or REQUEST_CHANGES) in c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform/.agents/reviewer_2/handoff.md and notify orchestrator via send_message.
+## Context & Inputs
+- Read `c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\.agents\ORIGINAL_REQUEST.md`
+- Read `c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\PROJECT.md`
+- Read `c:\Users\rolf-\.gemini\antigravity\scratch\evselect-platform\TEST_READY.md`
+- Read handoff from `worker_m2_1`.
+
+## Review Scope
+Review modifications in:
+- `src/app/(admin)/layout.tsx`
+- `src/app/(admin)/vehicles/page.tsx`
+- `src/app/(admin)/products/page.tsx`
+- `src/app/(admin)/categories/page.tsx`
+- `src/app/(admin)/fitment/page.tsx`
+- `src/app/(admin)/export/page.tsx`
+- `playwright.config.ts` and `tests/e2e/**`
+
+Evaluate:
+1. Admin responsive sidebar: mobile drawer toggle (< 1024px) vs full desktop sidebar (>= 1024px).
+2. Data tables: `overflow-x-auto` container with `min-w-[600px]` table width.
+3. Form wrapping: `flex-wrap` and input min-widths preventing overflow on mobile screens.
+4. Playwright test suite integrity: test configuration, route coverage, zero-scroll contracts, and navigation assertions.
+5. Run verification commands:
+   - `npm run build`
+   - `npx playwright test`
+6. Output:
+   - Deliver `handoff.md` with explicit verdict: `APPROVE` or `REQUEST_CHANGES`.
+   - Message parent when complete.
+
+## 2026-09-10T06:36:45Z
+User request received:
+Review all code modifications in:
+- `src/app/(admin)/layout.tsx`
+- `src/app/(admin)/vehicles/page.tsx`
+- `src/app/(admin)/products/page.tsx`
+- `src/app/(admin)/categories/page.tsx`
+- `src/app/(admin)/fitment/page.tsx`
+- `src/app/(admin)/export/page.tsx`
+- `playwright.config.ts` and `tests/e2e/**`
+
+Evaluate correctness, admin responsiveness, table horizontal scrolling, form wrapping, and Playwright test suite coverage. Run:
+- `npm run build`
+- `npx playwright test`
+Provide your explicit verdict: APPROVE or REQUEST_CHANGES in your handoff.md. Message parent when complete.
+

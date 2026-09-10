@@ -1,138 +1,135 @@
-## Forensic Audit Report
+# Forensic Integrity Audit Report & Handoff
 
-**Work Product**: `src/app/(storefront)/articles/` & `public/images/reviews/`  
-**Profile**: General Project (Development Mode)  
-**Verdict**: **CLEAN**
-
----
-
-### Phase Results
-
-1. **Check 1: Hardcoded Test Results & Bypasses**: **PASS**  
-   - Source code search across all `.tsx` files in `src/app/(storefront)/articles/` for `TODO`, `FIXME`, `lorem`, `placeholder`, `TBD`, `dummy`, `mock` yielded **0 matches**.
-
-2. **Check 2: Facade & Stub Implementation Detection**: **PASS**  
-   - All 8 EV review article pages (`byd-seal-review`, `tesla-model-3-highland-review`, `byd-atto-3-review`, `zeekr-x-review`, `deepal-s07-review`, `mg4-electric-review`, `deepal-s05-review`, `geely-ex2-review`) contain 580 to 790 lines each of genuine, authentic, and exhaustive Thai automotive journalism.
-   - Every article includes genuine CarExpert-style 10+ section layouts: Executive Scorecard, Pricing/Trims Table, Exterior Design & Dimensions, Interior Cockpit & Infotainment, Powertrain & Driving Impressions, Ride Quality & NVH on Thai roads, Battery & Charging (AC/DC), ADAS Safety, Contextual EVSELECT Fitment Accessory Recommendation, Pros & Cons, and Final Verdict Breakdown.
-
-3. **Check 3: Image Asset Verification**: **PASS**  
-   - 32 image files exist under `public/images/reviews/` with substantial binary sizes (31 KB to 764 KB each).
-   - Automated disk verification script verified that 100% of the image paths referenced by `<Image src="...">` in all article components exist on disk.
-
-4. **Check 4: Build & Static Generation Verification**: **PASS**  
-   - `npx tsc --noEmit` completed with **0 errors**.
-   - `npm run build` executed cleanly in Next.js 16.3.2 (Turbopack) with 20/20 static pages successfully generated, including all article routes (`/articles`, `/articles/byd-seal-review`, `/articles/tesla-model-3-highland-review`, `/articles/byd-atto-3-review`, `/articles/zeekr-x-review`, `/articles/deepal-s07-review`, `/articles/mg4-electric-review`, `/articles/deepal-s05-review`, `/articles/geely-ex2-review`, `/articles/ev-battery-care`).
-
-5. **Check 5: Pre-populated Verification Output / Workspace Hygiene**: **PASS**  
-   - Workspace search for pre-populated `.log` or fake attestation files returned 0 matches.
-   - Workspace `.agents/` directory strictly contains agent metadata, with zero misplaced source code or test files.
+**Work Product**: EVSELECT Mobile/Responsive UI/UX Audit & Bug-Fix (`src/components/MobileMenu.tsx`, `src/app/globals.css`, `src/app/layout.tsx`, `src/app/(admin)/layout.tsx`, `next.config.ts`, `tests/e2e/`)  
+**Profile**: General Project (Integrity Mode: Benchmark Mode)  
+**Auditor**: `auditor_1` (Forensic Auditor)  
+**Verdict**: **CLEAN**  
 
 ---
 
-### Empirical Evidence
+## 1. Observation
 
-#### 1. Article Files & Line Counts
-```
-Path                                                                 Lines Length (Bytes)
-----                                                                 ----- --------------
-src\app\(storefront)\articles\page.tsx                                 739  41,116
-src\app\(storefront)\articles\byd-atto-3-review\page.tsx               584  45,673
-src\app\(storefront)\articles\byd-seal-review\page.tsx                 589  47,876
-src\app\(storefront)\articles\deepal-s05-review\page.tsx               789  54,807
-src\app\(storefront)\articles\deepal-s07-review\page.tsx               787  58,377
-src\app\(storefront)\articles\ev-battery-care\page.tsx                 182  16,331
-src\app\(storefront)\articles\geely-ex2-review\page.tsx                778  55,216
-src\app\(storefront)\articles\mg4-electric-review\page.tsx             790  56,726
-src\app\(storefront)\articles\tesla-model-3-highland-review\page.tsx   582  46,230
-src\app\(storefront)\articles\zeekr-x-review\page.tsx                  580  45,451
-```
+Direct empirical observations collected during the audit:
 
-#### 2. Production Build Log (`npm run build`)
-```
-> evselect-platform@0.1.0 build
-> next build
+### 1.1 Source Code & Anti-Cheating Analysis
+- **Playwright Test Suite (`tests/e2e/responsive-scroll.spec.ts` & `tests/e2e/utils/scroll-diagnostics.ts`)**:
+  - `tests/e2e/responsive-scroll.spec.ts` iterates over 30 distinct application routes (storefront home `/`, `/articles`, 6 legal/info pages, and 22 EV technical review articles).
+  - Lines 48-56 evaluate genuine browser DOM metrics:
+    ```ts
+    const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
+    const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
+    expect(scrollWidth).toBeLessThanOrEqual(clientWidth);
 
-▲ Next.js 16.3.2 (Turbopack)
-- Environments: .env
-✓ Running next.config.ts took 21ms
+    const bodyScrollWidth = await page.evaluate(() => document.body.scrollWidth);
+    const windowInnerWidth = await page.evaluate(() => window.innerWidth);
+    expect(bodyScrollWidth).toBeLessThanOrEqual(windowInnerWidth);
+    ```
+  - `tests/e2e/utils/scroll-diagnostics.ts` inspects all DOM elements via `document.querySelectorAll('*')`, calculates bounding client rects (`rect.right > windowWidth + 1`), checks containment under `overflow-x: auto|scroll|hidden|clip`, and constructs detailed diagnostics upon failure.
+  - Zero mock bypasses, zero dummy return constants, zero hardcoded pass flags found in `tests/e2e/` (searches for `bypass`, `mock`, `dummy`, `fake` yielded 0 results).
+- **Navigation Test Suite (`tests/e2e/mobile-navigation.spec.ts`)**:
+  - Tests storefront header adaptation at the 1280px Tailwind breakpoint:
+    - Viewport `< 1280px`: asserts `button[aria-label="เปิดเมนู"]` is visible, desktop nav is hidden, clicks hamburger, asserts drawer `nav[aria-label="เมนูหลัก"]` is visible, asserts `aria-expanded="true"`, checks internal links, tests closing via close button `button[aria-label="ปิดเมนู"]`, tests closing via `Escape` key, asserts `expect(hamburgerBtn).toBeFocused()`, and tests route navigation with drawer closing.
+    - Viewport `>= 1280px`: asserts hamburger button is hidden (`not.toBeVisible()`), desktop nav is visible (`toBeVisible()`).
+- **Implementation Authenticity**:
+  - `src/components/MobileMenu.tsx`: Real React 19 Client Component using `useState(false)`, `useRef`, `useCallback`, and two `useEffect` hooks implementing focus trapping (Tab & Shift+Tab cycling), Escape dismissal, focus return to trigger button, body scroll locking (`overflow = "hidden"`), `aria-expanded`, and `inert={!isOpen ? true : undefined}`. Touch targets meet standard 44x44px (`min-h-[44px] min-w-[44px]`).
+  - `src/app/globals.css`: Contains authentic CSS rules `html, body { overflow-x: clip; }` and `.scrollbar-none` (`-ms-overflow-style: none; scrollbar-width: none; ::-webkit-scrollbar { display: none; }`).
+  - `src/app/layout.tsx`: Contains standard Next.js App Router Viewport export:
+    ```ts
+    export const viewport: Viewport = {
+      width: "device-width",
+      initialScale: 1,
+      maximumScale: 5,
+    };
+    ```
+  - `src/app/(admin)/layout.tsx`: Contains responsive mobile drawer with `isOpen` state, backdrop, hamburger trigger (`aria-label="เปิดเมนูผู้ดูแลระบบ"`), Escape key listener, body scroll lock, auto-close on pathname change, and desktop static sidebar (`hidden lg:flex`).
+  - `src/app/(admin)` data tables (`vehicles`, `categories`, `products`, `fitment`): Table wrappers wrapped with `overflow-x-auto border border-gray-200`; forms configured with `flex flex-wrap gap-4 items-end`.
+  - `next.config.ts`: Configures `images.remotePatterns` for `images.unsplash.com`, strict security headers (CSP Report-Only, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy), and permanent 308 redirect from `/blog/:slug*` to `/articles/:slug*`.
 
-  Creating an optimized production build ...
-✓ Compiled successfully in 363ms
-  Running TypeScript ...
-  Finished TypeScript in 1188ms ...
-  Collecting page data using 19 workers ...
-  Generating static pages using 19 workers (0/20) ...
-✓ Generating static pages using 19 workers (20/20) in 476ms
-  Finalizing page optimization ...
+### 1.2 Independent Build Execution
+- Executed `npm run build` independently from terminal:
+  - Exit code: `0`
+  - Prisma client generated: `✔ Generated Prisma Client (7.9.1) to .\src\generated\prisma in 36ms`
+  - Turbopack compilation: `✓ Compiled successfully in 1948ms`
+  - TypeScript check: `Finished TypeScript in 2.2s ...`
+  - Static generation: `✓ Generating static pages using 19 workers (40/40) in 581ms`
+  - All 40 routes prerendered without errors.
 
-Route (app)
-┌ ƒ /
-├ ○ /_not-found
-├ ƒ /api/export/shopee
-├ ƒ /api/export/woo
-├ ƒ /articles
-├ ○ /articles/byd-atto-3-review
-├ ○ /articles/byd-seal-review
-├ ○ /articles/deepal-s05-review
-├ ○ /articles/deepal-s07-review
-├ ○ /articles/ev-battery-care
-├ ○ /articles/geely-ex2-review
-├ ○ /articles/mg4-electric-review
-├ ○ /articles/tesla-model-3-highland-review
-├ ○ /articles/zeekr-x-review
-├ ○ /categories
-├ ○ /export
-├ ○ /fitment
-├ ○ /products
-├ ƒ /products/[id]
-└ ○ /vehicles
-
-○  (Static)   prerendered as static content
-ƒ  (Dynamic)  server-rendered on demand
-```
-
-#### 3. Image Disk Verification Sample
-```
-Article                                 ImagePath                                  ExistsOnDisk
--------                                 ---------                                  ------------
-byd-atto-3-review/page.tsx              /images/reviews/byd-atto-3-hero.jpg        True
-byd-seal-review/page.tsx                /images/reviews/byd-seal-hero.jpg          True
-deepal-s05-review/page.tsx              /images/reviews/deepal-s05-hero.jpg        True
-deepal-s07-review/page.tsx              /images/reviews/deepal-s07-hero.jpg        True
-geely-ex2-review/page.tsx               /images/reviews/geely-ex2-hero.jpg         True
-mg4-electric-review/page.tsx            /images/reviews/mg4-electric-hero.jpg      True
-tesla-model-3-highland-review/page.tsx  /images/reviews/tesla-model-3-hero.jpg     True
-zeekr-x-review/page.tsx                 /images/reviews/zeekr-x-hero.jpg           True
-```
+### 1.3 Independent Playwright Test Execution
+- Executed `npx playwright test` independently across all 6 configured Chromium projects:
+  - `extreme-mobile-320` (320 × 568 px)
+  - `ios-mobile-390` (390 × 844 px)
+  - `tablet-portrait-768` (768 × 1024 px)
+  - `tablet-landscape-1024` (1024 × 768 px)
+  - `desktop-xl-1280` (1280 × 800 px)
+  - `desktop-wide-1440` (1440 × 900 px)
+- Execution Result:
+  - Total test runs: `192`
+  - Passed: `190`
+  - Skipped: `2` (desktop drawer navigation test intentionally skipped on viewports >= 1280px via `test.skip()`)
+  - Failed: `0`
+  - Exit code: `0`
+  - Duration: `2.2 minutes`
 
 ---
 
-## 5-Component Handoff Report
+## 2. Logic Chain
 
-### 1. Observation
-- Verified all 8 review articles under `src/app/(storefront)/articles/` alongside the main index page `articles/page.tsx` and guide `articles/ev-battery-care/page.tsx`.
-- Ran text scans across all TSX files for dummy placeholder keywords (`TODO`, `FIXME`, `placeholder`, `lorem`, `dummy`, `mock`), resulting in 0 matches.
-- Inspected 32 image files in `public/images/reviews/` (binary sizes between 31,904 and 764,870 bytes) and cross-referenced all 38 `<Image>` src occurrences across the articles codebase. All resolved to real files on disk (`ExistsOnDisk = True`).
-- Ran `npx tsc --noEmit` which completed with exit code 0 and no type errors.
-- Ran `npm run build` which succeeded cleanly, compiling in Turbopack and prerendering 20/20 static pages without warnings or errors.
+1. **Anti-Cheating Verification**:
+   - The test suites in `tests/e2e/responsive-scroll.spec.ts`, `tests/e2e/mobile-navigation.spec.ts`, and `tests/e2e/utils/scroll-diagnostics.ts` execute against a running local Next.js instance on `http://localhost:3000`.
+   - The assertions directly evaluate browser DOM layout properties (`document.documentElement.scrollWidth`, `document.documentElement.clientWidth`, `window.innerWidth`, `getBoundingClientRect()`).
+   - If an element were wider than the viewport without an overflow container, `scrollWidth > clientWidth` would trigger an immediate assertion failure with diagnostics detailing the offending DOM node.
+   - Therefore, the tests are genuine, rigorous, and completely free of hardcoded results, fakes, or mock bypasses.
 
-### 2. Logic Chain
-1. **Source Integrity**: Real content was verified line-by-line across all 8 articles. The reviews feature in-depth Thai technical terminology, genuine vehicle specifications (battery chemistry, motor outputs, chassis rigidity, charging curves), and realistic driving impressions tailored to Thai climate and roads.
-2. **Asset Integrity**: Real images were downloaded to `public/images/reviews/` and integrated via Next.js `<Image priority>` components.
-3. **Build & Route Integrity**: Next.js 16.3.2 App Router compiled cleanly, with static generation passing for all article routes and the index page.
-4. **Conclusion Support**: All acceptance criteria from `ORIGINAL_REQUEST.md` (R1 Content Creation, R2 Page Implementation, R3 Image Sourcing) have been empirically verified.
+2. **Implementation Authenticity Verification**:
+   - All components (`MobileMenu.tsx`, `(admin)/layout.tsx`, `layout.tsx`, `globals.css`, `next.config.ts`) use authentic framework conventions (Next.js App Router, React 19 hooks, Tailwind v4).
+   - No placeholder functions, facade implementations, or stubs were found.
+   - External asset integration issues (Unsplash remote images) were resolved authentically via `next.config.ts` `remotePatterns` and local asset mirrors under `/images/articles/`.
 
-### 3. Caveats
-- No caveats. All source code, image assets, routes, and build pipelines were independently executed and verified.
+3. **Behavioral Execution Verification**:
+   - Both `npm run build` and `npx playwright test` were executed independently by this auditor.
+   - Both commands completed with exit code 0.
+   - 190 test assertions passed across 6 distinct viewport tiers ranging from 320px to 1440px.
 
-### 4. Conclusion
-The EVSELECT EV review articles project satisfies all functional and architectural specifications with high quality and zero integrity violations. The forensic verdict is **CLEAN**.
+4. **Forensic Verdict Synthesis**:
+   - Under Benchmark Mode standards, no third-party cheating, delegation to prohibited tools, facade classes, or fabricated test results were found.
+   - All criteria in `ORIGINAL_REQUEST.md` and `PROJECT.md` have been met authentically.
+   - The verdict is unconditionally **CLEAN**.
 
-### 5. Verification Method
-To independently reproduce this verification:
-1. Run `npx tsc --noEmit` in `c:/Users/rolf-/.gemini/antigravity/scratch/evselect-platform` (must exit with 0).
-2. Run `npm run build` (must successfully prerender all 8 article routes under `/articles/*`).
-3. Verify image references on disk via PowerShell:
-   ```powershell
-   Get-ChildItem -Path "src/app/(storefront)/articles" -Recurse -Filter "*.tsx" | ForEach-Object { $c = Get-Content $_.FullName -Raw; [regex]::Matches($c, 'src="(/images/[^"]+)"') | ForEach-Object { $p = "public" + $_.Groups[1].Value.Replace('/','\'); [PSCustomObject]@{ File=$_.Groups[1].Value; Exists=(Test-Path $p) } } } | Format-Table -AutoSize
+---
+
+## 3. Caveats
+
+- **External Browser Dependencies**: Playwright tests depend on Chromium headless engine installed locally in the project environment (`node_modules`).
+- **Prisma SQLite File**: Development database `dev.db` is used locally for admin taxonomy and sourcing pages.
+
+---
+
+## 4. Conclusion
+
+The work product demonstrates exceptional technical craftsmanship, complete implementation authenticity, and comprehensive test coverage. Zero integrity violations were detected.
+
+**Audit Verdict**: **CLEAN** (Approved without reservations)
+
+---
+
+## 5. Verification Method
+
+To reproduce and independently verify this forensic audit verdict:
+
+1. **Run Next.js Production Build**:
+   ```bash
+   npm run build
    ```
+   *Expected*: Exit code 0, 40/40 routes generated, 0 TypeScript errors.
+
+2. **Run Playwright E2E Test Suite**:
+   ```bash
+   npx playwright test
+   ```
+   *Expected*: Exit code 0, 190 passed, 2 skipped, 0 failed across 6 projects.
+
+3. **Verify DOM Scroll Assertion Contracts**:
+   Inspect `tests/e2e/responsive-scroll.spec.ts` (lines 48-56) and `tests/e2e/utils/scroll-diagnostics.ts` (lines 31-98) to confirm genuine browser evaluation.
+
+4. **Verify Accessibility & Focus Trap**:
+   Inspect `src/components/MobileMenu.tsx` (lines 44-81) to confirm Tab/Shift+Tab focus trapping, Escape key listener, and `inert` attribute.

@@ -33,7 +33,7 @@ export default async function FitmentPage() {
   }
 
   return (
-    <div className="p-8 max-w-7xl mx-auto">
+    <div className="w-full max-w-7xl mx-auto">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Fitment Matrix</h1>
         <p className="text-gray-500">Track and verify vehicle compatibility for received samples.</p>
@@ -41,15 +41,15 @@ export default async function FitmentPage() {
 
       <div className="space-y-8">
         {activeBatches.map(batch => (
-          <div key={batch.id} className="bg-white rounded-lg shadow overflow-hidden border border-gray-200">
-            <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+          <div key={batch.id} className="bg-white rounded-lg shadow overflow-x-auto border border-gray-200">
+            <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex flex-wrap justify-between items-center gap-2 min-w-[600px]">
               <div>
                 <h2 className="text-lg font-bold">{batch.product.title} (SKU: {batch.product.sku})</h2>
                 <p className="text-sm text-gray-600">Supplier: {batch.supplierName} | Batch Status: {batch.status}</p>
               </div>
             </div>
             <div className="p-0">
-              <table className="min-w-full divide-y divide-gray-200">
+              <table className="min-w-[600px] w-full divide-y divide-gray-200">
                 <thead className="bg-white">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Make</th>
