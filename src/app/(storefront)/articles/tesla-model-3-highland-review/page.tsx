@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว Tesla Model 3 Highland สเปกไทย: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยีที่สมบูรณ์แบบที่สุด | EVSELECT',
-  description: 'เจาะลึกรีวิว Tesla Model 3 Highland (2024-2026) สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range AWD, Performance AWD) กระจก Acoustic 360 องศา ช่วงล่างใหม่ เบาะเป่าลมเย็น จอหลัง 8 นิ้ว และเครือข่าย Supercharger ในไทย',
+  description: 'เจาะลึกรีวิว Tesla Model 3 Highland (2024-2026) สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range AWD, Performance AWD) กระจก Acoustic 360 องศา ช่วงล่างใหม่ เบาะเป่าลมเย็น จอหลัง 8 นิ้ว และเครือข่าย Supercharger ในไทย',
   keywords: [
     'Tesla Model 3 Highland',
     'รีวิว Tesla Model 3 Highland',
@@ -72,7 +72,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Tesla Model 3 Highland สเปกไทย: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยีที่สมบูรณ์แบบที่สุด',
-  'reviewBody': 'เจาะลึกรีวิว Tesla Model 3 Highland (2024-2026) สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range AWD, Performance AWD) กระจก Acoustic 360 องศา ช่วงล่างใหม่ เบาะเป่าลมเย็น จอหลัง 8 นิ้ว และเครือข่าย Supercharger ในไทย',
+  'reviewBody': 'เจาะลึกรีวิว Tesla Model 3 Highland (2024-2026) สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range AWD, Performance AWD) กระจก Acoustic 360 องศา ช่วงล่างใหม่ เบาะเป่าลมเย็น จอหลัง 8 นิ้ว และเครือข่าย Supercharger ในไทย',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
@@ -354,8 +354,8 @@ export default function TeslaModel3HighlandReviewPage() {
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">ความจุแบตเตอรี่ & เคมี</td>
                   <td className="py-3.5 px-3 font-semibold">60.0 kWh (CATL LFP)</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-slate-900">78.1 kWh (LG NMC)</td>
-                  <td className="py-3.5 px-3 bg-slate-50 font-semibold">78.1 kWh (LG NMC)</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-slate-900">75.0 kWh (LG NMC)</td>
+                  <td className="py-3.5 px-3 bg-slate-50 font-semibold">75.0 kWh (LG NMC)</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">ระยะทางวิ่งสูงสุด (WLTP)</td>
@@ -424,7 +424,7 @@ export default function TeslaModel3HighlandReviewPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-2">Long Range AWD</h3>
-                <div className="text-sm font-bold text-lime-800 mb-3">498 hp | 629 km (WLTP) | NMC 78.1 kWh</div>
+                <div className="text-sm font-bold text-lime-800 mb-3">498 hp | 629 km (WLTP) | NMC 75.0 kWh</div>
                 <p className="text-xs text-slate-700 leading-relaxed mb-4">
                   <strong>ความคุ้มค่าที่ลงตัวที่สุด (The Sweet Spot):</strong> รวมความแรง 498 แรงม้า (0-100 ใน 4.4 วินาที) เข้ากับระยะทางวิ่งไกลที่สุดถึง 629 กม. พร้อมระบบขับเคลื่อน 4 ล้อ AWD มั่นใจในทุกสภาพถนน ชาร์จเร็ว Supercharger 250 kW และระบบเสียง 17 ลำโพงระดับคอนเสิร์ตฮอลล์
                 </p>
@@ -794,12 +794,12 @@ export default function TeslaModel3HighlandReviewPage() {
           </div>
         </section>
 
-        {/* SECTION 09: PROS & CONS - STYLE */}
+        {/* SECTION 09: PROS & CONS */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-              8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
+              8. ข้อดี &amp; ข้อสังเกต (จุดเด่น &amp; ข้อสังเกต)
             </h2>
           </div>
 
@@ -877,7 +877,7 @@ export default function TeslaModel3HighlandReviewPage() {
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> EVSELECT Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 Tesla Model 3 Highland คือสปอร์ตซีดานไฟฟ้าที่น่าซื้อที่สุดในไทยเวลานี้ เลือกรุ่น <strong>Long Range AWD</strong> เพื่อความคุ้มค่าและความอุ่นใจสูงสุดในการเดินทางไกล

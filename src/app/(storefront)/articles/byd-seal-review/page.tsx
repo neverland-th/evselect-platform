@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว BYD Seal สเปกไทย 3 รุ่นย่อย (Dynamic / Premium / AWD Performance): สปอร์ตซีดานไฟฟ้า 530 แรงม้า | EVSELECT',
-  description: 'เจาะลึกรีวิว BYD Seal สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบอัตราเร่ง 0-100 ใน 3.8 วินาที แชสซี CTB ช่วงล่าง FSD แบตเตอรี่ Blade Battery และระยะวิ่งจริงบนถนนไทย',
+  description: 'เจาะลึกรีวิว BYD Seal สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบอัตราเร่ง 0-100 ใน 3.8 วินาที แชสซี CTB ช่วงล่าง FSD แบตเตอรี่ Blade Battery และระยะวิ่งจริงบนถนนไทย',
   keywords: [
     'BYD Seal',
     'รีวิว BYD Seal',
@@ -73,7 +73,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว BYD Seal สเปกไทย 3 รุ่นย่อย (Dynamic / Premium / AWD Performance): สปอร์ตซีดานไฟฟ้า 530 แรงม้า',
-  'reviewBody': 'เจาะลึกรีวิว BYD Seal สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบอัตราเร่ง 0-100 ใน 3.8 วินาที แชสซี CTB ช่วงล่าง FSD แบตเตอรี่ Blade Battery และระยะวิ่งจริงบนถนนไทย',
+  'reviewBody': 'เจาะลึกรีวิว BYD Seal สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบอัตราเร่ง 0-100 ใน 3.8 วินาที แชสซี CTB ช่วงล่าง FSD แบตเตอรี่ Blade Battery และระยะวิ่งจริงบนถนนไทย',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
@@ -811,7 +811,7 @@ export default function BYDSealReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
+            8. ข้อดี &amp; ข้อสังเกต (จุดเด่น &amp; ข้อสังเกต)
           </h2>
         </div>
 
@@ -889,7 +889,7 @@ export default function BYDSealReviewPage() {
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               สำหรับผู้ใช้งานทั่วไป <strong>BYD Seal Premium RWD (999,900 ฿)</strong> คือรุ่นที่สมดุลและคุ้มค่าที่สุด ส่วนผู้ที่ต้องการความแรงระดับไฮเปอร์คาร์ <strong>AWD Performance (1,099,900 ฿)</strong> มอบความเร้าใจที่หาตัวจับยาก

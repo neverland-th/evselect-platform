@@ -756,7 +756,7 @@ export default function GeelyEX2ReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
+            8. ข้อดี &amp; ข้อสังเกต (จุดเด่น &amp; ข้อสังเกต)
           </h2>
         </div>
 
@@ -830,7 +830,7 @@ export default function GeelyEX2ReviewPage() {
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               ในงบประมาณ 4 แสนต้นๆ <strong>Geely EX2</strong> คือรถยนต์ไฟฟ้าสำหรับคนเมืองที่คุ้มค่าและขับขี่นุ่มนวลที่สุด แนะนำรุ่น <strong>EX2 Max</strong> เพื่อรับกล้อง 360° และระบบ ADAS ครบชุด

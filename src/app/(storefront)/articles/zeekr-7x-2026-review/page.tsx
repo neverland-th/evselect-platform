@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kW ออปชันหรูระดับเรือธง | EVSELECT',
-  description: 'เจาะลึกรีวิว Zeekr 7X 2026 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range RWD, Performance AWD 646 แรงม้า) สถาปัตยกรรม 800V SiC ชาร์จ DC 420kW ชิป Snapdragon 8295 ช่วงล่างถุงลม และผลทดสอบจริงบนถนนเมืองไทย',
+  description: 'เจาะลึกรีวิว Zeekr 7X 2026 สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range RWD, Performance AWD 646 แรงม้า) สถาปัตยกรรม 800V SiC ชาร์จ DC 420kW ชิป Snapdragon 8295 ช่วงล่างถุงลม และผลทดสอบจริงบนถนนเมืองไทย',
   keywords: [
     'Zeekr 7X',
     'รีวิว Zeekr 7X',
@@ -74,7 +74,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Zeekr 7X 2026 สเปกไทย 3 รุ่นย่อย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง',
-  'reviewBody': 'เจาะลึกรีวิว Zeekr 7X 2026 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range RWD, Performance AWD 646 แรงม้า) สถาปัตยกรรม 800V SiC ชาร์จ DC 420kW ชิป Snapdragon 8295 ช่วงล่างถุงลม และผลทดสอบจริงบนถนนเมืองไทย',
+  'reviewBody': 'เจาะลึกรีวิว Zeekr 7X 2026 สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard RWD, Long Range RWD, Performance AWD 646 แรงม้า) สถาปัตยกรรม 800V SiC ชาร์จ DC 420kW ชิป Snapdragon 8295 ช่วงล่างถุงลม และผลทดสอบจริงบนถนนเมืองไทย',
   'datePublished': '2026-08-26T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
@@ -880,12 +880,12 @@ export default function Zeekr7XReviewPage() {
           </div>
         </section>
 
-        {/* SECTION 12: PROS & CONS - STYLE */}
+        {/* SECTION 12: PROS & CONS */}
         <section className="my-12 not-prose">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
               <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-              11. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
+              11. ข้อดี &amp; ข้อสังเกต (จุดเด่น &amp; ข้อสังเกต)
             </h2>
           </div>
 
@@ -963,7 +963,7 @@ export default function Zeekr7XReviewPage() {
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> EVSELECT Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 หากคุณกำลังมองหาพรีเมียมเอสยูวีไฟฟ้าระดับหรูที่คุ้มค่าและชาร์จเร็วที่สุดในไทย Zeekr 7X คือตัวเลือกอันดับหนึ่ง เลือกรุ่น <strong>Long Range RWD (1,599,000 ฿)</strong> เพื่อความคุ้มค่าลงตัว หรือ <strong>Performance AWD (1,799,000 ฿)</strong> สำหรับที่สุดแห่งสมรรถนะ

@@ -763,7 +763,7 @@ export default function DeepalS05ReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
+            8. ข้อดี &amp; ข้อสังเกต (จุดเด่น &amp; ข้อสังเกต)
           </h2>
         </div>
 
@@ -837,7 +837,7 @@ export default function DeepalS05ReviewPage() {
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               <strong>Deepal S05</strong> คือรถ EV ที่คุ้มค่าและสนุกที่สุดในงบ 8 แสนบาท ตอบโจทย์สายท่องเที่ยว แคมปิ้ง และคอนเทนต์ครีเอเตอร์อย่างไม่มีคู่แข่งเทียบได้

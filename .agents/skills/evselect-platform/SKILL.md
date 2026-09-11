@@ -28,7 +28,7 @@ evselect-platform/
 │   ├── app/
 │   │   ├── (admin)/          # Admin portals (products, vehicles, fitment, categories, export)
 │   │   ├── (storefront)/     # Customer-facing storefront
-│   │   │   ├── articles/     # Editorial hub & in-depth CarExpert-style EV review routes
+│   │   │   ├── articles/     # Editorial hub & in-depth EVSELECT review routes
 │   │   │   ├── layout.tsx    # Storefront header (glassmorphism), announcement bar, footer
 │   │   │   └── page.tsx      # Main landing page, hero, trust pillars, QC 5-stage workflow
 │   │   ├── api/export/       # CSV/JSON data export endpoints for Shopee & WooCommerce
@@ -62,7 +62,7 @@ evselect-platform/
 
 ## 3. Workflow: Adding a New EV Vehicle Review Article
 
-All editorial reviews follow the structured, 12-dimension evaluation format of CarExpert, customized for Thai climate and roads.
+All editorial reviews follow the structured, 12-dimension evaluation format of EVSELECT, customized for Thai climate and roads.
 
 ### Step 1: Create Review Page
 Create a new directory and `page.tsx` under `src/app/(storefront)/articles/<vehicle-slug>-review/page.tsx`:

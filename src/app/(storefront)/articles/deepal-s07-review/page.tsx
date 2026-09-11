@@ -35,7 +35,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย | EVSELECT',
-  description: 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
+  description: 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
   keywords: [
     'Changan Deepal S07',
     'รีวิว Deepal S07',
@@ -84,7 +84,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย',
-  'reviewBody': 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
+  'reviewBody': 'เจาะลึกรีวิว Changan Deepal S07 สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่ารุ่น Standard และ Long Range มอเตอร์หลัง 258 แรงม้า ชาร์จ DC 167 kW ช่วงล่างนุ่มนวล และม่านบังแดดไฟฟ้าแท้จากโรงงาน',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
@@ -765,7 +765,7 @@ export default function DeepalS07ReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
+            8. ข้อดี &amp; ข้อสังเกต (จุดเด่น &amp; ข้อสังเกต)
           </h2>
         </div>
 
@@ -839,7 +839,7 @@ export default function DeepalS07ReviewPage() {
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               หากคุณมองหา D-SUV ไฟฟ้าที่คุ้มค่าในงบ 1.1 – 1.3 ล้านบาท <strong>Deepal S07</strong> คือหนึ่งในตัวเลือกที่สมบูรณ์แบบที่สุด ม่านบังแดดไฟฟ้าและการชาร์จ DC 167 kW ตอบโจทย์การใช้งานในไทยแบบไร้ที่ติ

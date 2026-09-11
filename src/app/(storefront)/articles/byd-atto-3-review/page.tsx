@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว BYD Atto 3 สเปกไทย (MY2024-2026): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน? | EVSELECT',
-  description: 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard, Premium, Extended Range) ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
+  description: 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard, Premium, Extended Range) ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
   keywords: [
     'BYD Atto 3',
     'รีวิว BYD Atto 3',
@@ -72,7 +72,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว BYD Atto 3 สเปกไทย (Standard / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม',
-  'reviewBody': 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย สไตล์ วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
+  'reviewBody': 'เจาะลึกรีวิว BYD Atto 3 สเปกไทย เจาะลึกวิเคราะห์ความคุ้มค่า 3 รุ่นย่อย ทดสอบความกว้างขวาง ช่วงล่างนุ่มซับทางขรุขระ แบตเตอรี่ Blade Battery และความคุ้มค่าในปี 2026',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
@@ -805,7 +805,7 @@ export default function BYDAtto3ReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-3">
             <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            8. ข้อดี &amp; ข้อสังเกต (Pros &amp; Cons - Style)
+            8. ข้อดี &amp; ข้อสังเกต (จุดเด่น &amp; ข้อสังเกต)
           </h2>
         </div>
 
@@ -883,7 +883,7 @@ export default function BYDAtto3ReviewPage() {
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> / EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> EVSELECT Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               <strong>BYD Atto 3 Extended Range (799,900 ฿)</strong> คือรุ่นที่แนะนำให้เลือกซื้อมากที่สุด ได้แบตเตอรี่ใหญ่ วิ่งไกล 480 กม. จอหมุน 15.6 นิ้ว และออปชันครบในราคาที่จับต้องได้ง่าย
