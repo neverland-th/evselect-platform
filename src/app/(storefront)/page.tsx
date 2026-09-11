@@ -10,13 +10,18 @@ import {
   MessageCircle, 
   Zap, 
   ArrowRight, 
-  Sliders, 
   Sparkles, 
   Box, 
   Truck, 
   RotateCcw,
   Check,
-  AlertTriangle
+  AlertTriangle,
+  Star,
+  Award,
+  ChevronRight,
+  TrendingUp,
+  SlidersHorizontal,
+  Flame
 } from 'lucide-react';
 
 export const revalidate = 0; // Dynamic server rendering
@@ -32,7 +37,7 @@ export default async function StorefrontPage() {
     // DB not available — use fallback data below
   }
 
-  // Fallback initial Thai EV vehicles if database hasn't been seeded yet
+  // Authoritative Thai EV vehicle list fallback
   const defaultVehicles: VehicleOption[] = [
     { id: 'v1', make: 'BYD', model: 'Atto 3', year: '2022+', variant: 'Extended Range' },
     { id: 'v2', make: 'BYD', model: 'Atto 3', year: '2022+', variant: 'Standard Range' },
@@ -127,12 +132,12 @@ export default async function StorefrontPage() {
       orderBy: { createdAt: 'desc' }
     });
   } catch {
-    // DB not available — products will fall through to curated demo data below
+    // DB not available — products will fall through to curated starter data below
   }
 
   let products: StorefrontProduct[] = dbProducts.map(transformProduct);
 
-  // If no products in DB yet, provide realistic curated starter accessories
+  // Curated high-fitment starter accessories matching official Thai EV models
   if (products.length === 0) {
     products = [
       {
@@ -155,7 +160,7 @@ export default async function StorefrontPage() {
         id: 'p2',
         sku: 'EV-SEAL-TPE-MATS',
         title: 'ชุดพรมปูพื้น TPE 3D พรีเมียม กันน้ำ ไร้กลิ่น สำหรับ BYD Seal',
-        description: 'สแกน 3D เข้ารูปพวงมาลัยขวาสเปกไทย 100% วัสดุ TPE เกรดการแพทย์ ไร้กลิ่นพลาสติก ทนน้ำ โคลน ล้างทำความสะอาดง่าย',
+        description: 'สแกน 3D เข้ารูปพวงมาลัยขวาสเปกไทย 100% วัสดุ TPE คุณภาพสูง ไร้กลิ่นพลาสติก ทนน้ำ โคลน ล้างทำความสะอาดง่าย ไม่เบียดคันเร่ง',
         categoryName: 'พรมปูพื้นและถาดรอง',
         shopeeId: '1002',
         wooId: '12',
@@ -172,7 +177,7 @@ export default async function StorefrontPage() {
         id: 'p3',
         sku: 'EV-ATTO3-SUNSHADE',
         title: 'ม่านบังแดดหลังคาพาโนรามา เคลือบเงินสะท้อนความร้อน BYD Atto 3',
-        description: 'โครงสปริงเข้ารูปเป๊ะ ไม่หย่อนคล้อย เคลือบชั้น Nano Silver สะท้อนรังสี UV และความร้อน ช่วยลดอุณหภูมิห้องโดยสารในไทยได้สูงสุด 14°C',
+        description: 'โครงสปริงเข้ารูปเป๊ะ ไม่หย่อนคล้อย เคลือบชั้น Nano Silver สะท้อนรังสี UV และความร้อน ช่วยลดอุณหภูมิห้องโดยสารขณะจอดตากแดดในไทย',
         categoryName: 'ม่านบังแดดและกันความร้อน',
         shopeeId: '1003',
         wooId: '13',
@@ -233,10 +238,10 @@ export default async function StorefrontPage() {
   }
 
   return (
-    <div className="space-y-20 pb-20 bg-white">
-      {/* Hero Section with Real Automotive Cockpit Imagery */}
-      <section className="relative pt-12 pb-20 md:pt-24 md:pb-36 overflow-hidden border-b border-slate-200 bg-slate-50/50">
-        {/* Background Real Photo & Gradient Overlays */}
+    <div className="space-y-16 md:space-y-24 pb-20 bg-white">
+      {/* 1. Hero Stage: Dynamic Headline, Value Prop & 3-Car Showcase Preview */}
+      <section className="relative pt-8 pb-16 md:pt-16 md:pb-28 overflow-hidden border-b border-slate-200 bg-slate-50/50">
+        {/* Subtle Background Texture & Soft Ambience */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
             src="/images/hero-bg.jpg"
@@ -245,73 +250,189 @@ export default async function StorefrontPage() {
             priority
             className="object-cover object-center opacity-10 filter contrast-125"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-slate-50/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-slate-50/95" />
           <div className="absolute top-10 left-1/4 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl" />
           <div className="absolute top-20 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto space-y-6">
-            {/* Logo Badge in Hero */}
-            <div className="inline-flex items-center gap-2 bg-white backdrop-blur-md border border-slate-200 rounded-full px-4 py-1.5 shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-lime-500 animate-pulse"></span>
-              <span className="text-xs font-mono font-medium text-slate-700">
-                แพลตฟอร์มชั้นนำ
+          <div className="text-center max-w-4xl mx-auto space-y-6">
+            {/* Top Thai RHD Verification Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border border-slate-200 rounded-full px-4 py-1.5 shadow-xs">
+              <span className="w-2.5 h-2.5 rounded-full bg-lime-500 animate-pulse shrink-0"></span>
+              <span className="text-xs font-semibold text-slate-800">
+                🇹🇭 ศูนย์วิจัย Fitment &amp; อุปกรณ์เสริมรถ EV สเปกไทยพวงมาลัยขวา (RHD) 100%
               </span>
             </div>
 
-            {/* Main Headline */}
+            {/* Main Punchy Automotive Headline */}
             <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                DRIVE BETTER. <br />
-                <span className="text-gradient-lime">SELECT SMARTER.</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+                DRIVE BETTER. <br className="hidden sm:inline" />
+                <span className="bg-gradient-to-r from-lime-600 via-lime-500 to-emerald-600 bg-clip-text text-transparent">
+                  SELECT SMARTER.
+                </span>
               </h1>
-              <p className="text-base sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                อุปกรณ์เสริม EV คัดเกรดพรีเมียม <strong className="text-slate-900 font-semibold">ผ่านการทดสอบ Fitment จริงบนรถสเปกไทย 100%</strong> ไม่ต้องเสี่ยงเดา ไม่เจอปัญหาติดขัด ใส่ได้พอดีแน่นอน
+              <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                อุปกรณ์เสริม EV คัดเกรดพรีเมียม <strong className="text-slate-900 font-semibold">ผ่านการทดสอบติดตั้งจริงบนรถสเปกไทย 100%</strong> ไม่ต้องเสี่ยงเดา ไม่ติดขัด ไม่เจาะตัวถัง ไม่กระทบประกันศูนย์ พร้อมบทวิเคราะห์รีวิวรถยนต์ไฟฟ้าเจาะลึกจาก EVSELECT Test Lab
               </p>
             </div>
 
-            {/* Quick Hero CTA Buttons */}
+            {/* Hero Quick Navigation CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 w-full px-4 sm:px-0">
               <a
                 href="#vehicle-finder"
-                className="inline-flex justify-center items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm transition-all hover:scale-105 w-full sm:w-auto"
+                className="inline-flex justify-center items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black text-sm font-bold px-6 py-3 rounded-xl shadow-sm transition-all hover:scale-105 w-full sm:w-auto"
               >
                 <Car className="w-4 h-4" />
-                <span>เลือกรุ่นรถของคุณ</span>
+                <span>ค้นหาอุปกรณ์ตรงรุ่น</span>
                 <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href="#featured-reviews"
+                className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 text-sm font-semibold px-6 py-3 rounded-xl border border-slate-300 shadow-xs transition-all w-full sm:w-auto"
+              >
+                <Award className="w-4 h-4 text-lime-600" />
+                <span>อ่านรีวิว EV เจาะลึก</span>
               </a>
 
               <a
                 href="https://shopee.co.th/shop/9535932"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-300 shadow-xs backdrop-blur-md transition-all w-full sm:w-auto"
+                className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 text-sm font-semibold px-6 py-3 rounded-xl border border-slate-300 shadow-xs transition-all w-full sm:w-auto"
               >
                 <ShoppingBag className="w-4 h-4 text-orange-500" />
-                <span>ช้อปผ่าน Shopee Thailand</span>
+                <span>ร้านค้า Shopee Thailand</span>
               </a>
             </div>
 
+            {/* 3-Car Showcase Preview Cards (Tesla Highland, Zeekr X 2026, BYD Seal) */}
+            <div className="pt-6 sm:pt-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+                {/* 1. Tesla Model 3 Highland */}
+                <Link
+                  href="/articles/tesla-model-3-highland-review"
+                  className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col"
+                >
+                  <div className="relative h-44 w-full bg-slate-100 overflow-hidden">
+                    <Image
+                      src="/images/reviews/tesla-model-3-hero.jpg"
+                      alt="Tesla Model 3 Highland สเปกไทย"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[11px] font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded shadow-xs">
+                        Tesla Model 3
+                      </span>
+                    </div>
+                    <div className="absolute top-2.5 right-2.5 bg-lime-500 text-black text-[11px] font-extrabold px-2 py-0.5 rounded shadow-xs">
+                      9.3 / 10
+                    </div>
+                  </div>
+                  <div className="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                        Tesla Model 3 Highland
+                      </h2>
+                      <p className="text-xs text-slate-500">
+                        Performance 460 แรงม้า • กระจก Acoustic 360° • เบาะเป่าลมเย็น
+                      </p>
+                    </div>
+                    <div className="pt-2 flex items-center justify-between text-[11px] font-semibold text-lime-700 border-t border-slate-100">
+                      <span>อ่านรีวิวเจาะลึก</span>
+                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+
+                {/* 2. The New Zeekr X (July 2026) */}
+                <Link
+                  href="/articles/zeekr-x-review"
+                  className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col"
+                >
+                  <div className="relative h-44 w-full bg-slate-100 overflow-hidden">
+                    <Image
+                      src="/images/reviews/zeekr-x-hero.jpg"
+                      alt="The New Zeekr X กรกฎาคม 2026 สเปกไทย"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[11px] font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded shadow-xs">
+                        Zeekr X (ก.ค. 2026)
+                      </span>
+                    </div>
+                    <div className="absolute top-2.5 right-2.5 bg-lime-500 text-black text-[11px] font-extrabold px-2 py-0.5 rounded shadow-xs">
+                      9.1 / 10
+                    </div>
+                  </div>
+                  <div className="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                        The New Zeekr X 2026
+                      </h2>
+                      <p className="text-xs text-slate-500">
+                        มอเตอร์คู่ AWD 489 แรงม้า • 0-100 ใน 3.7 วินาที • ใต้ท้องสูง 189 มม.
+                      </p>
+                    </div>
+                    <div className="pt-2 flex items-center justify-between text-[11px] font-semibold text-lime-700 border-t border-slate-100">
+                      <span>อ่านรีวิวเจาะลึก</span>
+                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+
+                {/* 3. BYD Seal AWD Performance */}
+                <Link
+                  href="/articles/byd-seal-review"
+                  className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col"
+                >
+                  <div className="relative h-44 w-full bg-slate-100 overflow-hidden">
+                    <Image
+                      src="/images/reviews/byd-seal-hero.jpg"
+                      alt="BYD Seal AWD Performance สเปกไทย"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[11px] font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded shadow-xs">
+                        BYD Seal
+                      </span>
+                    </div>
+                    <div className="absolute top-2.5 right-2.5 bg-lime-500 text-black text-[11px] font-extrabold px-2 py-0.5 rounded shadow-xs">
+                      9.0 / 10
+                    </div>
+                  </div>
+                  <div className="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                        BYD Seal AWD Performance
+                      </h2>
+                      <p className="text-xs text-slate-500">
+                        สปอร์ตซีดาน 530 แรงม้า • เทคโนโลยี Cell-to-Body • ควบคุม iTAC
+                      </p>
+                    </div>
+                    <div className="pt-2 flex items-center justify-between text-[11px] font-semibold text-lime-700 border-t border-slate-100">
+                      <span>อ่านรีวิวเจาะลึก</span>
+                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
             {/* Trust Pillars Banner */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-10 text-left">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-6 text-left">
               <div className="bg-white border border-slate-200/90 rounded-2xl p-4 flex items-center gap-3 shadow-xs">
                 <div className="w-10 h-10 rounded-xl bg-lime-50 text-lime-700 flex items-center justify-center shrink-0 border border-lime-200">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-slate-900">ทดสอบบนรถไทย</p>
-                  <p className="text-[11px] text-slate-500">พวงมาลัยขวาใส่ได้ 100%</p>
-                </div>
-              </div>
-
-              <div className="bg-white border border-slate-200/90 rounded-2xl p-4 flex items-center gap-3 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-lime-50 text-lime-700 flex items-center justify-center shrink-0 border border-lime-200">
-                  <Box className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-slate-900">คัดเกรดโรงงาน</p>
-                  <p className="text-[11px] text-slate-500">ตรวจสอบ QC อย่างเข้มงวด</p>
+                  <p className="text-xs font-bold text-slate-900">ทดสอบบนรถไทย 100%</p>
+                  <p className="text-[11px] text-slate-500">พวงมาลัยขวา RHD ใส่ได้เป๊ะ</p>
                 </div>
               </div>
 
@@ -320,8 +441,8 @@ export default async function StorefrontPage() {
                   <Truck className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-slate-900">ส่งด่วนจากไทย</p>
-                  <p className="text-[11px] text-slate-500">ศูนย์สต็อกกรุงเทพฯ</p>
+                  <p className="text-xs font-bold text-slate-900">สต็อกพร้อมส่ง กทม.</p>
+                  <p className="text-[11px] text-slate-500">จัดส่งไว 24-48 ชั่วโมง</p>
                 </div>
               </div>
 
@@ -334,33 +455,439 @@ export default async function StorefrontPage() {
                   <p className="text-[11px] text-slate-500">เปลี่ยนคืนฟรีใน 7 วัน</p>
                 </div>
               </div>
+
+              <div className="bg-white border border-slate-200/90 rounded-2xl p-4 flex items-center gap-3 shadow-xs">
+                <div className="w-10 h-10 rounded-xl bg-lime-50 text-lime-700 flex items-center justify-center shrink-0 border border-lime-200">
+                  <ShoppingBag className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-900">ช้อปมั่นใจ ปลอดภัย</p>
+                  <p className="text-[11px] text-slate-500">Shopee Mall / มีทีมงานดูแล</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Interactive Catalog Section with Filter */}
+      {/* 2. Quick Brand Selector Bar */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2.5">
+              <SlidersHorizontal className="w-5 h-5 text-lime-600" />
+              <div>
+                <h3 className="text-sm font-bold text-slate-900">เลือกยี่ห้อรถของคุณเพื่อค้นหาอุปกรณ์ตรงรุ่น</h3>
+                <p className="text-xs text-slate-500">คลิกเพื่อไปยังระบบกรองอุปกรณ์สำหรับรถยนต์ไฟฟ้าสเปกไทย</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              <a
+                href="#vehicle-finder"
+                className="px-3.5 py-1.5 bg-white hover:bg-lime-50 border border-slate-200 hover:border-lime-400 text-xs font-bold text-slate-800 rounded-xl shadow-xs transition-colors flex items-center gap-1.5"
+              >
+                <span>BYD</span>
+                <span className="text-[10px] text-slate-400 font-normal">(Seal, Atto 3, Sealion)</span>
+              </a>
+              <a
+                href="#vehicle-finder"
+                className="px-3.5 py-1.5 bg-white hover:bg-lime-50 border border-slate-200 hover:border-lime-400 text-xs font-bold text-slate-800 rounded-xl shadow-xs transition-colors flex items-center gap-1.5"
+              >
+                <span>Tesla</span>
+                <span className="text-[10px] text-slate-400 font-normal">(Model 3 Highland, Y)</span>
+              </a>
+              <a
+                href="#vehicle-finder"
+                className="px-3.5 py-1.5 bg-white hover:bg-lime-50 border border-slate-200 hover:border-lime-400 text-xs font-bold text-slate-800 rounded-xl shadow-xs transition-colors flex items-center gap-1.5"
+              >
+                <span>Zeekr</span>
+                <span className="text-[10px] text-slate-400 font-normal">(X 2026, 009, 7X)</span>
+              </a>
+              <a
+                href="#vehicle-finder"
+                className="px-3.5 py-1.5 bg-white hover:bg-lime-50 border border-slate-200 hover:border-lime-400 text-xs font-bold text-slate-800 rounded-xl shadow-xs transition-colors flex items-center gap-1.5"
+              >
+                <span>Deepal</span>
+                <span className="text-[10px] text-slate-400 font-normal">(S05, S07, L07)</span>
+              </a>
+              <a
+                href="#vehicle-finder"
+                className="px-3.5 py-1.5 bg-white hover:bg-lime-50 border border-slate-200 hover:border-lime-400 text-xs font-bold text-slate-800 rounded-xl shadow-xs transition-colors flex items-center gap-1.5"
+              >
+                <span>Geely</span>
+                <span className="text-[10px] text-slate-400 font-normal">(EX2)</span>
+              </a>
+              <a
+                href="#vehicle-finder"
+                className="px-3.5 py-1.5 bg-white hover:bg-lime-50 border border-slate-200 hover:border-lime-400 text-xs font-bold text-slate-800 rounded-xl shadow-xs transition-colors flex items-center gap-1.5"
+              >
+                <span>MG</span>
+                <span className="text-[10px] text-slate-400 font-normal">(MG4)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Main Interactive Catalog Section with Filter */}
+      <section id="vehicle-finder" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
+        <div className="mb-6 space-y-1 text-center sm:text-left">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-lime-700 bg-lime-50 px-3 py-1 rounded-full border border-lime-200">
+            <Car className="w-3.5 h-3.5" />
+            <span>ระบบค้นหาอุปกรณ์ตรงรุ่น (Vehicle Accessory Finder)</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            เลือกดูอุปกรณ์สำหรับรถ EV ของคุณ
+          </h2>
+          <p className="text-sm text-slate-600">
+            เฉพาะสินค้าที่ผ่านการทดสอบ Fitment บนรถสเปกไทยพวงมาลัยขวา 100% เท่านั้น
+          </p>
+        </div>
         <VehicleFilter vehicles={vehicles} products={products} />
       </section>
 
-      {/* The EVSELECT Standard & Fitment Assurance Section with Real Inspection Photo */}
-      <section id="fitment-assurance" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-        <div className="bg-slate-50 border border-slate-200/90 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+      {/* 4. Popular EV Accessory Categories Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-lime-700 bg-lime-50 px-3 py-1 rounded-full border border-lime-200">
+            หมวดหมู่อุปกรณ์ยอดนิยม
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            อุปกรณ์ที่เจ้าของรถ EV ในไทยเลือกติดตั้งมากที่สุด
+          </h2>
+          <p className="text-sm text-slate-600">
+            คัดสรรวัสดุเกรดพรีเมียม ไร้กลิ่น ทนต่อสภาพอากาศร้อนแดดจัดของเมืองไทย 40°C
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Category 1: TPE 3D Mats */}
+          <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col">
+            <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
+              <Image
+                src="/images/tpe-floormats.jpg"
+                alt="ชุดพรมปูพื้น TPE 3D พรีเมียม"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5">
+                <span className="text-[11px] font-bold text-slate-900 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                  ยอดนิยมอันดับ 1
+                </span>
+              </div>
+            </div>
+            <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+              <div className="space-y-1">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                  ชุดพรมปูพื้น TPE 3D พรีเมียม
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  สแกน 3D เข้ารูปพวงมาลัยขวา ไร้กลิ่นพลาสติกเมื่อจอดตากแดดเมืองไทย 40°C กันน้ำ โคลน ล้างทำความสะอาดง่าย ไม่เบียดคันเร่ง
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-lime-700">
+                <span>สำหรับ BYD, Tesla, Zeekr</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </div>
+
+          {/* Category 2: Sunroof Shade */}
+          <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col">
+            <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
+              <Image
+                src="/images/sunroof-shade.jpg"
+                alt="ม่านบังแดดหลังคาพาโนรามา เคลือบเงิน Nano-Silver"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5">
+                <span className="text-[11px] font-bold text-slate-900 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                  จำเป็นสำหรับแดดไทย
+                </span>
+              </div>
+            </div>
+            <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+              <div className="space-y-1">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                  ม่านบังแดดหลังคา Nano-Silver
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  โครงสปริงเมมโมรี่เข้ารูป ไม่หย่อนคล้อย เคลือบชั้น Nano Silver สะท้อนรังสี UV และความร้อน ลดอุณหภูมิห้องโดยสารขณะจอดกลางแดด
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-lime-700">
+                <span>สำหรับ Model Y/3, Atto 3, Seal</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </div>
+
+          {/* Category 3: Tray Organizer */}
+          <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col">
+            <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
+              <Image
+                src="/images/tray-organizer.jpg"
+                alt="ถาดวางของคอนโซลกลาง 2 ชั้น บุผ้ากำมะหยี่"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5">
+                <span className="text-[11px] font-bold text-slate-900 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                  จัดระเบียบในรถ
+                </span>
+              </div>
+            </div>
+            <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+              <div className="space-y-1">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                  ถาดคอนโซลกลาง 2 ชั้น
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  เพิ่มพื้นที่จัดเก็บ บุผ้ากำมะหยี่ลดเสียงก๊อกแก๊กของกุญแจและเหรียญ รางสไลด์ลื่นไหล ใช้งานง่ายไม่ติดขัดสายชาร์จ
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-lime-700">
+                <span>สำหรับ Model 3 Highland, Zeekr X</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </div>
+
+          {/* Category 4: Screen Protector & Wireless Pad */}
+          <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col">
+            <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
+              <Image
+                src="/images/screen-protector.jpg"
+                alt="ฟิล์มกระจกนิรภัย 9H เคลือบด้านกันรอยหน้าจอกลาง"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5">
+                <span className="text-[11px] font-bold text-slate-900 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+                  ปกป้องหน้าจอ
+                </span>
+              </div>
+            </div>
+            <div className="p-5 space-y-2 flex-1 flex flex-col justify-between">
+              <div className="space-y-1">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                  ฟิล์มกระจก 9H &amp; ซิลิโคนแท่นชาร์จ
+                </h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  กระจกนิรภัย 9H สัมผัสลื่นไหล เคลือบสารลดรอยนิ้วมือและลดแสงสะท้อน พร้อมแผ่นซิลิโคนถนอมแท่นชาร์จไร้สาย
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-lime-700">
+                <span>สำหรับ Deepal, BYD, Tesla</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Featured EVSELECT Editorial Reviews & Scorecard Showcase */}
+      <section id="featured-reviews" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
+        <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div className="space-y-1">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-lime-700 bg-lime-100 border border-lime-300 px-3 py-1 rounded-full">
+                <Award className="w-3.5 h-3.5" />
+                <span>EVSELECT IN-DEPTH REVIEWS</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                รีวิวและบทวิเคราะห์เจาะลึกรถ EV สเปกไทย
+              </h2>
+              <p className="text-sm text-slate-600 max-w-2xl">
+                ทดสอบขับขี่จริงบนถนนเมืองไทย ทั้งสมรรถนะ อัตรากินไฟ การเก็บเสียง NVH และฟิตติ้งอุปกรณ์เสริม โดยทีมงาน EVSELECT
+              </p>
+            </div>
+
+            <Link
+              href="/articles"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-lime-700 bg-white hover:bg-lime-50 border border-slate-200 px-4 py-2 rounded-xl transition-colors shrink-0 shadow-xs"
+            >
+              <span>ดูบทความทั้งหมด (20+ เรื่อง)</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          {/* 4 Review Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Review 1: The New Zeekr X (July 2026) */}
+            <Link
+              href="/articles/zeekr-x-review"
+              className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col sm:flex-row"
+            >
+              <div className="relative w-full sm:w-48 h-48 sm:h-auto bg-slate-100 shrink-0 overflow-hidden">
+                <Image
+                  src="/images/reviews/zeekr-x-hero.jpg"
+                  alt="รีวิว The New Zeekr X กรกฎาคม 2026 สเปกไทย"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2.5 left-2.5 bg-lime-500 text-black text-xs font-extrabold px-2 py-0.5 rounded shadow-xs">
+                  9.1 / 10
+                </div>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono font-bold text-lime-700 bg-lime-50 px-2 py-0.5 rounded border border-lime-200">
+                      ฉบับอัปเดต ก.ค. 2026
+                    </span>
+                    <span className="text-[11px] text-slate-400">สเปกไทย RHD</span>
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                    The New Zeekr X (MY2026): พรีเมียม SUV 489 แรงม้า
+                  </h3>
+                  <p className="text-xs text-slate-500 line-clamp-2">
+                    มอเตอร์คู่ AWD 489 hp (360 kW) • 0-100 กม./ชม. ใน 3.7 วินาที • ช่วงล่างยกสูง 189 มม. ซับแรงสะเทือนหลุมลูกรังเมืองไทยได้ยอดเยี่ยม
+                  </p>
+                </div>
+                <div className="flex items-center justify-between text-xs font-semibold text-lime-700 pt-2 border-t border-slate-100">
+                  <span>อ่านรีวิวฉบับเต็ม</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* Review 2: Tesla Model 3 Highland */}
+            <Link
+              href="/articles/tesla-model-3-highland-review"
+              className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col sm:flex-row"
+            >
+              <div className="relative w-full sm:w-48 h-48 sm:h-auto bg-slate-100 shrink-0 overflow-hidden">
+                <Image
+                  src="/images/reviews/tesla-model-3-hero.jpg"
+                  alt="รีวิว Tesla Model 3 Highland สเปกไทย"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2.5 left-2.5 bg-lime-500 text-black text-xs font-extrabold px-2 py-0.5 rounded shadow-xs">
+                  9.3 / 10
+                </div>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono font-bold text-lime-700 bg-lime-50 px-2 py-0.5 rounded border border-lime-200">
+                      EVSELECT Editor&apos;s Pick
+                    </span>
+                    <span className="text-[11px] text-slate-400">สเปกไทย RHD</span>
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                    Tesla Model 3 Highland: เงียบ นุ่ม และลงตัวที่สุด
+                  </h3>
+                  <p className="text-xs text-slate-500 line-clamp-2">
+                    Performance 460 แรงม้า (343 kW) • 0-100 ใน 3.1 วิ • กระจก Acoustic 360° รอบคัน • เบาะเป่าลมเย็นระบายอากาศเพื่ออากาศร้อนไทย
+                  </p>
+                </div>
+                <div className="flex items-center justify-between text-xs font-semibold text-lime-700 pt-2 border-t border-slate-100">
+                  <span>อ่านรีวิวฉบับเต็ม</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* Review 3: Zeekr 009 Flagship MPV */}
+            <Link
+              href="/articles/zeekr-009-review"
+              className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col sm:flex-row"
+            >
+              <div className="relative w-full sm:w-48 h-48 sm:h-auto bg-slate-100 shrink-0 overflow-hidden">
+                <Image
+                  src="/images/reviews/zeekr-009-hero.jpg"
+                  alt="รีวิว Zeekr 009 สเปกไทย"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2.5 left-2.5 bg-lime-500 text-black text-xs font-extrabold px-2 py-0.5 rounded shadow-xs">
+                  9.4 / 10
+                </div>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono font-bold text-lime-700 bg-lime-50 px-2 py-0.5 rounded border border-lime-200">
+                      เรือธงลักชัวรี
+                    </span>
+                    <span className="text-[11px] text-slate-400">สเปกไทย RHD</span>
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                    Zeekr 009: นิยามใหม่ของ First Class MPV ไฟฟ้า 603 แรงม้า
+                  </h3>
+                  <p className="text-xs text-slate-500 line-clamp-2">
+                    ช่วงล่างถุงลมคู่ Dual-Chamber Air Suspension ดูดซับคอสะพานกรุงเทพฯ ได้ไร้ที่ติ พร้อมเบาะ Sofaro First Class นุ่มสบาย
+                  </p>
+                </div>
+                <div className="flex items-center justify-between text-xs font-semibold text-lime-700 pt-2 border-t border-slate-100">
+                  <span>อ่านรีวิวฉบับเต็ม</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* Review 4: BYD Seal AWD Performance */}
+            <Link
+              href="/articles/byd-seal-review"
+              className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col sm:flex-row"
+            >
+              <div className="relative w-full sm:w-48 h-48 sm:h-auto bg-slate-100 shrink-0 overflow-hidden">
+                <Image
+                  src="/images/reviews/byd-seal-hero.jpg"
+                  alt="รีวิว BYD Seal AWD Performance สเปกไทย"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2.5 left-2.5 bg-lime-500 text-black text-xs font-extrabold px-2 py-0.5 rounded shadow-xs">
+                  9.0 / 10
+                </div>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono font-bold text-lime-700 bg-lime-50 px-2 py-0.5 rounded border border-lime-200">
+                      สปอร์ตยอดนิยม
+                    </span>
+                    <span className="text-[11px] text-slate-400">สเปกไทย RHD</span>
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-lime-700 transition-colors">
+                    BYD Seal AWD: ซีดานไฟฟ้า 530 แรงม้า ช่วงล่างสปอร์ต
+                  </h3>
+                  <p className="text-xs text-slate-500 line-clamp-2">
+                    0-100 ใน 3.8 วินาที • เทคโนโลยีโครงสร้างตัวถัง CTB แข็งแกร่ง • พร้อมระบบควบคุมแรงบิด iTAC เกาะถนนหนึบแน่น
+                  </p>
+                </div>
+                <div className="flex items-center justify-between text-xs font-semibold text-lime-700 pt-2 border-t border-slate-100">
+                  <span>อ่านรีวิวฉบับเต็ม</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. The EVSELECT Standard & Fitment Assurance Section with Real Inspection Photo */}
+      <section id="fitment-assurance" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-lime-500/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left Column: Problem vs Solution */}
-            <div className="lg:col-span-5 space-y-6">
+            <div className="lg:col-span-5 space-y-5">
               <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-lime-700 bg-lime-100 border border-lime-300 px-3 py-1 rounded-full">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>จุดเด่นของ EVSELECT</span>
               </div>
-              <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-snug">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">
                 ทำไมของแต่ง EV ทั่วไปจากจีนถึงมักมีปัญหาเมื่อใส่ในไทย?
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
-                ร้านค้าทั่วไปมักนำเข้าสินค้าแบบไม่ทดสอบ รถยนต์ไฟฟ้าสเปกไทย (พวงมาลัยขวา RHD) มักมีการปรับมิติช่องคอนโซล ตำแหน่งพวงมาลัย หรือการตัดเย็บภายในที่แตกต่างจากรถสเปกจีน ทำให้ของที่สั่งมาใส่ไม่สนิทหรือใช้งานไม่ได้
+                ร้านค้าทั่วไปมักนำเข้าสินค้าแบบไม่ได้ทดสอบจริง รถยนต์ไฟฟ้าสเปกไทย (พวงมาลัยขวา RHD) มีการปรับตำแหน่งคอนโซล แกนพวงมาลัย และตำแหน่งคันเร่งที่แตกต่างจากรถสเปกจีน ทำให้สินค้าจำนวนมากใส่ไม่สนิท เบียดปุ่ม หรือใช้งานไม่ได้จริง
               </p>
 
               {/* QC Inspection Real Image Callout */}
@@ -385,7 +912,7 @@ export default async function StorefrontPage() {
                   <div>
                     <strong className="text-xs text-red-900 block">ร้านค้าทั่วไปในมาร์เก็ตเพลส:</strong>
                     <span className="text-xs text-red-700">
-                      ไม่อิงสเปกไทย หลวม มีช่องว่าง พรมเบียดคันเร่ง คอนโซลปิดไม่ได้ และเสียเวลาส่งคืนไปจีน
+                      ไม่อิงสเปกไทย หลวม มีช่องว่าง พรมเบียดคันเร่ง คอนโซลปิดไม่ได้ และเสียเวลาส่งคืนไปต่างประเทศ
                     </span>
                   </div>
                 </div>
@@ -406,7 +933,9 @@ export default async function StorefrontPage() {
             <div className="lg:col-span-7 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xs">
               <h3 className="text-lg font-bold text-slate-900 flex items-center justify-between">
                 <span>กระบวนการทดสอบ 5 ขั้นตอน (Fitment Workflow)</span>
-                <span className="text-xs font-mono font-bold text-lime-700 bg-lime-50 px-2.5 py-1 rounded-full border border-lime-200">QC คุณภาพเข้มงวด</span>
+                <span className="text-xs font-mono font-bold text-lime-700 bg-lime-50 px-2.5 py-1 rounded-full border border-lime-200">
+                  QC คุณภาพเข้มงวด
+                </span>
               </h3>
 
               <div className="space-y-4">
@@ -415,7 +944,7 @@ export default async function StorefrontPage() {
                     1
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-slate-900">คัดสรรตรงจากโรงงานผู้ผลิตชั้นนำในจีน</h4>
+                    <h4 className="text-sm font-semibold text-slate-900">คัดสรรตรงจากโรงงานผู้ผลิตชั้นนำ</h4>
                     <p className="text-xs text-slate-500">ตรวจสอบไฟล์แม่พิมพ์ 3D CAD และมาตรฐานวัสดุจากโรงงานผู้ผลิตโดยตรง</p>
                   </div>
                 </div>
@@ -446,7 +975,7 @@ export default async function StorefrontPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-slate-900">ทดสอบความทนทานต่อสภาพอากาศร้อนของไทย</h4>
-                    <p className="text-xs text-slate-500">ตรวจสอบการทนความร้อน ไม่บิดงอ ไม่ละลาย และไร้กลิ่นกวนใจเมื่อจอดตากแดด</p>
+                    <p className="text-xs text-slate-500">ตรวจสอบการทนความร้อน ไม่บิดงอ ไม่ละลาย และไร้กลิ่นกวนใจเมื่อจอดตากแดด 40°C</p>
                   </div>
                 </div>
 
@@ -465,136 +994,66 @@ export default async function StorefrontPage() {
         </div>
       </section>
 
-      {/* Supported Thai EV Models Showcase with Real Vehicle Imagery */}
-      <section id="ecosystem" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-lime-700 bg-lime-50 px-2.5 py-1 rounded-full border border-lime-200">
-            ครอบคลุมรถยนต์ไฟฟ้าทุกรุ่นยอดนิยมในไทย
-          </span>
-          <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
-            ออกแบบเฉพาะสำหรับรถ EV สเปกประเทศไทย
-          </h2>
-          <p className="text-sm text-slate-600">
-            รองรับรถที่จำหน่ายผ่านศูนย์อย่างเป็นทางการในไทย พวงมาลัยขวาใส่ได้พอดี ไร้รอยต่อ
-          </p>
-        </div>
+      {/* 7. B2B Dealer Recruitment Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-lg border border-slate-800">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="relative z-10 max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-lime-400 bg-lime-950/60 border border-lime-800 px-3 py-1 rounded-full">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>B2B DEALER &amp; WORKSHOP PARTNERS</span>
+            </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {/* BYD */}
-          <div className="group bg-white hover:bg-white border border-slate-200 hover:border-lime-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col shadow-xs hover:shadow-lg">
-            <div className="relative w-full h-36 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/byd-seal.jpg"
-                alt="BYD Seal"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute top-2.5 left-2.5">
-                <span className="text-xs font-mono font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded border border-slate-200 shadow-xs">
-                  BYD
-                </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
+              เปิดรับสมัครร้านประดับยนต์ &amp; ดีลเลอร์อุปกรณ์ EV ทั่วประเทศ
+            </h2>
+
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              เพิ่มยอดขายให้ร้านของคุณด้วยอุปกรณ์เสริม EV คุณภาพสูงที่ผ่านการทดสอบความเข้ากันได้บนรถสเปกไทยแล้ว 100% ไม่ต้องเสี่ยงสต็อกของไม่ได้มาตรฐาน พร้อมรับราคาส่งพิเศษและบริการส่งด่วนจากคลังกรุงเทพฯ
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div className="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 space-y-1">
+                <span className="text-xs font-bold text-lime-400">ราคาส่งพิเศษ (Wholesale)</span>
+                <p className="text-xs text-slate-400">อัตรากำไรดี ไม่กำหนดขั้นต่ำสูงในระยะเริ่มต้น</p>
+              </div>
+              <div className="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 space-y-1">
+                <span className="text-xs font-bold text-lime-400">การันตี Fitment 100%</span>
+                <p className="text-xs text-slate-400">ลดปัญหาเคลมของ ใส่ได้พอดีทุกชิ้น</p>
+              </div>
+              <div className="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 space-y-1">
+                <span className="text-xs font-bold text-lime-400">สต็อกพร้อมส่งในไทย</span>
+                <p className="text-xs text-slate-400">จัดส่งภายใน 24-48 ชม. ลูกค้าไม่ต้องรอนาน</p>
               </div>
             </div>
-            <div className="p-4 space-y-1">
-              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Seal & Sealion 7</h3>
-              <p className="text-[11px] text-slate-500">Dynamic, Premium, AWD Performance</p>
-            </div>
-          </div>
 
-          {/* Tesla */}
-          <div className="group bg-white hover:bg-white border border-slate-200 hover:border-lime-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col shadow-xs hover:shadow-lg">
-            <div className="relative w-full h-36 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/tesla-model3.jpg"
-                alt="Tesla Model 3 Highland"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute top-2.5 left-2.5">
-                <span className="text-xs font-mono font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded border border-slate-200 shadow-xs">
-                  Tesla
-                </span>
-              </div>
-            </div>
-            <div className="p-4 space-y-1">
-              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Model 3 Highland</h3>
-              <p className="text-[11px] text-slate-500">Model 3 & Model Y สเปกไทย (RHD)</p>
-            </div>
-          </div>
-
-          {/* BYD Atto 3 */}
-          <div className="group bg-white hover:bg-white border border-slate-200 hover:border-lime-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col shadow-xs hover:shadow-lg">
-            <div className="relative w-full h-36 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/byd-atto3.jpg"
-                alt="BYD Atto 3"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute top-2.5 left-2.5">
-                <span className="text-xs font-mono font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded border border-slate-200 shadow-xs">
-                  BYD
-                </span>
-              </div>
-            </div>
-            <div className="p-4 space-y-1">
-              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Atto 3</h3>
-              <p className="text-[11px] text-slate-500">Standard & Extended Range</p>
-            </div>
-          </div>
-
-          {/* Zeekr */}
-          <div className="group bg-white hover:bg-white border border-slate-200 hover:border-lime-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col shadow-xs hover:shadow-lg">
-            <div className="relative w-full h-36 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/zeekr-x.jpg"
-                alt="Zeekr X"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute top-2.5 left-2.5">
-                <span className="text-xs font-mono font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded border border-slate-200 shadow-xs">
-                  Zeekr
-                </span>
-              </div>
-            </div>
-            <div className="p-4 space-y-1">
-              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Zeekr X & 009</h3>
-              <p className="text-[11px] text-slate-500">Flagship Luxury Thai Trims</p>
-            </div>
-          </div>
-
-          {/* Deepal */}
-          <div className="group bg-white hover:bg-white border border-slate-200 hover:border-lime-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col shadow-xs hover:shadow-lg">
-            <div className="relative w-full h-36 bg-slate-100 overflow-hidden">
-              <Image
-                src="/images/deepal-s05.jpg"
-                alt="Deepal S05"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute top-2.5 left-2.5">
-                <span className="text-xs font-mono font-bold text-slate-900 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded border border-slate-200 shadow-xs">
-                  Deepal
-                </span>
-              </div>
-            </div>
-            <div className="p-4 space-y-1">
-              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors">Deepal S05 / S07</h3>
-              <p className="text-[11px] text-slate-500">Changan Thai Market Specs</p>
+            <div className="pt-2">
+              <Link
+                href="/dealer"
+                className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black text-sm font-bold px-6 py-3 rounded-xl shadow-sm transition-all hover:scale-105"
+              >
+                <span>สมัครเป็นตัวแทนจำหน่าย EVSELECT</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Multi-Channel Purchase CTA Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      {/* 8. Multi-Channel Purchase & Concierge CTA Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-orange-50/80 via-slate-50 to-blue-50/80 border border-slate-200 rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xs">
-          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            สั่งซื้อได้อย่างมั่นใจผ่าน Shopee หรือทักสอบถามทีมงานโดยตรง
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-slate-700 bg-white border border-slate-200 px-3 py-1 rounded-full shadow-xs">
+            <ShoppingBag className="w-3.5 h-3.5 text-orange-500" />
+            <span>OFFICIAL STORE &amp; CONCIERGE</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            สั่งซื้อได้อย่างมั่นใจผ่าน Shopee หรือปรึกษาทีมงานโดยตรง
           </h2>
           <p className="text-sm text-slate-600 max-w-xl mx-auto">
-            เลือกช่องทางที่คุณสะดวก ช้อปปลอดภัยผ่าน Shopee มีการันตี หรือทักแชทคุยกับผู้เชี่ยวชาญด้านอุปกรณ์แต่ง EV ในกรุงเทพฯ ได้ทันที
+            เลือกช่องทางที่คุณสะดวก ช้อปปลอดภัยผ่าน Shopee Thailand มีการันตี หรือทักแชทคุยกับผู้เชี่ยวชาญด้านอุปกรณ์แต่ง EV ในกรุงเทพฯ ได้ทันที
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 w-full">
@@ -602,20 +1061,30 @@ export default async function StorefrontPage() {
               href="https://shopee.co.th/shop/9535932"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-xs transition-all w-full sm:w-auto"
+              className="inline-flex justify-center items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all w-full sm:w-auto hover:scale-105"
             >
               <ShoppingBag className="w-4 h-4" />
               <span>ไปยังร้านค้า Shopee Thailand</span>
             </a>
 
             <a
-              href="https://facebook.com"
+              href="https://m.me/evselects"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-xs transition-all w-full sm:w-auto"
+              className="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all w-full sm:w-auto hover:scale-105"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>ทักแชทสั่งซื้อผ่าน Facebook / LINE</span>
+              <span>ทัก Facebook Messenger</span>
+            </a>
+
+            <a
+              href="https://lin.ee/evselects"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all w-full sm:w-auto hover:scale-105"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>ทัก LINE Official Account</span>
             </a>
           </div>
         </div>

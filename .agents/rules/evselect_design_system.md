@@ -21,6 +21,6 @@
    - Shadows: Soft, modern shadows (`shadow-xs` / `shadow-sm` up to `shadow-md` on hover).
    - Header: Translucent glassmorphism (`bg-white/90 backdrop-blur-md border-b border-slate-200/90`).
 
-## Editorial Review Standards (CarExpert Style)
+## Editorial Review Standards (EVSELECT Standards)
 1. **12-Dimension Evaluation**: Performance (0-100 km/h), Range & Real Consumption, Thai Hot Climate (40°C) AC Performance, FSD/Suspension on Thai roads, Interior build, Charging speed, Fitment accessories, Verdict Score.
 2. **Image Requirements**: Always use clean, authentic exterior, cockpit, and details photography optimized with Next.js `<Image>`.
