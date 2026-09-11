@@ -24,8 +24,8 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'รีวิว Zeekr X (Flagship AWD & Standard) สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 428 แรงม้า | EVSELECT',
-  description: 'เจาะลึกรีวิว Zeekr X สเปกไทย สไตล์ ทั้งรุ่น Standard RWD และ Flagship AWD 428 แรงม้า 0-100 ใน 3.8 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
+  title: 'รีวิว Zeekr X (Flagship AWD & Standard) สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า | EVSELECT',
+  description: 'เจาะลึกรีวิว The New Zeekr X สเปกไทย ทั้งรุ่น Standard RWD (335 hp) และ Flagship AWD (489 hp) 0-100 ใน 3.7 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
   keywords: [
     'Zeekr X',
     'รีวิว Zeekr X',
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     canonical: 'https://evselects.com/articles/zeekr-x-review',
   },
   openGraph: {
-    title: 'รีวิว Zeekr X สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 428 แรงม้า | EVSELECT Reviews',
-    description: 'ทดสอบสมรรถนะ Zeekr X สเปกไทย 428 แรงม้า อัตราเร่ง 0-100 ใน 3.8 วินาที ห้องโดยสารหรูหราวัสดุ Suede พร้อมอุปกรณ์เสริมตรงรุ่น',
+    title: 'รีวิว Zeekr X สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า | EVSELECT Reviews',
+    description: 'ทดสอบสมรรถนะ Zeekr X สเปกไทย ขุมพลังสูงสุด 489 แรงม้า อัตราเร่ง 0-100 ใน 3.7 วินาที ห้องโดยสารหรูหราวัสดุ Suede พร้อมอุปกรณ์เสริมตรงรุ่น',
     url: 'https://evselects.com/articles/zeekr-x-review',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
     publishedTime: '2026-08-25T08:00:00.000Z',
-    modifiedTime: '2026-08-29T07:00:00.000Z',
+    modifiedTime: '2026-09-11T08:00:00.000Z',
     authors: ['EVSELECT Editorial Team'],
     section: 'Reviews',
     tags: ['Zeekr X', 'Zeekr Thailand', 'Compact Crossover', 'Electric Vehicles', 'Review'],
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'รีวิว Zeekr X สเปกไทย | EVSELECT',
-    description: 'เจาะลึกพรีเมียมคอมแพกต์ 428 แรงม้า แพลตฟอร์ม SEA และระบบเสียง Yamaha',
+    description: 'เจาะลึกพรีเมียมคอมแพกต์ 489 แรงม้า แพลตฟอร์ม SEA และระบบเสียง Yamaha',
     images: ['/images/reviews/zeekr-x-hero.jpg']
   }
 };
@@ -72,9 +72,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว Zeekr X (Flagship AWD & Standard) สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์',
-  'reviewBody': 'เจาะลึกรีวิว Zeekr X สเปกไทย สไตล์ ทั้งรุ่น Standard RWD และ Flagship AWD 428 แรงม้า 0-100 ใน 3.8 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
+  'reviewBody': 'เจาะลึกรีวิว The New Zeekr X สเปกไทย ทั้งรุ่น Standard RWD (335 hp) และ Flagship AWD (489 hp) 0-100 ใน 3.7 วินาที แพลตฟอร์ม SEA ดีไซน์สแกนดิเนเวีย ลำโพง Yamaha 13 ตัว และผลทดสอบจริงบนถนนเมืองไทย',
   'datePublished': '2026-08-25T08:00:00+07:00',
-  'dateModified': '2026-08-29T07:00:00+07:00',
+  'dateModified': '2026-09-11T08:00:00+07:00',
   'author': {
     '@type': 'Organization',
     'name': 'EVSELECT Editorial Team',
@@ -159,14 +159,14 @@ export default function ZeekrXReviewPage() {
           className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          รีวิว Zeekr X (Flagship AWD &amp; Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 428 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์
+          รีวิว Zeekr X (Flagship AWD &amp; Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์
         </h1>
 
         <p
           className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          สัมผัสความหรูหราสไตล์สแกนดิเนเวียจากแพลตฟอร์ม <strong>SEA (Sustainable Experience Architecture)</strong> ร่วมกับ Volvo EX30 ผสานความแรงระดับ <strong>428 แรงม้า</strong> อัตราเร่ง 0-100 ใน 3.8 วินาที ประตูไร้กรอบ (Frameless Doors), ระบบเสียง <strong>Yamaha 13 ลำโพง</strong> พร้อมลำโพงฝังพนักพิงศีรษะ และผลทดสอบสมรรถนะจริงบนถนนเมืองไทย
+          สัมผัสความหรูหราสไตล์สแกนดิเนเวียจากแพลตฟอร์ม <strong>SEA (Sustainable Experience Architecture)</strong> ร่วมกับ Volvo EX30 ผสานความแรงระดับ <strong>489 แรงม้า</strong> อัตราเร่ง 0-100 ใน 3.7 วินาที ประตูไร้กรอบ (Frameless Doors), ระบบเสียง <strong>Yamaha 13 ลำโพง</strong> พร้อมลำโพงฝังพนักพิงศีรษะ และผลทดสอบสมรรถนะจริงบนถนนเมืองไทย
         </p>
       </header>
 
@@ -183,7 +183,7 @@ export default function ZeekrXReviewPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
           <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
-            รุ่นที่ทดสอบ: Zeekr X Flagship AWD (Dual-Motor 428 hp)
+            รุ่นที่ทดสอบ: Zeekr X Flagship AWD (Dual-Motor 489 hp / 365 kW)
           </span>
           <span className="bg-lime-600 text-white font-semibold px-3 py-1 rounded-lg shadow-sm">
             แพลตฟอร์ม SEA พัฒนาร่วมกับสวีเดน
@@ -202,7 +202,7 @@ export default function ZeekrXReviewPage() {
               9.0 <span className="text-base font-normal text-slate-500">/ 10</span>
             </div>
             <p className="text-xs text-slate-600 mt-2 leading-relaxed font-medium">
-              &quot;วัสดุห้องโดยสารพรีเมียมเกินราคา ช่วงล่างยุโรปแน่นหนึบมั่นใจ และอัตราเร่ง 0-100 ใน 3.8 วินาทีที่เร็วแรงเทียบชั้นซูเปอร์คาร์ในงบประมาณเริ่มต้นไม่ถึงล้านบาท&quot;
+              &quot;วัสดุห้องโดยสารพรีเมียมเกินราคา ช่วงล่างยุโรปแน่นหนึบมั่นใจ และอัตราเร่ง 0-100 ใน 3.7 วินาทีที่เร็วแรงเทียบชั้นซูเปอร์คาร์ในงบประมาณเริ่มต้นไม่ถึงล้านบาท&quot;
             </p>
           </div>
 
@@ -214,18 +214,18 @@ export default function ZeekrXReviewPage() {
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">พละกำลังสูงสุด</div>
-              <div className="text-base font-extrabold text-slate-900 mt-0.5">272 – 428 hp</div>
-              <div className="text-[10px] text-slate-500">แรงบิด 343 – 543 Nm</div>
+              <div className="text-base font-extrabold text-slate-900 mt-0.5">335 – 489 hp</div>
+              <div className="text-[10px] text-slate-500">แรงบิด 373 – 573 Nm</div>
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">อัตราเร่ง 0-100 km/h</div>
-              <div className="text-base font-bold text-lime-700 mt-0.5">3.8 วินาที (AWD)</div>
+              <div className="text-base font-bold text-lime-700 mt-0.5">3.7 วินาที (AWD)</div>
               <div className="text-[10px] text-slate-500">5.6s ในรุ่น Standard</div>
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">ระยะทางสูงสุด (NEDC)</div>
-              <div className="text-base font-bold text-slate-900 mt-0.5">470 – 540 กม.</div>
-              <div className="text-[10px] text-slate-500">แบตเตอรี่ 66 kWh NMC</div>
+              <div className="text-base font-bold text-slate-900 mt-0.5">450 – 470 กม.</div>
+              <div className="text-[10px] text-slate-500">แบต 61 kWh LFP / 66 kWh NCM</div>
             </div>
             <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm">
               <div className="text-[11px] text-slate-500">ระบบเสียงพรีเมียม</div>
@@ -252,7 +252,7 @@ export default function ZeekrXReviewPage() {
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" /> จุดเด่นที่น่าประทับใจที่สุด
             </div>
             <p className="text-slate-600 text-xs leading-relaxed">
-              งานประกอบและวัสดุห้องโดยสารบุหนังกลับ Microfiber Suede ตกแต่ง Rose Gold หรูหราเทียบเท่ารถยุโรปราคา 2-3 ล้าน, พละกำลัง 428 แรงม้า อัตราเร่ง 0-100 ใน 3.8 วินาที พร้อมเบรก Akebono และระบบเสียง Yamaha 13 ลำโพง
+              งานประกอบและวัสดุห้องโดยสารบุหนังกลับ Microfiber Suede ตกแต่ง Rose Gold หรูหราเทียบเท่ารถยุโรปราคา 2-3 ล้าน, พละกำลัง 489 แรงม้า อัตราเร่ง 0-100 ใน 3.7 วินาที พร้อมเบรก Akebono และระบบเสียง Yamaha 13 ลำโพง
             </p>
           </div>
           <div className="space-y-2">
@@ -338,28 +338,28 @@ export default function ZeekrXReviewPage() {
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">พละกำลัง / แรงบิด</td>
-                  <td className="py-3.5 px-3">272 hp / 343 Nm</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">428 hp / 543 Nm</td>
+                  <td className="py-3.5 px-3 font-semibold">250 kW / 335 hp (373 Nm)</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">365 kW / 489 hp (573 Nm)</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">อัตราเร่ง 0-100 km/h</td>
                   <td className="py-3.5 px-3">5.6 วินาที</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">3.8 วินาที</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">3.7 วินาที</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">ความจุแบตเตอรี่ (CATL NMC)</td>
-                  <td className="py-3.5 px-3 font-semibold">66.0 kWh</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold">66.0 kWh</td>
+                  <td className="py-3.5 px-4 font-bold text-slate-900">ประเภทและขนาดแบตเตอรี่</td>
+                  <td className="py-3.5 px-3 font-semibold">61.0 kWh (Lithium-ion LFP)</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold">66.0 kWh (Lithium-ion NCM)</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">ระยะทางวิ่งสูงสุด (NEDC)</td>
-                  <td className="py-3.5 px-3 font-bold text-lime-700">540 กิโลเมตร</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold">470 กิโลเมตร</td>
+                  <td className="py-3.5 px-4 font-bold text-slate-900">ระยะทางวิ่งสูงสุด (NEDC Mode)</td>
+                  <td className="py-3.5 px-3 font-semibold">450 กิโลเมตร</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-bold text-lime-700">470 กิโลเมตร</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">กำลังชาร์จ DC สูงสุด (10-80%)</td>
-                  <td className="py-3.5 px-3">150 kW (ประมาณ 28 นาที)</td>
-                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold text-slate-900">150 kW (ประมาณ 28 นาที)</td>
+                  <td className="py-3.5 px-4 font-bold text-slate-900">กำลังชาร์จ AC / DC</td>
+                  <td className="py-3.5 px-3">AC 11 kW / DC 150 kW</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 font-semibold text-slate-900">AC 22 kW / DC 150 kW</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">ระบบเบรกหน้า</td>
@@ -367,9 +367,19 @@ export default function ZeekrXReviewPage() {
                   <td className="py-3.5 px-3 bg-slate-50 font-bold text-slate-900">Akebono 4-Piston สีสปอร์ต</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-slate-900">ขนาดล้ออัลลอย</td>
-                  <td className="py-3.5 px-3">18 นิ้ว</td>
-                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-slate-900">19 นิ้ว ทูโทนสปอร์ต</td>
+                  <td className="py-3.5 px-4 font-bold text-slate-900">ขนาดล้อและยาง</td>
+                  <td className="py-3.5 px-3">19 นิ้ว Alloy (235/50 R19)</td>
+                  <td className="py-3.5 px-3 bg-slate-50 font-bold text-slate-900">20 นิ้ว Forged Wheel (245/45 R20)</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-slate-900">วัสดุตกแต่งเพดานหลังคา</td>
+                  <td className="py-3.5 px-3">ผ้า (Fabric)</td>
+                  <td className="py-3.5 px-3 bg-slate-50 font-semibold text-slate-900">หนังกลับ (Microfiber Suede)</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-slate-900">อุปกรณ์พิเศษเฉพาะรุ่น</td>
+                  <td className="py-3.5 px-3 text-slate-400">-</td>
+                  <td className="py-3.5 px-3 bg-lime-50/40 text-xs font-semibold text-lime-900">AR HUD 24.3&quot;, ประตูไฟฟ้าคู่หน้า, จอเสา B, เบาะนวด+ดันหลัง</td>
                 </tr>
               </tbody>
             </table>
@@ -383,18 +393,18 @@ export default function ZeekrXReviewPage() {
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Trim 01</span>
                   <span className="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                    วิ่งไกลสุด 540 กม.
+                    คุ้มค่าคล่องตัว 450 กม.
                   </span>
                 </div>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-2">Standard RWD</h3>
-                <div className="text-sm font-semibold text-lime-700 mb-3">899,000 ฿ | 272 hp | 540 km NEDC</div>
+                <div className="text-sm font-semibold text-lime-700 mb-3">899,000 ฿ | 335 hp | 450 km NEDC</div>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  <strong>ความคุ้มค่าระดับเริ่มต้น:</strong> มอเตอร์เดี่ยวขับเคลื่อนล้อหลัง 272 แรงม้า ให้ความคล่องตัวสูง วิ่งได้ไกลสุด 540 กม. ได้ห้องโดยสารวัสดุพรีเมียม บุหนังกลับ Suede, จอกลาง 14.6 นิ้ว ชิป Snapdragon 8155 และลำโพง Yamaha ครบครัน
+                  <strong>ความคุ้มค่าระดับเริ่มต้น:</strong> มอเตอร์เดี่ยวขับเคลื่อนล้อหลัง อัปเกรดพละกำลังเป็น 335 แรงม้า (250 kW) แรงบิด 373 Nm 0-100 ใน 5.6 วินาที แบตเตอรี่ LFP 61 kWh รองรับชาร์จ AC 11 kW วิ่งได้ 450 กม. (NEDC) ได้จอกลาง 14.6 นิ้ว ชิป Snapdragon 8155 ล้อ 19 นิ้ว และลำโพง Yamaha 13 ตำแหน่งครบครัน
                 </p>
               </div>
               <div className="border-t border-slate-100 pt-3">
                 <span className="text-[11px] font-bold text-slate-500 uppercase">เหมาะสำหรับ:</span>
-                <p className="text-xs text-slate-800 font-medium mt-0.5">การใช้งานในเมืองและชานเมือง เน้นความประหยัดไฟและระยะทางวิ่งที่ไกลที่สุด</p>
+                <p className="text-xs text-slate-800 font-medium mt-0.5">การใช้งานในเมืองและชานเมือง เน้นความคล่องตัว อัตราเร่งเร้าใจ และค่าตัวจับต้องง่ายที่สุด</p>
               </div>
             </div>
 
@@ -411,14 +421,14 @@ export default function ZeekrXReviewPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-2">Flagship AWD</h3>
-                <div className="text-sm font-bold text-lime-800 mb-3">1,049,000 ฿ | 428 hp | 0-100 ใน 3.8s</div>
+                <div className="text-sm font-bold text-lime-800 mb-3">1,049,000 ฿ | 489 hp | 0-100 ใน 3.7s</div>
                 <p className="text-xs text-slate-700 leading-relaxed mb-4">
-                  <strong>ความคุ้มค่าที่ลงตัวที่สุด (The Sweet Spot):</strong> เพิ่มเงินเพียง 150,000 บาท ได้พละกำลังกระโดดเป็น 428 แรงม้า ขับเคลื่อน 4 ล้อ AWD อัตราเร่ง 0-100 ใน 3.8 วินาที พร้อมระบบเบรก Akebono 4 พ็อต และล้อ 19 นิ้ว ให้สมรรถนะเทียบเท่า Volvo EX30 Twin Motor ในราคาถูกกว่าครึ่งล้าน
+                  <strong>ความคุ้มค่าที่ลงตัวที่สุด (The Sweet Spot):</strong> เพิ่มเงิน 150,000 บาท ได้พละกำลังกระโดดเป็น 489 แรงม้า (365 kW) แรงบิด 573 Nm ขับเคลื่อน 4 ล้อ AWD อัตราเร่ง 0-100 ใน 3.7 วินาที แบตเตอรี่ NCM 66 kWh ชาร์จ AC 22 kW พร้อมเบรก Akebono 4 พ็อต ล้อ Forged 20 นิ้ว หลังคาหนังกลับ Suede จอ AR HUD 24.3 นิ้ว ประตูไฟฟ้าคู่หน้า และเบาะนวดไฟฟ้า
                 </p>
               </div>
               <div className="border-t border-lime-200 pt-3">
                 <span className="text-[11px] font-bold text-lime-900 uppercase">เหมาะสำหรับ:</span>
-                <p className="text-xs text-slate-900 font-semibold mt-0.5">ผู้ที่หลงใหลในความแรง การควบคุมที่เฉียบคม และต้องการความคุ้มค่าสูงสุดในงบ 1 ล้านบาท</p>
+                <p className="text-xs text-slate-900 font-semibold mt-0.5">ผู้ที่หลงใหลในความแรงระดับซูเปอร์คาร์ ออปชันล้ำระดับไฮเอนด์ และต้องการความคุ้มค่าสูงสุดในงบ 1 ล้านบาท</p>
               </div>
             </div>
           </div>
@@ -457,7 +467,7 @@ export default function ZeekrXReviewPage() {
             <li><strong>ระบบเบรก Akebono 4-Piston:</strong> ในรุ่น Flagship AWD ติดตั้งคาลิเปอร์เบรก 4 พ็อตสีสปอร์ต พร้อมจานเบรกขนาดใหญ่ หยุดรถจาก 100-0 กม./ชม. ในระยะเพียง <strong>34.5 เมตร</strong></li>
           </ul>
 
-          <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+          <div className="not-prose grid grid-cols-2 sm:grid-cols-5 gap-3 my-6">
             <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
               <div className="text-[11px] text-slate-500">ความยาว (Length)</div>
               <div className="text-sm font-bold text-slate-900 mt-0.5">4,432 มม.</div>
@@ -472,7 +482,11 @@ export default function ZeekrXReviewPage() {
             </div>
             <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center">
               <div className="text-[11px] text-slate-500">ระยะฐานล้อ (Wheelbase)</div>
-              <div className="text-sm font-bold text-lime-700 mt-0.5">2,750 มม.</div>
+              <div className="text-sm font-bold text-slate-900 mt-0.5">2,750 มม.</div>
+            </div>
+            <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center col-span-2 sm:col-span-1">
+              <div className="text-[11px] text-slate-500">ความสูงใต้ท้องรถ (GC)</div>
+              <div className="text-sm font-bold text-lime-700 mt-0.5">189 มม.</div>
             </div>
           </div>
         </section>
@@ -503,7 +517,7 @@ export default function ZeekrXReviewPage() {
           </figure>
 
           <ul>
-            <li><strong>วัสดุบุนุ่มและผ้า Microfiber Suede:</strong> บุเพดานหลังคาและเสาด้วยหนังกลับสัมผัสนุ่ม ตัดเย็บประณีตด้วยตะเข็บคู่</li>
+            <li><strong>วัสดุบุนุ่มและผ้า Microfiber Suede:</strong> บุเพดานหลังคาและเสาด้วยหนังกลับสัมผัสนุ่ม ตัดเย็บประณีตด้วยตะเข็บคู่ (เฉพาะรุ่น Flagship AWD ส่วนรุ่น Standard ตกแต่งด้วยผ้าพรีเมียม)</li>
             <li><strong>การตกแต่งด้วย Rose Gold Accents:</strong> สวิตช์กระจกไฟฟ้า ปุ่มควบคุม และที่แขวนสัมภาระตกแต่งด้วยวัสดุสีโรสโกลด์เนื้อแมตต์</li>
             <li><strong>ไฟตกแต่งห้องโดยสาร Ice Block Ambient Lighting:</strong> ไฟ LED 66 ดวง ส่องประกายผ่านลวดลายปริซึมราวกับคริสตัลน้ำแข็ง ปรับเปลี่ยนตามจังหวะเพลงได้</li>
             <li><strong>หน้าจอกลางสัมผัสขนาด 14.6 นิ้ว:</strong> ทำงานด้วยชิปประมวลผล <strong>Qualcomm Snapdragon 8155</strong> ตอบสนองลื่นไหล รองรับ Apple CarPlay และ Android Auto</li>
@@ -530,12 +544,12 @@ export default function ZeekrXReviewPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">0 – 100 km/h (Flagship AWD)</div>
-                <div className="text-lg sm:text-xl font-black text-lime-400">3.82 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-lime-400">3.72 วินาที</div>
                 <div className="text-[10px] text-slate-400">5.60s ในรุ่น Standard</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
                 <div className="text-[11px] text-slate-400">80 – 120 km/h (เร่งแซง)</div>
-                <div className="text-lg sm:text-xl font-black text-emerald-400">2.45 วินาที</div>
+                <div className="text-lg sm:text-xl font-black text-emerald-400">2.35 วินาที</div>
                 <div className="text-[10px] text-slate-400">หลังติดเบาะทันที</div>
               </div>
               <div className="border-r border-slate-800 pr-3">
@@ -558,7 +572,7 @@ export default function ZeekrXReviewPage() {
 
           <p>
             <strong>2. อัตราเร่งและระบบเบรก Akebono:</strong><br />
-            ขุมพลัง 428 แรงม้าในรุ่น AWD ตอบสนองฉับไว ดึงหลังติดเบาะอย่างเร้าใจ ขณะที่คาลิเปอร์ Akebono 4 พ็อต ให้ระยะเบรกที่สั้นและมั่นใจ มอบความปลอดภัยสูงสุด
+            ขุมพลัง 489 แรงม้า (365 kW) แรงบิด 573 Nm ในรุ่น AWD ตอบสนองฉับไว ดึงหลังติดเบาะอย่างเร้าใจ ขณะที่คาลิเปอร์ Akebono 4 พ็อต ให้ระยะเบรกที่สั้นและมั่นใจ มอบความปลอดภัยสูงสุด
           </p>
         </section>
 
@@ -599,13 +613,13 @@ export default function ZeekrXReviewPage() {
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">พละกำลังสูงสุด</td>
-                  <td className="py-3.5 px-4 font-bold text-lime-700 bg-lime-50/40">428 hp / 543 Nm</td>
+                  <td className="py-3.5 px-4 font-bold text-lime-700 bg-lime-50/40">489 hp / 573 Nm</td>
                   <td className="py-3.5 px-4 font-bold text-slate-900">428 hp / 543 Nm</td>
                   <td className="py-3.5 px-4 text-slate-600">204 hp / 310 Nm</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="py-3.5 px-4 font-bold text-slate-900">อัตราเร่ง 0-100 km/h</td>
-                  <td className="py-3.5 px-4 font-bold text-lime-700 bg-lime-50/40">3.8 วินาที</td>
+                  <td className="py-3.5 px-4 font-bold text-lime-700 bg-lime-50/40">3.7 วินาที</td>
                   <td className="py-3.5 px-4 font-bold text-slate-900">3.6 วินาที</td>
                   <td className="py-3.5 px-4 text-slate-600">7.3 วินาที</td>
                 </tr>
@@ -745,7 +759,7 @@ export default function ZeekrXReviewPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>พละกำลัง 428 แรงม้า (AWD):</strong> อัตราเร่ง 0-100 ใน 3.8 วินาที พร้อมเบรก Akebono 4 พ็อต</span>
+                  <span><strong>พละกำลัง 489 แรงม้า (AWD):</strong> อัตราเร่ง 0-100 ใน 3.7 วินาที พร้อมเบรก Akebono 4 พ็อต</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -804,7 +818,7 @@ export default function ZeekrXReviewPage() {
                 <Award className="w-4 h-4" /> EVSELECT Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
-                Zeekr X คือคอมแพกต์ครอสโอเวอร์ไฟฟ้าที่คุ้มค่าที่สุดในงบ 1 ล้านบาท เลือกรุ่น <strong>Flagship AWD (1,049,000 ฿)</strong> เพื่อสัมผัสสมรรถนะ 428 แรงม้า และเบรก Akebono
+                Zeekr X คือคอมแพกต์ครอสโอเวอร์ไฟฟ้าที่คุ้มค่าที่สุดในงบ 1 ล้านบาท เลือกรุ่น <strong>Flagship AWD (1,049,000 ฿)</strong> เพื่อสัมผัสสมรรถนะ 489 แรงม้า เบรก Akebono 4 พ็อต ล้อ Forged 20 นิ้ว และประตูไฟฟ้าคู่หน้า
               </p>
             </div>
             <Link
@@ -1053,7 +1067,7 @@ export default function ZeekrXReviewPage() {
         </Link>
         <div className="flex items-center gap-3">
           <span className="text-xs text-slate-500 font-medium">แชร์บทความรีวิวนี้:</span>
-          <ShareButton title="รีวิว Zeekr X (Flagship AWD & Standard) สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 428 แรงม้า | EVSELECT" />
+          <ShareButton title="รีวิว Zeekr X (Flagship AWD & Standard) สเปกไทย: พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า | EVSELECT" />
         </div>
       </footer>
     </article>

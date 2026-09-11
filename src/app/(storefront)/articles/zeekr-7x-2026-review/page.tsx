@@ -1195,10 +1195,10 @@ export default function Zeekr7XReviewPage() {
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">Compact Review</div>
               <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
-                รีวิว Zeekr X (Flagship AWD): พรีเมียมคอมแพกต์ 428 แรงม้า ดีไซน์สแกนดิเนเวีย
+                รีวิว Zeekr X (Flagship AWD): พรีเมียมคอมแพกต์ 489 แรงม้า ดีไซน์สแกนดิเนเวีย
               </h4>
               <p className="text-xs text-slate-500 line-clamp-2">
-                แพลตฟอร์ม SEA ลำโพง Yamaha 13 ตัว และสมรรถนะ 0-100 ใน 3.8 วินาที
+                แพลตฟอร์ม SEA ลำโพง Yamaha 13 ตัว และสมรรถนะ 0-100 ใน 3.7 วินาที
               </p>
             </div>
           </Link>

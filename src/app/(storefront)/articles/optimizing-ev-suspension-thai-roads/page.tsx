@@ -836,7 +836,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
                 <span className="px-3 py-1 bg-amber-600 text-white text-xs font-black rounded-lg">ZEEKR</span>
                 <h3 className="text-xl font-bold text-slate-900">Zeekr X (Standard RWD / Flagship AWD)</h3>
               </div>
-              <span className="text-xs font-semibold text-slate-500">แพลตฟอร์ม SEA | มอเตอร์คู่ 428 แรงม้า | น้ำหนัก 1,945 กก.</span>
+              <span className="text-xs font-semibold text-slate-500">แพลตฟอร์ม SEA | มอเตอร์คู่ 489 แรงม้า | น้ำหนัก 1,945 กก.</span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">

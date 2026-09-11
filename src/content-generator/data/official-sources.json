@@ -1,0 +1,269 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Thai EV Official Knowledge Source & Brochure Repository",
+  "lastUpdated": "2026-09-11",
+  "version": "1.1.0",
+  "sources": [
+    {
+      "id": "zeekr-x-2026",
+      "brand": "ZEEKR",
+      "model": "X",
+      "modelYear": "2026",
+      "market": "Thailand (RHD)",
+      "distributor": "ZEEKR Intelligent Technology / ZEEKR Thailand",
+      "brochure": {
+        "title": "The New ZEEKR X Brochure July 2026",
+        "url": "https://www.datocms-assets.com/142974/1783065261-the-new-zeekr-x-brochure-july-2026.pdf",
+        "publishedMonth": "July 2026",
+        "verificationDate": "2026-09-11",
+        "status": "VERIFIED_OFFICIAL_BROCHURE"
+      },
+      "warranty": {
+        "vehicle": "5 ปี หรือ 150,000 กม.",
+        "batteryAndMotor": "8 ปี หรือ 180,000 กม."
+      },
+      "dimensions": {
+        "lengthMm": 4432,
+        "widthMm": 1836,
+        "heightMm": 1566,
+        "wheelbaseMm": 2750,
+        "groundClearanceMm": 189,
+        "turningRadiusM": 5.75,
+        "seats": 5
+      },
+      "trims": [
+        {
+          "name": "Standard (RWD)",
+          "priceTHB": 899000,
+          "drivetrain": "RWD (มอเตอร์เดี่ยวขับหลัง Permanent Magnet Synchronous)",
+          "batteryKWh": 61.0,
+          "batteryType": "Lithium-ion Battery LFP",
+          "powerKw": 250,
+          "powerHp": 335,
+          "torqueNm": 373,
+          "acceleration0to100": 5.6,
+          "rangeNedcKm": 450,
+          "charging": {
+            "acKw": 11.0,
+            "dcKw": 150,
+            "v2lKw": 3.3
+          },
+          "wheels": "19\" Alloy (235/50 R19)",
+          "headliner": "ผ้า (Fabric)",
+          "audio": "YAMAHA 13 ตำแหน่ง",
+          "exclusiveFeatures": []
+        },
+        {
+          "name": "Flagship (AWD)",
+          "priceTHB": 1049000,
+          "drivetrain": "AWD (มอเตอร์คู่ขับเคลื่อน 4 ล้อ Permanent Magnet Synchronous)",
+          "batteryKWh": 66.0,
+          "batteryType": "Lithium-ion Battery NCM",
+          "powerKw": 365,
+          "powerHp": 489,
+          "torqueNm": 573,
+          "acceleration0to100": 3.7,
+          "rangeNedcKm": 470,
+          "charging": {
+            "acKw": 22.0,
+            "dcKw": 150,
+            "v2lKw": 3.3
+          },
+          "wheels": "20\" Forged Wheel (245/45 R20)",
+          "brakes": "Akebono 4-Piston Caliper (Front)",
+          "headliner": "หนังกลับ (Microfiber Suede)",
+          "audio": "YAMAHA 13 ตำแหน่ง พร้อมลำโพงฝังพนักพิงศีรษะ",
+          "exclusiveFeatures": [
+            "ประตูไฟฟ้าคู่หน้า (Automatic Electric front doors)",
+            "หน้าจออัจฉริยะที่เสา B (Intelligent B-Pillar Screen)",
+            "หน้าจอแสดงผล AR HUD ขนาด 24.3 นิ้ว",
+            "เบาะนั่งปรับไฟฟ้าพร้อมที่ดันหลังไฟฟ้าและระบบนวด",
+            "สีภายนอกแบบ Two-Tone หลังคาดำ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zeekr-009",
+      "brand": "ZEEKR",
+      "model": "009",
+      "modelYear": "2024-2026",
+      "market": "Thailand (RHD)",
+      "distributor": "ZEEKR Thailand",
+      "website": "https://www.zeekrlife.com",
+      "warranty": {
+        "vehicle": "5 ปี หรือ 150,000 กม.",
+        "batteryAndMotor": "8 ปี หรือ 180,000 กม."
+      },
+      "trims": [
+        {
+          "name": "Standard FWD",
+          "priceTHB": 3099000,
+          "batteryKWh": 116.0,
+          "powerHp": 340,
+          "rangeNedcKm": 712
+        },
+        {
+          "name": "Premium AWD",
+          "priceTHB": 3399000,
+          "batteryKWh": 116.0,
+          "powerHp": 603,
+          "torqueNm": 693,
+          "acceleration0to100": 4.5,
+          "rangeNedcKm": 686
+        },
+        {
+          "name": "Flagship AWD",
+          "priceTHB": 3599000,
+          "batteryKWh": 116.0,
+          "powerHp": 603,
+          "torqueNm": 693,
+          "acceleration0to100": 4.5,
+          "rangeNedcKm": 686
+        }
+      ]
+    },
+    {
+      "id": "zeekr-7x-2026",
+      "brand": "ZEEKR",
+      "model": "7X",
+      "modelYear": "2026",
+      "market": "Thailand (RHD)",
+      "distributor": "ZEEKR Thailand",
+      "architecture": "800V SiC (Silicon Carbide)",
+      "charging": {
+        "maxDcKw": 420,
+        "acKw": 22.0
+      },
+      "maxPowerHp": 646,
+      "maxTorqueNm": 710,
+      "acceleration0to100": 3.8
+    },
+    {
+      "id": "tesla-model-3-highland",
+      "brand": "Tesla",
+      "model": "Model 3 Highland",
+      "modelYear": "2024-2026",
+      "market": "Thailand (RHD Official)",
+      "distributor": "Tesla Thailand",
+      "trims": [
+        {
+          "name": "Rear-Wheel Drive (RWD)",
+          "priceTHB": 1149000,
+          "batteryKWh": 60.0,
+          "batteryType": "LFP (CATL)",
+          "powerHp": 283,
+          "torqueNm": 420,
+          "rangeWltpKm": 513,
+          "acceleration0to100": 6.1
+        },
+        {
+          "name": "Long Range AWD",
+          "priceTHB": 1399000,
+          "batteryKWh": 78.4,
+          "batteryType": "NMC (LG Energy Solution)",
+          "powerHp": 397,
+          "torqueNm": 559,
+          "rangeWltpKm": 629,
+          "acceleration0to100": 4.4
+        },
+        {
+          "name": "Performance AWD",
+          "priceTHB": 1799000,
+          "batteryKWh": 78.4,
+          "batteryType": "NMC (LG Energy Solution)",
+          "powerHp": 460,
+          "torqueNm": 723,
+          "rangeWltpKm": 528,
+          "acceleration0to100": 3.1,
+          "topSpeedKmH": 262
+        }
+      ]
+    },
+    {
+      "id": "tesla-model-y-l",
+      "brand": "Tesla",
+      "model": "Model Y L (Premium 6-Seater)",
+      "modelYear": "2026",
+      "market": "Thailand (RHD)",
+      "distributor": "Tesla Thailand",
+      "layout": "2+2+2 Captain Seats",
+      "trims": [
+        {
+          "name": "Long Range AWD (6-Seater)",
+          "priceTHB": 1999000,
+          "batteryKWh": 78.4,
+          "powerHp": 397,
+          "acceleration0to100": 5.0
+        }
+      ]
+    },
+    {
+      "id": "byd-atto-3",
+      "brand": "BYD",
+      "model": "Atto 3",
+      "modelYear": "2024-2026",
+      "market": "Thailand (RHD)",
+      "distributor": "Rêver Automotive Thailand",
+      "officialOverviewUrl": "https://www.reverautomotive.com/en/model/newatto3/overview",
+      "brochureUrl": "https://www.reverautomotive.com/media/models/new-atto3/brochure/bydatto3_MY2026.pdf",
+      "campaignUrl": "https://reverautomotive.com/news/byd-atto-3-jun-2026-campaign",
+      "trims": [
+        {
+          "name": "Dynamic",
+          "priceTHB": 669900,
+          "batteryKWh": 49.92,
+          "powerHp": 201,
+          "rangeNedcKm": 410
+        },
+        {
+          "name": "Premium",
+          "priceTHB": 749900,
+          "batteryKWh": 60.48,
+          "powerHp": 201,
+          "rangeNedcKm": 480
+        },
+        {
+          "name": "Extended Range",
+          "priceTHB": 799900,
+          "batteryKWh": 60.48,
+          "powerHp": 201,
+          "rangeNedcKm": 480
+        }
+      ]
+    },
+    {
+      "id": "byd-seal",
+      "brand": "BYD",
+      "model": "Seal",
+      "modelYear": "2024-2026",
+      "market": "Thailand (RHD)",
+      "distributor": "Rêver Automotive Thailand",
+      "trims": [
+        {
+          "name": "Dynamic",
+          "priceTHB": 849900,
+          "batteryKWh": 61.44,
+          "powerHp": 204,
+          "rangeNedcKm": 510
+        },
+        {
+          "name": "Premium",
+          "priceTHB": 999900,
+          "batteryKWh": 82.56,
+          "powerHp": 313,
+          "rangeNedcKm": 650
+        },
+        {
+          "name": "AWD Performance",
+          "priceTHB": 1099900,
+          "batteryKWh": 82.56,
+          "powerHp": 530,
+          "torqueNm": 670,
+          "acceleration0to100": 3.8,
+          "rangeNedcKm": 580
+        }
+      ]
+    }
+  ]
+}
