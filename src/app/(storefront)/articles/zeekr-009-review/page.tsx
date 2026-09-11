@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard | EVSELECT',
-  description: 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย สไตล์ เทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
+  description: 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย เปรียบเทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
   keywords: [
     'ZEEKR 009',
     'รีวิว ZEEKR 009',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'รีวิว ZEEKR 009 สเปกไทย ท้าชน Toyota Alphard | EVSELECT',
-    description: 'เจาะลึกอัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ช่วงล่างถุงลมอัจฉริยะ และเบาะ Sofaro First Class สไตล์ ',
+    description: 'เจาะลึกอัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ช่วงล่างถุงลมอัจฉริยะ และเบาะ Sofaro First Class',
     images: ['/images/reviews/zeekr-009-hero.jpg']
   }
 };
@@ -74,7 +74,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard',
-  'reviewBody': 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย สไตล์ เทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
+  'reviewBody': 'เจาะลึกรีวิว ZEEKR 009 สเปกไทย เปรียบเทียบตรงตัวกับ Toyota Alphard วิเคราะห์ความคุ้มค่า 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) สมรรถนะ 603 แรงม้า ช่วงล่างถุงลม Dual Chamber และเบาะ Sofaro First Class',
   'datePublished': '2026-08-26T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {

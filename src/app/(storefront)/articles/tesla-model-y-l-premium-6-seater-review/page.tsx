@@ -25,7 +25,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย: รถ EV ครอบครัว 6 ที่นั่ง เบาะ Captain Seats | EVSELECT',
-  description: 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย สไตล์ เลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
+  description: 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย เจาะลึกเลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
   keywords: [
     'Tesla Model Y L',
     'Tesla Model Y 6 ที่นั่ง',
@@ -73,7 +73,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Review',
   'name': 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย: รถ EV ครอบครัว 6 ที่นั่ง เบาะ Captain Seats',
-  'reviewBody': 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย สไตล์ เลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
+  'reviewBody': 'เจาะลึกรีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย เจาะลึกเลย์เอาต์เบาะ 2+2+2 กัปตันซีทแถวสอง ฐานล้อยาวขึ้น มอเตอร์คู่ Long Range AWD 450 แรงม้า จอหลัง 8 นิ้ว และการทดสอบขับขี่จริงบนถนนเมืองไทย',
   'datePublished': '2026-08-26T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {
