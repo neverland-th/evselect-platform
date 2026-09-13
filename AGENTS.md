@@ -21,3 +21,7 @@ This block is written and re-added by `next dev` - verify at `node_modules/next/
 5. **Deployment & Git Flow**:
    - Work strictly on your designated handoff branch (e.g., `chatgpt-frontend-handoff`).
    - **DO NOT** merge into the Production Branch (`main`) or trigger production deployments without explicit human approval.
+
+
+## Verified project mapping (2026-09-13)
+Vercel `evselect-com/evselect-platform` tracks `main` on `evselect/evselect-platform` (GitHub repository ID `1345508118`). The canonical handoff repository is `neverland-th/evselect-platform` (ID `1345499586`); GitHub confirms these are separate repositories. The handoff ZIP exactly matches commit `8da4bee101cb98f28be8ec003054bcbc829eb6c0` on `chatgpt-frontend-handoff` in the latter repository. Never assume permission to write one repository grants permission to write the other. The designated release branch for the approved frontend patch is `chatgpt-frontend-handoff-v1-3`. Preserve the existing production mapping until the intended deployment connection is explicitly resolved; do not bypass GitHub or Vercel access checks. See `docs/FRONTEND_RELEASE_v1.3.md` for sources and validation.

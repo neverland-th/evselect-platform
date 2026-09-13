@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import PrelaunchNotice from '@/components/PrelaunchNotice';
+import Image from '@/components/EditorialImage';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import ShareButton from '@/components/ShareButton';
 import {
   ArrowLeft,
-  ArrowRight,
   CalendarDays,
   Clock,
   Car,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     tags: ['Zeekr 7X', 'Zeekr Thailand', 'Premium EV SUV', '800V Platform', 'Review'],
     images: [
       {
-        url: '/images/reviews/zeekr-7x-hero.jpg',
+        url: '/logo-desktop.png',
         width: 1376,
         height: 768,
         alt: 'Zeekr 7X 2026 รีวิว สเปกไทย'
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'รีวิว Zeekr 7X 2026 สเปกไทย | EVSELECT',
     description: 'เจาะลึกพรีเมียมเอสยูวีไฟฟ้า 800V 646 แรงม้า ชิป Snapdragon 8295 และช่วงล่างถุงลม',
-    images: ['/images/reviews/zeekr-7x-hero.jpg']
+    images: ['/logo-desktop.png']
   }
 };
 
@@ -100,7 +100,7 @@ const jsonLd = {
     },
     'model': '7X (2026)',
     'vehicleConfiguration': 'Standard RWD / Long Range RWD / Performance AWD',
-    'image': 'https://evselects.com/images/reviews/zeekr-7x-hero.jpg'
+    'image': 'https://evselects.com/images/editorial-placeholder.svg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -832,53 +832,7 @@ export default function Zeekr7XReviewPage() {
         </section>
 
         {/* SECTION 11: EVSELECT VERIFIED ACCESSORIES */}
-        <section className="my-16 not-prose">
-          <div className="relative bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border-2 border-lime-500/40 rounded-3xl p-6 sm:p-8 overflow-hidden shadow-2xl text-white">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div className="flex flex-col lg:flex-row items-center gap-8 relative z-10">
-              <div className="relative w-full lg:w-1/3 h-56 rounded-2xl overflow-hidden border border-slate-700/80 shrink-0 bg-black">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <Car className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-                    <p className="text-sm font-medium text-slate-400">ภาพประกอบ: อุปกรณ์เสริม Zeekr 7X</p>
-                  </div>
-                </div>
-                <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
-                  100% Direct Fitment
-                </div>
-              </div>
-
-              <div className="flex-1 space-y-4 text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-3 py-1 rounded-full text-xs font-semibold text-lime-400">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  EVSELECT Recommended Upgrades
-                </div>
-                <h3 className="text-lg sm:text-xl font-extrabold text-white">
-                  อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Zeekr 7X 2026
-                </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
-                  ปกป้องห้องโดยสารระดับพรีเมียมของ Zeekr 7X ด้วย <strong>ชุดพรมปูพื้น TPE 3D ไร้กลิ่น ไร้รอยต่อ ขอบยกสูงกันน้ำ 100% ตรงรุ่น RHD</strong>, <strong>ม่านบังแดดกระจกข้างและบานหน้าสะท้อน UV 99%</strong>, <strong>ฟิล์มกระจก 9H ป้องกันรอยสำหรับจอ 16 นิ้ว Mini LED</strong> และ <strong>ถาดจัดระเบียบคอนโซลกลาง 2 ชั้น</strong>
-                </p>
-                <div className="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
-                  <Link
-                    href="/#products"
-                    className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-lg shadow-lime-500/20"
-                  >
-                    <span>เลือกซื้ออุปกรณ์เสริม Zeekr 7X ทั้งหมด</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/#vehicle-finder"
-                    className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-3 rounded-full border border-slate-700 transition-all"
-                  >
-                    <span>ค้นหาตามรุ่นรถ</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PrelaunchNotice />
 
         {/* SECTION 12: PROS & CONS */}
         <section className="my-12 not-prose">
@@ -1127,7 +1081,7 @@ export default function Zeekr7XReviewPage() {
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
               <Image
-                src="/images/reviews/zeekr-009-white.jpg"
+                src="/images/editorial-placeholder.svg"
                 alt="รีวิว ZEEKR 009 สเปกไทย"
                 fill
                 sizes="(max-width: 640px) 100vw, 300px"

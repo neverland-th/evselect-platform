@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from '@/components/EditorialImage';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import ShareButton from '@/components/ShareButton';
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     tags: ['Tesla Model Y L', 'Tesla Thailand', '6-Seater EV', 'Family SUV', 'Review'],
     images: [
       {
-        url: '/images/reviews/tesla-model-y-l-hero.jpg',
+        url: '/logo-desktop.png',
         width: 1200,
         height: 675,
         alt: '2026 Tesla Model Y L Premium 6-Seater รีวิว สเปกไทย'
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย | EVSELECT',
     description: 'เจาะลึกพรีเมียมเอสยูวีครอบครัว 6 ที่นั่ง เบาะ Captain Seats แถวสอง',
-    images: ['/images/reviews/tesla-model-y-l-hero.jpg']
+    images: ['/logo-desktop.png']
   }
 };
 
@@ -99,7 +99,7 @@ const jsonLd = {
     },
     'model': 'Model Y L (Premium 6-Seater)',
     'vehicleConfiguration': 'Long Range Dual-Motor AWD (2+2+2)',
-    'image': 'https://evselects.com/images/reviews/tesla-model-y-l-hero.jpg'
+    'image': 'https://evselects.com/images/editorial-placeholder.svg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -1025,7 +1025,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
               <Image
-                src="/images/reviews/zeekr-009-white.jpg"
+                src="/images/editorial-placeholder.svg"
                 alt="รีวิว ZEEKR 009 สเปกไทย"
                 fill
                 sizes="(max-width: 640px) 100vw, 300px"
