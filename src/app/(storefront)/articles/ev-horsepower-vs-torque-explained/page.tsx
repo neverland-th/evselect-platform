@@ -1,3 +1,4 @@
+import PrelaunchNotice from '@/components/PrelaunchNotice';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -9,19 +10,10 @@ import {
   Sparkles,
   Award,
   Zap,
-  Gauge,
-  SlidersHorizontal,
-  Info,
-  ShieldAlert,
   CheckCircle2,
   TrendingUp,
-  Activity,
   Compass,
-  Layers,
-  ChevronRight,
-  Cpu,
-  Flame,
-  FlameKindling
+  Flame
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -654,59 +646,7 @@ export default function EVHorsepowerVsTorquePage() {
         </section>
 
         {/* SECTION 7: EVSELECT ACCESSORIES RECOMMENDATIONS */}
-        <section className="my-12 not-prose">
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-72 h-72 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div className="relative z-10">
-              <div className="flex items-center gap-2 text-lime-400 text-xs font-bold uppercase tracking-wider mb-2">
-                <Sparkles className="w-4 h-4" /> EVSELECT Performance &amp; Protection
-              </div>
-              <h3 className="text-lg sm:text-xl font-black text-white mb-3">
-                อุปกรณ์เสริมเพื่อการปกป้องและสมรรถนะที่สมบูรณ์แบบ
-              </h3>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mb-6">
-                ยกระดับประสบการณ์การขับขี่รถยนต์ไฟฟ้าของคุณด้วยอุปกรณ์ตกแต่งและของแต่งตรงรุ่นคุณภาพระดับพรีเมียมจาก EVSELECT:
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="bg-slate-800/90 border border-slate-700/80 p-4 rounded-2xl">
-                  <h4 className="font-extrabold text-slate-900 text-sm mb-1">ล้อฟอร์จน้ำหนักเบา (Forged Wheels)</h4>
-                  <p className="text-[11px] text-slate-300 leading-relaxed">
-                    ลดน้ำหนักมวลใต้สปริง (Unsprung Mass) ล้อละ 3-4 กก. ช่วยให้ออกตัวไวยิ่งขึ้นและประหยัดพลังงาน
-                  </p>
-                </div>
-
-                <div className="bg-slate-800/90 border border-slate-700/80 p-4 rounded-2xl">
-                  <h4 className="font-extrabold text-slate-900 text-sm mb-1">เซ็นเซอร์วัดลมยาง TPMS ไร้สาย</h4>
-                  <p className="text-[11px] text-slate-300 leading-relaxed">
-                    ตรวจสอบแรงดันและอุณหภูมิยางแบบ Real-time ป้องกันยางระเบิดจากความร้อนสะสมเมื่อขับขี่ความเร็วสูง
-                  </p>
-                </div>
-
-                <div className="bg-slate-800/90 border border-slate-700/80 p-4 rounded-2xl">
-                  <h4 className="font-extrabold text-slate-900 text-sm mb-1">แผ่นกันกระแทกแบตเตอรี่ใต้ท้อง</h4>
-                  <p className="text-[11px] text-slate-300 leading-relaxed">
-                    อะลูมิเนียมเกรดอากาศยาน 5 มม. ปกป้องโครงสร้างแบตเตอรี่และระบบหล่อเย็นจากเศษหินและสิ่งกีดขวาง
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
-                <span className="text-xs text-slate-400">
-                  รับประกันสินค้าตรงรุ่น 100% พร้อมบริการจัดส่งด่วนทั่วประเทศไทย
-                </span>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs px-5 py-2.5 rounded-xl transition-all shadow-md"
-                >
-                  <span>เลือกซื้ออุปกรณ์เสริมตรงรุ่น</span>
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PrelaunchNotice />
 
       </div>
 

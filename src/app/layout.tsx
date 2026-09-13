@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://evselects.com'),
-  title: 'EVSELECT | อุปกรณ์เสริมรถยนต์ไฟฟ้า คัดเกรดพรีเมียม ผ่านการทดสอบตรงรุ่น 100%',
-  description: 'EVSELECT แพลตฟอร์มรวมอุปกรณ์เสริมและของแต่ง EV คัดเกรดตรงจากโรงงานชั้นนำ ผ่านการทดสอบ Fitment บนรถสเปกไทย 100% สำหรับ BYD, Tesla, Zeekr, Deepal, Geely',
+  title: 'EVSELECT | รีวิวรถ EV และอุปกรณ์เสริมสำหรับคนรักรถ',
+  description: 'บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับคนรักรถ EV ในไทย ติดตามข่าวการเปิดตัวสินค้าจาก EVSELECT',
   icons: {
     icon: '/logo.png',
   },
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'EVSELECT - DRIVE BETTER. SELECT SMARTER.',
-    description: 'ศูนย์รวมอุปกรณ์เสริมและของแต่ง EV ตรงรุ่นสเปกไทย พร้อมบทความรีวิวเจาะลึก 12 มิติ',
+    title: 'EVSELECT | เข้าใจรถให้ลึก เลือกให้ตรงใจ',
+    description: 'อ่านรีวิวรถ EV ความรู้เรื่องช่วงล่าง และติดตามอุปกรณ์เสริมที่กำลังเตรียมเปิดตัว',
     url: 'https://evselects.com',
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',

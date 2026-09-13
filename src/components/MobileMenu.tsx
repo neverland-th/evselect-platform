@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
-import { Menu, X, Car, Sparkles, ShieldCheck, ShoppingBag, MessageCircle, FileText, Info } from "lucide-react";
+import { Menu, X, Car, Sparkles, ShieldCheck, Package, MessageCircle, FileText, Info } from "lucide-react";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
-  const navRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const prevIsOpenRef = useRef(isOpen);
 
@@ -84,16 +85,20 @@ export default function MobileMenu() {
     <div className="xl:hidden flex items-center shrink-0">
       {/* Hamburger Button */}
       <button
+        type="button"
         ref={triggerRef}
         onClick={open}
-        className="min-h-[44px] min-w-[44px] inline-flex items-center justify-center p-2 -ml-2 mr-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 shrink-0"
+        className="min-h-[44px] min-w-[44px] inline-flex items-center justify-center p-2 text-slate-900 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 shrink-0"
         aria-label="เปิดเมนู"
         aria-expanded={isOpen}
+        aria-controls="mobile-navigation"
+        aria-haspopup="dialog"
       >
-        <Menu className="w-5 h-5" />
+        <Menu className="w-6 h-6" aria-hidden="true" />
       </button>
 
-      {/* Backdrop */}
+      {isOpen && createPortal(<>
+      {/* Render at body level so the sticky header cannot constrain the drawer. */}
       <div
         className={`fixed inset-0 z-[100] bg-black/50 transition-opacity duration-300 ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none invisible"
@@ -103,10 +108,13 @@ export default function MobileMenu() {
       />
 
       {/* Slide-in Drawer */}
-      <nav
+      <div
+        id="mobile-navigation"
+        role="dialog"
+        aria-modal="true"
         ref={navRef}
-        className={`fixed top-0 left-0 z-[101] h-full w-[min(20rem,80vw)] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full invisible"
+        className={`fixed top-0 right-0 z-[101] h-dvh w-[min(22rem,88vw)] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
+          isOpen ? "translate-x-0" : "translate-x-full invisible"
         }`}
         aria-label="เมนูหลัก"
         aria-hidden={!isOpen}
@@ -118,6 +126,7 @@ export default function MobileMenu() {
             EV<span className="text-lime-600">SELECT</span>
           </span>
           <button
+            type="button"
             ref={closeButtonRef}
             onClick={close}
             className="min-h-[44px] min-w-[44px] inline-flex items-center justify-center p-2 -mr-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500"
@@ -137,47 +146,38 @@ export default function MobileMenu() {
             <Sparkles className="w-5 h-5 text-lime-600" />
             บทความ EV
           </Link>
-          <a
+          <Link
             href="/#vehicle-finder"
             onClick={close}
             className="flex items-center gap-3 px-3 py-3 min-h-[44px] rounded-lg text-slate-600 hover:bg-slate-50 transition-colors font-medium"
           >
             <Car className="w-5 h-5 text-slate-500" />
-            ค้นหารถ (Vehicle Finder)
-          </a>
-          <a
+            บทความตามรุ่นรถ
+          </Link>
+          <Link
             href="/#products"
             onClick={close}
             className="flex items-center gap-3 px-3 py-3 min-h-[44px] rounded-lg text-slate-600 hover:bg-slate-50 transition-colors font-medium"
           >
-            <ShoppingBag className="w-5 h-5 text-slate-500" />
-            หมวดหมู่สินค้า
-          </a>
-          <a
+            <Package className="w-5 h-5 text-slate-500" />
+            อุปกรณ์เสริมที่กำลังเตรียมเปิดตัว
+          </Link>
+          <Link
             href="/#fitment-assurance"
             onClick={close}
             className="flex items-center gap-3 px-3 py-3 min-h-[44px] rounded-lg text-slate-600 hover:bg-slate-50 transition-colors font-medium"
           >
             <ShieldCheck className="w-5 h-5 text-slate-500" />
-            มาตรฐาน QC ทดสอบ
-          </a>
+            แนวทางคัดเลือกอุปกรณ์
+          </Link>
 
           {/* Divider */}
           <div className="my-4 border-t border-slate-100" />
 
           <div className="px-3 py-2">
-            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">ช่องทางซื้อสินค้า</span>
+            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">ติดต่อและติดตาม</span>
           </div>
 
-          <a
-            href="https://shopee.co.th/shop/9535932"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-3 py-3 min-h-[44px] rounded-lg text-orange-600 hover:bg-orange-50 transition-colors text-sm font-medium"
-          >
-            <ShoppingBag className="w-5 h-5" />
-            ร้าน Shopee EVSELECT
-          </a>
           <a
             href="https://m.me/evselects"
             target="_blank"
@@ -215,9 +215,10 @@ export default function MobileMenu() {
 
         {/* Footer */}
         <div className="px-4 py-3 border-t border-slate-100 text-[11px] text-slate-400 text-center shrink-0">
-          DRIVE BETTER. SELECT SMARTER.™
+          เข้าใจรถให้ลึก เลือกให้ตรงใจ
         </div>
-      </nav>
+      </div>
+      </>, document.body)}
     </div>
   );
 }

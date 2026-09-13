@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
+import DamperArticleCover from '@/components/DamperArticleCover';
+import damperHero from '../../../../../public/images/articles/damper_tuning_hero.jpg';
 import {
   ArrowLeft,
-  ArrowRight,
   CalendarDays,
   Clock,
   SlidersHorizontal,
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
-    images: [{ url: '/images/articles/damper_tuning_hero.jpg' }]
+    images: [{ url: damperHero.src, width: damperHero.width, height: damperHero.height, alt: 'ชุดโช้คอัพสตรัทปรับเกลียวสี่ต้น' }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) รถ EV | EVSELECT',
     description: 'คู่มือวิศวกรรมการเซ็ตติ้ง Bump/Rebound และกราฟ F-V Curve',
-    images: ['/images/articles/damper_tuning_hero.jpg']
+    images: [damperHero.src]
   }
 };
 
@@ -124,13 +124,8 @@ export default function EVDamperTuningGuidePage() {
           ทำไมรถยนต์ไฟฟ้าที่มีน้ำหนักกว่า 2 ตัน ถึงเซ็ตช่วงล่างยากกว่ารถน้ำมัน? บทความนี้จะพาคุณไปทำความรู้จักการปรับจูนโช้คอัพแบบง่ายๆ ตั้งแต่จังหวะยุบ (<strong>Bump</strong>) จังหวะยืด (<strong>Rebound</strong>) ไปจนถึงสูตรสำเร็จ 4 ขั้นตอนเบื้องต้นที่คุณสามารถทำเองได้ พร้อม <strong>Expert Section</strong> สำหรับผู้ที่ต้องการเจาะลึกไปถึงกราฟและกลศาสตร์ระดับวิศวกรรม
         </p>
 
-        <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group relative w-full aspect-[16/9] bg-slate-100">
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/3/37/Coilovers.jpg"
-            alt="ภาพประกอบชุดโช้คอัพและสตรัทปรับเกลียว (Coilovers)"
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-          />
+        <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg relative w-full bg-slate-950">
+          <DamperArticleCover priority />
         </figure>
 
         {/* Key Takeaways Card */}

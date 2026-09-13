@@ -1,3 +1,4 @@
+import PrelaunchNotice from '@/components/PrelaunchNotice';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,7 +6,6 @@ import type { Metadata } from 'next';
 import ShareButton from '@/components/ShareButton';
 import {
   ArrowLeft,
-  ArrowRight,
   CalendarDays,
   Clock,
   Car,
@@ -15,7 +15,6 @@ import {
   XCircle,
   Info,
   Compass,
-  ShieldCheck,
   Gauge,
   Scale,
   ThumbsUp,
@@ -24,12 +23,9 @@ import {
   ChevronRight,
   Zap,
   BatteryCharging,
-  Sliders,
   Layers,
   VolumeX,
   Check,
-  Cpu,
-  Eye,
   Sun
 } from 'lucide-react';
 
@@ -711,54 +707,7 @@ export default function DeepalS07ReviewPage() {
       </div>
 
       {/* 7. EVSELECT Verified Accessories Callout */}
-      <section className="my-16 not-prose">
-        <div className="relative bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border-2 border-lime-500/40 rounded-3xl p-6 sm:p-8 overflow-hidden shadow-2xl text-white">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div className="flex flex-col lg:flex-row items-center gap-8 relative z-10">
-            <div className="relative w-full lg:w-1/3 h-56 rounded-2xl overflow-hidden border border-slate-700/80 shrink-0 bg-black">
-              <Image
-                src="/images/reviews/deepal-s07-details.jpg"
-                alt="อุปกรณ์เสริมตรงรุ่น Changan Deepal S07 EVSELECT"
-                fill
-                sizes="(max-width: 1024px) 100vw, 350px"
-                className="object-cover"
-              />
-              <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
-                100% Direct Fitment
-              </div>
-            </div>
-
-            <div className="flex-1 space-y-4 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-3 py-1 rounded-full text-xs font-semibold text-lime-400">
-                <Sparkles className="w-3.5 h-3.5" />
-                EVSELECT Recommended Upgrades
-              </div>
-              <h3 className="text-lg sm:text-xl font-extrabold text-white">
-                อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Changan Deepal S07
-              </h3>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                ยกระดับการดูแล Deepal S07 ของคุณด้วย <strong>ชุดพรมปูพื้น TPE 3D ไร้รอยต่อ ขอบสูงกันน้ำ 100%</strong>, <strong>ถาดจัดระเบียบคอนโซลกลาง 2 ชั้น</strong>, <strong>ฟิล์มกระจกนิรภัย 9H สำหรับจอ Sunflower 15.6 นิ้ว</strong> และ <strong>แผ่นปูช่อง Frunk หน้า 125 ลิตร</strong>
-              </p>
-              <div className="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
-                <Link
-                  href="/#products"
-                  className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-lg shadow-lime-500/20"
-                >
-                  <span>เลือกซื้ออุปกรณ์เสริม Deepal S07 ทั้งหมด</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/#vehicle-finder"
-                  className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-3 rounded-full border border-slate-700 transition-all"
-                >
-                  <span>ค้นหาตามรุ่นรถ</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PrelaunchNotice />
 
       {/* 8. Side-by-Side Pros & Cons */}
       <section className="my-12 not-prose">

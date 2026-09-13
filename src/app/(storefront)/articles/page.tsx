@@ -1,5 +1,8 @@
+import PrelaunchNotice from '@/components/PrelaunchNotice';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '@/components/EditorialImage';
+import damperHero from '../../../../public/images/articles/damper-tuning-desktop.jpg';
+import DamperArticleCover from '@/components/DamperArticleCover';
 import { 
   ArrowRight, 
   Clock, 
@@ -9,15 +12,14 @@ import {
   Car, 
   ShieldCheck, 
   Award, 
-  Zap, 
-  BookOpen, 
-  CheckCircle2,
+  BookOpen,
   SlidersHorizontal
 } from 'lucide-react';
 
 export const metadata = {
   title: 'บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT',
-  description: 'ศูนย์รวมบทความรีวิวรถยนต์ไฟฟ้า EV สเปกไทย ทดสอบอัตราเร่ง 0-100 ระยะทางวิ่งจริง แบตเตอรี่ ช่วงล่าง พร้อมเทคนิคการดูแลรักษาและอุปกรณ์เสริมตรงรุ่น',
+  description: 'รวมบทความรีวิวรถ EV คู่มือแบตเตอรี่ ช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับคนรักรถในไทย',
+  alternates: { canonical: '/articles' },
 };
 
 export interface ArticleItem {
@@ -31,6 +33,9 @@ export interface ArticleItem {
   segment: 'sedan' | 'suv' | 'hatchback' | 'city' | 'guide' | 'tuning' | 'chassis' | 'dampers' | 'alignment' | 'coilovers' | string;
   segmentName: string;
   image: string;
+  imageAlt?: string;
+  imageUnoptimized?: boolean;
+  responsiveDamperCover?: boolean;
   heroImage?: string;
   date: string;
   dateDisplay: string;
@@ -81,7 +86,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'reviews',
     segment: 'suv',
     segmentName: 'พรีเมียมสมาร์ทเอสยูวี D-Segment',
-    image: '/images/reviews/zeekr-7x-hero.jpg',
+    image: '/images/editorial-placeholder.svg',
     date: '2026-08-26',
     dateDisplay: '26 ส.ค. 2569',
     readTime: '12 นาที',
@@ -111,7 +116,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'reviews',
     segment: 'suv',
     segmentName: '👑 อัลตร้าลักชัวรีเอ็มพีวีไฟฟ้า',
-    image: '/images/reviews/zeekr-009-white.jpg',
+    image: '/images/editorial-placeholder.svg',
     date: '2026-08-26',
     dateDisplay: '26 ส.ค. 2569',
     readTime: '16 นาที',
@@ -141,7 +146,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'reviews',
     segment: 'suv',
     segmentName: 'พรีเมียม 6 ที่นั่ง SUV',
-    image: '/images/reviews/tesla-model-y-l-hero.jpg',
+    image: '/images/editorial-placeholder.svg',
     date: '2026-08-26',
     dateDisplay: '26 ส.ค. 2569',
     readTime: '8 นาที',
@@ -351,7 +356,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'guides',
     segment: 'guide',
     segmentName: 'คู่มือการใช้งาน & เทคนิคการชาร์จ',
-    image: '/images/reviews/ev-battery-hero-new.jpg',
+    image: '/images/editorial-placeholder.svg',
     date: '2026-08-25',
     dateDisplay: '25 ส.ค. 2569',
     readTime: '4 นาที',
@@ -511,8 +516,11 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'suspension',
     segment: 'dampers',
     segmentName: '🔧 วาล์วแดมเปอร์ & F-V Curve',
-    image: '/images/articles/damper_tuning_hero.jpg',
-    heroImage: '/images/articles/damper_tuning_hero.jpg',
+    image: damperHero.src,
+    heroImage: damperHero.src,
+    imageAlt: 'โช้คแข็ง เกาะถนนขึ้นจริง? เข้าใจ Bump & Rebound ก่อนหมุนคลิก — EVSELECT',
+    imageUnoptimized: true,
+    responsiveDamperCover: true,
     date: '2026-08-27',
     dateDisplay: '27 ส.ค. 2569',
     publishedAt: '2026-08-27',
@@ -684,7 +692,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
       <header className="space-y-6 mb-12 text-center max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 bg-lime-50 border border-lime-200 text-lime-800 text-xs font-semibold px-4 py-1.5 rounded-full shadow-xs">
           <Sparkles className="w-4 h-4 text-lime-600" />
-          <span>EVSELECT Editorial Lab &amp; Real Road Test Reviews</span>
+          <span>บทความและคู่มือจาก EVSELECT</span>
           <span className="bg-lime-500 text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full ml-1">
             {totalCount} บทความ
           </span>
@@ -704,8 +712,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           className="text-sm sm:text-base md:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          รวมรีวิวรถ EV สเปกไทยฉบับเจาะลึก 12 มิติตามมาตรฐาน ทดสอบอัตราเร่ง 0-100 กม./ชม. ระยะทางวิ่งจริง 
-          การรับมือความร้อน 40°C และช่วงล่างบนถนนไทย พร้อมคำแนะนำอุปกรณ์เสริมตรงรุ่นผ่าน QC 100%
+          รวมบทความรีวิวรถ EV ความรู้เรื่องแบตเตอรี่ ช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับการใช้งานในไทย
         </p>
 
         {/* Quick Highlights Counter Badges */}
@@ -720,7 +727,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           </div>
           <div className="flex items-center gap-1.5 bg-white border border-slate-200 px-3.5 py-1.5 rounded-xl shadow-xs">
             <ShieldCheck className="w-4 h-4 text-lime-600" />
-            <span><strong>100%</strong> ทดสอบขับขี่จริงบนถนนไทย</span>
+            <span>เน้นเรื่องรถ EV ในไทย</span>
           </div>
           <div className="flex items-center gap-1.5 bg-white border border-slate-200 px-3.5 py-1.5 rounded-xl shadow-xs">
             <Award className="w-4 h-4 text-lime-600" />
@@ -871,7 +878,8 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto min-h-[300px] overflow-hidden bg-slate-100">
                 <Image
                   src={featuredArticle.image}
-                  alt={featuredArticle.title}
+                  alt={featuredArticle.imageAlt ?? featuredArticle.title}
+                  unoptimized={featuredArticle.imageUnoptimized}
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 60vw"
@@ -886,7 +894,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     FEATURED REVIEW
                   </span>
                   <span className="bg-white/90 backdrop-blur text-slate-800 text-xs font-semibold px-3 py-1 rounded-full border border-slate-200 shadow-xs">
-                    ทดสอบขับขี่จริง
+                    อ่านบทวิเคราะห์
                   </span>
                 </div>
 
@@ -1040,10 +1048,13 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '460px' } as React.CSSProperties}
             >
               {/* Card Image Container with Direct Link */}
-              <Link href={`/articles/${article.slug}`} className="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-100 block">
+              <Link href={`/articles/${article.slug}`} className={`relative w-full overflow-hidden bg-slate-100 block ${article.responsiveDamperCover ? '' : 'h-56 sm:h-60'}`}>
+                {article.responsiveDamperCover ? <DamperArticleCover /> : (
+                  <>
                 <Image
                   src={article.image}
-                  alt={article.title}
+                  alt={article.imageAlt ?? article.title}
+                  unoptimized={article.imageUnoptimized}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
@@ -1099,6 +1110,8 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     {article.category}
                   </span>
                 </div>
+                  </>
+                )}
               </Link>
 
               {/* Card Body */}
@@ -1157,56 +1170,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
         </div>
       )}
 
-      {/* 6. Bottom Banner: EVSELECT Fitment Storefront Integration */}
-      <section className="mt-16 sm:mt-20 bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
-        <div className="absolute -top-24 -right-24 w-72 h-72 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-          <div className="lg:col-span-8 space-y-3">
-            <div className="inline-flex items-center gap-2 text-lime-800 text-xs font-bold bg-lime-100 border border-lime-200 px-3 py-1 rounded-full">
-              <ShieldCheck className="w-4 h-4 text-lime-600" />
-              <span>EVSELECT Lab Fitment Guarantee</span>
-            </div>
-            <h3
-              className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight"
-              style={{ textWrap: 'balance' } as React.CSSProperties}
-            >
-              กำลังมองหาอุปกรณ์เสริมตรงรุ่นสำหรับรถยนต์ไฟฟ้าของคุณ?
-            </h3>
-            <p className="text-sm text-slate-600 leading-relaxed max-w-2xl font-normal">
-              EVSELECT ทดสอบ Fitment อุปกรณ์แต่งรถทุกชิ้นบนรถสเปกไทยจริง (พวงมาลัยขวา) 
-              ทั้ง BYD, Tesla, Zeekr, Deepal และ Geely มั่นใจใส่ได้สนิท 100% ไม่หลวม ไม่ติดขัด พร้อมจัดส่งด่วนจากกรุงเทพฯ
-            </p>
-            <div className="pt-2 flex flex-wrap gap-3 text-xs text-slate-700">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-lime-600" /> ม่านบังแดดหลังคา Nano-Silver
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-lime-600" /> พรม TPE 3D ไร้กลิ่น
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-lime-600" /> ฟิล์มกระจก 9H ตรงรุ่น
-              </span>
-            </div>
-          </div>
-
-          <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-            <Link
-              href="/#vehicle-finder"
-              className="inline-flex items-center justify-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all text-center w-full sm:w-auto lg:w-full"
-            >
-              <Car className="w-4 h-4" />
-              <span>เลือกรุ่นรถเพื่อหาสินค้าตรงรุ่น</span>
-            </Link>
-            <Link
-              href="/#products"
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-semibold text-sm px-6 py-3 rounded-xl border border-slate-300 transition-all text-center w-full sm:w-auto lg:w-full shadow-xs"
-            >
-              <span>ดูแคตตาล็อกสินค้าทั้งหมด</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PrelaunchNotice />
     </div>
   );
 }

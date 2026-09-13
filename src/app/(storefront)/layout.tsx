@@ -1,18 +1,7 @@
 import MobileMenu from "@/components/MobileMenu";
-import Link from 'next/link';
-import Image from 'next/image';
-import { 
-  ShieldCheck, 
-  ShoppingBag, 
-  ExternalLink, 
-  MessageCircle, 
-  Sparkles, 
-  Car, 
-  CheckCircle2, 
-  Phone, 
-  MapPin, 
-  Layers 
-} from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 export default function StorefrontLayout({
   children,
@@ -20,214 +9,189 @@ export default function StorefrontLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-lime-500 selection:text-black">
-      {/* Top Notification Announcement Bar */}
-      <div className="bg-slate-900 border-b border-slate-800 text-xs py-2.5 px-4 text-center flex flex-col sm:flex-row items-center justify-center gap-2 text-white">
-        <div className="flex items-center gap-2">
-          <span className="flex h-2 w-2 relative shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
-          </span>
-          <span className="text-slate-200 leading-tight">
-            <strong className="text-lime-400 font-semibold">การันตี Fitment ตรงรุ่น 100%</strong>
-            <span className="hidden sm:inline"> — ทดสอบจริงบนรถ EV สเปกไทย</span>
-          </span>
-        </div>
-        <span className="hidden md:inline text-slate-600">|</span>
-        <span className="hidden md:inline text-slate-300">
-          คัดเกรดตรงจากโรงงาน • จัดส่งไวจากกรุงเทพฯ • รับประกันเปลี่ยนคืนใน 7 วัน
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-lime-300 selection:text-black">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-white focus:p-3 focus:rounded-lg"
+      >
+        ข้ามไปเนื้อหาหลัก
+      </a>
+      <div className="bg-slate-950 px-4 py-2.5 text-center text-xs leading-relaxed text-slate-200">
+        <span className="text-lime-300 font-medium">
+          อุปกรณ์เสริม EV กำลังเตรียมเปิดตัว
+        </span>
+        <span className="hidden sm:inline"> · </span>
+        <span className="block sm:inline">
+          อ่านบทความและติดตามความคืบหน้าได้ที่นี่
         </span>
       </div>
-
-      {/* Main Storefront Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-200/90 shadow-xs">
-        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-1.5 sm:gap-4">
-          {/* Mobile Menu & Logo */}
-          <div className="flex items-center gap-1 sm:gap-2">
-            <MobileMenu />
-            <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
-            {/* Mobile Logo */}
-            <div className="xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
-              <Image
-                src="/logo.png"
-                alt="EVSELECT"
-                width={140}
-                height={40}
-                className="object-contain w-full h-full"
-                priority
-              />
-            </div>
-
-            {/* Desktop / PC Logo */}
-            <div className="hidden xl:flex relative w-44 lg:w-52 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-4">
+          <div className="flex items-center min-w-0">
+            <Link href="/" aria-label="EVSELECT หน้าแรก" className="shrink-0">
               <Image
                 src="/logo-desktop.png"
-                alt="EVSELECT - DRIVE BETTER. SELECT SMARTER."
+                alt="EVSELECT"
                 width={380}
                 height={190}
-                className="object-contain w-full h-full"
-                priority
+                sizes="160px"
+                className="w-32 sm:w-40 h-14 object-contain"
+                preload
               />
-            </div>
-          </Link>
+            </Link>
           </div>
-
-          {/* Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-600">
-            <a href="/#vehicle-finder" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
-              <Car className="w-4 h-4 text-lime-600" />
-              เลือกรุ่นรถ (Vehicle Finder)
-            </a>
-            <a href="/#products" className="hover:text-lime-600 transition-colors">
-              สินค้าตรงรุ่น (Catalog)
-            </a>
-            <a href="/#fitment-assurance" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-lime-600" />
-              มาตรฐานการทดสอบ (QC)
-            </a>
-            <a href="/#ecosystem" className="hover:text-lime-600 transition-colors">
-              รุ่นรถที่รองรับ
-            </a>
-            <Link href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
-              <Sparkles className="w-4 h-4 text-lime-600" />
+          <nav
+            aria-label="เมนูหลักเดสก์ท็อป"
+            className="hidden xl:flex items-center gap-7 text-sm font-medium text-slate-600"
+          >
+            <Link href="/articles" className="hover:text-lime-700">
               บทความ EV
             </Link>
-          </nav>
-
-          {/* Action CTAs */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            {/* Shopee Store Link */}
-            <a
-              href="https://shopee.co.th/shop/9535932"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 text-xs font-semibold px-3.5 py-2 rounded-lg transition-all"
-            >
-              <ShoppingBag className="w-3.5 h-3.5" />
-              <span>ร้าน Shopee TH</span>
-            </a>
-
-            {/* Facebook / Line Link */}
-            <a
-              href="https://m.me/evselects"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200 text-xs font-semibold px-3 py-2 rounded-lg transition-all"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">สอบถามทาง LINE / FB</span>
-              <span className="sm:hidden">แชท</span>
-            </a>
-
-            {/* Admin Portal Switch Button */}
-            <Link
-              href="/products"
-              className="hidden sm:inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-lime-500 hover:bg-lime-400 text-black text-xs font-bold px-2.5 sm:px-3.5 py-2 rounded-lg shadow-xs hover:shadow-sm transition-all"
-            >
-              <Layers className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">ระบบหลังบ้าน</span>
+            <Link href="/#vehicle-finder" className="hover:text-lime-700">
+              ค้นหารุ่นรถ
             </Link>
+            <Link href="/#products" className="hover:text-lime-700">
+              อุปกรณ์เสริม
+            </Link>
+            <Link href="/#fitment-assurance" className="hover:text-lime-700">
+              แนวทางคัดเลือก
+            </Link>
+            <Link href="/about" className="hover:text-lime-700">
+              เกี่ยวกับเรา
+            </Link>
+          </nav>
+          <div className="flex items-center gap-2 shrink-0">
+          <a
+            href="https://m.me/evselects"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex shrink-0 justify-center items-center gap-2 min-h-11 px-3 sm:px-4 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold hover:bg-slate-50"
+          >
+            <MessageCircle className="w-4 h-4" />
+            <span>พูดคุยกับเรา</span>
+          </a>
+          <MobileMenu />
           </div>
         </div>
       </header>
-
-      {/* Main Content Area */}
-      <main className="flex-1">
+      <main id="main-content" className="flex-1" tabIndex={-1}>
         {children}
       </main>
-
-      {/* Storefront Footer */}
-      <footer className="bg-zinc-950 border-t border-zinc-800 text-zinc-400 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-            {/* Brand column */}
-            <div className="md:col-span-1 space-y-4">
-              <div className="relative w-48 h-14 overflow-hidden rounded-xl bg-white p-1.5 flex items-center justify-center border border-zinc-800 shadow-sm">
+      <footer className="bg-slate-950 text-slate-400">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-9">
+            <div>
+              <div className="bg-white rounded-xl w-40 px-2 mb-5">
                 <Image
                   src="/logo-desktop.png"
                   alt="EVSELECT"
                   width={380}
                   height={190}
-                  className="object-contain w-full h-full"
+                  className="w-full h-16 object-contain"
                 />
               </div>
-              <p className="text-xs text-zinc-400 leading-relaxed">
-                ศูนย์รวมอุปกรณ์เสริมและของแต่งรถยนต์ไฟฟ้า (EV) ในประเทศไทย คัดสรรตรงจากโรงงานระดับท็อป พร้อมทดสอบ Fitment บนรถสเปกไทยจริงทุกชิ้นก่อนจัดส่ง
+              <p className="text-sm leading-relaxed">
+                พื้นที่สำหรับคนรักรถ EV ในไทย
+                <br />
+                รีวิวรถ ความรู้ และแนวคิดเลือกอุปกรณ์เสริม
               </p>
-              <div className="flex items-center gap-2 text-xs text-lime-400 font-mono">
-                <ShieldCheck className="w-4 h-4" />
-                <span>รับประกันใส่ได้ตรงรุ่น 100%</span>
-              </div>
             </div>
-
-            {/* Supported Models */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">รุ่นรถ EV ที่รองรับในไทย</h4>
-              <ul className="text-xs space-y-2 text-zinc-400">
-                <li className="hover:text-lime-400 transition-colors">BYD Atto 3 / Seal / Sealion 7</li>
-                <li className="hover:text-lime-400 transition-colors">Tesla Model 3 Highland & Legacy</li>
-                <li className="hover:text-lime-400 transition-colors">Tesla Model Y & Model Y L</li>
-                <li className="hover:text-lime-400 transition-colors">Zeekr X & Zeekr 009</li>
-                <li className="hover:text-lime-400 transition-colors">Deepal S05 / S07 & Geely EX2</li>
-              </ul>
-            </div>
-
-            {/* Channels & Support */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">ช่องทางการสั่งซื้อและติดต่อ</h4>
-              <ul className="text-xs space-y-1 text-zinc-400">
+            <div>
+              <h2 className="font-semibold text-white mb-4 text-sm">
+                สำรวจ EVSELECT
+              </h2>
+              <ul className="text-sm space-y-3">
                 <li>
-                  <a href="https://shopee.co.th/shop/9535932" target="_blank" rel="noopener noreferrer" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-orange-400 transition-colors">
-                    <ShoppingBag className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                    <span>ร้านค้าทางการบน Shopee Thailand</span>
-                  </a>
+                  <Link href="/articles" className="hover:text-lime-300">
+                    บทความทั้งหมด
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://m.me/evselects" target="_blank" rel="noopener noreferrer" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-blue-400 transition-colors">
-                    <MessageCircle className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                    <span>Facebook Page & Marketplace</span>
-                  </a>
+                  <Link href="/#vehicle-finder" className="hover:text-lime-300">
+                    บทความตามรุ่นรถ
+                  </Link>
                 </li>
                 <li>
-                  <span className="min-h-[44px] py-2.5 flex items-center gap-2 text-emerald-400">
-                    <Phone className="w-3.5 h-3.5 shrink-0" />
-                    <span>LINE Official: @evselect_th</span>
-                  </span>
+                  <Link href="/#products" className="hover:text-lime-300">
+                    อุปกรณ์เสริมที่กำลังเตรียมเปิดตัว
+                  </Link>
                 </li>
-                <li className="min-h-[44px] py-2.5 flex items-center gap-2 text-zinc-500">
-                  <MapPin className="w-3.5 h-3.5 shrink-0" />
-                  <span>ศูนย์กระจายสินค้า กรุงเทพมหานคร</span>
+                <li>
+                  <Link href="/about" className="hover:text-lime-300">
+                    เกี่ยวกับเรา
+                  </Link>
                 </li>
               </ul>
             </div>
-
-            {/* Quality Commitment */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">มาตรฐาน EVSELECT</h4>
-              <p className="text-xs text-zinc-400 leading-relaxed">
-                อุปกรณ์เสริม EV ทั่วไปจากจีนมักมีปัญหาเมื่อใส่กับรถสเปกไทย (พวงมาลัยขวา / คอนโซลปรับปรุง) EVSELECT แก้ปัญหานี้ด้วยการนำเข้าตัวอย่างและลองใส่จริงก่อนเปิดขาย
-              </p>
-              <div className="pt-2">
-                <Link
-                  href="/products"
-                  className="min-h-[44px] inline-flex items-center justify-center gap-1.5 text-xs text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 px-3 py-2 rounded"
-                >
-                  <span>ระบบจัดการสินค้า PIM</span>
-                  <ExternalLink className="w-3 h-3" />
-                </Link>
-              </div>
+            <div>
+              <h2 className="font-semibold text-white mb-4 text-sm">
+                ติดต่อและติดตาม
+              </h2>
+              <ul className="text-sm space-y-3">
+                <li>
+                  <a
+                    href="https://www.facebook.com/evselects/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 hover:text-lime-300"
+                  >
+                    Facebook EVSELECT <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://m.me/evselects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-lime-300"
+                  >
+                    พูดคุยทาง Messenger
+                  </a>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:text-lime-300">
+                    ติดต่อ EVSELECT
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-semibold text-white mb-4 text-sm">
+                ข้อมูลเพิ่มเติม
+              </h2>
+              <ul className="text-sm space-y-3">
+                <li>
+                  <Link
+                    href="/editorial-policy"
+                    className="hover:text-lime-300"
+                  >
+                    นโยบายบทความ
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="hover:text-lime-300">
+                    ความเป็นส่วนตัว
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="hover:text-lime-300">
+                    ข้อกำหนดการใช้งาน
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/warranty" className="hover:text-lime-300">
+                    ข้อมูลการรับประกัน
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
-
-          <div className="mt-12 pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-            <p>© {new Date().getFullYear()} EVSELECT Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
-            <p className="font-mono text-[11px] text-zinc-500">
-              DRIVE BETTER. SELECT SMARTER.™
-            </p>
+          <div className="border-t border-slate-800 pt-6 mt-10 flex flex-col sm:flex-row justify-between gap-3 text-xs">
+            <p>© {new Date().getFullYear()} EVSELECT Thailand</p>
+            <p>ยังไม่เปิดรับคำสั่งซื้อในช่วงเตรียมเปิดตัว</p>
           </div>
         </div>
       </footer>
     </div>
   );
 }
-
