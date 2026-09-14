@@ -8,7 +8,6 @@ import {
   MessageCircle, 
   Sparkles, 
   Car, 
-  CheckCircle2, 
   Phone, 
   MapPin, 
   Layers 
@@ -20,7 +19,7 @@ export default function StorefrontLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-lime-500 selection:text-black">
+    <div className="storefront-shell min-h-screen flex flex-col bg-white text-slate-900 selection:bg-lime-500 selection:text-black">
       {/* Top Notification Announcement Bar */}
       <div className="bg-slate-900 border-b border-slate-800 text-xs py-2.5 px-4 text-center flex flex-col sm:flex-row items-center justify-center gap-2 text-white">
         <div className="flex items-center gap-2">
@@ -74,20 +73,20 @@ export default function StorefrontLayout({
 
           {/* Navigation Links */}
           <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-600">
-            <a href="/#vehicle-finder" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
+            <Link href="/#vehicle-finder" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
               <Car className="w-4 h-4 text-lime-600" />
-              เลือกรุ่นรถ (Vehicle Finder)
-            </a>
-            <a href="/#products" className="hover:text-lime-600 transition-colors">
-              สินค้าตรงรุ่น (Catalog)
-            </a>
-            <a href="/#fitment-assurance" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
+              เลือกรุ่นรถ
+            </Link>
+            <Link href="/#products" className="hover:text-lime-600 transition-colors">
+              สินค้า
+            </Link>
+            <Link href="/#fitment-assurance" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-lime-600" />
-              มาตรฐานการทดสอบ (QC)
-            </a>
-            <a href="/#ecosystem" className="hover:text-lime-600 transition-colors">
-              รุ่นรถที่รองรับ
-            </a>
+              มาตรฐาน QC
+            </Link>
+            <Link href="/#ecosystem" className="hover:text-lime-600 transition-colors">
+              รุ่นที่รองรับ
+            </Link>
             <Link href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
               <Sparkles className="w-4 h-4 text-lime-600" />
               บทความ EV
@@ -130,6 +129,9 @@ export default function StorefrontLayout({
           </div>
         </div>
       </header>
+      <nav className="storefront-mobile-nav" aria-label="เมนูหลักบนมือถือ">
+        <Link href="/#vehicle-finder">เลือกรุ่นรถ</Link><Link href="/#products">สินค้า</Link><Link href="/articles">บทความ EV</Link><Link href="/dealer">ตัวแทน B2B</Link>
+      </nav>
 
       {/* Main Content Area */}
       <main className="flex-1">
