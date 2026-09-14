@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { damperArticle } from '@/lib/damper-article';
 import {
   ArrowLeft,
   ArrowRight,
@@ -14,6 +15,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: damperArticle.path },
   title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning): Bump, Rebound, Low-Speed vs High-Speed Damping สำหรับรถ EV | EVSELECT',
   description: 'เจาะลึกศาสตร์การปรับจูนโช้คอัพ (Damper Tuning) ตามหลัก Suspension Secrets: อัตราส่วนความหน่วงที่เหมาะสม (Damping Ratio), กราฟ Force-Velocity (F-V Curve), วาล์ว Digressive และตารางปรับคลิกแก้ Oversteer/Understeer สำหรับรถ EV หนัก 2 ตัน',
   keywords: [
@@ -32,17 +34,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) รถ EV ตามหลัก Suspension Secrets | EVSELECT Guide',
     description: 'คู่มือวิศวกรรมการเซ็ตติ้ง Bump/Rebound, อัตราส่วนความหน่วง Damping Ratio และกราฟ F-V Curve แก้ปัญหาอาการย้วย/กระด้างในรถยนต์ไฟฟ้า',
-    url: 'https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide',
+    url: damperArticle.url,
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
-    images: [{ url: '/images/articles/damper_tuning_hero.jpg' }]
+    images: [{
+      url: damperArticle.coverUrl,
+      width: damperArticle.cover.width,
+      height: damperArticle.cover.height,
+      alt: damperArticle.coverAlt,
+    }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) รถ EV | EVSELECT',
     description: 'คู่มือวิศวกรรมการเซ็ตติ้ง Bump/Rebound และกราฟ F-V Curve',
-    images: ['/images/articles/damper_tuning_hero.jpg']
+    images: [damperArticle.coverUrl]
   }
 };
 
@@ -50,6 +57,8 @@ export default function EVDamperTuningGuidePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
+    image: [damperArticle.coverUrl],
+    mainEntityOfPage: damperArticle.url,
     headline: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning): ทำความเข้าใจ Bump, Rebound, Low-Speed vs High-Speed Damping ตามหลัก Suspension Secrets',
     description: 'การปรับตั้งแรงหน่วงโช้คอัพ Bump และ Rebound การคำนวณอัตราส่วนความหน่วงวิกฤต และการปรับคลิกแดมเปอร์สำหรับรถยนต์ไฟฟ้า',
     author: {
@@ -124,13 +133,19 @@ export default function EVDamperTuningGuidePage() {
           ทำไมรถยนต์ไฟฟ้าที่มีน้ำหนักกว่า 2 ตัน ถึงเซ็ตช่วงล่างยากกว่ารถน้ำมัน? บทความนี้จะพาคุณไปทำความรู้จักการปรับจูนโช้คอัพแบบง่ายๆ ตั้งแต่จังหวะยุบ (<strong>Bump</strong>) จังหวะยืด (<strong>Rebound</strong>) ไปจนถึงสูตรสำเร็จ 4 ขั้นตอนเบื้องต้นที่คุณสามารถทำเองได้ พร้อม <strong>Expert Section</strong> สำหรับผู้ที่ต้องการเจาะลึกไปถึงกราฟและกลศาสตร์ระดับวิศวกรรม
         </p>
 
-        <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group relative w-full aspect-[16/9] bg-slate-100">
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/3/37/Coilovers.jpg"
-            alt="ภาพประกอบชุดโช้คอัพและสตรัทปรับเกลียว (Coilovers)"
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-          />
+        <figure className="my-8">
+          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg relative w-full aspect-[16/9] bg-slate-100">
+            <Image
+              src={damperArticle.cover}
+              alt={damperArticle.coverAlt}
+              fill
+              sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 960px"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="mt-3 text-xs leading-relaxed text-slate-500">
+            ภาพประกอบสร้างด้วย AI เพื่ออธิบายหัวข้อแดมเปอร์ ไม่ใช่ภาพสินค้าหรือผลการทดสอบของรุ่นใด
+          </figcaption>
         </figure>
 
         {/* Key Takeaways Card */}

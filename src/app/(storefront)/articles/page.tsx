@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { damperArticle } from '@/lib/damper-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -16,6 +17,7 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: '/articles' },
   title: 'บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT',
   description: 'ศูนย์รวมบทความรีวิวรถยนต์ไฟฟ้า EV สเปกไทย ทดสอบอัตราเร่ง 0-100 ระยะทางวิ่งจริง แบตเตอรี่ ช่วงล่าง พร้อมเทคนิคการดูแลรักษาและอุปกรณ์เสริมตรงรุ่น',
 };
@@ -31,6 +33,7 @@ export interface ArticleItem {
   segment: 'sedan' | 'suv' | 'hatchback' | 'city' | 'guide' | 'tuning' | 'chassis' | 'dampers' | 'alignment' | 'coilovers' | string;
   segmentName: string;
   image: string;
+  imageAlt?: string;
   heroImage?: string;
   date: string;
   dateDisplay: string;
@@ -511,8 +514,9 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'suspension',
     segment: 'dampers',
     segmentName: '🔧 วาล์วแดมเปอร์ & F-V Curve',
-    image: '/images/articles/damper_tuning_hero.jpg',
-    heroImage: '/images/articles/damper_tuning_hero.jpg',
+    image: damperArticle.cover.src,
+    imageAlt: damperArticle.coverAlt,
+    heroImage: damperArticle.cover.src,
     date: '2026-08-27',
     dateDisplay: '27 ส.ค. 2569',
     publishedAt: '2026-08-27',
@@ -1043,7 +1047,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <Link href={`/articles/${article.slug}`} className="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-100 block">
                 <Image
                   src={article.image}
-                  alt={article.title}
+                  alt={article.imageAlt ?? article.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
