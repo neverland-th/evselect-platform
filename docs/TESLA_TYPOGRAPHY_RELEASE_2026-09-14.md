@@ -42,4 +42,14 @@ The package comparison verified 211 existing source/configuration files. Backend
 
 Previous production deployment for rollback: `dpl_5n8H7YPBM5YV4uBKSWMx5H5NL24A` (`evselect-platform-8owqyrn5c-evselect-com.vercel.app`).
 
-Production verification will be recorded after the deployment reaches READY and domain checks pass.
+## Production verification
+
+- Released source commit: `fe0fbfd22d2f4592a6b94fdf4034efb2e885cd43`.
+- Deployment: `dpl_69TH1R8ghPtpvRus72FB7akGo5c8`, https://evselect-platform-5796evv50-evselect-com.vercel.app.
+- Built with production settings and initially withheld domain assignment. Vercel reported READY, then the deployed article/data/image checks passed before promotion.
+- Promoted successfully to production. Resolving `evselects.com` through the Vercel connector returned this exact deployment in READY state; live HTTP and Chrome confirmed updated content.
+- Live audit at approximately 16:32 Bangkok on 14 September 2026: all 31 concrete routes at 390 and 1440 px passed (62 views), no ordinary text below 13 px and no uncontained horizontal overflow.
+- Live Tesla comparison passed at 320, 768, 1280 and 1920 px. Current prices, power, range, rollout footnote, all four cards, canonical and Article schema verified. Damper hero/card decoded successfully.
+- Both affected article routes, article index, homepage and dealer page returned HTTP 200. The www Tesla route, robots.txt and sitemap.xml also returned 200.
+- Final local evidence: `scratch/damper-audit/font-production.json`, `release-production.json`, `release-vercel.json` and related screenshots. No dynamic product or dealer detail links were available in the live listing; that limitation remains.
+- Read-only/live UI checks did not exercise submissions, inventory changes, payment flows or CSV downloads.
