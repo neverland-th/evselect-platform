@@ -1,0 +1,81 @@
+.trigger, .close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.trigger:hover, .close:hover { background: #f7fee7; border-color: #84cc16; }
+.trigger:focus-visible, .drawer :is(a, button):focus-visible { outline: 3px solid #4d7c0f; outline-offset: 3px; }
+
+.drawer {
+  position: fixed;
+  inset: 0 auto 0 0;
+  margin: 0;
+  padding: 0;
+  width: min(24rem, calc(100vw - 2rem));
+  max-width: none;
+  height: 100dvh;
+  max-height: 100dvh;
+  border: 0;
+  border-right: 1px solid #e2e8f0;
+  background: #fff;
+  color: #0f172a;
+  overflow: hidden;
+  box-shadow: 12px 0 40px rgb(15 23 42 / 16%);
+}
+
+/* The native modal top layer avoids clipping by the sticky header. */
+.drawer[open] { display: flex; flex-direction: column; animation: enter 180ms ease-out; }
+.drawer::backdrop { background: rgb(15 23 42 / 48%); }
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+.brand { font-size: .8125rem; line-height: 1.6; letter-spacing: .12em; font-weight: 800; color: #4d7c0f; }
+.heading h2 { margin: .125rem 0 0; font-size: 1.5rem; line-height: 1.5; font-weight: 800; }
+.content {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1rem 1.25rem max(1.5rem, env(safe-area-inset-bottom));
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  min-height: 52px;
+  padding: .75rem .5rem;
+  border-bottom: 1px solid #f1f5f9;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.link svg { flex-shrink: 0; color: #64748b; }
+.link:hover { background: #f7fee7; color: #3f6212; }
+.contact { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid #e2e8f0; }
+.contact p { margin-bottom: .875rem; font-size: .875rem; line-height: 1.7; color: #475569; }
+.chat, .shop { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 48px; padding: .75rem; border-radius: 10px; font-size: .9375rem; line-height: 1.6; font-weight: 700; }
+.chat { background: #84cc16; color: #142000; }
+.chat:hover { background: #a3e635; }
+.shop { margin-top: .5rem; background: #fff7ed; color: #9a3412; }
+.shop:hover { background: #ffedd5; }
+.chat svg, .shop svg { flex-shrink: 0; }
+
+@keyframes enter { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@media (prefers-reduced-motion: reduce) { .drawer[open] { animation: none; } }

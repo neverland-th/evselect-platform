@@ -30,14 +30,11 @@ main > article a { overflow-wrap: anywhere; }
 main > article :is(sub, sup) { font-size: max(0.75rem, 0.75em); }
 main > article p.text-xs { font-size: 0.875rem; line-height: 1.7; }
 
-.storefront-shell > header nav { flex-shrink: 1; gap: 1rem; }
-.storefront-shell > header nav a { white-space: nowrap; }
-.storefront-mobile-nav { display: none; }
+.storefront-shell > header > div > nav { flex-shrink: 1; gap: 1rem; }
+.storefront-shell > header > div > nav a { white-space: nowrap; }
 
 @media (max-width: 1279px) {
-  .storefront-shell > header nav { display: none; }
-  .storefront-mobile-nav { display: flex; overflow-x: auto; gap: 1.25rem; padding: 0.65rem 1rem; border-bottom: 1px solid #e2e8f0; font-size: 0.9375rem; }
-  .storefront-mobile-nav a { flex-shrink: 0; }
+  .storefront-shell > header > div > nav { display: none; }
 }
 
 @media (max-width: 1023px) {

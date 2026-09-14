@@ -7,7 +7,6 @@ import {
   ExternalLink, 
   MessageCircle, 
   Sparkles, 
-  Car, 
   Phone, 
   MapPin, 
   Layers 
@@ -58,7 +57,7 @@ export default function StorefrontLayout({
             </div>
 
             {/* Desktop / PC Logo */}
-            <div className="hidden xl:flex relative w-44 lg:w-52 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
+            <div className="hidden xl:flex relative w-40 lg:w-44 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
               <Image
                 src="/logo-desktop.png"
                 alt="EVSELECT - DRIVE BETTER. SELECT SMARTER."
@@ -73,19 +72,8 @@ export default function StorefrontLayout({
 
           {/* Navigation Links */}
           <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-600">
-            <Link href="/#vehicle-finder" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
-              <Car className="w-4 h-4 text-lime-600" />
-              เลือกรุ่นรถ
-            </Link>
             <Link href="/#products" className="hover:text-lime-600 transition-colors">
               สินค้า
-            </Link>
-            <Link href="/#fitment-assurance" className="hover:text-lime-600 transition-colors flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-lime-600" />
-              มาตรฐาน QC
-            </Link>
-            <Link href="/#ecosystem" className="hover:text-lime-600 transition-colors">
-              รุ่นที่รองรับ
             </Link>
             <Link href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
               <Sparkles className="w-4 h-4 text-lime-600" />
@@ -94,7 +82,7 @@ export default function StorefrontLayout({
           </nav>
 
           {/* Action CTAs */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
             {/* Shopee Store Link */}
             <a
               href="https://shopee.co.th/shop/9535932"
@@ -129,9 +117,6 @@ export default function StorefrontLayout({
           </div>
         </div>
       </header>
-      <nav className="storefront-mobile-nav" aria-label="เมนูหลักบนมือถือ">
-        <Link href="/#vehicle-finder">เลือกรุ่นรถ</Link><Link href="/#products">สินค้า</Link><Link href="/articles">บทความ EV</Link><Link href="/dealer">ตัวแทน B2B</Link>
-      </nav>
 
       {/* Main Content Area */}
       <main className="flex-1">
