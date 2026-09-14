@@ -31,6 +31,16 @@ The preceding typography release replaced the mobile hamburger with a horizontal
 
 ## Deployment
 
-Pending production deployment and final live checks.
+- Source commit: `c5de0d6883584d5c2f9c4cd2e534c5ab25604863`.
+- Vercel deployment: `dpl_HB7br43tuMF4cBzTpi7xwYDWFEHV`.
+- Deployment URL: https://evselect-platform-95g32ffab-evselect-com.vercel.app
+- Production URL: https://evselects.com/
+- Terminal status `READY` confirmed before promotion. After promotion, resolving `evselects.com` through the Vercel connector returned this exact deployment ID and `READY`.
+- All 24 storefront routes returned HTTP 200, one menu trigger, and the dialog markup on localhost, the unique deployment URL, and the production domain. The obsolete mobile strip is absent. The damper cover returns HTTP 200 with JPEG content type.
+- Click opening and closing verified on the unique deployment and the production domain. Tesla production deployment still contains 460 hp and four trim cards.
+- The user's explicitly mentioned tab was refreshed and its menu opened successfully using the keyboard. Automated mouse dispatch timed out in that pre-existing tab; click behavior passed in a fresh tab on the same production domain. The user's tab is left showing the menu.
+- Viewport and reduced-motion emulation reset; temporary test tab closed.
+
+Evidence JSON files in the ignored audit folder: `menu-http-local.json`, `menu-http-deployment.json`, and `menu-http-production.json`.
 
 Rollback target for this navigation release: `dpl_69TH1R8ghPtpvRus72FB7akGo5c8` (`evselect-platform-5796evv50-evselect-com.vercel.app`).
