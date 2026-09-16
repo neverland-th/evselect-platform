@@ -930,10 +930,10 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
               <Sparkles className="w-3.5 h-3.5" /> EVSELECT Suspension &amp; Fitment Hub
             </div>
             <h3 className="text-lg sm:text-xl font-black text-white">
-              ค้นหาชุดช่วงล่าง สตรัทปรับเกลียว และยางตรงรุ่นสำหรับรถคุณ
+              เรียนรู้เรื่องช่วงล่าง สตรัทปรับเกลียว และยางก่อนเลือก
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-              เลือกซื้ออุปกรณ์เสริมช่วงล่างเกรดพรีเมียมที่ผ่านการทดสอบบนถนนไทย พร้อมบริการติดตั้งและชั่งน้ำหนักบาลานซ์มุมล้อ (Corner Weight) โดยทีมช่างวิศวกรผู้เชี่ยวชาญ
+              สินค้ายังไม่เปิดจำหน่าย ระหว่างรอคุณอ่านหลักการเลือกสเปกและสิ่งที่ต้องตรวจให้ตรงกับรถและการใช้งานได้ก่อน
             </p>
           </div>
 

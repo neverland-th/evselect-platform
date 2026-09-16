@@ -2,18 +2,15 @@
 
 import { useState, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { 
   Car, 
   CheckCircle2, 
-  ShieldCheck, 
   Search, 
   RotateCcw, 
-  ShoppingBag, 
   MessageCircle, 
-  ArrowRight,
-  ExternalLink,
   Tag,
-  Zap
+  Rocket,
 } from 'lucide-react';
 
 export interface VehicleOption {
@@ -30,9 +27,6 @@ export interface StorefrontProduct {
   title: string;
   description: string | null;
   categoryName: string;
-  shopeeId: string | null;
-  shopeeItemId?: string | null;
-  shopeeShopId?: string | null;
   wooId: string | null;
   cost: number | null;
   priceThb: number;
@@ -159,13 +153,13 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
           <div>
             <div className="flex items-center gap-2 text-lime-700 font-mono text-xs font-semibold uppercase tracking-wider mb-1">
               <Car className="w-4 h-4 text-lime-600" />
-              <span>ระบบค้นหาอุปกรณ์เสริมตรงรุ่น EV สเปกไทย</span>
+              <span>ระบบค้นหาข้อมูลตามรุ่นรถ EV สเปกไทย</span>
             </div>
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
-              เลือกรุ่นรถของคุณ เพื่อแสดงสินค้าที่ผ่านการทดสอบตรงรุ่น 100%
+              เลือกรุ่นรถของคุณ เพื่อดูรายการที่กำลังเตรียมข้อมูล
             </h2>
             <p className="text-xs md:text-sm text-slate-600 mt-1">
-              ระบบจะแสดงเฉพาะสินค้าที่ผ่านการทดสอบบนรถพวงมาลัยขวาในไทย ปลอดภัย ใส่ได้พอดีแน่นอน
+              สถานะและรุ่นรถที่รองรับอาจเปลี่ยนก่อนเปิดตัว จึงยังไม่ควรใช้หน้านี้เป็นข้อมูลยืนยันการซื้อ
             </p>
           </div>
 
@@ -320,13 +314,13 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-              <span>รายการอุปกรณ์เสริมผ่านการทดสอบตรงรุ่น</span>
+              <span>รายการที่อยู่ระหว่างเตรียมข้อมูล</span>
               <span className="text-xs font-mono font-bold bg-lime-50 text-lime-700 border border-lime-200 px-2.5 py-0.5 rounded-full">
-                QC สเปกไทย
+                PRE-LAUNCH
               </span>
             </h3>
             <p className="text-sm text-slate-600 mt-0.5">
-              มั่นใจได้ 100% ใส่ได้พอดี ไม่ติดขัด พร้อมสั่งซื้อบน Shopee หรือทักแชทสั่งตรง
+              ยังไม่เปิดจำหน่าย รายการนี้ใช้แสดงสิ่งที่กำลังตรวจข้อมูลก่อนเปิดตัว
             </p>
           </div>
         </div>
@@ -336,16 +330,16 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
             <div className="w-16 h-16 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4">
               <Car className="w-8 h-8" />
             </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-1">ไม่พบสินค้าที่ตรงกับเงื่อนไขที่เลือก</h4>
+            <h4 className="text-lg font-bold text-slate-900 mb-1">ยังไม่มีรายการสำหรับเงื่อนไขที่เลือก</h4>
             <p className="text-sm text-slate-600 max-w-md mx-auto mb-6">
-              ทางทีมงานอาจกำลังอยู่ในขั้นตอนการทดสอบสำหรับรุ่นรถนี้ หรือไม่มีสินค้าตรงกับคำค้นหา
+              ทีมงานอาจยังไม่ได้เริ่มเก็บข้อมูลสำหรับรุ่นรถนี้ คุณบอกรุ่นรถที่อยากให้เราเริ่มก่อนได้
             </p>
             <button
               onClick={handleReset}
               className="inline-flex items-center gap-2 bg-lime-500 text-black text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-lime-400 transition-colors shadow-xs"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span>แสดงสินค้าทั้งหมด</span>
+              <span>แสดงรายการทั้งหมด</span>
             </button>
           </div>
         ) : (
@@ -379,8 +373,8 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                         {product.categoryName}
                       </span>
                       <span className="inline-flex items-center gap-1 text-[11px] font-bold text-black bg-lime-400 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
-                        <ShieldCheck className="w-3.5 h-3.5 text-black" />
-                        <span>ผ่านทดสอบตรงรุ่น</span>
+                        <Rocket className="w-3.5 h-3.5 text-black" />
+                        <span>กำลังเตรียมข้อมูล</span>
                       </span>
                     </div>
                   </div>
@@ -404,7 +398,7 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                     {/* Verified Compatible Vehicles List */}
                     <div className="space-y-1.5 mb-4 pt-3 border-t border-slate-100">
                       <span className="text-[10px] uppercase font-semibold text-slate-400 tracking-wider block">
-                        รองรับกับรุ่นรถสเปกไทย:
+                        รุ่นรถที่กำลังตรวจข้อมูล:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {product.verifiedVehicles.length > 0 ? (
@@ -418,42 +412,28 @@ export default function VehicleFilter({ vehicles, products }: VehicleFilterProps
                             </span>
                           ))
                         ) : (
-                          <span className="text-[11px] text-slate-400 italic">อุปกรณ์เสริมสำหรับรถ EV ทั่วไป</span>
+                          <span className="text-[11px] text-slate-400 italic">ยังไม่ได้ระบุรุ่นรถ</span>
                         )}
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Price & Buy Action Buttons */}
+                {/* Pre-launch status and interest action */}
                 <div className="p-5 sm:p-6 pt-0 border-t border-slate-100 mt-2 space-y-3">
-                  <div className="flex items-baseline justify-between pt-3">
-                    <span className="text-xs text-slate-500">ราคาพิเศษในไทย:</span>
-                    <span className="text-xl font-extrabold text-slate-900 font-mono">
-                      ฿{product.priceThb.toLocaleString()} <span className="text-xs text-slate-500 font-normal">บาท</span>
-                    </span>
+                  <div className="flex items-start gap-2 pt-3 text-sm text-slate-600">
+                    <Rocket className="mt-0.5 h-4 w-4 shrink-0 text-lime-700" />
+                    <p><strong className="text-slate-900">ยังไม่เปิดจำหน่าย</strong><br />รายละเอียดและราคาจะแสดงเมื่อพร้อมเปิดตัว</p>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2">
-                    <a
-                      href={product.shopeeItemId ? `https://shopee.co.th/product/${product.shopeeShopId || '9535932'}/${product.shopeeItemId}` : `https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-xs"
-                    >
-                      <ShoppingBag className="w-3.5 h-3.5" />
-                      <span>ซื้อบน Shopee</span>
-                    </a>
-
-                    <a
-                      href={`https://m.me/evselects?ref=${encodeURIComponent(`สอบถามสินค้า SKU: ${product.sku}`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold py-2.5 px-3 rounded-xl border border-slate-300 transition-all"
+                  <div>
+                    <Link
+                      href="/contact"
+                      className="inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-lime-200 bg-lime-50 px-3 py-2.5 text-xs font-semibold text-lime-800 transition-all hover:bg-lime-100"
                     >
                       <MessageCircle className="w-3.5 h-3.5 text-blue-600" />
-                      <span>แชทสั่งซื้อ (FB)</span>
-                    </a>
+                      <span>บอกรุ่นรถที่คุณใช้</span>
+                    </Link>
                   </div>
                 </div>
               </div>

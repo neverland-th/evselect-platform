@@ -719,20 +719,20 @@ export default function GeelyEX2ReviewPage() {
             <div className="flex-1 space-y-4 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-3 py-1 rounded-full text-xs font-semibold text-lime-400">
                 <Sparkles className="w-3.5 h-3.5" />
-                EVSELECT Recommended Upgrades
+                PRE-LAUNCH • ยังไม่เปิดจำหน่าย
               </div>
               <h3 className="text-lg sm:text-xl font-extrabold text-white">
-                ชุดอุปกรณ์เสริมตรงรุ่นสำหรับ Geely EX2
+                กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Geely EX2
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                ปกป้องห้องโดยสารให้สะอาดเรียบร้อย ด้วย <strong>ชุดพรมปูพื้น TPE 3D ดักทรายตรงรุ่น Geely EX2</strong>, <strong>ถาดจัดระเบียบลิ้นชัก 10L</strong>, <strong>ฟิล์มกระจก 9H ป้องกันรอยหน้าจอ Flyme Auto 14.6 นิ้ว</strong> และ <strong>แผ่นปูช่อง Frunk หน้า 70 ลิตร</strong>
+                หมวดที่กำลังศึกษา ได้แก่ พรมปูพื้น ถาดจัดระเบียบ ฟิล์มป้องกันหน้าจอ และอุปกรณ์สำหรับพื้นที่เก็บของ รายการจริง รุ่นรถที่รองรับ และสเปกอาจเปลี่ยนก่อนเปิดตัว
               </p>
               <div className="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
                 <Link
-                  href="/#products"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-lg shadow-lime-500/20"
                 >
-                  <span>เลือกซื้ออุปกรณ์เสริม Geely EX2 ทั้งหมด</span>
+                  <span>แจ้งความสนใจสำหรับ Geely EX2</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
@@ -833,10 +833,10 @@ export default function GeelyEX2ReviewPage() {
             </p>
           </div>
           <Link
-            href="/#vehicle-finder"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs px-5 py-2.5 rounded-full transition-all shrink-0 shadow-sm"
           >
-            <span>ค้นหาอุปกรณ์เสริมตรงรุ่น</span>
+            <span>บอกรุ่นรถที่คุณใช้</span>
             <ChevronRight className="w-4 h-4" />
           </Link>
         </div>

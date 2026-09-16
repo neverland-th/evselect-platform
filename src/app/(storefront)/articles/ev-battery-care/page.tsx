@@ -235,17 +235,17 @@ export default function EVBatteryCareArticle() {
             </div>
             <div className="flex-1 space-y-2 text-center sm:text-left">
               <h4 className="text-base font-bold text-slate-900 m-0">
-                ไอเทมแนะนำ: ม่านบังแดดหลังคาพาโนรามา Nano-Silver สู้แดดไทย
+                กำลังศึกษาม่านบังแดดหลังคาพาโนรามาสำหรับรถ EV
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 m-0 leading-relaxed">
-                ลดอุณหภูมิสะสมในห้องโดยสารขณะจอดตากแดดได้ถึง 10-15°C ช่วยลดภาระคอมเพรสเซอร์แอร์และถนอมแบตเตอรี่รถคุณ
+                สินค้ายังไม่เปิดจำหน่าย เรากำลังรวบรวมข้อมูลรุ่นรถ วัสดุ การติดตั้ง และข้อจำกัดก่อนเปิดตัว
               </p>
               <div className="pt-1">
                 <Link 
-                  href="/#products" 
+                  href="/contact"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-lime-700 hover:text-lime-800"
                 >
-                  <span>เลือกซื้อม่านบังแดดตรงรุ่นรถของคุณ</span>
+                  <span>บอกรุ่นรถที่อยากให้เราเตรียมข้อมูล</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

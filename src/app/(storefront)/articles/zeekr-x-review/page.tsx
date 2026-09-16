@@ -704,24 +704,24 @@ export default function ZeekrXReviewPage() {
               <div className="flex-1 space-y-4 text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-3 py-1 rounded-full text-xs font-semibold text-lime-400">
                   <Sparkles className="w-3.5 h-3.5" />
-                  EVSELECT Recommended Upgrades
+                PRE-LAUNCH • ยังไม่เปิดจำหน่าย
                 </div>
                 <h3 className="text-lg sm:text-xl font-extrabold text-white">
-                  อุปกรณ์เสริมตรงรุ่นผ่านการสแกน 3D สำหรับ Zeekr X สเปกไทย
+                  กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Zeekr X สเปกไทย
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  ยกระดับความสมบูรณ์แบบด้วย <strong>ชุดพรมปูพื้น TPE 3D ไร้กลิ่น ไร้รอยต่อ ตรงรุ่น RHD ขอบยกสูงกันน้ำ 100%</strong>, <strong>ม่านบังแดดหลังคาแก้ว Nano-Silver ป้องกัน UV 99%</strong>, <strong>ฟิล์มกระจก 9H สำหรับจอ 14.6 นิ้ว</strong> และ <strong>แผ่นซิลิโคนรองแท่นชาร์จไร้สาย 50W</strong>
+                  หมวดที่กำลังศึกษา ได้แก่ พรมปูพื้น อุปกรณ์บังแดด ฟิล์มป้องกันหน้าจอ และอุปกรณ์ดูแลห้องโดยสาร รายการจริง รุ่นรถที่รองรับ และสเปกอาจเปลี่ยนก่อนเปิดตัว
                 </p>
                 <div className="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
                   <Link
-                    href="/#products"
+                    href="/contact"
                     className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold px-6 py-3 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-lg shadow-lime-500/20"
                   >
-                    <span>เลือกซื้ออุปกรณ์เสริม Zeekr X ทั้งหมด</span>
+                    <span>แจ้งความสนใจสำหรับ Zeekr X</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
-                    href="/#vehicle-finder"
+            href="/contact"
                     className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-3 rounded-full border border-slate-700 transition-all"
                   >
                     <span>ค้นหาตามรุ่นรถ</span>
@@ -825,7 +825,7 @@ export default function ZeekrXReviewPage() {
               href="/#vehicle-finder"
               className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs px-5 py-2.5 rounded-full transition-all shrink-0 shadow-sm"
             >
-              <span>ค้นหาอุปกรณ์เสริมตรงรุ่น</span>
+            <span>บอกรุ่นรถที่คุณใช้</span>
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>

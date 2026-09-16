@@ -5,7 +5,6 @@ import {
   ArrowUpRight,
   BookOpen,
   Car,
-  CheckCircle2,
   MessageCircle,
   Package,
   ShieldCheck,
@@ -14,6 +13,7 @@ import {
   Wrench,
 } from "lucide-react";
 import VehicleGuide from "@/components/VehicleGuide";
+import PrelaunchPanel from "@/components/PrelaunchPanel";
 
 const journeys = [
   {
@@ -34,10 +34,10 @@ const journeys = [
   },
   {
     eyebrow: "03",
-    title: "กำลังเลือกอุปกรณ์",
-    description: "รู้ว่าต้องตรวจรุ่น ปี และจุดติดตั้งอะไร ก่อนเสียเงินซื้อ",
-    href: "/#products",
-    linkLabel: "ดูแนวทางคัดเลือก",
+    title: "รออุปกรณ์เปิดตัว",
+    description: "ดูว่าเรากำลังตรวจอะไร และบอกรุ่นรถที่คุณอยากให้เริ่มก่อน",
+    href: "/#launch",
+    linkLabel: "ดูสถานะการเปิดตัว",
     icon: Package,
   },
 ];
@@ -257,54 +257,7 @@ export default function StorefrontPage() {
         </div>
       </section>
 
-      <section id="products" className="scroll-mt-28 px-5 pb-14 sm:px-8 md:pb-20">
-        <div className="mx-auto grid max-w-7xl gap-10 rounded-[2rem] bg-slate-950 p-7 text-white sm:p-10 lg:grid-cols-[1.15fr_0.85fr] lg:p-14">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-lime-300/30 bg-lime-300/10 px-3 py-1.5 text-xs font-semibold text-lime-300">
-              <Package className="h-4 w-4" /> กำลังเตรียมอุปกรณ์เสริม
-            </span>
-            <h2 className="mt-6 max-w-xl font-bold text-white">
-              ซื้อเมื่อข้อมูลตรงกับรถของคุณจริง
-            </h2>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-300">
-              EVSELECT กำลังจัดเตรียมข้อมูลรุ่นรถ จุดติดตั้ง และข้อจำกัดของสินค้า
-              ก่อนเปิดให้ตัดสินใจซื้อ
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="https://shopee.co.th/shop/9535932"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 hover:bg-lime-200"
-              >
-                ดูสินค้าที่เปิดขายบน Shopee <ArrowUpRight className="h-4 w-4" />
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/20 px-5 py-3 font-semibold text-white hover:bg-white/10"
-              >
-                ถามก่อนเลือก <MessageCircle className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center lg:border-l lg:border-white/15 lg:pl-10">
-            <p className="mb-4 text-sm text-slate-400">สิ่งที่ควรรู้ก่อนมีคำว่า “ตรงรุ่น”</p>
-            {[
-              "รุ่น ปี และตำแหน่งติดตั้งที่ตรวจสอบได้",
-              "วัสดุ วิธีใช้งาน และข้อจำกัดที่บอกชัด",
-              "ภาพหรือบันทึกจากการตรวจสินค้าจริง",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3 border-b border-white/15 py-4">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-lime-300" />
-                <p className="text-sm leading-relaxed text-slate-200">{item}</p>
-              </div>
-            ))}
-            <p className="mt-5 text-xs leading-relaxed text-slate-400">
-              ช่วงนี้ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงินผ่านเว็บไซต์
-            </p>
-          </div>
-        </div>
-      </section>
+      <PrelaunchPanel />
 
       <section id="fitment-assurance" className="scroll-mt-28 border-t border-slate-200 bg-slate-50">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 md:grid-cols-2 md:py-16">

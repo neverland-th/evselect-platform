@@ -70,12 +70,12 @@
 .link:hover { background: #f7fee7; color: #3f6212; }
 .contact { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid #e2e8f0; }
 .contact p { margin-bottom: .875rem; font-size: .875rem; line-height: 1.7; color: #475569; }
-.chat, .shop { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 48px; padding: .75rem; border-radius: 10px; font-size: .9375rem; line-height: 1.6; font-weight: 700; }
+.chat, .launch { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 48px; padding: .75rem; border-radius: 10px; font-size: .9375rem; line-height: 1.6; font-weight: 700; }
 .chat { background: #84cc16; color: #142000; }
 .chat:hover { background: #a3e635; }
-.shop { margin-top: .5rem; background: #fff7ed; color: #9a3412; }
-.shop:hover { background: #ffedd5; }
-.chat svg, .shop svg { flex-shrink: 0; }
+.launch { margin-top: .5rem; border: 1px solid #d9f99d; background: #f7fee7; color: #3f6212; }
+.launch:hover { background: #ecfccb; }
+.chat svg, .launch svg { flex-shrink: 0; }
 
 @keyframes enter { from { transform: translateX(-100%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .drawer[open] { animation: none; } }

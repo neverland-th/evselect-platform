@@ -665,13 +665,13 @@ export default function HybridToEVChassisDynamicsPage() {
             
             <div className="relative z-10">
               <div className="flex items-center gap-2 text-lime-400 text-xs font-bold uppercase tracking-wider mb-2">
-                <Sparkles className="w-4 h-4" /> EVSELECT Transition Upgrades
+                <Sparkles className="w-4 h-4" /> PRE-LAUNCH • ยังไม่เปิดจำหน่าย
               </div>
               <h3 className="text-lg sm:text-xl font-black text-white mb-3">
-                อัปเกรดความสมบูรณ์แบบให้รถ EV ของคุณ
+                หมวดอุปกรณ์ที่ EVSELECT กำลังศึกษา
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mb-6">
-                ตอบโจทย์การใช้งานจริงบนถนนเมืองไทยด้วยอุปกรณ์ตกแต่งและช่วงล่างตรงรุ่นที่ผ่านการคัดสรรโดยทีมวิศวกร EVSELECT:
+                ตัวอย่างหมวดที่อยู่ระหว่างรวบรวมข้อมูลสำหรับการใช้งานในไทย สินค้ายังไม่เปิดจำหน่าย:
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -699,13 +699,13 @@ export default function HybridToEVChassisDynamicsPage() {
 
               <div className="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
                 <span className="text-xs text-slate-400">
-                  รองรับรถยนต์ไฟฟ้าทุกแบรนด์ชั้นนำในไทย: BYD, Tesla, Zeekr, Changan Deepal, MG, GAC Aion
+                  บอกรุ่นรถและสิ่งที่คุณอยากให้เราเตรียมข้อมูลก่อนเปิดตัว
                 </span>
                 <Link
-                  href="/"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs px-5 py-2.5 rounded-xl transition-all shadow-md"
                 >
-                  <span>เลือกซื้ออุปกรณ์เสริมตรงรุ่น</span>
+                  <span>บอกรุ่นรถที่คุณใช้</span>
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>

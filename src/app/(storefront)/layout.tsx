@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { 
   ShieldCheck, 
-  ShoppingBag, 
   MessageCircle, 
+  Rocket,
   Sparkles
 } from 'lucide-react';
 
@@ -23,13 +23,13 @@ export default function StorefrontLayout({
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
           </span>
           <span className="text-slate-200 leading-tight">
-            <strong className="text-lime-400 font-semibold">คู่มือรถ EV สำหรับการใช้งานในไทย</strong>
-            <span className="hidden sm:inline"> — เริ่มจากข้อมูล แล้วค่อยตัดสินใจ</span>
+            <strong className="text-lime-400 font-semibold">EVSELECT กำลังเตรียมเปิดตัวสินค้า</strong>
+            <span className="hidden sm:inline"> — ตอนนี้ยังไม่มีสินค้าพร้อมจำหน่าย</span>
           </span>
         </div>
         <span className="hidden md:inline text-slate-600">|</span>
         <span className="hidden md:inline text-slate-300">
-          ข้อมูลรถ • ช่วงล่าง • แนวทางเลือกอุปกรณ์
+          อ่านบทความและบอกรุ่นรถที่คุณใช้ได้ก่อน
         </span>
       </div>
 
@@ -68,8 +68,8 @@ export default function StorefrontLayout({
 
           {/* Navigation Links */}
           <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-600">
-            <Link href="/#products" className="hover:text-lime-600 transition-colors">
-              สินค้า
+            <Link href="/#launch" className="hover:text-lime-600 transition-colors">
+              เตรียมเปิดตัว
             </Link>
             <Link href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
               <Sparkles className="w-4 h-4 text-lime-600" />
@@ -79,16 +79,13 @@ export default function StorefrontLayout({
 
           {/* Action CTAs */}
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            {/* Shopee Store Link */}
-            <a
-              href="https://shopee.co.th/shop/9535932"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 text-xs font-semibold px-3.5 py-2 rounded-lg transition-all"
+            <Link
+              href="/#launch"
+              className="hidden sm:inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-lime-50 hover:bg-lime-100 text-lime-800 border border-lime-200 text-xs font-semibold px-3.5 py-2 rounded-lg transition-all"
             >
-              <ShoppingBag className="w-3.5 h-3.5" />
-              <span>ร้าน Shopee TH</span>
-            </a>
+              <Rocket className="w-3.5 h-3.5" />
+              <span>กำลังเปิดตัว</span>
+            </Link>
 
             {/* Facebook / Line Link */}
             <a
@@ -149,13 +146,13 @@ export default function StorefrontLayout({
 
             {/* Channels & Support */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">ช่องทางการสั่งซื้อและติดต่อ</h4>
+              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">ติดตามการเปิดตัวและติดต่อ</h4>
               <ul className="text-xs space-y-1 text-zinc-400">
                 <li>
-                  <a href="https://shopee.co.th/shop/9535932" target="_blank" rel="noopener noreferrer" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-orange-400 transition-colors">
-                    <ShoppingBag className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                    <span>ร้าน EVSELECT บน Shopee Thailand</span>
-                  </a>
+                  <Link href="/#launch" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">
+                    <Rocket className="w-3.5 h-3.5 text-lime-400 shrink-0" />
+                    <span>สถานะการเปิดตัวสินค้า</span>
+                  </Link>
                 </li>
                 <li>
                   <a href="https://m.me/evselects" target="_blank" rel="noopener noreferrer" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-blue-400 transition-colors">

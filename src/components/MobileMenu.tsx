@@ -9,6 +9,7 @@ const links = [
   { href: "/", label: "หน้าแรก" },
   { href: "/#choose-your-path", label: "เริ่มจากสิ่งที่กำลังตัดสินใจ" },
   { href: "/#vehicle-finder", label: "เลือกรุ่นรถ" },
+  { href: "/#launch", label: "ติดตามการเปิดตัวสินค้า" },
   { href: "/articles", label: "บทความและคู่มือ EV" },
   { href: "/editorial-policy", label: "นโยบายบทความ" },
   { href: "/contact", label: "ติดต่อ EVSELECT" },
@@ -71,13 +72,13 @@ export default function MobileMenu() {
             ))}
           </nav>
           <div className={styles.contact}>
-            <p>มีคำถามเกี่ยวกับรถหรือหัวข้อที่อยากให้อ่าน?</p>
+            <p>สินค้ายังอยู่ระหว่างเตรียมเปิดตัว บอกรุ่นรถหรือหัวข้อที่คุณอยากให้เราเริ่มก่อนได้</p>
             <a href="https://www.facebook.com/evselects" target="_blank" rel="noopener noreferrer" onClick={close} className={styles.chat}>
               สอบถามทีม EVSELECT <ArrowUpRight size={18} aria-hidden="true" />
             </a>
-            <a href="https://shopee.co.th/shop/9535932" target="_blank" rel="noopener noreferrer" onClick={close} className={styles.shop}>
-              เลือกซื้อที่ร้าน Shopee <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
+            <Link href="/contact" prefetch={false} onClick={close} className={styles.launch}>
+              บอกรุ่นรถที่คุณใช้ <ChevronRight size={18} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </dialog>
