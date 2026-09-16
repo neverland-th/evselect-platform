@@ -7,12 +7,11 @@ import styles from "./MobileMenu.module.css";
 
 const links = [
   { href: "/", label: "หน้าแรก" },
+  { href: "/#choose-your-path", label: "เริ่มจากสิ่งที่กำลังตัดสินใจ" },
   { href: "/#vehicle-finder", label: "เลือกรุ่นรถ" },
-  { href: "/#products", label: "สินค้าและอุปกรณ์เสริม" },
   { href: "/articles", label: "บทความและคู่มือ EV" },
-  { href: "/#fitment-assurance", label: "มาตรฐานการคัดสินค้า" },
-  { href: "/#ecosystem", label: "รถรุ่นที่รองรับ" },
-  { href: "/dealer", label: "สมัครตัวแทนจำหน่าย B2B" },
+  { href: "/editorial-policy", label: "นโยบายบทความ" },
+  { href: "/contact", label: "ติดต่อ EVSELECT" },
 ];
 
 export default function MobileMenu() {
@@ -72,7 +71,7 @@ export default function MobileMenu() {
             ))}
           </nav>
           <div className={styles.contact}>
-            <p>ให้เราช่วยเลือกอุปกรณ์สำหรับรถคุณ</p>
+            <p>มีคำถามเกี่ยวกับรถหรือหัวข้อที่อยากให้อ่าน?</p>
             <a href="https://www.facebook.com/evselects" target="_blank" rel="noopener noreferrer" onClick={close} className={styles.chat}>
               สอบถามทีม EVSELECT <ArrowUpRight size={18} aria-hidden="true" />
             </a>

@@ -3,11 +3,19 @@
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.6;
   --text-sm: 0.9375rem;
-  --text-sm--line-height: 1.6;
+  --text-sm--line-height: 1.65;
 }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { font-size: 1rem; line-height: 1.65; }
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-thai), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
 
 /* Legacy cards and admin badges used fixed 9–12px text. */
 :is([class~="text-[9px]"], [class~="text-[10px]"], [class~="text-[11px]"], [class~="text-[12px]"]) {
@@ -17,14 +25,14 @@ body { font-size: 1rem; line-height: 1.65; }
 
 main { min-width: 0; }
 main :is(h1, h2, h3, h4) { overflow-wrap: anywhere; text-wrap: balance; }
-main h1 { font-size: clamp(1.875rem, 1.25rem + 2.2vw, 3rem); line-height: 1.3; }
+main h1 { font-size: clamp(1.875rem, 1.25rem + 2.2vw, 3rem); line-height: 1.28; }
 main h2 { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.875rem); line-height: 1.4; }
 main h3 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); line-height: 1.45; }
 
 /* Article body copy uses 16px; captions and badges retain the smaller scale. */
-main > article { --text-sm: 1rem; --text-sm--line-height: 1.7; }
+main > article { --text-sm: 1rem; --text-sm--line-height: 1.75; }
 main > article :is(p, li) { overflow-wrap: break-word; }
-main > article :is([class~="text-[14px]"], [class~="text-[15px]"]) { font-size: 1rem; line-height: 1.7; }
+main > article :is([class~="text-[14px]"], [class~="text-[15px]"]) { font-size: 1rem; line-height: 1.75; }
 main > article :is(td, th) { line-height: 1.65; }
 main > article a { overflow-wrap: anywhere; }
 main > article :is(sub, sup) { font-size: max(0.75rem, 0.75em); }

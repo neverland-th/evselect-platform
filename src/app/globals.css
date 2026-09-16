@@ -14,7 +14,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-thai), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-thai), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --color-lime-primary: #65a30d;
   --color-lime-accent: #84cc16;
 }

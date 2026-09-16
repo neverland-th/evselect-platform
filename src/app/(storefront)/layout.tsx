@@ -4,12 +4,8 @@ import Image from 'next/image';
 import { 
   ShieldCheck, 
   ShoppingBag, 
-  ExternalLink, 
   MessageCircle, 
-  Sparkles, 
-  Phone, 
-  MapPin, 
-  Layers 
+  Sparkles
 } from 'lucide-react';
 
 export default function StorefrontLayout({
@@ -27,13 +23,13 @@ export default function StorefrontLayout({
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
           </span>
           <span className="text-slate-200 leading-tight">
-            <strong className="text-lime-400 font-semibold">การันตี Fitment ตรงรุ่น 100%</strong>
-            <span className="hidden sm:inline"> — ทดสอบจริงบนรถ EV สเปกไทย</span>
+            <strong className="text-lime-400 font-semibold">คู่มือรถ EV สำหรับการใช้งานในไทย</strong>
+            <span className="hidden sm:inline"> — เริ่มจากข้อมูล แล้วค่อยตัดสินใจ</span>
           </span>
         </div>
         <span className="hidden md:inline text-slate-600">|</span>
         <span className="hidden md:inline text-slate-300">
-          คัดเกรดตรงจากโรงงาน • จัดส่งไวจากกรุงเทพฯ • รับประกันเปลี่ยนคืนใน 7 วัน
+          ข้อมูลรถ • ช่วงล่าง • แนวทางเลือกอุปกรณ์
         </span>
       </div>
 
@@ -106,14 +102,6 @@ export default function StorefrontLayout({
               <span className="sm:hidden">แชท</span>
             </a>
 
-            {/* Admin Portal Switch Button */}
-            <Link
-              href="/products"
-              className="hidden sm:inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-lime-500 hover:bg-lime-400 text-black text-xs font-bold px-2.5 sm:px-3.5 py-2 rounded-lg shadow-xs hover:shadow-sm transition-all"
-            >
-              <Layers className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">ระบบหลังบ้าน</span>
-            </Link>
           </div>
         </div>
       </header>
@@ -139,17 +127,17 @@ export default function StorefrontLayout({
                 />
               </div>
               <p className="text-xs text-zinc-400 leading-relaxed">
-                ศูนย์รวมอุปกรณ์เสริมและของแต่งรถยนต์ไฟฟ้า (EV) ในประเทศไทย คัดสรรตรงจากโรงงานระดับท็อป พร้อมทดสอบ Fitment บนรถสเปกไทยจริงทุกชิ้นก่อนจัดส่ง
+                บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวทางเลือกอุปกรณ์เสริมสำหรับผู้ใช้รถ EV ในไทย
               </p>
               <div className="flex items-center gap-2 text-xs text-lime-400 font-mono">
                 <ShieldCheck className="w-4 h-4" />
-                <span>รับประกันใส่ได้ตรงรุ่น 100%</span>
+                <span>อ่านข้อมูลให้ครบก่อนตัดสินใจ</span>
               </div>
             </div>
 
             {/* Supported Models */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">รุ่นรถ EV ที่รองรับในไทย</h4>
+              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">รุ่นรถที่มีบทความ</h4>
               <ul className="text-xs space-y-2 text-zinc-400">
                 <li className="hover:text-lime-400 transition-colors">BYD Atto 3 / Seal / Sealion 7</li>
                 <li className="hover:text-lime-400 transition-colors">Tesla Model 3 Highland & Legacy</li>
@@ -166,7 +154,7 @@ export default function StorefrontLayout({
                 <li>
                   <a href="https://shopee.co.th/shop/9535932" target="_blank" rel="noopener noreferrer" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-orange-400 transition-colors">
                     <ShoppingBag className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                    <span>ร้านค้าทางการบน Shopee Thailand</span>
+                    <span>ร้าน EVSELECT บน Shopee Thailand</span>
                   </a>
                 </li>
                 <li>
@@ -175,32 +163,22 @@ export default function StorefrontLayout({
                     <span>Facebook Page & Marketplace</span>
                   </a>
                 </li>
-                <li>
-                  <span className="min-h-[44px] py-2.5 flex items-center gap-2 text-emerald-400">
-                    <Phone className="w-3.5 h-3.5 shrink-0" />
-                    <span>LINE Official: @evselect_th</span>
-                  </span>
-                </li>
-                <li className="min-h-[44px] py-2.5 flex items-center gap-2 text-zinc-500">
-                  <MapPin className="w-3.5 h-3.5 shrink-0" />
-                  <span>ศูนย์กระจายสินค้า กรุงเทพมหานคร</span>
-                </li>
+                <li><Link href="/contact" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">ติดต่อ EVSELECT</Link></li>
               </ul>
             </div>
 
             {/* Quality Commitment */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">มาตรฐาน EVSELECT</h4>
+              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">แนวทาง EVSELECT</h4>
               <p className="text-xs text-zinc-400 leading-relaxed">
-                อุปกรณ์เสริม EV ทั่วไปจากจีนมักมีปัญหาเมื่อใส่กับรถสเปกไทย (พวงมาลัยขวา / คอนโซลปรับปรุง) EVSELECT แก้ปัญหานี้ด้วยการนำเข้าตัวอย่างและลองใส่จริงก่อนเปิดขาย
+                เราแยกข้อมูลจากผู้ผลิต หลักการทั่วไป และสิ่งที่ยังต้องตรวจสอบ เพื่อให้ผู้อ่านเห็นข้อจำกัดของข้อมูลก่อนนำไปใช้
               </p>
               <div className="pt-2">
                 <Link
-                  href="/products"
+                  href="/editorial-policy"
                   className="min-h-[44px] inline-flex items-center justify-center gap-1.5 text-xs text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 px-3 py-2 rounded"
                 >
-                  <span>ระบบจัดการสินค้า PIM</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <span>อ่านนโยบายบทความ</span>
                 </Link>
               </div>
             </div>
