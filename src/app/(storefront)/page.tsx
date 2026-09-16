@@ -270,14 +270,22 @@ export default function StorefrontPage() {
               EVSELECT กำลังจัดเตรียมข้อมูลรุ่นรถ จุดติดตั้ง และข้อจำกัดของสินค้า
               ก่อนเปิดให้ตัดสินใจซื้อ
             </p>
-            <a
-              href="https://www.facebook.com/evselects/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 hover:bg-lime-200"
-            >
-              ติดตามข่าวเปิดตัว <ArrowUpRight className="h-4 w-4" />
-            </a>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://shopee.co.th/shop/9535932"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 hover:bg-lime-200"
+              >
+                ดูสินค้าที่เปิดขายบน Shopee <ArrowUpRight className="h-4 w-4" />
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/20 px-5 py-3 font-semibold text-white hover:bg-white/10"
+              >
+                ถามก่อนเลือก <MessageCircle className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
           <div className="flex flex-col justify-center lg:border-l lg:border-white/15 lg:pl-10">
             <p className="mb-4 text-sm text-slate-400">สิ่งที่ควรรู้ก่อนมีคำว่า “ตรงรุ่น”</p>

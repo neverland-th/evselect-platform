@@ -697,7 +697,7 @@ export default function ZeekrXReviewPage() {
                   className="object-cover"
                 />
                 <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
-                  100% Direct Fitment
+                ตรวจรุ่นรถก่อนเลือกอุปกรณ์
                 </div>
               </div>
 
@@ -979,7 +979,7 @@ export default function ZeekrXReviewPage() {
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
               <Image
-                src="/images/reviews/zeekr-009-white.jpg"
+                src="/images/reviews/zeekr-009-hero.jpg"
                 alt="รีวิว ZEEKR 009 สเปกไทย"
                 fill
                 sizes="(max-width: 640px) 100vw, 300px"

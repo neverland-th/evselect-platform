@@ -175,7 +175,7 @@ export default function Zeekr009ReviewPage() {
       {/* 3. Hero Image Banner */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
         <Image
-          src="/images/reviews/zeekr-009-white.jpg"
+          src="/images/reviews/zeekr-009-hero.jpg"
           alt="ZEEKR 009 อัลตร้าลักชัวรีเอ็มพีวีไฟฟ้า สเปกไทย สีขาว Crystal White"
           fill
           priority
@@ -585,7 +585,7 @@ export default function Zeekr009ReviewPage() {
           <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group">
             <div className="relative w-full aspect-video">
               <Image
-                src="/images/reviews/zeekr-009-seats.jpg"
+                src="/images/reviews/zeekr-009-interior.jpg"
                 alt="เบาะ Sofaro First Class Captain Seats ใน ZEEKR 009 สเปกไทย"
                 fill
                 sizes="(max-width: 768px) 100vw, 850px"
@@ -799,7 +799,7 @@ export default function Zeekr009ReviewPage() {
           <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group">
             <div className="relative w-full aspect-video">
               <Image
-                src="/images/reviews/zeekr-009-details.jpg"
+                src="/images/reviews/zeekr-009-exterior.jpg"
                 alt="จอเพดาน OLED 17 นิ้ว และระบบเสียง YAMAHA 30 ลำโพง ใน ZEEKR 009"
                 fill
                 sizes="(max-width: 768px) 100vw, 850px"
@@ -861,7 +861,7 @@ export default function Zeekr009ReviewPage() {
                   className="object-cover"
                 />
                 <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
-                  100% Direct Fitment
+                ตรวจรุ่นรถก่อนเลือกอุปกรณ์
                 </div>
               </div>
 

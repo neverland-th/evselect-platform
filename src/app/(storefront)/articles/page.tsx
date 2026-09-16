@@ -84,7 +84,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'reviews',
     segment: 'suv',
     segmentName: 'พรีเมียมสมาร์ทเอสยูวี D-Segment',
-    image: '/images/reviews/zeekr-7x-hero.jpg',
+    image: '/images/editorial/zeekr-7x-cover.png',
     date: '2026-08-26',
     dateDisplay: '26 ส.ค. 2569',
     readTime: '12 นาที',
@@ -114,7 +114,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'reviews',
     segment: 'suv',
     segmentName: '👑 อัลตร้าลักชัวรีเอ็มพีวีไฟฟ้า',
-    image: '/images/reviews/zeekr-009-white.jpg',
+    image: '/images/reviews/zeekr-009-hero.jpg',
     date: '2026-08-26',
     dateDisplay: '26 ส.ค. 2569',
     readTime: '16 นาที',
@@ -144,7 +144,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'reviews',
     segment: 'suv',
     segmentName: 'พรีเมียม 6 ที่นั่ง SUV',
-    image: '/images/reviews/tesla-model-y-l-hero.jpg',
+    image: '/images/editorial/tesla-model-y-l-cover.png',
     date: '2026-08-26',
     dateDisplay: '26 ส.ค. 2569',
     readTime: '8 นาที',
@@ -354,7 +354,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'guides',
     segment: 'guide',
     segmentName: 'คู่มือการใช้งาน & เทคนิคการชาร์จ',
-    image: '/images/reviews/ev-battery-hero-new.jpg',
+    image: '/images/hero-bg.jpg',
     date: '2026-08-25',
     dateDisplay: '25 ส.ค. 2569',
     readTime: '4 นาที',
@@ -588,10 +588,10 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: '2026-08-27',
     dateDisplay: '27 ส.ค. 2569',
     publishedAt: '2026-08-27',
-    author: 'EVSELECT Thai Road Lab',
+    author: 'กองบรรณาธิการ EVSELECT',
     readTime: '9 นาที',
     rating: 9.6,
-    ratingText: 'EVSELECT Thai Lab Verified',
+    ratingText: 'คู่มือสำหรับบริบทถนนไทย',
     priceRange: 'คู่มือเชิงลึก',
     performanceText: 'Thai Asphalt & Concrete Setup',
     highlights: [
@@ -601,7 +601,7 @@ const ALL_ARTICLES: ArticleItem[] = [
       'Ground Clearance ป้องกันแบตเตอรี่ครูดน้ำท่วม'
     ],
     featured: false,
-    brand: 'EVSELECT THAI ROAD LAB',
+    brand: 'EVSELECT',
     badge: 'Thailand Road Setup',
     tags: ['Thai Road Tuning', 'Bridge Expansion Joints', 'Bump Travel', 'Digressive Valving', 'Battery Ground Clearance'],
     accessoryOpportunity: 'ชุดสปริงคอมฟอร์ทลดเด้ง, แดมเปอร์วาล์วไทยแลนด์สเปก, การ์ดกันกระแทกใต้ท้องแบตเตอรี่',
@@ -680,7 +680,16 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
   const hatchbackCount = ALL_ARTICLES.filter((a) => a.segment === 'hatchback').length;
   const cityCount = ALL_ARTICLES.filter((a) => a.segment === 'city').length;
 
-  const groupedArticles = activeCategory === 'all' ? [ { title: 'รีวิวรถ EV', items: filteredArticles.filter(a => a.categorySlug === 'reviews') }, { title: 'ระบบช่วงล่างและสมรรถนะ', items: filteredArticles.filter(a => a.categorySlug === 'suspension') }, { title: 'คู่มือและเทคนิค', items: filteredArticles.filter(a => a.categorySlug === 'guides') } ].filter(g => g.items.length > 0) : [ { title: '', items: filteredArticles } ];
+  const visibleArticles = isShowSpotlight
+    ? filteredArticles.filter((article) => article.slug !== featuredArticle.slug)
+    : filteredArticles;
+  const groupedArticles = activeCategory === 'all'
+    ? [
+        { title: 'รีวิวรถ EV', items: visibleArticles.filter((article) => article.categorySlug === 'reviews') },
+        { title: 'ระบบช่วงล่างและสมรรถนะ', items: visibleArticles.filter((article) => article.categorySlug === 'suspension') },
+        { title: 'คู่มือและเทคนิค', items: visibleArticles.filter((article) => article.categorySlug === 'guides') },
+      ].filter((group) => group.items.length > 0)
+    : [{ title: '', items: visibleArticles }];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 text-slate-900 bg-white">
@@ -688,7 +697,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
       <header className="space-y-6 mb-12 text-center max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 bg-lime-50 border border-lime-200 text-lime-800 text-xs font-semibold px-4 py-1.5 rounded-full shadow-xs">
           <Sparkles className="w-4 h-4 text-lime-600" />
-          <span>EVSELECT Editorial Lab &amp; Real Road Test Reviews</span>
+          <span>ศูนย์รวมบทความ EV สำหรับการใช้งานในไทย</span>
           <span className="bg-lime-500 text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full ml-1">
             {totalCount} บทความ
           </span>
@@ -698,25 +707,23 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          บทความ คู่มือ และรีวิวเจาะลึก{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-600 via-emerald-600 to-lime-700">
-            รถยนต์ไฟฟ้า (EV)
-          </span>
+          เข้าใจรถให้ลึกขึ้น<br className="hidden sm:block" />
+          <span className="text-lime-700">ก่อนเลือกและก่อนปรับแต่ง</span>
         </h1>
 
         <p
           className="text-sm sm:text-base md:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed"
           style={{ textWrap: 'balance' } as React.CSSProperties}
         >
-          รวมรีวิวรถ EV สเปกไทยฉบับเจาะลึก 12 มิติตามมาตรฐาน ทดสอบอัตราเร่ง 0-100 กม./ชม. ระยะทางวิ่งจริง 
-          การรับมือความร้อน 40°C และช่วงล่างบนถนนไทย พร้อมคำแนะนำอุปกรณ์เสริมตรงรุ่นผ่าน QC 100%
+          เปรียบเทียบสเปก แยกหลักการทางเทคนิค และชี้จุดที่ควรตรวจสอบกับรถของคุณ
+          เพื่อให้ตัดสินใจได้ง่ายขึ้นโดยไม่ต้องเปิดหลายเว็บไซต์
         </p>
 
         {/* Quick Highlights Counter Badges */}
         <div className="pt-2 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-slate-600">
           <div className="flex items-center gap-1.5 bg-white border border-slate-200 px-3.5 py-1.5 rounded-xl shadow-xs">
             <Car className="w-4 h-4 text-lime-600" />
-            <span><strong>{reviewsCount} รุ่น</strong> รีวิวรถ EV ยอดนิยม</span>
+            <span><strong>{reviewsCount} บทความ</strong> รีวิวและข้อมูลรุ่นรถ</span>
           </div>
           <div className="flex items-center gap-1.5 bg-white border border-slate-200 px-3.5 py-1.5 rounded-xl shadow-xs">
             <SlidersHorizontal className="w-4 h-4 text-lime-600" />
@@ -724,11 +731,11 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           </div>
           <div className="flex items-center gap-1.5 bg-white border border-slate-200 px-3.5 py-1.5 rounded-xl shadow-xs">
             <ShieldCheck className="w-4 h-4 text-lime-600" />
-            <span><strong>100%</strong> ทดสอบขับขี่จริงบนถนนไทย</span>
+            <span><strong>แยกชัดเจน</strong> ข้อมูล หลักการ และข้อควรตรวจสอบ</span>
           </div>
           <div className="flex items-center gap-1.5 bg-white border border-slate-200 px-3.5 py-1.5 rounded-xl shadow-xs">
             <Award className="w-4 h-4 text-lime-600" />
-            <span><strong>EVSELECT</strong> Scorecard มาตรฐาน</span>
+            <span><strong>ภาษาไทย</strong> อ่านง่ายบนมือถือ</span>
           </div>
         </div>
       </header>
@@ -879,7 +886,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="object-cover object-left group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-white/10 lg:to-white"></div>
                 
@@ -887,10 +894,10 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                   <span className="bg-lime-500 text-black text-xs font-black px-3 py-1 rounded-full shadow-xs flex items-center gap-1.5">
                     <Star className="w-3.5 h-3.5 fill-black" />
-                    FEATURED REVIEW
+                    บทความแนะนำ
                   </span>
                   <span className="bg-white/90 backdrop-blur text-slate-800 text-xs font-semibold px-3 py-1 rounded-full border border-slate-200 shadow-xs">
-                    ทดสอบขับขี่จริง
+                    สเปกและบริบทการใช้งาน
                   </span>
                 </div>
 
@@ -1037,14 +1044,13 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 </div>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {group.items.map((article, idx) => (
+                {group.items.map((article) => (
             <article
               key={article.slug}
-              className="group flex flex-col bg-white hover:bg-white border border-slate-200 hover:border-slate-300 rounded-3xl overflow-hidden transition-all duration-300 shadow-xs hover:shadow-xl"
-              style={{ contentVisibility: 'auto', containIntrinsicBlockSize: '460px' } as React.CSSProperties}
+              className="group flex flex-col bg-white border border-slate-200 hover:border-lime-500 rounded-2xl overflow-hidden transition-colors duration-200 shadow-xs"
             >
               {/* Card Image Container with Direct Link */}
-              <Link href={`/articles/${article.slug}`} className="relative h-56 sm:h-60 w-full overflow-hidden bg-slate-100 block">
+              <Link href={`/articles/${article.slug}`} className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100 block">
                 <Image
                   src={article.image}
                   alt={article.imageAlt ?? article.title}
@@ -1054,7 +1060,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 
-                {/* Top Badges */}
+                {/* Category badge */}
                 <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
                   <span className={`text-xs font-bold px-2.5 py-1 rounded-full shadow-xs flex items-center gap-1 ${
                     article.categorySlug === 'reviews'
@@ -1081,22 +1087,10 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     )}
                   </span>
 
-                  {article.rating && (
-                    <span className="bg-white/95 backdrop-blur text-slate-900 border border-slate-200 text-xs font-black px-2.5 py-1 rounded-full shadow-xs flex items-center gap-1">
-                      <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
-                      <span>{article.rating}</span>
-                    </span>
-                  )}
+                  <span className="bg-white/95 backdrop-blur text-slate-700 border border-slate-200 text-xs font-semibold px-2.5 py-1 rounded-full shadow-xs">
+                    {article.readTime}
+                  </span>
                 </div>
-
-                {/* Top left badge */}
-                {article.badge && (
-                  <div className="absolute top-3 left-3 z-10">
-                    <span className="bg-white/95 backdrop-blur text-slate-900 border border-slate-200 text-[10px] font-bold px-2 py-1 rounded shadow-sm">
-                      {article.badge}
-                    </span>
-                  </div>
-                )}
                 {/* Bottom Model Tag inside image */}
                 <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-xs text-white">
                   <span className="bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-lg border border-white/20 text-[11px] font-medium truncate">
@@ -1106,48 +1100,43 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               </Link>
 
               {/* Card Body */}
-              <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between">
+              <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-2 text-xs font-bold text-slate-500 mb-3 tracking-wider">
-                    <span>{(String(idx + 1).padStart(2, '0'))}</span>
-                    <span className="text-slate-300">|</span>
-                    <span className="text-slate-900 uppercase">{article.brand || 'BRAND'}</span>
-                    <span className="text-slate-300">|</span>
-                    <span className="text-lime-700">{article.segmentName}</span>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
+                    <span className="text-slate-900">{article.brand || article.category}</span>
+                    <span aria-hidden="true">•</span>
+                    <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <h3 className="text-base sm:text-base font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance' }}>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance' }}>
                     <Link href={`/articles/${article.slug}`}>{article.title}</Link>
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 mb-4 line-clamp-2 leading-relaxed font-normal">{article.excerpt}</p>
+                  <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
 
                   <dl className="space-y-3 mb-5 border-t border-slate-100 pt-4">
                     <div>
-                      <dt className="text-[10px] font-bold text-slate-400 tracking-wider mb-0.5">TECHNOLOGY SNAPSHOT</dt>
-                      <dd className="text-xs text-slate-700 leading-relaxed flex flex-wrap gap-1">
-                        {article.highlights.map((hl, i) => (
-                          <span key={i} className="bg-slate-50 px-1.5 py-0.5 rounded border border-slate-200">{hl}</span>
+                      <dt className="text-xs font-bold text-slate-500 mb-2">ประเด็นสำคัญในบทความ</dt>
+                      <dd className="text-sm text-slate-700 leading-relaxed space-y-1.5">
+                        {article.highlights.slice(0, 2).map((highlight) => (
+                          <span key={highlight} className="flex gap-2">
+                            <CheckCircle2 className="mt-1 h-3.5 w-3.5 shrink-0 text-lime-600" />
+                            <span>{highlight}</span>
+                          </span>
                         ))}
                       </dd>
                     </div>
-                    {article.accessoryOpportunity && (
-                      <div>
-                        <dt className="text-[10px] font-bold text-slate-400 tracking-wider mb-0.5">ACCESSORY OPPORTUNITY</dt>
-                        <dd className="text-xs text-slate-700 leading-relaxed">{article.accessoryOpportunity}</dd>
-                      </div>
-                    )}
                     {article.fitmentGate && (
-                      <div>
-                        <dt className="text-[10px] font-bold text-slate-400 tracking-wider mb-0.5">FITMENT GATE</dt>
-                        <dd className="text-xs text-slate-700 leading-relaxed">{article.fitmentGate}</dd>
+                      <div className="rounded-xl bg-lime-50 p-3">
+                        <dt className="text-xs font-bold text-lime-800 mb-1">จุดที่ควรตรวจสอบ</dt>
+                        <dd className="text-sm text-slate-700 leading-relaxed line-clamp-2">{article.fitmentGate}</dd>
                       </div>
                     )}
                   </dl>
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-500 pt-3.5 border-t border-slate-100">
-                  <span className="font-bold text-slate-900">{article.priceRange}</span>
-                  <Link href={`/articles/${article.slug}`} className="text-xs font-semibold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1 group/btn">
+                <div className="flex items-center justify-between gap-3 text-xs text-slate-500 pt-3.5 border-t border-slate-100">
+                  <span>{article.dateDisplay}</span>
+                  <Link href={`/articles/${article.slug}`} className="min-h-11 text-sm font-semibold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1 group/btn">
                     <span>{article.categorySlug === 'reviews' ? 'อ่านรีวิวฉบับเต็ม' : 'อ่านบทความฉบับเต็ม'}</span>
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -1168,28 +1157,21 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           <div className="lg:col-span-8 space-y-3">
             <div className="inline-flex items-center gap-2 text-lime-800 text-xs font-bold bg-lime-100 border border-lime-200 px-3 py-1 rounded-full">
               <ShieldCheck className="w-4 h-4 text-lime-600" />
-              <span>EVSELECT Lab Fitment Guarantee</span>
+              <span>เริ่มจากข้อมูลของรถที่คุณใช้</span>
             </div>
             <h3
               className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight"
               style={{ textWrap: 'balance' } as React.CSSProperties}
             >
-              กำลังมองหาอุปกรณ์เสริมตรงรุ่นสำหรับรถยนต์ไฟฟ้าของคุณ?
+              อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed max-w-2xl font-normal">
-              EVSELECT ทดสอบ Fitment อุปกรณ์แต่งรถทุกชิ้นบนรถสเปกไทยจริง (พวงมาลัยขวา) 
-              ทั้ง BYD, Tesla, Zeekr, Deepal และ Geely มั่นใจใส่ได้สนิท 100% ไม่หลวม ไม่ติดขัด พร้อมจัดส่งด่วนจากกรุงเทพฯ
+              เลือกรุ่นรถเพื่อรวมบทความที่เกี่ยวข้อง หรือส่งคำถามให้ทีม EVSELECT ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
             </p>
             <div className="pt-2 flex flex-wrap gap-3 text-xs text-slate-700">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-lime-600" /> ม่านบังแดดหลังคา Nano-Silver
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-lime-600" /> พรม TPE 3D ไร้กลิ่น
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-lime-600" /> ฟิล์มกระจก 9H ตรงรุ่น
-              </span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> รุ่นรถและปีผลิต</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> ลักษณะการใช้งาน</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> สิ่งที่ต้องตรวจสอบก่อนซื้อ</span>
             </div>
           </div>
 
@@ -1199,13 +1181,13 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               className="inline-flex items-center justify-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all text-center w-full sm:w-auto lg:w-full"
             >
               <Car className="w-4 h-4" />
-              <span>เลือกรุ่นรถเพื่อหาสินค้าตรงรุ่น</span>
+              <span>ค้นหาบทความตามรุ่นรถ</span>
             </Link>
             <Link
-              href="/#products"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-semibold text-sm px-6 py-3 rounded-xl border border-slate-300 transition-all text-center w-full sm:w-auto lg:w-full shadow-xs"
             >
-              <span>ดูแคตตาล็อกสินค้าทั้งหมด</span>
+              <span>ส่งคำถามให้ทีม EVSELECT</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

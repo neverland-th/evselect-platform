@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowLeft,
@@ -20,7 +19,7 @@ export const metadata = {
     description: 'เจาะลึกวิธีแก้ช่วงล่าง EV ย้วย ด้วยการจูน Bump & Rebound พร้อมเปรียบเทียบโช้คอัพ 4 แบรนด์ดัง KW, Öhlins, BC Racing และ H-Drive',
     images: [
       {
-        url: '/images/reviews/ev-suspension-hero.jpg', // Placeholder image
+      url: '/images/articles/damper_tuning_hero.jpg',
         width: 1200,
         height: 630,
         alt: 'เปรียบเทียบโช้คอัพสำหรับรถ EV KW Ohlins BC Racing H Drive',

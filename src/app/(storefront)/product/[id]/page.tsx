@@ -2,30 +2,37 @@ import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  CheckCircle2,
+  MessageCircle,
+  Package,
+  ShieldCheck,
+  ShoppingBag,
+} from 'lucide-react';
 
 interface ProductPageProps {
-  params: Promise<{
-    id: string;
-  }>;
+  params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { id } = await params;
-  const product = await prisma.product.findUnique({
-    where: { id },
-  });
+  const product = await prisma.product.findUnique({ where: { id } });
 
-  if (!product) {
-    return {
-      title: 'Product Not Found',
-    };
-  }
+  if (!product) return { title: 'ไม่พบสินค้า | EVSELECT' };
 
   return {
     title: `${product.title} | EVSELECT`,
-    description: product.description || `Buy ${product.title} at EVSELECT`,
+    description: product.description || `ดูรายละเอียดและข้อมูลรุ่นรถสำหรับ ${product.title}`,
   };
 }
+
+const verifiedStatuses = new Set(['PASSED', 'PASSED_WITH_MODIFICATION']);
+const statusLabel: Record<string, string> = {
+  PASSED: 'ตรวจผ่าน',
+  PASSED_WITH_MODIFICATION: 'ใช้ได้เมื่อปรับตามเงื่อนไข',
+};
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { id } = await params;
@@ -34,100 +41,113 @@ export default async function ProductPage({ params }: ProductPageProps) {
     include: {
       category: true,
       batches: {
-        include: {
-          fitments: {
-            include: {
-              vehicle: true,
-            },
-          },
-        },
+        include: { fitments: { include: { vehicle: true } } },
       },
     },
   });
 
-  if (!product) {
-    notFound();
-  }
+  if (!product) notFound();
 
-  // Extract unique compatible vehicles across all batches and fitments
-  const compatibleVehicles = [];
-  const seenVehicles = new Set();
-  
-  for (const batch of product.batches) {
-    for (const fitment of batch.fitments) {
-      const v = fitment.vehicle;
-      const vKey = `${v.make}-${v.model}-${v.year}-${v.variant}`;
-      if (!seenVehicles.has(vKey)) {
-        seenVehicles.add(vKey);
-        compatibleVehicles.push(v);
-      }
-    }
-  }
-
-  // Find a price to display from active batches, or default
-  const activeBatch = product.batches.find(b => b.status === "ACTIVE");
-  const price = activeBatch?.cost ? activeBatch.cost * 1.5 : null; // Arbitrary retail price calculation for demo
+  const fitments = product.batches.flatMap((batch) => batch.fitments);
+  const uniqueFitments = Array.from(
+    new Map(
+      fitments.map((fitment) => [
+        `${fitment.vehicle.make}-${fitment.vehicle.model}-${fitment.vehicle.year}-${fitment.vehicle.variant}`,
+        fitment,
+      ]),
+    ).values(),
+  );
+  const verifiedFitments = uniqueFitments.filter((fitment) => verifiedStatuses.has(fitment.status));
+  const shopeeUrl = product.shopeeItemId
+    ? `https://shopee.co.th/product/${product.shopeeShopId || '9535932'}/${product.shopeeItemId}`
+    : 'https://shopee.co.th/shop/9535932';
+  const syncedPrice = product.shopeeItemId && product.shopeePrice != null ? product.shopeePrice : null;
+  const syncedDate = product.shopeeLastSyncedAt
+    ? new Intl.DateTimeFormat('th-TH', { dateStyle: 'medium' }).format(product.shopeeLastSyncedAt)
+    : null;
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Product Image Placeholder */}
-          <div className="bg-gray-100 rounded-2xl aspect-square flex items-center justify-center">
-            <span className="text-gray-400 text-lg">Product Image</span>
+    <div className="bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 md:py-16 lg:px-8">
+        <Link href="/#products" className="mb-8 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-slate-600 hover:text-lime-700">
+          <ArrowLeft className="h-4 w-4" /> กลับไปหน้าข้อมูลสินค้า
+        </Link>
+
+        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+          <div className="flex min-h-72 items-center justify-center rounded-3xl border border-slate-200 bg-slate-50 p-10 text-center lg:sticky lg:top-28 lg:h-[32rem]">
+            <div>
+              <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-lime-100 text-lime-800">
+                <Package className="h-10 w-10" />
+              </span>
+              <p className="mt-6 font-semibold text-slate-900">กำลังจัดเตรียมภาพสินค้าที่ตรวจสอบแล้ว</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">ดูภาพ ราคา และสถานะขายล่าสุดได้จากหน้าสินค้าใน Shopee</p>
+            </div>
           </div>
 
-          {/* Product Info */}
-          <div className="flex flex-col justify-center">
-            <nav className="text-sm text-gray-500 mb-4">
-              <Link href="/" className="hover:text-black">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="capitalize">{product.category.name}</span>
+          <div>
+            <nav className="flex flex-wrap items-center gap-2 text-sm text-slate-500" aria-label="เส้นทางหน้า">
+              <Link href="/" className="hover:text-lime-700">หน้าแรก</Link>
+              <span aria-hidden="true">/</span>
+              <span>{product.category.name}</span>
             </nav>
 
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">{product.title}</h1>
-            <p className="text-sm text-gray-500 mb-6">SKU: {product.sku}</p>
-            
-            {price && (
-              <div className="text-3xl font-semibold text-gray-900 mb-6">
-                ฿{price.toLocaleString()}
-              </div>
-            )}
+            <p className="mt-7 text-sm font-semibold text-lime-800">SKU: {product.sku}</p>
+            <h1 className="mt-3 font-bold text-slate-950">{product.title}</h1>
+            {product.description && <p className="mt-5 text-base leading-relaxed text-slate-600">{product.description}</p>}
 
-            {product.description && (
-              <div className="prose prose-sm text-gray-600 mb-8">
-                <p>{product.description}</p>
-              </div>
-            )}
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <a href={product.shopeeItemId ? `https://shopee.co.th/product/${product.shopeeShopId || '9535932'}/${product.shopeeItemId}` : `https://shopee.co.th/search?keyword=${encodeURIComponent(product.sku)}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-orange-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-orange-600 transition-colors">
-                Buy on Shopee
-              </a>
-              <a href="https://line.me/ti/p/~@evselect" target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-green-600 transition-colors">
-                Chat on LINE
-              </a>
-              <a href="https://m.me/evselect" target="_blank" rel="noopener noreferrer" className="flex-1 bg-blue-500 text-white text-center py-3 px-6 rounded-full font-medium hover:bg-blue-600 transition-colors">
-                Messenger
-              </a>
-            </div>
-
-            {/* Compatible Vehicles */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Compatible Vehicles</h3>
-              {compatibleVehicles.length > 0 ? (
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {compatibleVehicles.map((vehicle, i) => (
-                    <li key={i} className="bg-gray-50 rounded-lg p-3 text-sm text-gray-700">
-                      {vehicle.year} {vehicle.make} {vehicle.model} {vehicle.variant}
-                    </li>
-                  ))}
-                </ul>
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+              {syncedPrice != null && syncedDate ? (
+                <>
+                  <p className="text-sm text-slate-500">ราคาที่เชื่อมจาก Shopee เมื่อ {syncedDate}</p>
+                  <p className="mt-1 text-3xl font-bold text-slate-950">฿{syncedPrice.toLocaleString('th-TH')}</p>
+                  <p className="mt-2 text-sm text-slate-600">ราคาและสต็อกอาจเปลี่ยนแปลง โปรดตรวจสอบอีกครั้งก่อนสั่งซื้อ</p>
+                </>
               ) : (
-                <p className="text-gray-500 text-sm">No fitment data available yet.</p>
+                <>
+                  <p className="font-semibold text-slate-900">ตรวจราคาและสถานะขายล่าสุดก่อนสั่งซื้อ</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">เว็บไซต์นี้ไม่คำนวณราคาขายขึ้นเอง ราคาที่ใช้ตัดสินใจควรมาจากหน้าร้านที่เปิดขายจริง</p>
+                </>
               )}
             </div>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <a href={shopeeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-orange-500 px-5 py-3 font-semibold text-white hover:bg-orange-600">
+                <ShoppingBag className="h-5 w-5" /> ดูราคาและสต็อกบน Shopee <ArrowUpRight className="h-4 w-4" />
+              </a>
+              <a href="https://m.me/evselects" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-5 py-3 font-semibold text-blue-700 hover:bg-blue-100">
+                <MessageCircle className="h-5 w-5" /> ถามก่อนเลือก
+              </a>
+            </div>
+
+            <section className="mt-10 border-t border-slate-200 pt-8">
+              <div className="flex items-start gap-3">
+                <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-lime-700" />
+                <div>
+                  <h2 className="font-bold">รุ่นรถที่มีผลตรวจผ่านในระบบ</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">ตรวจรุ่น ปี รุ่นย่อย และตำแหน่งติดตั้งกับทีม EVSELECT อีกครั้งก่อนซื้อ โดยเฉพาะรถที่เปลี่ยนสเปกระหว่างปี</p>
+                </div>
+              </div>
+
+              {verifiedFitments.length > 0 && (
+                <div className="mt-6 space-y-3">
+                  {verifiedFitments.map((fitment) => (
+                    <div key={fitment.id} className="flex items-start justify-between gap-4 rounded-xl border border-lime-200 bg-lime-50 p-4">
+                      <div>
+                        <p className="font-semibold text-slate-900">{fitment.vehicle.year} {fitment.vehicle.make} {fitment.vehicle.model}</p>
+                        <p className="mt-1 text-sm text-slate-600">{fitment.vehicle.variant}</p>
+                      </div>
+                      <span className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-lime-800"><CheckCircle2 className="h-4 w-4" /> {statusLabel[fitment.status] || fitment.status}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {verifiedFitments.length === 0 && (
+                <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
+                  ยังไม่มีผลตรวจรุ่นรถที่พร้อมแสดงในหน้านี้ กรุณาส่งรุ่น ปี และรุ่นย่อยให้ทีม EVSELECT ตรวจสอบก่อนสั่งซื้อ
+                </div>
+              )}
+            </section>
           </div>
         </div>
       </div>

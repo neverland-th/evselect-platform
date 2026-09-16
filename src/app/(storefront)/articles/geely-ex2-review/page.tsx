@@ -15,7 +15,6 @@ import {
   XCircle,
   Info,
   Compass,
-  ShieldCheck,
   Gauge,
   Scale,
   ThumbsUp,
@@ -24,11 +23,8 @@ import {
   ChevronRight,
   Zap,
   BatteryCharging,
-  Sliders,
   Layers,
-  VolumeX,
   Check,
-  Cpu,
   Smile
 } from 'lucide-react';
 
@@ -716,7 +712,7 @@ export default function GeelyEX2ReviewPage() {
                 className="object-cover"
               />
               <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
-                100% Direct Fitment
+                ตรวจรุ่นรถก่อนเลือกอุปกรณ์
               </div>
             </div>
 

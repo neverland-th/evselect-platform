@@ -772,7 +772,7 @@ export default function MG4ElectricReviewPage() {
                 className="object-cover"
               />
               <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
-                100% Direct Fitment
+                ตรวจรุ่นรถก่อนเลือกอุปกรณ์
               </div>
             </div>
 
@@ -1108,7 +1108,7 @@ export default function MG4ElectricReviewPage() {
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
               <Image
-                src="/images/reviews/tesla-model-3-highland-hero.jpg"
+                        src="/images/reviews/tesla-model-3-hero.jpg"
                 alt="รีวิว Tesla Model 3 Highland สเปกไทย"
                 fill
                 sizes="(max-width: 640px) 100vw, 300px"

@@ -9,19 +9,11 @@ import {
   Sparkles,
   Award,
   Zap,
-  Gauge,
-  SlidersHorizontal,
-  Info,
-  ShieldAlert,
   CheckCircle2,
   TrendingUp,
-  Activity,
   Compass,
-  Layers,
   ChevronRight,
-  Cpu,
   Flame,
-  FlameKindling
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -694,7 +686,7 @@ export default function EVHorsepowerVsTorquePage() {
 
               <div className="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
                 <span className="text-xs text-slate-400">
-                  รับประกันสินค้าตรงรุ่น 100% พร้อมบริการจัดส่งด่วนทั่วประเทศไทย
+                  ตรวจรุ่น ปี และรายละเอียดสินค้ากับทีม EVSELECT ก่อนสั่งซื้อ
                 </span>
                 <Link
                   href="/"

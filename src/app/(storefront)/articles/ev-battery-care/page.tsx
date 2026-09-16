@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     tags: ['EV Battery', 'Battery Care', 'EV Tips', 'Electric Vehicles', 'Guide'],
     images: [
       {
-        url: '/images/reviews/ev-battery-hero-new.jpg',
+      url: '/images/hero-bg.jpg',
         width: 1200,
         height: 675,
         alt: 'การดูแลแบตเตอรี่รถยนต์ไฟฟ้า EV Battery Care'
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '5 วิธีดูแลแบตเตอรี่รถ EV ให้เสื่อมช้าลง และใช้ได้นานเกิน 10 ปี | EVSELECT',
     description: 'เทคนิคการชาร์จและพฤติกรรมที่ช่วยยืดอายุแบตเตอรี่รถยนต์ไฟฟ้าของคุณให้ทนทาน',
-    images: ['/images/reviews/ev-battery-hero-new.jpg']
+    images: ['/images/hero-bg.jpg']
   }
 };
 
@@ -67,7 +67,7 @@ const jsonLd = {
   '@type': 'Article',
   'headline': '5 วิธีดูแลแบตเตอรี่รถ EV ให้เสื่อมช้าลง และใช้ได้นานเกิน 10 ปี',
   'description': 'เรียนรู้เทคนิคการชาร์จที่ถูกต้อง การตั้งค่า Limit การชาร์จ และพฤติกรรมที่ควรหลีกเลี่ยงเพื่อยืดอายุแบตเตอรี่รถยนต์ไฟฟ้าของคุณ',
-  'image': 'https://evselects.com/images/reviews/ev-battery-hero-new.jpg',
+      'image': 'https://evselects.com/images/hero-bg.jpg',
   'datePublished': '2026-08-25T08:00:00+07:00',
   'dateModified': '2026-08-29T07:00:00+07:00',
   'author': {

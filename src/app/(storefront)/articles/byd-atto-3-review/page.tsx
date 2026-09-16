@@ -765,7 +765,7 @@ export default function BYDAtto3ReviewPage() {
                 className="object-cover"
               />
               <div className="absolute top-3 left-3 bg-lime-500 text-black font-black text-xs px-2.5 py-1 rounded-md shadow-xs">
-                100% Direct Fitment
+                ตรวจรุ่นรถก่อนเลือกอุปกรณ์
               </div>
             </div>
 

@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     tags: ['Tesla Model Y L', 'Tesla Thailand', '6-Seater EV', 'Family SUV', 'Review'],
     images: [
       {
-        url: '/images/reviews/tesla-model-y-l-hero.jpg',
+      url: '/images/editorial/tesla-model-y-l-cover.png',
         width: 1200,
         height: 675,
         alt: '2026 Tesla Model Y L Premium 6-Seater รีวิว สเปกไทย'
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater) สเปกไทย | EVSELECT',
     description: 'เจาะลึกพรีเมียมเอสยูวีครอบครัว 6 ที่นั่ง เบาะ Captain Seats แถวสอง',
-    images: ['/images/reviews/tesla-model-y-l-hero.jpg']
+    images: ['/images/editorial/tesla-model-y-l-cover.png']
   }
 };
 
@@ -99,7 +99,7 @@ const jsonLd = {
     },
     'model': 'Model Y L (Premium 6-Seater)',
     'vehicleConfiguration': 'Long Range Dual-Motor AWD (2+2+2)',
-    'image': 'https://evselects.com/images/reviews/tesla-model-y-l-hero.jpg'
+      'image': 'https://evselects.com/images/editorial/tesla-model-y-l-cover.png'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -172,15 +172,19 @@ export default function TeslaModelY6SeaterReviewPage() {
       </header>
 
       {/* 3. Hero Banner Image (LCP Priority) */}
-      <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
-          <div className="text-center">
-            <Car className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-            <p className="text-sm font-medium text-slate-400">ภาพประกอบ: Tesla Model Y L</p>
-          </div>
+      <div className="relative w-full rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-950 shadow-xl group">
+        <div className="relative aspect-[16/9] md:aspect-[21/9]">
+          <Image
+            src="/images/editorial/tesla-model-y-l-cover.png"
+            alt="ภาพปกบทความรีวิว Tesla Model Y L รุ่น 6 ที่นั่ง"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 1152px"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
+        <div className="relative flex flex-wrap items-center justify-between gap-2 bg-slate-950 p-3 text-xs text-white md:absolute md:bottom-4 md:left-4 md:right-4 md:bg-transparent md:p-0">
           <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
             รุ่นที่ทดสอบ: Tesla Model Y L Premium 6-Seater (Long Range AWD)
           </span>
@@ -997,12 +1001,13 @@ export default function TeslaModelY6SeaterReviewPage() {
             className="group block bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:border-lime-500/50 hover:shadow-md transition-all"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center">
-                <div className="text-center">
-                  <Car className="w-8 h-8 text-slate-300 mx-auto mb-2" />
-                  <p className="text-[10px] font-medium text-slate-400">ภาพประกอบ: Zeekr 7X</p>
-                </div>
-              </div>
+              <Image
+                src="/images/editorial/zeekr-7x-cover.png"
+                alt="ภาพปกรีวิว Zeekr 7X 2026"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
               <div className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded">
                 800V SUV
               </div>
@@ -1025,7 +1030,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
               <Image
-                src="/images/reviews/zeekr-009-white.jpg"
+                src="/images/reviews/zeekr-009-hero.jpg"
                 alt="รีวิว ZEEKR 009 สเปกไทย"
                 fill
                 sizes="(max-width: 640px) 100vw, 300px"
