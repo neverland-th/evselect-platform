@@ -223,12 +223,17 @@ export default function StorefrontPage() {
 
       <section id="vehicle-finder" className="scroll-mt-28 border-y border-slate-200 bg-slate-50">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-18">
-          <div className="mb-8 max-w-2xl">
-            <p className="mb-2 text-xs font-semibold text-lime-800">เริ่มจากรถที่คุณสนใจ</p>
-            <h2 className="font-bold">ค้นหาบทความตามรุ่นรถ</h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600">
-              เลือกยี่ห้อและรุ่นเพื่อไปยังเนื้อหาที่เกี่ยวข้องกับรถคันนั้น
-            </p>
+          <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div className="max-w-2xl">
+              <p className="mb-2 text-xs font-semibold text-lime-800">เลือกคันที่ใช่ในสไตล์คุณ</p>
+              <h2 className="font-bold">รถที่ชอบ เรื่องที่อยากรู้</h2>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                เลื่อนดูรถที่น่าสนใจ แล้วเปิดรีวิวฉบับเต็มได้ทันที
+              </p>
+            </div>
+            <Link href="/articles" className="inline-flex min-h-11 shrink-0 items-center gap-2 text-sm font-semibold text-lime-800">
+              ดูบทความทั้งหมด <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
           <VehicleGuide />
         </div>
