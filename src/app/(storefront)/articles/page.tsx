@@ -73,7 +73,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     readTime: brakeArticle.readTime,
     rating: null,
     priceRange: 'เลือกตามงานและงบจริง',
-    highlights: ['เทียบจานเรียบ เซาะร่อง เจาะรู และ CCB', 'กดเทียบ ENDLESS / Brembo / Project μ', 'คำนวณภาระเบรกและวิเคราะห์ถนนไทย'],
+    highlights: ['ชุดหน้าใหม่ 375–390 mm ตั้งแต่ 6 พอต', 'แตะคะแนน Brembo / ENDLESS / Carbon Ceramic', 'เคส ENDLESS 375 mm บน Model 3 Highland'],
     featured: false,
     brand: 'Aftermarket',
     badge: 'Brake System',

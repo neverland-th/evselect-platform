@@ -12,6 +12,7 @@ import EvDamperInfographicWrapper from '@/components/EvDamperInfographicWrapper'
 
 
 export const metadata = {
+  alternates: { canonical: '/articles/ev-suspension-tuning-guide' },
   title: 'โช้คเดิมเอาไม่อยู่? คู่มือจูนโช้ค EV ฉบับสมบูรณ์ (KW, Öhlins, BC, H-Drive) | EVSELECT',
   description: 'รถ EV แบตหนักทำช่วงล่างย้วย? เจาะลึกวิธีจูน Bump & Rebound พร้อมเปรียบเทียบโช้ค 4 แบรนด์ดัง KW, Öhlins, BC Racing และ H-Drive เพื่อการขับขี่ที่หนึบและนุ่มนวลที่สุดสำหรับถนนเมืองไทย',
   openGraph: {

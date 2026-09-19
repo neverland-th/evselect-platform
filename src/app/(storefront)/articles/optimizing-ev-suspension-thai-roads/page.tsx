@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/articles/optimizing-ev-suspension-thai-roads' },
   title: 'การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รอยต่อสะพาน คอสะพานทรุด ลูกระนาด และน้ำท่วมขัง | EVSELECT',
   description: 'เจาะลึกวิศวกรรมการเซ็ตอัปช่วงล่างสำหรับรถยนต์ไฟฟ้าในไทย: รับมือรอยต่อสะพาน คอสะพานทรุด ลูกระนาดไม่ได้มาตรฐาน ความร้อนผิวถนน 50-65°C และน้ำท่วมขัง พร้อมสูตร Bump Travel >45mm วาล์วไดเกรสซีฟ และตารางค่าเซ็ตติ้งตรงรุ่น BYD Seal, Tesla Model Y, MG4, Deepal S07, Zeekr X',
   keywords: [

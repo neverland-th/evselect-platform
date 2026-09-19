@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/articles/ev-camber-adjustment-wheel-alignment-guide' },
   title: 'การตั้งมุมแคมเบอร์ (Camber) และศูนย์ล้อสำหรับรถ EV: หน้าสัมผัสยาง โรลเซนเตอร์ และการเข้าโค้งตามหลัก OptimumG | EVSELECT',
   description: 'คู่มือเชิงลึกการปรับมุมแคมเบอร์ (Static vs Dynamic Camber), Roll Center Kinematics, Camber Thrust, Caster & Toe และการวิเคราะห์อุณหภูมิยาง 3 โซน (Pyrometer) สำหรับรถยนต์ไฟฟ้าหนัก 2 ตันตามหลักวิศวกรรมยานยนต์ OptimumG',
   keywords: [

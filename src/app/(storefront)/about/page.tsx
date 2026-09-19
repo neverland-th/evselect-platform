@@ -1,6 +1,8 @@
 import React from 'react';
 
 export const metadata = {
+  alternates: { canonical: '/about' },
+  robots: { index: false, follow: true },
   title: 'เกี่ยวกับเรา | EVSELECT',
   description: 'เกี่ยวกับเรา - EVSELECT',
 };

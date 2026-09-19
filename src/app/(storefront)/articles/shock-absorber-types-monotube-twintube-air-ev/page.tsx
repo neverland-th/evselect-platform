@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/articles/shock-absorber-types-monotube-twintube-air-ev' },
   title: 'เจาะลึกประเภทโช้คอัพ: Monotube vs Twin-tube vs Inverted vs ถุงลมอัจฉริยะ (Air Suspension) สำหรับรถ EV | EVSELECT',
   description: 'ผ่าโครงสร้างภายในโช้คอัพ Monotube, Twin-tube, Inverted Monotube และระบบถุงลมอัจฉริยะ Dual-chamber Air Suspension: เปรียบเทียบความทนทาน ระบายความร้อน และความคุ้มค่าสำหรับรถยนต์ไฟฟ้าหนัก 2 ตัน',
   keywords: [

@@ -1,61 +1,62 @@
 'use client';
 
 import { useState } from 'react';
-import { brakeComparisonProducts, parseQuote, type BrakeComparisonProduct } from '@/lib/brake-comparison';
+import { brakeEditorialProfiles, brakeScoreAxes, type BrakeScoreAxis } from '@/lib/brake-editorial-scores';
 import styles from './BrakeGuide.module.css';
 
-function Ring({ title, value, suffix, fraction, color, children }: { title: string; value: string; suffix?: string; fraction: number | null; color: string; children: React.ReactNode }) {
-  const progress = fraction === null ? null : Math.min(1, Math.max(0, fraction));
-  return <div className="min-w-0 text-center">
-    <h5 className="flex min-h-[2.75em] items-end justify-center text-sm font-bold leading-snug text-slate-700">{title}</h5>
-    <div className="relative mx-auto my-2 aspect-square w-full max-w-[7.5rem]">
-      <svg viewBox="0 0 120 120" aria-hidden="true" className="h-full w-full"><g transform="rotate(-90 60 60)"><circle cx="60" cy="60" r="49" fill="none" stroke="#e2e8f0" strokeWidth="8" strokeDasharray={progress === null ? '4 5' : undefined} />{progress !== null && <circle cx="60" cy="60" r="49" fill="none" stroke={color} strokeWidth="8" strokeLinecap="round" pathLength="100" strokeDasharray={`${progress * 100} 100`} />}</g><text x="60" y="64" textAnchor="middle" fill="#0f172a" fontSize="23" fontWeight="800">{value}</text></svg>
-    </div>
-    <div className="text-xs leading-relaxed text-slate-600 sm:text-sm"><span className="sr-only">{value} </span>{suffix && <span className="mb-1 block">{suffix}</span>}{children}</div>
-  </div>;
-}
-
 export default function BrakeBrandCompare() {
-  const [selection, setSelection] = useState(['endless-ssm', 'project-mu-ps']);
-  const [quotes, setQuotes] = useState<Record<string, string>>({});
-  const [budget, setBudget] = useState('20000');
-  const [quoteScope, setQuoteScope] = useState('pads-front');
-  const chosen = selection.map(id => brakeComparisonProducts.find(product => product.id === id)!);
-  const budgetValue = parseQuote(budget);
-  const compatibleScope = (product: BrakeComparisonProduct) => product.scope === 'pad' ? quoteScope.startsWith('pads-') : quoteScope === 'disc-pads-front';
-  const amount = (product: BrakeComparisonProduct) => parseQuote(quotes[`${product.id}:${quoteScope}`] ?? '');
-  const comparable = chosen.every(product => compatibleScope(product) && amount(product) !== null);
-  const difference = comparable ? Math.abs(amount(chosen[0])! - amount(chosen[1])!) : null;
+  const [filter, setFilter] = useState('all');
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+  const [active, setActive] = useState<Record<string, BrakeScoreAxis | null>>({});
+  const profiles = brakeEditorialProfiles.filter(profile => filter === 'all' || filter === profile.id);
+  const allRevealed = brakeEditorialProfiles.every(profile => brakeScoreAxes.every(axis => revealed[`${profile.id}-${axis.id}`]));
+  function showAll() {
+    setRevealed(Object.fromEntries(brakeEditorialProfiles.flatMap(profile => brakeScoreAxes.map(axis => [`${profile.id}-${axis.id}`, true]))));
+  }
 
   return <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 sm:p-6" data-testid="brake-brand-compare">
-    <div className="mb-5"><span className="text-sm font-bold text-lime-800">เปรียบเทียบตามข้อมูล · ไม่มีคะแนนรวม</span><h3 className="mt-2 text-xl font-bold sm:text-2xl">3 วง ช่วยเลือกให้ตรงใจ</h3><p className={`${styles.help} mt-2`}>วง Performance แสดงเพดานอุณหภูมิจานที่ผู้ผลิตระบุสำหรับผ้ารุ่นนั้น (สเกล 0–800°C) ไม่ใช่คะแนนระยะหยุด วงราคาแสดงสัดส่วนงบที่ใช้ ส่วนฝุ่นไม่มีมาตรวัดร่วมจึงแสดงเป็นข้อความ</p></div>
-    <noscript><style>{'.brake-compare-controls{display:none}'}</style><p className={styles.note}>กำลังแสดง ENDLESS SSM PLUS เทียบ Project μ TYPE PS จากข้อมูลผู้ผลิต เปิด JavaScript เพื่อเปลี่ยนรุ่นและกรอกราคา</p></noscript>
-    <div className="brake-compare-controls mb-5 grid gap-4 sm:grid-cols-2">
-      <label className="grid gap-2 text-sm font-semibold" htmlFor="brake-quote-scope">ขอบเขตราคาที่ต้องเหมือนกัน<select id="brake-quote-scope" value={quoteScope} onChange={event => setQuoteScope(event.target.value)} className="min-h-11 min-w-0 max-w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-base"><option value="pads-front">ผ้าเพลาหน้า + ติดตั้ง + ภาษี</option><option value="pads-all">ผ้าทั้งคัน + ติดตั้ง + ภาษี</option><option value="disc-pads-front">จานและผ้าคู่หน้า + ติดตั้ง + ภาษี</option></select></label>
-      <label className="grid gap-2 text-sm font-semibold" htmlFor="brake-quote-budget">งบสมมติของคุณ (บาท) — ปรับได้<input id="brake-quote-budget" inputMode="decimal" type="text" value={budget} onChange={event => setBudget(event.target.value)} className="min-h-11 min-w-0 rounded-xl border border-slate-300 bg-white px-3 py-2 text-base" placeholder="กรอกงบที่ต้องการเทียบ" /></label>
+    <div className="mb-5"><span className="text-sm font-bold text-lime-800">Brembo · ENDLESS · Carbon Ceramic</span><h3 className="mt-2 text-xl font-bold sm:text-2xl">แตะวง แล้วดูว่าคุ้มกับคุณแค่ไหน</h3><p className={`${styles.help} mt-2`}>คะแนนคร่าว ๆ เต็ม 10 ประเมินโดย EVSELECT จากรีวิวและข้อมูลผู้ผลิต สำหรับการใช้ถนน ไม่ใช่คะแนนเฉลี่ยดาวหรือผลทดสอบของเรา ยิ่งสูงยิ่งเด่นในด้านนั้น</p></div>
+    <noscript><style>{'.brake-score-interactive{display:none}'}</style><div className={styles.note}><p>คะแนนประเมินสำหรับถนน · เปิด JavaScript เพื่อแตะวงและเปลี่ยนตัวเลือก</p>{brakeEditorialProfiles.map(profile => <p key={profile.id}><strong>{profile.name}:</strong> Performance {profile.scores.performance.score}/10 · ความคุ้มค่า {profile.scores.price.score}/10 · ฝุ่นน้อย {profile.scores.dust.score}/10</p>)}<p><a href="#score-method" className="underline">อ่านเกณฑ์และแหล่งที่มาด้านล่าง</a></p></div></noscript>
+    <div className="brake-score-interactive">
+      <div className="mb-5 flex flex-wrap gap-2" aria-label="เลือกแนวทางเบรก" role="group">
+        {[{ id: 'all', name: 'เทียบทั้งหมด' }, ...brakeEditorialProfiles].map(option => <button key={option.id} type="button" onClick={() => setFilter(option.id)} aria-pressed={filter === option.id} data-testid={`filter-${option.id}`} className={`min-h-11 rounded-full border px-4 py-2 text-sm font-bold ${filter === option.id ? 'border-slate-950 bg-slate-950 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-lime-600'}`}>{option.name}</button>)}
+      </div>
+      <div className={`grid items-start gap-4 ${filter === 'all' ? 'lg:grid-cols-3' : 'mx-auto max-w-xl'}`}>
+        {profiles.map(profile => {
+          const current = active[profile.id];
+          const score = current ? profile.scores[current] : null;
+          const axisLabel = brakeScoreAxes.find(axis => axis.id === current)?.label;
+          return <section key={profile.id} className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4" aria-label={profile.name} data-testid={`score-card-${profile.id}`}>
+            <h4 className="text-xl font-extrabold leading-snug text-slate-950">{profile.name}</h4><p className={`${styles.help} mt-2`}>{profile.context}</p>
+            <div className={styles.rings} data-testid="comparison-rings">
+              {brakeScoreAxes.map(axis => {
+                const key = `${profile.id}-${axis.id}`;
+                const visible = revealed[key];
+                const value = profile.scores[axis.id].score;
+                return <button key={axis.id} type="button" onClick={() => { setRevealed(previous => ({ ...previous, [key]: true })); setActive(previous => ({ ...previous, [profile.id]: previous[profile.id] === axis.id ? null : axis.id })); }} aria-expanded={current === axis.id} aria-controls={`score-detail-${profile.id}`} aria-label={`${visible ? 'ดูเหตุผลคะแนน' : 'เปิดคะแนน'} ${axis.label} ของ ${profile.name}${visible ? ` ${value} จาก 10` : ''}`} data-testid={`score-${key}`} className="flex min-h-11 min-w-0 flex-col rounded-xl py-2 text-center hover:bg-slate-50">
+                  <span className="flex min-h-[2.75em] items-end justify-center text-xs font-bold leading-snug text-slate-700">{axis.id === 'performance' ? 'สมรรถนะ' : axis.label}</span>
+                  <span className="relative mx-auto my-2 block aspect-square w-full max-w-[7.5rem]">
+                    <svg viewBox="0 0 120 120" aria-hidden="true" className="h-full w-full"><g transform="rotate(-90 60 60)"><circle cx="60" cy="60" r="49" fill="none" stroke="#e2e8f0" strokeWidth="8" strokeDasharray={visible ? undefined : '4 5'} />{visible && <circle cx="60" cy="60" r="49" fill="none" stroke={axis.color} strokeWidth="8" strokeLinecap="round" pathLength="100" strokeDasharray={`${value * 10} 100`} />}</g><text x="60" y="63" textAnchor="middle" fill="#0f172a" fontSize={visible ? '30' : '25'} fontWeight="800">{visible ? value : '?'}</text><text x="60" y="82" textAnchor="middle" fill="#475569" fontSize="12">{visible ? '/ 10' : 'แตะดู'}</text></svg>
+                  </span>
+                  <span className="sr-only" data-testid={`score-value-${key}`} aria-live="polite">{visible ? `${value}/10` : 'ยังไม่เปิดคะแนน'}</span><span className="block text-xs leading-relaxed text-slate-600 sm:text-sm">{axis.meaning}</span>
+                </button>;
+              })}
+            </div>
+            <div id={`score-detail-${profile.id}`} hidden={!score} className="rounded-xl border border-lime-200 bg-lime-50 p-4" role="region" aria-label={`เหตุผลคะแนน ${profile.name}`} aria-live="polite">
+              {score && <><h5 className="text-base font-bold text-slate-950">{axisLabel} · {score.score}/10</h5><p className="mt-2 text-sm leading-relaxed text-slate-700">{score.reason}</p><p className="mt-3 text-sm leading-relaxed text-slate-600">{score.limitation}</p><ul className="mt-3 space-y-1">{score.sources.map(source => <li key={source.url}><a href={source.url} className="inline-flex min-h-11 items-center text-sm font-semibold leading-relaxed text-lime-900 underline underline-offset-4">{source.label} ↗</a></li>)}</ul></>}
+            </div>
+            <p className={`${styles.help} mt-3`}>{profile.scope}</p>
+          </section>;
+        })}
+      </div>
+      <button type="button" onClick={showAll} disabled={allRevealed} data-testid="show-all-scores" className="mt-5 min-h-11 rounded-xl bg-lime-400 px-5 py-3 text-base font-bold text-slate-950 hover:bg-lime-300 disabled:bg-slate-200 disabled:text-slate-600">{allRevealed ? 'เปิดคะแนนครบทุกวงแล้ว' : 'แสดงคะแนนทุกวง'}</button>
     </div>
-    <div className="grid gap-4 lg:grid-cols-2">
-      {chosen.map((product, index) => {
-        const quote = amount(product);
-        const scopeMatches = compatibleScope(product);
-        const budgetPercent = quote && budgetValue && scopeMatches ? quote / budgetValue * 100 : null;
-        return <section key={index} className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5" aria-label={`ตัวเลือก ${index === 0 ? 'A' : 'B'}`} data-testid={`compare-card-${index}`}>
-          <label className="brake-compare-controls grid gap-2 text-sm font-bold" htmlFor={`brake-product-${index}`}>ตัวเลือก {index === 0 ? 'A' : 'B'} — เลือกแบรนด์และรุ่น<select id={`brake-product-${index}`} value={product.id} onChange={event => setSelection(previous => previous.map((id, slot) => slot === index ? event.target.value : id))} className="min-h-11 min-w-0 max-w-full rounded-xl border border-slate-300 bg-white px-2 py-2 text-base">{brakeComparisonProducts.map(option => <option key={option.id} value={option.id}>{option.name}</option>)}</select></label>
-          <h4 className="mt-4 text-lg font-bold text-slate-950">{product.name}</h4><p className={`${styles.help} mt-1`}>{product.role}</p>
-          <div className={styles.rings} aria-live="polite" data-testid="comparison-rings">
-            <Ring title="สมรรถนะ" value={product.maxTempC === null ? '—' : String(product.maxTempC)} suffix={product.maxTempC === null ? 'ไม่มีค่าเทียบ' : '°C สูงสุด'} fraction={product.maxTempC === null ? null : product.maxTempC / 800} color="#4d7c0f">{product.minTempC === null ? 'Data unavailable' : `ช่วงที่ระบุ ${product.minTempC}–${product.maxTempC}°C`}</Ring>
-            <Ring title="ราคา" value={budgetPercent === null ? '—' : `${Math.round(budgetPercent)}%`} suffix={budgetPercent === null ? 'รอใบเสนอราคา' : 'ของงบที่ตั้ง'} fraction={budgetPercent === null ? null : budgetPercent / 100} color={budgetPercent !== null && budgetPercent > 100 ? '#b45309' : '#0369a1'}>{quote && scopeMatches ? `${quote.toLocaleString('en-US')} บาท` : 'กรอกราคาขอบเขตเดียวกัน'}</Ring>
-            <Ring title="ฝุ่น" value="—" suffix="ไม่มีคะแนน" fraction={null} color="#64748b">{product.dustClaim}<br />ข้อมูลเชิงคุณภาพ</Ring>
-          </div>
-          <p className={styles.help}>{product.dustNote}</p>
-          <div className="brake-compare-controls mt-4"><label htmlFor={`brake-quote-${index}`} className="grid gap-2 text-sm font-semibold">ราคาใบเสนอราคาของคุณ (บาท)<input id={`brake-quote-${index}`} inputMode="decimal" type="text" value={quotes[`${product.id}:${quoteScope}`] ?? ''} onChange={event => setQuotes(previous => ({ ...previous, [`${product.id}:${quoteScope}`]: event.target.value }))} disabled={!scopeMatches} className="min-h-11 min-w-0 rounded-xl border border-slate-300 bg-white px-3 py-2 text-base disabled:bg-slate-100" placeholder={scopeMatches ? 'ยังไม่มีราคาไทยที่ตรวจยืนยัน' : 'เลือกขอบเขตให้ตรงผลิตภัณฑ์'} /></label></div>
-          {!scopeMatches && <p className="mt-3 text-sm leading-relaxed text-amber-800" role="status">ขอบเขตไม่ตรง: {product.scope === 'pad' ? 'รายการนี้เป็นผ้าเบรก ไม่ได้รวมจาน' : 'EV Kit ต้องเทียบเป็นชุดจานและผ้า ไม่ใช่ผ้าเดี่ยว'} จึงยังไม่วาดวงราคา</p>}
-          {budgetPercent !== null && budgetPercent > 100 && <p className="mt-3 text-sm text-amber-800">เกินงบ {(quote! - budgetValue!).toLocaleString('en-US')} บาท · วงเต็มที่ 100% แต่แสดงเปอร์เซ็นต์จริง</p>}
-          <a href={product.source} className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-lime-800 underline underline-offset-4">อ่านข้อมูลรุ่นนี้จากผู้ผลิต ↗</a>
-        </section>;
-      })}
-    </div>
-    <p className="mt-5 text-sm font-semibold leading-relaxed text-slate-700" aria-live="polite" data-testid="quote-comparison">{difference !== null ? `ราคาที่คุณกรอกต่างกัน ${difference.toLocaleString('en-US')} บาท ในขอบเขตที่เลือก ตัวเลขนี้ยังไม่ได้รวมต้นทุนเปลี่ยนอะไหล่ในอนาคต` : 'ราคาไทย: Data unavailable · ยังไม่คำนวณส่วนต่างจนกว่าจะมีราคาจริงในขอบเขตเดียวกันทั้งสองตัวเลือก'}</p>
-    <p className={`${styles.help} mt-3`}>ข้อมูลจากผู้ผลิต ตรวจ 19 ก.ย. 2569 · ราคามาจากค่าที่คุณกรอก ไม่ใช่ราคายืนยันโดย EVSELECT และจะหายเมื่อโหลดหน้าใหม่ · ยังไม่ยืนยัน fitment รถไทยแต่ละรุ่น · วงที่ไม่มีข้อมูลแสดงเส้นประ แทนการให้คะแนนศูนย์</p>
+    <details id="score-method" className={`${styles.detail} mt-5`}><summary>คะแนนนี้คิดอย่างไร และใช้ตัดสินได้แค่ไหน?</summary><div className="space-y-3 pb-4 text-sm leading-relaxed text-slate-600">
+      <p>เป็นความเห็นบรรณาธิการแบบหยาบจากหลักฐานที่ลิงก์ไว้ ตรวจ 19 ก.ย. 2569 ไม่ใช่คะแนนที่ผู้รีวิวให้กับรถหรือชุดเดียวกัน ไม่มีการแปลงดาวคนละเว็บมาเฉลี่ย และไม่มีคะแนนรวมผู้ชนะ</p>
+      <ul className="list-disc space-y-2 pl-5"><li><strong>Performance:</strong> มองฟีลและศักยภาพของชุดที่จับคู่ถูกต้อง รวมความร้อนและน้ำหนัก ไม่ใช่ระยะหยุด ค่า 7–8 คือเด่นในกลุ่มชุดพรีเมียม และ 9 คือมีจุดเด่นด้านวัสดุ/น้ำหนักเพิ่ม</li><li><strong>ราคา:</strong> ให้คะแนนความคุ้มค่าสำหรับถนน ไม่ใช่ราคาถูกสุด ค่า 4–6 คือการลงทุนพรีเมียมที่ต้องมีโจทย์ ส่วน 1–3 มีต้นทุนสูงเมื่อเทียบกับประโยชน์ที่ถนนทั่วไปอาจใช้ถึง ไม่ใช้ราคาเฉพาะจานมาเทียบยอดครบชุด</li><li><strong>ฝุ่น:</strong> 1–3 ต้องดูแลมาก, 4–6 ยังมีฝุ่นชัด, 7–9 มีแนวโน้มล้อสะอาดกว่า ไม่ใช่ผลชั่งฝุ่น และไม่ให้ 10 เพื่อสื่อว่าไม่มีฝุ่น</li></ul>
+      <p>ความมั่นใจในการเทียบข้ามรถและข้ามรุ่นอยู่ในระดับต่ำ คะแนนต่างกัน 1 จุดยังไม่พิสูจน์ว่าเหนือกว่า รีวิวเก่าถูกระบุปี และต้องตรวจ compound ที่ขายปัจจุบันอีกครั้ง การเปลี่ยนผ้า ล้อ ยาง และรูปแบบขับอาจเปลี่ยนผลได้</p>
+      <p><strong>Carbon Ceramic เป็นวัสดุ ไม่ใช่แบรนด์:</strong> คะแนนอ้างอิงระบบถนนอย่าง PCCB เพื่ออธิบายแนวโน้ม ไม่ครอบคลุมจานแต่งไม่ทราบที่มา และไม่รับรองขนาด 375–390 mm ว่าจะตรงรถ</p>
+      <ul className="list-disc space-y-2 pl-5">{Array.from(new Map(brakeEditorialProfiles.flatMap(profile => Object.values(profile.scores).flatMap(score => score.sources)).map(source => [source.url, source])).values()).map(source => <li key={source.url}><a href={source.url} className="text-lime-800 underline underline-offset-4">{source.label}</a></li>)}</ul>
+    </div></details>
   </div>;
 }

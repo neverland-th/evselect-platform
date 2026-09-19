@@ -1,5 +1,5 @@
 .article { overflow-wrap: anywhere; }
-.article :global(a:focus-visible), .article :global(summary:focus-visible), .article :global(button:focus-visible), .article :global(input:focus-visible) { outline: 3px solid #4d7c0f; outline-offset: 4px; }
+.article :global(a:focus-visible), .article :global(summary:focus-visible), .article :global(button:focus-visible), .article :global(input:focus-visible), .article :global(select:focus-visible) { outline: 3px solid #4d7c0f; outline-offset: 4px; }
 .lab { border: 1px solid #c5dca6; border-radius: 1.5rem; padding: clamp(1rem, 3vw, 2rem); background: #f7fbea; }
 .controls { display: grid; gap: 1.25rem; margin: 1.5rem 0; }
 .control { display: grid; gap: .35rem; min-width: 0; }

@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/articles/ev-horsepower-vs-torque-explained' },
   title: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? เจาะลึกกราฟไดโน่และเกียร์ทดเดี่ยว | EVSELECT',
   description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า PMSM และ Induction: อธิบายกราฟ Constant Torque ตั้งแต่ 0 RPM, โซน Constant Power, ปรากฏการณ์ Back-EMF, หลักการถ่ายทอดแรงขับที่ล้อ และเปรียบเทียบเกียร์ 2 สปีดใน Taycan กับเกียร์ทดเดี่ยวใน Tesla และ BYD Seal',
   keywords: [

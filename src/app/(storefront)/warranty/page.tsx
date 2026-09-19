@@ -1,6 +1,8 @@
 import React from 'react';
 
 export const metadata = {
+  alternates: { canonical: '/warranty' },
+  robots: { index: false, follow: true },
   title: 'นโยบายการรับประกัน | EVSELECT',
   description: 'นโยบายการรับประกัน - EVSELECT',
 };

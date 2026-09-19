@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/articles/hybrid-to-ev-chassis-dynamics-transition' },
   title: 'เจาะลึกการเปลี่ยนผ่านจาก Hybrid สู่ Full EV: พลศาสตร์แชสซี, การกระจายน้ำหนัก และฟีลลิ่งการขับขี่ | EVSELECT',
   description: 'เปรียบเทียบสถาปัตยกรรม HEV, PHEV และ Pure BEV Skateboard: วิเคราะห์จุดศูนย์ถ่วง, อัตราตอบสนองแรงบิด 10ms vs 300ms, โครงสร้างแชสซี, Unsprung Mass และการปรับตัวของระบบ Brake-by-Wire พร้อมแนวทางการปรับจูนช่วงล่าง',
   keywords: [

@@ -1,6 +1,8 @@
 import React from 'react';
 
 export const metadata = {
+  alternates: { canonical: '/terms' },
+  robots: { index: false, follow: true },
   title: 'ข้อตกลงและเงื่อนไข | EVSELECT',
   description: 'ข้อตกลงและเงื่อนไข - EVSELECT',
 };

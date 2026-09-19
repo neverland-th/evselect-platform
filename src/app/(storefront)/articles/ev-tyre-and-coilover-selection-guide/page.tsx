@@ -31,6 +31,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/articles/ev-tyre-and-coilover-selection-guide' },
   title: 'คู่มือการเลือกซื้อยาง (EV Tyres) และสตรัทปรับเกลียว (Coilovers) สำหรับรถ EV: สเปก, ค่าสปริงเรท, โหลดอินเด็กซ์ และการเลือกใช้งาน | EVSELECT',
   description: 'เจาะลึกคู่มือการเลือกยางและสตรัทปรับเกลียวสำหรับรถยนต์ไฟฟ้า: มาตรฐาน HL & XL Load Index, ชั้นโฟมซับเสียงลดเสียงหอน, ค่า UTQG & Rolling Resistance, หลักการคำนวณสปริงเรทและอัตราทดช่วงล่าง Motion Ratio, สปริง Linear vs Progressive, โช้ค 1-Way / 2-Way / 3-Way และระยะความสูงปลอดภัยสำหรับแบตเตอรี่',
   keywords: [

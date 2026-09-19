@@ -1,6 +1,8 @@
 import React from 'react';
 
 export const metadata = {
+  alternates: { canonical: '/editorial-policy' },
+  robots: { index: false, follow: true },
   title: 'นโยบายบรรณาธิการ | EVSELECT',
   description: 'นโยบายบรรณาธิการ - EVSELECT',
 };

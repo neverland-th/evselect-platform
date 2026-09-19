@@ -1,6 +1,8 @@
 import React from 'react';
 
 export const metadata = {
+  alternates: { canonical: '/privacy' },
+  robots: { index: false, follow: true },
   title: 'นโยบายความเป็นส่วนตัว | EVSELECT',
   description: 'นโยบายความเป็นส่วนตัว - EVSELECT',
 };

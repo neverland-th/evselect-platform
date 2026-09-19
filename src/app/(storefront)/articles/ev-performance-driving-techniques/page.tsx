@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/articles/ev-performance-driving-techniques' },
   title: 'สอนเทคนิคขับรถ EV แบบเข้าใจง่าย: ฉบับนักเล่าเรื่อง (เหมาะกับทุกคน) | EVSELECT',
   description: 'เรียนรู้วิธีขับรถยนต์ไฟฟ้าให้ปลอดภัยและสนุกสุดๆ ผ่านเรื่องราวของน้อง EV น้ำหนัก 2 ตัน, งบประมาณกาวติดถนน และวิชาตัวเบาของนินจา เข้าใจง่ายแม้อายุ 12 ขวบ!',
 };
