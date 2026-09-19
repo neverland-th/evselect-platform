@@ -42,7 +42,7 @@ Requested latest monthly total-web visits, bounce rate and pages per visit for e
 
 ## Release boundary
 
-This change is being delivered as a Vercel Preview. Production publication of this new banner has not been requested explicitly after the previous article release; do not infer a new production approval from that earlier release. Request approval once the tested Preview is ready. Do not mark the full homepage goal complete based on Preview alone.
+Originally delivered as a Preview pending approval. The user subsequently said “ขึ้นเว็บจริงได้เลย”; the production release below supersedes that gate. The user also authorized future deployments of requested website changes without repeated approval. Draft-only requests remain drafts.
 
 ## Verified Preview result
 
@@ -55,4 +55,22 @@ This change is being delivered as a Vercel Preview. Production publication of th
 - Evidence: `scratch/coming-soon-preview/results.json` and screenshots in that directory. Desktop and mobile Preview screenshots visually inspected.
 - Direct production HTTP check after Preview creation returned 200, existing carousel present, new banner absent, pre-launch status present. No production deployment performed.
 - Native app preview-open request returned `queued`; this is not evidence that the user has seen it.
-- Approval for production publication remains the next required action; Similarweb data is unavailable but is not a publication blocker.
+- At Preview handoff, production approval was the remaining action; subsequently received and completed below. Similarweb data is unavailable but is not a publication blocker.
+
+## Verified production release
+
+- User approval: “ขึ้นเว็บจริงได้เลย”.
+- URL: https://evselects.com/#coming-soon
+- Deployment: `dpl_BfDT6M7ivQ89iuTLXWnEAfZuyjxH`.
+- Immutable URL: https://evselect-platform-kcf9zrddd-evselect-com.vercel.app
+- Target: production; status: READY; aliases include evselects.com and www.evselects.com, independently checked through Vercel API and HTTP.
+- Source commit: `5778fc7`; runtime identical to approved `ee3ba4d`. Fresh production build ensures production image/metadata origins, not Preview origins.
+- Framework: Next.js 16.3.2; build-to-ready: 31.962 seconds.
+- Previous production deployment (rollback reference): `dpl_9Tgs1LK6UQiZ6Ppq84nr45TMhm7Z`.
+- Live banner verifier passed at 360, 390, 768 and 1440 px, including 200% text, image decode, keyboard navigation, contact navigation and no-JS. All 24 checked public routes return 200, 7 protected routes return 404. Image: 118644 bytes, image/webp.
+- Desktop and mobile production screenshots visually reviewed. Old homepage finder/carousel absent; approved Coming soon banner present. Surrounding UI preserved.
+- WWW and immutable production URL return 200 and show new banner, not old carousel.
+- Damper image-alignment regression check passed: homepage image/first article image remain the same photograph; OG/Twitter/schema image URL uses evselects.com. Google choosing a thumbnail is not asserted.
+- Runtime error/fatal scan scoped to this production deployment, 2026-09-19T08:02:41Z–09:02:41Z, returned no matching entries. No browser page errors observed. Long-term monitoring and log-drain configuration were not verified or changed.
+- Evidence: `scratch/coming-soon-production/results.json`, screenshots in that folder, `scratch/damper-image-alignment/results.json`.
+- No backend, schema, inventory, payment, or main-branch merge changes.
