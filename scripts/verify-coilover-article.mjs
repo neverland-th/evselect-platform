@@ -21,7 +21,8 @@ try {
     assert.equal((await page.goto(base + route, { waitUntil: 'networkidle' })).status(), 200);
     const article = page.locator('main article').first();
     assert.equal(await page.locator('h1').count(), 1);
-    assert.match(await page.locator('h1').innerText(), /1-Way, 2-Way, 3-Way/);
+    assert.equal(await page.locator('h1').innerText(), 'ซื้อโช้คหลักแสน ทำไมยังไม่จบ!?');
+    assert.ok((await page.title()).includes('โช้คสตรัทปรับเกลียว'));
     assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://evselects.com' + route);
     const image = article.locator('header figure img');
     await image.evaluate(img => img.decode());
@@ -45,10 +46,23 @@ try {
     if (base.startsWith('https://')) assert.equal((await context.request.get(og)).status(), 200);
     const toc = article.getByRole('navigation', { name: 'สารบัญบทความ' });
     const anchors = await toc.locator('a').evaluateAll(nodes => nodes.map(node => node.getAttribute('href')));
-    assert.equal(anchors.length, 17);
+    assert.equal(anchors.length, 18);
     for (const anchor of anchors) assert.equal(await article.locator(anchor).count(), 1);
     assert.equal(await article.locator('table tbody tr').count(), 9);
     const content = await article.textContent();
+    assert.ok(content.includes('ปัญหาอยู่ที่โช้ค หรือเรายังไม่เข้าใจว่ามันทำงานยังไง?'));
+    for (const phrase of ['Character', 'ถนนเยอรมันกับถนนไทย', 'จูนได้ ไม่ได้แปลว่าเปลี่ยนนิสัยได้หมด', 'HIPERMAX R', 'Street Comfort']) assert.ok((await article.locator('#character-and-roads').innerText()).includes(phrase));
+    const photos = article.locator('figure[data-editorial-photo]');
+    assert.equal(await photos.count(), 8);
+    for (const figure of await photos.all()) {
+      await figure.scrollIntoViewIfNeeded();
+      const photo = figure.locator('img');
+      await photo.evaluate(img => img.decode());
+      assert.ok(await photo.evaluate(img => img.naturalWidth > 0 && img.alt.length > 12));
+      assert.equal(await photo.getAttribute('loading'), 'lazy');
+      assert.ok((await figure.locator('figcaption a').first().getAttribute('href')).startsWith('https://'));
+    }
+    assert.equal(await article.locator('figure a[href="https://creativecommons.org/licenses/by-sa/4.0/"]').count(), 2);
     for (const brand of ['TEIN', 'BC Racing', 'HKS', 'BILSTEIN', 'Öhlins', 'KW']) assert.ok(content.includes(brand));
     for (const stale of ['0.65 - 0.70', 'OptimumG Damper Science', 'EVSELECT Suspension Tuning Division']) assert.equal(content.includes(stale), false);
     for (const concept of ['จำนวนช่องแรงหน่วง', 'ไม่ใช่ความเร็วรถ', 'Preload', 'Bump stop', 'HKS', '2026', 'รหัสเดิม', 'สถานการณ์สมมติ', 'A–B–A']) assert.ok(content.includes(concept), `Missing concept: ${concept}`);
@@ -85,7 +99,8 @@ try {
     await article.locator('#explorer').screenshot({ path: path.join(output, `explorer-${width}.png`) });
     await article.locator('#toolkit').screenshot({ path: path.join(output, `toolkit-${width}.png`) });
     assert.deepEqual(errors, []);
-    checks.push({ width, h1: 1, tocLinks: 17, comparisonRows: 9, faq: 7, explorerModes: 4, originalExamples: 3, imageDecoded: true, overflow: false, zoom200Overflow: false, pageErrors: errors });
+    await article.locator('#character-and-roads').screenshot({ path: path.join(output, `character-roads-${width}.png`) });
+    checks.push({ width, h1: 1, tocLinks: 18, comparisonRows: 9, faq: 7, explorerModes: 4, originalExamples: 3, editorialPhotosDecoded: 8, imageDecoded: true, overflow: false, zoom200Overflow: false, pageErrors: errors });
     await context.close();
   }
 
@@ -94,7 +109,7 @@ try {
   await page.goto(base, { waitUntil: 'networkidle' });
   const card = page.locator(`a[href="${route}"]`).filter({ has: page.locator('img') });
   assert.equal(await card.count(), 1);
-  assert.equal(await card.locator('h3').innerText(), 'โช้คแพง แต่ทำไมยังเด้ง?');
+  assert.equal(await card.locator('h3').innerText(), 'ซื้อโช้คหลักแสน ทำไมยังไม่จบ!?');
   await card.scrollIntoViewIfNeeded();
   await card.locator('img').evaluate(img => img.decode());
   assert.match(await card.locator('img').getAttribute('src'), /kw-coilover-adjustable/);

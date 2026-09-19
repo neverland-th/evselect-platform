@@ -5,11 +5,12 @@ import Image from 'next/image';
 import { ArrowLeft, ArrowRight, BookOpen, CalendarDays, SlidersHorizontal } from 'lucide-react';
 import { damperArticle } from '@/lib/damper-article';
 import DamperExplorer, { DamperScenarios } from '@/components/articles/DamperExplorer';
+import DamperPhoto from '@/components/articles/DamperPhoto';
 import styles from '@/components/articles/DamperGuide.module.css';
 
 export const metadata: Metadata = {
   alternates: { canonical: damperArticle.path },
-  title: 'คอยล์โอเวอร์ 1-Way, 2-Way, 3-Way ต่างกันอย่างไร? | EVSELECT',
+  title: `${damperArticle.title} เข้าใจโช้คสตรัทปรับเกลียว | EVSELECT`,
   description: damperArticle.description,
   openGraph: {
     title: damperArticle.title,
@@ -31,6 +32,8 @@ export const metadata: Metadata = {
 };
 
 const sources = {
+  kwComfort: { title: 'KW — Street Comfort: จุดประสงค์ของกลุ่มผลิตภัณฑ์', url: 'https://www.kwsuspensions.com/uk/products/street-comfort' },
+  hksR: { title: 'HKS — HIPERMAX R: การใช้งานสนามและการขับประจำวัน', url: 'https://www.hks-power.co.jp/en/product/suspension/hipermax/r/index.html' },
   teinFlex: { title: 'TEIN — FLEX Z: โครงสร้าง Twin-tube และการปรับยุบ–ยืดร่วมกัน', url: 'https://uk.tein.com/products/flex_z/' },
   teinMono: { title: 'TEIN — MONO SPORT: Monotube และช่องปรับแรงหน่วง', url: 'https://www.tein.com/products/mono_sport.html' },
   teinValve: { title: 'TEIN — Features: Needle valve และช่องปรับร่วม/แยก', url: 'https://www.tein.com/products/features.html' },
@@ -71,7 +74,7 @@ function Note({ title, children }: { title: string; children: ReactNode }) {
 }
 
 const contents = [
-  ['types', 'คอยล์โอเวอร์มีกี่แบบ? แยกสเปกสามเรื่องก่อน'],
+  ['types', 'สตรัทปรับเกลียวมีกี่แบบ? แยกสเปกสามเรื่องก่อน'],
   ['explorer', 'ดูภาพช่องปรับ: ปุ่มเดียวทำอะไรได้บ้าง'],
   ['inside', 'หมุนคลิกแล้วเกิดอะไรขึ้นข้างในโช้ค'],
   ['shaft-speed', 'Low-Speed ไม่ใช่ขับช้า'],
@@ -79,6 +82,7 @@ const contents = [
   ['two-way', '2-Way: อยากคุมยุบ แต่ไม่อยากรั้งยืด'],
   ['three-way', '3-Way: ช่องที่เพิ่มมาช่วยอะไร'],
   ['brands', 'เทียบหลายแบรนด์ อ่านสเปกให้พ้นชื่อรุ่น'],
+  ['character-and-roads', 'โช้คมีนิสัยต่างกัน แล้วเข้ากับถนนที่เราใช้ไหม'],
   ['spring-height', 'โหลดเตี้ยกับเพิ่มความหนืด คนละเรื่องกัน'],
   ['reservoir', 'ซับแทงก์ วาล์ว และกราฟไดโนบอกอะไร'],
   ['symptoms', 'เด้ง กระด้าง หรือยุบสุด แยกอาการก่อนจูน'],
@@ -131,7 +135,7 @@ export default function EVDamperTuningGuidePage() {
   return (
     <article className="mx-auto max-w-5xl bg-white px-4 py-10 text-slate-900 sm:px-6 md:py-16 lg:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ EVSELECT', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: 'คอยล์โอเวอร์ 1-Way, 2-Way, 3-Way', item: damperArticle.url }] }).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ EVSELECT', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: damperArticle.title, item: damperArticle.url }] }).replace(/</g, '\\u003c') }} />
       <nav aria-label="เส้นทางบทความ" className="mb-8">
         <Link href="/articles" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-slate-600 hover:text-lime-800">
           <ArrowLeft className="h-4 w-4" aria-hidden="true" /> กลับไปหน้ารวมบทความ
@@ -144,14 +148,16 @@ export default function EVDamperTuningGuidePage() {
           <span className="inline-flex items-center gap-2 text-slate-500"><CalendarDays className="h-4 w-4" aria-hidden="true" /> อัปเดต <time dateTime={damperArticle.updatedAt}>19 ก.ย. 2569</time></span>
         </div>
         <h1 className="text-3xl font-extrabold leading-snug tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{damperArticle.title.split(/(1-Way|2-Way|3-Way)/g).map((part, index) => <span key={index} className={/^\d-Way$/.test(part) ? 'whitespace-nowrap' : undefined}>{part}</span>)}</h1>
-        <p className="max-w-3xl text-lg leading-relaxed text-slate-600 sm:text-xl">เปลี่ยนโช้คแล้วรถเตี้ยลง แต่ยังสะเทือนทุกตะเข็บถนน? หรือหมุนจนแข็งแล้วตัวรถก็ยังไม่จบในจังหวะเดียว? คำตอบอาจไม่ได้อยู่ที่ราคา แต่อยู่ที่ว่าเรากำลังปรับอะไร และชุดช่วงล่างนั้นเข้ากับรถจริงหรือไม่</p>
+        <p className="max-w-3xl text-lg leading-relaxed text-slate-600 sm:text-xl">{damperArticle.subtitle}</p>
+        <p className="max-w-3xl leading-relaxed text-slate-600">บางคนเปลี่ยนโช้คแล้วรถยังเด้ง บางคนปรับให้อ่อนลงแล้วก็ยังกระด้าง ก่อนจะโทษโช้คหรือเสียเงินเปลี่ยนอีกชุด ลองมาดูกันว่าปุ่มที่เราหมุนอยู่ปรับอะไรได้บ้าง แล้วอาการที่อยากแก้เกี่ยวกับมันจริงไหม</p>
+        <p className="max-w-3xl leading-relaxed text-slate-600">ไม่ว่าซื้อมาเท่าไร เรื่องนี้เกี่ยวกับโช้คแต่งทุกงบ ไม่ได้แปลว่าโช้คแพงไม่ดี หรือเจ้าของรถปรับไม่เป็นเสมอไป รุ่นที่เลือก งานติดตั้ง ยาง ความสูง และถนนที่ใช้ ล้วนต้องดูไปด้วยกัน</p>
         <p className="text-sm text-slate-500">เรียบเรียงโดย EVSELECT · อธิบายกลไกจากเอกสารผู้ผลิต ไม่ใช่ผลทดสอบเปรียบเทียบของกองบรรณาธิการ</p>
         <nav aria-label="ทางลัดตามสิ่งที่ต้องการ" className="flex flex-wrap gap-2 text-sm">
           {[['#explorer', 'ดูภาพช่องปรับ'], ['#brands', 'เทียบหลายแบรนด์'], ['#toolkit', 'เตรียมข้อมูลให้ร้าน']].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 items-center rounded-full border border-lime-200 bg-lime-50 px-4 py-2 font-semibold text-lime-900 underline-offset-4 hover:underline">{label} <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a>)}
         </nav>
         <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
           <Image src={damperArticle.cover} alt={damperArticle.coverAlt} sizes="(max-width: 1024px) 100vw, 960px" preload className="h-auto w-full object-contain" />
-          <figcaption className="border-t border-slate-200 bg-white px-5 py-4 text-xs leading-relaxed text-slate-500">ภาพประกอบ KW Coilovers หลายรูปแบบ ไม่ใช่การระบุรุ่นสินค้าแต่ละชิ้นหรือยืนยันการติดตั้งกับรถรุ่นใด บทความนี้อธิบายหลักการร่วมและยกตัวอย่างหลายแบรนด์</figcaption>
+          <figcaption className="border-t border-slate-200 bg-white px-5 py-4 text-xs leading-relaxed text-slate-500">ภาพโช้คสตรัทปรับเกลียว KW ที่เจ้าของเว็บไซต์จัดส่งให้ ใช้อธิบายภาพรวม ไม่ระบุรุ่นของแต่ละชิ้นหรือยืนยันการติดตั้งกับรถใด · <a href="https://www.kwsuspensions.com/uk/products/street-performance" className="text-lime-800 underline underline-offset-4">ดูผลิตภัณฑ์จาก KW ↗</a></figcaption>
         </figure>
         <Note title="คำตอบสั้น ๆ ก่อนลงรายละเอียด">
           <p className="leading-relaxed"><strong>1-Way</strong> มีช่องปรับแรงหน่วงอิสระหนึ่งช่อง ซึ่งอาจคุม Rebound อย่างเดียวหรือคุมยุบ–ยืดร่วมกัน; <strong>2-Way</strong> ในตัวอย่างนี้แยก Compression กับ Rebound; <strong>3-Way</strong> ในตัวอย่างนี้แยก Compression เป็น Low-speed และ High-speed พร้อมช่อง Rebound อีกหนึ่งช่อง ยิ่งปรับได้มาก ยิ่งแยกโจทย์ได้ละเอียด แต่ไม่ได้รับประกันว่าจะนุ่มหรือเกาะถนนกว่าทุกกรณี</p>
@@ -165,8 +171,8 @@ export default function EVDamperTuningGuidePage() {
       </header>
 
       <div className="space-y-14 text-base leading-[1.95] text-slate-700 sm:text-lg [&_h3]:text-slate-950 [&_strong]:font-semibold [&_strong]:text-slate-950">
-        <Section id="types" title="คอยล์โอเวอร์มีกี่แบบ? อย่าเอาสามเรื่องมาปนกัน">
-          <p>คำว่า Coilover มาจาก Coil Spring Over Shock คือสปริงขดที่จัดวางรอบแดมเปอร์ ในภาษาร้านแต่งรถไทยมักเรียกชุดปรับความสูงว่า “โช้คปรับเกลียว” หรือ “สตรัทปรับเกลียว” ด้วย แต่บางรถใช้สปริงกับโช้คหลังแยกตำแหน่งกัน ชุดที่ขายในชื่อคอยล์โอเวอร์จึงไม่จำเป็นต้องมีสปริงครอบโช้คครบทั้งสี่ต้น สิ่งสำคัญคือรูปแบบที่ออกแบบให้ทำงานกับช่วงล่างของรถนั้น</p>
+        <Section id="types" title="โช้คสตรัทปรับเกลียวมีกี่แบบ? อย่าเอาสามเรื่องมาปนกัน">
+          <p>บทความนี้ใช้คำว่า “โช้คสตรัทปรับเกลียว” สำหรับชุดโช้คแต่งปรับความสูงที่กำลังพูดถึง ส่วนคำว่า Coilover ในเอกสารผู้ผลิตมาจาก Coil Spring Over Shock คือสปริงขดที่จัดวางรอบแดมเปอร์ แต่บางรถใช้สปริงกับโช้คหลังแยกตำแหน่งกัน ชุดที่ขายในชื่อ Coilover จึงไม่จำเป็นต้องมีสปริงครอบโช้คครบทั้งสี่ต้น และไม่ได้แปลว่าโช้คแต่งทุกชนิดเป็นสตรัท สิ่งสำคัญคือรูปแบบที่ออกแบบให้ทำงานกับช่วงล่างของรถนั้น</p>
           <div className="grid gap-4 md:grid-cols-3">
             {[
               ['โครงสร้างภายใน', 'Monotube / Twin-tube', 'บอกการจัดห้องน้ำมัน ก๊าซ และทางไหล ไม่ได้บอกจำนวนช่องปรับ'],
@@ -178,6 +184,8 @@ export default function EVDamperTuningGuidePage() {
           <p>อีกกรณีที่ถูกมองข้ามคือ <strong>ปรับความสูงได้ แต่ปรับแรงหน่วงไม่ได้</strong> เช่น BILSTEIN B14 ที่ผู้ผลิตแยกจาก B16 แบบปรับแรงหน่วงได้ โรงงานเป็นผู้กำหนดวาล์วและแรงหน่วงหลักไว้ให้ ไม่ได้แปลว่าโช้คไม่ทำงานหรือมีคุณภาพต่ำกว่าโดยอัตโนมัติ แต่ผู้ใช้ไม่สามารถชดเชยพฤติกรรมด้วยปุ่มภายนอกได้เหมือนรุ่นปรับได้ <Ref to="bilsteinFixed">ดูคำอธิบาย B14/B16 จาก BILSTEIN</Ref></p>
           <p>ส่วนระบบที่สั่งปรับด้วยมอเตอร์หรืออิเล็กทรอนิกส์เป็นอีกมิติหนึ่ง: ให้ถามว่าระบบนั้นหมุนตัวปรับเดิม เปลี่ยนวาล์วตามโหมด หรือควบคุมการหน่วงอัตโนมัติแบบใด อย่านับจำนวนโหมด Comfort/Sport เป็นจำนวน Way และอย่าใช้คำว่า “ปรับไฟฟ้า” แทนการอธิบายโครงสร้างจริง</p>
         </Section>
+
+        <DamperPhoto name="tein" />
 
         <Section id="explorer" title="เห็นภาพในหนึ่งนาที: หนึ่งปุ่มไม่ได้แปลว่าหนึ่งผลลัพธ์">
           <p>เลือกชนิดเพื่อดูความสัมพันธ์ระหว่างปุ่มกับแรงหน่วง ภาพนี้ใช้หลักการของรุ่นตัวอย่างใน <a href="#brands" className="text-lime-800 underline underline-offset-4">ตารางผู้ผลิต</a> ไม่ได้จำลองแรงหน่วงจริง และไม่ใช้สีหรือความยาวเส้นแทนระดับความนุ่ม</p>
@@ -215,6 +223,8 @@ export default function EVDamperTuningGuidePage() {
           </Note>
         </Section>
 
+        <div className="grid gap-5 sm:grid-cols-2"><DamperPhoto name="bilstein" /><DamperPhoto name="ohlins" /></div>
+
         <Section id="two-way" title="2-Way: อยากคุมยุบ แต่ไม่อยากรั้งยืด ต้องแยกช่องปรับ">
           <p>ในตัวอย่างที่เลือกมา 2-way ให้ช่องปรับ Compression และ Rebound แยกกัน เป้าหมายคือไม่ต้องยอมเปลี่ยนสองทิศทางไปพร้อมกันทุกครั้ง สมมติการคืนตัวอยู่ในจุดที่พอใจแล้ว แต่ต้องการสำรวจผลของแรงหน่วงตอนยุบ ระบบลักษณะนี้เปิดโอกาสให้เปลี่ยนเฉพาะช่อง Compression แล้วประเมินผลได้</p>
           <p><Ref to="kwV3">KW V3</Ref> แยก Low-speed Compression กับ Low-speed Rebound ส่วน <Ref to="bcER">BC Racing ER</Ref> ระบุการปรับ Compression และ Rebound แยกกันพร้อม Reservoir ภายนอก ทั้งคู่ใช้เป็นตัวอย่างหลักการ 2-way ได้ แต่ไม่ได้หมายความว่าวงจรภายใน ช่วงแรงหน่วง หรือทุกความเร็วที่ปุ่มมีผลจะเหมือนกัน</p>
@@ -241,9 +251,11 @@ export default function EVDamperTuningGuidePage() {
           <p>ค่าใช้จ่ายและความซับซ้อนที่เพิ่มขึ้นจึงควรแลกกับโจทย์ที่ชัดเจน มีจุดตั้งต้น และมีผู้ดูแลที่อธิบายการเปลี่ยนค่าได้ หากยังแยกไม่ออกว่ารถมีอาการตอนยุบ ตอนยืด หรือกำลังชน Bump stop การเพิ่มช่องปรับอาจเพิ่มความสับสนมากกว่าช่วยให้จบเร็วขึ้น</p>
         </Section>
 
+        <DamperPhoto name="bc" />
+
         <Section id="brands" title="อ่านสเปกให้พ้นชื่อรุ่น: เทียบตัวอย่างหลายแบรนด์">
           <p>ตารางนี้เปรียบเทียบ <strong>ชนิดของตัวควบคุม</strong> ไม่ใช่จัดอันดับความนุ่ม ความเร็ว หรือความคุ้มค่า และไม่ได้ยืนยันว่ามีชุดสำหรับรถ EV ของคุณครบทุกแบรนด์ หน้าผลิตภัณฑ์ต่างประเทศใช้ยืนยันหลักการของรุ่นตัวอย่างเท่านั้น รุ่นย่อย อุปกรณ์ และเงื่อนไขจำหน่ายในไทยต้องตรวจอีกครั้ง</p>
-          <div className="rounded-2xl border border-slate-200" role="region" aria-label="ตารางเปรียบเทียบช่องปรับคอยล์โอเวอร์">
+          <div className="rounded-2xl border border-slate-200" role="region" aria-label="ตารางเปรียบเทียบช่องปรับโช้คสตรัทปรับเกลียว">
             <table className={styles.table} role="table">
               <caption>นับช่องปรับ ไม่ใช่นับตัวเลขบนกล่อง · มือถืออ่านเป็นการ์ดได้โดยไม่เลื่อนด้านข้าง</caption>
               <thead role="rowgroup"><tr role="row"><th scope="col">ตัวอย่างสินค้า</th><th scope="col">ประเภท</th><th scope="col">ปรับอะไรได้</th><th scope="col">จุดที่ต้องอ่านให้ถูก</th></tr></thead>
@@ -259,6 +271,37 @@ export default function EVDamperTuningGuidePage() {
           <h3 className="text-xl font-bold">มีบริบทในไทย ไม่เท่ากับมีหลักฐานว่า “ขายดีที่สุด”</h3>
           <p>สำหรับผู้อ่านไทย เราเลือกตัวอย่างที่ตรวจข้อมูลผู้ผลิตได้ พร้อมช่องทางเกี่ยวข้องกับตลาดไทย เช่น <Ref to="teinTH">TEIN Sales Thailand</Ref>, <Ref to="bcTH">เครือข่ายผู้จัดจำหน่าย BC Racing</Ref>, <Ref to="bilsteinTH">รายชื่อผู้จัดจำหน่าย BILSTEIN</Ref>, <Ref to="hksTH">เครือข่าย HKS</Ref> และ <Ref to="ohlinsTH">กลุ่มผลิตภัณฑ์ Automotive ของ Öhlins ภาษาไทย</Ref> ส่วน KW ใช้เป็นตัวอย่างการแยกช่องปรับที่ชัดเจน ไม่ได้ให้แบรนด์ในภาพเป็นคำตอบเดียวของบทความ</p>
           <p>เราไม่มีข้อมูลยอดขายหรือส่วนแบ่งตลาดที่เปรียบเทียบแบรนด์เหล่านี้ในประเทศไทยด้วยเกณฑ์เดียวกัน จึงไม่เรียงอันดับ “ยอดนิยมที่สุด” ไม่ลงราคาที่ไม่ยืนยัน และไม่ถือว่าการพบช่องทางจำหน่ายเป็นหลักฐานว่าทุกรหัสสินค้ามีสต็อกหรือมีบริการซ่อมในประเทศ</p>
+        </Section>
+
+        <Section id="character-and-roads" title="โช้คแต่ละชุดมีนิสัยของมัน แล้วเข้ากับถนนที่เราขับไหม?">
+          <p>คำว่า “หนึบ” ของแต่ละคนไม่เหมือนกัน บางคนหมายถึงเบรกแล้วหน้ารถไม่ก้มมาก บางคนหมายถึงผ่านเนินแล้วไม่โยนซ้ำ อีกคนกลับต้องการให้ผ่านรอยต่อแล้วไม่สะเทือนถึงเบาะ ทั้งสามคนอาจพูดว่าอยากได้โช้คหนึบ ๆ เหมือนกัน แต่กำลังขอให้ช่วงล่างทำคนละอย่าง</p>
+          <p><strong>Character หรือบุคลิกของโช้ค จึงไม่ได้มีแค่นุ่มกับแข็ง</strong> ต้องแยกว่ารับแรงกระแทกช่วงแรกยังไง คุมการเคลื่อนตัวถังแค่ไหน และคืนตัวหลังผ่านเนินแบบไหน สิ่งที่รู้สึกผ่านเบาะยังเป็นผลจากทั้งชุด ทั้งสปริง ยาง เบ้าโช้ค ความฝืด และระยะยุบที่เหลือ ไม่ใช่ลายเซ็นของแบรนด์อย่างเดียว</p>
+
+          <h3 className="text-xl font-bold">แบรนด์เดียวกัน ยังทำโช้คมาคนละโจทย์</h3>
+          <p>ดู <Ref to="hks">HKS HIPERMAX S</Ref> กับ <Ref to="hksR">HIPERMAX R</Ref> เป็นตัวอย่าง: S รุ่นปัจจุบันชูความสบายบนถนนควบคู่กับการควบคุมตัวรถ ส่วน R ให้น้ำหนักกับการขับในสนาม โดยยังคำนึงถึงการใช้งานประจำวัน นี่คือจุดประสงค์ที่ผู้ผลิตระบุ ไม่ใช่ผลทดสอบของเราว่า S ต้องนุ่มกว่า R ในรถทุกคัน</p>
+          <div className="grid gap-5 sm:grid-cols-2"><DamperPhoto name="hksS" /><DamperPhoto name="hksR" /></div>
+          <p>ฝั่ง KW ก็มี <Ref to="kwComfort">กลุ่ม Street Comfort</Ref> ที่ตั้งโจทย์เรื่องความสบายไว้ชัดเจน จึงไม่ควรสรุปว่า “โช้คเยอรมันต้องแข็ง” หรือ “โช้คญี่ปุ่นต้องนุ่ม” จากชื่อประเทศ แล้วข้ามไปเลือกยี่ห้อเลย ให้ถามต่อว่าซีรีส์ไหน รหัสไหน ใช้กับรถอะไร และโรงงานตั้งใจให้ใช้งานแบบไหน</p>
+
+          <h3 className="text-xl font-bold">ถนนเยอรมันกับถนนไทย: รีวิวดีที่นั่น ไม่ได้แปลว่าจะถูกใจเราที่นี่</h3>
+          <p>ประเด็นไม่ใช่ว่าเยอรมันเรียบทุกเส้น หรือไทยขรุขระทุกเส้น แต่คือ <strong>ถนนที่ใช้ทดสอบกับถนนที่เราต้องเจอทุกวัน อาจเป็นคนละโจทย์</strong> ถ้ารีวิวใช้ทางผิวเรียบต่อเนื่องเป็นหลัก แต่เส้นทางของเราต้องผ่านรอยต่อสะพาน ฝาท่อ ทางปะ และเนินชะลอความเร็ว ความประทับใจจากรีวิวนั้นก็ยังตอบเรื่องการใช้งานของเราไม่ครบ แม้รถและโช้คจะชื่อรุ่นเดียวกัน</p>
+          <DamperPhoto name="bangkok" />
+          <p>ลองแยกสิ่งที่ถนนส่งเข้าช่วงล่าง: ทางเป็นคลื่นยาวกับขอบรอยต่อคม ๆ ทำให้ล้อและก้านโช้คเคลื่อนต่างกัน ความเร็วรถ ยาง และน้ำหนักบรรทุกก็เปลี่ยนสิ่งที่เรารู้สึกด้วย รถที่คุมตัวถังได้นิ่งตอนผ่านคลื่นยาวจึงยังอาจสะเทือนเมื่อผ่านรอยต่อสั้น ๆ ได้ อย่ารีบสรุปว่าโช้คเสีย หรือหมุนให้อ่อนลงทุกช่องโดยยังไม่แยกอาการ <a href="#shaft-speed" className="text-lime-800 underline underline-offset-4">ย้อนดูความต่างของความเร็วรถกับความเร็วก้านโช้ค</a></p>
+          <p>ในบทความนี้เราไม่มีข้อมูลวัดความขรุขระของถนนเยอรมันและไทยที่นำมาเทียบกันด้วยวิธีเดียวกัน จึงไม่จัดอันดับว่าประเทศไหนเรียบกว่ากัน ใช้เส้นทางจริงของเจ้าของรถเป็นโจทย์จะมีประโยชน์กับการเลือกโช้คมากกว่าใช้ประเทศต้นทางของแบรนด์เป็นคำตอบ</p>
+
+          <h3 className="text-xl font-bold">จูนได้ ไม่ได้แปลว่าเปลี่ยนนิสัยได้หมด</h3>
+          <p>ปุ่มปรับเปลี่ยนแรงหน่วงได้ภายในช่วงที่ชุดนั้นออกแบบไว้ ไม่ได้เปลี่ยนอัตราสปริง เพิ่มระยะยุบที่หายไปจากการโหลดเตี้ย หรือเปลี่ยนเบ้าแข็งให้กลายเป็นเบ้ายาง ถ้าเลือกพื้นฐานผิดโจทย์ การไล่คลิกอาจช่วยได้บางส่วน แต่ไม่ควรคาดหวังว่าจะเปลี่ยนชุดเน้นสนามให้มีพฤติกรรมเหมือนชุดเน้นความสบายทุกด้าน</p>
+          <p>ตัวอย่างจาก <Ref to="bilstein">BILSTEIN Academy</Ref> แยกแรงหน่วงพื้นฐานที่กำหนดโดยลูกสูบและทางน้ำมัน ออกจากส่วน Bypass ที่ผู้ใช้ปรับได้ ข้อนี้ช่วยอธิบายว่าทำไมโช้คสองชุดที่หมุนไปสุดอ่อนเหมือนกัน จึงไม่ได้กลายเป็นโช้คที่ทำงานเหมือนกัน</p>
+
+          <Note title="ก่อนถามว่าแบรนด์ไหนดี ลองบอกให้ร้านรู้ว่าเราใช้รถยังไง">
+            <ul className="list-disc space-y-2 pl-5">
+              <li><strong>เส้นทาง:</strong> ใช้ในเมือง ทางด่วน หรือต่างจังหวัดเป็นหลัก จุดไหนที่นั่งแล้วไม่สบาย และเจออาการแบบไหน</li>
+              <li><strong>คนและของ:</strong> ปกติขับคนเดียว มีผู้โดยสารหลัง หรือบรรทุกของบ่อยแค่ไหน</li>
+              <li><strong>สิ่งที่อยากได้:</strong> ลดแรงสะเทือนจากรอยต่อ ลดการโยนซ้ำ หรือควบคุมตัวถังตอนเปลี่ยนทิศทาง เลือกเรื่องสำคัญก่อน</li>
+              <li><strong>ข้อจำกัดที่รับได้:</strong> ความสูงที่ต้องผ่านทางขึ้นบ้าน เสียงจากช่วงล่าง และเวลาที่พร้อมกลับไปตรวจหรือตั้งรถ</li>
+              <li><strong>หลักฐานก่อนจ่าย:</strong> ขอรหัสชุด คู่มือ ค่าตั้งต้น และถ้ามีโอกาส ลองรถรุ่นเดียวกันที่ใช้ยางกับความสูงใกล้เคียง บนเส้นทางที่สะท้อนการใช้งานจริง</li>
+            </ul>
+          </Note>
+          <p><strong>ซื้อโช้คให้ตรงชีวิตที่ใช้รถ ไม่ใช่ซื้อให้ตรงภาพรถที่อยากเป็น</strong> ถ้าขับไปทำงานทุกวัน แต่ลงสนามนาน ๆ ครั้ง ความสบายของคนในรถและการผ่านเส้นทางประจำควรมีน้ำหนักในคำตัดสินด้วย ส่วนใครใช้สนามจริงจัง ก็ต้องคุยเรื่องยาง สปริง และการตั้งรถให้ครบ ไม่ใช่เลือกจากคำว่า Racing อย่างเดียว</p>
         </Section>
 
         <Section id="spring-height" title="โหลดเตี้ยกับเพิ่มความหนืด คนละเรื่องกัน—อย่าใช้ปุ่มแก้ทุกอย่าง">
@@ -349,6 +392,8 @@ export default function EVDamperTuningGuidePage() {
           <p>นี่เป็นแผนเปรียบเทียบที่เสนอ ไม่ใช่ผลทดสอบที่ทำแล้ว หากมีเสียง รั่ว หรือการควบคุมผิดปกติ ให้หยุดและตรวจรถ ไม่ต้องทำให้ครบรอบ A–B–A และแม้บันทึกดีขึ้นก็ยังไม่ใช่หลักฐานว่าระยะเบรกสั้นลงหรือเกาะถนนมากขึ้น</p>
         </Section>
 
+        <DamperPhoto name="race" />
+
         <Section id="choose" title="ขับทุกวันหรือ Track Day—ควรจ่ายถึงกี่ Way ถึงพอดี?">
           <h3 className="text-xl font-bold">ใช้ถนนเป็นหลัก: เริ่มจากชุดที่ตรงโจทย์ ไม่ใช่ช่องปรับมากที่สุด</h3>
           <p>ถ้าต้องการรถขับง่าย ผ่านทางขึ้นอาคารและรอยต่อประจำวันได้ดีขึ้น แต่ไม่ได้ต้องการเปลี่ยนบุคลิกบ่อย ชุดแรงหน่วงคงที่ที่เหมาะกับรถหรือ 1-way ที่มี Baseline และบริการหลังติดตั้งชัดเจนควรอยู่ในตัวเลือกด้วย งบส่วนหนึ่งอาจมีประโยชน์กับการเลือกสปริง ความสูง ยาง และงานติดตั้ง มากกว่าซื้อช่องปรับที่ไม่ได้ใช้</p>
@@ -376,7 +421,7 @@ export default function EVDamperTuningGuidePage() {
         <section aria-labelledby="related-title" className="border-t border-slate-200 pt-8">
           <h2 id="related-title" className="mb-5 text-2xl font-bold text-slate-950">เข้าใจโช้คแล้ว ต่อภาพช่วงล่างให้ครบ</h2>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="rounded-2xl border border-slate-200 p-5 text-base font-semibold transition hover:border-lime-500">ยางกับคอยล์โอเวอร์ ต้องเลือกให้ทำงานด้วยกัน <ArrowRight className="mt-3 h-5 w-5 text-lime-700" aria-hidden="true" /></Link>
+            <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="rounded-2xl border border-slate-200 p-5 text-base font-semibold transition hover:border-lime-500">ยางกับโช้คสตรัทปรับเกลียว ต้องเลือกให้ทำงานด้วยกัน <ArrowRight className="mt-3 h-5 w-5 text-lime-700" aria-hidden="true" /></Link>
             <Link href="/articles/shock-absorber-types-monotube-twintube-air-ev" className="rounded-2xl border border-slate-200 p-5 text-base font-semibold transition hover:border-lime-500">Monotube, Twin-tube และถุงลม ต่างกันตรงไหน <ArrowRight className="mt-3 h-5 w-5 text-lime-700" aria-hidden="true" /></Link>
           </div>
         </section>
