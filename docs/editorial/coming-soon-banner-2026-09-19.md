@@ -15,7 +15,7 @@ Replace the homepage vehicle-finder section shown in the supplied screenshot wit
 - Skill: artifact-template-ev-select-launch-visual; unchanged retained `assets/reference.png` used as image-generation reference.
 - Built-in image generation used; no external image-generation CLI/API.
 - Charcoal, ivory, acid-lime and cobalt selector motif; covered concept vehicle, not a real product/fitment photograph.
-- Headline: ของแต่ง EV ที่อยากให้รอดู
+- Current headline: ของแต่ง EV ที่คุณต้องมี! (user-requested revision on 2026-09-19; original launch copy superseded).
 - Eyebrow: COMING SOON (explicitly requested format).
 - CTA: ติดตามข่าวเปิดตัว → existing EVSELECT Facebook page.
 - Secondary CTA: อยากได้ของแต่งอะไร บอกเราได้ → existing contact page.
@@ -74,3 +74,13 @@ Originally delivered as a Preview pending approval. The user subsequently said �
 - Runtime error/fatal scan scoped to this production deployment, 2026-09-19T08:02:41Z–09:02:41Z, returned no matching entries. No browser page errors observed. Long-term monitoring and log-drain configuration were not verified or changed.
 - Evidence: `scratch/coming-soon-production/results.json`, screenshots in that folder, `scratch/damper-image-alignment/results.json`.
 - No backend, schema, inventory, payment, or main-branch merge changes.
+
+## Headline revision — 2026-09-19
+
+- User explicitly requested replacing the old headline and deploying immediately; selected their option “ของแต่ง EV ที่คุณต้องมี!”.
+- Scope: headline text only. Existing image, CSS/layout, CTAs, COMING SOON and non-transactional status remain unchanged. Carbon fiber article remains an unpublished draft.
+- Strengthened `scripts/verify-coming-soon.mjs` to assert the exact new heading and absence of the old wording.
+- Local verification: scoped ESLint, `git diff --check`, production build (TypeScript and 41 static pages), and full banner verifier passed at 360/390/768/1440 px; 200% text, no-JS, keyboard/contact links, 24 public routes and 7 protected routes passed. Desktop/mobile screenshots visually reviewed.
+- Local evidence: `scratch/coming-soon-headline-local/`.
+- Pre-release production/rollback reference verified by CLI: `dpl_BfDT6M7ivQ89iuTLXWnEAfZuyjxH`.
+- Production publication and live checks: pending in this commit; record confirmed result after release.

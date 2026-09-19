@@ -24,7 +24,7 @@ export default function ComingSoonBanner() {
           </div>
           <p className={styles.eyebrow}><span aria-hidden="true" />COMING SOON</p>
           <h2 id="coming-soon-heading" className={styles.title}>
-            ของแต่ง EV<br /><span>ที่อยากให้รอดู</span>
+            ของแต่ง EV<br /><span>ที่คุณต้องมี!</span>
           </h2>
           <p className={styles.description}>
             เรากำลังคัดอุปกรณ์เสริม พร้อมเตรียมข้อมูลรุ่นรถและการติดตั้งให้ชัดเจน ก่อนเปิดตัวให้ดูกันที่นี่

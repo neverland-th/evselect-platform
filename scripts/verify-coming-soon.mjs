@@ -21,6 +21,8 @@ try {
     await banner.locator('img').evaluate(img => img.decode());
     assert.ok(await banner.locator('img').evaluate(img => img.naturalWidth > 0));
     assert.match(await banner.innerText(), /ของแต่ง EV/);
+    assert.equal((await banner.locator('h2').innerText()).replace(/\s+/g, ' ').trim(), 'ของแต่ง EV ที่คุณต้องมี!');
+    assert.doesNotMatch(await banner.innerText(), /ที่อยากให้รอดู/);
     assert.match(await banner.innerText(), /COMING SOON/);
     assert.match(await banner.innerText(), /ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน/);
     assert.match(await banner.innerText(), /สร้างด้วย AI/);
