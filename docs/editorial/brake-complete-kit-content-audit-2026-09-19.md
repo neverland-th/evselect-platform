@@ -84,3 +84,9 @@ Eight existing articles inherited the homepage canonical. Each now declares its 
 Only the brake article has a maintained lastmod included; other dates are omitted instead of fabricated build timestamps. verify:seo parses the actual XML and HTML from a running site, checks all published article folders against the allowlist, verifies the 24 canonical/indexable URLs and six excluded preparation pages, and checks robots rules. Local build (43 routes), physics, targeted ESLint, four-width brake browser suite and SEO validation passed before deployment. The initial SEO test was corrected to normalize equivalent homepage URLs with/without the trailing slash.
 
 Implementation references inspected: bundled Next.js 16.3.2 sitemap/robots metadata docs; https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap and https://developers.google.com/crawling/docs/robots-txt/create-robots-txt. Publishing these files does not itself prove Search Console submission or indexing.
+
+## Comparison interaction correction
+
+The first complete release (8897643 / dpl_3fL2QUy6Lj3nAeVt75bd8h7XDUJp) used exclusive brand filtering. The user reported that selecting a choice left only one graph. The follow-up changes the controls to independent multi-selection, starts with all three profiles and all nine scores visible, keeps at least one selection, and provides a reset to all three. Clicking any score opens its rationale and sources. Tests now explicitly exercise 3-to-2-to-3 transitions for every choice, 1-to-2 selection by keyboard, all nine source panels and four viewport sizes. Score values and evidence have not changed.
+
+The first complete release independently passed the live SEO suite (24 sitemap URLs / six excluded preparation pages) and the 30-route image check (208 image instances at each of 1440px and 390px). Final graph-release verification is recorded separately after deployment.

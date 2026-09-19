@@ -63,7 +63,7 @@ try {
     }));
     assert.equal(alignedRings, true, `Score rings must align at ${width}px`);
     const firstRing = compare.getByTestId('score-brembo-performance');
-    assert.match(await compare.getByTestId('score-value-brembo-performance').innerText(), /ยังไม่เปิด/);
+    assert.match(await compare.getByTestId('score-value-brembo-performance').innerText(), /^[1-9]\/10$/);
     await firstRing.focus();
     await page.keyboard.press('Enter');
     assert.equal(await firstRing.getAttribute('aria-expanded'), 'true');
@@ -71,8 +71,6 @@ try {
     assert.equal(await compare.locator('#score-detail-brembo').isVisible(), true);
     await page.keyboard.press('Enter');
     assert.equal(await compare.locator('#score-detail-brembo').isVisible(), false);
-    await compare.getByTestId('show-all-scores').click();
-    assert.equal(await compare.getByTestId('show-all-scores').isDisabled(), true);
     for (const brand of ['brembo', 'endless', 'carbon-ceramic']) {
       for (const axis of ['performance', 'price', 'dust']) {
         const ring = compare.getByTestId('score-' + brand + '-' + axis);
@@ -86,10 +84,21 @@ try {
     }
     for (const brand of ['brembo', 'endless', 'carbon-ceramic']) {
       await compare.getByTestId('filter-' + brand).click();
-      assert.equal(await compare.locator('section[data-testid^="score-card-"]').count(), 1);
+      assert.equal(await compare.locator('section[data-testid^="score-card-"]').count(), 2, 'Removing one choice must keep the other two for comparison');
+      assert.equal(await compare.getByTestId('score-card-' + brand).count(), 0);
+      assert.equal(await compare.getByTestId('filter-' + brand).getAttribute('aria-pressed'), 'false');
+      await compare.getByTestId('filter-' + brand).click();
+      assert.equal(await compare.locator('section[data-testid^="score-card-"]').count(), 3, 'Adding a choice must preserve existing graphs');
       assert.equal(await compare.getByTestId('score-card-' + brand).isVisible(), true);
       assert.equal(await compare.getByTestId('filter-' + brand).getAttribute('aria-pressed'), 'true');
     }
+    await compare.getByTestId('filter-endless').click();
+    await compare.getByTestId('filter-carbon-ceramic').click();
+    assert.equal(await compare.locator('section[data-testid^="score-card-"]').count(), 1);
+    assert.equal(await compare.getByTestId('filter-brembo').isDisabled(), true, 'Keep at least one visible graph');
+    await compare.getByTestId('filter-endless').focus();
+    await page.keyboard.press('Enter');
+    assert.equal(await compare.locator('section[data-testid^="score-card-"]').count(), 2);
     await compare.getByTestId('filter-all').click();
     assert.equal(await compare.locator('section[data-testid^="score-card-"]').count(), 3);
     const method = compare.locator('#score-method');
@@ -116,14 +125,14 @@ try {
     }
     await compare.screenshot({ path: path.join(output, `compare-${width}-text200.png`) });
     assert.deepEqual(errors, []);
-    checks.push({ width, photos: loaded.length, contentAndMetadata: true, energyKeyboardControls: true, threeBrandFiltering: true, nineClickableEditorialScores: true, sourceReasonsAndLimitations: true, overflow: false, text200Overflow: false, runtimeErrors: errors });
+    checks.push({ width, photos: loaded.length, contentAndMetadata: true, energyKeyboardControls: true, simultaneousBrandSelection: true, nineScoresVisibleImmediately: true, nineClickableEditorialScores: true, sourceReasonsAndLimitations: true, overflow: false, text200Overflow: false, runtimeErrors: errors });
     await context.close();
   }
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
   const page = await context.newPage();
   assert.equal((await page.goto(base + route)).status(), 200);
   assert.equal(await page.locator('#brake-mass').isVisible(), false);
-  assert.equal(await page.getByTestId('show-all-scores').isVisible(), false);
+  assert.equal(await page.getByTestId('filter-all').isVisible(), false);
   assert.match(await page.getByTestId('brake-brand-compare').locator('noscript').innerText(), /Performance 8\/10/);
   assert.equal(await page.getByTestId('kinetic-energy').innerText(), '0.85 MJ');
   await page.locator('#faq details').first().locator('summary').click();

@@ -5,23 +5,26 @@ import { brakeEditorialProfiles, brakeScoreAxes, type BrakeScoreAxis } from '@/l
 import styles from './BrakeGuide.module.css';
 
 export default function BrakeBrandCompare() {
-  const [filter, setFilter] = useState('all');
-  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+  const [selected, setSelected] = useState(brakeEditorialProfiles.map(profile => profile.id));
   const [active, setActive] = useState<Record<string, BrakeScoreAxis | null>>({});
-  const profiles = brakeEditorialProfiles.filter(profile => filter === 'all' || filter === profile.id);
-  const allRevealed = brakeEditorialProfiles.every(profile => brakeScoreAxes.every(axis => revealed[`${profile.id}-${axis.id}`]));
-  function showAll() {
-    setRevealed(Object.fromEntries(brakeEditorialProfiles.flatMap(profile => brakeScoreAxes.map(axis => [`${profile.id}-${axis.id}`, true]))));
+  const profiles = brakeEditorialProfiles.filter(profile => selected.includes(profile.id));
+  const allSelected = profiles.length === brakeEditorialProfiles.length;
+  function toggleProfile(id: string) {
+    setSelected(previous => previous.includes(id)
+      ? previous.length > 1 ? previous.filter(value => value !== id) : previous
+      : [...previous, id]);
   }
 
   return <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 sm:p-6" data-testid="brake-brand-compare">
-    <div className="mb-5"><span className="text-sm font-bold text-lime-800">Brembo · ENDLESS · Carbon Ceramic</span><h3 className="mt-2 text-xl font-bold sm:text-2xl">แตะวง แล้วดูว่าคุ้มกับคุณแค่ไหน</h3><p className={`${styles.help} mt-2`}>คะแนนคร่าว ๆ เต็ม 10 ประเมินโดย EVSELECT จากรีวิวและข้อมูลผู้ผลิต สำหรับการใช้ถนน ไม่ใช่คะแนนเฉลี่ยดาวหรือผลทดสอบของเรา ยิ่งสูงยิ่งเด่นในด้านนั้น</p></div>
+    <div className="mb-5"><span className="text-sm font-bold text-lime-800">Brembo · ENDLESS · Carbon Ceramic</span><h3 className="mt-2 text-xl font-bold sm:text-2xl">เทียบให้เห็น ก่อนจ่ายหลักแสน</h3><p className={`${styles.help} mt-2`}>คะแนนคร่าว ๆ เต็ม 10 ประเมินโดย EVSELECT จากรีวิวและข้อมูลผู้ผลิต สำหรับการใช้ถนน ไม่ใช่คะแนนเฉลี่ยดาวหรือผลทดสอบของเรา ยิ่งสูงยิ่งเด่นในด้านนั้น แตะวงเพื่ออ่านเหตุผลและแหล่งที่มา</p></div>
     <noscript><style>{'.brake-score-interactive{display:none}'}</style><div className={styles.note}><p>คะแนนประเมินสำหรับถนน · เปิด JavaScript เพื่อแตะวงและเปลี่ยนตัวเลือก</p>{brakeEditorialProfiles.map(profile => <p key={profile.id}><strong>{profile.name}:</strong> Performance {profile.scores.performance.score}/10 · ความคุ้มค่า {profile.scores.price.score}/10 · ฝุ่นน้อย {profile.scores.dust.score}/10</p>)}<p><a href="#score-method" className="underline">อ่านเกณฑ์และแหล่งที่มาด้านล่าง</a></p></div></noscript>
     <div className="brake-score-interactive">
-      <div className="mb-5 flex flex-wrap gap-2" aria-label="เลือกแนวทางเบรก" role="group">
-        {[{ id: 'all', name: 'เทียบทั้งหมด' }, ...brakeEditorialProfiles].map(option => <button key={option.id} type="button" onClick={() => setFilter(option.id)} aria-pressed={filter === option.id} data-testid={`filter-${option.id}`} className={`min-h-11 rounded-full border px-4 py-2 text-sm font-bold ${filter === option.id ? 'border-slate-950 bg-slate-950 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-lime-600'}`}>{option.name}</button>)}
+      <p className="mb-3 text-sm font-semibold text-slate-700">เลือกเทียบได้หลายรายการ · แตะชื่อเพื่อเพิ่มหรือนำออก</p>
+      <div className="mb-5 flex flex-wrap gap-2" aria-label="เลือกแนวทางเบรกเพื่อเทียบพร้อมกัน" role="group">
+        <button type="button" onClick={() => setSelected(brakeEditorialProfiles.map(profile => profile.id))} aria-pressed={allSelected} data-testid="filter-all" className={`min-h-11 rounded-full border px-4 py-2 text-sm font-bold ${allSelected ? 'border-slate-950 bg-slate-950 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-lime-600'}`}>เทียบครบ 3</button>
+        {brakeEditorialProfiles.map(option => <button key={option.id} type="button" onClick={() => toggleProfile(option.id)} aria-pressed={selected.includes(option.id)} disabled={selected.length === 1 && selected.includes(option.id)} data-testid={`filter-${option.id}`} className={`min-h-11 rounded-full border px-4 py-2 text-sm font-bold disabled:cursor-default ${selected.includes(option.id) ? 'border-lime-600 bg-lime-100 text-lime-950' : 'border-slate-300 bg-white text-slate-700 hover:border-lime-600'}`}>{selected.includes(option.id) && <span aria-hidden="true">✓ </span>}{option.name}</button>)}
       </div>
-      <div className={`grid items-start gap-4 ${filter === 'all' ? 'lg:grid-cols-3' : 'mx-auto max-w-xl'}`}>
+      <div className={`grid items-start gap-4 ${profiles.length === 3 ? 'lg:grid-cols-3' : profiles.length === 2 ? 'lg:grid-cols-2' : 'mx-auto max-w-xl'}`}>
         {profiles.map(profile => {
           const current = active[profile.id];
           const score = current ? profile.scores[current] : null;
@@ -31,14 +34,13 @@ export default function BrakeBrandCompare() {
             <div className={styles.rings} data-testid="comparison-rings">
               {brakeScoreAxes.map(axis => {
                 const key = `${profile.id}-${axis.id}`;
-                const visible = revealed[key];
                 const value = profile.scores[axis.id].score;
-                return <button key={axis.id} type="button" onClick={() => { setRevealed(previous => ({ ...previous, [key]: true })); setActive(previous => ({ ...previous, [profile.id]: previous[profile.id] === axis.id ? null : axis.id })); }} aria-expanded={current === axis.id} aria-controls={`score-detail-${profile.id}`} aria-label={`${visible ? 'ดูเหตุผลคะแนน' : 'เปิดคะแนน'} ${axis.label} ของ ${profile.name}${visible ? ` ${value} จาก 10` : ''}`} data-testid={`score-${key}`} className="flex min-h-11 min-w-0 flex-col rounded-xl py-2 text-center hover:bg-slate-50">
+                return <button key={axis.id} type="button" onClick={() => setActive(previous => ({ ...previous, [profile.id]: previous[profile.id] === axis.id ? null : axis.id }))} aria-expanded={current === axis.id} aria-controls={`score-detail-${profile.id}`} aria-label={`ดูเหตุผลคะแนน ${axis.label} ของ ${profile.name} ${value} จาก 10`} data-testid={`score-${key}`} className="flex min-h-11 min-w-0 flex-col rounded-xl py-2 text-center hover:bg-slate-50">
                   <span className="flex min-h-[2.75em] items-end justify-center text-xs font-bold leading-snug text-slate-700">{axis.id === 'performance' ? 'สมรรถนะ' : axis.label}</span>
                   <span className="relative mx-auto my-2 block aspect-square w-full max-w-[7.5rem]">
-                    <svg viewBox="0 0 120 120" aria-hidden="true" className="h-full w-full"><g transform="rotate(-90 60 60)"><circle cx="60" cy="60" r="49" fill="none" stroke="#e2e8f0" strokeWidth="8" strokeDasharray={visible ? undefined : '4 5'} />{visible && <circle cx="60" cy="60" r="49" fill="none" stroke={axis.color} strokeWidth="8" strokeLinecap="round" pathLength="100" strokeDasharray={`${value * 10} 100`} />}</g><text x="60" y="63" textAnchor="middle" fill="#0f172a" fontSize={visible ? '30' : '25'} fontWeight="800">{visible ? value : '?'}</text><text x="60" y="82" textAnchor="middle" fill="#475569" fontSize="12">{visible ? '/ 10' : 'แตะดู'}</text></svg>
+                    <svg viewBox="0 0 120 120" aria-hidden="true" className="h-full w-full"><g transform="rotate(-90 60 60)"><circle cx="60" cy="60" r="49" fill="none" stroke="#e2e8f0" strokeWidth="8" /><circle cx="60" cy="60" r="49" fill="none" stroke={axis.color} strokeWidth="8" strokeLinecap="round" pathLength="100" strokeDasharray={`${value * 10} 100`} /></g><text x="60" y="63" textAnchor="middle" fill="#0f172a" fontSize="30" fontWeight="800">{value}</text><text x="60" y="82" textAnchor="middle" fill="#475569" fontSize="12">/ 10</text></svg>
                   </span>
-                  <span className="sr-only" data-testid={`score-value-${key}`} aria-live="polite">{visible ? `${value}/10` : 'ยังไม่เปิดคะแนน'}</span><span className="block text-xs leading-relaxed text-slate-600 sm:text-sm">{axis.meaning}</span>
+                  <span className="sr-only" data-testid={`score-value-${key}`}>{value}/10</span><span className="block text-xs leading-relaxed text-slate-600 sm:text-sm">{axis.meaning}</span>
                 </button>;
               })}
             </div>
@@ -49,7 +51,6 @@ export default function BrakeBrandCompare() {
           </section>;
         })}
       </div>
-      <button type="button" onClick={showAll} disabled={allRevealed} data-testid="show-all-scores" className="mt-5 min-h-11 rounded-xl bg-lime-400 px-5 py-3 text-base font-bold text-slate-950 hover:bg-lime-300 disabled:bg-slate-200 disabled:text-slate-600">{allRevealed ? 'เปิดคะแนนครบทุกวงแล้ว' : 'แสดงคะแนนทุกวง'}</button>
     </div>
     <details id="score-method" className={`${styles.detail} mt-5`}><summary>คะแนนนี้คิดอย่างไร และใช้ตัดสินได้แค่ไหน?</summary><div className="space-y-3 pb-4 text-sm leading-relaxed text-slate-600">
       <p>เป็นความเห็นบรรณาธิการแบบหยาบจากหลักฐานที่ลิงก์ไว้ ตรวจ 19 ก.ย. 2569 ไม่ใช่คะแนนที่ผู้รีวิวให้กับรถหรือชุดเดียวกัน ไม่มีการแปลงดาวคนละเว็บมาเฉลี่ย และไม่มีคะแนนรวมผู้ชนะ</p>
