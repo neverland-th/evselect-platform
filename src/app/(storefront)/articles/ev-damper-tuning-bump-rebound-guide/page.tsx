@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight, BookOpen, CalendarDays, SlidersHorizontal } from 'lucide-react';
 import { damperArticle } from '@/lib/damper-article';
+import DamperExplorer, { DamperScenarios } from '@/components/articles/DamperExplorer';
+import styles from '@/components/articles/DamperGuide.module.css';
 
 export const metadata: Metadata = {
   alternates: { canonical: damperArticle.path },
@@ -40,9 +42,10 @@ const sources = {
   bcER: { title: 'BC Racing — ER: Compression และ Rebound แยกช่องปรับ', url: 'https://www.bcracing.co.nz/types/er/' },
   bcZR: { title: 'BC Racing — ZR: สามช่องปรับและรูปแบบ Reservoir', url: 'https://bcracing-na.com/series/zr-series/' },
   ohlins: { title: 'Öhlins — DFV: การไหลของน้ำมันและการชดเชยอุณหภูมิ', url: 'https://www.ohlins.com/en-us/technology/dfv-technology' },
-  ohlinsRT: { title: 'Öhlins — Road & Track สำหรับ MQB: Compression/Rebound ด้วยตัวปรับเดียว', url: 'https://www.ohlins.com/en-us/automotive/road-and-track/vag-%28mqb%29-audi-seat-skoda-vw-2012-%28fwd%29-s1?v=volkswagen-golf-viii-2014' },
+  ohlinsRT: { title: 'Öhlins Thailand — Road & Track รหัส MES MV10S1: ตัวอย่างช่องปรับร่วม', url: 'https://www.ohlins.com/th-th/automotive/road-track/mercedes-amg-a45-(w177)?v=mercedes-benz-a45-amg-2026' },
   ohlinsManual: { title: 'Öhlins — คู่มือ Road & Track Automotive: Preload, ระยะทำงาน และความปลอดภัย', url: 'https://www.ohlins.com/storage/7AC688BED0B27E53064F094EF615E1B088E4D8FEA94635A5D2ECCC5FB1894053/b31b9618ad354b438a407241ceb64a6d/pdf/media/d60188c2ea574151aad35b903c54e441/OM_07451-01_7_R_T.pdf' },
   hks: { title: 'HKS — HIPERMAX S: Single-tube, WR Needle และการปรับความสูง', url: 'https://www.hks-power.co.jp/en/product/suspension/hipermax/maxs/index.html' },
+  hks2026: { title: 'HKS — Product Code List 2026: เทียบรหัส HIPERMAX S เดิม/ใหม่', url: 'https://www.hks-power.co.jp/en/product/suspension/hipermax/maxs/new_hipermax_s_list.pdf' },
   hksManual: { title: 'HKS — คู่มือ HIPERMAX R รหัส 80310-AN002: วิธีนับคลิกเฉพาะรุ่น', url: 'https://www.hks-power.co.jp/product_search/product/download/5005/ja_en/80310-AN002.pdf' },
   teinTH: { title: 'TEIN Sales Thailand — ผลิตภัณฑ์และช่องทางในประเทศไทย', url: 'https://thailand.tein.com/' },
   bcTH: { title: 'BC Racing — รายชื่อผู้จัดจำหน่าย รวมประเทศไทย', url: 'https://www.bcracing.co.nz/distributors/' },
@@ -69,6 +72,7 @@ function Note({ title, children }: { title: string; children: ReactNode }) {
 
 const contents = [
   ['types', 'คอยล์โอเวอร์มีกี่แบบ? แยกสเปกสามเรื่องก่อน'],
+  ['explorer', 'ดูภาพช่องปรับ: ปุ่มเดียวทำอะไรได้บ้าง'],
   ['inside', 'หมุนคลิกแล้วเกิดอะไรขึ้นข้างในโช้ค'],
   ['shaft-speed', 'Low-Speed ไม่ใช่ขับช้า'],
   ['one-way', '1-Way: ปุ่มเดียว ไม่ได้ทำงานเหมือนกัน'],
@@ -78,8 +82,10 @@ const contents = [
   ['spring-height', 'โหลดเตี้ยกับเพิ่มความหนืด คนละเรื่องกัน'],
   ['reservoir', 'ซับแทงก์ วาล์ว และกราฟไดโนบอกอะไร'],
   ['symptoms', 'เด้ง กระด้าง หรือยุบสุด แยกอาการก่อนจูน'],
+  ['examples', 'ลองคิด 3 สถานการณ์ ก่อนหมุนปุ่มจริง'],
   ['ev-fitment', 'แต่ง EV ให้จบ ต้องเช็กอะไรบ้าง'],
   ['baseline', 'เริ่มจูนจากหลักฐาน ไม่ใช่สูตรคลิกในคอมเมนต์'],
+  ['toolkit', 'แบบบันทึกและเช็กลิสต์ส่งให้ร้าน'],
   ['choose', 'ขับทุกวันหรือ Track Day ควรจ่ายถึงกี่ Way'],
   ['faq', 'คำถามที่ควรรู้ก่อนสั่งซื้อ'],
 ] as const;
@@ -88,7 +94,7 @@ const comparisons: { name: string; type: string; controls: string; lesson: strin
   { name: 'TEIN FLEX Z', type: '1-Way แบบปรับร่วม', controls: 'Compression + Rebound ผ่านตัวปรับเดียว', lesson: '16 ระดับคือจำนวนตำแหน่ง ไม่ใช่ 16 ช่องอิสระ; ใช้โครงสร้าง Twin-tube', source: 'teinFlex' },
   { name: 'TEIN MONO SPORT', type: '1-Way แบบปรับร่วม', controls: 'Compression + Rebound ผ่านตัวปรับเดียว', lesson: 'เป็น Monotube แต่จำนวนช่องปรับเท่ากับตัวอย่าง Twin-tube ข้างบน', source: 'teinMono' },
   { name: 'BILSTEIN B16 แบบปรับมือ', type: '1-Way แบบปรับร่วม', controls: 'Bump + Rebound เปลี่ยนพร้อมกัน', lesson: 'ตัวอย่าง PSS10 มี 10 ตำแหน่ง; ไม่เหมารวมรุ่นควบคุมอิเล็กทรอนิกส์', source: 'bilstein' },
-  { name: 'Öhlins Road & Track DFV', type: '1-Way ในชุดที่อ้างอิง', controls: 'Compression + Rebound ผ่านตัวปรับเดียว', lesson: 'อ้างอิงหน้าผลิตภัณฑ์ MQB โดยเฉพาะ; เทคโนโลยี DFV ไม่ใช่ชื่อจำนวน Way', source: 'ohlinsRT' },
+  { name: 'Öhlins Road & Track DFV', type: '1-Way ในชุดที่อ้างอิง', controls: 'Compression + Rebound ผ่านตัวปรับเดียว', lesson: 'ตัวอย่างรหัส MES MV10S1 สำหรับ W177 ไม่ใช่การยืนยันชุดสำหรับ EV; DFV ไม่ใช่จำนวนช่องปรับ', source: 'ohlinsRT' },
   { name: 'KW V2', type: '1-Way แบบ Rebound', controls: 'Low-speed Rebound; Compression กำหนดจากโรงงาน', lesson: 'ปุ่มเดียวไม่ได้หมายความว่าต้องเปลี่ยนยุบกับยืดไปพร้อมกันเสมอ', source: 'kwV2' },
   { name: 'KW V3', type: '2-Way', controls: 'Low-speed Compression + Low-speed Rebound แยกปรับ', lesson: 'V3 เป็นชื่อซีรีส์ ไม่ได้หมายถึง 3-Way', source: 'kwV3' },
   { name: 'BC Racing ER', type: '2-Way', controls: 'Compression + Rebound แยกปรับ', lesson: 'มี Reservoir แต่ไม่ได้กลายเป็น 3-Way เพราะมีถังแยก', source: 'bcER' },
@@ -109,7 +115,7 @@ const faqs = [
 export default function EVDamperTuningGuidePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',
+    '@type': 'BlogPosting',
     headline: damperArticle.title,
     description: damperArticle.description,
     image: [damperArticle.coverUrl],
@@ -125,6 +131,7 @@ export default function EVDamperTuningGuidePage() {
   return (
     <article className="mx-auto max-w-5xl bg-white px-4 py-10 text-slate-900 sm:px-6 md:py-16 lg:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ EVSELECT', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: 'คอยล์โอเวอร์ 1-Way, 2-Way, 3-Way', item: damperArticle.url }] }).replace(/</g, '\\u003c') }} />
       <nav aria-label="เส้นทางบทความ" className="mb-8">
         <Link href="/articles" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-slate-600 hover:text-lime-800">
           <ArrowLeft className="h-4 w-4" aria-hidden="true" /> กลับไปหน้ารวมบทความ
@@ -139,6 +146,9 @@ export default function EVDamperTuningGuidePage() {
         <h1 className="text-3xl font-extrabold leading-snug tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{damperArticle.title.split(/(1-Way|2-Way|3-Way)/g).map((part, index) => <span key={index} className={/^\d-Way$/.test(part) ? 'whitespace-nowrap' : undefined}>{part}</span>)}</h1>
         <p className="max-w-3xl text-lg leading-relaxed text-slate-600 sm:text-xl">เปลี่ยนโช้คแล้วรถเตี้ยลง แต่ยังสะเทือนทุกตะเข็บถนน? หรือหมุนจนแข็งแล้วตัวรถก็ยังไม่จบในจังหวะเดียว? คำตอบอาจไม่ได้อยู่ที่ราคา แต่อยู่ที่ว่าเรากำลังปรับอะไร และชุดช่วงล่างนั้นเข้ากับรถจริงหรือไม่</p>
         <p className="text-sm text-slate-500">เรียบเรียงโดย EVSELECT · อธิบายกลไกจากเอกสารผู้ผลิต ไม่ใช่ผลทดสอบเปรียบเทียบของกองบรรณาธิการ</p>
+        <nav aria-label="ทางลัดตามสิ่งที่ต้องการ" className="flex flex-wrap gap-2 text-sm">
+          {[['#explorer', 'ดูภาพช่องปรับ'], ['#brands', 'เทียบหลายแบรนด์'], ['#toolkit', 'เตรียมข้อมูลให้ร้าน']].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 items-center rounded-full border border-lime-200 bg-lime-50 px-4 py-2 font-semibold text-lime-900 underline-offset-4 hover:underline">{label} <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a>)}
+        </nav>
         <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
           <Image src={damperArticle.cover} alt={damperArticle.coverAlt} sizes="(max-width: 1024px) 100vw, 960px" preload className="h-auto w-full object-contain" />
           <figcaption className="border-t border-slate-200 bg-white px-5 py-4 text-xs leading-relaxed text-slate-500">ภาพประกอบ KW Coilovers หลายรูปแบบ ไม่ใช่การระบุรุ่นสินค้าแต่ละชิ้นหรือยืนยันการติดตั้งกับรถรุ่นใด บทความนี้อธิบายหลักการร่วมและยกตัวอย่างหลายแบรนด์</figcaption>
@@ -169,6 +179,11 @@ export default function EVDamperTuningGuidePage() {
           <p>ส่วนระบบที่สั่งปรับด้วยมอเตอร์หรืออิเล็กทรอนิกส์เป็นอีกมิติหนึ่ง: ให้ถามว่าระบบนั้นหมุนตัวปรับเดิม เปลี่ยนวาล์วตามโหมด หรือควบคุมการหน่วงอัตโนมัติแบบใด อย่านับจำนวนโหมด Comfort/Sport เป็นจำนวน Way และอย่าใช้คำว่า “ปรับไฟฟ้า” แทนการอธิบายโครงสร้างจริง</p>
         </Section>
 
+        <Section id="explorer" title="เห็นภาพในหนึ่งนาที: หนึ่งปุ่มไม่ได้แปลว่าหนึ่งผลลัพธ์">
+          <p>เลือกชนิดเพื่อดูความสัมพันธ์ระหว่างปุ่มกับแรงหน่วง ภาพนี้ใช้หลักการของรุ่นตัวอย่างใน <a href="#brands" className="text-lime-800 underline underline-offset-4">ตารางผู้ผลิต</a> ไม่ได้จำลองแรงหน่วงจริง และไม่ใช้สีหรือความยาวเส้นแทนระดับความนุ่ม</p>
+          <DamperExplorer />
+        </Section>
+
         <Section id="inside" title="หมุนคลิกแล้วเกิดอะไรขึ้นข้างในโช้ค?">
           <h3 className="text-xl font-bold">สปริงเก็บพลังงาน ส่วนแดมเปอร์คุมการเคลื่อนไหว</h3>
           <p>เมื่อรถวิ่งผ่านลูกระนาด ล้อและช่วงล่างเคลื่อนที่ สปริงยุบเพื่อรับแรงแล้วพยายามคืนตัว ถ้ามีแต่สปริง ระบบก็มีแนวโน้มสั่นต่อไป แดมเปอร์หรือที่เราเรียกกันว่าโช้คอัพจึงสร้างแรงต้านการเคลื่อนที่เพื่อสลายพลังงานส่วนหนึ่งเป็นความร้อน ช่วยให้การยุบ–ยืดถูกควบคุม ไม่ได้ทำหน้าที่เหมือนสปริงแข็งอีกเส้นหนึ่ง</p>
@@ -193,7 +208,7 @@ export default function EVDamperTuningGuidePage() {
           <h3 className="text-xl font-bold">แนวทางแรก: ปรับ Rebound ส่วน Compression โรงงานจัดมาให้</h3>
           <p><Ref to="kwV2">KW V2</Ref> เป็นตัวอย่างของช่องปรับ Low-speed Rebound ขณะที่การตั้ง Compression ถูกกำหนดไว้จากโรงงาน หากต้องการเปลี่ยนการหน่วงตอนคืนตัวก็มีปุ่มให้ทำ แต่หากต้องการลดแรงหน่วงฝั่งยุบแยกต่างหาก ผู้ใช้ไม่ได้มีปุ่มนั้นเพิ่มมาให้ นี่ไม่ได้แปลว่าโช้คไม่มี Compression damping เพียงแต่ไม่ใช่ช่องที่ปรับเองจากภายนอกในชุดนี้</p>
           <h3 className="text-xl font-bold">แนวทางที่สอง: ปุ่มเดียวขยับทั้งยุบและยืดไปด้วยกัน</h3>
-          <p><Ref to="teinFlex">TEIN FLEX Z</Ref> และ <Ref to="bilstein">BILSTEIN B16 แบบปรับมือ</Ref> เป็นตัวอย่างที่ผู้ผลิตระบุการเปลี่ยน Compression/Bump และ Rebound พร้อมกัน ส่วน <Ref to="ohlinsRT">Öhlins Road & Track DFV ในหน้าผลิตภัณฑ์ MQB ที่อ้างอิง</Ref> ก็ระบุการควบคุมทั้งสองทิศทางด้วยตัวปรับเดียว โดยความสัมพันธ์ของแรงหน่วงแต่ละทิศทางเป็นสิ่งที่ออกแบบไว้ ไม่ใช่จำเป็นต้องเพิ่มเท่ากันแบบหนึ่งต่อหนึ่ง</p>
+          <p><Ref to="teinFlex">TEIN FLEX Z</Ref> และ <Ref to="bilstein">BILSTEIN B16 แบบปรับมือ</Ref> เป็นตัวอย่างที่ผู้ผลิตระบุการเปลี่ยน Compression/Bump และ Rebound พร้อมกัน ส่วน <Ref to="ohlinsRT">Öhlins Road & Track DFV รหัส MES MV10S1 ในหน้าภาษาไทย</Ref> ก็อธิบายการควบคุมยุบ–ยืดด้วยตัวปรับเดียว โดยความสัมพันธ์ของแรงหน่วงแต่ละทิศทางเป็นสิ่งที่ออกแบบไว้ ไม่ใช่จำเป็นต้องเพิ่มเท่ากันแบบหนึ่งต่อหนึ่ง</p>
           <p>ข้อดีเชิงการใช้งานคือมีตัวแปรให้จัดการน้อย เมื่ออยากเปลี่ยนบุคลิกโดยรวมก็ปรับได้ง่ายกว่า แต่ข้อจำกัดคือ หากลดค่าจนผ่านรอยต่อสบายขึ้นแล้วการคืนตัวกลับไม่ลงตัว คุณอาจไม่สามารถเพิ่มเฉพาะ Rebound โดยคง Compression เดิมได้ผ่านปุ่มนั้น เรื่องนี้ต้องดูวงจรจริง ไม่ใช่ตัดสินจากสีสปริงหรือยี่ห้อ</p>
           <Note title="16 ระดับ ไม่ใช่ 16 ช่องอิสระ">
             <p>จำนวนตำแหน่งบอกความละเอียดของการเลือกภายในช่วงที่ออกแบบไว้ ไม่ได้บอกว่าแรงหน่วงกว้างกว่า แม่นกว่า หรือมีคุณภาพสูงกว่าอีกแบรนด์เสมอไป การเปรียบเทียบต้องดูช่วงแรงหน่วงจริง ความสม่ำเสมอ และความเหมาะสมกับรถด้วย</p>
@@ -203,6 +218,7 @@ export default function EVDamperTuningGuidePage() {
         <Section id="two-way" title="2-Way: อยากคุมยุบ แต่ไม่อยากรั้งยืด ต้องแยกช่องปรับ">
           <p>ในตัวอย่างที่เลือกมา 2-way ให้ช่องปรับ Compression และ Rebound แยกกัน เป้าหมายคือไม่ต้องยอมเปลี่ยนสองทิศทางไปพร้อมกันทุกครั้ง สมมติการคืนตัวอยู่ในจุดที่พอใจแล้ว แต่ต้องการสำรวจผลของแรงหน่วงตอนยุบ ระบบลักษณะนี้เปิดโอกาสให้เปลี่ยนเฉพาะช่อง Compression แล้วประเมินผลได้</p>
           <p><Ref to="kwV3">KW V3</Ref> แยก Low-speed Compression กับ Low-speed Rebound ส่วน <Ref to="bcER">BC Racing ER</Ref> ระบุการปรับ Compression และ Rebound แยกกันพร้อม Reservoir ภายนอก ทั้งคู่ใช้เป็นตัวอย่างหลักการ 2-way ได้ แต่ไม่ได้หมายความว่าวงจรภายใน ช่วงแรงหน่วง หรือทุกความเร็วที่ปุ่มมีผลจะเหมือนกัน</p>
+          <p><strong>2-Way ไม่ได้แปลว่าต้องมีถังแยกที่มองเห็นเสมอ:</strong> ให้ตรวจตำแหน่งตัวปรับและโครงสร้างของรหัสสินค้าจริง ไม่ใช้การเห็นหรือไม่เห็น Reservoir เป็นตัวนับช่อง และคำว่า “เปิดอ่อนสุด” ก็ไม่ได้แปลว่าปิดการทำงานของ Compression damping ทั้งหมด วาล์วส่วนอื่นยังมีบทบาทตามการออกแบบ</p>
           <h3 className="text-xl font-bold">แยกปุ่มได้ ไม่ได้แปลว่าข้างในแยกขาดทุกสภาวะ</h3>
           <p>น้ำมันยังทำงานอยู่ในระบบเดียวกัน ช่องทางไหลและวาล์วอาจมีผลร่วมกันบางย่าน คำว่า Independent adjustment จึงหมายถึงมีตัวควบคุมที่ผู้ใช้แยกตั้งได้ ไม่ใช่คำสัญญาว่าเปลี่ยนช่องหนึ่งแล้วกราฟอีกฝั่งจะไม่ขยับแม้แต่น้อยทุกความเร็ว หากต้องการพิสูจน์ให้ละเอียด ต้องอาศัยเอกสารวงจรหรือกราฟทดสอบของรุ่นนั้น</p>
           <p>อีกข้อจำกัดคือ หากช่อง Compression ที่ให้มามุ่งปรับย่านก้านเคลื่อนช้า การลดค่านั้นไม่ได้รับประกันว่าจะทำให้แรงกระแทกจากขอบคมหายไป ปัญหาอาจอยู่ที่ยาง ระยะยุบ Bump stop หรือวาล์วย่านอื่นที่ผู้ใช้ปรับไม่ได้ การมีปุ่มเพิ่มเป็นเครื่องมือแยกโจทย์ ไม่ใช่เครื่องมือชดเชยทุกส่วนของช่วงล่าง</p>
@@ -227,15 +243,19 @@ export default function EVDamperTuningGuidePage() {
 
         <Section id="brands" title="อ่านสเปกให้พ้นชื่อรุ่น: เทียบตัวอย่างหลายแบรนด์">
           <p>ตารางนี้เปรียบเทียบ <strong>ชนิดของตัวควบคุม</strong> ไม่ใช่จัดอันดับความนุ่ม ความเร็ว หรือความคุ้มค่า และไม่ได้ยืนยันว่ามีชุดสำหรับรถ EV ของคุณครบทุกแบรนด์ หน้าผลิตภัณฑ์ต่างประเทศใช้ยืนยันหลักการของรุ่นตัวอย่างเท่านั้น รุ่นย่อย อุปกรณ์ และเงื่อนไขจำหน่ายในไทยต้องตรวจอีกครั้ง</p>
-          <div className="overflow-x-auto rounded-2xl border border-slate-200 focus-visible:outline-2 focus-visible:outline-lime-700" tabIndex={0} role="region" aria-label="ตารางเปรียบเทียบช่องปรับคอยล์โอเวอร์ เลื่อนแนวนอนเพื่ออ่านบนมือถือ">
-            <table className="w-full min-w-[680px] border-collapse text-left text-sm leading-relaxed">
-              <caption className="bg-slate-50 p-4 text-left font-semibold text-slate-800">นับช่องปรับ ไม่ใช่นับตัวเลขบนกล่อง · มือถือเลื่อนตารางด้านข้างได้</caption>
-              <thead className="bg-slate-900 text-white"><tr><th scope="col" className="p-4">ตัวอย่างสินค้า</th><th scope="col" className="p-4">ประเภท</th><th scope="col" className="p-4">ปรับอะไรได้</th><th scope="col" className="p-4">จุดที่ต้องอ่านให้ถูก</th></tr></thead>
-              <tbody>{comparisons.map(row => <tr key={row.name} className="border-t border-slate-200 even:bg-slate-50"><th scope="row" className="p-4 font-semibold"><Ref to={row.source}>{row.name}</Ref></th><td className="p-4">{row.type}</td><td className="p-4">{row.controls}</td><td className="p-4">{row.lesson}</td></tr>)}</tbody>
+          <div className="rounded-2xl border border-slate-200" role="region" aria-label="ตารางเปรียบเทียบช่องปรับคอยล์โอเวอร์">
+            <table className={styles.table} role="table">
+              <caption>นับช่องปรับ ไม่ใช่นับตัวเลขบนกล่อง · มือถืออ่านเป็นการ์ดได้โดยไม่เลื่อนด้านข้าง</caption>
+              <thead role="rowgroup"><tr role="row"><th scope="col">ตัวอย่างสินค้า</th><th scope="col">ประเภท</th><th scope="col">ปรับอะไรได้</th><th scope="col">จุดที่ต้องอ่านให้ถูก</th></tr></thead>
+              <tbody role="rowgroup">{comparisons.map(row => <tr key={row.name} role="row"><th scope="row" role="rowheader"><Ref to={row.source}>{row.name}</Ref></th><td role="cell" data-label="ประเภท">{row.type}</td><td role="cell" data-label="ปรับอะไรได้">{row.controls}</td><td role="cell" data-label="จุดที่ต้องอ่านให้ถูก">{row.lesson}</td></tr>)}</tbody>
             </table>
           </div>
           <h3 className="text-xl font-bold">แล้ว HKS HIPERMAX อยู่ตรงไหน?</h3>
           <p><Ref to="hks">HKS HIPERMAX S</Ref> เป็นอีกตัวอย่างของชุด Single-tube ที่มีการปรับแรงหน่วงและการตั้งความสูง โดยผู้ผลิตอธิบาย WR Needle เป็นส่วนหนึ่งของระบบปรับ จุดที่ควรอ่านจากตัวอย่างนี้คือชื่อเทคโนโลยีวาล์ว จำนวนระดับ และวิธีปรับความสูงเป็นข้อมูลคนละช่อง อย่านำคำว่า Dual ในชื่อเทคโนโลยีภายใน หรือจำนวน 30 ระดับ ไปสรุปว่าแยก Compression/Rebound ได้สองช่องโดยอัตโนมัติ ต้องยืนยันจากคู่มือรหัสสินค้าที่กำลังซื้อ</p>
+          <Note title="ข้อมูลปี 2026 ที่มีผลกับการซื้อ: ชื่อเดิมอาจไม่ใช่รหัสเดิม">
+            <p><Ref to="hks2026">HKS เผยแพร่ตาราง HIPERMAX S ปี 2026 เทียบรหัสเดิมกับรหัสใหม่</Ref> ขณะที่หน้ารุ่นปัจจุบันอธิบายการปรับ WR Needle และ Advanced Bump Rubber Plus โดยแยกจากรุ่นถึงปี 2025 สิ่งที่ควรถามร้านจึงไม่ใช่แค่ “มี HIPERMAX S ไหม” แต่เป็น <strong>รหัสอะไร รุ่นปรับปรุงไหน และใช้คู่มือฉบับใด</strong> ตารางระบุข้อมูล ณ มกราคม 2026 ไม่ใช่หลักฐานสต็อกหรือวันส่งของในไทย และเราไม่ได้ทดสอบว่ารุ่นใหม่ดีกว่ากับรถคันใด</p>
+          </Note>
+          <p><strong>ตัวอย่างที่สำคัญกับคนใช้ EV:</strong> ตารางเดียวกันระบุ Model 3 รหัสรถ 3L23T พร้อมช่วงปี 19/09–23/08 และเปลี่ยนรหัสชุดจาก 80300-AA004 เป็น 80330-AA004P การเห็นคำว่า “Model 3” จึงไม่พอจะยืนยันกับ Highland หรือ Performance คนละปี ต้องตรวจรายละเอียดความเข้ากันได้ของรถคันจริงตามที่เอกสารระบุ ไม่คัดลอกรหัสนี้ไปสั่งซื้อให้รถอีกเจเนอเรชัน</p>
           <h3 className="text-xl font-bold">มีบริบทในไทย ไม่เท่ากับมีหลักฐานว่า “ขายดีที่สุด”</h3>
           <p>สำหรับผู้อ่านไทย เราเลือกตัวอย่างที่ตรวจข้อมูลผู้ผลิตได้ พร้อมช่องทางเกี่ยวข้องกับตลาดไทย เช่น <Ref to="teinTH">TEIN Sales Thailand</Ref>, <Ref to="bcTH">เครือข่ายผู้จัดจำหน่าย BC Racing</Ref>, <Ref to="bilsteinTH">รายชื่อผู้จัดจำหน่าย BILSTEIN</Ref>, <Ref to="hksTH">เครือข่าย HKS</Ref> และ <Ref to="ohlinsTH">กลุ่มผลิตภัณฑ์ Automotive ของ Öhlins ภาษาไทย</Ref> ส่วน KW ใช้เป็นตัวอย่างการแยกช่องปรับที่ชัดเจน ไม่ได้ให้แบรนด์ในภาพเป็นคำตอบเดียวของบทความ</p>
           <p>เราไม่มีข้อมูลยอดขายหรือส่วนแบ่งตลาดที่เปรียบเทียบแบรนด์เหล่านี้ในประเทศไทยด้วยเกณฑ์เดียวกัน จึงไม่เรียงอันดับ “ยอดนิยมที่สุด” ไม่ลงราคาที่ไม่ยืนยัน และไม่ถือว่าการพบช่องทางจำหน่ายเป็นหลักฐานว่าทุกรหัสสินค้ามีสต็อกหรือมีบริการซ่อมในประเทศ</p>
@@ -280,6 +300,12 @@ export default function EVDamperTuningGuidePage() {
           </Note>
         </Section>
 
+        <Section id="examples" title="สามสถานการณ์ที่คนแต่งรถเจอ—คุณจะเริ่มตรวจตรงไหน?">
+          <p><strong>แบบฝึกคิดที่ EVSELECT เรียบเรียงขึ้น:</strong> ทุกกรณีด้านล่างเป็นสถานการณ์สมมติเพื่อเชื่อมกลไกกับการตัดสินใจ ไม่ใช่ผลทดลองกับ Tesla, BYD, Geely หรือโช้คยี่ห้อใด ลองตอบก่อนเปิดคำอธิบาย ไม่มีคำตอบเป็นสูตรคลิกข้ามรุ่น</p>
+          <DamperScenarios />
+          <p className="text-sm">หลักการประกอบคำอธิบาย: <Ref to="ohlinsManual">คู่มือ Öhlins เรื่องระยะทำงานและการเริ่มตั้งค่า</Ref>, <Ref to="teinFlex">วงจรปรับร่วมของ TEIN</Ref> และ <Ref to="kwV4">การแยกย่านของ KW</Ref></p>
+        </Section>
+
         <Section id="ev-fitment" title="แต่ง EV ให้จบ ต้องดูมากกว่าคำว่า “รองรับรถหนัก”">
           <p>รถไฟฟ้าไม่ได้หนักเท่ากันทุกคัน และน้ำหนักรวมไม่ใช่ข้อมูลเดียวที่ใช้เลือกช่วงล่าง น้ำหนักลงเพลาหน้า–หลัง ชนิดระบบขับเคลื่อน แบตเตอรี่ อุปกรณ์ประจำรุ่น และโหลดใช้งานมีผลต่อโจทย์ คนขับ Geely EX2 ใช้ในเมืองกับคนขับ Tesla Model 3 Performance ไปสนามไม่ได้มีความต้องการเดียวกัน แม้ทั้งคู่เป็น EV</p>
           <p>ก่อนเลือกแบรนด์ ให้เริ่มจากตัวรถ: <strong>ยี่ห้อ รุ่น ปี รุ่นย่อย ตลาดจำหน่าย และระบบช่วงล่างเดิม</strong> จากนั้นจึงตรวจรหัสสินค้าผู้ผลิต ช่วงน้ำหนักเพลาที่รองรับและเงื่อนไขติดตั้ง ชื่อรุ่นรถที่คล้ายกัน รูปขายออนไลน์ หรือคำว่า “ใส่ได้” จากโพสต์เดียวไม่เพียงพอจะยืนยันกับรถสเปกไทย</p>
@@ -290,7 +316,7 @@ export default function EVDamperTuningGuidePage() {
             <li><strong>ระบบปรับไฟฟ้าเดิม:</strong> หากรถมีแดมเปอร์ควบคุมอิเล็กทรอนิกส์ ต้องตรวจความเข้ากันได้และวิธีจัดการระบบตามเอกสาร ไม่สมมติว่าชุดปรับมือแทนได้โดยไม่มีผลกับโหมดรถหรือไฟแจ้งเตือน</li>
             <li><strong>บริการหลังติดตั้ง:</strong> ใครตั้งศูนย์ ใครตรวจซ้ำ มีอะไหล่และบริการซ่อมตามรุ่นหรือไม่ เงื่อนไขรับประกันไทยเป็นอย่างไร ให้ยืนยันเป็นเอกสาร ไม่ใช้เงื่อนไขตลาดสหรัฐฯ หรือยุโรปแทน</li>
           </ul>
-          <p>ในขั้นนี้ <strong>Data unavailable</strong> สำหรับรายการรหัสสินค้าที่ได้รับการยืนยันกับรถทุกโมเดลในไทย บทความจึงไม่เสนอรายการ “ซื้อได้ทันที” วิธีปิดช่องว่างคือส่งข้อมูลรถและโหลดใช้งานให้ผู้แทน ตรวจแคตตาล็อก/คู่มือรหัสสินค้าล่าสุด และให้ผู้ติดตั้งรับผิดชอบการตรวจระยะจริงก่อนสั่งซื้อ</p>
+          <p><strong>ยังไม่มีรายการรหัสสินค้าที่เรายืนยันครบกับรถทุกโมเดลในไทย</strong> บทความจึงไม่เสนอรายการ “ซื้อได้ทันที” ใช้ <a href="#toolkit" className="text-lime-800 underline underline-offset-4">เช็กลิสต์ส่งให้ร้านด้านล่าง</a> เพื่อขอคู่มือและการยืนยันรหัสสินค้า จากนั้นให้ผู้ติดตั้งตรวจระยะจริงก่อนตกลงสั่งซื้อ</p>
         </Section>
 
         <Section id="baseline" title="เริ่มจูนจากหลักฐาน ไม่ใช่สูตรคลิกในคอมเมนต์">
@@ -305,6 +331,22 @@ export default function EVDamperTuningGuidePage() {
           </ol>
           <p>บันทึกที่มีประโยชน์ควรมี “อาการก่อนปรับ → ช่องที่เปลี่ยน → เงื่อนไขทดลอง → ผลที่สังเกต → กลับค่าเดิมหรือคงไว้” ผู้จูนที่อธิบายลำดับนี้ได้ให้ข้อมูลที่ใช้ต่อได้มากกว่าคำว่าเซ็ตมาแล้วจบโดยไม่มีรายละเอียด และการจูนภายนอกไม่ใช่งานเปิดกระบอกโช้คหรือจัดการก๊าซแรงดันด้วยตัวเอง</p>
           <p>แนวทางเริ่มจากค่าที่แนะนำ บันทึก และเปลี่ยนทีละตัวแปรสอดคล้องกับ <Ref to="ohlinsManual">คำแนะนำการตั้งค่าและความปลอดภัยของ Öhlins</Ref> ซึ่งยังเตือนให้หยุดใช้เมื่อพบการรั่ว เสียง หรือการทำงานผิดปกติ และให้ผู้มีความรู้พร้อมเครื่องมือเป็นผู้จัดการชิ้นส่วนที่มีก๊าซแรงดัน</p>
+        </Section>
+
+        <Section id="toolkit" title="อย่าให้ค่าที่ดีหายไป: เก็บ Baseline และถามร้านให้ครบ">
+          <p>ใช้แบบบันทึกเดียวกันตั้งแต่ก่อนติดตั้งจนถึงตรวจซ้ำ จะช่วยแยกได้ว่าเปลี่ยนโช้ค เปลี่ยนความสูง หรือเปลี่ยนเงื่อนไขรถไปด้วย แบบฟอร์มนี้ไม่คำนวณค่าจูนและไม่แทนคู่มือผู้ผลิต</p>
+          <div className={styles.download}>
+            <a href="/downloads/evselect-damper-setup-log.html">เปิดแบบบันทึกที่กรอกและพิมพ์ได้ <span aria-hidden="true">↗</span><span className="mt-2 block text-sm font-normal">ข้อมูลรถ · สี่มุม · ช่องปรับ · รอบ A–B–A</span></a>
+            <a href="/downloads/evselect-coilover-shop-checklist.txt" download>ดาวน์โหลดเช็กลิสต์ถามร้าน <span aria-hidden="true">↓</span><span className="mt-2 block text-sm font-normal">ข้อความภาษาไทยสำหรับแนบถามผู้ติดตั้ง</span></a>
+          </div>
+          <p className="text-sm">แบบบันทึกไม่ส่งข้อมูลเข้าระบบและไม่บันทึกอัตโนมัติ ใช้เมนูพิมพ์ของเบราว์เซอร์เพื่อบันทึกเป็น PDF ก่อนปิดหน้า ไม่ต้องกรอกชื่อ ที่อยู่ หรือเลขตัวถังเต็ม</p>
+          <h3 className="text-xl font-bold">ประเมิน A–B–A ให้รู้ว่าอะไรเปลี่ยน ไม่ใช่แค่จำว่ารอบหลังดีกว่า</h3>
+          <ol className="list-decimal space-y-3 pl-6 marker:text-lime-800">
+            <li><strong>A — บันทึก Baseline:</strong> ใช้ค่าตามคู่มือที่ตรวจแล้ว บันทึกอาการในเงื่อนไขขับปกติเดิม ไม่สร้างเหตุอันตรายเพื่อทดสอบ</li>
+            <li><strong>B — เปลี่ยนหนึ่งตัวแปร:</strong> ให้ผู้จูนกำหนดช่องและขนาดการเปลี่ยนภายในขอบเขตที่อนุญาต บันทึกสิ่งที่เปลี่ยนจริง ไม่สรุปจากความรู้สึก “สปอร์ตขึ้น” อย่างเดียว</li>
+            <li><strong>A อีกครั้ง — ตรวจความทำซ้ำได้:</strong> หากไม่มีอาการผิดปกติและผู้จูนเห็นว่าเหมาะสม กลับค่าที่บันทึกไว้เพื่อดูว่าอาการกลับไปทางเดิมหรือไม่ ถ้าโหลด ผิวทาง หรือสภาพยางต่างกัน ให้ระบุว่าเทียบกันไม่ได้</li>
+          </ol>
+          <p>นี่เป็นแผนเปรียบเทียบที่เสนอ ไม่ใช่ผลทดสอบที่ทำแล้ว หากมีเสียง รั่ว หรือการควบคุมผิดปกติ ให้หยุดและตรวจรถ ไม่ต้องทำให้ครบรอบ A–B–A และแม้บันทึกดีขึ้นก็ยังไม่ใช่หลักฐานว่าระยะเบรกสั้นลงหรือเกาะถนนมากขึ้น</p>
         </Section>
 
         <Section id="choose" title="ขับทุกวันหรือ Track Day—ควรจ่ายถึงกี่ Way ถึงพอดี?">

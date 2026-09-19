@@ -18,7 +18,7 @@ export const damperArticle = {
   url: 'https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide',
   title: 'โช้คแพงแต่ยังเด้ง? เจาะลึกคอยล์โอเวอร์ 1-Way, 2-Way, 3-Way ก่อนเสียเงินแต่ง',
   cardTitle: 'โช้คแพง แต่ทำไมยังเด้ง?',
-  description: 'คอยล์โอเวอร์ 1-way, 2-way และ 3-way ต่างกันตรงไหน? เข้าใจ Compression, Rebound และวิธีเลือกช่วงล่าง EV ผ่านตัวอย่าง TEIN, BC Racing, HKS, BILSTEIN, Öhlins และ KW',
+  description: 'คอยล์โอเวอร์ 1-Way, 2-Way, 3-Way ต่างกันอย่างไร? ดูภาพช่องปรับ เทียบหลายแบรนด์ พร้อม 3 กรณีจำลองและแบบบันทึกก่อนจูนช่วงล่าง EV ไม่เดาสูตรคลิกข้ามรุ่น',
   cardDescription: '1-Way ถึง 3-Way จ่ายเพิ่มแล้วได้อะไร? อ่านกลไกและตัวอย่างหลายแบรนด์ ก่อนเลือกช่วงล่างให้รถ EV',
   publishedAt: '2026-08-27',
   updatedAt: '2026-09-19',

@@ -28,12 +28,14 @@ try {
     assert.match(await image.getAttribute('src'), /kw-coilover-adjustable/);
     assert.equal(await image.evaluate(img => getComputedStyle(img).objectFit), 'contain');
     assert.ok(await image.evaluate(img => img.naturalWidth > 0 && img.alt.includes('KW')));
-    const data = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(node => JSON.parse(node.textContent)).find(value => value['@type'] === 'TechArticle'));
+    const data = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(node => JSON.parse(node.textContent)).find(value => value['@type'] === 'BlogPosting'));
     assert.equal(data.author.name, 'EVSELECT');
     assert.equal(data.datePublished, '2026-08-27');
     assert.equal(data.dateModified, '2026-09-19');
     assert.equal(data.headline, await page.locator('h1').innerText());
     assert.equal(data.aggregateRating, undefined);
+    const breadcrumbs = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(node => JSON.parse(node.textContent)).find(value => value['@type'] === 'BreadcrumbList'));
+    assert.equal(breadcrumbs.itemListElement.at(-1).item, 'https://evselects.com' + route);
     const og = await page.locator('meta[property="og:image"]').getAttribute('content');
     assert.match(og, /kw-coilover-adjustable-social\.jpg$/);
     assert.equal(await page.locator('meta[name="twitter:image"]').getAttribute('content'), og);
@@ -43,13 +45,26 @@ try {
     if (base.startsWith('https://')) assert.equal((await context.request.get(og)).status(), 200);
     const toc = article.getByRole('navigation', { name: 'สารบัญบทความ' });
     const anchors = await toc.locator('a').evaluateAll(nodes => nodes.map(node => node.getAttribute('href')));
-    assert.equal(anchors.length, 14);
+    assert.equal(anchors.length, 17);
     for (const anchor of anchors) assert.equal(await article.locator(anchor).count(), 1);
     assert.equal(await article.locator('table tbody tr').count(), 9);
     const content = await article.textContent();
     for (const brand of ['TEIN', 'BC Racing', 'HKS', 'BILSTEIN', 'Öhlins', 'KW']) assert.ok(content.includes(brand));
     for (const stale of ['0.65 - 0.70', 'OptimumG Damper Science', 'EVSELECT Suspension Tuning Division']) assert.equal(content.includes(stale), false);
-    assert.ok(content.length > 22000, `Expected full-length article, got ${content.length}`);
+    for (const concept of ['จำนวนช่องแรงหน่วง', 'ไม่ใช่ความเร็วรถ', 'Preload', 'Bump stop', 'HKS', '2026', 'รหัสเดิม', 'สถานการณ์สมมติ', 'A–B–A']) assert.ok(content.includes(concept), `Missing concept: ${concept}`);
+    assert.equal(await article.locator('#explorer input[type="radio"]').count(), 4);
+    for (const mode of ['rebound', 'coupled', 'two', 'three']) {
+      await article.locator(`#explorer input[value="${mode}"]`).check();
+      assert.equal(await article.locator(`#explorer-${mode}`).isVisible(), true);
+    }
+    await article.locator('#explorer input[value="rebound"]').focus();
+    await page.keyboard.press('ArrowRight');
+    assert.equal(await article.locator('#explorer input[value="coupled"]').isChecked(), true);
+    assert.equal(await article.locator('#examples details').count(), 3);
+    for (const example of await article.locator('#examples details').all()) {
+      await example.locator('summary').click();
+      assert.equal(await example.getAttribute('open'), '');
+    }
     assert.equal(await article.locator('#faq details').count(), 7);
     await article.locator('#faq summary').first().click();
     assert.equal(await article.locator('#faq details').first().getAttribute('open'), '');
@@ -65,13 +80,12 @@ try {
     await toc.locator('a[href="#three-way"]').click();
     assert.equal(new URL(page.url()).hash, '#three-way');
     const table = article.getByRole('region', { name: /ตารางเปรียบเทียบช่องปรับ/ });
-    if (width < 768) {
-      assert.ok(await table.evaluate(node => node.scrollWidth > node.clientWidth));
-      await table.evaluate(node => node.scrollLeft = 150);
-      assert.ok(await table.evaluate(node => node.scrollLeft > 0));
-    }
+    assert.ok(await table.evaluate(node => node.scrollWidth <= node.clientWidth + 1));
+    if (width < 640) assert.equal(await table.locator('tbody tr').first().evaluate(node => getComputedStyle(node).display), 'block');
+    await article.locator('#explorer').screenshot({ path: path.join(output, `explorer-${width}.png`) });
+    await article.locator('#toolkit').screenshot({ path: path.join(output, `toolkit-${width}.png`) });
     assert.deepEqual(errors, []);
-    checks.push({ width, articleCharacters: content.length, h1: 1, tocLinks: 14, comparisonRows: 9, faq: 7, imageDecoded: true, overflow: false, zoom200Overflow: false, pageErrors: errors });
+    checks.push({ width, h1: 1, tocLinks: 17, comparisonRows: 9, faq: 7, explorerModes: 4, originalExamples: 3, imageDecoded: true, overflow: false, zoom200Overflow: false, pageErrors: errors });
     await context.close();
   }
 
@@ -100,6 +114,28 @@ try {
   await catalogCard.screenshot({ path: path.join(output, 'catalog-card.png') });
   checks.push({ homepageCard: true, catalogCard: true, originalAvifSha256: true, internalLinks: true });
   await context.close();
+  const plainContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+  const plain = await plainContext.newPage();
+  await plain.goto(base + route, { waitUntil: 'load' });
+  await plain.locator('#explorer input[value="three"]').check();
+  assert.equal(await plain.locator('#explorer-three').isVisible(), true);
+  await plain.locator('#examples summary').first().click();
+  assert.equal(await plain.locator('#examples details').first().getAttribute('open'), '');
+  const log = await plainContext.request.get(base + '/downloads/evselect-damper-setup-log.html');
+  assert.equal(log.status(), 200);
+  assert.match(log.headers()['content-type'], /text\/html/);
+  const checklist = await plainContext.request.get(base + '/downloads/evselect-coilover-shop-checklist.txt');
+  assert.equal(checklist.status(), 200);
+  assert.ok((await checklist.text()).includes('ต้องยืนยัน'));
+  await plain.goto(base + '/downloads/evselect-damper-setup-log.html');
+  assert.equal(await plain.locator('script, form').count(), 0);
+  await plain.locator('input').first().fill('รถตัวอย่างสำหรับตรวจฟอร์ม');
+  assert.equal(await plain.locator('input').first().inputValue(), 'รถตัวอย่างสำหรับตรวจฟอร์ม');
+  assert.equal(await plain.locator('meta[name="robots"]').getAttribute('content'), 'noindex, follow');
+  assert.equal(await plain.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+  await plain.pdf({ path: path.join(output, 'setup-log-print.pdf'), preferCSSPageSize: true, printBackground: true });
+  checks.push({ noJavaScriptExplorer: true, noJavaScriptExamples: true, downloads: true, formEditable: true, formHasNoSubmissionOrScripts: true, printPdfCreated: true });
+  await plainContext.close();
   const result = { base, verifiedAt: new Date().toISOString(), checks };
   await writeFile(path.join(output, 'results.json'), JSON.stringify(result, null, 2));
   console.log(JSON.stringify(result, null, 2));

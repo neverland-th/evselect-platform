@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta name="referrer" content="no-referrer">
+  <title>แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECT</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f1f5f9;color:#172033;font:16px/1.75 Tahoma,Arial,sans-serif}main{max-width:960px;margin:auto;padding:24px;background:white}h1{font-size:28px;line-height:1.5}h2{font-size:21px;border-left:4px solid #84cc16;padding-left:12px}h3{font-size:17px;margin:8px 0}p{margin:12px 0}a{color:#365314;text-underline-offset:4px}.hint{font-size:14px;color:#475569}.notice{padding:14px;background:#f7fee7;border:1px solid #d9e5ca;border-radius:10px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{display:block;font-size:14px}input,textarea{display:block;width:100%;font:inherit;padding:9px;border:1px solid #94a3b8;border-radius:6px;color:#172033;background:white}input:focus-visible,textarea:focus-visible{outline:3px solid #4d7c0f;outline-offset:2px}textarea{min-height:78px;resize:vertical}fieldset{min-width:0;border:1px solid #cbd5e1;border-radius:10px;margin:16px 0;padding:14px}legend{font-weight:700;padding:0 6px}.corner{border-top:1px solid #e2e8f0;padding-top:12px;margin-top:12px}.corner .grid{grid-template-columns:repeat(4,minmax(0,1fr))}.pass{padding:12px 0;border-top:1px solid #cbd5e1}.pass .grid{grid-template-columns:1fr 1fr}footer{font-size:13px;border-top:1px solid #cbd5e1;padding-top:12px;margin-top:20px}@media(max-width:600px){main{padding:16px}h1{font-size:24px}.grid,.pass .grid{grid-template-columns:1fr}.corner .grid{grid-template-columns:1fr 1fr}}@page{size:A4;margin:12mm}@media print{body{background:white;font-size:11px;line-height:1.45}main{padding:0;max-width:none}.screen{display:none}h1{font-size:21px;margin:0 0 8px}h2{font-size:16px;margin:12px 0}h3{font-size:13px}label,.hint{font-size:10px}input,textarea{font-size:11px;padding:5px;border-color:#64748b}textarea{min-height:45px}fieldset{padding:8px;margin:10px 0;break-inside:avoid}.grid{gap:8px}.corner{padding-top:6px;margin-top:6px}.sheet2{break-before:page}.notice{padding:8px}footer{font-size:9px}a{color:#172033}}
+</style>
+</head>
+<body><main>
+  <p class="screen"><a href="/articles/ev-damper-tuning-bump-rebound-guide#toolkit">← กลับคู่มือคอยล์โอเวอร์ EVSELECT</a></p>
+  <h1>แบบบันทึกช่วงล่างและ Damper Baseline</h1>
+  <p class="notice">ใช้เก็บข้อมูล ไม่ใช่สูตรตั้งค่า • ค่าตั้งต้นและวิธีนับคลิกต้องตรงคู่มือรหัสสินค้า • หากมีรั่ว เสียงผิดปกติ ยางเสียดสี หรือการควบคุมแย่ลง ให้หยุดทดลองและตรวจรถก่อน</p>
+  <p class="hint screen">กรอกแล้วใช้เมนูพิมพ์ของเบราว์เซอร์เพื่อเก็บเป็น PDF ก่อนปิดหน้า ข้อมูลไม่ส่งไปที่ EVSELECT และไม่บันทึกอัตโนมัติ ไม่ต้องใส่ชื่อ เบอร์โทร ที่อยู่ หรือเลขตัวถังเต็ม จำกัดข้อความให้พอดีช่องเพื่อให้พิมพ์ออกครบ</p>
+  <section>
+    <h2>1. รถและเงื่อนไขที่ต้องเทียบกันได้</h2>
+    <div class="grid">
+      <label>ยี่ห้อ / รุ่น / ปี / รุ่นย่อย / ตลาดจำหน่าย<input maxlength="110" autocomplete="off"></label>
+      <label>วันที่ / หมายเลขบันทึก (ไม่ใช้ข้อมูลส่วนตัว)<input maxlength="80" autocomplete="off"></label>
+      <label>ยี่ห้อ / ซีรีส์ / รหัสชุด / รุ่นปรับปรุง<input maxlength="110" autocomplete="off"></label>
+      <label>คู่มือฉบับ / หน้า / แหล่งที่มาค่าตั้งต้น<input maxlength="110" autocomplete="off"></label>
+      <label>ล้อ / ยาง / ขนาด / สภาพ / ลมยางเย็นและหน่วย<input maxlength="140" autocomplete="off"></label>
+      <label>ผู้โดยสาร / สัมภาระ / โหลดอื่น / สภาพแวดล้อม<input maxlength="140" autocomplete="off"></label>
+      <label>สปริงหน้า–หลัง / รหัส / อัตราสปริงและหน่วย<input maxlength="110" autocomplete="off"></label>
+      <label>ความสูงและจุดวัด / วันที่ตั้งศูนย์ / ผู้ตรวจงาน<input maxlength="130" autocomplete="off"></label>
+    </div>
+    <fieldset><legend>2. ค่าตั้งต้นที่กลับไปได้ — จดทุกมุม</legend>
+      <p class="hint">ร่วม = ปุ่มที่คุมยุบ–ยืดร่วมกัน • C/LSC = Compression หรือ Low-speed Compression ตามคู่มือ • HSC = High-speed Compression • R = Rebound ใส่ “ไม่มี” ในช่องที่ชุดนั้นปรับไม่ได้ อย่าใส่ 0 แทนคำว่าไม่มี</p>
+      <label>วิธีนับจากด้านใด / จุดศูนย์ / ช่วงปรับที่อนุญาต / ข้อจำกัดเฉพาะชุด<input maxlength="170" autocomplete="off"></label>
+      <div class="corner"><h3>หน้าซ้าย (FL)</h3><div class="grid"><label>ร่วม<input maxlength="35" autocomplete="off"></label><label>C/LSC<input maxlength="35" autocomplete="off"></label><label>HSC<input maxlength="35" autocomplete="off"></label><label>R<input maxlength="35" autocomplete="off"></label></div></div>
+      <div class="corner"><h3>หน้าขวา (FR)</h3><div class="grid"><label>ร่วม<input maxlength="35" autocomplete="off"></label><label>C/LSC<input maxlength="35" autocomplete="off"></label><label>HSC<input maxlength="35" autocomplete="off"></label><label>R<input maxlength="35" autocomplete="off"></label></div></div>
+      <div class="corner"><h3>หลังซ้าย (RL)</h3><div class="grid"><label>ร่วม<input maxlength="35" autocomplete="off"></label><label>C/LSC<input maxlength="35" autocomplete="off"></label><label>HSC<input maxlength="35" autocomplete="off"></label><label>R<input maxlength="35" autocomplete="off"></label></div></div>
+      <div class="corner"><h3>หลังขวา (RR)</h3><div class="grid"><label>ร่วม<input maxlength="35" autocomplete="off"></label><label>C/LSC<input maxlength="35" autocomplete="off"></label><label>HSC<input maxlength="35" autocomplete="off"></label><label>R<input maxlength="35" autocomplete="off"></label></div></div>
+    </fieldset>
+  </section>
+  <section class="sheet2">
+    <h2>3. แผน A–B–A: เปลี่ยนทีละตัวแปรและบันทึกข้อจำกัด</h2>
+    <p class="hint">เป็นแผนที่เสนอ ไม่ใช่ผลทดลองของ EVSELECT ใช้การขับปกติที่ปลอดภัย ไม่ทดสอบขีดจำกัดบนถนน ไม่จำเป็นต้องทำครบรอบเมื่อมีความผิดปกติ และไม่ใช้ความรู้สึกแทนผลวัดระยะเบรกหรือแรงยึดเกาะ</p>
+    <label>อาการเดียวที่ประเมิน / เหตุการณ์ / เงื่อนไขคงที่ / เกณฑ์หยุด<textarea maxlength="240"></textarea></label>
+    <div class="pass"><h3>A — ค่าตั้งต้นที่ตรวจแล้ว</h3><div class="grid"><label>เงื่อนไข / ค่าที่ใช้ / อ้างอิงบันทึกสี่มุม<textarea maxlength="230"></textarea></label><label>สังเกตอะไร / มีข้อผิดปกติหรือไม่<textarea maxlength="230"></textarea></label></div></div>
+    <div class="pass"><h3>B — เปลี่ยนหนึ่งตัวแปรตามคู่มือและผู้จูน</h3><div class="grid"><label>เปลี่ยนอะไร / มุมใด / ค่าเดิม → ค่าใหม่ / เหตุผล<textarea maxlength="230"></textarea></label><label>สิ่งที่สังเกต / เงื่อนไขที่เปลี่ยนโดยไม่ได้ตั้งใจ<textarea maxlength="230"></textarea></label></div></div>
+    <div class="pass"><h3>A อีกครั้ง — กลับค่าเดิมเมื่อเหมาะสมและปลอดภัย</h3><div class="grid"><label>กลับค่าใด / เงื่อนไขเหมือนเดิมหรือไม่<textarea maxlength="230"></textarea></label><label>ผลกลับไปทางเดิมไหม / สรุปได้หรือยัง<textarea maxlength="230"></textarea></label></div></div>
+    <label>ข้อสรุป / คงค่าใดหรือหยุด / สิ่งที่ต้องให้ร้านตรวจ / วันตรวจซ้ำ<textarea maxlength="300"></textarea></label>
+    <p class="notice">บันทึกว่า “ยังสรุปไม่ได้” ได้เสมอ หากเปลี่ยนหลายอย่าง โหลดต่างกัน หรือผลไม่สม่ำเสมอ อย่าชดเชยปัญหาทางกลด้วยการเพิ่มแรงหน่วงไปเรื่อย ๆ</p>
+  </section>
+  <footer>EVSELECT • ฉบับ 19 กันยายน 2569 • อ่านคำอธิบาย: evselects.com/articles/ev-damper-tuning-bump-rebound-guide • ใช้คู่มือติดตั้งของชุดจริงเป็นหลัก</footer>
+</main></body></html>
