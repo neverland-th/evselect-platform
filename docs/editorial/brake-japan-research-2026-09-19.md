@@ -65,7 +65,7 @@ ENDLESS Japan มีคำเตือนเฉพาะ SSY/SSS/SSM PLUS กั
 
 | ภาพ | ผลตรวจภาพ | URL ต้นฉบับ | Local scratch |
 | --- | --- | --- | --- |
-| **SSM PLUS ผ้าและกล่อง** | 1000×666 PNG, 71,006 bytes; เห็นผ้าสีน้ำเงินและกล่อง Super Street M-sports PLUS ชัดเจน เหมาะประกอบบล็อกผ้าถนน | `https://www.endless-sport.co.jp/products/brake_pad/img/products_photo/SSMPLUS_main.png` | `C:/Users/rolf-/.gemini/antigravity/scratch/brake-japan-research-2026-09-19/endless-ssm-plus-official.png` |
+| **SSM PLUS ผ้าและกล่อง** | 1000×666 JPEG (ตรวจ signature จริง แม้ URL ลงท้าย PNG), 71,006 bytes; เห็นผ้าสีน้ำเงินและกล่อง Super Street M-sports PLUS ชัดเจน เหมาะประกอบบล็อกผ้าถนน | `https://www.endless-sport.co.jp/products/brake_pad/img/products_photo/SSMPLUS_main.png` | `C:/Users/rolf-/.gemini/antigravity/scratch/brake-japan-research-2026-09-19/endless-ssm-plus-official.png` |
 | **6POT คาลิปเปอร์สีน้ำเงิน** | 600×400 JPG, 52,656 bytes; ภาพคาลิปเปอร์โดดเดี่ยว ENDLESS blue anodized เห็นรายละเอียดตัวเรือน เหมาะเป็นภาพคู่กับ SSM PLUS | `https://www.endless-sport.co.jp/products/brake_caliper/img/products_photo/6POT_main.jpg` | `C:/Users/rolf-/.gemini/antigravity/scratch/brake-japan-research-2026-09-19/endless-6pot-official.jpg` |
 | **ตัวอย่าง inch-up kit** | 400×267 JPG, 84,828 bytes; สองจาน slotted แบบ two-piece, คาลิปเปอร์สีน้ำเงิน สาย bracket และผ้า; ภาพเล็ก เหมาะการ์ดเล็ก ไม่ขยายเต็ม hero | `https://www.endless-sport.co.jp/products/brake_caliper/img/kit/inchup_kit.jpg` | `C:/Users/rolf-/.gemini/antigravity/scratch/brake-japan-research-2026-09-19/endless-inchup-kit-official.jpg` |
 
