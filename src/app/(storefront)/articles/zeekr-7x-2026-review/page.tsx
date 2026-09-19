@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     tags: ['Zeekr 7X', 'Zeekr Thailand', 'Premium EV SUV', '800V Platform', 'Review'],
     images: [
       {
-      url: '/images/editorial/zeekr-7x-cover.png',
-        width: 1376,
-        height: 768,
+      url: '/images/editorial/zeekr-7x-photo.jpg',
+        width: 1920,
+        height: 1440,
         alt: 'Zeekr 7X 2026 รีวิว สเปกไทย'
       }
     ]
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'รีวิว Zeekr 7X 2026 สเปกไทย | EVSELECT',
     description: 'เจาะลึกพรีเมียมเอสยูวีไฟฟ้า 800V 646 แรงม้า ชิป Snapdragon 8295 และช่วงล่างถุงลม',
-    images: ['/images/editorial/zeekr-7x-cover.png']
+    images: ['/images/editorial/zeekr-7x-photo.jpg']
   }
 };
 
@@ -100,7 +100,7 @@ const jsonLd = {
     },
     'model': '7X (2026)',
     'vehicleConfiguration': 'Standard RWD / Long Range RWD / Performance AWD',
-      'image': 'https://evselects.com/images/editorial/zeekr-7x-cover.png'
+      'image': 'https://evselects.com/images/editorial/zeekr-7x-photo.jpg'
   },
   'reviewRating': {
     '@type': 'Rating',
@@ -176,7 +176,7 @@ export default function Zeekr7XReviewPage() {
       <div className="relative w-full rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-950 shadow-xl group">
         <div className="relative aspect-[16/9] md:aspect-[21/9]">
           <Image
-            src="/images/editorial/zeekr-7x-cover.png"
+            src="/images/editorial/zeekr-7x-photo.jpg"
             alt="ภาพปกบทความรีวิว Zeekr 7X 2026"
             fill
             priority
@@ -187,13 +187,21 @@ export default function Zeekr7XReviewPage() {
         </div>
         <div className="relative flex flex-wrap items-center justify-between gap-2 bg-slate-950 p-3 text-xs text-white md:absolute md:bottom-4 md:left-4 md:right-4 md:bg-transparent md:p-0">
           <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
-            รุ่นที่ทดสอบ: Zeekr 7X Performance AWD (100 kWh NMC)
+            รุ่นที่วิเคราะห์: Zeekr 7X Performance AWD (100 kWh NMC)
           </span>
           <span className="bg-lime-600 text-white font-semibold px-3 py-1 rounded-lg shadow-sm">
             แพลตฟอร์ม SEA สถาปัตยกรรม 800V SiC
           </span>
         </div>
       </div>
+
+      <p className="-mt-9 mb-12 text-xs text-slate-500">
+        ภาพประกอบ Zeekr 7X จาก{' '}
+        <a href="https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
+          JustAnotherCarDesigner / Wikimedia Commons
+        </a>{' '}
+        (CC0 1.0) ภาพประกอบจากต่างประเทศ ไม่ใช่ภาพการทดสอบของ EVSELECT
+      </p>
 
       {/* 4. Executive Verdict & Quick Facts Grid */}
       <div className="bg-slate-50 text-slate-900 border border-slate-200 p-6 md:p-8 rounded-3xl shadow-sm mb-12">
@@ -1159,7 +1167,7 @@ export default function Zeekr7XReviewPage() {
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-200">
               <Image
-                src="/images/editorial/tesla-model-y-l-cover.png"
+                src="/images/editorial/tesla-model-y-l-photo.jpg"
                 alt="ภาพปกรีวิว Tesla Model Y L รุ่น 6 ที่นั่ง"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"

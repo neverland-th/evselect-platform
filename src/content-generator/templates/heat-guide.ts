@@ -135,7 +135,7 @@ ${hashtags.join(' ')}`;
 
   const suggestedImages = [
     '/images/sunroof-shade.jpg',
-    vehicle ? vehicle.imageUrls.hero : '/images/tips/ev-tropical-battery-care.jpg',
+    ...(vehicle ? [vehicle.imageUrls.hero] : []),
   ];
 
   return {

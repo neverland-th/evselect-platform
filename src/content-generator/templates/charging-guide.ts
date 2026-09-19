@@ -145,10 +145,8 @@ ${hashtags.join(' ')}`;
     .replace(/\*\*/g, '')
     .replace(/---/g, '----------------------------------------');
 
-  const suggestedImages = [
-    '/images/charging/home-tou-meter-guide.jpg',
-    '/images/charging/thailand-charging-network.jpg',
-  ];
+  // No verified charging photographs are bundled yet; avoid publishing broken URLs.
+  const suggestedImages: string[] = [];
 
   return {
     id: `charging-guide-${Date.now()}`,

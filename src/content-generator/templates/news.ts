@@ -121,10 +121,7 @@ ${hashtags.join(' ')}`;
     .replace(/\*\*/g, '')
     .replace(/---/g, '----------------------------------------');
 
-  const suggestedImages = [
-    featuredVehicle ? featuredVehicle.imageUrls.hero : '/images/news/ev-thailand-news-hero.jpg',
-    '/images/charging/thailand-charging-network.jpg',
-  ];
+  const suggestedImages = featuredVehicle ? [featuredVehicle.imageUrls.hero] : [];
 
   return {
     id: `news-weekly-${Date.now()}`,

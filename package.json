@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "npm run verify:images && prisma generate && next build",
     "postinstall": "prisma generate",
     "start": "next start",
     "lint": "eslint",
+    "verify:images": "node scripts/verify-public-images.mjs",
+    "verify:images:live": "node scripts/verify-article-images-live.mjs",
     "generate-posts": "tsx scripts/generate-posts.ts",
     "test:shopee": "node scripts/shopee_ev_select/test.js",
     "verify:shopee": "node scripts/shopee_ev_select/verify.test.js"
