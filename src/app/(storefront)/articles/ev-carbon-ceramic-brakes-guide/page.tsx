@@ -5,24 +5,18 @@ import {
   ArrowLeft,
   CalendarDays,
   Clock,
-  ShieldCheck,
-  Zap,
-  Gauge,
-  Info,
   CheckCircle2,
   XCircle,
   ThermometerSun,
   AlertTriangle,
-  Flame,
-  ChevronRight,
   Disc,
   ThumbsUp,
   ThumbsDown,
   Microscope,
-  Cpu,
   Scale
 } from 'lucide-react';
 import StorytellingWidget from '@/components/StorytellingWidget';
+import { ImageCredit } from '@/components/ImageCredit';
 
 export const metadata: Metadata = {
   title: 'เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB) นวัตกรรมหยุดโลกที่ EV ตัวแรงต้องมี | EVSELECT',
@@ -44,13 +38,18 @@ export const metadata: Metadata = {
     siteName: 'EVSELECT Thailand',
     locale: 'th_TH',
     type: 'article',
-    images: [{ url: '/images/articles/carbon_ceramic_brake_hero.jpg' }]
+    images: [{
+      url: '/images/articles/amg-carbon-ceramic-brake-gold.jpg',
+      width: 1920,
+      height: 1278,
+      alt: 'ภาพถ่ายเบรก AMG Carbon Ceramic คาลิเปอร์สีทองและจานคาร์บอนเซรามิก'
+    }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB) | EVSELECT',
     description: 'นวัตกรรมหยุดโลกที่ EV ตัวแรงต้องมี พร้อมวิเคราะห์ความคุ้มค่าบนถนนเมืองไทย',
-    images: ['/images/articles/carbon_ceramic_brake_hero.jpg']
+    images: ['/images/articles/amg-carbon-ceramic-brake-gold.jpg']
   }
 };
 
@@ -82,33 +81,38 @@ export default function CarbonCeramicBrakesGuidePage() {
         </div>
 
         <h1 className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight">
-          เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB): นวัตกรรม "หยุดโลก" หลักแสนที่ EV สายสนามต้องมี
+          เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB): นวัตกรรม &quot;หยุดโลก&quot; หลักแสนที่ EV สายสนามต้องมี
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
-          เมื่อฟิสิกส์มวล 2 ตันปะทะกับอัตราเร่ง 0-100 ใน 3 วินาที นี่คือความท้าทายสูงสุดของระบบห้ามล้อ EVSELECT จะพาคุณดิ่งลึกลงไปในระดับ "วัสดุศาสตร์" ว่าทำไม Carbon Ceramic Brakes ถึงเป็นจิ๊กซอว์ชิ้นสุดท้ายที่ปลดล็อกขีดจำกัดของรถ EV สมรรถนะสูง
+          เมื่อฟิสิกส์มวล 2 ตันปะทะกับอัตราเร่ง 0-100 ใน 3 วินาที นี่คือความท้าทายสูงสุดของระบบห้ามล้อ EVSELECT จะพาคุณดิ่งลึกลงไปในระดับ &quot;วัสดุศาสตร์&quot; ว่าทำไม Carbon Ceramic Brakes ถึงเป็นจิ๊กซอว์ชิ้นสุดท้ายที่ปลดล็อกขีดจำกัดของรถ EV สมรรถนะสูง
         </p>
       </header>
 
-      <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
-        <img
-          src="/images/articles/carbon_ceramic_brake_hero.jpg"
-          alt="ระบบเบรก Carbon Ceramic (CCB) แบบเจาะลึก"
-          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
+      <figure className="overflow-hidden rounded-3xl mb-3 border border-slate-200 bg-white shadow-sm">
+        <Image
+          src="/images/articles/amg-carbon-ceramic-brake-gold.jpg"
+          alt="ภาพถ่ายเบรก AMG Carbon Ceramic คาลิเปอร์สีทองและจานคาร์บอนเซรามิกในงาน Geneva Motor Show"
+          width={1920}
+          height={1278}
+          sizes="(min-width: 896px) 848px, (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
+          loading="eager"
+          className="w-full h-auto"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-        <div className="absolute bottom-6 left-6 right-6">
-          <span className="bg-lime-500 text-black px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md mb-3 inline-block">
-            Niche Tech Review
-          </span>
-          <h2 className="text-2xl font-bold text-white mb-2 leading-snug">
-            C/SiC: Carbon fiber-reinforced Silicon Carbide
-          </h2>
-          <p className="text-slate-300 text-sm max-w-2xl">
-            โครงสร้างผลึกที่ทนความร้อนได้ทะลุ 1,000°C โดยปราศจากการเสียรูป นี่คือเทคโนโลยีที่ถ่ายทอดจากกระสวยอวกาศสู่ล้อรถคุณ
+        <figcaption className="border-t border-slate-200 px-5 py-4 sm:px-6 sm:py-5">
+          <p className="font-bold text-slate-900">AMG Carbon Ceramic</p>
+          <p className="mt-1 text-sm leading-relaxed text-slate-600">
+            คาลิเปอร์สีทองและรายละเอียดผิวจานคาร์บอนเซรามิก · ภาพถ่ายจากงาน Geneva Motor Show ปี 2011
           </p>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
+      <ImageCredit
+        author="Cheeni"
+        source="https://commons.wikimedia.org/wiki/File:Amg_carbon_ceramic_brake_geneva_auto_show_2011.JPG"
+        license="CC BY-SA 3.0"
+        licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/"
+        className="mb-12"
+      />
 
       <div className="bg-slate-900 text-white border border-slate-800 p-8 rounded-3xl shadow-lg mb-12">
         <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-lime-400">
@@ -137,7 +141,7 @@ export default function CarbonCeramicBrakesGuidePage() {
               <AlertTriangle className="w-5 h-5" /> Operating Temperature
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
-              CCB ต้องการ "อุณหภูมิทำงาน" เพื่อให้ประสิทธิภาพการจับตัวสูงสุด การใช้งานในชีวิตประจำวันที่อุณหภูมิแวดล้อมต่ำ อาจต้องใช้ระยะเวลาในการวอร์มเบรก
+              CCB ต้องการ &quot;อุณหภูมิทำงาน&quot; เพื่อให้ประสิทธิภาพการจับตัวสูงสุด การใช้งานในชีวิตประจำวันที่อุณหภูมิแวดล้อมต่ำ อาจต้องใช้ระยะเวลาในการวอร์มเบรก
             </p>
           </div>
         </div>
@@ -153,12 +157,12 @@ export default function CarbonCeramicBrakesGuidePage() {
           รถ EV อย่าง BYD Seal AWD หรือ Tesla Model 3 Performance แบกน้ำหนักตัวรถ (m) มากกว่ารถสันดาปในคลาสเดียวกันราวๆ 20-30% (จากแบตเตอรี่) ในขณะที่มันทำความเร็ว (v) ได้เร็วกว่าหลายเท่าตัวจาก Instant Torque และเมื่อความเร็ว (v) เพิ่มขึ้น พลังงานที่ระบบเบรกต้องแบกรับจะทวีคูณขึ้นอย่างมหาศาล ไม่ใช่แค่เพิ่มขึ้นทีละนิด
         </p>
         <p>
-          เมื่อคุณเบรกฉุกเฉินจากความเร็ว 160 กม./ชม. บน Track Day พลังงานทั้งหมดนี้ต้องถูกสลายกลายเป็น <strong>"ความร้อน"</strong> ระบบ Regenerative Braking ผ่านมอเตอร์ไฟฟ้านั้นไม่เพียงพอสำหรับแรง G ระดับ Track-Level ภาระทั้งหมดจึงถูกโยนไปที่ระบบ Mechanical Brake อย่างหลีกเลี่ยงไม่ได้ หากคุณใช้จานเบรกเหล็กหล่อธรรมดา (Cast Iron) อุณหภูมิที่พุ่งปรี๊ดจะทำให้เรซินในผ้าเบรกเดือด เกิดก๊าซคั่นกลางระหว่างผ้าและจาน เกิดเป็นอาการที่เรียกว่า <strong>Brake Fade</strong> หรือ "เบรกหาย" ในที่สุด
+          เมื่อคุณเบรกฉุกเฉินจากความเร็ว 160 กม./ชม. บน Track Day พลังงานทั้งหมดนี้ต้องถูกสลายกลายเป็น <strong>&quot;ความร้อน&quot;</strong> ระบบ Regenerative Braking ผ่านมอเตอร์ไฟฟ้านั้นไม่เพียงพอสำหรับแรง G ระดับ Track-Level ภาระทั้งหมดจึงถูกโยนไปที่ระบบ Mechanical Brake อย่างหลีกเลี่ยงไม่ได้ หากคุณใช้จานเบรกเหล็กหล่อธรรมดา (Cast Iron) อุณหภูมิที่พุ่งปรี๊ดจะทำให้เรซินในผ้าเบรกเดือด เกิดก๊าซคั่นกลางระหว่างผ้าและจาน เกิดเป็นอาการที่เรียกว่า <strong>Brake Fade</strong> หรือ &quot;เบรกหาย&quot; ในที่สุด
         </p>
 
         <h2>วัสดุศาสตร์: กว่าจะมาเป็น Carbon Ceramic (C/SiC)</h2>
         <p>
-          เรามักเรียกติดปากว่าเบรก "คาร์บอนเซรามิก" แต่วิทยาศาสตร์เบื้องหลังคือ <strong>Carbon fiber-reinforced Silicon Carbide (C/SiC)</strong> ซึ่งไม่ใช่เซรามิกแบบถ้วยชามเซรามิคทั่วไป
+          เรามักเรียกติดปากว่าเบรก &quot;คาร์บอนเซรามิก&quot; แต่วิทยาศาสตร์เบื้องหลังคือ <strong>Carbon fiber-reinforced Silicon Carbide (C/SiC)</strong> ซึ่งไม่ใช่เซรามิกแบบถ้วยชามเซรามิคทั่วไป
         </p>
         
         <div className="bg-slate-50 border-l-4 border-slate-300 p-6 rounded-r-2xl my-8">
@@ -184,7 +188,7 @@ export default function CarbonCeramicBrakesGuidePage() {
 
         <h3>2. Unsprung Mass Reduction (วิศวกรรมช่วงล่าง)</h3>
         <p>
-          น้ำหนักที่เบาลงประมาณ 50% เมื่อเทียบกับจานเบรกเหล็กหล่อขนาดเท่ากัน ไม่ได้ช่วยแค่ให้รถเบาลงรวมๆ 15-20 กิโลกรัม แต่นี่คือ <strong>"Unsprung Mass" (น้ำหนักใต้สปริง)</strong> และ <strong>"Rotational Mass" (น้ำหนักมวลหมุน)</strong>
+          น้ำหนักที่เบาลงประมาณ 50% เมื่อเทียบกับจานเบรกเหล็กหล่อขนาดเท่ากัน ไม่ได้ช่วยแค่ให้รถเบาลงรวมๆ 15-20 กิโลกรัม แต่นี่คือ <strong>&quot;Unsprung Mass&quot; (น้ำหนักใต้สปริง)</strong> และ <strong>&quot;Rotational Mass&quot; (น้ำหนักมวลหมุน)</strong>
         </p>
         <p>
           ในทางวิศวกรรมยานยนต์ การลดน้ำหนักใต้สปริง 1 กิโลกรัม ส่งผลต่อแฮนด์ลิ่งเท่ากับการลดน้ำหนักบนตัวถังรถ (Sprung Mass) ถึง 3-4 กิโลกรัม ล้อที่เบาลงจะขยับตามผิวถนนที่ขรุขระได้แนบสนิทขึ้น (โช้คอัพทำงานได้ง่ายขึ้น) และมวลหมุนที่น้อยลงช่วยให้รถมีอัตราเร่งตอนต้นที่ก้าวร้าวขึ้นอีกเล็กน้อย
@@ -232,7 +236,7 @@ export default function CarbonCeramicBrakesGuidePage() {
                 <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <strong className="block text-slate-900 mb-1">Cold Bite Performance (ฟีลลิ่งตอนเบรกเย็น)</strong>
-                  <span className="text-sm">นี่คือสิ่งที่ร้านเบรกไม่ได้บอกคุณ CCB หลายรุ่นมีสัมประสิทธิ์แรงเสียดทานต่ำเมื่ออุณหภูมิห้อง ในการขับขี่ช่วงเช้า หรือท่ามกลางสายฝน คุณอาจรู้สึกว่าเบรก "ทื่อ" กว่าเบรกเหล็กหล่อ จนกว่าคุณจะเลียเบรกให้เกิดอุณหภูมิการทำงาน (Operating Window)</span>
+                  <span className="text-sm">นี่คือสิ่งที่ร้านเบรกไม่ได้บอกคุณ CCB หลายรุ่นมีสัมประสิทธิ์แรงเสียดทานต่ำเมื่ออุณหภูมิห้อง ในการขับขี่ช่วงเช้า หรือท่ามกลางสายฝน คุณอาจรู้สึกว่าเบรก &quot;ทื่อ&quot; กว่าเบรกเหล็กหล่อ จนกว่าคุณจะเลียเบรกให้เกิดอุณหภูมิการทำงาน (Operating Window)</span>
                 </div>
               </li>
               <li className="flex gap-3 text-slate-700">
@@ -246,7 +250,7 @@ export default function CarbonCeramicBrakesGuidePage() {
                 <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <strong className="block text-slate-900 mb-1">Fragility (ความเปราะบางต่อแรงกระแทก)</strong>
-                  <span className="text-sm">ถึงมันจะแข็งมาก แต่มัน <strong>"เปราะ"</strong> (Brittle) หากช่างเปลี่ยนล้อแม็กทำล้อหล่นใส่ขอบจานเบรก CCB มันสามารถบิ่นแตกได้ทันที และไม่สามารถซ่อมหรือเจียรจานได้ ต้องเปลี่ยนใบใหม่สถานเดียว (ใบละเฉียดแสนบาท)</span>
+                  <span className="text-sm">ถึงมันจะแข็งมาก แต่มัน <strong>&quot;เปราะ&quot;</strong> (Brittle) หากช่างเปลี่ยนล้อแม็กทำล้อหล่นใส่ขอบจานเบรก CCB มันสามารถบิ่นแตกได้ทันที และไม่สามารถซ่อมหรือเจียรจานได้ ต้องเปลี่ยนใบใหม่สถานเดียว (ใบละเฉียดแสนบาท)</span>
                 </div>
               </li>
             </ul>
@@ -255,10 +259,10 @@ export default function CarbonCeramicBrakesGuidePage() {
 
         <h2>Verdict: การตัดสินใจสำหรับ EV ภาคสนาม</h2>
         <p>
-          สำหรับเจ้าของรถ EV ที่ใช้รถรับส่งลูก ขับรถติดๆ ในเมือง การใส่จาน Carbon Ceramic คือ <strong>"Overkill"</strong> และอาจทำให้คุณรำคาญจากเสียงเบรก หรือหงุดหงิดกับเบรกที่จับไม่ค่อยอยู่ตอนเช้าๆ การอัปเกรดเพียงแค่ผ้าเบรกเซรามิก (Ceramic Pads) และเปลี่ยนน้ำมันเบรก Dot 5.1 ร่วมกับจานเหล็กหล่อแต่งดีๆ ก็เหลือเฟือแล้ว
+          สำหรับเจ้าของรถ EV ที่ใช้รถรับส่งลูก ขับรถติดๆ ในเมือง การใส่จาน Carbon Ceramic คือ <strong>&quot;Overkill&quot;</strong> และอาจทำให้คุณรำคาญจากเสียงเบรก หรือหงุดหงิดกับเบรกที่จับไม่ค่อยอยู่ตอนเช้าๆ การอัปเกรดเพียงแค่ผ้าเบรกเซรามิก (Ceramic Pads) และเปลี่ยนน้ำมันเบรก Dot 5.1 ร่วมกับจานเหล็กหล่อแต่งดีๆ ก็เหลือเฟือแล้ว
         </p>
         <p>
-          <strong>แต่...</strong> หากเป้าหมายของคุณคือการสร้าง "Track Weapon" ด้วยรถอย่าง Tesla Model 3 Performance หรือตั้งใจจะกดสุดไมล์กับ Zeekr 001 FR ระบบเบรก Carbon Ceramic ไม่ใช่ออปชันเสริมความหล่อ แต่มันคือ <strong>"ใบรับประกันชีวิต"</strong> ของคุณ เมื่อคุณต้องการควบคุมมวลน้ำหนัก 2 ตันให้หยุดสนิทจากความเร็วระดับซูเปอร์คาร์ CCB คือคำตอบเดียวที่ไม่ประนีประนอมในโลกแห่งฟิสิกส์ยานยนต์
+          <strong>แต่...</strong> หากเป้าหมายของคุณคือการสร้าง &quot;Track Weapon&quot; ด้วยรถอย่าง Tesla Model 3 Performance หรือตั้งใจจะกดสุดไมล์กับ Zeekr 001 FR ระบบเบรก Carbon Ceramic ไม่ใช่ออปชันเสริมความหล่อ แต่มันคือ <strong>&quot;ใบรับประกันชีวิต&quot;</strong> ของคุณ เมื่อคุณต้องการควบคุมมวลน้ำหนัก 2 ตันให้หยุดสนิทจากความเร็วระดับซูเปอร์คาร์ CCB คือคำตอบเดียวที่ไม่ประนีประนอมในโลกแห่งฟิสิกส์ยานยนต์
         </p>
       </div>
     </article>

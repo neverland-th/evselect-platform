@@ -19,3 +19,13 @@ The six technical articles below previously loaded Wikimedia image URLs directly
 | `ev-chassis-volkswagen-id3.jpg` | [Volkswagen ID.3 electric car chassis DSC 0060 (52146930872).jpg](https://commons.wikimedia.org/wiki/File:Volkswagen_ID.3_electric_car_chassis_DSC_0060_(52146930872).jpg) | Bill Abbott | CC BY-SA 2.0 |
 | `single-wishbone-suspension.jpg` | [Basic Construction of Single Wishbone Suspension System.jpg](https://commons.wikimedia.org/wiki/File:Basic_Construction_of_Single_Wishbone_Suspension_System.jpg) | Atharv Chandel | CC BY-SA 4.0 |
 | `gas-damper-photo.jpg` | [Damper 1.jpg](https://commons.wikimedia.org/wiki/File:Damper_1.jpg) | TEy~commonswiki | CC BY-SA 3.0 |
+
+## Carbon ceramic brake cover
+
+`public/images/articles/amg-carbon-ceramic-brake-gold.jpg` is a real photograph of an AMG carbon ceramic brake assembly with a gold caliper, taken at the Geneva Motor Show on 11 March 2011. It replaces the previous cover in the article, catalog, and social metadata.
+
+- Source: [Amg carbon ceramic brake geneva auto show 2011.JPG](https://commons.wikimedia.org/wiki/File:Amg_carbon_ceramic_brake_geneva_auto_show_2011.JPG)
+- Photographer: Cheeni
+- License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), retained for this image and its resized versions.
+- Local asset: Wikimedia Commons 1920 × 1278 thumbnail, with no retouching or generated elements. The article preserves its aspect ratio; listing cards crop it to their existing frame.
+- The visible caption identifies the display assembly and date. This is illustrative editorial photography, not an EVSELECT test, stock item, or claim of compatibility with an EV.
