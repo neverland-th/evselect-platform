@@ -83,4 +83,8 @@ Originally delivered as a Preview pending approval. The user subsequently said â
 - Local verification: scoped ESLint, `git diff --check`, production build (TypeScript and 41 static pages), and full banner verifier passed at 360/390/768/1440 px; 200% text, no-JS, keyboard/contact links, 24 public routes and 7 protected routes passed. Desktop/mobile screenshots visually reviewed.
 - Local evidence: `scratch/coming-soon-headline-local/`.
 - Pre-release production/rollback reference verified by CLI: `dpl_BfDT6M7ivQ89iuTLXWnEAfZuyjxH`.
-- Production publication and live checks: pending in this commit; record confirmed result after release.
+- Production confirmed: `dpl_93fPe2bDBKQwZLawummS34szm9b7`, source commit `edd0fad`, target production, status READY (CLI and Vercel API); build-to-ready 34.786 seconds, Next.js 16.3.2.
+- Immutable URL: https://evselect-platform-bbwdtj8uu-evselect-com.vercel.app ; evselects.com and www.evselects.com aliases verified. WWW and immutable URL HTTP 200, new headline present and old headline absent.
+- Full verifier passed against https://evselects.com: exact new heading, 360/390/768/1440 px, 200% text without overflow, image decode, keyboard/contact links, no-JS, 24 public routes HTTP 200, 7 protected routes HTTP 404. No observed page errors. Evidence: `scratch/coming-soon-headline-production/results.json` and screenshots; desktop/mobile screenshots visually reviewed.
+- Deployment-scoped error/fatal log scan, 2026-09-19T09:14:51Zâ€“10:14:51Z: no matching entries. Log drains and continuous monitoring configuration were not inspected or changed.
+- The local `thai-natural-writing` skill was narrowly updated with the user's banner preference and article-versus-advertising distinction. Its Python validator could not run because PyYAML is unavailable; frontmatter was parsed with js-yaml and duplicate headings checked successfully. Existing references and permissions were preserved.
