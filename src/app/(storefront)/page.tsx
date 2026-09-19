@@ -12,7 +12,7 @@ import {
   Sparkles,
   Wrench,
 } from "lucide-react";
-import VehicleGuide from "@/components/VehicleGuide";
+import ComingSoonBanner from "@/components/ComingSoonBanner";
 import PrelaunchPanel from "@/components/PrelaunchPanel";
 import { damperArticle } from "@/lib/damper-article";
 
@@ -224,23 +224,7 @@ export default function StorefrontPage() {
         </div>
       </section>
 
-      <section id="vehicle-finder" className="scroll-mt-28 border-y border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-18">
-          <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div className="max-w-2xl">
-              <p className="mb-2 text-xs font-semibold text-lime-800">เลือกคันที่ใช่ในสไตล์คุณ</p>
-              <h2 className="font-bold">รถที่ชอบ เรื่องที่อยากรู้</h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                เลื่อนดูรถที่น่าสนใจ แล้วเปิดรีวิวฉบับเต็มได้ทันที
-              </p>
-            </div>
-            <Link href="/articles" className="inline-flex min-h-11 shrink-0 items-center gap-2 text-sm font-semibold text-lime-800">
-              ดูบทความทั้งหมด <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </div>
-          <VehicleGuide />
-        </div>
-      </section>
+      <ComingSoonBanner />
 
       <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-20">
         <div className="mb-8 max-w-2xl">

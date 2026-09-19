@@ -1167,7 +1167,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed max-w-2xl font-normal">
-              เลือกรุ่นรถเพื่อรวมบทความที่เกี่ยวข้อง หรือส่งคำถามให้ทีม EVSELECT ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
+              อ่านรีวิวรถรุ่นที่สนใจ หรือส่งคำถามให้ทีม EVSELECT ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
             </p>
             <div className="pt-2 flex flex-wrap gap-3 text-xs text-slate-700">
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> รุ่นรถและปีผลิต</span>
@@ -1178,11 +1178,11 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
 
           <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
             <Link
-              href="/#vehicle-finder"
+              href="/articles?category=reviews"
               className="inline-flex items-center justify-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all text-center w-full sm:w-auto lg:w-full"
             >
               <Car className="w-4 h-4" />
-              <span>ค้นหาบทความตามรุ่นรถ</span>
+              <span>ดูรีวิวรถ EV</span>
             </Link>
             <Link
               href="/contact"
