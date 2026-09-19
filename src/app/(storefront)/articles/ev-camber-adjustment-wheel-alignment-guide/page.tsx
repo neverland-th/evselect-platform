@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ImageCredit } from '@/components/ImageCredit';
 import {
   ArrowLeft,
   ArrowRight,
@@ -128,12 +129,14 @@ export default function EVCamberAdjustmentGuidePage() {
 
         <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group relative w-full aspect-[16/9] bg-slate-100">
           <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5a/LADA_Vesta_Sport%2C_Wheel_alignment.jpg"
-            alt="ภาพรถขณะทำการตั้งศูนย์ล้อและมุมแคมเบอร์ด้วยระบบเลเซอร์คอมพิวเตอร์"
+            src="/images/articles/wheel-alignment-lada.jpg"
+            alt="LADA Vesta Sport ขณะตั้งศูนย์ล้อในอู่"
             fill
+            sizes="(max-width: 768px) 100vw, 1152px"
             className="object-cover group-hover:scale-105 transition-transform duration-700"
           />
         </figure>
+        <ImageCredit author="Dmitry Racer" source="https://commons.wikimedia.org/wiki/File:LADA_Vesta_Sport,_Wheel_alignment.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" className="-mt-6 mb-10" />
 
         {/* Executive Summary Box */}
         <div className="bg-slate-50 border-l-4 border-lime-600 p-6 sm:p-7 rounded-r-2xl border-y border-r border-slate-200 shadow-xs">
@@ -180,7 +183,7 @@ export default function EVCamberAdjustmentGuidePage() {
             </h2>
           </div>
           <p className="text-sm text-slate-700 leading-relaxed">
-            ถ้าเปรียบเทียบง่ายๆ <strong>"แคมเบอร์"</strong> ก็เหมือนกับ <strong>"การวางเท้า"</strong> ของเราเวลาเดินหรือวิ่ง:
+            ถ้าเปรียบเทียบง่ายๆ <strong>&quot;แคมเบอร์&quot;</strong> ก็เหมือนกับ <strong>&quot;การวางเท้า&quot;</strong> ของเราเวลาเดินหรือวิ่ง:
           </p>
           <ul className="space-y-3 text-sm text-slate-700 list-disc pl-5">
             <li>

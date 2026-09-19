@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { ImageCredit } from '@/components/ImageCredit';
 import {
   ArrowLeft,
   ArrowRight,
@@ -125,10 +127,12 @@ export default function ShockAbsorberTypesGuidePage() {
         
         {/* Hero Image */}
         <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Damper_1.jpg"
-            alt="Shock Absorber Components"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          <Image
+            src="/images/articles/gas-damper-photo.jpg"
+            alt="ตัวอย่างโช้คอัพรถยนต์ชนิดแก๊ส"
+            fill
+            sizes="(max-width: 768px) 100vw, 1152px"
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
           <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
@@ -137,6 +141,8 @@ export default function ShockAbsorberTypesGuidePage() {
             </span>
           </div>
         </div>
+
+        <ImageCredit author="TEy~commonswiki" source="https://commons.wikimedia.org/wiki/File:Damper_1.jpg" license="CC BY-SA 3.0" licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/" />
 
         {/* Executive Comparison Summary */}
         <div className="bg-slate-50 border-l-4 border-lime-600 p-6 sm:p-7 rounded-r-2xl border-y border-r border-slate-200 shadow-xs">

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ImageCredit } from '@/components/ImageCredit';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import {
@@ -171,9 +172,10 @@ export default function HybridToEVChassisDynamicsPage() {
       {/* 4. Hero Banner Image */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/6/62/Volkswagen_ID.3_electric_car_chassis_DSC_0060_%2852146930872%29.jpg"
-          alt="EV Skateboard Chassis"
+          src="/images/articles/ev-chassis-volkswagen-id3.jpg"
+          alt="แชสซีไฟฟ้า Volkswagen ID.3 ที่จัดวางชุดแบตเตอรี่ใต้พื้นรถ"
           fill
+          sizes="(max-width: 768px) 100vw, 1152px"
           className="object-cover group-hover:scale-105 transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
@@ -186,6 +188,8 @@ export default function HybridToEVChassisDynamicsPage() {
           </span>
         </div>
       </div>
+
+      <ImageCredit author="Bill Abbott" source="https://commons.wikimedia.org/wiki/File:Volkswagen_ID.3_electric_car_chassis_DSC_0060_(52146930872).jpg" license="CC BY-SA 2.0" licenseUrl="https://creativecommons.org/licenses/by-sa/2.0/" />
 
       {/* 5. Key Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">

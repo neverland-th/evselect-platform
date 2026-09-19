@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ImageCredit } from '@/components/ImageCredit';
 import type { Metadata } from 'next';
 import {
   ArrowLeft,
@@ -123,12 +124,14 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
         </p>
         <figure className="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-lg group relative w-full aspect-[16/9] bg-slate-100">
           <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/2/28/Audi_Wheel_with_Michelin_Pilot_Sport_All_Season_4_Tire.jpg"
-            alt="ภาพประกอบล้อและยาง Michelin Pilot Sport สำหรับรถ EV"
+            src="/images/articles/ev-tyre-michelin-audi.jpg"
+            alt="ล้อ Audi และยาง Michelin Pilot Sport All Season 4 ใช้ประกอบการอธิบายเรื่องยาง"
             fill
+            sizes="(max-width: 768px) 100vw, 1152px"
             className="object-cover group-hover:scale-105 transition-transform duration-700"
           />
         </figure>
+        <ImageCredit author="TaurusEmerald" source="https://commons.wikimedia.org/wiki/File:Audi_Wheel_with_Michelin_Pilot_Sport_All_Season_4_Tire.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" className="-mt-6 mb-10" />
   
       </header>
 

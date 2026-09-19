@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ImageCredit } from '@/components/ImageCredit';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import {
@@ -162,9 +163,10 @@ export default function EVHorsepowerVsTorquePage() {
       {/* 4. Hero Banner Image */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/1/10/Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg"
-          alt="มอเตอร์ไฟฟ้า EV ขุมพลังแรงม้าและแรงบิด"
+          src="/images/articles/ev-power-inverter-toyota-bz4x.jpg"
+          alt="ชุดอินเวอร์เตอร์เหนือมอเตอร์ไฟฟ้าของ Toyota bZ4X"
           fill
+          sizes="(max-width: 768px) 100vw, 1152px"
           className="object-cover group-hover:scale-105 transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
@@ -177,6 +179,8 @@ export default function EVHorsepowerVsTorquePage() {
           </span>
         </div>
       </div>
+
+      <ImageCredit author="Mariordo (Mario Roberto Durán Ortiz)" source="https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" />
 
       {/* 5. Key Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">

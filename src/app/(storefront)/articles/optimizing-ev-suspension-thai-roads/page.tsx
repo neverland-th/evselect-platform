@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { ImageCredit } from '@/components/ImageCredit';
 import type { Metadata } from 'next';
 import {
   ArrowLeft,
@@ -122,10 +124,12 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
       
       {/* 2.5 Hero Image */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/67/Basic_Construction_of_Single_Wishbone_Suspension_System.jpg"
-          alt="EV Suspension Geometry"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        <Image
+          src="/images/articles/single-wishbone-suspension.jpg"
+          alt="แผนภาพ MacPherson strut และปีกนกล่างสำหรับอธิบายโครงสร้างช่วงล่าง"
+          fill
+          sizes="(max-width: 768px) 100vw, 1152px"
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
@@ -134,6 +138,8 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
           </span>
         </div>
       </div>
+
+      <ImageCredit author="Atharv Chandel" source="https://commons.wikimedia.org/wiki/File:Basic_Construction_of_Single_Wishbone_Suspension_System.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" />
 
       {/* 3. Executive Verdict & Core Pillars Grid */}
       <div className="bg-slate-900 text-white border border-slate-800 p-6 md:p-8 rounded-3xl shadow-xl mb-14">

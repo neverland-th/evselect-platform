@@ -12,6 +12,7 @@ const retiredTextCovers = new Set([
   '/images/editorial/tesla-model-y-l-cover.svg',
 ]);
 const references = new Map();
+const remoteImages = [];
 
 function walk(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
@@ -24,6 +25,9 @@ function walk(directory) {
         const uses = references.get(match[0]) ?? [];
         uses.push(path.relative(root, file));
         references.set(match[0], uses);
+      }
+      if (/<(?:Image|img)\b[^>]*?\bsrc=["']https?:\/\//s.test(text)) {
+        remoteImages.push(path.relative(root, file));
       }
     }
   }
@@ -46,6 +50,9 @@ function validHeader(file, extension) {
 
 walk(sourceRoot);
 const failures = [];
+for (const file of remoteImages) {
+  failures.push(`${file} (remote image source in markup; host the licensed asset locally)`);
+}
 for (const [url, uses] of references) {
   if (retiredTextCovers.has(url)) {
     failures.push(`${url} (retired text-only cover; ${uses[0]})`);

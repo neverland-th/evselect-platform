@@ -1,10 +1,22 @@
 import { chromium } from 'playwright';
+import { readdirSync } from 'node:fs';
+import path from 'node:path';
 
 const baseUrl = (process.argv[2] ?? 'http://localhost:3000').replace(/\/$/, '');
+const articleDir = path.join(process.cwd(), 'src/app/(storefront)/articles');
+const articleRoutes = readdirSync(articleDir, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => `/articles/${entry.name}`);
 const cases = [
+  { route: '/', expected: [] },
   { route: '/articles', expected: ['zeekr-7x-photo.jpg', 'tesla-model-y-l-photo.jpg'] },
-  { route: '/articles/zeekr-7x-2026-review', expected: ['zeekr-7x-photo.jpg'] },
-  { route: '/articles/tesla-model-y-l-premium-6-seater-review', expected: ['tesla-model-y-l-photo.jpg'] },
+  ...articleRoutes.map((route) => ({
+    route,
+    expected: route.endsWith('zeekr-7x-2026-review') ? ['zeekr-7x-photo.jpg']
+      : route.endsWith('tesla-model-y-l-premium-6-seater-review') ? ['tesla-model-y-l-photo.jpg'] : [],
+  })),
+  ...['/about', '/contact', '/editorial-policy', '/privacy', '/terms', '/warranty']
+    .map((route) => ({ route, expected: [] })),
 ];
 
 const browser = await chromium.launch({ headless: true });
@@ -12,6 +24,7 @@ const failures = [];
 try {
   for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 }]) {
     const page = await browser.newPage({ viewport });
+    let imageCount = 0;
     for (const { route, expected } of cases) {
       const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'domcontentloaded' });
       if (response?.status() !== 200) {
@@ -26,6 +39,7 @@ try {
         width: image.naturalWidth,
         height: image.naturalHeight,
       })));
+      imageCount += images.length;
       const broken = images.filter((image) => !image.width || !image.height);
       for (const image of broken) failures.push(`${viewport.width}px ${route}: broken ${image.url}`);
       for (const file of expected) {
@@ -33,8 +47,8 @@ try {
           failures.push(`${viewport.width}px ${route}: expected photograph ${file} not rendered`);
         }
       }
-      console.log(`${viewport.width}px ${route}: ${images.length} images, ${broken.length} broken`);
     }
+    console.log(`${viewport.width}px: ${cases.length} routes, ${imageCount} image instances checked`);
     await page.close();
   }
 } finally {
