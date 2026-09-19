@@ -43,3 +43,16 @@ Requested latest monthly total-web visits, bounce rate and pages per visit for e
 ## Release boundary
 
 This change is being delivered as a Vercel Preview. Production publication of this new banner has not been requested explicitly after the previous article release; do not infer a new production approval from that earlier release. Request approval once the tested Preview is ready. Do not mark the full homepage goal complete based on Preview alone.
+
+## Verified Preview result
+
+- URL: https://evselect-platform-rnpp2fcq8-evselect-com.vercel.app/#coming-soon
+- Target: preview; status: READY (CLI inspect and Vercel deployment API).
+- Deployment: `dpl_DtvSo3CQrx117GLWfHdaDLPphtL3`.
+- Source commit: `ee3ba4d`, pushed to `codex/vehicle-showcase-2026-09-19`.
+- Framework: Next.js 16.3.2; build-to-ready: 32.956 seconds.
+- Re-ran the full banner verifier against the actual Preview: all four widths, 200% text, image decode, keyboard, contact navigation, no-JS, 24 public routes and 7 protected routes passed; no observed page errors.
+- Evidence: `scratch/coming-soon-preview/results.json` and screenshots in that directory. Desktop and mobile Preview screenshots visually inspected.
+- Direct production HTTP check after Preview creation returned 200, existing carousel present, new banner absent, pre-launch status present. No production deployment performed.
+- Native app preview-open request returned `queued`; this is not evidence that the user has seen it.
+- Approval for production publication remains the next required action; Similarweb data is unavailable but is not a publication blocker.
