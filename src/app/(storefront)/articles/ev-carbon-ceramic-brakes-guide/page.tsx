@@ -16,7 +16,6 @@ import {
   Scale
 } from 'lucide-react';
 import StorytellingWidget from '@/components/StorytellingWidget';
-import { ImageCredit } from '@/components/ImageCredit';
 
 export const metadata: Metadata = {
   title: 'เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB) นวัตกรรมหยุดโลกที่ EV ตัวแรงต้องมี | EVSELECT',
@@ -39,17 +38,17 @@ export const metadata: Metadata = {
     locale: 'th_TH',
     type: 'article',
     images: [{
-      url: '/images/articles/amg-carbon-ceramic-brake-gold.jpg',
-      width: 1920,
-      height: 1278,
-      alt: 'ภาพถ่ายเบรก AMG Carbon Ceramic คาลิเปอร์สีทองและจานคาร์บอนเซรามิก'
+      url: '/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg',
+      width: 1308,
+      height: 818,
+      alt: 'ภาพถ่าย Porsche PCCB คาลิเปอร์เหลืองทองและจาน Carbon Ceramic หลังล้อ Center Lock'
     }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'เจาะลึกวิศวกรรมเบรก Carbon Ceramic (CCB) | EVSELECT',
     description: 'นวัตกรรมหยุดโลกที่ EV ตัวแรงต้องมี พร้อมวิเคราะห์ความคุ้มค่าบนถนนเมืองไทย',
-    images: ['/images/articles/amg-carbon-ceramic-brake-gold.jpg']
+    images: ['/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg']
   }
 };
 
@@ -89,30 +88,31 @@ export default function CarbonCeramicBrakesGuidePage() {
         </p>
       </header>
 
-      <figure className="overflow-hidden rounded-3xl mb-3 border border-slate-200 bg-white shadow-sm">
+      <figure className="overflow-hidden rounded-3xl mb-12 border border-slate-200 bg-white shadow-sm">
         <Image
-          src="/images/articles/amg-carbon-ceramic-brake-gold.jpg"
-          alt="ภาพถ่ายเบรก AMG Carbon Ceramic คาลิเปอร์สีทองและจานคาร์บอนเซรามิกในงาน Geneva Motor Show"
-          width={1920}
-          height={1278}
+          src="/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg"
+          alt="ภาพถ่ายระยะใกล้ Porsche สีเทาเข้ม พร้อมเบรก PCCB คาลิเปอร์เหลืองทองและจาน Carbon Ceramic หลังล้อ Center Lock"
+          width={1308}
+          height={818}
           sizes="(min-width: 896px) 848px, (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
           loading="eager"
           className="w-full h-auto"
         />
         <figcaption className="border-t border-slate-200 px-5 py-4 sm:px-6 sm:py-5">
-          <p className="font-bold text-slate-900">AMG Carbon Ceramic</p>
+          <p className="font-bold text-slate-900">Porsche Ceramic Composite Brake (PCCB)</p>
           <p className="mt-1 text-sm leading-relaxed text-slate-600">
-            คาลิเปอร์สีทองและรายละเอียดผิวจานคาร์บอนเซรามิก · ภาพถ่ายจากงาน Geneva Motor Show ปี 2011
+            คาลิเปอร์เหลืองทองและจาน Carbon Ceramic บนรถจริง · ภาพประกอบเทคโนโลยีเบรกจาก Porsche
           </p>
+          <a
+            href="https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block text-sm text-slate-600 underline decoration-slate-300 underline-offset-4 hover:text-lime-700"
+          >
+            ภาพ: Porsche · ดูภาพและข้อมูลจากผู้ผลิต ↗
+          </a>
         </figcaption>
       </figure>
-      <ImageCredit
-        author="Cheeni"
-        source="https://commons.wikimedia.org/wiki/File:Amg_carbon_ceramic_brake_geneva_auto_show_2011.JPG"
-        license="CC BY-SA 3.0"
-        licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/"
-        className="mb-12"
-      />
 
       <div className="bg-slate-900 text-white border border-slate-800 p-8 rounded-3xl shadow-lg mb-12">
         <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-lime-400">

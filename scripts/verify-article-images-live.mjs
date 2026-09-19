@@ -9,11 +9,12 @@ const articleRoutes = readdirSync(articleDir, { withFileTypes: true })
   .map((entry) => `/articles/${entry.name}`);
 const cases = [
   { route: '/', expected: [] },
-  { route: '/articles', expected: ['zeekr-7x-photo.jpg', 'tesla-model-y-l-photo.jpg'] },
+  { route: '/articles', expected: ['zeekr-7x-photo.jpg', 'tesla-model-y-l-photo.jpg', 'porsche-pccb-carbon-ceramic-brakes.jpg'] },
   ...articleRoutes.map((route) => ({
     route,
     expected: route.endsWith('zeekr-7x-2026-review') ? ['zeekr-7x-photo.jpg']
-      : route.endsWith('tesla-model-y-l-premium-6-seater-review') ? ['tesla-model-y-l-photo.jpg'] : [],
+      : route.endsWith('tesla-model-y-l-premium-6-seater-review') ? ['tesla-model-y-l-photo.jpg']
+      : route.endsWith('ev-carbon-ceramic-brakes-guide') ? ['porsche-pccb-carbon-ceramic-brakes.jpg'] : [],
   })),
   ...['/about', '/contact', '/editorial-policy', '/privacy', '/terms', '/warranty']
     .map((route) => ({ route, expected: [] })),

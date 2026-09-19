@@ -2,7 +2,7 @@ import Image from 'next/image';
 import tein from '../../../public/images/articles/damper-guide/tein-flex-z.webp';
 import bilstein from '../../../public/images/articles/damper-guide/bilstein-b16.webp';
 import bc from '../../../public/images/articles/damper-guide/bc-zr.webp';
-import ohlins from '../../../public/images/articles/damper-guide/ohlins-road-track-w177.webp';
+import ohlins from '../../../public/images/articles/damper-guide/ohlins-road-track-tesla.jpg';
 import hksS from '../../../public/images/articles/damper-guide/hks-hipermax-s.webp';
 import hksR from '../../../public/images/articles/damper-guide/hks-hipermax-r.webp';
 import bangkok from '../../../public/images/articles/damper-guide/bangkok-ratchadamri.webp';
@@ -11,7 +11,7 @@ import race from '../../../public/images/articles/damper-guide/bmw-m4-gt3-spa.we
 const photos = {
   tein: { image: tein, alt: 'ชุดโช้ค TEIN FLEX Z จากหน้าผลิตภัณฑ์ TEIN', caption: 'TEIN FLEX Z — ภาพชุดตัวอย่างของซีรีส์ ไม่ใช่การยืนยันรหัสที่ใส่กับรถของผู้อ่าน', source: 'TEIN', href: 'https://www.tein.com/products/flex_z.html' },
   bilstein: { image: bilstein, alt: 'โช้ค BILSTEIN B16 สปริงสีฟ้า พร้อมปุ่มปรับด้านล่าง', caption: 'BILSTEIN B16 — ดูปุ่มปรับที่ฐานโช้ค และเทียบหน้าที่ของปุ่มกับคู่มือชุดจริง', source: 'BILSTEIN', href: 'https://performance.bilstein.com/en/products/bilstein-b16/' },
-  ohlins: { image: ohlins, alt: 'ชุด Öhlins Road & Track สำหรับ Mercedes-AMG W177 มีโช้คและสปริงหลังแยกกัน', caption: 'Öhlins Road & Track — ภาพจากหน้าชุด W177 รหัส MES MV10S1 ไม่ใช่ชุดสำหรับ EV', source: 'Öhlins', href: 'https://www.ohlins.com/th-th/automotive/road-track/mercedes-amg-a45-(w177)?v=mercedes-benz-a45-amg-2026' },
+  ohlins: { image: ohlins, alt: 'ชุด Öhlins Road & Track มี coilover หน้าสปริงเหลือง พร้อม damper หลังและสปริงหลังแยกกัน', caption: 'Öhlins Road & Track — ภาพจากหน้าผลิตภัณฑ์ Tesla Model 3 ปี 2020 รหัส TES MA10S1 แสดง coilover หน้าและชุดสปริง–damper หลังแยกกัน ต้องตรวจปีรถ รุ่นย่อย และรหัสชุดก่อนเลือกใช้', source: 'Öhlins', href: 'https://www.ohlins.com/en-th/automotive/road-and-track/tesla-model-3-model-y-road-and-track-set?v=tesla-model-3-2020' },
   bc: { image: bc, alt: 'โช้ค BC Racing ZR พร้อมซับแทงก์และสายเชื่อมแยกจากกระบอก', caption: 'BC Racing ZR — มองเห็น Reservoir แยกชัดเจน แต่จำนวน Way ต้องอ่านจากระบบปรับ ไม่ใช่นับถังจากภาพ', source: 'BC Racing North America', href: 'https://bcracing-na.com/series/zr-series/' },
   hksS: { image: hksS, alt: 'ภาพผลิตภัณฑ์ HKS HIPERMAX S รุ่นปัจจุบัน สปริงสีขาว', caption: 'HIPERMAX S — ผู้ผลิตวางโจทย์ให้ความสบายบนถนนทำงานร่วมกับการควบคุมรถ', source: 'HKS', href: 'https://www.hks-power.co.jp/en/product/suspension/hipermax/maxs/index.html' },
   hksR: { image: hksR, alt: 'ภาพผลิตภัณฑ์ HKS HIPERMAX R สปริงสีขาวและแหวนสีแดง', caption: 'HIPERMAX R — ผู้ผลิตให้น้ำหนักกับการขับในสนาม โดยยังคำนึงถึงการขับประจำวัน', source: 'HKS', href: 'https://www.hks-power.co.jp/en/product/suspension/hipermax/r/index.html' },
