@@ -21,3 +21,4 @@ This block is written and re-added by `next dev` - verify at `node_modules/next/
 5. **Deployment & Git Flow**:
    - Work strictly on your designated handoff branch (e.g., `chatgpt-frontend-handoff`).
    - **DO NOT** merge into the Production Branch (`main`) or trigger production deployments without explicit human approval.
+   - Standing user approval (2026-09-19): For website changes the user requests, verify and deploy the completed changes to the existing `evselects.com` Vercel production project without asking for deployment approval again. This does not authorize unrelated changes, destructive operations, backend changes, paid services, or merging into `main`. A request for a draft remains draft-only unless the user asks to publish it.

@@ -8,7 +8,7 @@ import styles from "./MobileMenu.module.css";
 const links = [
   { href: "/", label: "หน้าแรก" },
   { href: "/#choose-your-path", label: "เริ่มจากสิ่งที่กำลังตัดสินใจ" },
-  { href: "/#vehicle-finder", label: "เลือกรุ่นรถ" },
+  { href: "/articles?category=reviews", label: "รีวิวรถ EV" },
   { href: "/#launch", label: "ติดตามการเปิดตัวสินค้า" },
   { href: "/articles", label: "บทความและคู่มือ EV" },
   { href: "/editorial-policy", label: "นโยบายบทความ" },

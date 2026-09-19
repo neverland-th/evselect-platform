@@ -12,8 +12,9 @@ import {
   Sparkles,
   Wrench,
 } from "lucide-react";
-import VehicleGuide from "@/components/VehicleGuide";
+import ComingSoonBanner from "@/components/ComingSoonBanner";
 import PrelaunchPanel from "@/components/PrelaunchPanel";
+import { damperArticle } from "@/lib/damper-article";
 
 const journeys = [
   {
@@ -52,10 +53,12 @@ const featuredArticles = [
   },
   {
     href: "/articles/ev-damper-tuning-bump-rebound-guide",
-    title: "รถเด้ง กระด้าง หรือโยน เกี่ยวกับอะไร",
-    description: "เข้าใจ Bump และ Rebound ก่อนเริ่มปรับหรือเปลี่ยนช่วงล่าง",
-    image: "/images/articles/damper_tuning_hero.jpg",
-    tag: "คู่มือช่วงล่าง",
+    title: damperArticle.cardTitle,
+    description: damperArticle.cardDescription,
+    image: damperArticle.cover,
+    imageAlt: damperArticle.coverAlt,
+    imageFit: "contain",
+    tag: "เจาะลึกคอยล์โอเวอร์",
   },
   {
     href: "/articles/ev-battery-care",
@@ -202,10 +205,10 @@ export default function StorefrontPage() {
               <div className="relative aspect-[16/10] bg-slate-100">
                 <Image
                   src={article.image}
-                  alt={article.title}
+                  alt={article.imageAlt ?? article.title}
                   fill
                   sizes="(max-width: 767px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+                  className={`${article.imageFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-[1.025]`}
                 />
               </div>
               <div className="p-5">
@@ -221,18 +224,7 @@ export default function StorefrontPage() {
         </div>
       </section>
 
-      <section id="vehicle-finder" className="scroll-mt-28 border-y border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-18">
-          <div className="mb-8 max-w-2xl">
-            <p className="mb-2 text-xs font-semibold text-lime-800">เริ่มจากรถที่คุณสนใจ</p>
-            <h2 className="font-bold">ค้นหาบทความตามรุ่นรถ</h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600">
-              เลือกยี่ห้อและรุ่นเพื่อไปยังเนื้อหาที่เกี่ยวข้องกับรถคันนั้น
-            </p>
-          </div>
-          <VehicleGuide />
-        </div>
-      </section>
+      <ComingSoonBanner />
 
       <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-20">
         <div className="mb-8 max-w-2xl">
