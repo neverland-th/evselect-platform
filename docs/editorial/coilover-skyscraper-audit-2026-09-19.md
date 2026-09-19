@@ -104,4 +104,23 @@
 | UX ง่ายขึ้น | การ์ดมือถือ, keyboard, no-JS, 200% text, download/print |
 | ทำต่อได้จริง | ชุดแบบบันทึกสี่มุม + A–B–A + เช็กลิสต์ 12 ข้อ |
 
-ผลทดสอบและการเผยแพร่ Preview จะบันทึกแยกท้ายรายงานเมื่อยืนยันจาก URL ใหม่แล้ว
+## ผลส่งมอบที่ยืนยันแล้ว
+
+- [Preview บทความใหม่](https://evselect-platform-p63hsa72e-evselect-com.vercel.app/articles/ev-damper-tuning-bump-rebound-guide)
+- [ภาพเลือกช่องปรับ](https://evselect-platform-p63hsa72e-evselect-com.vercel.app/articles/ev-damper-tuning-bump-rebound-guide#explorer)
+- [แบบบันทึกกรอก/พิมพ์](https://evselect-platform-p63hsa72e-evselect-com.vercel.app/downloads/evselect-damper-setup-log.html)
+- [เช็กลิสต์ถามร้าน](https://evselect-platform-p63hsa72e-evselect-com.vercel.app/downloads/evselect-coilover-shop-checklist.txt)
+- Vercel target **Preview**, สถานะ **READY**, deployment `dpl_9bTXEi3LjC55DSt7GvZkaQcuoGsR`, Next.js 16.3.2, source commit `48b927fdc9d7ad3778a6c11d957eb5bff7cc21df`, remote build ประมาณ 32 วินาที ตรวจทั้ง CLI และ Vercel API ไม่มี production aliases บน deployment ใหม่
+- Production ยังเป็น `dpl_7uPfCEoPgYUsawKSH6pW9LkAWn4m` และข้อความบทความให้ SHA-256 เท่ากันก่อน/หลังงาน (`7f61e47e07f91ce415f132b2d0ba428fa133845db6c00708497be71c8cdc85b3`)
+- `npm run build`, TypeScript, ESLint เฉพาะไฟล์ที่แก้ และ `git diff --check` ผ่าน
+- Local และ public Preview: 360/390/768/1440px, ขยายข้อความ 200%, H1 เดียว, canonical, BlogPosting/BreadcrumbList, OG/Twitter, ภาพ KW, 17 anchors, 9 รายการเทียบ, 7 FAQs, 4 โหมดภาพอธิบาย, 3 กรณีจำลอง และ related links ผ่าน ไม่พบ uncaught page errors ในรอบทดสอบ
+- ปิด JavaScript แล้วยังเลือกโหมดภาพและเปิดเฉลยได้ แบบบันทึกกรอกได้ ไม่มี script/form submission พิมพ์เป็น A4 สองหน้าและตรวจภาพทั้งสองหน้าแล้ว ไฟล์ข้อความดาวน์โหลดตอบ 200
+- Carousel เดิมผ่านการตรวจ public Preview: 3 ภาพ, 11 model links, arrow/keyboard/touch, autoplay/pause/resume/reduced-motion และ 200% text
+
+หลักฐานเครื่องอ่านอยู่ใน `scratch/skyscraper-baseline/audit.json`, `scratch/skyscraper-final-local-qa/results.json`, `scratch/skyscraper-live-qa/results.json`, `scratch/skyscraper-live-audit/audit.json` และ `scratch/vehicle-showcase-qa/results.json` ภาพและ PDF ทดสอบอยู่ในโฟลเดอร์ QA คู่กัน โฟลเดอร์ scratch เป็นหลักฐานในเครื่อง ไม่ได้เผยแพร่เป็นเว็บไซต์
+
+ผล lab หนึ่งรอบบน Preview ใหม่: LCP ที่สังเกต 340 ms, ผลรวม layout shifts ที่สังเกตช่วงโหลด 0, first-party script encoded bytes 150,186 เทียบ Preview เดิม 150,193 bytes ตัวเลขนี้มาจากเครื่องทดสอบแบบไม่จำลองเครือข่าย/CPU และไม่ใช่หลักฐานว่าหน้าเร็วขึ้นหรือผ่าน Core Web Vitals สำหรับผู้ใช้จริง การเพิ่มเครื่องมือครั้งนี้ไม่เพิ่ม client component หรือไลบรารี JavaScript
+
+## ตรวจขอบเขตก่อนปิดงาน
+
+ข้อกำหนดเก้าข้อในตารางรับงานมีเนื้อหา/เครื่องมือและหลักฐานตรวจครบสำหรับฉบับ Preview นี้ สิ่งที่ยังไม่ได้ทำและไม่ได้แอบอ้างว่าเสร็จคือ: production publication, การแก้ robots/sitemap ทั้งเว็บไซต์, Google indexing/rank/backlinks measurement, การทดสอบรถจริง และ outreach ภายนอก งานเหล่านี้แยกจากการสร้างและตรวจบทความฉบับใหม่ ไม่ใช้ข้อจำกัดดังกล่าวเป็นเหตุผลสร้างผลลัพธ์สมมติ
