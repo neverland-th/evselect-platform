@@ -37,4 +37,13 @@ The Bangkok image is context, not evidence of potholes or present-day national r
 
 ## Verification
 
-Pending build, responsive/browser and deployment checks. Production deployment before this edit: `dpl_7uPfCEoPgYUsawKSH6pW9LkAWn4m`, READY; evselects.com aliases unchanged at the start.
+- Source commit: `a3fd180`; Next.js 16.3.2. Changed-file ESLint, TypeScript and production build (41 generated routes) passed locally. No migration executed.
+- Preview: https://evselect-platform-pyfkr9l7y-evselect-com.vercel.app/articles/ev-damper-tuning-bump-rebound-guide#character-and-roads
+- Deployment `dpl_87pWVBsTUw7D8bg3T39XXCqwPYjv`: CLI target Preview, API READY, no production aliases; build-to-ready interval 38.675 seconds.
+- Live browser verification passed at 360/390/768/1440 px and 200% text: 8 new photographs decoded, preserved KW cover, 18 TOC links, 9 comparison rows, 4 diagram modes, 3 scenarios, 7 FAQs, homepage/catalog title and cover, keyboard interactions and downloads. No observed horizontal overflow or page errors. Native diagram/scenarios also passed without JavaScript.
+- Local and live homepage carousel regression passed: 3 slides, 11 model routes, arrows/keyboard/wrap, autoplay/pause/resume, reduced motion and touch swipe.
+- Sensitive paths `/categories`, `/products`, `/vehicles`, `/fitment`, `/export`, `/api/export/shopee`, `/api/export/woo` each returned 404 on Preview.
+- Evidence: `scratch/character-roads-local/results.json`, `scratch/character-roads-preview/results.json`, `scratch/character-roads-audit/audit.json`, `scratch/vehicle-showcase-qa/results.json` and associated screenshots. Local screenshots visually inspected; live assets and page assertions independently verified.
+- Production before/after remained `dpl_7uPfCEoPgYUsawKSH6pW9LkAWn4m`, READY with the same evselects.com aliases. Live production still has the old article title and content SHA256 `7f61e47e07f91ce415f132b2d0ba428fa133845db6c00708497be71c8cdc85b3`. This update has NOT been deployed to production.
+- Existing robots.txt/sitemap.xml 404s were observed again; they are outside this scoped editorial revision. Preview noindex is expected. No Google-ranking or field performance improvement is asserted.
+- Open production gate: confirm reuse permissions/basis for manufacturer product photos, then obtain production publishing approval. Commons attribution/license conditions are shown under both contextual photographs.
