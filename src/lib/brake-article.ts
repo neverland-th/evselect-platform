@@ -1,9 +1,9 @@
 export const brakeArticle = {
   path: '/articles/ev-carbon-ceramic-brakes-guide',
   url: 'https://evselects.com/articles/ev-carbon-ceramic-brakes-guide',
-  title: 'เบรก EV ต้องใหญ่แค่ไหน ถึงจะคุ้ม?',
+  title: 'Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV',
   subtitle: 'จานเรียบ เซาะร่อง เจาะรู หรือ Carbon Ceramic — เลือกจากงานที่เบรกต้องรับ',
-  description: 'เลือกเบรก EV ให้คุ้ม: ขนาดจาน จานเรียบ เซาะร่อง เจาะรู Carbon Ceramic และ ENDLESS พร้อมเครื่องคำนวณพลังงานเบรก วิเคราะห์ทางลงเขาไทย และเช็กลิสต์ก่อนซื้อ',
+  description: 'Carbon Ceramic คุ้มกับรถ EV แค่ไหน? เข้าใจจานเบรก ผ้า ENDLESS ความร้อน ฝุ่น และต้นทุน ก่อนจ่ายหลักแสน พร้อมเครื่องมือเปรียบเทียบและเช็กลิสต์เลือกเบรก',
   publishedAt: '2026-09-02',
   updatedAt: '2026-09-19',
   readTime: '25 นาที',

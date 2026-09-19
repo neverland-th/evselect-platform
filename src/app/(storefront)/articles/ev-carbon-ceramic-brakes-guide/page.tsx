@@ -9,7 +9,7 @@ import BrakeBrandCompare from '@/components/articles/BrakeBrandCompare';
 import styles from '@/components/articles/BrakeGuide.module.css';
 
 export const metadata: Metadata = {
-  title: `${brakeArticle.title} จานเบรกและ Carbon Ceramic | EVSELECT`,
+  title: `${brakeArticle.title} | EVSELECT`,
   description: brakeArticle.description,
   alternates: { canonical: brakeArticle.path },
   openGraph: { title: brakeArticle.title, description: brakeArticle.description, url: brakeArticle.url, siteName: 'EVSELECT Thailand', locale: 'th_TH', type: 'article', publishedTime: brakeArticle.publishedAt, modifiedTime: brakeArticle.updatedAt, images: [{ url: brakeArticle.cover, width: 1308, height: 818, alt: brakeArticle.coverAlt }] },

@@ -19,7 +19,7 @@ try {
     assert.equal((await page.goto(base + route, { waitUntil: 'networkidle' })).status(), 200);
     const article = page.locator('article');
     assert.equal(await article.locator('h1').count(), 1);
-    assert.equal(await article.locator('h1').innerText(), 'เบรก EV ต้องใหญ่แค่ไหน ถึงจะคุ้ม?');
+    assert.equal(await article.locator('h1').innerText(), 'Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV');
     assert.equal(await article.locator('section[id]').count(), 14);
     assert.equal(await article.locator('#faq details').count(), 10);
     assert.ok(await article.locator('#sources a').count() >= 28);
@@ -102,7 +102,7 @@ try {
   assert.equal(checklist.status(), 200);
   assert.match(await checklist.text(), /EVSELECT/);
   await page.goto(base + '/articles');
-  const listing = page.locator('a[href="' + route + '"]').filter({ hasText: 'เบรก EV ต้องใหญ่แค่ไหน' }).first();
+  const listing = page.locator('a[href="' + route + '"]').filter({ hasText: 'Carbon Ceramic คุ้มไหม?' }).first();
   assert.ok(await listing.count() > 0);
   for (const sensitive of ['/products', '/categories', '/vehicles', '/fitment', '/export', '/api/export/shopee', '/api/export/woo']) assert.equal((await context.request.get(base + sensitive)).status(), 404, sensitive);
   checks.push({ noJavaScriptContentAndFaq: true, listingUpdated: true, checklistAvailable: true, protectedRoutes: 7 });
