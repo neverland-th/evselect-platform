@@ -2,6 +2,7 @@ import { teslaModel3 } from '@/lib/tesla-model-3';
 import Link from 'next/link';
 import Image from 'next/image';
 import { damperArticle } from '@/lib/damper-article';
+import { brakeArticle } from '@/lib/brake-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -57,9 +58,9 @@ export interface ArticleItem {
 const ALL_ARTICLES: ArticleItem[] = [
   {
     slug: 'ev-carbon-ceramic-brakes-guide',
-    title: 'เบรก Carbon Ceramic จำเป็นแค่ไหนสำหรับรถ EV สมรรถนะสูง? คุ้มค่าหรือไม่?',
+    title: brakeArticle.title,
     shortTitle: 'เบรก Carbon Ceramic',
-    excerpt: 'เจาะลึกระบบเบรกคาร์บอนเซรามิก ทำไมรถ EV ตัวแรงถึงต้องใช้ แตกต่างจากเบรกเหล็กหล่ออย่างไร พร้อมวิเคราะห์ความคุ้มค่าบนถนนเมืองไทย',
+    excerpt: brakeArticle.description,
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'tuning',
@@ -67,12 +68,12 @@ const ALL_ARTICLES: ArticleItem[] = [
     image: '/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg',
     imageAlt: 'ภาพถ่ายเบรก Porsche PCCB คาลิเปอร์เหลืองทองและจาน Carbon Ceramic หลังล้อ Center Lock',
     heroImage: '/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg',
-    date: '2026-09-02',
-    dateDisplay: '2 ก.ย. 2569',
-    readTime: '8 นาที',
+    date: brakeArticle.updatedAt,
+    dateDisplay: '19 ก.ย. 2569',
+    readTime: brakeArticle.readTime,
     rating: null,
-    priceRange: 'แสนบาทขึ้นไป',
-    highlights: ['ทนความร้อนสูง หมดปัญหาเบรกเฟด', 'น้ำหนักเบากว่าเหล็กหล่อ 50%', 'ฟีลลิ่งเบรกเย็นอาจต้องใช้เวลาวอร์ม'],
+    priceRange: 'เลือกตามงานและงบจริง',
+    highlights: ['เทียบจานเรียบ เซาะร่อง เจาะรู และ CCB', 'กดเทียบ ENDLESS / Brembo / Project μ', 'คำนวณภาระเบรกและวิเคราะห์ถนนไทย'],
     featured: false,
     brand: 'Aftermarket',
     badge: 'Brake System',

@@ -14,7 +14,7 @@ const cases = [
     route,
     expected: route.endsWith('zeekr-7x-2026-review') ? ['zeekr-7x-photo.jpg']
       : route.endsWith('tesla-model-y-l-premium-6-seater-review') ? ['tesla-model-y-l-photo.jpg']
-      : route.endsWith('ev-carbon-ceramic-brakes-guide') ? ['porsche-pccb-carbon-ceramic-brakes.jpg'] : [],
+      : route.endsWith('ev-carbon-ceramic-brakes-guide') ? ['porsche-pccb-carbon-ceramic-brakes.jpg', 'endless-ssm-plus-official.jpg', 'endless-6pot-official.jpg', 'tesla-plaid-carbon-ceramic-kit.jpg'] : [],
   })),
   ...['/about', '/contact', '/editorial-policy', '/privacy', '/terms', '/warranty']
     .map((route) => ({ route, expected: [] })),
