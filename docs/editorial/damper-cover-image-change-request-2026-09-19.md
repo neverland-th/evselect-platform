@@ -1,6 +1,10 @@
 # Change request: synchronize article, homepage and search/share cover
 
-Requester: site owner. Date: 2026-09-19. Priority: High. Status: **Pending production approval**.
+Requester: site owner. Date: 2026-09-19. Priority: High. Status: **Approved and published; actual Google thumbnail not verified**.
+
+## Approved release update
+
+The owner explicitly replied `อนุมัติหมดเลย`, approving the full reviewed Preview, not only the limited cover patch. This supersedes the image-only proposal and approval gate below. Production deployment `dpl_9Tgs1LK6UQiZ6Ppq84nr45TMhm7Z` is READY and serves evselects.com/www with the new article, images, homepage carousel and consistent KW cover metadata. See `coilover-production-release-2026-09-19.md` for live evidence. Publication approval is not proof of third-party image rights. The historical pre-release findings below are retained as an audit trail.
 
 ## Description and justification
 
@@ -50,6 +54,6 @@ Before deployment, freshly record the current production deployment/aliases and 
 
 ## Approval and completion gates
 
-Site owner: pending production publishing approval. Google SERP thumbnail evidence: pending external observation. Do not mark the active goal complete based only on Preview.
+Site owner: full production approval received and executed. Website-side delivery: verified on production. Google SERP thumbnail evidence: pending external observation; no claim that Google's displayed thumbnail has already changed.
 
 Primary guidance checked: https://developers.google.com/search/docs/appearance/google-images — Google image-preview selection is automated; representative high-quality images and consistent metadata inform selection. No promise of a forced image or immediate refresh is made.
