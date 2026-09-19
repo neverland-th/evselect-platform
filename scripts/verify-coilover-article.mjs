@@ -1,0 +1,108 @@
+import assert from 'node:assert/strict';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import path from 'node:path';
+import { chromium } from 'playwright';
+
+const base = process.env.BASE_URL || 'http://localhost:4320';
+const route = '/articles/ev-damper-tuning-bump-rebound-guide';
+const output = path.resolve(process.env.QA_OUTPUT || 'scratch/coilover-article-qa');
+await mkdir(output, { recursive: true });
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const checks = [];
+try {
+  const asset = await readFile('public/images/articles/kw-coilover-adjustable.avif');
+  assert.equal(createHash('sha256').update(asset).digest('hex'), 'fd6d905e4af68433fe918ad9d2c5d41cbda26f8667921e651bf96bff81740dae');
+  for (const width of [360, 390, 768, 1440]) {
+    const context = await browser.newContext({ viewport: { width, height: 1000 }, reducedMotion: 'reduce' });
+    const page = await context.newPage();
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    assert.equal((await page.goto(base + route, { waitUntil: 'networkidle' })).status(), 200);
+    const article = page.locator('main article').first();
+    assert.equal(await page.locator('h1').count(), 1);
+    assert.match(await page.locator('h1').innerText(), /1-Way, 2-Way, 3-Way/);
+    assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://evselects.com' + route);
+    const image = article.locator('header figure img');
+    await image.evaluate(img => img.decode());
+    assert.match(await image.getAttribute('src'), /kw-coilover-adjustable/);
+    assert.equal(await image.evaluate(img => getComputedStyle(img).objectFit), 'contain');
+    assert.ok(await image.evaluate(img => img.naturalWidth > 0 && img.alt.includes('KW')));
+    const data = await page.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(node => JSON.parse(node.textContent)).find(value => value['@type'] === 'TechArticle'));
+    assert.equal(data.author.name, 'EVSELECT');
+    assert.equal(data.datePublished, '2026-08-27');
+    assert.equal(data.dateModified, '2026-09-19');
+    assert.equal(data.headline, await page.locator('h1').innerText());
+    assert.equal(data.aggregateRating, undefined);
+    const og = await page.locator('meta[property="og:image"]').getAttribute('content');
+    assert.match(og, /kw-coilover-adjustable-social\.jpg$/);
+    assert.equal(await page.locator('meta[name="twitter:image"]').getAttribute('content'), og);
+    const media = await context.request.get(base + new URL(og).pathname);
+    assert.equal(media.status(), 200);
+    assert.match(media.headers()['content-type'], /image\/jpeg/);
+    if (base.startsWith('https://')) assert.equal((await context.request.get(og)).status(), 200);
+    const toc = article.getByRole('navigation', { name: 'สารบัญบทความ' });
+    const anchors = await toc.locator('a').evaluateAll(nodes => nodes.map(node => node.getAttribute('href')));
+    assert.equal(anchors.length, 14);
+    for (const anchor of anchors) assert.equal(await article.locator(anchor).count(), 1);
+    assert.equal(await article.locator('table tbody tr').count(), 9);
+    const content = await article.textContent();
+    for (const brand of ['TEIN', 'BC Racing', 'HKS', 'BILSTEIN', 'Öhlins', 'KW']) assert.ok(content.includes(brand));
+    for (const stale of ['0.65 - 0.70', 'OptimumG Damper Science', 'EVSELECT Suspension Tuning Division']) assert.equal(content.includes(stale), false);
+    assert.ok(content.length > 22000, `Expected full-length article, got ${content.length}`);
+    assert.equal(await article.locator('#faq details').count(), 7);
+    await article.locator('#faq summary').first().click();
+    assert.equal(await article.locator('#faq details').first().getAttribute('open'), '');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+    await page.evaluate(() => document.documentElement.style.fontSize = '200%');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+    await page.evaluate(() => document.documentElement.style.fontSize = '100%');
+    await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({ path: path.join(output, `article-top-${width}.png`) });
+    await article.locator('header figure').screenshot({ path: path.join(output, `kw-image-${width}.png`) });
+    await article.locator('#brands').scrollIntoViewIfNeeded();
+    await page.screenshot({ path: path.join(output, `comparison-${width}.png`) });
+    await toc.locator('a[href="#three-way"]').click();
+    assert.equal(new URL(page.url()).hash, '#three-way');
+    const table = article.getByRole('region', { name: /ตารางเปรียบเทียบช่องปรับ/ });
+    if (width < 768) {
+      assert.ok(await table.evaluate(node => node.scrollWidth > node.clientWidth));
+      await table.evaluate(node => node.scrollLeft = 150);
+      assert.ok(await table.evaluate(node => node.scrollLeft > 0));
+    }
+    assert.deepEqual(errors, []);
+    checks.push({ width, articleCharacters: content.length, h1: 1, tocLinks: 14, comparisonRows: 9, faq: 7, imageDecoded: true, overflow: false, zoom200Overflow: false, pageErrors: errors });
+    await context.close();
+  }
+
+  const context = await browser.newContext({ viewport: { width: 1440, height: 1100 }, reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  await page.goto(base, { waitUntil: 'networkidle' });
+  const card = page.locator(`a[href="${route}"]`).filter({ has: page.locator('img') });
+  assert.equal(await card.count(), 1);
+  assert.equal(await card.locator('h3').innerText(), 'โช้คแพง แต่ทำไมยังเด้ง?');
+  await card.scrollIntoViewIfNeeded();
+  await card.locator('img').evaluate(img => img.decode());
+  assert.match(await card.locator('img').getAttribute('src'), /kw-coilover-adjustable/);
+  assert.equal(await card.locator('img').evaluate(img => getComputedStyle(img).objectFit), 'contain');
+  await card.screenshot({ path: path.join(output, 'homepage-card.png') });
+  await card.locator('..').screenshot({ path: path.join(output, 'homepage-featured.png') });
+  await Promise.all([page.waitForURL('**' + route), card.click()]);
+  for (const internal of ['/articles', '/articles/ev-tyre-and-coilover-selection-guide', '/articles/shock-absorber-types-monotube-twintube-air-ev']) assert.equal((await context.request.get(base + internal)).status(), 200);
+  await page.goto(base + '/articles', { waitUntil: 'networkidle' });
+  const catalogCard = page.locator('article').filter({ has: page.locator(`a[href="${route}"]`) });
+  assert.equal(await catalogCard.count(), 1);
+  await catalogCard.scrollIntoViewIfNeeded();
+  await catalogCard.locator('img').evaluate(img => img.decode());
+  assert.match(await catalogCard.locator('img').getAttribute('src'), /kw-coilover-adjustable/);
+  assert.equal(await catalogCard.locator('img').evaluate(img => getComputedStyle(img).objectFit), 'contain');
+  assert.equal((await catalogCard.innerText()).includes('9.7'), false);
+  await catalogCard.screenshot({ path: path.join(output, 'catalog-card.png') });
+  checks.push({ homepageCard: true, catalogCard: true, originalAvifSha256: true, internalLinks: true });
+  await context.close();
+  const result = { base, verifiedAt: new Date().toISOString(), checks };
+  await writeFile(path.join(output, 'results.json'), JSON.stringify(result, null, 2));
+  console.log(JSON.stringify(result, null, 2));
+} finally {
+  await browser.close();
+}

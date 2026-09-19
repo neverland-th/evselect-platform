@@ -34,6 +34,7 @@ export interface ArticleItem {
   segmentName: string;
   image: string;
   imageAlt?: string;
+  imageFit?: 'cover' | 'contain';
   heroImage?: string;
   date: string;
   dateDisplay: string;
@@ -506,38 +507,38 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'ev-damper-tuning-bump-rebound-guide',
-    title: 'คู่มือการปรับจูนแดมเปอร์ (Damper Tuning) สำหรับรถ EV: Low-speed vs High-speed Bump & Rebound',
-    shortTitle: 'คู่มือจูนแดมเปอร์ Bump & Rebound',
-    subtitle: 'การควบคุม Body Motion และคลื่นความถี่สั่นสะเทือนตามหลัก OptimumG Damper Science',
-    excerpt: 'เจาะลึกการควบคุมการเคลื่อนที่ของตัวถัง (Sprung Mass) และล้อ (Unsprung Mass) กราฟ Force-Velocity (F-V Curve) แบบ Digressive การตั้งค่า Rebound-to-Bump Ratio 65:35 เพื่อขจัดอาการโยนย้วยในรถแบตเตอรี่หนัก',
+    title: damperArticle.title,
+    shortTitle: '1-Way ถึง 3-Way: จ่ายเพิ่มแล้วได้อะไร?',
+    subtitle: 'แยกโครงสร้าง ช่องปรับ และจำนวนคลิกให้เป็น ก่อนเลือกโช้คแต่ง',
+    excerpt: damperArticle.description,
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'dampers',
-    segmentName: '🔧 วาล์วแดมเปอร์ & F-V Curve',
+    segmentName: 'คอยล์โอเวอร์ & การปรับแรงหน่วง',
     image: damperArticle.cover.src,
     imageAlt: damperArticle.coverAlt,
+    imageFit: 'contain',
     heroImage: damperArticle.cover.src,
     date: '2026-08-27',
-    dateDisplay: '27 ส.ค. 2569',
-    publishedAt: '2026-08-27',
-    author: 'EVSELECT Damper Lab',
-    readTime: '11 นาที',
-    rating: 9.7,
-    ratingText: 'OptimumG Damper Science',
+    dateDisplay: 'อัปเดต 19 ก.ย. 2569',
+    publishedAt: damperArticle.publishedAt,
+    author: 'EVSELECT',
+    readTime: 'คู่มือฉบับเต็ม',
+    rating: null,
     priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'Damping Ratio & F-V Curve',
+    performanceText: '1-Way / 2-Way / 3-Way',
     highlights: [
-      'Low-speed Damping (0-2 in/s Body Roll Control)',
-      'High-speed Damping (>6 in/s Road Imperfections)',
-      'Digressive Valve Profiles สำหรับถนนจริง',
-      'อัตราส่วนความหน่วง Damping Ratio 0.65 - 0.70'
+      'ปุ่มเดียว: ปรับ Rebound หรือยุบ–ยืดพร้อมกัน?',
+      '2-Way กับ 3-Way เพิ่มอิสระในการจูนอย่างไร',
+      'ตัวอย่าง TEIN, BC Racing, HKS, BILSTEIN, Öhlins และ KW',
+      'แยกอาการรถและตรวจสเปกก่อนซื้อสำหรับ EV'
     ],
     featured: false,
-    brand: 'OPTIMUMG DAMPER LAB',
-    badge: 'Damper Dynamics',
-    tags: ['Damper Tuning', 'Bump and Rebound', 'Force Velocity Curve', 'Digressive Valving', 'Critical Damping', 'OptimumG'],
-    accessoryOpportunity: 'ชุดแดมเปอร์ปรับระดับ 2-Way / 3-Way อิสระ, วาล์ว DFV / Digressive Valving',
-    fitmentGate: 'ตรวจสอบความยาวกระบอกโช้คและ Stroke Travel ให้ตรงตามสเปกรถ EV แต่ละรุ่น',
+    brand: 'คู่มือหลายแบรนด์',
+    badge: 'รู้ก่อนแต่งช่วงล่าง',
+    tags: ['คอยล์โอเวอร์', 'โช้คปรับเกลียว', '1-way', '2-way', '3-way', 'Compression', 'Rebound', 'TEIN', 'BC Racing', 'HKS', 'BILSTEIN', 'Öhlins', 'KW'],
+    accessoryOpportunity: 'เปรียบเทียบช่องปรับแรงหน่วง สปริง และบริการหลังการขายตามการใช้งาน',
+    fitmentGate: 'ต้องยืนยันรหัสสินค้า รุ่น ปี รุ่นย่อย น้ำหนักเพลา และระบบช่วงล่างเดิมก่อนสั่งซื้อ',
   },
   {
     slug: 'shock-absorber-types-monotube-twintube-air-ev',
@@ -1056,7 +1057,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   alt={article.imageAlt ?? article.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className={`${article.imageFit === 'contain' ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-500 ease-out`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 
