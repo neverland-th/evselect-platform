@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import { brakeEditorialProfiles, brakeScoreAxes, type BrakeScoreAxis } from '@/lib/brake-editorial-scores';
 import styles from './BrakeGuide.module.css';
 
@@ -16,7 +17,7 @@ export default function BrakeBrandCompare() {
   }
 
   return <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 sm:p-6" data-testid="brake-brand-compare">
-    <div className="mb-5"><span className="text-sm font-bold text-lime-800">Brembo · ENDLESS · Carbon Ceramic</span><h3 className="mt-2 text-xl font-bold sm:text-2xl">เทียบให้เห็น ก่อนจ่ายหลักแสน</h3><p className={`${styles.help} mt-2`}>คะแนนคร่าว ๆ เต็ม 10 ประเมินโดย EVSELECT จากรีวิวและข้อมูลผู้ผลิต สำหรับการใช้ถนน ไม่ใช่คะแนนเฉลี่ยดาวหรือผลทดสอบของเรา ยิ่งสูงยิ่งเด่นในด้านนั้น แตะวงเพื่ออ่านเหตุผลและแหล่งที่มา</p></div>
+    <div className="mb-5"><span className="text-sm font-bold text-lime-800">Brembo · ENDLESS · Carbon Ceramic</span><h3 className="mt-2 text-xl font-bold sm:text-2xl">เทียบให้เห็น ก่อนจ่ายหลักแสน</h3><p className={`${styles.help} mt-2`}>คะแนนคร่าว ๆ เต็ม 10 ประเมินโดย <BrandHomeLink /> จากรีวิวและข้อมูลผู้ผลิต สำหรับการใช้ถนน ไม่ใช่คะแนนเฉลี่ยดาวหรือผลทดสอบของเรา ยิ่งสูงยิ่งเด่นในด้านนั้น แตะวงเพื่ออ่านเหตุผลและแหล่งที่มา</p></div>
     <noscript><style>{'.brake-score-interactive{display:none}'}</style><div className={styles.note}><p>คะแนนประเมินสำหรับถนน · เปิด JavaScript เพื่อแตะวงและเปลี่ยนตัวเลือก</p>{brakeEditorialProfiles.map(profile => <p key={profile.id}><strong>{profile.name}:</strong> Performance {profile.scores.performance.score}/10 · ความคุ้มค่า {profile.scores.price.score}/10 · ฝุ่นน้อย {profile.scores.dust.score}/10</p>)}<p><a href="#score-method" className="underline">อ่านเกณฑ์และแหล่งที่มาด้านล่าง</a></p></div></noscript>
     <div className="brake-score-interactive">
       <p className="mb-3 text-sm font-semibold text-slate-700">เลือกเทียบได้หลายรายการ · แตะชื่อเพื่อเพิ่มหรือนำออก</p>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowRight, BookOpen, CalendarDays, Car, Info } from 'lucide-react';
 import ShareButton from '@/components/ShareButton';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import { teslaModel3 as article, teslaModel3Trims as trims } from '@/lib/tesla-model-3';
 
 export const metadata: Metadata = {
@@ -52,8 +53,8 @@ export default function TeslaModel3HighlandReviewPage() {
         <p className="text-base sm:text-lg leading-relaxed text-slate-600">Model 3 แต่ละรุ่นไม่ได้ต่างกันแค่ความแรง บทความนี้รวบรวมราคาและอุปกรณ์ที่ Tesla ประเทศไทยแสดงในวันที่ตรวจสอบ เพื่อช่วยเปรียบเทียบรุ่นขับหลังทั้งสามรุ่นกับ Performance AWD ก่อนเลือกทดลองขับ</p>
       </header>
       <figure className="mb-9">
-        <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100"><Image src="/images/reviews/tesla-model-3-hero.jpg" alt="ภาพประกอบ Tesla Model 3 Highland" fill priority sizes="(max-width: 1152px) 100vw, 1152px" className="object-cover" /></div>
-        <figcaption className="mt-2 text-xs leading-relaxed text-slate-500">ภาพประกอบ Model 3 Highland อุปกรณ์และรายละเอียดของรถแต่ละปีอาจแตกต่างจากรุ่นที่จำหน่ายปัจจุบัน</figcaption>
+        <div className="relative aspect-[1280/852] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100"><Image src="/images/reviews/tesla-model-3-hero.jpg" alt="Tesla Model 3 Highland สีแดงที่งาน Autofrühling Ulm ประเทศเยอรมนี ปี 2024" fill priority sizes="(max-width: 1152px) 100vw, 1152px" className="object-contain" /></div>
+        <figcaption className="mt-2 text-xs leading-relaxed text-slate-500">ภาพ Model 3 Highland ในเยอรมนี ถ่ายปี 2024 โดย Alexander-93 (Alexander Migl) / <a href="https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg" className="underline text-lime-800">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" className="underline text-lime-800">CC BY-SA 4.0</a> · ย่อขนาดและแสดงเต็มภาพ อุปกรณ์อาจต่างจากรถสเปกไทยปัจจุบัน</figcaption>
       </figure>
       <aside className="rounded-2xl bg-lime-50 border border-lime-200 p-5 sm:p-6 mb-10 text-sm leading-relaxed">
         <h2 className="font-bold text-base mb-2 flex gap-2 items-center"><Info className="w-5 h-5 shrink-0 text-lime-700" /> อ่านให้ตรงรุ่นและปีของรถ</h2>
@@ -75,7 +76,7 @@ export default function TeslaModel3HighlandReviewPage() {
           </table>
         </div>
         <div className="mt-4 space-y-2 text-xs text-slate-600 leading-relaxed">
-          <p>¹ Performance: 3.1 วินาทีเป็นตัวเลขผู้ผลิตที่หักช่วงออกตัว (rollout) ออก ตามเชิงอรรถใน <a className="underline text-lime-800" href={article.sources.measurement}>Tesla ประเทศไทย ฉบับภาษาอังกฤษ</a> ไม่ใช่ผลจับเวลาของ EVSELECT</p>
+          <p>¹ Performance: 3.1 วินาทีเป็นตัวเลขผู้ผลิตที่หักช่วงออกตัว (rollout) ออก ตามเชิงอรรถใน <a className="underline text-lime-800" href={article.sources.measurement}>Tesla ประเทศไทย ฉบับภาษาอังกฤษ</a> ไม่ใช่ผลจับเวลาของ <BrandHomeLink /></p>
           <p>² ล้อมาตรฐานคือ 18 นิ้วสำหรับรุ่นขับหลัง และ 20 นิ้วสำหรับ Performance ค่า 534 กม. ของ Premium RWD ล้อ 18 นิ้วระบุว่า “โดยประมาณ” บนเว็บ Tesla จึงแยกจากค่าที่ระบุ WLTP ระยะวิ่งจริงขึ้นกับความเร็ว อากาศ เส้นทางและการใช้งาน</p>
           <p>³ กำลังชาร์จสูงสุดไม่ใช่กำลังคงที่ตลอดการชาร์จ ไม่มีข้อมูลยืนยันเวลา 10–80% สำหรับรถทุกรุ่นในแหล่งข้อมูลที่ใช้ จึงไม่ระบุเวลา 18 หรือ 22 นาทีเป็นข้อรับประกัน</p>
           <p>⁴ สิ้นสุดตามเวลา หรือระยะทาง อย่างใดถึงก่อน รายละเอียดความคุ้มครองและเงื่อนไขให้ตรวจเอกสารรับประกันรถคันที่ซื้อ</p>
@@ -91,6 +92,11 @@ export default function TeslaModel3HighlandReviewPage() {
           <p className={`text-sm leading-relaxed mb-5 ${trim.id === 'performance' ? 'text-slate-300' : 'text-slate-600'}`}>{trim.summary}</p>
           <p className={`text-sm leading-relaxed mt-auto border-t pt-4 ${trim.id === 'performance' ? 'border-slate-700' : 'border-slate-200'}`}>{trim.consideration}</p>
         </section>)}</div>
+      </section>
+      <section id="wheels-and-chassis" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
+        <h2 className="text-2xl font-extrabold text-slate-900">คิดเรื่องล้อ ช่วงล่าง และเบรกต่อจากสเปก</h2>
+        <p>ถ้าสนใจ Performance หรือกำลังจะเปลี่ยนล้อ ลองอ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="underline text-lime-800">วิธีเลือกยางและคอยล์โอเวอร์ให้เหมาะกับรถ EV</Link> เพื่อดูขนาดยาง น้ำหนักบรรทุก และสิ่งที่ต้องตรวจร่วมกับรถจริง ส่วนอาการเด้ง ย้วย หรือกระแทก ควรแยกสาเหตุก่อนเริ่ม <Link href="/articles/ev-damper-tuning-bump-rebound-guide" className="underline text-lime-800">ปรับแดมเปอร์ Bump และ Rebound</Link></p>
+        <p>หากกำลังเล็งชุดเบรกใหม่ บทความ <Link href="/articles/ev-carbon-ceramic-brakes-guide" className="underline text-lime-800">Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV</Link> จะช่วยแยกเรื่องฟีลเบรก ความร้อน ฝุ่น และค่าใช้จ่าย พร้อมเคส ENDLESS จาน 375 mm บน Model 3 Performance Highland ของเจ้าของรถ</p>
       </section>
       <section id="charging" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
         <h2 className="text-2xl font-extrabold text-slate-900">อ่านตัวเลขแบตเตอรี่และการชาร์จอย่างไร</h2>

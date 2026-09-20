@@ -1711,6 +1711,18 @@
             "section",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [],
@@ -1893,6 +1905,18 @@
             "article",
             "section",
             "div"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ]
         }
       ],
@@ -2077,6 +2101,18 @@
             "section",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [],
@@ -2260,6 +2296,18 @@
             "section",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [],
@@ -2414,6 +2462,18 @@
             "section",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [],
@@ -2547,6 +2607,18 @@
             "div",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "กลับไปหน้ารวมบทความระบบช่วงล่าง",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [
@@ -2659,6 +2731,75 @@
           ]
         },
         {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "div",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/tesla-model-3-highland-review",
+          "text": "Tesla Model 3 Performance Highland",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "div",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "div",
+            "span"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside",
+            "p"
+          ]
+        },
+        {
+          "href": "#carbon-ceramic",
+          "text": "Carbon Ceramic ได้อะไร แลกกับอะไร?",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "div"
+          ]
+        },
+        {
           "href": "#japan",
           "text": "ดูเคส ENDLESS 375 mm",
           "scope": [
@@ -2682,6 +2823,81 @@
             "article",
             "div",
             "div"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "div",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "aside"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p",
+            "strong"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "div",
+            "p"
           ]
         },
         {
@@ -2752,6 +2968,48 @@
           ]
         },
         {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
           "href": "/articles/ev-tyre-and-coilover-selection-guide",
           "text": "ยางและช่วงล่าง: อีกส่วนของความมั่นใจเวลาเบรก",
           "scope": [
@@ -2777,6 +3035,31 @@
             "div",
             "section",
             "div"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer",
+            "span"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "อ่านบทความอื่น",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ]
         }
       ],
@@ -4197,152 +4480,7 @@
           ]
         }
       ],
-      "unlinkedOrMisdirectedBrandText": [
-        {
-          "text": "EVSELECT ชวนทำความรู้จัก Carbon Ceramic ทั้งเสน่ห์และสิ่งที่ต้องยอมรับ แล้วเทียบกับชุดเบรกจาก Brembo และ ENDLESS ในเรื่องสมรรถนะ ฝุ่น และค่าใช้จ่าย พร้อมประสบการณ์ ENDLESS จาน 375 mm บน Tesla Model 3 Performance Highland เพื่อช่วยตอบว่า สำหรับรถที่คุณใช้และทางที่คุณขับ การอัปเกรดแบบไหนคุ้มกับคุณที่สุด",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "header",
-            "div",
-            "p"
-          ]
-        },
-        {
-          "text": "EVSELECT · เรียบเรียงจากข้อมูลผู้ผลิต",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "header",
-            "div",
-            "span"
-          ]
-        },
-        {
-          "text": "ล้อ 20 นิ้วเป็นโจทย์ตั้งต้น ไม่ใช่ใบรับรองว่าเบรกทุกชุดใส่ได้ ต้องตรวจทรงก้านล้อ ออฟเซ็ต และแบบระยะเคลียร์เฉพาะชุด นี่คือข้อเสนอเชิงบรรณาธิการตามลักษณะใช้งาน ไม่ใช่ผลทดสอบรถทุกคัน หรือคำรับรองสินค้าเฉพาะรุ่น EVSELECT ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "aside",
-            "p"
-          ]
-        },
-        {
-          "text": "ภาพซ้ายเป็นแผนภาพอธิบายของ EVSELECT ไม่ใช่แบบผลิตหรือภาพทดสอบชิ้นส่วน",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "p"
-          ]
-        },
-        {
-          "text": "คำแนะนำด้านความคุ้มค่าในตารางเป็นการสังเคราะห์ของ EVSELECT ภาพเป็นตัวอย่างรูปแบบจากผู้ผลิต ไม่ยืนยันว่าจานตามภาพติดตั้งกับรถของผู้อ่านได้ ต้องตรวจรหัสชิ้นส่วนก่อนเสมอ",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "aside"
-          ]
-        },
-        {
-          "text": "เป็นประสบการณ์ซื้อและใช้งานเฉพาะคัน ไม่ใช่ราคาเสนอขายปัจจุบันของ EVSELECT",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ]
-        },
-        {
-          "text": "ข้อเสนอของ EVSELECT:",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p",
-            "strong"
-          ]
-        },
-        {
-          "text": "คะแนนคร่าว ๆ เต็ม 10 ประเมินโดย EVSELECT จากรีวิวและข้อมูลผู้ผลิต สำหรับการใช้ถนน ไม่ใช่คะแนนเฉลี่ยดาวหรือผลทดสอบของเรา ยิ่งสูงยิ่งเด่นในด้านนั้น แตะวงเพื่ออ่านเหตุผลและแหล่งที่มา",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "p"
-          ]
-        },
-        {
-          "text": "ตรวจแหล่งข้อมูลวันที่ 19 กันยายน 2569 บทความนี้เป็นการสังเคราะห์เอกสารผู้ผลิตและการคำนวณตัวอย่างของ EVSELECT ไม่ใช่ผลทดสอบเบรกบนถนนไทย EVSELECT ไม่ได้วัดระยะหยุด ฝุ่น หรืออุณหภูมิจากรถจริงในงานนี้ ภาพและข้อมูล Model 3 Performance Highland เป็นข้อมูลที่เจ้าของส่งพร้อมยืนยันจาน 375 mm แยกจากราคาแคตตาล็อกและผลการทดสอบของผู้ผลิต คะแนนในกราฟเป็นการประเมินคร่าว ๆ โดย EVSELECT มีรีวิวผู้ใช้ต่างรถและต่างปีประกอบในช่องเหตุผล ไม่ใช่คะแนนเฉลี่ยจากลูกค้าหรือผลทดสอบมาตรฐาน ข้อมูลผลิตภัณฑ์และการรองรับรถอาจเปลี่ยนตามปี รุ่น และตลาด",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ]
-        },
-        {
-          "text": "EVSELECT · เข้าใจรถให้ลึก เลือกให้ตรงใจ",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "footer",
-            "span"
-          ]
-        }
-      ],
+      "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "nestedAnchorCount": 0
     },
@@ -4459,6 +4597,18 @@
             "div",
             "section",
             "div"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "อ่านบทความอื่น",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ]
         }
       ],
@@ -6047,6 +6197,31 @@
             "div",
             "div"
           ]
+        },
+        {
+          "href": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+          "text": "บทความก่อนหน้า: Hybrid สู่ Full EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "กลับสู่หน้ารวมบทความทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer",
+            "div"
+          ]
         }
       ],
       "mainExternalLinks": [
@@ -6265,6 +6440,32 @@
             "div",
             "section",
             "p"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "อ่านบทความและคู่มือทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "footer"
+          ]
+        },
+        {
+          "href": "/articles/ev-carbon-ceramic-brakes-guide",
+          "text": "อ่านต่อ: Carbon Ceramic คุ้มกับรถคุณไหม?",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "footer"
           ]
         }
       ],
@@ -6563,6 +6764,18 @@
             "section",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [],
@@ -6663,6 +6876,31 @@
             "section",
             "div",
             "div",
+            "div"
+          ]
+        },
+        {
+          "href": "/articles/ev-performance-driving-techniques",
+          "text": "บทความก่อนหน้า: เทคนิคการขับ EV สมรรถนะสูง",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
+        },
+        {
+          "href": "/articles/ev-horsepower-vs-torque-explained",
+          "text": "บทความถัดไป: แรงม้า vs แรงบิดในรถ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer",
             "div"
           ]
         }
@@ -6813,6 +7051,18 @@
             "section",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [],
@@ -6911,6 +7161,18 @@
             "article",
             "div",
             "div"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "กลับสู่หน้ารวมบทความ EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ]
         }
       ],
@@ -7063,6 +7325,18 @@
             "div",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "กลับไปหน้ารวมบทความระบบช่วงล่าง",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [
@@ -7115,8 +7389,100 @@
     },
     {
       "route": "/articles/tesla-model-3-highland-review",
-      "mainInternalLinks": [],
+      "mainInternalLinks": [
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "div",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "วิธีเลือกยางและคอยล์โอเวอร์ให้เหมาะกับรถ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "ปรับแดมเปอร์ Bump และ Rebound",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/ev-carbon-ceramic-brakes-guide",
+          "text": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "อ่านคู่มือการปรับแดมเปอร์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
+        }
+      ],
       "mainExternalLinks": [
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg",
+          "text": "Wikimedia Commons",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ]
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ]
+        },
         {
           "href": "https://www.tesla.com/th_th/model3/design",
           "text": "ตรวจราคาและเปรียบเทียบอุปกรณ์กับ Tesla",
@@ -7241,22 +7607,7 @@
           ]
         }
       ],
-      "unlinkedOrMisdirectedBrandText": [
-        {
-          "text": "ไม่ใช่ผลจับเวลาของ EVSELECT",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "p"
-          ]
-        }
-      ],
+      "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "nestedAnchorCount": 0
     },
@@ -7361,6 +7712,18 @@
             "article",
             "section",
             "div"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ]
         }
       ],
@@ -7575,6 +7938,18 @@
             "section",
             "div"
           ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
+          ]
         }
       ],
       "mainExternalLinks": [],
@@ -7762,6 +8137,18 @@
             "article",
             "section",
             "div"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ]
         }
       ],
@@ -7975,6 +8362,18 @@
             "article",
             "section",
             "div"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "ดูบทความและรีวิวทั้งหมด",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ]
         }
       ],

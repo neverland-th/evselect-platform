@@ -81,7 +81,9 @@ def main():
                     broken.append({**link, 'reason': 'outside public route inventory'})
                 elif target.fragment and destination in pages and isinstance(pages[destination], Links) and unquote(target.fragment) not in pages[destination].ids:
                     broken.append({**link, 'reason': 'missing target id'})
-                if 'main' in link['scope'] and 'nav' not in link['scope'] and 'footer' not in link['scope']:
+                # An article footer can contain a useful reading link. The site
+                # footer is outside main, so do not exclude article footers too.
+                if 'main' in link['scope'] and 'nav' not in link['scope']:
                     internal.append(link)
             elif target.scheme in ('https', 'http') and 'main' in link['scope']:
                 external.append(link)

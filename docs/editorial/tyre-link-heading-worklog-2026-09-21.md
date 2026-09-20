@@ -1,6 +1,6 @@
 # Active editorial work — not ready to publish
 
-Authoritative checkout: releases/evselect-coilover-skyscraper-2026-09-19, branch codex/brake-complete-kits-2026-09-19, base 2c98452. Working content changes remain uncommitted drafts.
+Authoritative checkout: releases/evselect-coilover-skyscraper-2026-09-19, branch codex/brake-complete-kits-2026-09-19. Tyre/heading changes were checkpointed at `6cd3345`; subsequent local Carbon Ceramic and Model 3 work is recorded in `carbon-model3-reader-review-2026-09-21.md`. These checkpoints are not production deployments. The sections below preserve the earlier observations and their subsequent resolution.
 
 ## Progress this turn
 

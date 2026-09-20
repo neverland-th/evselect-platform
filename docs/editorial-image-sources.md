@@ -39,6 +39,13 @@ The user requested a more premium real photograph. `public/images/articles/porsc
 - Original image: <https://content-hub.imgix.net/1Q0ABslFM4kuJSaBwhTmd8/1da1747c5bbb6805b8cdb302c0413188/Close-up_of_Porsche_PCCB_ceramic_brakes_showing_yellow_calipers_on_Porsche_911_Turbo_S__type_992.2_?w=1308>
 - Local file: JPEG, 1308 × 818 pixels, 107,259 bytes; downloaded unchanged, no generated elements or retouching. SHA-256: `f02c0d1a40b38f9597b41d3da7397d566a9d1410c4abeb847d904bab810875e4`.
 - Rights: the Stories page credits Porsche but does not state an open reuse licence. Specific reuse permission for EVSELECT is unconfirmed. Do not label the image Creative Commons, public domain or permission obtained. Porsche Newsroom terms apply to Newsroom material and must not automatically be extended to this Stories asset.
+
+## Model 3 article cover attribution — 21 September 2026
+
+- Existing local asset: `public/images/reviews/tesla-model-3-hero.jpg`, 1280 × 852. Inspected the photograph and its retained EXIF author, Alexander Migl; it depicts the red Highland at Autofrühling Ulm, not the older-model fallback named in the downloader.
+- Original source: [Tesla Model 3 (2023) Autofrühling Ulm IMG 9282.jpg](https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg), photographed 28 April 2024 by Alexander-93 (Alexander Migl).
+- Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The existing resized image remains under that licence. Added visible author, source, licence and resizing information to the article caption.
+- The article now displays the full image at its original aspect ratio, avoiding the old 21:9 desktop crop. The caption identifies Germany and the photograph year, and does not claim the depicted trim is the current Thai version.
 - Editorial context: explanatory illustration with source credit and outbound manufacturer link; not EVSELECT photography, a road test, stocked merchandise or an endorsement. Listing cards use the site's existing image frame; the article retains the image's aspect ratio.
 - Release verification must confirm the new asset on both the article and catalog at desktop/mobile sizes and check that social image metadata points to the same file.
 

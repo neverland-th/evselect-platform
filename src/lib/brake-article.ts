@@ -5,7 +5,7 @@ export const brakeArticle = {
   subtitle: 'เสน่ห์ของเบรกระดับซูเปอร์คาร์ และความคุ้มค่าบน EV ที่ขับทุกวัน',
   description: 'Carbon Ceramic คุ้มกับ EV คันโปรดแค่ไหน? ชวนดูทั้งฟีลเบรก ฝุ่น ความสวย และค่าดูแล เทียบกับตัวเลือก Brembo และ ENDLESS พร้อมประสบการณ์จากเจ้าของ Model 3 Performance Highland',
   publishedAt: '2026-09-02',
-  updatedAt: '2026-09-20',
+  updatedAt: '2026-09-21',
   readTime: '30 นาที',
   cover: '/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg',
   coverAlt: 'ภาพถ่าย Porsche PCCB คาลิเปอร์เหลืองทองและจาน Carbon Ceramic หลังล้อ Center Lock',
