@@ -25,7 +25,7 @@ try {
     assert.ok(await article.locator('#sources a').count() >= 37);
     for (const anchor of await article.locator('nav a[href^="#"]').evaluateAll(links => links.map(a => a.hash))) assert.equal(await article.locator(anchor).count(), 1);
     const schema = await article.locator('script[type="application/ld+json"]').evaluateAll(nodes => nodes.map(node => JSON.parse(node.textContent)).find(item => item['@type'] === 'BlogPosting'));
-    assert.equal(schema.dateModified, '2026-09-19');
+    assert.equal(schema.dateModified, '2026-09-20');
     assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://evselects.com' + route);
     for (const selector of ['meta[name="description"]', 'meta[property="og:description"]', 'meta[name="twitter:description"]']) assert.equal(await page.locator(selector).getAttribute('content'), schema.description);
     await article.locator('img').evaluateAll(images => images.forEach(image => { image.loading = 'eager'; }));
