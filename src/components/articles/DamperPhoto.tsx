@@ -24,12 +24,12 @@ export default function DamperPhoto({ name }: { name: keyof typeof photos }) {
   const isScene = 'license' in photo;
   return (
     <figure data-editorial-photo={name} className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <a href={photo.href} className="block rounded-t-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700" aria-label={`ดูที่มาภาพ: ${photo.source}`}>
+      <a href={photo.href} className="block rounded-t-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700" aria-label={`ดูที่มาภาพ: ${photo.source}`} target="_blank" rel="noopener noreferrer">
         <Image src={photo.image} alt={photo.alt} loading="lazy" sizes={isScene ? '(max-width: 1024px) 100vw, 960px' : '(max-width: 640px) 100vw, 480px'} className={isScene ? 'h-auto w-full' : 'h-72 w-full bg-slate-50 object-contain p-5 sm:h-80'} />
       </a>
       <figcaption className="space-y-2 border-t border-slate-200 p-4 text-sm leading-relaxed text-slate-600">
         <p>{photo.caption}</p>
-        <p><a href={photo.href} className="font-medium text-lime-800 underline underline-offset-4">{isScene ? 'ภาพ' : 'ภาพและข้อมูลผู้ผลิต'}: {photo.source} ↗</a>{isScene && <> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" className="underline underline-offset-4">CC BY-SA 4.0</a> · ย่อขนาดและแปลงเป็น WebP ภายใต้สัญญาอนุญาตเดิม</>}</p>
+        <p><a href={photo.href} className="font-medium text-lime-800 underline underline-offset-4" target="_blank" rel="noopener noreferrer">{isScene ? 'ภาพ' : 'ภาพและข้อมูลผู้ผลิต'}: {photo.source} ↗</a>{isScene && <> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" className="underline underline-offset-4" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> · ย่อขนาดและแปลงเป็น WebP ภายใต้สัญญาอนุญาตเดิม</>}</p>
       </figcaption>
     </figure>
   );

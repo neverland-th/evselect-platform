@@ -32,7 +32,7 @@ export const brakeSources = {
   ccb: { title: 'Brembo — วัสดุ Carbon Ceramic และขอบเขตอุณหภูมิที่ผู้ผลิตอธิบาย', url: 'https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc' },
   ccbWear: { title: 'Brembo — Carbon Ceramic: การใช้งานถนนกับสนาม', url: 'https://www.bremboparts.com/europe/en/products/upgrade/carbon-ceramic' },
   ceramicPad: { title: 'Brembo — Xtra Ceramic P65017NX: ตัวอย่างผ้าเซรามิกที่ห้ามใช้กับจาน CCB', url: 'https://www.bremboparts.com/america/en/catalogue/pad/P65017NX' },
-  fluid: { title: 'Brembo — การเลือกน้ำมันเบรกให้ตรงข้อกำหนดรถ', url: 'https://asia.bremboparts.com/america/en/support/car/how-to-choose-the-right-product/which-is-the-right-brake-fluid-for-my-car-195105' },
+  fluid: { title: 'Brembo — การเลือกน้ำมันเบรกให้ตรงข้อกำหนดรถ', url: 'https://www.bremboparts.com/america/en/support/car/how-to-choose-the-right-product/which-is-the-right-brake-fluid-for-my-car-195105' },
   teslaBrakes: { title: 'Tesla Model 3 — คู่มือภาษาไทย: เบรกและ Regenerative Braking', url: 'https://www.tesla.com/ownersmanual/model3/th_th/GUID-3DFFB071-C0F6-474D-8A45-17BE1A006365.html' },
   teslaSize: { title: 'Tesla Model 3 — คู่มือภาษาไทย: ขนาดจานเบรก', url: 'https://www.tesla.com/ownersmanual/model3/th_th/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html' },
   teslaService: { title: 'Tesla Thailand — การบำรุงรักษารถ', url: 'https://www.tesla.com/th_th/support/vehicle-maintenance' },

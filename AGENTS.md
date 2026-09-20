@@ -2,9 +2,9 @@
 
 # This is NOT the Next.js you know
 
-This version has breaking changes - APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
-This block is written and re-added by `next dev` - verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
 
@@ -37,4 +37,4 @@ Passing a build, lint or HTTP check is not a substitute for reading and viewing 
 - Separate internal and external rules per the user's latest correction: internal page/fragment links stay in the same tab; external HTTP(S) links use `target="_blank" rel="noopener noreferrer"`. Resolve the host, so absolute EVSELECT URLs remain internal. Preserve mailto/tel behavior. Use descriptive contextual anchors, exact supporting external sources, and no nested anchors or HTML in metadata/alt text. This supersedes the earlier blanket new-tab instruction.
 - `/sitemap_index.xml` is the canonical index pointing at the generated `/sitemap.xml`. `/sitemap_indexl.xml` is a compatibility alias for the exact URL requested by the user. Both return XML 200. Robots must advertise the canonical index. Keep only published canonical pages in the generated sitemap; preparation/noindex pages remain excluded.
 - Run `npm run test:content-links`, the build-time content audit, and post-deployment `BASE_URL=https://evselects.com npm run audit:content`. Do not report successful Google retrieval/indexing without Search Console evidence.
-- Known legacy link/heading issues are inventoried, not declared fixed: a documented fingerprint baseline permits only unchanged pages during infrastructure-only releases. New or changed pages with findings fail; `--strict` fails on every finding. Do not regenerate a baseline to bypass review. The full rendered reader/image review above remains mandatory for content changes.
+- Publication uses strict link/heading checks: every finding fails, including on unchanged pages. The earlier fingerprint baseline is a historical record, not an exception for new content releases. Do not regenerate or use it to bypass review. The full rendered reader/image review above remains mandatory for content changes.

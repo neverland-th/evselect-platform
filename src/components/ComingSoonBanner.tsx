@@ -20,7 +20,7 @@ export default function ComingSoonBanner() {
         <div className={styles.copy}>
           <div className={styles.brand}>
             <span className={styles.selector} aria-hidden="true"><i /><i /></span>
-            <span>EVSELECT</span>
+            <span><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link></span>
           </div>
           <p className={styles.eyebrow}><span aria-hidden="true" />COMING SOON</p>
           <h2 id="coming-soon-heading" className={styles.title}>

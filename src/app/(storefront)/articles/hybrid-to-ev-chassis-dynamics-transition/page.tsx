@@ -119,6 +119,7 @@ export default function HybridToEVChassisDynamicsPage() {
           เมื่อคุณก้าวข้ามจากรถยนต์ไฮบริด (HEV / PHEV) สู่รถยนต์ไฟฟ้าแบตเตอรี่ 100% (Pure BEV) ความแตกต่างไม่ได้มีเพียงแค่การเสียบปลั๊กแทนการเติมน้ำมัน แต่คือการปฏิวัติโครงสร้างทางวิศวกรรมครั้งใหญ่: จากแชสซีแบบดั้งเดิมที่หน้าหนัก สู่ <strong>Dedicated Skateboard Platform</strong> บาลานซ์ 50:50, อัตราตอบสนองแรงบิดระดับ <strong>10 มิลลิวินาที</strong>, และความท้าทายในการจูนเบรก <strong>Brake-by-Wire</strong>
         </p>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">ช่วงที่เปลี่ยนจากไฮบริดมาใช้ EV เรื่องที่ควรทำความเข้าใจเพิ่มคือ <Link href="/articles/ev-carbon-ceramic-brakes-guide#energy" className="font-semibold text-lime-800 underline underline-offset-4">ความสัมพันธ์ระหว่าง Regen กับภาระของเบรกเสียดทาน</Link> เพราะแรงหน่วงที่รู้สึกไม่ได้มาจากผ้าเบรกเพียงอย่างเดียว</p>
 
       {/* 3. Executive Verdict / Summary Box */}
       <div className="bg-slate-900 text-white border border-slate-800 p-6 md:p-8 rounded-3xl shadow-xl mb-12">
@@ -194,9 +195,9 @@ export default function HybridToEVChassisDynamicsPage() {
 
       {/* 5. Key Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปประเด็นเปลี่ยนผ่านที่ผู้ขับขี่ต้องรู้ (Transition Summary)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -244,7 +245,7 @@ export default function HybridToEVChassisDynamicsPage() {
               <div className="inline-block bg-slate-100 text-slate-800 font-bold text-xs px-3 py-1 rounded-full mb-3">
                 1. Traditional HEV (Full Hybrid)
               </div>
-              <h4 className="font-black text-slate-900 text-base mb-2">โครงสร้างดั้งเดิมเพิ่มมอเตอร์</h4>
+              <h3 className="font-black text-slate-900 text-base mb-2">โครงสร้างดั้งเดิมเพิ่มมอเตอร์</h3>
               <ul className="text-xs text-slate-600 space-y-2 leading-relaxed">
                 <li>• แบตเตอรี่ขนาดเล็ก <strong>1.0 – 2.0 kWh</strong> วางใต้เบาะหลัง</li>
                 <li>• เครื่องยนต์ + เกียร์ e-CVT + มอเตอร์ 2 ตัว อัดแน่นอยู่ในห้องเครื่องด้านหน้า</li>
@@ -257,7 +258,7 @@ export default function HybridToEVChassisDynamicsPage() {
               <div className="inline-block bg-blue-100 text-blue-800 font-bold text-xs px-3 py-1 rounded-full mb-3">
                 2. Plug-in Hybrid (PHEV)
               </div>
-              <h4 className="font-black text-slate-900 text-base mb-2">ความซับซ้อนสูงสุด น้ำหนักสองต่อ</h4>
+              <h3 className="font-black text-slate-900 text-base mb-2">ความซับซ้อนสูงสุด น้ำหนักสองต่อ</h3>
               <ul className="text-xs text-slate-600 space-y-2 leading-relaxed">
                 <li>• แบตเตอรี่ขนาดกลาง <strong>12 – 25 kWh</strong> เพิ่มน้ำหนัก +250 ถึง +400 กก.</li>
                 <li>• มีทั้งระบบน้ำมัน (ถังน้ำมัน, ท่อไอเสีย) และระบบไฟฟ้าแรงดันสูง</li>
@@ -270,7 +271,7 @@ export default function HybridToEVChassisDynamicsPage() {
               <div className="inline-block bg-lime-500 text-black font-bold text-xs px-3 py-1 rounded-full mb-3">
                 3. Dedicated Pure BEV
               </div>
-              <h4 className="font-black text-slate-900 text-base mb-2">Skateboard Platform แท้</h4>
+              <h3 className="font-black text-slate-900 text-base mb-2">Skateboard Platform แท้</h3>
               <ul className="text-xs text-slate-700 space-y-2 leading-relaxed">
                 <li>• แบตเตอรี่ <strong>60 – 120 kWh</strong> เป็นแผ่นเรียบใต้ท้องรถ</li>
                 <li>• มอเตอร์ขนาดกะทัดรัดติดตั้งบนซับเฟรมหน้า-หลัง ไร้เพลากลางและท่อไอเสีย</li>
@@ -529,9 +530,9 @@ export default function HybridToEVChassisDynamicsPage() {
           </p>
 
           <div className="my-8 not-prose bg-slate-900 text-white p-6 sm:p-8 rounded-3xl">
-            <h4 className="text-lg font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-extrabold text-slate-900 mb-4 flex items-center gap-2">
               <Cpu className="w-5 h-5" /> กลไกการทำงานของ Brake Blending System
-            </h4>
+            </h3>
             <div className="space-y-4 text-xs sm:text-sm text-slate-300">
               <div className="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
                 <span className="font-bold text-white block mb-1">1. แป้นเหยียบตัดขาดจากระบบไฮดรอลิก (Decoupled Pedal)</span>
@@ -634,7 +635,7 @@ export default function HybridToEVChassisDynamicsPage() {
             <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">1</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-sm">การควบคุมน้ำหนักเท้าขวา (Modulate Throttle)</h4>
+                <h3 className="font-bold text-slate-900 text-sm">การควบคุมน้ำหนักเท้าขวา (Modulate Throttle)</h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   ในรถยนต์ไฟฟ้า การกดคันเร่งเพียง 20% สามารถสร้างแรงดึงเท่ากับการกดมิดในรถสันดาป ให้ฝึกการขยับข้อเท้าอย่างละเอียดแบบมิลลิเมตรเพื่อความนุ่มนวลของผู้โดยสาร
                 </p>
@@ -644,7 +645,7 @@ export default function HybridToEVChassisDynamicsPage() {
             <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">2</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-sm">การกะระยะเบรกและการเว้นระยะห่าง</h4>
+                <h3 className="font-bold text-slate-900 text-sm">การกะระยะเบรกและการเว้นระยะห่าง</h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   เนื่องจากรถมีน้ำหนักเพิ่มขึ้น 300-500 กิโลกรัม ในช่วงความเร็วสูง (&gt; 120 km/h) ระยะเบรกจะยาวขึ้นกว่ารถคันเดิม ควรเผื่อระยะเบรกเพิ่มขึ้น 10-15%
                 </p>
@@ -654,7 +655,7 @@ export default function HybridToEVChassisDynamicsPage() {
             <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">3</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-sm">การปรับตัวกับความเงียบและเสียงยาง</h4>
+                <h3 className="font-bold text-slate-900 text-sm">การปรับตัวกับความเงียบและเสียงยาง</h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   เมื่อไม่มีเสียงเครื่องยนต์ คุณจะได้ยินเสียงลมปะทะและเสียงยางบดถนนชัดเจนขึ้น การเลือกยางที่มีโฟมซับเสียง (Acoustic Foam) และการติดตั้งพรมปูพื้น TPE เข้ารูปจะช่วยลดเสียงสะท้อนในห้องโดยสารได้อย่างเห็นผล
                 </p>
@@ -673,7 +674,7 @@ export default function HybridToEVChassisDynamicsPage() {
                 <Sparkles className="w-4 h-4" /> PRE-LAUNCH • ยังไม่เปิดจำหน่าย
               </div>
               <h3 className="text-lg sm:text-xl font-black text-white mb-3">
-                หมวดอุปกรณ์ที่ EVSELECT กำลังศึกษา
+                หมวดอุปกรณ์ที่ <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> กำลังศึกษา
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mb-6">
                 ตัวอย่างหมวดที่อยู่ระหว่างรวบรวมข้อมูลสำหรับการใช้งานในไทย สินค้ายังไม่เปิดจำหน่าย:

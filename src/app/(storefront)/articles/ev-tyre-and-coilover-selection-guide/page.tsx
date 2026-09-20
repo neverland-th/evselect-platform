@@ -105,7 +105,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
           </div>
 
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Technical Level</span>
+            <span className="text-xs text-slate-600 font-medium"><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Technical Level</span>
             <span className="text-sm font-black text-lime-700">Expert / Comprehensive</span>
           </div>
         </div>
@@ -135,6 +135,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
         <ImageCredit author="TaurusEmerald" source="https://commons.wikimedia.org/wiki/File:Audi_Wheel_with_Michelin_Pilot_Sport_All_Season_4_Tire.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" className="-mt-6 mb-10" />
   
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">ก่อนเลือกล้อ ยาง และความสูงรถให้ทำงานร่วมกัน ควรเข้าใจ <Link href="/articles/ev-damper-tuning-bump-rebound-guide#spring-height" className="font-semibold text-lime-800 underline underline-offset-4">Spring rate, Preload และระยะทำงานของช่วงล่าง</Link> แยกจากกัน ไม่ใช้จำนวนคลิกโช้คแก้ทุกอาการ</p>
 
       {/* 3. Executive Verdict & Core Decision Matrix Card */}
       <div className="bg-slate-900 text-white border border-slate-800 p-6 md:p-8 rounded-3xl shadow-xl mb-14">
@@ -322,7 +323,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
             <span className="p-2 bg-lime-50 text-lime-700 rounded-xl">
               <Award className="w-5 h-5" />
             </span>
-            ตารางแนะนำยางสำหรับรถ EV (EVSELECT Recommended)
+            ตารางแนะนำยางสำหรับรถ EV (<Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Recommended)
           </div>
           <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
             <table className="w-full text-left text-xs sm:text-sm border-collapse">
@@ -580,7 +581,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
             <div className="px-2.5 py-1 bg-slate-100 text-slate-800 text-xs font-bold rounded-lg inline-block">
               1-Way Adjustable
             </div>
-            <h4 className="font-bold text-slate-900 text-sm">ปรับรวม 1 วาล์ว (Rebound &amp; Bump)</h4>
+            <h3 className="font-bold text-slate-900 text-sm">ปรับรวม 1 วาล์ว (Rebound &amp; Bump)</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               การหมุนปุ่มปรับเพียงจุดเดียวจะแปรผันทั้งแรงดึง (Rebound) และแรงยุบ (Bump) พร้อมกัน เหมาะสำหรับผู้เริ่มต้นใช้งานประจำวัน ปรับง่าย ไม่ซับซ้อน (เช่น <em>Tein Street Advance Z, BC Racing BR</em>)
             </p>
@@ -590,7 +591,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
             <div className="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-lg inline-block">
               2-Way Adjustable
             </div>
-            <h4 className="font-bold text-slate-900 text-sm">ปรับแยกอิสระ 2 วาล์ว (Rebound &amp; Bump)</h4>
+            <h3 className="font-bold text-slate-900 text-sm">ปรับแยกอิสระ 2 วาล์ว (Rebound &amp; Bump)</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               แยกปุ่มปรับจังหวะยืดและจังหวะยุบออกจากกันอย่างเด็ดขาด ช่วยให้สามารถเซ็ตติ้ง <strong>Low-Speed Rebound แข็ง</strong> เพื่อคุมตัวถังนิ่ง และ <strong>Low-Speed Bump นุ่ม</strong> ซับรอยต่อสะพานได้พร้อมกัน (เช่น <em>KW Variant 3 / V3 Levelling, Öhlins DFV</em>)
             </p>
@@ -600,7 +601,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
             <div className="px-2.5 py-1 bg-lime-100 text-lime-800 text-xs font-bold rounded-lg inline-block">
               3-Way Adjustable
             </div>
-            <h4 className="font-bold text-slate-900 text-sm">ปรับแยก 3 วาล์วพร้อมซับแทงค์ (Sub-tank)</h4>
+            <h3 className="font-bold text-slate-900 text-sm">ปรับแยก 3 วาล์วพร้อมซับแทงค์ (Sub-tank)</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
               ปรับแยก Rebound, Low-Speed Bump และ High-Speed Bump มีกระบอกซับแทงค์ระบายความร้อน เหมาะสำหรับผู้ที่ต้องการความสมบูรณ์แบบสูงสุดหรือใช้งานในสนามแข่ง Trackday (เช่น <em>KW Clubsport 3-Way, BC Racing ER</em>)
             </p>
@@ -645,7 +646,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
 
         <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl flex items-center gap-3 text-xs sm:text-sm text-emerald-900 font-medium">
           <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-          <span><strong>กฎเหล็กความสูง EVSELECT:</strong> โหลดลงได้สูงสุดไม่เกิน <strong>15 – 25 มม.</strong> จากสแตนดาร์ดโรงงาน และต้องรักษาระยะ Ground Clearance รวมไม่ต่ำกว่า 135–140 มม. เสมอ</span>
+          <span><strong>กฎเหล็กความสูง <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link>:</strong> โหลดลงได้สูงสุดไม่เกิน <strong>15 – 25 มม.</strong> จากสแตนดาร์ดโรงงาน และต้องรักษาระยะ Ground Clearance รวมไม่ต่ำกว่า 135–140 มม. เสมอ</span>
         </div>
       </section>
 
@@ -739,7 +740,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
         <div className="flex items-center gap-3 border-b border-slate-200 pb-3">
           <span className="w-2.5 h-8 bg-lime-500 rounded-full inline-block" />
           <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
-            6. 10 ข้อเช็คลิสต์ก่อนรับรถออกจากศูนย์บริการช่วงล่าง EVSELECT
+            6. 10 ข้อเช็คลิสต์ก่อนรับรถออกจากศูนย์บริการช่วงล่าง <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link>
           </h2>
         </div>
 
@@ -792,7 +793,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/20 border border-lime-500/40 text-lime-400 text-xs font-bold rounded-full">
-              <Sparkles className="w-3.5 h-3.5" /> EVSELECT Suspension Engineering
+              <Sparkles className="w-3.5 h-3.5" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Suspension Engineering
             </div>
             <h3 className="text-lg sm:text-xl font-black text-white">
               อ่านต่อ: สูตรเซ็ตติ้งช่วงล่างรับมือถนนเมืองไทย คอสะพาน และน้ำท่วมขัง
@@ -819,9 +820,9 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
           className="inline-flex items-center gap-1.5 text-slate-600 hover:text-lime-600 font-semibold transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          กลับสู่หน้ารวมบทความ EVSELECT
+          กลับสู่หน้ารวมบทความ EV
         </Link>
-        <span>© 2026 EVSELECT. สงวนลิขสิทธิ์บทความวิชาการเชิงวิศวกรรมยานยนต์</span>
+        <span>© 2026 <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link>. สงวนลิขสิทธิ์บทความวิชาการเชิงวิศวกรรมยานยนต์</span>
       </footer>
     </article>
   );

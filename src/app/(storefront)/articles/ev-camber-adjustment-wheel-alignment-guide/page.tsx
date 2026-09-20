@@ -145,9 +145,9 @@ export default function EVCamberAdjustmentGuidePage() {
             <div className="w-7 h-7 rounded-lg bg-lime-500 flex items-center justify-center text-slate-950 font-black text-xs">
               EX
             </div>
-            <h3 className="text-base font-bold text-slate-900 m-0">
+            <h2 className="text-base font-bold text-slate-900 m-0">
               ข้อสรุปเชิงวิศวกรรมสำหรับผู้ใช้รถ EV (Executive Summary)
-            </h3>
+            </h2>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700 mb-0 pl-0 list-none">
             <li className="flex items-start gap-2">
@@ -169,6 +169,7 @@ export default function EVCamberAdjustmentGuidePage() {
           </ul>
         </div>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">ถ้าเพิ่งเปลี่ยนโช้คหรือปรับความสูงรถ ควรดู <Link href="/articles/ev-damper-tuning-bump-rebound-guide#baseline" className="font-semibold text-lime-800 underline underline-offset-4">สิ่งที่ต้องตรวจก่อนเริ่มปรับช่วงล่าง</Link> ร่วมกับการตั้งศูนย์ เพราะอาการรถไม่ได้ขึ้นอยู่กับมุมแคมเบอร์อย่างเดียว</p>
 
       {/* 3. Article Content Body */}
       <div className="space-y-12">
@@ -241,10 +242,10 @@ export default function EVCamberAdjustmentGuidePage() {
           </div>
 
           <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl">
-            <h4 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
+            <h3 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
               <Activity className="w-4 h-4 text-lime-400" />
               กลไก Dynamic Camber: ทำไมองศาล้อขณะเลี้ยวจริงถึงไม่เท่ากับตอนจอดนิ่งบนแท่นตั้งศูนย์?
-            </h4>
+            </h3>
             <p className="text-sm text-slate-300 mb-4 leading-relaxed">
               มุมเอียงของหน้ายางที่แนบกับพื้นถนนขณะรถกำลังเข้าโค้งจริงๆ ไม่ใช่ตัวเลของศานิ่งๆ ที่ตั้งไว้ตอนจอดบนลิฟต์ตั้งศูนย์ แต่เป็นผลลัพธ์จากการทำงานประสานกันของ 5 ปัจจัยทางพลศาสตร์ช่วงล่าง:
             </p>
@@ -290,7 +291,7 @@ export default function EVCamberAdjustmentGuidePage() {
           <div className="bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl overflow-hidden">
             <div className="text-center mb-6">
               <span className="text-xs font-extrabold text-slate-900 uppercase tracking-widest bg-lime-500/10 border border-lime-500/20 px-3 py-1 rounded-full">
-                EVSELECT Engineering Vector Simulation
+                <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Engineering Vector Simulation
               </span>
               <h3 className="text-lg sm:text-xl font-black text-white mt-2 mb-1">
                 Tyre Contact Patch Deformation &amp; Pressure Distribution Under 1.0g Lateral Load
@@ -396,7 +397,7 @@ export default function EVCamberAdjustmentGuidePage() {
                 <span className="text-slate-900 font-bold">สรุปผลการทดสอบ:</span> แคมเบอร์ลบที่ถูกต้องจะเปลี่ยนเป็น <strong>0.0° สัมพันธ์กับพื้นถนน (Effective Dynamic Zero)</strong> เมื่อตัวถังเอียงตัวในโค้ง
               </div>
               <div className="text-slate-500 font-mono">
-                Source: EVSELECT Kinematics Simulation Laboratory
+                Source: <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Kinematics Simulation Laboratory
               </div>
             </div>
           </div>
@@ -592,7 +593,7 @@ export default function EVCamberAdjustmentGuidePage() {
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
-              6. อุปกรณ์เสริมและชิ้นส่วนปรับตั้งแคมเบอร์ตรงรุ่น EVSELECT
+              6. อุปกรณ์เสริมและชิ้นส่วนปรับตั้งแคมเบอร์ตรงรุ่น <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link>
             </h2>
           </div>
 
@@ -602,28 +603,28 @@ export default function EVCamberAdjustmentGuidePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:border-lime-400 transition-colors">
-              <h4 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
+              <h3 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
                 <span>Adjustable Front Upper Control Arms</span>
                 <span className="text-xs text-lime-700 bg-lime-50 border border-lime-200 px-2 py-0.5 rounded-full font-bold">ตรงรุ่น EV</span>
-              </h4>
+              </h3>
               <p className="text-xs text-slate-600 mb-3">
                 ปีกนกบนหน้าปรับแคมเบอร์และแคสเตอร์ได้ ผลิตจากอลูมิเนียมเกรดอากาศยาน 6061-T6 พร้อมบูชโพลียูรีเทนทนแรงบิดสูง
               </p>
-              <Link href="/" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
-                ดูปีกนกปรับแคมเบอร์ตรงรุ่น <ArrowRight className="w-3.5 h-3.5" />
+              <Link href="/articles/ev-damper-tuning-bump-rebound-guide#ev-fitment" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
+                ตรวจความเข้ากันได้ก่อนเปลี่ยนช่วงล่าง <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:border-lime-400 transition-colors">
-              <h4 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
+              <h3 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
                 <span>Rear Adjustable Camber &amp; Toe Arms</span>
                 <span className="text-xs text-lime-700 bg-lime-50 border border-lime-200 px-2 py-0.5 rounded-full font-bold">แก้ปัญหายางกินใน</span>
-              </h4>
+              </h3>
               <p className="text-xs text-slate-600 mb-3">
                 อาร์มปรับแคมเบอร์และมุมโทหลัง ช่วยดึงล้อหลังให้กลับมาอยู่ในค่าสเปกมาตรฐานหลังจากโหลดเตี้ย หรือปรับเพิ่มความเกาะถนน
               </p>
-              <Link href="/" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
-                ดูชุดอาร์มหลังปรับมุมล้อ <ArrowRight className="w-3.5 h-3.5" />
+              <Link href="/articles/ev-damper-tuning-bump-rebound-guide#baseline" className="text-xs font-bold text-lime-700 hover:text-lime-800 flex items-center gap-1">
+                สิ่งที่ควรตรวจก่อนปรับช่วงล่างและตั้งศูนย์ <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
@@ -638,7 +639,7 @@ export default function EVCamberAdjustmentGuidePage() {
             EV
           </div>
           <div>
-            <div className="text-xs font-bold text-slate-900">EVSELECT Editorial &amp; Engineering</div>
+            <div className="text-xs font-bold text-slate-900"><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Editorial &amp; Engineering</div>
             <div className="text-[11px] text-slate-500">เผยแพร่ภายใต้มาตรฐานวิศวกรรมยานยนต์ OptimumG</div>
           </div>
         </div>

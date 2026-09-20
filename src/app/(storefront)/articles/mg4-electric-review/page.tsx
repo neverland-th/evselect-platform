@@ -149,7 +149,7 @@ export default function MG4ElectricReviewPage() {
 
           {/* Header Score Pill */}
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Score</span>
+            <span className="text-xs text-slate-600 font-medium"><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Score</span>
             <span className="text-base font-black text-lime-700">8.9</span>
             <span className="text-xs text-slate-400">/ 10</span>
           </div>
@@ -169,6 +169,7 @@ export default function MG4ElectricReviewPage() {
           ผ่าลึกสมรรถนะของ MG4 Electric แฮทช์แบ็กไฟฟ้าขวัญใจสายซิ่ง ตั้งแต่รุ่น Standard แบตเตอรี่ 49 kWh, Long Range 540 km ไปจนถึงตัวแรง XPOWER มอเตอร์คู่ 435 แรงม้า 0-100 ใน 3.8 วินาที พร้อมบทวิเคราะห์ช่วงล่าง Five-Link บนถนนเมืองไทย
         </p>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">ถ้ากำลังดู MG4 เพื่อใช้ขับประจำวันควบคู่กับวันลงสนาม ลองอ่าน <Link href="/articles/ev-damper-tuning-bump-rebound-guide#character-and-roads" className="font-semibold text-lime-800 underline underline-offset-4">ทำไมโช้คสำหรับถนนกับสนามจึงมีโจทย์ต่างกัน</Link> เพื่อเตรียมคำถามก่อนเลือกช่วงล่าง ไม่ตัดสินจากชื่อแบรนด์อย่างเดียว</p>
 
       {/* 3. Hero Image Banner (LCP Priority) */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
@@ -196,7 +197,7 @@ export default function MG4ElectricReviewPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
             <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-600" /> EVSELECT Verdict
+              <Award className="w-4 h-4 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Verdict
             </div>
             <div className="text-4xl font-black text-slate-900 flex items-baseline gap-2">
               8.9 <span className="text-base font-normal text-slate-500">/ 10</span>
@@ -243,9 +244,9 @@ export default function MG4ElectricReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -555,7 +556,7 @@ export default function MG4ElectricReviewPage() {
           {/* Performance Real Test Box */}
           <div className="not-prose bg-slate-900 text-white p-6 sm:p-7 rounded-2xl border border-slate-800 my-6 shadow-md">
             <div className="text-xs text-lime-400 font-extrabold uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (EVSELECT Real Test Data)
+              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (<Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Real Test Data)
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
@@ -651,19 +652,19 @@ export default function MG4ElectricReviewPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ BYD Dolphin</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ BYD Dolphin</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 MG4 เหนือกว่าชัดเจนเรื่องการทรงตัว แชสซี และช่วงล่าง 5-Link ที่เข้าโค้งได้คมและนิ่งกว่า ขณะที่ Dolphin ได้เปรียบเรื่องความนุ่มในเมือง
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ ORA Good Cat</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ ORA Good Cat</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 MG4 ชนะเรื่องการชาร์จ DC 140 kW ที่เร็วกว่าเท่าตัว และช่วงล่างหลังอิสระที่ซับแรงกระแทกได้เนียนกว่าคานแข็ง
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">ความคุ้มค่าบนถนนไทย</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">ความคุ้มค่าบนถนนไทย</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 ด้วยราคาเริ่มต้น 5.69 แสนบาท MG4 เป็นรถ EV ขับเคลื่อนล้อหลังที่มอบความสนุกในการขับขี่สูงสุดต่อเม็ดเงินที่จ่ายไป
               </p>
@@ -796,10 +797,10 @@ export default function MG4ElectricReviewPage() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/#vehicle-finder"
+                  href="/articles?category=reviews"
                   className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-3 rounded-full border border-slate-700 transition-all"
                 >
-                  <span>ค้นหาตามรุ่นรถ</span>
+                  <span>ดูรีวิวรถ EV แต่ละรุ่น</span>
                 </Link>
               </div>
             </div>
@@ -890,7 +891,7 @@ export default function MG4ElectricReviewPage() {
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               <strong>MG4 Long Range V (769,900 – 889,900 ฿)</strong> คือรุ่นที่ลงตัวที่สุดสำหรับคนรักการขับขี่ ได้แบตเตอรี่ใหญ่ ชาร์จไว 140 kW และความสนุกของระบบขับหลังเต็มพิกัด
@@ -912,7 +913,7 @@ export default function MG4ElectricReviewPage() {
           <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
             <div>
               <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                <Scale className="w-5 h-5 text-lime-600" /> EVSELECT Rating Breakdown
+                <Scale className="w-5 h-5 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Rating Breakdown
               </h3>
               <p className="text-xs text-slate-500 mt-1">การให้คะแนนตามมาตรฐานการทดสอบบนสภาพถนนประเทศไทย</p>
             </div>

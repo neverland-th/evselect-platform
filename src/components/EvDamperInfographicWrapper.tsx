@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 
 const EvDamperInfographic = dynamic(
-  () => import('./EvDamperInfographic'),
+  () => import('./EvDamperBasics'),
   {
     ssr: false,
     loading: () => (

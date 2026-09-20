@@ -142,6 +142,7 @@ export default function EVBatteryCareArticle() {
           แบตเตอรี่คือหัวใจสำคัญและชิ้นส่วนที่มีมูลค่าสูงที่สุดของรถยนต์ไฟฟ้า การดูแลรักษาอย่างถูกวิธีไม่เพียงช่วยยืดอายุการใช้งานให้ทนทาน แต่ยังช่วยคงมูลค่าของตัวรถไว้ได้นานที่สุด
         </p>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">สำหรับคนใช้ Tesla Model 3 เราแยก <Link href="/articles/tesla-model-3-highland-review#charging" className="font-semibold text-lime-800 underline underline-offset-4">คำแนะนำเรื่องขีดจำกัดการชาร์จตามข้อมูล Tesla</Link> ไว้อีกบทความ รถต่างรุ่นหรือต่างแบตเตอรี่ต้องยึดคู่มือของคันนั้น ไม่ใช้เปอร์เซ็นต์เดียวกันทั้งหมด</p>
 
       {/* 3. Featured Image */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-14 border border-slate-200 bg-slate-100 shadow-md">
@@ -156,7 +157,7 @@ export default function EVBatteryCareArticle() {
         </p>
 
         <p className="text-slate-700 leading-relaxed text-base sm:text-base">
-          วันนี้ทีมบรรณาธิการ <strong>EVSELECT</strong> ขอแนะนำ 5 เทคนิคสำคัญที่คุณสามารถทำตามได้ง่ายๆ ในชีวิตประจำวัน เพื่อถนอมแบตเตอรี่รถยนต์ไฟฟ้าคันโปรดของคุณให้อยู่ในสภาพสมบูรณ์และใช้งานได้ยาวนานเกิน 10 ปี
+          วันนี้ทีมบรรณาธิการ <strong><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link></strong> ขอแนะนำ 5 เทคนิคสำคัญที่คุณสามารถทำตามได้ง่ายๆ ในชีวิตประจำวัน เพื่อถนอมแบตเตอรี่รถยนต์ไฟฟ้าคันโปรดของคุณให้อยู่ในสภาพสมบูรณ์และใช้งานได้ยาวนานเกิน 10 ปี
         </p>
 
         <hr className="border-slate-200 my-10" />
@@ -228,15 +229,15 @@ export default function EVBatteryCareArticle() {
           {/* Sunroof Shade Accessory Card */}
           <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 my-6 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
             <div className="relative w-full sm:w-1/3 h-36 rounded-2xl overflow-hidden shrink-0 bg-slate-200 border border-slate-200">
-              <div className="w-full h-64 bg-slate-200 flex items-center justify-center rounded-2xl border border-slate-300 my-8"><span className="text-slate-500 font-medium">ภาพประกอบ: ม่านบังแดดหลังคาแก้วพาโนรามา EVSELECT</span></div>
+              <div className="w-full h-64 bg-slate-200 flex items-center justify-center rounded-2xl border border-slate-300 my-8"><span className="text-slate-500 font-medium">ภาพประกอบ: ม่านบังแดดหลังคาแก้วพาโนรามา <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link></span></div>
               <div className="absolute top-2.5 left-2.5 bg-lime-500 text-black text-[10px] font-black px-2 py-0.5 rounded">
                 Must-Have Item
               </div>
             </div>
             <div className="flex-1 space-y-2 text-center sm:text-left">
-              <h4 className="text-base font-bold text-slate-900 m-0">
+              <h3 className="text-base font-bold text-slate-900 m-0">
                 กำลังศึกษาม่านบังแดดหลังคาพาโนรามาสำหรับรถ EV
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-slate-600 m-0 leading-relaxed">
                 สินค้ายังไม่เปิดจำหน่าย เรากำลังรวบรวมข้อมูลรุ่นรถ วัสดุ การติดตั้ง และข้อจำกัดก่อนเปิดตัว
               </p>
@@ -298,7 +299,7 @@ export default function EVBatteryCareArticle() {
         {/* Summary Card */}
         <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 my-8 shadow-sm not-prose">
           <h3 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-lime-600" /> บทสรุปจากผู้เชี่ยวชาญ EVSELECT
+            <Sparkles className="w-5 h-5 text-lime-600" /> บทสรุปจากผู้เชี่ยวชาญ <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link>
           </h3>
           <p className="text-sm text-slate-600 leading-relaxed m-0">
             เทคโนโลยีแบตเตอรี่ของรถยนต์ไฟฟ้ายุคปัจจุบันพัฒนาไปไกลมาก ผู้ผลิตส่วนใหญ่รับประกันแบตเตอรี่นานถึง <strong>8 ปี หรือ 160,000 กิโลเมตร</strong> หากคุณปรับเปลี่ยนพฤติกรรมการใช้งานเล็กน้อยตาม 5 ข้อที่แนะนำนี้ คุณจะสามารถใช้งานรถยนต์ไฟฟ้าคันโปรดของคุณได้อย่างสบายใจ แบตเตอรี่เสื่อมช้าลงอย่างเห็นได้ชัด และประหยัดค่าใช้จ่ายในระยะยาวได้อย่างยั่งยืน
@@ -341,7 +342,7 @@ export default function EVBatteryCareArticle() {
               </div>
             </div>
             <div className="p-4 space-y-2">
-              <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
+              <div className="text-[11px] text-lime-700 font-bold">รีวิวรถ EV</div>
               <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Changan Deepal S07: มอเตอร์ 258 แรงม้า ม่านบังแดดไฟฟ้าสู้แดดไทย
               </h4>
@@ -369,7 +370,7 @@ export default function EVBatteryCareArticle() {
               </div>
             </div>
             <div className="p-4 space-y-2">
-              <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
+              <div className="text-[11px] text-lime-700 font-bold">รีวิวรถ EV</div>
               <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร
               </h4>
@@ -397,7 +398,7 @@ export default function EVBatteryCareArticle() {
               </div>
             </div>
             <div className="p-4 space-y-2">
-              <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
+              <div className="text-[11px] text-lime-700 font-bold">รีวิวรถ EV</div>
               <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link
               </h4>

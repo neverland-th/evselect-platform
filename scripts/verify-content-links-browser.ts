@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
-import { publicSiteRoutes, pendingPublicRoutes } from '../src/lib/public-site-routes';
+import { publicSiteRoutes, pendingPublicRoutes, supportingPublicRoutes } from '../src/lib/public-site-routes';
 import { inspectPage } from './lib/content-links.mjs';
 
 const base = process.env.BASE_URL || 'http://127.0.0.1:4327';
@@ -14,7 +14,7 @@ const results = [];
 try {
   for (const width of [1440, 390]) {
     const context = await browser.newContext({ viewport: { width, height: 900 } });
-    for (const route of [...publicSiteRoutes, ...pendingPublicRoutes]) {
+    for (const route of [...publicSiteRoutes, ...pendingPublicRoutes, ...supportingPublicRoutes]) {
       const page = await context.newPage();
       const errors: string[] = [];
       page.on('pageerror', error => errors.push(error.message));
@@ -41,6 +41,7 @@ try {
   }
   await writeFile(path.join(output, 'results.json'), JSON.stringify({ base, checkedAt: new Date().toISOString(), scope: 'Browser-rendered visible anchors and structural checks, not full editorial review.', results }, null, 2));
   console.log(JSON.stringify({ base, pages: results.length, pageErrors: results.filter(r => r.errors.length).map(r => ({ route: r.route, errors: r.errors })), overflow: results.filter(r => r.overflow).map(r => ({ route: r.route, width: r.width })), output }, null, 2));
+  assert.deepEqual(results.filter(r => r.errors.length || r.overflow || r.structuralIssues.length).map(r => ({ route: r.route, width: r.width, errors: r.errors, overflow: r.overflow, issues: r.structuralIssues })), [], 'Rendered content/link checks failed');
 } finally { await browser.close(); }
 }
 

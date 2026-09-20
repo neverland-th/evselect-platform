@@ -151,7 +151,7 @@ export default function Zeekr009ReviewPage() {
 
           {/* Header Score Pill */}
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Score</span>
+            <span className="text-xs text-slate-600 font-medium"><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Score</span>
             <span className="text-base font-black text-lime-700">9.4</span>
             <span className="text-xs text-slate-400">/ 10</span>
           </div>
@@ -171,6 +171,7 @@ export default function Zeekr009ReviewPage() {
           เมื่อตลาดเอ็มพีวีหรูในไทยไม่ได้ผูกขาดโดยผู้เล่นจากญี่ปุ่นอีกต่อไป! เจาะลึก <strong>ZEEKR 009</strong> สเปกไทยครบทั้ง 3 รุ่นย่อย (Standard FWD, Premium AWD และ Flagship AWD) ขุมพลังสูงสุด 603 แรงม้า พร้อมช่วงล่างถุงลมอัจฉริยะ Dual Chamber, ความเงียบระดับสตูดิโอ และการทดสอบขับขี่จริงเทียบตรงตัวกับ <strong>Toyota Alphard</strong> เพื่อตอบคำถามสำคัญ: ยานยนต์ไฟฟ้าเรือธงคันนี้คือคำตอบที่ดีกว่าจริงหรือไม่?
         </p>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">ถ้าจุดที่สนใจใน ZEEKR 009 คือความสบายของผู้โดยสาร อ่านหลักการ <Link href="/articles/ev-damper-tuning-bump-rebound-guide#basics" className="font-semibold text-lime-800 underline underline-offset-4">แยกหน้าที่สปริงกับโช้คในการควบคุมตัวรถ</Link> ควบคู่กับอุปกรณ์ของรุ่นย่อยจริง เพราะชื่อระบบช่วงล่างอย่างเดียวบอกความรู้สึกทั้งหมดไม่ได้</p>
 
       {/* 3. Hero Image Banner */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
@@ -198,7 +199,7 @@ export default function Zeekr009ReviewPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
             <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-600" /> EVSELECT Verdict
+              <Award className="w-4 h-4 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Verdict
             </div>
             <div className="text-4xl font-black text-slate-900 flex items-baseline gap-2">
               9.4 <span className="text-base font-normal text-slate-500">/ 10</span>
@@ -245,9 +246,9 @@ export default function Zeekr009ReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -611,7 +612,7 @@ export default function Zeekr009ReviewPage() {
           {/* Performance Data Box */}
           <div className="not-prose bg-slate-900 text-white p-6 sm:p-7 rounded-2xl border border-slate-800 my-6 shadow-md">
             <div className="text-xs text-lime-400 font-extrabold uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (EVSELECT Real Test Data)
+              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (<Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Real Test Data)
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
@@ -757,21 +758,21 @@ export default function Zeekr009ReviewPage() {
           {/* Deep Narrative Comparison Points */}
           <div className="space-y-4 text-sm text-slate-700 mt-6">
             <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-              <h4 className="font-bold text-slate-900 text-base mb-2">1. ประสบการณ์ผู้โดยสารตอนหลัง (Passenger Experience):</h4>
+              <h3 className="font-bold text-slate-900 text-base mb-2">1. ประสบการณ์ผู้โดยสารตอนหลัง (Passenger Experience):</h3>
               <p className="leading-relaxed text-xs sm:text-sm text-slate-600">
                 เมื่อเทียบกันตัวต่อตัว เบาะ <strong>Sofaro First Class</strong> ของ ZEEKR 009 ให้ความรู้สึกโอบกระชับและรองรับสรีระได้เหนือกว่าเบาะ Ottoman ของ Alphard อย่างชัดเจน โหมดเอนนอน Eames Lounge ทำมุมเอนได้ลึกกว่าและผ่อนคลายกล้ามเนื้อได้ดีกว่าด้วยระบบนวดถุงลมแบบ Wave Massage ที่แท้จริง (ไม่ใช่ระบบมอเตอร์สั่น) นอกจากนี้ความกว้างตัวถังที่มากกว่าถึง 174 มม. ทำให้พื้นที่ช่วงไหล่และข้อศอกไม่อึดอัดเลยแม้แต่น้อย
               </p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-              <h4 className="font-bold text-slate-900 text-base mb-2">2. ความเงียบและความนุ่มนวล (NVH & Ride Refinement):</h4>
+              <h3 className="font-bold text-slate-900 text-base mb-2">2. ความเงียบและความนุ่มนวล (NVH & Ride Refinement):</h3>
               <p className="leading-relaxed text-xs sm:text-sm text-slate-600">
                 จุดที่ ZEEKR 009 ชนะขาดลอยคือ <strong>&quot;ความเงียบสนิทแบบไร้แรงสั่นสะเทือน&quot;</strong> ในขณะที่ Toyota Alphard HEV จะมีเสียงเครื่องยนต์เบนซิน 2.5 ลิตรครางเข้ามาในห้องโดยสารทุกครั้งที่กดคันเร่งเร่งแซงหรือขับขึ้นทางชัน ZEEKR 009 กลับส่งมอบพละกำลัง 603 แรงม้าแบบเงียบกริบ ไร้เสียง ไร้การสั่นสะเทือน ผสานกับช่วงล่างถุงลม Dual Chamber ที่ซับแรงสะเทือนได้นุ่มนวลกว่าช่วงล่างสปริงของ Alphard อย่างเห็นได้ชัด
               </p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-              <h4 className="font-bold text-slate-900 text-base mb-2">3. ความคุ้มค่าด้านราคาและต้นทุนการใช้งาน (Value Proposition & TCO):</h4>
+              <h3 className="font-bold text-slate-900 text-base mb-2">3. ความคุ้มค่าด้านราคาและต้นทุนการใช้งาน (Value Proposition & TCO):</h3>
               <p className="leading-relaxed text-xs sm:text-sm text-slate-600">
                 ในด้านความคุ้มค่า ZEEKR 009 สเปกไทยเปิดราคาถูกกว่า Toyota Alphard ศูนย์ไทยถึง <strong>600,000 – 900,000 บาท</strong> แต่ได้ออปชันระดับเรือธง ทั้งพละกำลังที่มากกว่าเกือบ 2.5 เท่า, ระบบเสียง YAMAHA 30 ลำโพง, จอเพดาน 17 นิ้ว OLED 3K, ช่วงล่างถุงลมอัจฉริยะ และช่วยประหยัดค่าน้ำมันได้มากกว่า <strong>50,000 – 70,000 บาทต่อปี</strong> (สำหรับการใช้งานปีละ 25,000 กม.)
               </p>
@@ -885,10 +886,10 @@ export default function Zeekr009ReviewPage() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
-            href="/contact"
+            href="/articles?category=reviews"
                     className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-3 rounded-full border border-slate-700 transition-all"
                   >
-                    <span>ค้นหาตามรุ่นรถ</span>
+                    <span>ดูรีวิวรถ EV แต่ละรุ่น</span>
                   </Link>
                 </div>
               </div>
@@ -979,7 +980,7 @@ export default function Zeekr009ReviewPage() {
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 หากคุณมองหารถตู้ผู้บริหารที่นุ่ม เงียบ แรง และคุ้มค่าที่สุดในไทย ZEEKR 009 คือคำตอบอันดับหนึ่งในคลาสหรูนี้ เลือกรุ่น <strong>Flagship AWD</strong> หากมีคนขับรถ หรือเลือกรุ่น <strong>Premium AWD</strong> หากขับเองกับครอบครัว
@@ -1001,7 +1002,7 @@ export default function Zeekr009ReviewPage() {
             <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <Scale className="w-5 h-5 text-lime-600" /> EVSELECT Rating Breakdown
+                  <Scale className="w-5 h-5 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Rating Breakdown
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">การให้คะแนนตามมาตรฐานการทดสอบบนสภาพถนนประเทศไทย</p>
               </div>

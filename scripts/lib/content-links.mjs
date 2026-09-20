@@ -58,7 +58,7 @@ export function inspectPage(html, route) {
     const global = !a.closest('main') || !!a.closest('nav,footer,header,[role="navigation"]');
     const paragraph = a.closest('p,li,td,dd');
     const context = paragraph ? textOf(paragraph) : '';
-    const contextual = !global && !!paragraph && context.length > text.length + 8 && !!target && target.path !== route;
+    const contextual = !global && !!paragraph && context.length > text.length + 8 && !!target && target.path.startsWith('/articles/') && target.path !== route;
     const scope = global ? 'navigation' : contextual ? 'contextual-candidate' : 'body-navigation';
     const openTarget = a.getAttribute('target') || '';
     const rel = a.getAttribute('rel') || '';
@@ -91,7 +91,7 @@ export function inspectPage(html, route) {
   }
   visit(document.body);
   const contextual = links.filter(link => link.scope === 'contextual-candidate');
-  if (route.startsWith('/articles/') && !contextual.length) add('no-contextual-link', 'No inline contextual internal-link candidate in the article body');
+  if (route.startsWith('/articles/') && !contextual.length) add('no-contextual-link', 'No inline link to another relevant article; homepage, downloads and navigation do not count');
   const ids = [...document.querySelectorAll('[id],a[name]')].map(e => e.getAttribute('id') || e.getAttribute('name'));
   const mainText = textOf(document.querySelector('main') || document.body);
   const images = [...document.querySelectorAll('img')].map(e => ({ src: e.getAttribute('src'), alt: e.getAttribute('alt') }));

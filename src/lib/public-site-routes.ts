@@ -33,3 +33,8 @@ export const publicSiteRoutes = [
 export const pendingPublicRoutes = [
   '/about', '/contact', '/editorial-policy', '/privacy', '/terms', '/warranty',
 ] as const;
+
+// Linked reader tools are public but deliberately noindex, not editorial sitemap entries.
+export const supportingPublicRoutes = [
+  '/downloads/evselect-damper-setup-log.html',
+] as const;

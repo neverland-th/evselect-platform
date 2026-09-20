@@ -102,7 +102,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
           </div>
 
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Technical Level</span>
+            <span className="text-xs text-slate-600 font-medium"><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Technical Level</span>
             <span className="text-sm font-black text-lime-700">Expert / Advanced</span>
           </div>
         </div>
@@ -121,6 +121,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
           ถอดรหัสฟิสิกส์ยานยนต์ขั้นสูง: ทำไมช่วงล่าง OEM ของรถยนต์ไฟฟ้าที่หนักกว่า 2 ตันและจุดศูนย์ถ่วงต่ำ ถึงมักมีอาการ <strong>&quot;เด้ง ดีด แข็งกระด้าง หรือยัน Bump Stop&quot;</strong> เมื่อเจอรอยต่อสะพานโทลล์เวย์ คอสะพานทรุด ลูกระนาดชัน และความร้อนผิวถนนกรุงเทพฯ 65°C พร้อมสูตรการคำนวณระยะยุบ (Bump Travel), วาล์วไดเกรสซีฟ (Digressive Valving) และตารางค่าเซ็ตติ้งเฉพาะรุ่นสำหรับ BYD Seal, Tesla Model Y, MG4, Deepal S07 และ Zeekr X
         </p>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">คำว่า High-speed บนปุ่มปรับโช้คไม่ได้หมายถึงความเร็วรถ อ่าน <Link href="/articles/ev-damper-tuning-bump-rebound-guide#shaft-speed" className="font-semibold text-lime-800 underline underline-offset-4">ความเร็วรถกับความเร็วก้านโช้คต่างกันอย่างไร</Link> จะช่วยให้แยกทางเป็นคลื่นออกจากขอบรอยต่อคม ๆ ได้ชัดขึ้น</p>
 
       
       {/* 2.5 Hero Image */}
@@ -147,7 +148,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-800 pb-6 md:pb-0 md:pr-6">
             <div className="text-xs uppercase tracking-wider text-slate-400 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-400" /> EVSELECT Suspension Golden Rules
+              <Award className="w-4 h-4 text-lime-400" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Suspension Golden Rules
             </div>
             <div className="text-3xl font-black text-lime-400 flex items-baseline gap-2">
               4 กฎทอง <span className="text-sm font-normal text-slate-400">ช่วงล่าง EV เมืองไทย</span>
@@ -595,7 +596,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
             <div className="w-10 h-10 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center font-bold mb-3">
               1
             </div>
-            <h4 className="font-bold text-slate-900 text-base mb-1.5">กระบอกสแตนเลส INOX หรืออลูมิเนียมเกรดอากาศยาน</h4>
+            <h3 className="font-bold text-slate-900 text-base mb-1.5">กระบอกสแตนเลส INOX หรืออลูมิเนียมเกรดอากาศยาน</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               เลือกกระบอกช็อกอัปที่ผลิตจาก <strong>Stainless Steel เกรด INOX-LINE</strong> หรือ <strong>Forged 6061-T6 Aluminum อโนไดซ์แข็ง</strong> ซึ่งผ่านการทดสอบพ่นละอองเกลือ (Salt Spray Test) เกิน 300 ชั่วโมง ไม่เป็นสนิมตลอดอายุการใช้งาน
             </p>
@@ -605,7 +606,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
             <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-3">
               2
             </div>
-            <h4 className="font-bold text-slate-900 text-base mb-1.5">หัวเบ้าโช้คยางสังเคราะห์ (Rubber Top Mount)</h4>
+            <h3 className="font-bold text-slate-900 text-base mb-1.5">หัวเบ้าโช้คยางสังเคราะห์ (Rubber Top Mount)</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               สำหรับรถใช้งานประจำวัน แนะนำให้ใช้หัวท็อปเมาท์ยางเสริมความแข็งแกร่ง (Reinforced Rubber) หรือใช้เบ้าเดิมติดรถ <strong>หลีกเลี่ยงลูกปืน Pillowball หัวบอลเปลือย</strong> เพราะทรายและน้ำฝนจะแทรกซึมทำให้เกิดเสียงดังกุกกักและสึกหรออย่างรวดเร็ว
             </p>
@@ -615,7 +616,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
             <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-3">
               3
             </div>
-            <h4 className="font-bold text-slate-900 text-base mb-1.5">ยางกันฝุ่นและซีลปิดกั้นคราบโคลน (Full Dust Boot)</h4>
+            <h3 className="font-bold text-slate-900 text-base mb-1.5">ยางกันฝุ่นและซีลปิดกั้นคราบโคลน (Full Dust Boot)</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               ต้องติดตั้งยางกันฝุ่นคลุมแกนช็อกอัปเต็มความยาว 100% เพื่อป้องกันเศษหินดีดใส่แกนชุบโครเมียมจนเป็นรอยตามด ซึ่งเป็นสาเหตุหลักที่ทำให้น้ำมันไฮดรอลิกรั่วซึมและซีลช็อกอัพฉีกขาด
             </p>
@@ -934,7 +935,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/20 border border-lime-500/40 text-lime-400 text-xs font-bold rounded-full">
-              <Sparkles className="w-3.5 h-3.5" /> EVSELECT Suspension &amp; Fitment Hub
+              <Sparkles className="w-3.5 h-3.5" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Suspension &amp; Fitment Hub
             </div>
             <h3 className="text-lg sm:text-xl font-black text-white">
               เรียนรู้เรื่องช่วงล่าง สตรัทปรับเกลียว และยางก่อนเลือก
@@ -961,9 +962,9 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
           className="inline-flex items-center gap-1.5 text-slate-600 hover:text-lime-600 font-semibold transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          กลับสู่หน้ารวมบทความ EVSELECT
+          กลับสู่หน้ารวมบทความ EV
         </Link>
-        <span>© 2026 EVSELECT. สงวนลิขสิทธิ์บทความวิชาการเชิงวิศวกรรมยานยนต์</span>
+        <span>© 2026 <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link>. สงวนลิขสิทธิ์บทความวิชาการเชิงวิศวกรรมยานยนต์</span>
       </footer>
     </article>
   );

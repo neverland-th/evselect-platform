@@ -22,6 +22,12 @@ test('Same-page TOC and global navigation do not satisfy contextual reading path
   const result = inspectPage(page('<nav><a href="/articles/next">อ่านเรื่องโช้ค</a></nav><p>ดูหัวข้อ <a href="#spring">สปริง</a> ภายในบทความนี้</p><h2 id="spring">สปริง</h2>'), '/articles/test');
   assert.ok(result.issues.some(i => i.code === 'no-contextual-link'));
 });
+
+test('Homepage brand links and downloads do not stand in for contextual article links', () => {
+  const result = inspectPage(page('<p>บทความนี้จัดทำโดย <a href="/">EVSELECT</a> สำหรับคนใช้รถ</p><p>ส่งให้ร้านได้จาก <a href="/downloads/checklist.txt">เช็กลิสต์ก่อนซื้อโช้ค</a> ที่เตรียมไว้</p>'), '/articles/test');
+  assert.ok(result.issues.some(i => i.code === 'no-contextual-link'));
+  assert.equal(result.links.filter(l => l.scope === 'contextual-candidate').length, 0);
+});
 test('Rejects malformed XML, wrong namespace, and preview sitemap URLs', () => {
   assert.throws(() => parseSitemap('<urlset><url></urlset>', 'urlset'));
   assert.throws(() => parseSitemap('<urlset xmlns="bad"><url><loc>https://evselects.com/</loc></url></urlset>', 'urlset'));

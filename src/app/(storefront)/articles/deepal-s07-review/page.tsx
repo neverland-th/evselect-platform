@@ -157,7 +157,7 @@ export default function DeepalS07ReviewPage() {
 
           {/* Header Score Pill */}
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Score</span>
+            <span className="text-xs text-slate-600 font-medium"><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Score</span>
             <span className="text-base font-black text-lime-700">8.8</span>
             <span className="text-xs text-slate-400">/ 10</span>
           </div>
@@ -177,6 +177,7 @@ export default function DeepalS07ReviewPage() {
           เจาะลึกทุกรายละเอียดของ <strong>Changan Deepal S07</strong> เอสยูวีขุมพลังไฟฟ้า 100% สไตล์ล้ำยุค ทั้งสมรรถนะมอเตอร์หลัง 258 แรงม้า แบตเตอรี่ 66.8 – 79.97 kWh ความเร็วชาร์จ DC สูงสุด 167 kW และการทดสอบช่วงล่าง การเก็บเสียง NVH รวมถึงม่านบังแดดไฟฟ้าแท้ที่ตอบโจทย์สภาพอากาศเมืองไทยอย่างสมบูรณ์แบบ
         </p>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">ถ้าประเด็นที่สนใจใน S07 คือการโยนตัวและความสบายของผู้โดยสาร ดูวิธี <Link href="/articles/ev-damper-tuning-bump-rebound-guide#symptoms" className="font-semibold text-lime-800 underline underline-offset-4">แยกอาการเด้ง กระด้าง และโยนก่อนปรับโช้ค</Link> ได้ก่อนคุยกับร้าน โดยไม่ใช้สูตรตั้งค่าข้ามรุ่น</p>
 
       {/* 3. Hero Image Banner */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl group">
@@ -204,7 +205,7 @@ export default function DeepalS07ReviewPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
             <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-600" /> EVSELECT Verdict
+              <Award className="w-4 h-4 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Verdict
             </div>
             <div className="text-4xl font-black text-slate-900 flex items-baseline gap-2">
               8.8 <span className="text-base font-normal text-slate-500">/ 10</span>
@@ -251,9 +252,9 @@ export default function DeepalS07ReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -595,7 +596,7 @@ export default function DeepalS07ReviewPage() {
           {/* Performance Real Test Box */}
           <div className="bg-slate-900 text-white p-6 sm:p-7 rounded-2xl border border-slate-800 my-6 shadow-md">
             <div className="text-xs text-lime-400 font-extrabold uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (EVSELECT Real Test Data)
+              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (<Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Real Test Data)
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
@@ -745,10 +746,10 @@ export default function DeepalS07ReviewPage() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/#vehicle-finder"
+                  href="/articles?category=reviews"
                   className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-3 rounded-full border border-slate-700 transition-all"
                 >
-                  <span>ค้นหาตามรุ่นรถ</span>
+                  <span>ดูรีวิวรถ EV แต่ละรุ่น</span>
                 </Link>
               </div>
             </div>
@@ -835,7 +836,7 @@ export default function DeepalS07ReviewPage() {
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> EVSELECT Final Takeaway
+              <Award className="w-4 h-4" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Final Takeaway
             </div>
             <p className="text-xs sm:text-sm text-slate-200">
               หากคุณมองหา D-SUV ไฟฟ้าที่คุ้มค่าในงบ 1.1 – 1.3 ล้านบาท <strong>Deepal S07</strong> คือหนึ่งในตัวเลือกที่สมบูรณ์แบบที่สุด ม่านบังแดดไฟฟ้าและการชาร์จ DC 167 kW ตอบโจทย์การใช้งานในไทยแบบไร้ที่ติ
@@ -857,7 +858,7 @@ export default function DeepalS07ReviewPage() {
           <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
             <div>
               <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                <Scale className="w-5 h-5 text-lime-600" /> EVSELECT Rating Breakdown
+                <Scale className="w-5 h-5 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Rating Breakdown
               </h3>
               <p className="text-xs text-slate-500 mt-1">การให้คะแนนตามมาตรฐานการทดสอบบนสภาพถนนประเทศไทย</p>
             </div>

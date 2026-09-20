@@ -150,7 +150,7 @@ export default function TeslaModelY6SeaterReviewPage() {
 
           {/* Header Score Pill */}
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Score</span>
+            <span className="text-xs text-slate-600 font-medium"><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Score</span>
             <span className="text-base font-black text-lime-700">9.1</span>
             <span className="text-xs text-slate-400">/ 10</span>
           </div>
@@ -170,6 +170,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           การขยายระยะฐานล้อให้ยาวขึ้นและปรับเปลี่ยนโครงสร้างห้องโดยสารสู่เลย์เอาต์ <strong>2+2+2 เบาะ Captain Seats แถวสอง</strong> พร้อมช่องทางเดินตรงกลาง (Walkthrough) สู่แถวสาม ทำให้ <strong>Tesla Model Y L</strong> ยกระดับจากการเป็นครอสโอเวอร์สำหรับคนรุ่นใหม่ สู่รถครอบครัวตัวจริงที่ผสมผสานความคล่องตัว เทคโนโลยีล้ำสมัย และความอุ่นใจจากเครือข่าย <strong>Tesla Supercharger</strong> ในราคาต่ำกว่า 2 ล้านบาท
         </p>
       </header>
+      <p data-contextual-reading className="mb-8 text-sm leading-relaxed text-slate-600">สำหรับรถที่ต้องสลับระหว่างขับคนเดียวกับนั่งหลายคนอย่าง Model Y L ลองดู <Link href="/articles/ev-damper-tuning-bump-rebound-guide#buying-brief" className="font-semibold text-lime-800 underline underline-offset-4">ข้อมูลน้ำหนักบรรทุกและการใช้งานที่ควรบอกช่างช่วงล่าง</Link> ก่อนตัดสินใจแต่ง ไม่ใช้ความรู้สึกจากรถที่โหลดต่างกันเป็นคำตอบเดียว</p>
 
       {/* 3. Hero Banner Image (LCP Priority) */}
       <div className="relative w-full rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-950 shadow-xl group">
@@ -199,7 +200,7 @@ export default function TeslaModelY6SeaterReviewPage() {
         <a href="https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_L_004.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
           JustAnotherCarDesigner / Wikimedia Commons
         </a>{' '}
-        (CC0 1.0) ภาพประกอบจากต่างประเทศ ไม่ใช่ภาพการทดสอบของ EVSELECT
+        (CC0 1.0) ภาพประกอบจากต่างประเทศ ไม่ใช่ภาพการทดสอบของ <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link>
       </p>
 
       {/* 4. Executive Verdict & Quick Facts Grid */}
@@ -207,7 +208,7 @@ export default function TeslaModelY6SeaterReviewPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
             <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-600" /> EVSELECT Verdict
+              <Award className="w-4 h-4 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Verdict
             </div>
             <div className="text-4xl font-black text-slate-900 flex items-baseline gap-2">
               9.1 <span className="text-base font-normal text-slate-500">/ 10</span>
@@ -254,9 +255,9 @@ export default function TeslaModelY6SeaterReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -537,7 +538,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           {/* Performance Data Box */}
           <div className="not-prose bg-slate-900 text-white p-6 sm:p-7 rounded-2xl border border-slate-800 my-6 shadow-md">
             <div className="text-xs text-lime-400 font-extrabold uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (EVSELECT Real Test Data)
+              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (<Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Real Test Data)
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
@@ -724,10 +725,10 @@ export default function TeslaModelY6SeaterReviewPage() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
-            href="/contact"
+            href="/articles?category=reviews"
                     className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-3 rounded-full border border-slate-700 transition-all"
                   >
-                    <span>ค้นหาตามรุ่นรถ</span>
+                    <span>ดูรีวิวรถ EV แต่ละรุ่น</span>
                   </Link>
                 </div>
               </div>
@@ -818,7 +819,7 @@ export default function TeslaModelY6SeaterReviewPage() {
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 Tesla Model Y L คือคำตอบที่สมบูรณ์แบบที่สุดสำหรับครอบครัวไทยที่ต้องการรถ EV 6 ที่นั่ง เบาะ Captain Seats ในงบประมาณไม่เกิน 2 ล้านบาท
@@ -840,7 +841,7 @@ export default function TeslaModelY6SeaterReviewPage() {
             <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <Scale className="w-5 h-5 text-lime-600" /> EVSELECT Rating Breakdown
+                  <Scale className="w-5 h-5 text-lime-600" /> <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> Rating Breakdown
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">การให้คะแนนตามมาตรฐานการทดสอบบนสภาพถนนประเทศไทย</p>
               </div>

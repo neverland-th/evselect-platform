@@ -1,5 +1,6 @@
 import { teslaModel3 } from '@/lib/tesla-model-3';
 import Link from 'next/link';
+import BrandText from '@/components/BrandText';
 import Image from 'next/image';
 import { damperArticle } from '@/lib/damper-article';
 import { brakeArticle } from '@/lib/brake-article';
@@ -56,6 +57,27 @@ export interface ArticleItem {
 }
 
 const ALL_ARTICLES: ArticleItem[] = [
+  {
+    slug: 'ev-suspension-tuning-guide',
+    title: 'รถ EV เด้ง กระด้าง หรือโยน เริ่มตรวจอะไรก่อนเปลี่ยนโช้ค?',
+    shortTitle: 'เริ่มตรวจช่วงล่างก่อนเปลี่ยนโช้ค',
+    excerpt: 'แยกอาการก่อนซื้อโช้คสตรัทปรับเกลียว ดูตัวอย่างช่องปรับ KW V3, TEIN FLEX Z, BC Racing ER และ Öhlins DFV แล้วเตรียมโจทย์ให้ร้านโดยไม่ยึดสูตรคลิกสำเร็จรูป',
+    category: 'ระบบช่วงล่างและสมรรถนะ',
+    categorySlug: 'suspension',
+    segment: 'tuning',
+    segmentName: 'คู่มือเริ่มต้นเรื่องช่วงล่าง',
+    image: damperArticle.cover.src,
+    imageAlt: damperArticle.coverAlt,
+    imageFit: 'contain',
+    date: '2026-09-21',
+    dateDisplay: '21 ก.ย. 2569',
+    readTime: '7 นาที',
+    rating: null,
+    priceRange: 'คู่มือก่อนตัดสินใจ',
+    highlights: ['แยกอาการจากสภาพถนน', 'อ่านสเปกเป็นรุ่น ไม่เหมารวมแบรนด์'],
+    fitmentGate: 'เตรียมรุ่น ปี รุ่นย่อย ยาง และค่าตั้งเดิมก่อนคุยกับผู้ติดตั้ง',
+    brand: 'EVSELECT',
+  },
   {
     slug: 'ev-carbon-ceramic-brakes-guide',
     title: brakeArticle.title,
@@ -373,37 +395,34 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'ev-performance-driving-techniques',
-    title: 'เทคนิคการขับขี่รถ EV สมรรถนะสูง: Weight Transfer, Trail Braking และการควบคุม Instant Torque บนแทร็กและโค้ง',
-    shortTitle: 'เทคนิคขับขี่ EV สมรรถนะสูง',
-    subtitle: 'คู่มือการขับขี่สปอร์ต EV ระดับสนามแข่งตามหลักฟิสิกส์ OptimumG',
-    excerpt: 'เจาะลึกฟิสิกส์การควบคุมรถยนต์ไฟฟ้าน้ำหนัก 2+ ตัน เทคนิค Trail Braking ถ่ายเทน้ำหนักลงล้อหน้า การบริหารแรงยึดเกาะจาก Instant Torque และการแก้อาการ Understeer/Oversteer ตามหลัก OptimumG',
+    title: 'ขับ EV ให้มั่นใจ: เข้าใจการยึดเกาะ Regen และการเบรกก่อนเข้าโค้ง',
+    shortTitle: 'เข้าใจรถก่อนลองขีดจำกัด',
+    subtitle: 'แยกการใช้รถบนถนนออกจากทักษะที่ควรฝึกในสนาม',
+    excerpt: 'จุดศูนย์ถ่วงต่ำไม่ได้แปลว่าเสียหลักไม่ได้ เข้าใจข้อจำกัดของการยึดเกาะและ Regen พร้อมแหล่งอ้างอิงจากคู่มือรถ และเหตุผลที่ควรฝึก Trail Braking กับผู้สอนในสนามปิด',
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'tuning',
-    segmentName: '🏁 ไดนามิกส์ & การขับขี่ขั้นสูง',
+    segmentName: 'การควบคุมรถและความปลอดภัย',
     image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1200&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1200&auto=format&fit=crop',
     date: '2026-08-27',
     dateDisplay: '27 ส.ค. 2569',
     publishedAt: '2026-08-27',
-    author: 'EVSELECT Dynamics Lab',
-    readTime: '10 นาที',
-    rating: 9.5,
-    ratingText: 'OptimumG Dynamics Guide',
-    priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'Weight Transfer & Grip Dynamics',
+    author: 'EVSELECT',
+    readTime: '7 นาที',
+    rating: null,
+    priceRange: 'คู่มือการใช้งาน',
+    performanceText: 'การยึดเกาะและข้อจำกัดของ Regen',
     highlights: [
-      'Longitudinal Weight Transfer ในรถ 2 ตัน',
-      'Trail Braking เพื่อเพิ่ม Grip ล้อหน้า',
-      'Regen vs Hydraulic Brake Blending',
-      'การแก้อาการ Snap Oversteer ใน EV ขับหลัง'
+      'การเบรกฉุกเฉินต้องยึดคู่มือรถ',
+      'Regen ไม่ได้หน่วงเท่าเดิมทุกครั้ง',
+      'แยกถนนสาธารณะออกจากสนามฝึก'
     ],
     featured: false,
-    brand: 'OPTIMUMG DYNAMICS',
-    badge: 'Track & Dynamics Guide',
-    tags: ['OptimumG', 'Weight Transfer', 'Trail Braking', 'Instant Torque', 'Race Driving', 'EV Track Day'],
-    accessoryOpportunity: 'ยาง High Load Rating, ผ้าเบรกคาร์บอนเซรามิก, ชุดสตรัทปรับเกลียว 2-Way',
-    fitmentGate: 'ตรวจสอบพิกัดการกระจายน้ำหนักหน้า-หลัง (Weight Distribution) และค่า CG ของรถ',
+    brand: 'EVSELECT',
+    badge: 'คู่มือการควบคุมรถ',
+    tags: ['การยึดเกาะ', 'Regen', 'Trail Braking', 'ความปลอดภัย'],
+    fitmentGate: 'อ่านคู่มือระบบเบรกของรุ่นรถที่ใช้ ไม่ใช้คำแนะนำของรถต่างรุ่นแทนกัน',
   },
   {
     slug: 'hybrid-to-ev-chassis-dynamics-transition',
@@ -1106,7 +1125,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
-                    <span className="text-slate-900">{article.brand || article.category}</span>
+                    <span className="text-slate-900"><BrandText text={article.brand || article.category} /></span>
                     <span aria-hidden="true">•</span>
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
@@ -1169,7 +1188,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed max-w-2xl font-normal">
-              อ่านรีวิวรถรุ่นที่สนใจ หรือส่งคำถามให้ทีม EVSELECT ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
+              อ่านรีวิวรถรุ่นที่สนใจ หรือส่งคำถามให้ทีม <Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link> ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
             </p>
             <div className="pt-2 flex flex-wrap gap-3 text-xs text-slate-700">
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> รุ่นรถและปีผลิต</span>
@@ -1190,7 +1209,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-semibold text-sm px-6 py-3 rounded-xl border border-slate-300 transition-all text-center w-full sm:w-auto lg:w-full shadow-xs"
             >
-              <span>ส่งคำถามให้ทีม EVSELECT</span>
+              <span>ส่งคำถามให้ทีมงาน</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

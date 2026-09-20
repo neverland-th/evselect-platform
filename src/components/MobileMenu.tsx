@@ -11,8 +11,8 @@ const links = [
   { href: "/articles?category=reviews", label: "รีวิวรถ EV" },
   { href: "/#launch", label: "ติดตามการเปิดตัวสินค้า" },
   { href: "/articles", label: "บทความและคู่มือ EV" },
-  { href: "/editorial-policy", label: "นโยบายบทความ" },
-  { href: "/contact", label: "ติดต่อ EVSELECT" },
+  { href: "/editorial-policy", label: "นโยบายบทความ (กำลังจัดทำ)" },
+  { href: "/contact", label: "ติดต่อทีมงาน" },
 ];
 
 export default function MobileMenu() {
@@ -56,8 +56,8 @@ export default function MobileMenu() {
       >
         <div className={styles.heading}>
           <div>
-            <p className={styles.brand}>EVSELECT</p>
-            <h2 id={`${id}-title`}>เมนูหลัก</h2>
+            <p className={styles.brand}><Link href="/" className="underline decoration-current/30 underline-offset-4 hover:decoration-current">EVSELECT</Link></p>
+            <p id={`${id}-title`} className={styles.menuTitle}>เมนูหลัก</p>
           </div>
           <button type="button" className={styles.close} aria-label="ปิดเมนูหลัก" onClick={close} autoFocus>
             <X size={24} aria-hidden="true" />
@@ -74,7 +74,7 @@ export default function MobileMenu() {
           <div className={styles.contact}>
             <p>สินค้ายังอยู่ระหว่างเตรียมเปิดตัว บอกรุ่นรถหรือหัวข้อที่คุณอยากให้เราเริ่มก่อนได้</p>
             <a href="https://www.facebook.com/evselects" target="_blank" rel="noopener noreferrer" onClick={close} className={styles.chat}>
-              สอบถามทีม EVSELECT <ArrowUpRight size={18} aria-hidden="true" />
+              สอบถามทีมงาน <ArrowUpRight size={18} aria-hidden="true" />
             </a>
             <Link href="/contact" prefetch={false} onClick={close} className={styles.launch}>
               บอกรุ่นรถที่คุณใช้ <ChevronRight size={18} aria-hidden="true" />

@@ -6,7 +6,7 @@ import { once } from 'node:events';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { inspectPage, parseSitemap, blockingPages } from './lib/content-links.mjs';
-import { publicSiteRoutes, pendingPublicRoutes, siteOrigin } from '../src/lib/public-site-routes';
+import { publicSiteRoutes, pendingPublicRoutes, supportingPublicRoutes, siteOrigin } from '../src/lib/public-site-routes';
 
 const args = new Set(process.argv.slice(2));
 let base = (process.env.BASE_URL || 'http://127.0.0.1:4327').replace(/\/$/, '');
@@ -44,7 +44,8 @@ async function startBuiltServer() {
 
 async function main() {
   if (args.has('--build')) await startBuiltServer();
-  const routes = [...publicSiteRoutes, ...pendingPublicRoutes];
+  const noindexRoutes: readonly string[] = [...pendingPublicRoutes, ...supportingPublicRoutes];
+  const routes = [...publicSiteRoutes, ...noindexRoutes];
   const articles = (await readdir('src/app/(storefront)/articles', { withFileTypes: true }))
     .filter(e => e.isDirectory()).map(e => `/articles/${e.name}`).sort();
   assert.deepEqual(publicSiteRoutes.filter(r => r.startsWith('/articles/')).sort(), articles, 'Article route missing from sitemap allowlist');
@@ -55,11 +56,17 @@ async function main() {
     assert.doesNotMatch(response.headers.get('x-robots-tag') || '', /noindex/i, route);
     const page = inspectPage(await response.text(), route);
     assert.equal(new URL(page.canonical).href, new URL(siteOrigin + route).href, `Canonical ${route}`);
-    if ((pendingPublicRoutes as readonly string[]).includes(route)) assert.match(page.robots, /noindex/i, route);
+    if (noindexRoutes.includes(route)) assert.match(page.robots, /noindex/i, route);
     else assert.doesNotMatch(page.robots, /noindex/i, route);
     pages.push(page);
   }
   const byRoute = new Map(pages.map(p => [p.route, p]));
+  const catalog = byRoute.get('/articles');
+  assert.ok(catalog, 'Article catalog was not audited');
+  const catalogRoutes = new Set(catalog.links.flatMap(link => link.target ? [link.target.path] : []));
+  for (const route of articles) {
+    if (!catalogRoutes.has(route)) catalog.issues.push({ code: 'missing-catalog-article', detail: route });
+  }
   const extraTargets = new Map<string, number>();
   for (const page of pages) {
     for (const link of page.links) {
@@ -74,6 +81,8 @@ async function main() {
           if (!destination && response.status === 200 && response.headers.get('content-type')?.includes('text/html')) {
             destination = inspectPage(await response.text(), target);
             byRoute.set(target, destination);
+            // Discovered HTML destinations must be audited too, not only return 200.
+            pages.push(destination);
           }
         }
         if (extraTargets.get(requestPath) !== 200) page.issues.push({ code: 'broken-target', detail: `${link.text} → ${link.href} (${extraTargets.get(requestPath)})` });
@@ -113,13 +122,13 @@ async function main() {
   catch (error) { if (!args.has('--report-only')) throw error; }
   const blockers = blockingPages(pages, baseline.fingerprints, args.has('--strict'));
   const summary = {
-    pages: pages.length, published: publicSiteRoutes.length, pendingNoindex: pendingPublicRoutes.length,
+    pages: pages.length, published: publicSiteRoutes.length, pendingNoindex: pendingPublicRoutes.length, supportingNoindex: supportingPublicRoutes.length,
     links: pages.reduce((sum, p) => sum + p.links.length, 0),
     internalLinks: pages.reduce((sum, p) => sum + p.links.filter(l => l.target).length, 0),
     contextualCandidates: pages.reduce((sum, p) => sum + p.links.filter(l => l.scope === 'contextual-candidate').length, 0),
     issueCounts: pages.flatMap(p => p.issues).reduce((counts, issue) => ({ ...counts, [issue.code]: (counts[issue.code] || 0) + 1 }), {} as Record<string, number>),
     blockerRoutes: blockers.map((p: ReturnType<typeof inspectPage>) => p.route),
-    baselinePolicy: 'Only byte-equivalent content/link fingerprints can retain documented legacy issues. Changed/new pages must resolve their issues. --strict rejects all legacy issues too.',
+    baselinePolicy: args.has('--strict') ? 'Strict: every finding blocks publication. No legacy exceptions.' : 'Historical compatibility mode: only unchanged fingerprints may retain documented legacy findings.',
   };
   await mkdir(path.dirname(output), { recursive: true });
   await writeFile(output, JSON.stringify({ base, checkedAt: new Date().toISOString(), scope: 'All public SSR anchors plus contextual candidates; not proof of semantic relevance, external fact checking, browser states or reader review.', summary, sitemapChecks, pages }, null, 2));
