@@ -26,7 +26,7 @@ class Links(HTMLParser):
         if tag == 'a':
             if self.active is not None:
                 self.nested += 1
-            self.active = {'href': attrs.get('href', ''), 'text': '', 'scope': self.stack.copy()}
+            self.active = {'href': attrs.get('href', ''), 'text': '', 'scope': self.stack.copy(), 'target': attrs.get('target', ''), 'rel': attrs.get('rel', '')}
         if tag not in VOID:
             self.stack.append(tag)
 
@@ -55,6 +55,7 @@ def main():
     args.add_argument('--output', default='docs/editorial/link-inventory-2026-09-21.json')
     opts = args.parse_args()
     routes = re.findall(r"'(/[^']*)'", (ROOT / 'src/lib/public-site-routes.ts').read_text(encoding='utf-8'))
+    routes = sorted(set(routes + ['/' + page.relative_to(ROOT / 'public').as_posix() for page in (ROOT / 'public').rglob('*.html')]))
     def inspect(route):
         parser = Links()
         try:
@@ -70,10 +71,14 @@ def main():
         if isinstance(page, str):
             report.append({'route': route, 'error': page})
             continue
-        internal, external, broken = [], [], []
+        internal, external, broken, tab_issues = [], [], [], []
         for link in page.links:
             target = urlsplit(urljoin(opts.base + route, link['href']))
             if target.netloc in (urlsplit(opts.base).netloc, 'evselects.com', 'www.evselects.com'):
+                if link['target'] not in ('', '_self'):
+                    tab_issues.append({**link, 'reason': 'internal link must stay in the same tab'})
+                if urlsplit(link['href']).scheme in ('http', 'https'):
+                    tab_issues.append({**link, 'reason': 'internal link should use a relative URL'})
                 destination = target.path.rstrip('/') or '/'
                 # Catalogue filters are valid; their semantic usefulness needs browser review.
                 public_asset = ROOT / 'public' / destination.lstrip('/')
@@ -85,12 +90,23 @@ def main():
                 # footer is outside main, so do not exclude article footers too.
                 if 'main' in link['scope'] and 'nav' not in link['scope']:
                     internal.append(link)
-            elif target.scheme in ('https', 'http') and 'main' in link['scope']:
-                external.append(link)
-        report.append({'route': route, 'mainInternalLinks': internal, 'mainExternalLinks': external, 'unlinkedOrMisdirectedBrandText': page.brand, 'brokenInternalTargets': broken, 'nestedAnchorCount': page.nested})
+            elif target.scheme in ('https', 'http'):
+                if 'main' in link['scope']:
+                    external.append(link)
+                if link['target'] != '_blank' or not {'noopener', 'noreferrer'}.issubset(set(link['rel'].split())):
+                    tab_issues.append({**link, 'reason': 'external link needs a new tab and noopener noreferrer'})
+        report.append({'route': route, 'mainInternalLinks': internal, 'mainExternalLinks': external, 'unlinkedOrMisdirectedBrandText': page.brand, 'brokenInternalTargets': broken, 'tabPolicyIssues': tab_issues, 'nestedAnchorCount': page.nested})
     destination = ROOT / opts.output
     destination.write_text(json.dumps({'scope': 'HTTP markup inventory. Includes related cards in mainInternalLinks; does not establish contextual usefulness or rendered QA. No external URLs requested.', 'results': report}, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(json.dumps({'routes': len(report), 'errors': [p for p in report if 'error' in p], 'pagesWithoutMainInternalLinks': [p['route'] for p in report if not p.get('mainInternalLinks')], 'brandIssues': {p['route']: len(p['unlinkedOrMisdirectedBrandText']) for p in report if p.get('unlinkedOrMisdirectedBrandText')}, 'brokenTargets': {p['route']: p['brokenInternalTargets'] for p in report if p.get('brokenInternalTargets')}}, ensure_ascii=False, indent=2))
+    print(json.dumps({
+        'routes': len(report),
+        'errors': [p for p in report if 'error' in p],
+        'pagesWithoutMainInternalLinks': [p['route'] for p in report if not p.get('mainInternalLinks')],
+        'brandIssues': {p['route']: len(p['unlinkedOrMisdirectedBrandText']) for p in report if p.get('unlinkedOrMisdirectedBrandText')},
+        'brokenTargets': {p['route']: p['brokenInternalTargets'] for p in report if p.get('brokenInternalTargets')},
+        'tabPolicyIssues': {p['route']: len(p['tabPolicyIssues']) for p in report if p.get('tabPolicyIssues')},
+        'nestedAnchors': {p['route']: p['nestedAnchorCount'] for p in report if p.get('nestedAnchorCount')},
+    }, ensure_ascii=False, indent=2))
 
 
 if __name__ == '__main__':

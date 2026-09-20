@@ -2327,6 +2327,14 @@
           ]
         },
         {
+          "level": 3,
+          "text": "อ่านต่อแบบลงลึก: สปริง 100 N/mm เท่ากัน แต่ที่ล้ออาจไม่เท่ากัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
           "level": 4,
           "text": "ตัวอย่าง A · MR = 1.0",
           "scope": [
@@ -5483,6 +5491,92 @@
           "text": "แนวทาง EVSELECT",
           "scope": [
             "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/downloads/evselect-damper-setup-log.html",
+      "finalUrl": "http://127.0.0.1:3117/downloads/evselect-damper-setup-log.html",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "แบบบันทึกช่วงล่างและ Damper Baseline",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. รถและเงื่อนไขที่ต้องเทียบกันได้",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. ค่าตั้งต้นที่กลับไปได้ — จดทุกมุม",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หน้าซ้าย (FL)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หน้าขวา (FR)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หลังซ้าย (RL)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หลังขวา (RR)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. แผน A–B–A: เปลี่ยนทีละตัวแปรและบันทึกข้อจำกัด",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "A — ค่าตั้งต้นที่ตรวจแล้ว",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "B — เปลี่ยนหนึ่งตัวแปรตามคู่มือและผู้จูน",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "A อีกครั้ง — กลับค่าเดิมเมื่อเหมาะสมและปลอดภัย",
+          "scope": [
+            "main"
           ]
         }
       ]

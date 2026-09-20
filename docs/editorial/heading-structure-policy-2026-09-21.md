@@ -20,7 +20,7 @@ Initial live browser observation: tyre/coilover page has one H1 but its 1-Way / 
 
 No full-site completion or deployment is claimed by this document.
 
-## Implementation check, later on 2026-09-21
+## Initial implementation check, 2026-09-21 (historical checkpoint)
 
 - Inventory: 24 published routes plus six pending information routes from `src/lib/public-site-routes.ts`; local server at http://127.0.0.1:3117 .
 - Before: all 30 routes returned 200 and had one H1. Eighteen pages had skipped content heading levels. See `heading-local-before-2026-09-21.json`.
@@ -29,3 +29,11 @@ No full-site completion or deployment is claimed by this document.
 - Preserved existing heading classes. The shared typography rules still set font size by semantic level, so promoted headings require visual review; do not claim their appearance is unchanged.
 - ESLint on all changed TSX files passed with no errors (`--quiet`; existing warnings not treated as a clean baseline). Production build passed; its image check found all 73 referenced local images.
 - Rendered review is in progress on the tyre/coilover article. The complete all-page desktop/mobile reader review, remaining contextual links, and Carbon Ceramic review are not yet complete. No production deployment of this change set has occurred.
+
+## Latest baseline and rendered checkpoint, 2026-09-21
+
+- Expanded the inventory to include the standalone public Damper setup log. All **31 local routes** return 200 with exactly one H1, no empty headings, and no skipped descending levels in main/article content. The JSON report at `heading-local-after-2026-09-21.json` reflects this latest baseline, superseding the initial 30-route result above.
+- Reader review found an additional semantic issue that a linear heading scan cannot prove: the wheel-rate worked example needed its own H3 before the two H4 examples. Added that H3. The standalone setup-log fieldset also now has a real H2 in its legend.
+- The complete final Damper article and setup log have been read in actual desktop and mobile layouts. All article photographs, four diagram states, worked example, three cases, ten FAQs, references and footer were inspected. See `damper-reader-review-2026-09-21.md` for exact scope and version hashes.
+- Earlier completed page reviews are documented in the tyre worklog, `carbon-model3-reader-review-2026-09-21.md`, and `suspension-information-reader-review-2026-09-21.md`. Remaining full-page reviews and the newly expanded tab-policy checks are still open; these checkpoints do not certify the whole site.
+- The latest production build and changed-file ESLint passed. The build verified **72 referenced local images**. No production deployment has occurred.

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight, BookOpen, CalendarDays, SlidersHorizontal } from 'lucide-react';
 import { damperArticle } from '@/lib/damper-article';
@@ -65,7 +66,7 @@ const sources = {
 
 type SourceKey = keyof typeof sources;
 function Ref({ to, children }: { to: SourceKey; children: ReactNode }) {
-  return <a href={sources[to].url} className="font-medium text-lime-800 underline decoration-lime-300 underline-offset-4 hover:text-lime-950">{children}</a>;
+  return <a href={sources[to].url} target="_blank" rel="noopener noreferrer" className="font-medium text-lime-800 underline decoration-lime-300 underline-offset-4 hover:text-lime-950">{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
 function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
@@ -75,7 +76,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
     </section>
   );
 }
-function Note({ title, children, headingLevel = 3 }: { title: string; children: ReactNode; headingLevel?: 2 | 3 }) {
+function Note({ title, children, headingLevel = 3 }: { title: ReactNode; children: ReactNode; headingLevel?: 2 | 3 }) {
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
   return <aside className="rounded-2xl border border-lime-200 bg-lime-50/60 p-5 sm:p-6"><Heading className="mb-2 text-lg font-semibold text-slate-950">{title}</Heading><div>{children}</div></aside>;
 }
@@ -165,13 +166,13 @@ export default function EVDamperTuningGuidePage() {
         <p className="max-w-3xl leading-relaxed text-slate-600">“รถรุ่นนี้ต้องโช้ครุ่นนี้ ใส่แล้วจบ” ฟังดูช่วยตัดสินใจง่าย แต่พอติดตั้งกับรถเรา กลับสะเทือนตรงรอยต่อ ผู้โดยสารหลังบ่น หรือปรับอ่อนแล้วรถยังเด้ง ทำไมจ่ายหลักแสนแล้วยังต้องแก้อีก?</p>
         <p className="max-w-3xl leading-relaxed text-slate-600">เพราะ <strong>“ใส่ตรงรุ่น” กับ “เหมาะกับเรา” เป็นคนละคำถาม</strong> ต้องจับคู่โช้ค สปริง ยาง ระยะทำงาน และงานติดตั้งเข้ากับถนนกับโหลดที่ใช้จริง บทความนี้เริ่มจากหน้าที่ของแต่ละชิ้น แล้วค่อยลงลึกถึง Preload, Wheel rate, 1-Way–3-Way และคำถามที่ใช้คุยกับร้านก่อนเสียเงินรอบใหม่</p>
         <p className="max-w-3xl leading-relaxed text-slate-600">เรื่องนี้เกิดได้กับโช้คทุกงบ ราคาไม่ได้พิสูจน์ว่าชุดนั้นผิด และความไม่พอใจก็ไม่ได้แปลว่าเจ้าของรถปรับไม่เป็น เราต้องรู้ก่อนว่าซื้อมาเพื่อแก้อะไร และสิ่งที่ไม่ลงตัวเกิดจากส่วนไหน</p>
-        <p className="text-sm text-slate-500">เรียบเรียงโดย EVSELECT · อธิบายกลไกจากเอกสารผู้ผลิต ไม่ใช่ผลทดสอบเปรียบเทียบของกองบรรณาธิการ</p>
+        <p className="text-sm text-slate-500">เรียบเรียงโดย <BrandHomeLink /> · อธิบายกลไกจากเอกสารผู้ผลิต ไม่ใช่ผลทดสอบเปรียบเทียบของกองบรรณาธิการ</p>
         <nav aria-label="ทางลัดตามสิ่งที่ต้องการ" className="flex flex-wrap gap-2 text-sm">
           {[['#fitment-before-brand', 'ทำไมตรงรุ่นยังไม่จบ'], ['#explorer', 'ดูภาพช่องปรับ'], ['#buying-brief', 'เตรียมโจทย์ให้ร้าน']].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 items-center rounded-full border border-lime-200 bg-lime-50 px-4 py-2 font-semibold text-lime-900 underline-offset-4 hover:underline">{label} <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a>)}
         </nav>
         <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
           <Image src={damperArticle.cover} alt={damperArticle.coverAlt} sizes="(max-width: 1024px) 100vw, 960px" preload className="h-auto w-full object-contain" />
-          <figcaption className="border-t border-slate-200 bg-white px-5 py-4 text-xs leading-relaxed text-slate-500">ภาพโช้คสตรัทปรับเกลียว KW ที่เจ้าของเว็บไซต์จัดส่งให้ ใช้อธิบายภาพรวม ไม่ระบุรุ่นของแต่ละชิ้นหรือยืนยันการติดตั้งกับรถใด · <a href="https://www.kwsuspensions.com/uk/products/street-performance" className="text-lime-800 underline underline-offset-4">ดูผลิตภัณฑ์จาก KW ↗</a></figcaption>
+          <figcaption className="border-t border-slate-200 bg-white px-5 py-4 text-xs leading-relaxed text-slate-500">ภาพโช้คสตรัทปรับเกลียว KW ที่เจ้าของเว็บไซต์จัดส่งให้ ใช้อธิบายภาพรวม ไม่ระบุรุ่นของแต่ละชิ้นหรือยืนยันการติดตั้งกับรถใด · <a href="https://www.kwsuspensions.com/uk/products/street-performance" target="_blank" rel="noopener noreferrer" className="text-lime-800 underline underline-offset-4">ดูผลิตภัณฑ์จาก KW ↗<span className="sr-only"> (เปิดแท็บใหม่)</span></a></figcaption>
         </figure>
         <Note title="คำตอบสั้น ๆ ก่อนลงรายละเอียด" headingLevel={2}>
           <p className="leading-relaxed"><strong>อย่าเริ่มจาก “ยี่ห้อไหนจบ” ให้เริ่มจาก “อาการไหนอยากแก้ และอะไรที่ยอมเสียไม่ได้”</strong> เลือกชุดที่รองรับรถจริง มีสปริงและระยะทำงานเหมาะกับโหลด ติดตั้งถูก และมีคนดูแลค่าตั้งต้นให้ ก่อนเพิ่มจำนวนช่องปรับ ปุ่มมากขึ้นช่วยแยกการจูน แต่ไม่ซ่อมยางผิดสเปก เพิ่มระยะยุบที่หายไป หรือแก้บูชที่ติดตั้งบิดค้าง</p>
@@ -179,7 +180,7 @@ export default function EVDamperTuningGuidePage() {
         <nav aria-label="สารบัญบทความ" className="rounded-2xl border border-slate-200 p-5 sm:p-6">
           <p className="mb-4 flex items-center gap-2 font-semibold"><BookOpen className="h-5 w-5 text-lime-700" aria-hidden="true" /> เลือกอ่านเรื่องที่กำลังสงสัย</p>
           <ol className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
-            {contents.map(([id, label], index) => <li key={id}><a href={`#${id}`} className="flex min-h-11 items-start gap-3 rounded-lg py-2 text-sm leading-relaxed text-slate-600 hover:text-lime-800"><span className="mt-0.5 text-xs font-semibold text-lime-700">{String(index + 1).padStart(2, '0')}</span><span>{label}</span></a></li>)}
+            {contents.map(([id, label], index) => <li key={id}><a href={`#${id}`} className="flex min-h-11 items-start gap-3 rounded-lg py-2 text-sm leading-relaxed text-slate-600 hover:text-lime-800"><span className="mt-0.5 w-5 shrink-0 whitespace-nowrap text-xs font-semibold tabular-nums text-lime-700">{String(index + 1).padStart(2, '0')}</span><span>{label}</span></a></li>)}
           </ol>
         </nav>
       </header>
@@ -244,7 +245,7 @@ export default function EVDamperTuningGuidePage() {
             <p>จุดยึดที่ใช้ <strong>Bonded rubber bush</strong> มีเนื้อยางรับการบิดระหว่างการเคลื่อนที่ หากขันล็อกในตำแหน่งที่ผิดจากขั้นตอนรถ หรือเปลี่ยนความสูงแล้วไม่ได้จัดการความเค้นค้างตามที่กำหนด อาจทำให้ความสูง การขับ และการสึกหรอผิดคาด <Ref to="bilsteinInstall">BILSTEIN อธิบายข้อผิดพลาดนี้ไว้โดยตรง</Ref> ให้ร้านตรวจว่าจุดยึดที่เกี่ยวข้องถูกขันที่ระดับใช้งานและตามแรงขัน/ลำดับของคู่มือหรือไม่ ไม่ใช่ให้เจ้าของรถคลายน็อตทั้งชุดเอง</p>
           </Note>
           <details id="wheel-rate-example" className="scroll-mt-28 rounded-2xl border border-lime-200 bg-lime-50/60 p-5 sm:p-6">
-            <summary className="cursor-pointer text-lg font-bold text-slate-950 marker:text-lime-700">อ่านต่อแบบลงลึก: สปริง 100 N/mm เท่ากัน แต่ที่ล้ออาจไม่เท่ากัน</summary>
+            <summary className="cursor-pointer text-lg font-bold text-slate-950 marker:text-lime-700"><h3 className="inline text-lg font-bold">อ่านต่อแบบลงลึก: สปริง 100 N/mm เท่ากัน แต่ที่ล้ออาจไม่เท่ากัน</h3></summary>
             <div className="mt-4 space-y-4">
             <p><strong>Wheel rate</strong> ในตัวอย่างนี้คือความแข็งจากสปริงเมื่อพิจารณาที่การเคลื่อนแนวดิ่งของล้อ เรากำหนด <strong>MR = ระยะยุบสปริง ÷ ระยะยุบล้อ</strong> โดยใช้การเคลื่อนที่จริงที่รวมผลของมุมติดตั้งแล้ว หากสปริงยุบ 7 mm เมื่อล้อยุบ 10 mm จะได้ MR = 0.7</p>
             <p className="my-4 rounded-xl border border-lime-200 bg-white p-4 font-semibold text-slate-950">Wheel rate ≈ Spring rate × MR²</p>
@@ -406,7 +407,7 @@ export default function EVDamperTuningGuidePage() {
         </Section>
 
         <Section id="examples" title="สามสถานการณ์ที่คนแต่งรถเจอ—คุณจะเริ่มตรวจตรงไหน?">
-          <p><strong>แบบฝึกคิดที่ EVSELECT เรียบเรียงขึ้น:</strong> ทุกกรณีด้านล่างเป็นสถานการณ์สมมติเพื่อเชื่อมกลไกกับการตัดสินใจ ไม่ใช่ผลทดลองกับ Tesla, BYD, Geely หรือโช้คยี่ห้อใด ลองตอบก่อนเปิดคำอธิบาย ไม่มีคำตอบเป็นสูตรคลิกข้ามรุ่น</p>
+          <p><strong>แบบฝึกคิดที่ <BrandHomeLink /> เรียบเรียงขึ้น:</strong> ทุกกรณีด้านล่างเป็นสถานการณ์สมมติเพื่อเชื่อมกลไกกับการตัดสินใจ ไม่ใช่ผลทดลองกับ Tesla, BYD, Geely หรือโช้คยี่ห้อใด ลองตอบก่อนเปิดคำอธิบาย ไม่มีคำตอบเป็นสูตรคลิกข้ามรุ่น</p>
           <DamperScenarios />
           <p className="text-sm">หลักการประกอบคำอธิบาย: <Ref to="ohlinsManual">คู่มือ Öhlins เรื่องระยะทำงานและการเริ่มตั้งค่า</Ref>, <Ref to="teinFlex">วงจรปรับร่วมของ TEIN</Ref> และ <Ref to="kwV4">การแยกย่านของ KW</Ref></p>
         </Section>
@@ -416,7 +417,7 @@ export default function EVDamperTuningGuidePage() {
           <p>ก่อนเลือกแบรนด์ ให้เริ่มจากตัวรถ: <strong>ยี่ห้อ รุ่น ปี รุ่นย่อย ตลาดจำหน่าย และระบบช่วงล่างเดิม</strong> จากนั้นจึงตรวจรหัสสินค้าผู้ผลิต ช่วงน้ำหนักเพลาที่รองรับและเงื่อนไขติดตั้ง ชื่อรุ่นรถที่คล้ายกัน รูปขายออนไลน์ หรือคำว่า “ใส่ได้” จากโพสต์เดียวไม่เพียงพอจะยืนยันกับรถสเปกไทย</p>
           <ul className="list-disc space-y-3 pl-6 marker:text-lime-700">
             <li><strong>ระยะทำงานและความสูง:</strong> ตรวจช่วงความสูงที่ผู้ผลิตอนุญาต ระยะยุบ–ยืด และส่วนใต้ท้องรถ ไม่ลดรถจนกระทบพื้นที่ป้องกันแบตเตอรี่หรือจุดที่ต้องมีระยะปลอดภัย</li>
-            <li><strong>ล้อ ยาง และศูนย์ล้อ:</strong> ขนาดยาง น้ำหนักล้อ Offset และมุมล้อเปลี่ยนพฤติกรรมรถได้ ชุดโช้คไม่ใช่คำตอบแยกขาดจากสิ่งเหล่านี้</li>
+            <li><strong>ล้อ ยาง และศูนย์ล้อ:</strong> ขนาดยาง น้ำหนักล้อ Offset และมุมล้อเปลี่ยนพฤติกรรมรถได้ ชุดโช้คไม่ใช่คำตอบแยกขาดจากสิ่งเหล่านี้ อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="text-lime-800 underline underline-offset-4">วิธีเลือกยางกับโช้คให้ทำงานร่วมกัน</Link> โดยเริ่มจากขนาดยางและพิกัดรับน้ำหนักของรถ</li>
             <li><strong>Top mount และ NVH:</strong> รูปแบบจุดยึดมีผลต่อเส้นทางส่งเสียงและแรงสะเทือน หากเปลี่ยนเป็นจุดยึดแข็งขึ้น ต้องคุยเรื่องความสบายและเสียงที่ยอมรับได้ ไม่ถือว่ามี Pillowball แล้วดีกว่าสำหรับทุกการใช้งาน</li>
             <li><strong>ระบบปรับไฟฟ้าเดิม:</strong> หากรถมีแดมเปอร์ควบคุมอิเล็กทรอนิกส์ ต้องตรวจความเข้ากันได้และวิธีจัดการระบบตามเอกสาร ไม่สมมติว่าชุดปรับมือแทนได้โดยไม่มีผลกับโหมดรถหรือไฟแจ้งเตือน</li>
             <li><strong>บริการหลังติดตั้ง:</strong> ใครตั้งศูนย์ ใครตรวจซ้ำ มีอะไหล่และบริการซ่อมตามรุ่นหรือไม่ เงื่อนไขรับประกันไทยเป็นอย่างไร ให้ยืนยันเป็นเอกสาร ไม่ใช้เงื่อนไขตลาดสหรัฐฯ หรือยุโรปแทน</li>
@@ -459,7 +460,7 @@ export default function EVDamperTuningGuidePage() {
         <Section id="toolkit" title="อย่าให้ค่าที่ดีหายไป: เก็บ Baseline และถามร้านให้ครบ">
           <p>ใช้แบบบันทึกเดียวกันตั้งแต่ก่อนติดตั้งจนถึงตรวจซ้ำ จะช่วยแยกได้ว่าเปลี่ยนโช้ค เปลี่ยนความสูง หรือเปลี่ยนเงื่อนไขรถไปด้วย แบบฟอร์มนี้ไม่คำนวณค่าจูนและไม่แทนคู่มือผู้ผลิต</p>
           <div className={styles.download}>
-            <a href="/downloads/evselect-damper-setup-log.html">เปิดแบบบันทึกที่กรอกและพิมพ์ได้ <span aria-hidden="true">↗</span><span className="mt-2 block text-sm font-normal">ข้อมูลรถ · สี่มุม · ช่องปรับ · รอบ A–B–A</span></a>
+            <a href="/downloads/evselect-damper-setup-log.html">เปิดแบบบันทึกที่กรอกและพิมพ์ได้ <span aria-hidden="true">→</span><span className="mt-2 block text-sm font-normal">ข้อมูลรถ · สี่มุม · ช่องปรับ · รอบ A–B–A</span></a>
             <a href="/downloads/evselect-coilover-shop-checklist.txt" download>ดาวน์โหลดเช็กลิสต์ถามร้าน <span aria-hidden="true">↓</span><span className="mt-2 block text-sm font-normal">ข้อความภาษาไทยสำหรับแนบถามผู้ติดตั้ง</span></a>
           </div>
           <p className="text-sm">แบบบันทึกไม่ส่งข้อมูลเข้าระบบและไม่บันทึกอัตโนมัติ ใช้เมนูพิมพ์ของเบราว์เซอร์เพื่อบันทึกเป็น PDF ก่อนปิดหน้า ไม่ต้องกรอกชื่อ ที่อยู่ หรือเลขตัวถังเต็ม</p>
@@ -481,7 +482,7 @@ export default function EVDamperTuningGuidePage() {
           <p>เมื่อคุณอธิบายความต้องการสองฝั่งแยกกันได้ หรือกำลังแก้ข้อจำกัดของปุ่มร่วมกับผู้จูน 2-way เป็นขั้นที่มีเหตุผล แต่ต้องตรวจว่าช่องที่เพิ่มมามีอิทธิพลกับย่านที่ต้องการจริง ตัวอย่างเช่น ต้องการจัดการแรงอินพุตก้านเร็ว ก็ไม่ควรสรุปว่า Low-speed Compression knob จะแก้ได้ทั้งหมด</p>
           <h3 className="text-xl font-bold">ทำ Track Day จริงจัง: 3-Way ควรมาพร้อมแผนทดสอบ</h3>
           <p>ถ้ามีโจทย์แยกการควบคุมตัวถังกับการรับอินพุตคมชัด มีข้อมูลการตั้งรถ และมีผู้จูนคอยประเมิน 3-way เพิ่มทางเลือกให้ทำงานละเอียดขึ้น แต่ความสามารถของชุดยังต้องสอดคล้องกับสปริง ยาง และช่วงล่างทั้งระบบ อย่าซื้อจากจำนวนช่องแล้วคาดหวังเวลาในสนามที่ดีขึ้นโดยไม่มีการเปรียบเทียบภายใต้เงื่อนไขเดียวกัน</p>
-          <Note title="คำแนะนำของ EVSELECT">
+          <Note title={<>คำแนะนำของ <BrandHomeLink /></>}>
             <p>ให้เลือก <strong>ชุดที่ยืนยันสเปกกับรถได้ มี Baseline เหมาะกับการใช้งาน และมีคนดูแลหลังติดตั้ง</strong> ก่อนเลือกจำนวน Way เพิ่มงบเมื่อรู้ว่าต้องการช่องปรับนั้นเพื่อแก้อะไร ไม่ใช่เพราะตัวเลขมากกว่าดูเป็นรุ่นที่จบกว่า</p>
           </Note>
         </Section>
@@ -495,7 +496,7 @@ export default function EVDamperTuningGuidePage() {
         <section aria-labelledby="sources-title" className="rounded-2xl bg-slate-50 p-5 text-sm sm:p-7">
           <h2 id="sources-title" className="mb-3 text-xl font-bold text-slate-950">อ่านต้นฉบับจากผู้ผลิต</h2>
           <p className="mb-5 leading-relaxed">ตรวจข้อมูลวันที่ 19 กันยายน 2569 ข้อกำหนดผลิตภัณฑ์อาจต่างตามรุ่น ตลาด และรุ่นปรับปรุง ตรวจคู่มือรหัสสินค้าปัจจุบันก่อนใช้ข้อมูลเพื่อซื้อ ติดตั้ง หรือปรับตั้ง ตัวอย่างแบรนด์ไม่ใช่การรับรองผลทดสอบหรือการยืนยันสต็อกในไทย</p>
-          <ul className="list-disc space-y-2 pl-5">{Object.entries(sources).map(([key, source]) => <li key={key}><a href={source.url} className="text-slate-600 underline decoration-slate-300 underline-offset-4 hover:text-lime-800">{source.title}</a></li>)}</ul>
+          <ul className="list-disc space-y-2 pl-5">{Object.entries(sources).map(([key, source]) => <li key={key}><a href={source.url} target="_blank" rel="noopener noreferrer" className="text-slate-600 underline decoration-slate-300 underline-offset-4 hover:text-lime-800">{source.title}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></li>)}</ul>
         </section>
 
         <section aria-labelledby="related-title" className="border-t border-slate-200 pt-8">
@@ -506,7 +507,7 @@ export default function EVDamperTuningGuidePage() {
           </div>
         </section>
       </div>
-      <footer className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6 text-sm text-slate-500"><span>EVSELECT · เข้าใจรถให้ลึก เลือกให้ตรงใจ</span><Link href="/articles" className="inline-flex min-h-11 items-center gap-2 font-medium text-lime-800">อ่านบทความอื่น <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link></footer>
+      <footer className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6 text-sm text-slate-500"><span><BrandHomeLink /> · เข้าใจรถให้ลึก เลือกให้ตรงใจ</span><Link href="/articles" className="inline-flex min-h-11 items-center gap-2 font-medium text-lime-800">อ่านบทความอื่น <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link></footer>
     </article>
   );
 }

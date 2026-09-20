@@ -79,6 +79,8 @@ def main():
             continue  # Concrete dynamic URLs are sourced from the sitemap.
         path = '/'.join(part for part in parts if not part.startswith('('))
         urls.add(base + '/' + path)
+    for page in (ROOT / 'public').rglob('*.html'):
+        urls.add(base + '/' + page.relative_to(ROOT / 'public').as_posix())
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
         results = list(pool.map(inspect, sorted(urls)))
     destination = ROOT / args.output
