@@ -234,9 +234,9 @@ export default function EVBatteryCareArticle() {
               </div>
             </div>
             <div className="flex-1 space-y-2 text-center sm:text-left">
-              <h4 className="text-base font-bold text-slate-900 m-0">
+              <h3 className="text-base font-bold text-slate-900 m-0">
                 กำลังศึกษาม่านบังแดดหลังคาพาโนรามาสำหรับรถ EV
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-slate-600 m-0 leading-relaxed">
                 สินค้ายังไม่เปิดจำหน่าย เรากำลังรวบรวมข้อมูลรุ่นรถ วัสดุ การติดตั้ง และข้อจำกัดก่อนเปิดตัว
               </p>
@@ -297,9 +297,9 @@ export default function EVBatteryCareArticle() {
         
         {/* Summary Card */}
         <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 my-8 shadow-sm not-prose">
-          <h3 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+          <h2 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-lime-600" /> บทสรุปจากผู้เชี่ยวชาญ EVSELECT
-          </h3>
+          </h2>
           <p className="text-sm text-slate-600 leading-relaxed m-0">
             เทคโนโลยีแบตเตอรี่ของรถยนต์ไฟฟ้ายุคปัจจุบันพัฒนาไปไกลมาก ผู้ผลิตส่วนใหญ่รับประกันแบตเตอรี่นานถึง <strong>8 ปี หรือ 160,000 กิโลเมตร</strong> หากคุณปรับเปลี่ยนพฤติกรรมการใช้งานเล็กน้อยตาม 5 ข้อที่แนะนำนี้ คุณจะสามารถใช้งานรถยนต์ไฟฟ้าคันโปรดของคุณได้อย่างสบายใจ แบตเตอรี่เสื่อมช้าลงอย่างเห็นได้ชัด และประหยัดค่าใช้จ่ายในระยะยาวได้อย่างยั่งยืน
           </p>
@@ -311,7 +311,7 @@ export default function EVBatteryCareArticle() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-lime-600" />
-            <h3 className="text-xl font-bold text-slate-900">รีวิวรถยนต์ไฟฟ้าที่น่าสนใจ</h3>
+            <h2 className="text-xl font-bold text-slate-900">รีวิวรถยนต์ไฟฟ้าที่น่าสนใจ</h2>
           </div>
           <Link
             href="/articles"
@@ -342,9 +342,9 @@ export default function EVBatteryCareArticle() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Changan Deepal S07: มอเตอร์ 258 แรงม้า ม่านบังแดดไฟฟ้าสู้แดดไทย
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 เจาะลึกเอสยูวีไฟฟ้ารุ่นพี่ ออปชันหรูหรา และการชาร์จ DC 167 kW
               </p>
@@ -370,9 +370,9 @@ export default function EVBatteryCareArticle() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 เจาะลึกเอสยูวีไฟฟ้าน้องใหม่สายแคมปิ้ง ออปชันไฮเทค และการชาร์จเร็ว 3C
               </p>
@@ -398,9 +398,9 @@ export default function EVBatteryCareArticle() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EVSELECT Reviews</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 สัมผัสแรกกับซิตี้คาร์ไฟฟ้าขับหลัง 116 แรงม้า ที่นุ่มนวลที่สุดในงบ 4 แสนบาท
               </p>

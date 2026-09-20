@@ -244,9 +244,9 @@ export default function BYDSealReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -651,19 +651,19 @@ export default function BYDSealReviewPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ Tesla Model 3</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ Tesla Model 3</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 BYD Seal ได้เปรียบชัดเจนเรื่องราคาถูกกว่าเกือบ 8 แสนบาท พละกำลังมากกว่า และเบาะนั่งโอบกระชับนุ่มนวลกว่า ขณะที่ Tesla เด่นกว่าเรื่องเครือข่าย Supercharger และซอฟต์แวร์ Autopilot
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ Deepal SL03</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ Deepal SL03</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Seal ให้แชสซีที่แน่นและช่วงล่าง FSD ที่นิ่งกว่าชัดเจนเมื่อใช้ความเร็วสูง ส่วน SL03 จะได้เปรียบเรื่องประตู Frameless และดีไซน์ Fastback ท้ายเปิดยกได้ทั้งบาน
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">ความคุ้มค่าบนถนนไทย</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">ความคุ้มค่าบนถนนไทย</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 ในงบประมาณ 1 ล้านบาท ไม่มีรถเก๋งไฟฟ้าคันไหนมอบความแรง 530 แรงม้า พร้อมช่วงล่างและออปชันเทียบเท่า BYD Seal ได้อีกแล้วในปัจจุบัน
               </p>
@@ -1032,7 +1032,7 @@ export default function BYDSealReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-lime-600" />
-            <h3 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h3>
+            <h2 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h2>
           </div>
           <Link
             href="/articles"
@@ -1063,9 +1063,9 @@ export default function BYDSealReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EV Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Tesla Model 3 Highland สเปกไทย ปรับปรุงใหม่ นุ่ม เงียบ พรีเมียมขึ้นแค่ไหน?
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 ทดสอบสมรรถนะและเปรียบเทียบจุดเด่นจุดด้อยกับ BYD Seal บนถนนเมืองไทย
               </p>
@@ -1091,9 +1091,9 @@ export default function BYDSealReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EV Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว BYD Atto 3 สเปกไทย: คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน?
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 เจาะลึกความนุ่มนวล ความกว้างขวาง และความคุ้มค่าหลังปรับลดราคาพิเศษ
               </p>
@@ -1119,9 +1119,9 @@ export default function BYDSealReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">Flagship Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 ท้าชน Toyota Alphard ด้วยช่วงล่างถุงลมอัจฉริยะและเบาะ Sofaro First Class
               </p>

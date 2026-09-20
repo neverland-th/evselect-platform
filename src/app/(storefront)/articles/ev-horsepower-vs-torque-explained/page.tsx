@@ -185,9 +185,9 @@ export default function EVHorsepowerVsTorquePage() {
 
       {/* 5. Key Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปข้อเท็จจริงสำคัญ (Dyno Fact Sheet)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -234,7 +234,7 @@ export default function EVHorsepowerVsTorquePage() {
               <div className="text-xs font-bold uppercase tracking-wider text-lime-700 bg-lime-100 px-3 py-1 rounded-full inline-block mb-3">
                 แรงบิด (Torque)
               </div>
-              <h4 className="text-lg font-black text-slate-900 mb-2">แรงบิดหมุนที่สร้างอัตราเร่ง</h4>
+              <h3 className="text-lg font-black text-slate-900 mb-2">แรงบิดหมุนที่สร้างอัตราเร่ง</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 แรงบิดวัดเป็นหน่วย <strong>นิวตัน-เมตร (Nm)</strong> คือขนาดของแรงหมุนที่มอเตอร์สร้างขึ้นได้รอบแกนหมุน เปรียบเสมือน <em>&quot;กล้ามเนื้อ&quot;</em> ที่ใช้ผลักดันน้ำหนักตัวรถ 2 ตันให้ออกตัวพุ่งทะยานจากจุดหยุดนิ่ง
               </p>
@@ -244,7 +244,7 @@ export default function EVHorsepowerVsTorquePage() {
               <div className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-3 py-1 rounded-full inline-block mb-3">
                 แรงม้า / กำลัง (Power)
               </div>
-              <h4 className="text-lg font-black text-slate-900 mb-2">อัตราการทำงานต่อหน่วยเวลา</h4>
+              <h3 className="text-lg font-black text-slate-900 mb-2">อัตราการทำงานต่อหน่วยเวลา</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 กำลังของมอเตอร์วัดเป็น <strong>กิโลวัตต์ (kW)</strong> หรือเทียบเคียงเป็น <strong>แรงม้า (HP หรือ PS)</strong> เกิดจากการทำงานร่วมกันระหว่างแรงบิดกับความเร็วรอบหมุนของมอเตอร์ เป็นตัวกำหนด <em>&quot;ความสามารถในการรักษาความเร็วสูงอย่างต่อเนื่อง&quot;</em>
               </p>
@@ -551,7 +551,7 @@ export default function EVHorsepowerVsTorquePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose my-8">
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
               <div className="text-xs font-bold text-slate-500 uppercase">เกียร์ 1 (1st Gear - Ratio ~15.5:1)</div>
-              <h4 className="text-lg font-black text-slate-900 my-1">อัตราทดจัด สำหรับออกตัว</h4>
+              <h3 className="text-lg font-black text-slate-900 my-1">อัตราทดจัด สำหรับออกตัว</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 สร้างแรงขับที่ล้อหลังมหาศาลเกิน <strong>13,000 นิวตัน</strong> ในโหมด Launch Control ช่วยให้ตัวถังหนัก 2.3 ตัน พุ่งทะยานจาก 0-100 กม./ชม. ได้ในเวลาเพียง <strong>2.4 – 2.8 วินาที</strong>
               </p>
@@ -559,7 +559,7 @@ export default function EVHorsepowerVsTorquePage() {
 
             <div className="bg-lime-50 border border-lime-300 p-6 rounded-2xl">
               <div className="text-xs font-bold text-lime-700 uppercase">เกียร์ 2 (2nd Gear - Ratio ~8.05:1)</div>
-              <h4 className="text-lg font-black text-slate-900 my-1">อัตราทดต่ำ สำหรับความเร็วสูง</h4>
+              <h3 className="text-lg font-black text-slate-900 my-1">อัตราทดต่ำ สำหรับความเร็วสูง</h3>
               <p className="text-xs text-slate-700 leading-relaxed">
                 ระบบจะสั่งสลับเข้าเกียร์ 2 ที่ความเร็วประมาณ 90-100 กม./ชม. ช่วย <strong>ดึงรอบมอเตอร์ลงมาอยู่ในโซน Constant Power</strong> ทำให้มีแรงบิดเหลือเฟือในการเร่งแซง 140-260 กม./ชม. ได้อย่างต่อเนื่อง
               </p>
@@ -593,9 +593,9 @@ export default function EVHorsepowerVsTorquePage() {
           </p>
 
           <div className="my-8 not-prose bg-slate-900 text-white p-6 sm:p-8 rounded-3xl">
-            <h4 className="text-lg font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-extrabold text-slate-900 mb-4 flex items-center gap-2">
               <Flame className="w-5 h-5" /> นวัตกรรมการจัดการความร้อนของมอเตอร์ไฟฟ้าสมัยใหม่
-            </h4>
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300">
               <div className="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
                 <span className="font-bold text-white block mb-1">ขดลวดแบน Hairpin Winding</span>
@@ -621,7 +621,7 @@ export default function EVHorsepowerVsTorquePage() {
             <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">1</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-sm">ช่วงความเร็วที่สมดุลที่สุดบนมอเตอร์เวย์</h4>
+                <h3 className="font-bold text-slate-900 text-sm">ช่วงความเร็วที่สมดุลที่สุดบนมอเตอร์เวย์</h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   การขับขี่ที่ความเร็ว 110 – 120 กม./ชม. มอเตอร์จะหมุนที่ประมาณ 9,000 – 10,000 RPM ซึ่งยังอยู่ในโซนประสิทธิภาพสูงสุด (Efficiency &gt; 92%) และไม่สูญเสียพลังงานให้แรงต้านอากาศมากเกินไป
                 </p>
@@ -631,7 +631,7 @@ export default function EVHorsepowerVsTorquePage() {
             <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">2</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-sm">การเร่งแซงจังหวะสั้น (Punch &amp; Coast)</h4>
+                <h3 className="font-bold text-slate-900 text-sm">การเร่งแซงจังหวะสั้น (Punch &amp; Coast)</h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   ใช้ประโยชน์จากแรงบิดฉับพลันกดแซงให้พ้นอย่างรวดเร็ว แล้วผ่อนคันเร่งกลับมารักษาความเร็วเดินทางปกติ จะช่วยประหยัดแบตเตอรี่ได้ดีกว่าการแช่ความเร็วสูงเป็นเวลานาน
                 </p>
@@ -641,7 +641,7 @@ export default function EVHorsepowerVsTorquePage() {
             <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
               <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">3</div>
               <div>
-                <h4 className="font-bold text-slate-900 text-sm">การเลือกยางที่มีค่าต้านทานการกลิ้งต่ำ (Low RRC)</h4>
+                <h3 className="font-bold text-slate-900 text-sm">การเลือกยางที่มีค่าต้านทานการกลิ้งต่ำ (Low RRC)</h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                   ยาง EV เฉพาะทางจะออกแบบคอมปาวด์ให้ลดแรงเสียดทานการหมุน แต่รักษาหน้าสัมผัสเกาะถนน ช่วยเพิ่มระยะทางวิ่งต่อการชาร์จได้อีก 5 – 8%
                 </p>

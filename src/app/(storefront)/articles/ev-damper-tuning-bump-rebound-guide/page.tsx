@@ -75,8 +75,9 @@ function Section({ id, title, children }: { id: string; title: string; children:
     </section>
   );
 }
-function Note({ title, children }: { title: string; children: ReactNode }) {
-  return <aside className="rounded-2xl border border-lime-200 bg-lime-50/60 p-5 sm:p-6"><h3 className="mb-2 text-lg font-semibold text-slate-950">{title}</h3><div>{children}</div></aside>;
+function Note({ title, children, headingLevel = 3 }: { title: string; children: ReactNode; headingLevel?: 2 | 3 }) {
+  const Heading = headingLevel === 2 ? 'h2' : 'h3';
+  return <aside className="rounded-2xl border border-lime-200 bg-lime-50/60 p-5 sm:p-6"><Heading className="mb-2 text-lg font-semibold text-slate-950">{title}</Heading><div>{children}</div></aside>;
 }
 
 const contents = [
@@ -172,7 +173,7 @@ export default function EVDamperTuningGuidePage() {
           <Image src={damperArticle.cover} alt={damperArticle.coverAlt} sizes="(max-width: 1024px) 100vw, 960px" preload className="h-auto w-full object-contain" />
           <figcaption className="border-t border-slate-200 bg-white px-5 py-4 text-xs leading-relaxed text-slate-500">ภาพโช้คสตรัทปรับเกลียว KW ที่เจ้าของเว็บไซต์จัดส่งให้ ใช้อธิบายภาพรวม ไม่ระบุรุ่นของแต่ละชิ้นหรือยืนยันการติดตั้งกับรถใด · <a href="https://www.kwsuspensions.com/uk/products/street-performance" className="text-lime-800 underline underline-offset-4">ดูผลิตภัณฑ์จาก KW ↗</a></figcaption>
         </figure>
-        <Note title="คำตอบสั้น ๆ ก่อนลงรายละเอียด">
+        <Note title="คำตอบสั้น ๆ ก่อนลงรายละเอียด" headingLevel={2}>
           <p className="leading-relaxed"><strong>อย่าเริ่มจาก “ยี่ห้อไหนจบ” ให้เริ่มจาก “อาการไหนอยากแก้ และอะไรที่ยอมเสียไม่ได้”</strong> เลือกชุดที่รองรับรถจริง มีสปริงและระยะทำงานเหมาะกับโหลด ติดตั้งถูก และมีคนดูแลค่าตั้งต้นให้ ก่อนเพิ่มจำนวนช่องปรับ ปุ่มมากขึ้นช่วยแยกการจูน แต่ไม่ซ่อมยางผิดสเปก เพิ่มระยะยุบที่หายไป หรือแก้บูชที่ติดตั้งบิดค้าง</p>
         </Note>
         <nav aria-label="สารบัญบทความ" className="rounded-2xl border border-slate-200 p-5 sm:p-6">

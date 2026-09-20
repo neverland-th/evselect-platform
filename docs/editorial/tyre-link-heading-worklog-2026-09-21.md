@@ -1,0 +1,43 @@
+# Active editorial work — not ready to publish
+
+Authoritative checkout: releases/evselect-coilover-skyscraper-2026-09-19, branch codex/brake-complete-kits-2026-09-19, base 2c98452. Working content changes remain uncommitted drafts.
+
+## Progress this turn
+
+- Chrome connection is now usable through cua_repl. Claimed existing user tab 306882895, browser 2. Opera connector separately still reports disconnected; do not conflate them.
+- Read the entire tyre/coilover page's rendered accessibility text, including all six sections and footer. Visually inspected the desktop graph area and opening, and the opening at 390 x 844 mobile. This is NOT a complete visual review or final-draft review.
+- Actual observations: long mobile heading and technical badges consume most of the first viewport; introductory paragraph is a jargon inventory; graph title is dark on dark; chart text is crowded; H4 cards descend directly from H2; shared footer also uses H4.
+- Content concerns requiring corrections: universal ban on SL tyres; universal pressures/clearances/lowering limits; unsupported range and tyre-life gains; claimed spring-rate calculation without measured inputs; zero body roll and guaranteed ride comfort; implication of an operating EVSELECT suspension service centre. Do not publish this draft with these remaining claims.
+- Removed the inline spring/load-capacity plot from the draft and replaced it with a ZEEKR 7X example. Removed detailed 1/2/3-way cards and added a concise relationship paragraph with contextual internal link to the damper guide.
+- Verified ZEEKR Thailand's current model page and linked brochure, page 3: Performance AWD 2,535 kg, 475 kW / 637 hp. Viewed user's supplied specification screenshot too. Sources: https://www.zeekrlife.com/en-th/models/7x and https://www.datocms-assets.com/142974/1756887361-7x-brochure-aug2025-correct.pdf .
+- Inspected local ZEEKR photograph individually. Added it with existing CC0 credit and an explicit caption that the pictured trim/market is not independently established. Tesla Model 3 Performance photo/example is STILL PENDING; do not substitute an unverified RWD picture.
+- Created installed skill C:/Users/rolf-/.codex/skills/evselect-contextual-links/SKILL.md. Skill-creator validator passed (Python -X utf8; PyYAML installed only in scratch/skill-validation-deps). Includes descriptive source anchors, homepage links for visible brand names without nested anchors, and latest heading convention.
+- Changed-page ESLint returned zero errors, ten unused-icon warnings. No build or rendered draft review yet.
+- Added heading policy and HTTP baseline tool/report. 30 URLs were attempted, only seven could be inspected; 23 returned 403 to the HTTP client. Browser page works, so do not report these as site outages. Four of the seven inspected pages have content heading skips. This is not a completed all-page audit.
+
+## Full objective remains active
+
+1. Finish correcting tyre/coilover content; include exact-model Tesla image and example; contextual brand/home links and sources; check all headings.
+2. Run local app, read the COMPLETE final article and inspect EVERY image, table and interaction at desktop/mobile; fix and reread. No publishing before this.
+3. Complete Carbon Ceramic full reader/image/interactive review and corrections.
+4. Audit contextual internal/external links and brand-home mentions on every public page, and heading structure on every page including shared components. HTTP baseline is only partial evidence.
+5. Validate and deploy only reviewed final content; verify actual production after deployment. No completion or release in this turn.
+
+## Later session: rewritten draft and actual reader review
+
+The earlier pending-photo and old-claim list above describes the earlier draft. The current page was fully rewritten and its catalogue entry updated. No production publication has occurred.
+
+- Final article inspected at http://127.0.0.1:3117/articles/ev-tyre-and-coilover-selection-guide on branch `codex/brake-complete-kits-2026-09-19`, based on `2c98452` with the changes in this checkpoint. Page SHA-256: `ad761378069fbb040ffc030ed4f738f1b03710cfeaa7074ed61ca677d5c187c5`.
+- Used actual Chrome, profile Evselect.com, draft tab 306882993. Read the rendered article in order, including every paragraph, table cell and both image credits, at **1440 × 1000 CSS px desktop** and **390 × 844 CSS px mobile**. Viewport values were read from the actual page; display scaling required different physical override dimensions. Temporary override was reset afterward.
+- Inspected the entire Tesla Model 3 Performance image and the entire ZEEKR 7X image individually in both layouts. Both load, show the whole car without a destructive crop, and have readable credits. Tesla uses the exact-model 2024 image by iMoD Official via Wikimedia, CC BY 3.0; ZEEKR retains its CC0 attribution and market/trim limitation. See `docs/editorial-image-sources.md`.
+- The opening now tells a prospective owner what decisions the guide helps with. It no longer opens with a catalogue of engineering jargon. Replaced the imprecise draft hook about pressing the accelerator making a car more powerful.
+- The heavy-EV example now distinguishes Thai Performance AWD's 2,535 kg / 475 kW / 637 hp and its 265/40R21 tyre size from the other trims. No horsepower-to-load-index formula or curb-weight-divided-by-four shortcut is recommended. Tesla's front/rear example links the Thai owner's manual.
+- Removed unsupported universal tyre-pressure, SL prohibition, lowering, tyre-life/range improvements, spring calculation and zero-roll/service-centre claims from the old article. There are no embedded damper graphs or detailed 1/2/3-way cards in this draft.
+- Found a KW example link that returned HTML instead of the claimed PDF. Removed that link and replaced the paragraph with practical advice to retain the actual kit's installation and setup records. The new paragraph was read on desktop and mobile afterward.
+- Desktop table is readable across all columns. On mobile, swiped right to read the complete final column and left to reread the row labels/meaning; all four rows were read. Table width 560 px inside a 349 px container; document width 382 px at a 390 px viewport, so table overflow is contained rather than widening the page.
+- Clicked the contextual Bump/Rebound link in the actual mobile page. It opened `/articles/ev-damper-tuning-bump-rebound-guide` with H1 `ซื้อโช้คหลักแสน ทำไมยังไม่จบ!?`; then returned to the tyre article. No captured browser error log was present in that check. This is destination verification, not a complete damper reader review.
+- Read shared header/footer and opened the final menu at mobile and desktop. Brand text and footer logo now link home; footer model links point to existing article routes. Contact copy names the actual Facebook destination. Menu text and buttons fit in both inspected views.
+- H1/H2/H3 hierarchy for this page was verified in the rendered DOM. All 30 public/pending routes also pass the separate HTTP heading check after corrections. **The other 29 pages have not passed the full final desktop/mobile reader review.**
+- Changed-file ESLint passed with no errors. Production build completed and all 73 referenced local images passed the repository's image check. These are supporting checks, not a substitute for reader review or deployment evidence.
+
+Remaining work: catalogue-card final review; Carbon Ceramic full reader/image/interaction audit; remaining brand and contextual links on other pages; complete rendered review of all other affected pages; then commit/push/release verification as appropriate. The all-page and production goal remains active.

@@ -86,7 +86,7 @@ export default function EvSuspensionTuningGuidePage() {
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8 mb-10 flex items-start gap-4">
           <AlertTriangle className="w-8 h-8 text-amber-500 shrink-0 mt-1" />
           <div>
-            <h3 className="text-xl font-bold text-white mt-0 mb-2">ทำไมรถ EV ถึงมีปัญหาช่วงล่าง &apos;ย้วย&apos; หรือ &apos;กระด้าง&apos;?</h3>
+            <h2 className="text-xl font-bold text-white mt-0 mb-2">ทำไมรถ EV ถึงมีปัญหาช่วงล่าง &apos;ย้วย&apos; หรือ &apos;กระด้าง&apos;?</h2>
             <p className="text-zinc-300 text-base mb-0 leading-relaxed">
               ปัญหาหลักของรถยนต์ไฟฟ้า (EV) คือ <strong>น้ำหนักแบตเตอรี่ (Mass)</strong> ที่ทำให้รถหนักกว่ารถน้ำมันขนาดเดียวกันถึง 300-500 กิโลกรัม 
               เมื่อรถที่มีน้ำหนักมากเจอถนนเมืองไทยที่มีคอสะพานชันและหลุมบ่อ พลังงานจลน์ (Kinetic Energy) จะถูกส่งไปยังโช้คเดิมโรงงานมากเกินไป 
@@ -116,7 +116,7 @@ export default function EvSuspensionTuningGuidePage() {
 
 
 
-        <h3>สรุปคำแนะนำจาก EVSELECT</h3>
+        <h2>สรุปคำแนะนำจาก EVSELECT</h2>
         <p>
           ก่อนเลือกซื้อโช้ค ให้ตอบตัวเองก่อนว่า <em>&quot;เราขับรถแบบไหน?&quot;</em> 
           ถ้าเน้นครอบครัว <strong>Öhlins</strong> คือคำตอบ ถ้าเน้นขับเร็วทางไกล <strong>KW</strong> จะตอบโจทย์ 

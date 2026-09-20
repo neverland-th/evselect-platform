@@ -23,7 +23,7 @@ export default function StorefrontLayout({
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
           </span>
           <span className="text-slate-200 leading-tight">
-            <strong className="text-lime-400 font-semibold">EVSELECT กำลังเตรียมเปิดตัวสินค้า</strong>
+            <strong className="text-lime-400 font-semibold"><Link href="/" className="underline underline-offset-4">EVSELECT</Link> กำลังเตรียมเปิดตัวสินค้า</strong>
             <span className="hidden sm:inline"> — ตอนนี้ยังไม่มีสินค้าพร้อมจำหน่าย</span>
           </span>
         </div>
@@ -95,7 +95,7 @@ export default function StorefrontLayout({
               className="inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200 text-xs font-semibold px-3 py-2 rounded-lg transition-all"
             >
               <MessageCircle className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">สอบถามทาง LINE / FB</span>
+              <span className="hidden sm:inline">สอบถามทาง Facebook</span>
               <span className="sm:hidden">แชท</span>
             </a>
 
@@ -114,7 +114,7 @@ export default function StorefrontLayout({
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {/* Brand column */}
             <div className="md:col-span-1 space-y-4">
-              <div className="relative w-48 h-14 overflow-hidden rounded-xl bg-white p-1.5 flex items-center justify-center border border-zinc-800 shadow-sm">
+              <Link href="/" className="relative w-48 h-14 overflow-hidden rounded-xl bg-white p-1.5 flex items-center justify-center border border-zinc-800 shadow-sm">
                 <Image
                   src="/logo-desktop.png"
                   alt="EVSELECT"
@@ -122,7 +122,7 @@ export default function StorefrontLayout({
                   height={190}
                   className="object-contain w-full h-full"
                 />
-              </div>
+              </Link>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวทางเลือกอุปกรณ์เสริมสำหรับผู้ใช้รถ EV ในไทย
               </p>
@@ -134,19 +134,19 @@ export default function StorefrontLayout({
 
             {/* Supported Models */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">รุ่นรถที่มีบทความ</h4>
+              <h2 className="text-sm font-semibold text-white tracking-wider uppercase">รุ่นรถที่มีบทความ</h2>
               <ul className="text-xs space-y-2 text-zinc-400">
-                <li className="hover:text-lime-400 transition-colors">BYD Atto 3 / Seal / Sealion 7</li>
-                <li className="hover:text-lime-400 transition-colors">Tesla Model 3 Highland & Legacy</li>
-                <li className="hover:text-lime-400 transition-colors">Tesla Model Y & Model Y L</li>
-                <li className="hover:text-lime-400 transition-colors">Zeekr X & Zeekr 009</li>
-                <li className="hover:text-lime-400 transition-colors">Deepal S05 / S07 & Geely EX2</li>
+                <li><Link href="/articles/byd-atto-3-review" className="underline underline-offset-4 hover:text-lime-400">BYD Atto 3</Link> / <Link href="/articles/byd-seal-review" className="underline underline-offset-4 hover:text-lime-400">Seal</Link></li>
+                <li><Link href="/articles/tesla-model-3-highland-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model 3 Highland</Link></li>
+                <li><Link href="/articles/tesla-model-y-l-premium-6-seater-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model Y L</Link></li>
+                <li><Link href="/articles/zeekr-x-review" className="underline underline-offset-4 hover:text-lime-400">ZEEKR X</Link> / <Link href="/articles/zeekr-009-review" className="underline underline-offset-4 hover:text-lime-400">009</Link> / <Link href="/articles/zeekr-7x-2026-review" className="underline underline-offset-4 hover:text-lime-400">7X</Link></li>
+                <li><Link href="/articles/deepal-s05-review" className="underline underline-offset-4 hover:text-lime-400">Deepal S05</Link> / <Link href="/articles/deepal-s07-review" className="underline underline-offset-4 hover:text-lime-400">S07</Link> / <Link href="/articles/geely-ex2-review" className="underline underline-offset-4 hover:text-lime-400">Geely EX2</Link></li>
               </ul>
             </div>
 
             {/* Channels & Support */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">ติดตามการเปิดตัวและติดต่อ</h4>
+              <h2 className="text-sm font-semibold text-white tracking-wider uppercase">ติดตามการเปิดตัวและติดต่อ</h2>
               <ul className="text-xs space-y-1 text-zinc-400">
                 <li>
                   <Link href="/#launch" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">
@@ -157,16 +157,16 @@ export default function StorefrontLayout({
                 <li>
                   <a href="https://m.me/evselects" target="_blank" rel="noopener noreferrer" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-blue-400 transition-colors">
                     <MessageCircle className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                    <span>Facebook Page & Marketplace</span>
+                    <span>แชทผ่าน Facebook</span>
                   </a>
                 </li>
-                <li><Link href="/contact" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">ติดต่อ EVSELECT</Link></li>
+                <li><Link href="/contact" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">ติดต่อทีมงาน</Link></li>
               </ul>
             </div>
 
             {/* Quality Commitment */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white tracking-wider uppercase">แนวทาง EVSELECT</h4>
+              <h2 className="text-sm font-semibold text-white tracking-wider uppercase">แนวทาง <Link href="/" className="underline underline-offset-4">EVSELECT</Link></h2>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 เราแยกข้อมูลจากผู้ผลิต หลักการทั่วไป และสิ่งที่ยังต้องตรวจสอบ เพื่อให้ผู้อ่านเห็นข้อจำกัดของข้อมูลก่อนนำไปใช้
               </p>
@@ -182,7 +182,7 @@ export default function StorefrontLayout({
           </div>
 
           <div className="mt-12 pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-            <p>© {new Date().getFullYear()} EVSELECT Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
+            <p>© {new Date().getFullYear()} <Link href="/" className="underline underline-offset-4 hover:text-white">EVSELECT</Link> Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
             <p className="font-mono text-[11px] text-zinc-500">
               DRIVE BETTER. SELECT SMARTER.™
             </p>

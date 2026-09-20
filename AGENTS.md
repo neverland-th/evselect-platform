@@ -2,9 +2,9 @@
 
 # This is NOT the Next.js you know
 
-This version has breaking changes - APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
-This block is written and re-added by `next dev` - verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
 
@@ -30,3 +30,7 @@ Every completed piece of text and imagery must be opened and reviewed as a first
 Read the actual rendered desktop and mobile views in order. Evaluate the hook, clear reader benefit, natural Thai, reading flow, brand tone, credibility, image relevance and reasons to continue. Fix weak or confusing content, then reread the full final piece and inspect every image again. Record the version/URL, actual views inspected, concrete findings and fixes.
 
 Passing a build, lint or HTTP check is not a substitute for reading and viewing the finished content. Extracted text and older screenshots alone do not pass this gate. If the browser or preview cannot be opened, keep additional content changes as a draft and report the missing check; do not publish or claim the reader review is complete. This requirement takes precedence over speed and qualifies the standing deployment approval above.
+
+## Public heading hierarchy (user instruction, 2026-09-21)
+
+Every public page must have exactly one H1 for its main topic. Use H2 for major sections, H3 for nested subsections, and deeper levels only as needed; do not skip levels when descending. Returning from H3 to H2 is valid. Choose elements for meaning and CSS for size. Include shared components and interactive states. This is the EVSELECT editorial and accessibility standard, not a promise of rankings or a claim that Google penalizes multiple H1s. Follow Google Search Central, W3C heading guidance and the requested Backlinko H1 guidance. Full rendered desktop/mobile reader review remains required before publication.

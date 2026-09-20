@@ -151,9 +151,9 @@ export default function ShockAbsorberTypesGuidePage() {
             <div className="w-7 h-7 rounded-lg bg-lime-500 flex items-center justify-center text-slate-950 font-black text-xs">
               SA
             </div>
-            <h3 className="text-base font-bold text-slate-900 m-0">
+            <h2 className="text-base font-bold text-slate-900 m-0">
               สรุปความแตกต่างเชิงโครงสร้างสำหรับรถ EV (Architecture Summary)
-            </h3>
+            </h2>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700 mb-0 pl-0 list-none">
             <li className="flex items-start gap-2">
@@ -556,7 +556,7 @@ export default function ShockAbsorberTypesGuidePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
               <div className="text-xs font-bold text-lime-700 uppercase tracking-wider mb-1">รถคอมแพกต์ / ซีดาน EV</div>
-              <h4 className="font-extrabold text-slate-900 text-base mb-2">Tesla Model 3 / BYD Seal / MG4</h4>
+              <h3 className="font-extrabold text-slate-900 text-base mb-2">Tesla Model 3 / BYD Seal / MG4</h3>
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 <strong>แนะนำ:</strong> ชุดสตรัทปรับเกลียว <strong>Monotube พร้อม Digressive Valving</strong> ปรับแข็ง-อ่อนได้ 16–32 ระดับ ช่วยหยุดอาการดีดเด้งของท้ายรถและเพิ่มความมั่นใจในโค้งความเร็วสูง
               </p>
@@ -567,7 +567,7 @@ export default function ShockAbsorberTypesGuidePage() {
 
             <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
               <div className="text-xs font-bold text-sky-700 uppercase tracking-wider mb-1">รถเอสยูวีครอบครัว EV</div>
-              <h4 className="font-extrabold text-slate-900 text-base mb-2">Tesla Model Y / Deepal S07 / BYD Atto 3</h4>
+              <h3 className="font-extrabold text-slate-900 text-base mb-2">Tesla Model Y / Deepal S07 / BYD Atto 3</h3>
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 <strong>แนะนำ:</strong> โช้คอัพ <strong>Inverted Monotube (คู่หน้า) + Monotube Sub-tank (คู่หลัง)</strong> เสริมความทนทานต่อแรงกระแทกคอสะพาน และซับแรงกระเทือนเบาะแถวสองอย่างนุ่มนวล
               </p>
@@ -578,7 +578,7 @@ export default function ShockAbsorberTypesGuidePage() {
 
             <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
               <div className="text-xs font-bold text-purple-700 uppercase tracking-wider mb-1">พรีเมียมเอ็มพีวี / เรือธง EV</div>
-              <h4 className="font-extrabold text-slate-900 text-base mb-2">Zeekr 009 / Zeekr 7X / Denza D9</h4>
+              <h3 className="font-extrabold text-slate-900 text-base mb-2">Zeekr 009 / Zeekr 7X / Denza D9</h3>
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 <strong>แนะนำ:</strong> <strong>Dual-Chamber Smart Air Suspension</strong> ควบคุมด้วยระบบคอมพิวเตอร์พร้อมระบบปรับความสูงอัตโนมัติ ให้ความนุ่มเงียบระดับ First Class
               </p>

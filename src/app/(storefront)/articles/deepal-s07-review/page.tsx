@@ -251,9 +251,9 @@ export default function DeepalS07ReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -978,7 +978,7 @@ export default function DeepalS07ReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-lime-600" />
-            <h3 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h3>
+            <h2 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h2>
           </div>
           <Link
             href="/articles"
@@ -1009,9 +1009,9 @@ export default function DeepalS07ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">In-Depth Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 เจาะลึกเอสยูวีไฟฟ้าน้องใหม่สายแคมปิ้ง ออปชันไฮเทค และการชาร์จเร็ว 3C
               </p>
@@ -1037,9 +1037,9 @@ export default function DeepalS07ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">In-Depth Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 สัมผัสแรกกับซิตี้คาร์ไฟฟ้าขับหลัง 116 แรงม้า ที่นุ่มนวลที่สุดในงบ 4 แสนบาท
               </p>
@@ -1059,9 +1059,9 @@ export default function DeepalS07ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">Tips &amp; Guide</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 5 วิธีดูแลแบตเตอรี่รถ EV ให้เสื่อมช้าลง และใช้ได้นานเกิน 10 ปี
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 เทคนิคการชาร์จที่ถูกต้อง การตั้ง Limit และพฤติกรรมถนอมแบตเตอรี่รถยนต์ไฟฟ้า
               </p>

@@ -145,9 +145,9 @@ export default function EVCamberAdjustmentGuidePage() {
             <div className="w-7 h-7 rounded-lg bg-lime-500 flex items-center justify-center text-slate-950 font-black text-xs">
               EX
             </div>
-            <h3 className="text-base font-bold text-slate-900 m-0">
+            <h2 className="text-base font-bold text-slate-900 m-0">
               ข้อสรุปเชิงวิศวกรรมสำหรับผู้ใช้รถ EV (Executive Summary)
-            </h3>
+            </h2>
           </div>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700 mb-0 pl-0 list-none">
             <li className="flex items-start gap-2">
@@ -241,10 +241,10 @@ export default function EVCamberAdjustmentGuidePage() {
           </div>
 
           <div className="bg-slate-900 text-slate-100 p-6 rounded-2xl">
-            <h4 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
+            <h3 className="text-base font-extrabold text-white mb-3 flex items-center gap-2">
               <Activity className="w-4 h-4 text-lime-400" />
               กลไก Dynamic Camber: ทำไมองศาล้อขณะเลี้ยวจริงถึงไม่เท่ากับตอนจอดนิ่งบนแท่นตั้งศูนย์?
-            </h4>
+            </h3>
             <p className="text-sm text-slate-300 mb-4 leading-relaxed">
               มุมเอียงของหน้ายางที่แนบกับพื้นถนนขณะรถกำลังเข้าโค้งจริงๆ ไม่ใช่ตัวเลของศานิ่งๆ ที่ตั้งไว้ตอนจอดบนลิฟต์ตั้งศูนย์ แต่เป็นผลลัพธ์จากการทำงานประสานกันของ 5 ปัจจัยทางพลศาสตร์ช่วงล่าง:
             </p>
@@ -602,10 +602,10 @@ export default function EVCamberAdjustmentGuidePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:border-lime-400 transition-colors">
-              <h4 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
+              <h3 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
                 <span>Adjustable Front Upper Control Arms</span>
                 <span className="text-xs text-lime-700 bg-lime-50 border border-lime-200 px-2 py-0.5 rounded-full font-bold">ตรงรุ่น EV</span>
-              </h4>
+              </h3>
               <p className="text-xs text-slate-600 mb-3">
                 ปีกนกบนหน้าปรับแคมเบอร์และแคสเตอร์ได้ ผลิตจากอลูมิเนียมเกรดอากาศยาน 6061-T6 พร้อมบูชโพลียูรีเทนทนแรงบิดสูง
               </p>
@@ -615,10 +615,10 @@ export default function EVCamberAdjustmentGuidePage() {
             </div>
 
             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:border-lime-400 transition-colors">
-              <h4 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
+              <h3 className="font-bold text-slate-900 mb-1 flex items-center justify-between">
                 <span>Rear Adjustable Camber &amp; Toe Arms</span>
                 <span className="text-xs text-lime-700 bg-lime-50 border border-lime-200 px-2 py-0.5 rounded-full font-bold">แก้ปัญหายางกินใน</span>
-              </h4>
+              </h3>
               <p className="text-xs text-slate-600 mb-3">
                 อาร์มปรับแคมเบอร์และมุมโทหลัง ช่วยดึงล้อหลังให้กลับมาอยู่ในค่าสเปกมาตรฐานหลังจากโหลดเตี้ย หรือปรับเพิ่มความเกาะถนน
               </p>

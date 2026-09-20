@@ -243,9 +243,9 @@ export default function BYDAtto3ReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -644,19 +644,19 @@ export default function BYDAtto3ReviewPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ MG ZS EV</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ MG ZS EV</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Atto 3 ให้พละกำลังแรงกว่า แบตเตอรี่จุมากกว่า วิ่งได้ไกลกว่าเกือบ 80 กม. และหน้าจอกลาง 15.6 นิ้ว ลื่นไหลกว่าชัดเจน
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ ORA Good Cat</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">เทียบกับ ORA Good Cat</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Atto 3 ชนะเรื่องความกว้างขวางของเบาะหลัง มิติตัวถังที่สูงโปร่งแบบเอสยูวี และม่านบังแดดไฟฟ้าที่ตอบโจทย์แดดไทย
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-              <h4 className="font-bold text-slate-900 text-sm mb-1">ความคุ้มค่าบนถนนไทย</h4>
+              <h3 className="font-bold text-slate-900 text-sm mb-1">ความคุ้มค่าบนถนนไทย</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 ศูนย์บริการ Rêver ครอบคลุมกว่า 100 แห่งทั่วประเทศ และอะไหล่พร้อมเปลี่ยน ทำให้ Atto 3 เป็นตัวเลือกที่อุ่นใจที่สุดในระยะยาว
               </p>
@@ -1026,7 +1026,7 @@ export default function BYDAtto3ReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-lime-600" />
-            <h3 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h3>
+            <h2 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h2>
           </div>
           <Link
             href="/articles"
@@ -1057,9 +1057,9 @@ export default function BYDAtto3ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EV Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว BYD Seal สเปกไทย 3 รุ่นย่อย: สปอร์ตซีดานไฟฟ้า 530 แรงม้า
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 เจาะลึกสมรรถนะ 0-100 ใน 3.8 วิ แชสซี CTB เหนียวแน่น และโช้ค FSD
               </p>
@@ -1085,9 +1085,9 @@ export default function BYDAtto3ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EV Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว MG4 Electric สเปกไทย: ขับหลัง 50:50 แฮทช์แบ็กไฟฟ้าที่ขับสนุกที่สุด
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 ทดสอบสมรรถนะช่วงล่าง 5-Link การชาร์จ DC 140 kW และตัวแรง XPOWER
               </p>
@@ -1113,9 +1113,9 @@ export default function BYDAtto3ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">EV Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Deepal S07 สเปกไทย: สมาร์ทเอสยูวีพรีเมียม ประตูไร้กรอบ ขับหลัง
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 เจาะลึกดีไซน์สุดล้ำ ชิป Snapdragon 8155 และความนุ่มนวลบนถนนเมืองไทย
               </p>

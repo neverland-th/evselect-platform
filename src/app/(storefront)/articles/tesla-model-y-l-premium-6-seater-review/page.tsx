@@ -254,9 +254,9 @@ export default function TeslaModelY6SeaterReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -963,7 +963,7 @@ export default function TeslaModelY6SeaterReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-lime-600" />
-            <h3 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h3>
+            <h2 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h2>
           </div>
           <Link
             href="/articles"
@@ -994,9 +994,9 @@ export default function TeslaModelY6SeaterReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">In-Depth Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Tesla Model 3 Highland: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยี
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 กระจก Acoustic 360 องศา ช่วงล่างใหม่ และเบาะเป่าลมเย็น
               </p>
@@ -1022,9 +1022,9 @@ export default function TeslaModelY6SeaterReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">In-Depth Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kW
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 ทดสอบสมรรถนะ 646 แรงม้า ชิป Snapdragon 8295 และช่วงล่างถุงลม CCD
               </p>
@@ -1050,9 +1050,9 @@ export default function TeslaModelY6SeaterReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">Master Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphard
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 ทดสอบขับจริง เบาะ Sofaro First Class ช่วงล่างถุงลม และเทียบตรงตัวกับ Toyota Alphard
               </p>

@@ -245,9 +245,9 @@ export default function Zeekr009ReviewPage() {
 
       {/* 5. Executive Summary & Takeaways Box */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-lime-600" /> สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)
-        </h3>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div className="space-y-2">
             <div className="font-bold text-emerald-800 flex items-center gap-1.5">
@@ -479,9 +479,9 @@ export default function Zeekr009ReviewPage() {
 
           {/* Decision Guide Box */}
           <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs">
-            <h4 className="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2">
+            <h3 className="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2">
               <Compass className="w-4 h-4 text-lime-600" /> สรุปคำแนะนำ: เลือกรุ่นไหนให้คุ้มค่าที่สุดสำหรับคุณ?
-            </h4>
+            </h3>
             <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
               <li><strong>หากคุณมีคนขับรถประจำ และนั่งแถวสองเป็นหลัก:</strong> เลือกรุ่น <strong>Flagship AWD (6 ที่นั่ง)</strong> แบบไม่ต้องคิด เพราะเบาะ Sofaro First Class มอบประสบการณ์ที่เหนือกว่าเบาะ Ottoman ของ Alphard อย่างชัดเจน</li>
               <li><strong>หากคุณเป็นคนขับเอง และมีลูกเล็กหรือผู้สูงอายุเดินทางด้วย:</strong> เลือกรุ่น <strong>Premium AWD (7 ที่นั่ง)</strong> เพราะคุณจะได้ทั้งพละกำลัง 603 แรงม้า และช่องทางเดินตรงกลางที่ช่วยให้การดูแลผู้โดยสารแถวหลังทำได้ง่าย</li>
@@ -757,21 +757,21 @@ export default function Zeekr009ReviewPage() {
           {/* Deep Narrative Comparison Points */}
           <div className="space-y-4 text-sm text-slate-700 mt-6">
             <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-              <h4 className="font-bold text-slate-900 text-base mb-2">1. ประสบการณ์ผู้โดยสารตอนหลัง (Passenger Experience):</h4>
+              <h3 className="font-bold text-slate-900 text-base mb-2">1. ประสบการณ์ผู้โดยสารตอนหลัง (Passenger Experience):</h3>
               <p className="leading-relaxed text-xs sm:text-sm text-slate-600">
                 เมื่อเทียบกันตัวต่อตัว เบาะ <strong>Sofaro First Class</strong> ของ ZEEKR 009 ให้ความรู้สึกโอบกระชับและรองรับสรีระได้เหนือกว่าเบาะ Ottoman ของ Alphard อย่างชัดเจน โหมดเอนนอน Eames Lounge ทำมุมเอนได้ลึกกว่าและผ่อนคลายกล้ามเนื้อได้ดีกว่าด้วยระบบนวดถุงลมแบบ Wave Massage ที่แท้จริง (ไม่ใช่ระบบมอเตอร์สั่น) นอกจากนี้ความกว้างตัวถังที่มากกว่าถึง 174 มม. ทำให้พื้นที่ช่วงไหล่และข้อศอกไม่อึดอัดเลยแม้แต่น้อย
               </p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-              <h4 className="font-bold text-slate-900 text-base mb-2">2. ความเงียบและความนุ่มนวล (NVH & Ride Refinement):</h4>
+              <h3 className="font-bold text-slate-900 text-base mb-2">2. ความเงียบและความนุ่มนวล (NVH & Ride Refinement):</h3>
               <p className="leading-relaxed text-xs sm:text-sm text-slate-600">
                 จุดที่ ZEEKR 009 ชนะขาดลอยคือ <strong>&quot;ความเงียบสนิทแบบไร้แรงสั่นสะเทือน&quot;</strong> ในขณะที่ Toyota Alphard HEV จะมีเสียงเครื่องยนต์เบนซิน 2.5 ลิตรครางเข้ามาในห้องโดยสารทุกครั้งที่กดคันเร่งเร่งแซงหรือขับขึ้นทางชัน ZEEKR 009 กลับส่งมอบพละกำลัง 603 แรงม้าแบบเงียบกริบ ไร้เสียง ไร้การสั่นสะเทือน ผสานกับช่วงล่างถุงลม Dual Chamber ที่ซับแรงสะเทือนได้นุ่มนวลกว่าช่วงล่างสปริงของ Alphard อย่างเห็นได้ชัด
               </p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-              <h4 className="font-bold text-slate-900 text-base mb-2">3. ความคุ้มค่าด้านราคาและต้นทุนการใช้งาน (Value Proposition & TCO):</h4>
+              <h3 className="font-bold text-slate-900 text-base mb-2">3. ความคุ้มค่าด้านราคาและต้นทุนการใช้งาน (Value Proposition & TCO):</h3>
               <p className="leading-relaxed text-xs sm:text-sm text-slate-600">
                 ในด้านความคุ้มค่า ZEEKR 009 สเปกไทยเปิดราคาถูกกว่า Toyota Alphard ศูนย์ไทยถึง <strong>600,000 – 900,000 บาท</strong> แต่ได้ออปชันระดับเรือธง ทั้งพละกำลังที่มากกว่าเกือบ 2.5 เท่า, ระบบเสียง YAMAHA 30 ลำโพง, จอเพดาน 17 นิ้ว OLED 3K, ช่วงล่างถุงลมอัจฉริยะ และช่วยประหยัดค่าน้ำมันได้มากกว่า <strong>50,000 – 70,000 บาทต่อปี</strong> (สำหรับการใช้งานปีละ 25,000 กม.)
               </p>
@@ -1124,7 +1124,7 @@ export default function Zeekr009ReviewPage() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-lime-600" />
-            <h3 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h3>
+            <h2 className="text-xl font-bold text-slate-900">บทความและรีวิวที่เกี่ยวข้อง</h2>
           </div>
           <Link
             href="/articles"
@@ -1154,9 +1154,9 @@ export default function Zeekr009ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">ZEEKR Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 ขุมพลัง 646 แรงม้า 800V SiC และช่วงล่างถุงลมปรับระดับ
               </p>
@@ -1182,9 +1182,9 @@ export default function Zeekr009ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">ZEEKR Review</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 รีวิว Zeekr X: พรีเมียมคอมแพกต์เอสยูวีสำหรับคนเมือง
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 ความคล่องตัวสไตล์ยุโรป ดีไซน์สแกนดิเนเวีย และสมรรถนะเกินตัว
               </p>
@@ -1204,9 +1204,9 @@ export default function Zeekr009ReviewPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="text-[11px] text-lime-700 font-bold">Suspension Tech</div>
-              <h4 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-lime-700 transition-colors line-clamp-2">
                 การเซ็ตอัปช่วงล่าง EV สำหรับถนนเมืองไทย: นุ่มนวล ไม่เด้ง ไม่กระด้าง
-              </h4>
+              </h3>
               <p className="text-xs text-slate-500 line-clamp-2">
                 วิเคราะห์โช้คอัพ ถุงลม Air Suspension และการรับมือน้ำหนักแบตเตอรี่
               </p>

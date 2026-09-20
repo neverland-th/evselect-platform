@@ -41,3 +41,12 @@ The user requested a more premium real photograph. `public/images/articles/porsc
 - Rights: the Stories page credits Porsche but does not state an open reuse licence. Specific reuse permission for EVSELECT is unconfirmed. Do not label the image Creative Commons, public domain or permission obtained. Porsche Newsroom terms apply to Newsroom material and must not automatically be extended to this Stories asset.
 - Editorial context: explanatory illustration with source credit and outbound manufacturer link; not EVSELECT photography, a road test, stocked merchandise or an endorsement. Listing cards use the site's existing image frame; the article retains the image's aspect ratio.
 - Release verification must confirm the new asset on both the article and catalog at desktop/mobile sizes and check that social image metadata points to the same file.
+
+## Tesla Model 3 Performance for tyre/coilover guide (2026-09-21)
+
+- Local file: `public/images/editorial/tesla-model-3-performance-2024.png`, Wikimedia 1280 x 640 thumbnail; no retouching.
+- Exact file/model: https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png ; description identifies the 2024 Performance, image dated 24 April 2024.
+- Creator: iMoD Official; original video https://www.youtube.com/watch?v=Lr1FdX7Pi5o .
+- Licence as recorded on Commons: CC BY 3.0, https://creativecommons.org/licenses/by/3.0/ . Article credits creator, source, licence and resize.
+- Viewed the downloaded image before inclusion: grey Highland Performance, front-left three-quarter view, whole vehicle and wheels visible. Does not establish current Thailand specifications or represent an EVSELECT road test.
+- Specification evidence is separate: Tesla Thai owner's manual for factory 20-inch front/rear tyre sizes.

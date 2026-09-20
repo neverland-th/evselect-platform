@@ -595,7 +595,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
             <div className="w-10 h-10 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center font-bold mb-3">
               1
             </div>
-            <h4 className="font-bold text-slate-900 text-base mb-1.5">กระบอกสแตนเลส INOX หรืออลูมิเนียมเกรดอากาศยาน</h4>
+            <h3 className="font-bold text-slate-900 text-base mb-1.5">กระบอกสแตนเลส INOX หรืออลูมิเนียมเกรดอากาศยาน</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               เลือกกระบอกช็อกอัปที่ผลิตจาก <strong>Stainless Steel เกรด INOX-LINE</strong> หรือ <strong>Forged 6061-T6 Aluminum อโนไดซ์แข็ง</strong> ซึ่งผ่านการทดสอบพ่นละอองเกลือ (Salt Spray Test) เกิน 300 ชั่วโมง ไม่เป็นสนิมตลอดอายุการใช้งาน
             </p>
@@ -605,7 +605,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
             <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-3">
               2
             </div>
-            <h4 className="font-bold text-slate-900 text-base mb-1.5">หัวเบ้าโช้คยางสังเคราะห์ (Rubber Top Mount)</h4>
+            <h3 className="font-bold text-slate-900 text-base mb-1.5">หัวเบ้าโช้คยางสังเคราะห์ (Rubber Top Mount)</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               สำหรับรถใช้งานประจำวัน แนะนำให้ใช้หัวท็อปเมาท์ยางเสริมความแข็งแกร่ง (Reinforced Rubber) หรือใช้เบ้าเดิมติดรถ <strong>หลีกเลี่ยงลูกปืน Pillowball หัวบอลเปลือย</strong> เพราะทรายและน้ำฝนจะแทรกซึมทำให้เกิดเสียงดังกุกกักและสึกหรออย่างรวดเร็ว
             </p>
@@ -615,7 +615,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
             <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-3">
               3
             </div>
-            <h4 className="font-bold text-slate-900 text-base mb-1.5">ยางกันฝุ่นและซีลปิดกั้นคราบโคลน (Full Dust Boot)</h4>
+            <h3 className="font-bold text-slate-900 text-base mb-1.5">ยางกันฝุ่นและซีลปิดกั้นคราบโคลน (Full Dust Boot)</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               ต้องติดตั้งยางกันฝุ่นคลุมแกนช็อกอัปเต็มความยาว 100% เพื่อป้องกันเศษหินดีดใส่แกนชุบโครเมียมจนเป็นรอยตามด ซึ่งเป็นสาเหตุหลักที่ทำให้น้ำมันไฮดรอลิกรั่วซึมและซีลช็อกอัพฉีกขาด
             </p>
