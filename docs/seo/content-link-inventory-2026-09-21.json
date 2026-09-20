@@ -1,6 +1,6 @@
 {
-  "base": "http://127.0.0.1:4327",
-  "checkedAt": "2026-09-20T22:10:17.267Z",
+  "base": "http://127.0.0.1:52605",
+  "checkedAt": "2026-09-20T22:16:14.606Z",
   "scope": "All public SSR anchors plus contextual candidates; not proof of semantic relevance, external fact checking, browser states or reader review.",
   "summary": {
     "pages": 30,
@@ -11114,7 +11114,7 @@
           "detail": "EVSELECT Thailand. สงวนลิขสิทธิ์ทุกประการ → (unlinked)"
         }
       ],
-      "fingerprint": "e532b91056fa3dec0d0afe58114d9cc6ddda9b241f4e2755b66921f063dc458d",
+      "fingerprint": "a53c8d5cc0c390ac420ee6e44dacfbb7214761dfc9567a45e2432f28058164f4",
       "nonLinkableContexts": "Metadata, JSON-LD, alt/aria attributes and pixels are excluded from brand-text linking."
     },
     {

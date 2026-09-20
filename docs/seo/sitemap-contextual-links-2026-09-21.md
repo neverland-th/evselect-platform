@@ -75,7 +75,9 @@ npm run audit:content -- --strict
 
 Browser structural check: เปิดทั้ง 30 route ที่ 1440 และ 390 px รวม 60 page/viewport checks ไม่พบ page exceptions หรือ horizontal overflow บันทึก visible anchors และโครงสร้างหลัง hydration ที่ `scratch/content-links-browser/results.json` ตรวจภาพหน้าจอ opening บทความโช้คและ Coming soon banner สองขนาดแล้ว เป็น UI regression sampling ไม่ใช่การอ่านบทความเต็มหรือดูภาพทุกภาพ
 
-Unit tests 7 cases ผ่าน รวม internal absolute/relative URL, fragment decoding, contextual candidate แยกจากเมนู, empty/generic/nested anchors, brand-home, heading skip, malformed XML, canonical sitemap host, legacy-fingerprint gate และ internal same-tab เทียบกับ external new-tab ข้อกำหนด; scoped ESLint และ Next.js 16.3.2 build/TypeScript/43 static pages ผ่าน
+Unit tests 8 cases ผ่าน รวม internal absolute/relative URL, fragment decoding, contextual candidate แยกจากเมนู, empty/generic/nested anchors, brand-home, heading skip, malformed XML, canonical sitemap host, legacy-fingerprint gate, internal same-tab เทียบกับ external new-tab และความคงที่ของ fingerprint เมื่อ cache URL รูปเปลี่ยนตาม build; scoped ESLint และ Next.js 16.3.2 build/TypeScript/43 static pages ผ่าน
+
+การ deploy รอบแรก `dpl_AAYKVHBp4Zm86LZXVpdy1rw9ExMy` ถูก audit gate หยุดไว้ เพราะ Next/Vercel เปลี่ยน imported-image URL จาก `/static/media/` เป็น `/static/immutable/media/` พร้อม cache hash คนละค่า ทำให้ fingerprint บทความโช้คต่างจาก local โดยเนื้อหาไม่เปลี่ยน Production alias ยังอยู่ release เดิม แก้โดย normalize เฉพาะ cache path/hash ของภาพภายในเว็บใน text/link fingerprint; ยังคงตรวจชื่อไฟล์และ alt และไม่ข้ามการตรวจภาพหรือ reader review แยกต่างหาก ย้าย baseline เฉพาะหน้าบทความโช้คให้ใช้ algorithm ใหม่นี้ หลังเทียบแล้ว issues, links, headings และ image inventory ของ local ก่อน/หลังเหมือนเดิมทุกค่า อีก 29 หน้าไม่เปลี่ยน fingerprint
 
 ## การเผยแพร่
 

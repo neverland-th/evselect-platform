@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { inspectPage, internalTarget, parseSitemap, blockingPages } from './lib/content-links.mjs';
+import { inspectPage, internalTarget, parseSitemap, blockingPages, imageIdentity } from './lib/content-links.mjs';
 
 const page = body => `<html><head><title>Test</title><meta name="description" content="EVSELECT"></head><body><main><h1>เรื่องโช้ค</h1>${body}</main></body></html>`;
 test('Internal URLs preserve queries and decode fragments; external links stay external', () => {
@@ -42,4 +42,16 @@ test('Internal links stay in the same tab; external links require a protected ne
   assert.equal(result.issues.filter(i => i.code === 'external-not-new-tab').length, 0);
   assert.equal(result.issues.filter(i => i.code === 'internal-new-tab').length, 1);
   assert.deepEqual(result.issues.filter(i => i.code === 'unsafe-new-tab'), [{ code: 'unsafe-new-tab', detail: 'https://manufacturer.com' }]);
+});
+
+test('Imported-image cache URLs are portable without ignoring names or alt text', () => {
+  const local = '/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftein-flex-z.localhash.webp&w=3840&q=75';
+  const hosted = '/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Ftein-flex-z.hosthash.webp&w=3840&q=75';
+  assert.equal(imageIdentity(local), imageIdentity(hosted));
+  assert.equal(imageIdentity('https://external.example' + hosted), 'https://external.example' + hosted);
+  assert.notEqual(imageIdentity(hosted), imageIdentity(hosted.replace('tein-flex-z', 'different-product')));
+  const a = inspectPage(page(`<img src="${local}" alt="TEIN FLEX Z">`), '/articles/test');
+  const b = inspectPage(page(`<img src="${hosted}" alt="TEIN FLEX Z">`), '/articles/test');
+  assert.equal(a.fingerprint, b.fingerprint);
+  assert.notEqual(a.fingerprint, inspectPage(page(`<img src="${hosted}" alt="Another product">`), '/articles/test').fingerprint);
 });

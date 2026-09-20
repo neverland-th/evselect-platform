@@ -6,6 +6,21 @@ const origin = 'https://evselects.com';
 const normalize = value => (value || '').replace(/\s+/g, ' ').trim();
 const ignored = 'script,style,head,noscript,template,[hidden],[aria-hidden="true"]';
 
+// Next's imported-image cache URL differs between local and Vercel adapters.
+// This text/link gate is not a binary-image review; image verification is separate.
+export function imageIdentity(src) {
+  if (!src) return src;
+  try {
+    const url = new URL(src, origin);
+    if (!['evselects.com', 'www.evselects.com'].includes(url.hostname)) return src;
+    const asset = url.pathname === '/_next/image' ? url.searchParams.get('url') : url.pathname;
+    if (asset?.startsWith('/_next/static/')) {
+      return asset.replace('/static/immutable/', '/static/').replace(/(\/media\/[^/]+)\.[^.]+\.(avif|webp|png|jpe?g|gif|svg)$/i, '$1.$2');
+    }
+  } catch { /* Preserve malformed source for subsequent asset checks. */ }
+  return src;
+}
+
 export function internalTarget(href, route = '/') {
   try {
     const url = new URL(href, origin + route);
@@ -83,7 +98,8 @@ export function inspectPage(html, route) {
   const title = document.querySelector('title')?.textContent || '';
   const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
   const robots = [...document.querySelectorAll('meta[name="robots"],meta[name="googlebot"]')].map(e => e.getAttribute('content')).join(',');
-  const fingerprint = createHash('sha256').update(JSON.stringify({ title, canonical, robots, mainText, headings, links, brands, images })).digest('hex');
+  const fingerprintImages = images.map(img => ({ ...img, src: imageIdentity(img.src) }));
+  const fingerprint = createHash('sha256').update(JSON.stringify({ title, canonical, robots, mainText, headings, links, brands, images: fingerprintImages })).digest('hex');
   return { route, title, canonical, robots, headings, links, brands, ids, images, issues, fingerprint, nonLinkableContexts: 'Metadata, JSON-LD, alt/aria attributes and pixels are excluded from brand-text linking.' };
 }
 
