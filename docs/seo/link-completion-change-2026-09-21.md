@@ -1,5 +1,7 @@
 # EVSELECT link completion — change record
 
+Latest status: **Deployed and technically verified** under the explicit deploy-first instruction. See [production release evidence](link-release-production-2026-09-21.md). Full legacy editorial/source review remains deferred and is not reported as passed; older "not deployed" statements below describe prior checkpoints.
+
 ## Release-order override — 2026-09-21
 
 The user explicitly instructed: "deploy ก่อน แล้ว update skill + memory". For this release, deploy the prepared sitemap/link changes after technical checks, then verify production and update the skill and memory. This is a release-specific override of the earlier full editorial pre-publication gate, not a declaration that every legacy article/source/image has been reviewed, and not a permanent removal of editorial review. Keep the remaining review items in the reader ledger. No checkout/backend work or unrelated Webflow publishing is authorized.

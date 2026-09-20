@@ -10,6 +10,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # EVSELECT Frontend Development Rules
 
+Project knowledge base: [docs/knowledge-base/README.md](docs/knowledge-base/README.md). For Google AI Search and technical SEO decisions, consult the user-selected Google source recorded there, refresh changing guidance, and distinguish official guidance from this project's conventions and unverified account metrics.
+
 **ALL AGENTS (ChatGPT, Codex, etc.) MUST ADHERE TO THESE RULES:**
 
 1. **Language & Localization**: All frontend text, UI components, and placeholders must remain in **Thai**.
