@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         '/fitment', '/dealers', '/export', '/competitors',
       ],
     },
-    sitemap: `${siteOrigin}/sitemap.xml`,
+    sitemap: [`${siteOrigin}/sitemap_index.xml`, `${siteOrigin}/sitemap.xml`],
   };
 }
