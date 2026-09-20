@@ -71,7 +71,7 @@ npm run audit:content -- --strict
 - `--strict` ไม่ยกเว้นปัญหาเดิม และตรวจยืนยันแล้วว่าจบด้วย exit 1 ตามที่ควร ไม่รายงานว่าทั้งเว็บ editorial ผ่าน
 - Full rendered desktop/mobile reader review และการดูภาพทุกภาพยังเป็นเงื่อนไขก่อนเผยแพร่ **การแก้เนื้อหา** งานนี้ไม่มีการแก้เนื้อหาบทความ จึงไม่อ้างว่าอ่านทวนบทความทั้งหมดแทนงานที่ค้างอยู่
 
-หลักฐาน local: `docs/seo/content-link-inventory-2026-09-21.json` และ CSV ชื่อเดียวกันลงท้าย `-internal-links.csv` มี anchor/ปลายทาง/scope ราย occurrence; strict negative check อยู่ `scratch/content-link-strict-audit.json`
+หลักฐาน inventory (อัปเดตเป็นโดเมน production หลังเผยแพร่): `docs/seo/content-link-inventory-2026-09-21.json` และ CSV ชื่อเดียวกันลงท้าย `-internal-links.csv` มี anchor/ปลายทาง/scope ราย occurrence; strict negative check ของ local อยู่ `scratch/content-link-strict-audit.json`
 
 Browser structural check: เปิดทั้ง 30 route ที่ 1440 และ 390 px รวม 60 page/viewport checks ไม่พบ page exceptions หรือ horizontal overflow บันทึก visible anchors และโครงสร้างหลัง hydration ที่ `scratch/content-links-browser/results.json` ตรวจภาพหน้าจอ opening บทความโช้คและ Coming soon banner สองขนาดแล้ว เป็น UI regression sampling ไม่ใช่การอ่านบทความเต็มหรือดูภาพทุกภาพ
 
@@ -81,4 +81,26 @@ Unit tests 8 cases ผ่าน รวม internal absolute/relative URL, fragme
 
 ## การเผยแพร่
 
-ยังไม่ยืนยันการเผยแพร่ ณ เวอร์ชันเอกสารนี้ ต้องบันทึก deployment และผลตรวจโดเมนจริงหลัง deploy
+เผยแพร่และตรวจโดเมนจริงแล้ว วันที่ 21 กันยายน 2569 เวลาประมาณ 05:17–05:20 น. (Asia/Bangkok)
+
+- Runtime commit: `f65c1f5` บน `codex/link-audit-sitemap-2026-09-21`; push แล้ว ไม่ merge main
+- Deployment: `dpl_AEUYkSAgqf8AHeyS3o5CdL8CFfr8` — READY / production
+- Immutable URL: https://evselect-platform-cr0rrvplm-evselect-com.vercel.app
+- Production aliases: `evselects.com`, `www.evselects.com`; ตรวจผ่าน deployment API และ CLI
+- Framework: Next.js 16.3.2; Vercel build log รายงาน 34 วินาที (buildingAt ถึง ready ประมาณ 47 วินาที)
+- Production audit ของ 30 หน้าและ sitemap ทั้ง 3 endpoint ผ่านเงื่อนไข infrastructure/legacy baseline โดย findings editorial เดิมยังคงอยู่ตามรายการด้านบน
+- `/sitemap_index.xml`, `/sitemap_indexl.xml`, `/sitemap.xml` ให้ 200 `application/xml` บนทั้งโดเมนหลักและ www ไม่มี `X-Robots-Tag: noindex`; index แต่ละไฟล์มี 1 sitemap และ sitemap ลูกมี 24 canonical URLs
+- ทดลอง User-Agent เป็น Googlebot ได้ผลเหมือนกัน แต่ **ไม่ใช่หลักฐานว่า Googlebot จริงดึงแล้ว**; immutable `.vercel.app` มี noindex ซึ่งไม่เกิดบนโดเมนหลัก ห้ามใช้ URL preview ไปส่ง Search Console
+- `robots.txt` ประกาศ index หลักและ sitemap เดิมครบ
+- Browser บน production ตรวจ 30 routes × 2 viewports (1440/390 px) รวม 60 ครั้ง ไม่พบ page exceptions หรือ horizontal overflow; หลักฐานอยู่ `scratch/content-links-browser-production/results.json` เปิดตรวจภาพ opening ของบทความโช้คและ Coming soon banner ทั้งสองขนาดแล้ว ไม่อ้างว่าเป็น full editorial review
+- Route guard เดิม 7 เส้นทาง (`/products`, `/products/example`, `/categories`, `/vehicles`, `/fitment`, `/export`, `/api/export/shopee`) ยังคง 404 เช่นเดียวกับ release ก่อน
+
+### Observability และข้อจำกัด
+
+Runtime error/fatal scan ภายในช่วงหลัง deploy พบ 2 คำขอทดสอบ `GET /product/example` ตอบ 500 (`SQLITE_CANTOPEN`) จากการตรวจ route เก่านอก sitemap เทียบ immutable deployment ก่อนหน้าแล้ว URL เดียวกันก็ตอบ 500 และ source ของ route/proxy ไม่เปลี่ยน จึงบันทึกเป็นปัญหาเดิมนอกขอบเขต ไม่แก้ backend ไม่พบ error ของหน้า public ที่อยู่ใน audit จาก scan ครั้งนี้
+
+Drains และระบบ monitoring ระยะยาว: ไม่ได้ตรวจ/ไม่ได้ตั้งค่าเพิ่มในงานนี้
+
+Google Search Console: **Data unavailable** ยังไม่ยืนยัน Submitted/Success/last read หรือ indexing แนะนำส่ง `https://evselects.com/sitemap_index.xml` ใน property ที่ถูกต้อง แล้วดูผลอ่าน sitemap จริง ไม่จำเป็นต้องส่ง compatibility alias ซ้ำ
+
+Rollback reference: `dpl_9VJHCKFwQQNFsUmGFo7tWSCSFqJn` / https://evselect-platform-d7tklh440-evselect-com.vercel.app (ไม่ได้ rollback)
