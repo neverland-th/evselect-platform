@@ -6294,12 +6294,10 @@
     },
     {
       "route": "/articles/ev-suspension-tuning-guide",
-      "mainInternalLinks": [],
-      "mainExternalLinks": [],
-      "unlinkedOrMisdirectedBrandText": [
+      "mainInternalLinks": [
         {
-          "text": "ทีมวิศวกรรมช่วงล่าง EVSELECT",
-          "href": null,
+          "href": "/",
+          "text": "EVSELECT",
           "scope": [
             "html",
             "body",
@@ -6307,14 +6305,203 @@
             "main",
             "article",
             "header",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "วิธีเลือกยางและคอยล์โอเวอร์ให้ตรงน้ำหนักรถ",
+          "scope": [
+            "html",
+            "body",
             "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "คู่มือ Bump, Rebound และความต่างของโช้ค 1-Way–3-Way",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+          "text": "พื้นฐาน Camber, Toe และการตั้งศูนย์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+          "text": "Monotube, Twin-tube และช่วงล่างถุงลมต่างกันอย่างไร",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ]
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "เลือกยางและคอยล์โอเวอร์ให้เป็นชุดเดียวกัน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ]
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "ทำความเข้าใจสปริง ระยะยุบ และการปรับแดมเปอร์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ]
+        }
+      ],
+      "mainExternalLinks": [
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official / Wikimedia Commons",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "figure",
+            "figcaption",
+            "p"
+          ]
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "figure",
+            "figcaption",
+            "p"
+          ]
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
+          "text": "ข้อกำหนดแรงดันและการตรวจยางในคู่มือรถ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "https://www.ohlins.com/storage/7AC688BED0B27E53064F094EF615E1B088E4D8FEA94635A5D2ECCC5FB1894053/b31b9618ad354b438a407241ceb64a6d/pdf/media/d60188c2ea574151aad35b903c54e441/OM_07451-01_7_R_T.pdf",
+          "text": "ข้อควรปฏิบัติในคู่มือ Öhlins Road & Track",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "https://www.kwsuspensions.com/uk/products/street-performance",
+          "text": "ดูผลิตภัณฑ์จาก KW",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ]
+        },
+        {
+          "href": "https://www.kwsuspensions.com/us-en/products/street-performance/v3-coilovers",
+          "text": "ข้อมูลระบบปรับ KW V3 จากผู้ผลิต",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
             "div",
             "div"
           ]
         },
         {
-          "text": "สรุปคำแนะนำจาก EVSELECT",
-          "href": null,
+          "href": "https://www.ohlins.com/en-us/automotive/road-and-track/tesla-model-3-model-y-road-and-track-set?v=tesla-model-3-2020",
+          "text": "ข้อมูล Öhlins TES MA10S1 และคู่มือ",
           "scope": [
             "html",
             "body",
@@ -6322,12 +6509,14 @@
             "main",
             "article",
             "div",
-            "h2"
+            "section",
+            "div",
+            "div"
           ]
         },
         {
-          "text": "เลือกร้านติดตั้งที่มีประสบการณ์กับรถ EV โดยเฉพาะ และมีความชำนาญในการปรับจูน Bump/Rebound ให้เหมาะกับน้ำหนักรถ เพราะสำหรับ EVSELECT...",
-          "href": null,
+          "href": "https://shop.bcracing-na.com/pages/br-series",
+          "text": "รายละเอียด BR Series จาก BC Racing",
           "scope": [
             "html",
             "body",
@@ -6335,10 +6524,28 @@
             "main",
             "article",
             "div",
-            "p"
+            "section",
+            "div",
+            "div"
+          ]
+        },
+        {
+          "href": "https://www.hdrive-racing.com/videocarsuse",
+          "text": "ดูระบบปรับแต่ละรุ่นจาก H-Drive",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "div"
           ]
         }
       ],
+      "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "nestedAnchorCount": 0
     },
@@ -8463,7 +8670,73 @@
     },
     {
       "route": "/about",
-      "mainInternalLinks": [],
+      "mainInternalLinks": [
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ]
+        },
+        {
+          "href": "/contact",
+          "text": "ช่องทางติดต่อทีมงาน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/editorial-policy",
+          "text": "แนวทางจัดทำและแก้ไขบทความ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "บทความรถ EV และคู่มือเลือกอุปกรณ์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "หน้าแรก",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        }
+      ],
       "mainExternalLinks": [],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
@@ -8471,15 +8744,135 @@
     },
     {
       "route": "/contact",
-      "mainInternalLinks": [],
-      "mainExternalLinks": [],
+      "mainInternalLinks": [
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "บทความรถ EV และคู่มือเลือกอุปกรณ์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "หน้าแรก",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        }
+      ],
+      "mainExternalLinks": [
+        {
+          "href": "https://m.me/evselects",
+          "text": "เปิดแชทกับทีมงาน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "https://www.facebook.com/evselects",
+          "text": "ดูเพจและข่าวเปิดตัว",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "nestedAnchorCount": 0
     },
     {
       "route": "/editorial-policy",
-      "mainInternalLinks": [],
+      "mainInternalLinks": [
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ]
+        },
+        {
+          "href": "/contact",
+          "text": "แจ้งทีมงานพร้อมลิงก์บทความ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "บทความรถ EV และคู่มือเลือกอุปกรณ์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "หน้าแรก",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        }
+      ],
       "mainExternalLinks": [],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
@@ -8487,7 +8880,47 @@
     },
     {
       "route": "/privacy",
-      "mainInternalLinks": [],
+      "mainInternalLinks": [
+        {
+          "href": "/contact",
+          "text": "ช่องทางติดต่อทีมงาน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "บทความรถ EV และคู่มือเลือกอุปกรณ์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "หน้าแรก",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        }
+      ],
       "mainExternalLinks": [],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
@@ -8495,7 +8928,60 @@
     },
     {
       "route": "/terms",
-      "mainInternalLinks": [],
+      "mainInternalLinks": [
+        {
+          "href": "/#launch",
+          "text": "ข้อมูลการเตรียมเปิดตัว",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/contact",
+          "text": "ติดต่อทีมงาน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "บทความรถ EV และคู่มือเลือกอุปกรณ์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "หน้าแรก",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        }
+      ],
       "mainExternalLinks": [],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
@@ -8503,7 +8989,47 @@
     },
     {
       "route": "/warranty",
-      "mainInternalLinks": [],
+      "mainInternalLinks": [
+        {
+          "href": "/contact",
+          "text": "ช่องทางติดต่อทีมงาน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/articles",
+          "text": "บทความรถ EV และคู่มือเลือกอุปกรณ์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        },
+        {
+          "href": "/",
+          "text": "หน้าแรก",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "section",
+            "p"
+          ]
+        }
+      ],
       "mainExternalLinks": [],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],

@@ -203,7 +203,33 @@
           "level": 1,
           "text": "เกี่ยวกับเรา",
           "scope": [
-            "main"
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านข้อมูลพร้อมที่มาและข้อจำกัด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
           ]
         },
         {
@@ -3141,7 +3167,7 @@
         },
         {
           "level": 1,
-          "text": "โช้คเดิมเอาไม่อยู่? คู่มือจูนโช้ค EV ฉบับสมบูรณ์",
+          "text": "ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค",
           "scope": [
             "main",
             "article",
@@ -3150,7 +3176,23 @@
         },
         {
           "level": 2,
-          "text": "ทำไมรถ EV ถึงมีปัญหาช่วงล่าง 'ย้วย' หรือ 'กระด้าง'?",
+          "text": "1. บอกอาการให้ชัด ก่อนฟันธงว่าโช้คไม่ดี",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กระแทกเป็นจังหวะสั้น ๆ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "โยนต่อหลังผ่านเนิน",
           "scope": [
             "main",
             "article"
@@ -3158,7 +3200,7 @@
         },
         {
           "level": 2,
-          "text": "ความเข้าใจผิด: ซื้อโช้คแพง แต่จบไม่สวยเพราะ 'จูนไม่เป็น'",
+          "text": "2. เข้าใจ Bump และ Rebound เท่าที่ใช้คุยกับร้าน",
           "scope": [
             "main",
             "article"
@@ -3166,7 +3208,39 @@
         },
         {
           "level": 2,
-          "text": "เปรียบเทียบ 4 แบรนด์โช้คยอดฮิตสำหรับรถยนต์ไฟฟ้า",
+          "text": "3. เทียบรุ่นสินค้าให้ตรง แทนการจัดอันดับทั้งแบรนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "KW V3",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Öhlins Road & Track",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BC Racing BR Series",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "H-Drive Euro Spec / Euro R",
           "scope": [
             "main",
             "article"
@@ -3174,7 +3248,23 @@
         },
         {
           "level": 2,
-          "text": "สรุปคำแนะนำจาก EVSELECT",
+          "text": "4. ขอข้อมูลห้าข้อนี้ ก่อนวางมัดจำ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. เทียบก่อน–หลังด้วยสิ่งที่คุณใช้รถจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เลือกอ่านต่อให้ตรงเรื่องที่ยังสงสัย",
           "scope": [
             "main",
             "article"
@@ -5343,9 +5433,35 @@
         },
         {
           "level": 1,
-          "text": "ติดต่อเรา",
+          "text": "ติดต่อทีมงาน",
           "scope": [
-            "main"
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คุยกับเราทาง Facebook",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ยังไม่เปิดรับคำสั่งซื้อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
           ]
         },
         {
@@ -5387,9 +5503,35 @@
         },
         {
           "level": 1,
-          "text": "นโยบายบรรณาธิการ",
+          "text": "แนวทางจัดทำบทความ",
           "scope": [
-            "main"
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ระบุว่าเรารู้จากไหน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ตรวจจากหน้าที่คนอ่านเห็นจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
           ]
         },
         {
@@ -5433,7 +5575,25 @@
           "level": 1,
           "text": "นโยบายความเป็นส่วนตัว",
           "scope": [
-            "main"
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "มีคำถามเกี่ยวกับข้อมูลของคุณ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
           ]
         },
         {
@@ -5477,7 +5637,25 @@
           "level": 1,
           "text": "ข้อตกลงและเงื่อนไข",
           "scope": [
-            "main"
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สถานะช่วงเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
           ]
         },
         {
@@ -5519,9 +5697,27 @@
         },
         {
           "level": 1,
-          "text": "นโยบายการรับประกัน",
+          "text": "ข้อมูลการรับประกัน",
           "scope": [
-            "main"
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ข้อมูลในบทความไม่ใช่ข้อเสนอรับประกัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
           ]
         },
         {

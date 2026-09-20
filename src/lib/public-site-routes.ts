@@ -29,7 +29,7 @@ export const publicSiteRoutes = [
   '/articles/zeekr-x-review',
 ] as const;
 
-// These linked pages still show a preparation notice rather than finished content.
+// Supporting information routes remain noindex; formal legal policies are still in preparation.
 export const pendingPublicRoutes = [
   '/about', '/contact', '/editorial-policy', '/privacy', '/terms', '/warranty',
 ] as const;

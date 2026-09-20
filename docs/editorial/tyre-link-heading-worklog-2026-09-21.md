@@ -1,6 +1,6 @@
 # Active editorial work — not ready to publish
 
-Authoritative checkout: releases/evselect-coilover-skyscraper-2026-09-19, branch codex/brake-complete-kits-2026-09-19. Tyre/heading changes were checkpointed at `6cd3345`; subsequent local Carbon Ceramic and Model 3 work is recorded in `carbon-model3-reader-review-2026-09-21.md`. These checkpoints are not production deployments. The sections below preserve the earlier observations and their subsequent resolution.
+Authoritative checkout: releases/evselect-coilover-skyscraper-2026-09-19, branch codex/brake-complete-kits-2026-09-19. Tyre/heading changes were checkpointed at `6cd3345`; Carbon Ceramic and Model 3 at `cf34b34`, with scope in `carbon-model3-reader-review-2026-09-21.md`. The later suspension-guide and six information-page review is in `suspension-information-reader-review-2026-09-21.md`. All 30 local routes now have main-content internal links and pass the heading baseline, but 19 brand-link routes and the remaining full-page reader reviews are open. These checkpoints are not production deployments. The sections below preserve historical observations and their subsequent resolution.
 
 ## Progress this turn
 
