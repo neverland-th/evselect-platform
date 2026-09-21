@@ -688,7 +688,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -744,7 +744,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -800,7 +800,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -856,7 +856,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -912,7 +912,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -968,7 +968,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1024,7 +1024,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1080,7 +1080,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1136,7 +1136,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1192,7 +1192,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1248,7 +1248,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1304,7 +1304,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1360,7 +1360,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1416,7 +1416,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1472,7 +1472,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1528,7 +1528,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1584,7 +1584,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1640,7 +1640,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1696,7 +1696,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -1752,7 +1752,7 @@
             "article",
             "div",
             "div",
-            "h3"
+            "h4"
           ],
           "target": "",
           "rel": ""
@@ -9325,7 +9325,7 @@
         },
         {
           "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
-          "text": "ข้อกำหนดแรงดันและการตรวจยางในคู่มือรถ",
+          "text": "ข้อกำหนดแรงดันและการตรวจยางในคู่มือรถ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9336,12 +9336,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.ohlins.com/storage/7AC688BED0B27E53064F094EF615E1B088E4D8FEA94635A5D2ECCC5FB1894053/b31b9618ad354b438a407241ceb64a6d/pdf/media/d60188c2ea574151aad35b903c54e441/OM_07451-01_7_R_T.pdf",
-          "text": "ข้อควรปฏิบัติในคู่มือ Öhlins Road & Track",
+          "text": "ข้อควรปฏิบัติในคู่มือ Öhlins Road & Track (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9352,12 +9352,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.kwsuspensions.com/uk/products/street-performance",
-          "text": "ดูผลิตภัณฑ์จาก KW",
+          "text": "ดูผลิตภัณฑ์จาก KW (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9369,12 +9369,12 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.kwsuspensions.com/us-en/products/street-performance/v3-coilovers",
-          "text": "ข้อมูลระบบปรับ KW V3 จากผู้ผลิต",
+          "text": "ข้อมูลระบบปรับ KW V3 จากผู้ผลิต (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9386,12 +9386,12 @@
             "div",
             "div"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.ohlins.com/en-us/automotive/road-and-track/tesla-model-3-model-y-road-and-track-set?v=tesla-model-3-2020",
-          "text": "ข้อมูล Öhlins TES MA10S1 และคู่มือ",
+          "text": "ข้อมูล Öhlins TES MA10S1 และคู่มือ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9403,12 +9403,12 @@
             "div",
             "div"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://shop.bcracing-na.com/pages/br-series",
-          "text": "รายละเอียด BR Series จาก BC Racing",
+          "text": "รายละเอียด BR Series จาก BC Racing (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9420,12 +9420,12 @@
             "div",
             "div"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.hdrive-racing.com/videocarsuse",
-          "text": "ดูระบบปรับแต่ละรุ่นจาก H-Drive",
+          "text": "ดูระบบปรับแต่ละรุ่นจาก H-Drive (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9437,138 +9437,13 @@
             "div",
             "div"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         }
       ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
-      "tabPolicyIssues": [
-        {
-          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
-          "text": "ข้อกำหนดแรงดันและการตรวจยางในคู่มือรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.ohlins.com/storage/7AC688BED0B27E53064F094EF615E1B088E4D8FEA94635A5D2ECCC5FB1894053/b31b9618ad354b438a407241ceb64a6d/pdf/media/d60188c2ea574151aad35b903c54e441/OM_07451-01_7_R_T.pdf",
-          "text": "ข้อควรปฏิบัติในคู่มือ Öhlins Road & Track",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.kwsuspensions.com/uk/products/street-performance",
-          "text": "ดูผลิตภัณฑ์จาก KW",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.kwsuspensions.com/us-en/products/street-performance/v3-coilovers",
-          "text": "ข้อมูลระบบปรับ KW V3 จากผู้ผลิต",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.ohlins.com/en-us/automotive/road-and-track/tesla-model-3-model-y-road-and-track-set?v=tesla-model-3-2020",
-          "text": "ข้อมูล Öhlins TES MA10S1 และคู่มือ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://shop.bcracing-na.com/pages/br-series",
-          "text": "รายละเอียด BR Series จาก BC Racing",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.hdrive-racing.com/videocarsuse",
-          "text": "ดูระบบปรับแต่ละรุ่นจาก H-Drive",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        }
-      ],
+      "tabPolicyIssues": [],
       "nestedAnchorCount": 0
     },
     {
@@ -9753,7 +9628,7 @@
         },
         {
           "href": "https://www.youtube.com/watch?v=Lr1FdX7Pi5o",
-          "text": "วิดีโอต้นฉบับของ iMoD Official",
+          "text": "วิดีโอต้นฉบับของ iMoD Official (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9765,12 +9640,12 @@
             "figcaption",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.zeekrlife.com/en-th/models/7x",
-          "text": "สเปก ZEEKR 7X",
+          "text": "สเปก ZEEKR 7X (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9781,12 +9656,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.datocms-assets.com/142974/1756887361-7x-brochure-aug2025-correct.pdf",
-          "text": "โบรชัวร์ไทย",
+          "text": "โบรชัวร์ไทย (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9797,8 +9672,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg",
@@ -9838,7 +9713,7 @@
         },
         {
           "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
-          "text": "คู่มือ Tesla ภาษาไทยเรื่องล้อและยาง",
+          "text": "คู่มือ Tesla ภาษาไทยเรื่องล้อและยาง (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9849,12 +9724,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.michelin.co.th/auto/advice/ev-guide/high-load-capacity-tyres",
-          "text": "ความแตกต่างของยาง HL และ XL จาก Michelin",
+          "text": "ความแตกต่างของยาง HL และ XL จาก Michelin (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9865,12 +9740,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
-          "text": "ข้อมูลแรงดันยางในคู่มือรถ",
+          "text": "ข้อมูลแรงดันยางในคู่มือรถ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9881,12 +9756,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.michelin.co.th/why-michelin/innovation/acoustic-technology",
-          "text": "Michelin Acoustic Technology",
+          "text": "Michelin Acoustic Technology (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9898,12 +9773,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.michelin.co.th/auto/advice/choose-tyres/car-tyre-size-table",
-          "text": "คู่มืออ่านขนาดและพิกัดยางของ Michelin",
+          "text": "คู่มืออ่านขนาดและพิกัดยางของ Michelin (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9914,12 +9789,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.michelin.co.th/auto/advice/change-tyres/tyre-repair",
-          "text": "แนวทางซ่อมยางของผู้ผลิต",
+          "text": "แนวทางซ่อมยางของผู้ผลิต (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9930,169 +9805,13 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         }
       ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
-      "tabPolicyIssues": [
-        {
-          "href": "https://www.youtube.com/watch?v=Lr1FdX7Pi5o",
-          "text": "วิดีโอต้นฉบับของ iMoD Official",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "header",
-            "figure",
-            "figcaption",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.zeekrlife.com/en-th/models/7x",
-          "text": "สเปก ZEEKR 7X",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.datocms-assets.com/142974/1756887361-7x-brochure-aug2025-correct.pdf",
-          "text": "โบรชัวร์ไทย",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
-          "text": "คู่มือ Tesla ภาษาไทยเรื่องล้อและยาง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.michelin.co.th/auto/advice/ev-guide/high-load-capacity-tyres",
-          "text": "ความแตกต่างของยาง HL และ XL จาก Michelin",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
-          "text": "ข้อมูลแรงดันยางในคู่มือรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.michelin.co.th/why-michelin/innovation/acoustic-technology",
-          "text": "Michelin Acoustic Technology",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.michelin.co.th/auto/advice/choose-tyres/car-tyre-size-table",
-          "text": "คู่มืออ่านขนาดและพิกัดยางของ Michelin",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.michelin.co.th/auto/advice/change-tyres/tyre-repair",
-          "text": "แนวทางซ่อมยางของผู้ผลิต",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        }
-      ],
+      "tabPolicyIssues": [],
       "nestedAnchorCount": 0
     },
     {
@@ -12197,7 +11916,7 @@
       "mainExternalLinks": [
         {
           "href": "https://m.me/evselects",
-          "text": "เปิดแชทกับทีมงาน",
+          "text": "เปิดแชทกับทีมงาน (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -12207,12 +11926,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.facebook.com/evselects",
-          "text": "ดูเพจและข่าวเปิดตัว",
+          "text": "ดูเพจและข่าวเปิดตัว (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -12222,46 +11941,13 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         }
       ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
-      "tabPolicyIssues": [
-        {
-          "href": "https://m.me/evselects",
-          "text": "เปิดแชทกับทีมงาน",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.facebook.com/evselects",
-          "text": "ดูเพจและข่าวเปิดตัว",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        }
-      ],
+      "tabPolicyIssues": [],
       "nestedAnchorCount": 0
     },
     {

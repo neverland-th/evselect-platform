@@ -27,7 +27,7 @@ function Section({ id, title: heading, children }: { id: string; title: string; 
   </section>;
 }
 function Source({ href, children }: { href: string; children: ReactNode }) {
-  return <a href={href} className={linkStyle}>{children}</a>;
+  return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
 
 export default function EVTyreAndCoiloverSelectionGuidePage() {
