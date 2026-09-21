@@ -1036,7 +1036,9 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
         </div>
       ) : (
         <div className="space-y-16">
-          {groupedArticles.map((group, groupIdx) => (
+          {groupedArticles.map((group, groupIdx) => {
+            const ArticleHeading = group.title ? 'h4' : 'h3';
+            return (
             <div key={groupIdx} className="space-y-6">
               {group.title && (
                 <div className="flex items-center justify-between pb-4 border-b border-slate-200">
@@ -1111,9 +1113,9 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance' }}>
+                  <ArticleHeading className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.title}</Link>
-                  </h3>
+                  </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
 
                   <dl className="space-y-3 mb-5 border-t border-slate-100 pt-4">
@@ -1149,7 +1151,8 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 ))}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       )}
 
@@ -1162,12 +1165,12 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <ShieldCheck className="w-4 h-4 text-lime-600" />
               <span>เริ่มจากข้อมูลของรถที่คุณใช้</span>
             </div>
-            <h3
+            <h2
               className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight"
               style={{ textWrap: 'balance' } as React.CSSProperties}
             >
               อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?
-            </h3>
+            </h2>
             <p className="text-sm text-slate-600 leading-relaxed max-w-2xl font-normal">
               อ่านรีวิวรถรุ่นที่สนใจ หรือส่งคำถามให้ทีม EVSELECT ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
             </p>
