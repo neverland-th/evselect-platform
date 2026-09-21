@@ -51,3 +51,11 @@ No full-site completion or deployment is claimed by this document.
 - Inspected the affected powertrain card at desktop 1440 × 1000 and mobile 390 × 844 in both grouped and filtered views. Card typography remains 22 px on the inspected desktop and 18 px on mobile. Inspected the bottom reading-help heading and its surrounding text/buttons in both layouts. No clipping was observed in these inspected areas.
 - Catalogue `page.tsx` SHA-256 for this refinement: `d8c9ea65a1fc80cc1e526ef8cc1759577559291d9e79e49de0fb2bc53f25a8d2`. This supersedes the catalogue version in the powertrain checkpoint, while that article's reviewed source is unchanged.
 - Changed catalogue ESLint passed. This is a focused hierarchy/layout check, **not** completion of the entire catalogue's line-by-line and image review. Its remaining content, image and brand-link issues must be resolved before publication. The concurrent missing-image build failure remains unresolved.
+
+## Refreshed sources and interactive hierarchy checkpoint, 2026-09-21
+
+- Reopened the requested `https://backlink.io`; it was inaccessible through the web tool. Read the identified Backlinko H1 guide and verified its one-H1 convention against Google Search Central's explicit heading-count/order clarification and W3C's nesting guidance. Do not describe Backlinko as the inaccessible domain or its convention as a Google penalty rule.
+- Reran the 31-route local check: exactly one H1 on each route, no empty headings and no skipped descending main/article levels. The baseline still passes after the homepage and Carbon Ceramic link changes.
+- Read the complete final homepage in actual desktop/mobile layouts. Verified its section H2s and nested H3 cards, as well as the visible target of its same-page journey link.
+- In the Carbon Ceramic comparison, opened every score ring at desktop and mobile sizes. Verified H2 section, H3 comparison heading, H4 option and H5 score explanation. The same hierarchy remains valid when the filter shows a single option; restoring three options restores the sibling H4 sections. This focused check is not a new full-article review.
+- See `home-brake-link-review-2026-09-21.md` for the inspected version, observations and remaining publication checks. No production deployment is included in this checkpoint.

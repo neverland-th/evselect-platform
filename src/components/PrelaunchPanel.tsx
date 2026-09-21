@@ -28,7 +28,7 @@ export default function PrelaunchPanel() {
         <div className="relative grid gap-10 p-7 sm:p-10 lg:grid-cols-[1.08fr_0.92fr] lg:p-14">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-lime-300/30 bg-lime-300/10 px-3 py-1.5 text-xs font-semibold text-lime-300">
-              <Rocket className="h-4 w-4" aria-hidden="true" /> EVSELECT กำลังเตรียมเปิดตัว
+              <Rocket className="h-4 w-4" aria-hidden="true" /> <Link href="/" className="underline underline-offset-4 hover:text-white">EVSELECT</Link> กำลังเตรียมเปิดตัว
             </span>
             <h2 id="launch-heading" className="mt-6 max-w-2xl font-bold text-white">
               เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม

@@ -5,6 +5,13 @@ import BrandHomeLink from '@/components/BrandHomeLink';
 import { brakeEditorialProfiles, brakeScoreAxes, type BrakeScoreAxis } from '@/lib/brake-editorial-scores';
 import styles from './BrakeGuide.module.css';
 
+function ScoreSourceLink({ source, className }: { source: { label: string; url: string }; className: string }) {
+  const destination = new URL(source.url, 'https://evselects.com/articles/ev-carbon-ceramic-brakes-guide');
+  const internal = destination.hostname === 'evselects.com' || destination.hostname === 'www.evselects.com';
+  const href = internal && !source.url.startsWith('#') ? `${destination.pathname}${destination.search}${destination.hash}` : source.url;
+  return <a href={href} target={internal ? undefined : '_blank'} rel={internal ? undefined : 'noopener noreferrer'} className={className}>{source.label}{!internal && <><span aria-hidden="true"> ↗</span><span className="sr-only"> (เปิดแท็บใหม่)</span></>}</a>;
+}
+
 export default function BrakeBrandCompare() {
   const [selected, setSelected] = useState(brakeEditorialProfiles.map(profile => profile.id));
   const [active, setActive] = useState<Record<string, BrakeScoreAxis | null>>({});
@@ -46,7 +53,7 @@ export default function BrakeBrandCompare() {
               })}
             </div>
             <div id={`score-detail-${profile.id}`} hidden={!score} className="rounded-xl border border-lime-200 bg-lime-50 p-4" role="region" aria-label={`เหตุผลคะแนน ${profile.name}`} aria-live="polite">
-              {score && <><h5 className="text-base font-bold text-slate-950">{axisLabel} · {score.score}/10</h5><p className="mt-2 text-sm leading-relaxed text-slate-700">{score.reason}</p><p className="mt-3 text-sm leading-relaxed text-slate-600">{score.limitation}</p><ul className="mt-3 space-y-1">{score.sources.map(source => <li key={source.url}><a href={source.url} className="inline-flex min-h-11 items-center text-sm font-semibold leading-relaxed text-lime-900 underline underline-offset-4">{source.label} ↗</a></li>)}</ul></>}
+              {score && <><h5 className="text-base font-bold text-slate-950">{axisLabel} · {score.score}/10</h5><p className="mt-2 text-sm leading-relaxed text-slate-700">{score.reason}</p><p className="mt-3 text-sm leading-relaxed text-slate-600">{score.limitation}</p><ul className="mt-3 space-y-1">{score.sources.map(source => <li key={source.url}><ScoreSourceLink source={source} className="inline-flex min-h-11 items-center text-sm font-semibold leading-relaxed text-lime-900 underline underline-offset-4" /></li>)}</ul></>}
             </div>
             <p className={`${styles.help} mt-3`}>{profile.scope}</p>
           </section>;
@@ -58,7 +65,7 @@ export default function BrakeBrandCompare() {
       <ul className="list-disc space-y-2 pl-5"><li><strong>Performance:</strong> มองฟีลและศักยภาพของชุดที่จับคู่ถูกต้อง รวมความร้อนและน้ำหนัก ไม่ใช่ระยะหยุด ค่า 7–8 คือเด่นในกลุ่มชุดพรีเมียม และ 9 คือมีจุดเด่นด้านวัสดุ/น้ำหนักเพิ่ม</li><li><strong>ราคา:</strong> ให้คะแนนความคุ้มค่าสำหรับถนน ไม่ใช่ราคาถูกสุด ค่า 4–6 คือการลงทุนพรีเมียมที่ต้องมีโจทย์ ส่วน 1–3 มีต้นทุนสูงเมื่อเทียบกับประโยชน์ที่ถนนทั่วไปอาจใช้ถึง ไม่ใช้ราคาเฉพาะจานมาเทียบยอดครบชุด</li><li><strong>ฝุ่น:</strong> 1–3 ต้องดูแลมาก, 4–6 ยังมีฝุ่นชัด, 7–9 มีแนวโน้มล้อสะอาดกว่า ไม่ใช่ผลชั่งฝุ่น และไม่ให้ 10 เพื่อสื่อว่าไม่มีฝุ่น</li></ul>
       <p>ความมั่นใจในการเทียบข้ามรถและข้ามรุ่นอยู่ในระดับต่ำ คะแนนต่างกัน 1 จุดยังไม่พิสูจน์ว่าเหนือกว่า รีวิวเก่าถูกระบุปี และต้องตรวจ compound ที่ขายปัจจุบันอีกครั้ง การเปลี่ยนผ้า ล้อ ยาง และรูปแบบขับอาจเปลี่ยนผลได้</p>
       <p><strong>Carbon Ceramic เป็นวัสดุ ไม่ใช่แบรนด์:</strong> คะแนนอ้างอิงระบบถนนอย่าง PCCB เพื่ออธิบายแนวโน้ม ไม่ครอบคลุมจานแต่งไม่ทราบที่มา และไม่รับรองขนาด 375–390 mm ว่าจะตรงรถ</p>
-      <ul className="list-disc space-y-2 pl-5">{Array.from(new Map(brakeEditorialProfiles.flatMap(profile => Object.values(profile.scores).flatMap(score => score.sources)).map(source => [source.url, source])).values()).map(source => <li key={source.url}><a href={source.url} className="text-lime-800 underline underline-offset-4">{source.label}</a></li>)}</ul>
+      <ul className="list-disc space-y-2 pl-5">{Array.from(new Map(brakeEditorialProfiles.flatMap(profile => Object.values(profile.scores).flatMap(score => score.sources)).map(source => [source.url, source])).values()).map(source => <li key={source.url}><ScoreSourceLink source={source} className="text-lime-800 underline underline-offset-4" /></li>)}</ul>
     </div></details>
   </div>;
 }

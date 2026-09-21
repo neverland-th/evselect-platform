@@ -162,6 +162,23 @@
           "rel": ""
         },
         {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "section",
+            "div",
+            "div",
+            "div"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
           "href": "/contact",
           "text": "อยากได้ของแต่งอะไร บอกเราได้",
           "scope": [
@@ -224,6 +241,24 @@
           "rel": ""
         },
         {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "section",
+            "div",
+            "div",
+            "div",
+            "span"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
           "href": "/contact",
           "text": "บอกรุ่นรถที่คุณใช้",
           "scope": [
@@ -277,6 +312,23 @@
           "rel": ""
         },
         {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "section",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
           "href": "/editorial-policy",
           "text": "อ่านนโยบายบทความ",
           "scope": [
@@ -294,7 +346,7 @@
         },
         {
           "href": "/contact",
-          "text": "ติดต่อ EVSELECT",
+          "text": "ติดต่อทีมงาน",
           "scope": [
             "html",
             "body",
@@ -328,70 +380,7 @@
           "rel": "noopener noreferrer"
         }
       ],
-      "unlinkedOrMisdirectedBrandText": [
-        {
-          "text": "EVSELECT",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "span"
-          ]
-        },
-        {
-          "text": "EVSELECT กำลังเตรียมเปิดตัว",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "span"
-          ]
-        },
-        {
-          "text": "เนื้อหาควรแยกข้อมูลจากผู้ผลิต หลักการทั่วไป และผลที่ EVSELECT ตรวจเอง เพื่อให้คุณรู้ว่าสิ่งใดใช้ตัดสินใจได้ทันทีและสิ่งใดยังต้องยืนยัน",
-          "href": null,
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "div",
-            "section",
-            "div",
-            "div",
-            "p"
-          ]
-        },
-        {
-          "text": "ติดต่อ EVSELECT",
-          "href": "/contact",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "div",
-            "section",
-            "div",
-            "div",
-            "a"
-          ]
-        }
-      ],
+      "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],
       "nestedAnchorCount": 0
@@ -3490,8 +3479,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-3DFFB071-C0F6-474D-8A45-17BE1A006365.html",
@@ -3506,8 +3495,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/performance-upgrades/factory-big-brake-kits/disc-choice",
@@ -3522,8 +3511,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/race-car/brake-discs/disc-choice",
@@ -3538,8 +3527,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html",
@@ -3554,8 +3543,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
@@ -3572,8 +3561,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/xtra/max-brake-discs",
@@ -3590,8 +3579,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/xtra/xtra-brake-discs",
@@ -3608,8 +3597,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/support/car/how-to-choose-the-right-product/what's-the-best-choice-for-my-car-max-or-xtra-discs-93372",
@@ -3624,8 +3613,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/performance-upgrades/factory-big-brake-kits/disc-choice",
@@ -3640,8 +3629,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.brembo.com/en/solutions/for-your-car/ev-kit",
@@ -3656,8 +3645,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://asia.bremboparts.com/america/en/support/car/how-to-choose-the-right-product/which-is-the-right-brake-fluid-for-my-car-195105",
@@ -3672,8 +3661,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/th_th/support/vehicle-maintenance",
@@ -3688,8 +3677,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.global/jp/products/caliper_a/150",
@@ -3704,8 +3693,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72.html",
@@ -3720,8 +3709,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
@@ -3736,8 +3725,8 @@
             "section",
             "aside"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/find-a-dealer",
@@ -3752,8 +3741,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.brembo.com/jp/ComunicatiStampa/2012/RaceReadybrakekits.pdf",
@@ -3768,8 +3757,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.essexparts.com/essex-designed-ap-racing-radi-cal-competition-brake-kit-front-cp9562380mm-tesla-model-3",
@@ -3788,8 +3777,8 @@
             "tr",
             "th"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.essexparts.com/storage/wysiwyg/20-99-00012.pdf",
@@ -3808,8 +3797,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.essexparts.com/storage/wysiwyg/1916.pdf",
@@ -3828,8 +3817,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
@@ -3848,8 +3837,8 @@
             "tr",
             "th"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
@@ -3868,8 +3857,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.racetechnologies.com/cdn/shop/files/1Nx.9076A_DRW.png?v=1782767898",
@@ -3888,8 +3877,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/BrakeCaliper_Carlist/toyota/TOYOTA_Alphard40.html",
@@ -3908,8 +3897,8 @@
             "tr",
             "th"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_Alvel6.html",
@@ -3928,8 +3917,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/brake_caliper/car_list/paper_pattern/AV6-1.pdf",
@@ -3948,8 +3937,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.project-mu.co.jp/matching/caliper/caliper_matching.files/sheet003.htm",
@@ -3968,8 +3957,8 @@
             "tr",
             "th"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
@@ -3988,8 +3977,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
@@ -4008,8 +3997,8 @@
             "tr",
             "td"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_Alvel6.html",
@@ -4026,8 +4015,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
@@ -4044,12 +4033,12 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
-          "text": "ชุด Brembo GT | M และราคาต้นทาง",
+          "text": "ชุด Brembo GT | M และราคาต้นทาง ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4064,12 +4053,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://nam3forum.com/forums/forum/main-forum/e46-2001-2006/303813-choosing-brake-pads-for-brembo-gt-big-brake-kit",
-          "text": "เจ้าของ Brembo GT / FM1000 บน BMW · รีวิวปี 2025",
+          "text": "เจ้าของ Brembo GT / FM1000 บน BMW · รีวิวปี 2025 ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4084,12 +4073,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72.html",
-          "text": "ENDLESS MX72 · ข้อมูลผู้ผลิต",
+          "text": "ENDLESS MX72 · ข้อมูลผู้ผลิต ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4104,12 +4093,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://minkara.carview.co.jp/userid/2381346/car/1882719/11119748/parts.aspx",
-          "text": "เจ้าของ MX72 บน WRX STI · รีวิวปี 2021",
+          "text": "เจ้าของ MX72 บน WRX STI · รีวิวปี 2021 ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4124,12 +4113,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://minkara.carview.co.jp/userid/3131142/car/2765147/10310208/parts.aspx",
-          "text": "เจ้าของ MX72 บน Legacy · รีวิวปี 2020",
+          "text": "เจ้าของ MX72 บน Legacy · รีวิวปี 2020 ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4144,12 +4133,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/",
-          "text": "Porsche อธิบาย PCCB · ข้อมูลผู้ผลิต",
+          "text": "Porsche อธิบาย PCCB · ข้อมูลผู้ผลิต ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4164,12 +4153,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.reddit.com/r/porsche911/comments/1f3avgw/downsides_with_ceramic_brakes/",
-          "text": "ประสบการณ์เจ้าของ PCCB และค่าดูแล · ปี 2024",
+          "text": "ประสบการณ์เจ้าของ PCCB และค่าดูแล · ปี 2024 ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4184,12 +4173,12 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.reddit.com/r/Porsche/comments/1m5wjub/tracking_with_pccb/",
-          "text": "เจ้าของ PCCB รายงานฝุ่นแตกต่างกัน · ปี 2025",
+          "text": "เจ้าของ PCCB รายงานฝุ่นแตกต่างกัน · ปี 2025 ↗ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -4204,8 +4193,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
@@ -4222,8 +4211,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc",
@@ -4240,8 +4229,8 @@
             "div",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
@@ -4257,8 +4246,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/america/en/catalogue/pad/P65017NX",
@@ -4274,8 +4263,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
@@ -4290,8 +4279,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/upgrade/carbon-ceramic",
@@ -4306,8 +4295,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/227283",
@@ -4324,8 +4313,8 @@
             "div",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://cbtthailand.dasta.or.th/webapp/relattraction/content/1118/",
@@ -4342,8 +4331,8 @@
             "div",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://commons.wikimedia.org/wiki/File:%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C.jpg",
@@ -4359,8 +4348,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://creativecommons.org/licenses/by-sa/3.0/",
@@ -4376,8 +4365,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
@@ -4392,8 +4381,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc",
@@ -4408,8 +4397,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://openstax.org/books/physics/pages/11-2-heat-specific-heat-and-heat-transfer",
@@ -4426,8 +4415,8 @@
             "div",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
@@ -4442,8 +4431,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.global/jp/products/caliper_a/150",
@@ -4459,8 +4448,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_Alvel6.html",
@@ -4476,8 +4465,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/BrakeCaliper_Carlist/toyota/TOYOTA_Alphard40.html",
@@ -4493,8 +4482,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
@@ -4510,8 +4499,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.project-mu.co.jp/matching/caliper/caliper_matching.files/sheet003.htm",
@@ -4527,8 +4516,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.essexparts.com/essex-designed-ap-racing-radi-cal-competition-brake-kit-front-cp9562380mm-tesla-model-3",
@@ -4544,8 +4533,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/find-a-dealer",
@@ -4561,8 +4550,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
@@ -4578,8 +4567,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.brembo.com/jp/ComunicatiStampa/2012/RaceReadybrakekits.pdf",
@@ -4595,8 +4584,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/",
@@ -4612,8 +4601,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/performance-upgrades/factory-big-brake-kits/disc-choice",
@@ -4629,8 +4618,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/race-car/brake-discs/disc-choice",
@@ -4646,8 +4635,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
@@ -4663,8 +4652,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/support/car/how-to-choose-the-right-product/what's-the-best-choice-for-my-car-max-or-xtra-discs-93372",
@@ -4680,8 +4669,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
@@ -4697,8 +4686,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/xtra/max-brake-discs",
@@ -4714,8 +4703,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/xtra/xtra-brake-discs",
@@ -4731,8 +4720,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc",
@@ -4748,8 +4737,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/upgrade/carbon-ceramic",
@@ -4765,8 +4754,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.bremboparts.com/america/en/catalogue/pad/P65017NX",
@@ -4782,8 +4771,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://asia.bremboparts.com/america/en/support/car/how-to-choose-the-right-product/which-is-the-right-brake-fluid-for-my-car-195105",
@@ -4799,8 +4788,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-3DFFB071-C0F6-474D-8A45-17BE1A006365.html",
@@ -4816,8 +4805,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html",
@@ -4833,8 +4822,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/th_th/support/vehicle-maintenance",
@@ -4850,8 +4839,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
@@ -4867,8 +4856,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/227283",
@@ -4884,8 +4873,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://cbtthailand.dasta.or.th/webapp/relattraction/content/1118/",
@@ -4901,8 +4890,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.brembo.com/en/solutions/for-your-car/ev-kit",
@@ -4918,8 +4907,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_pad/SSS.html",
@@ -4935,8 +4924,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_pad/SSMPLUS.html",
@@ -4952,8 +4941,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72.html",
@@ -4969,8 +4958,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72PLUS.html",
@@ -4986,8 +4975,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_6POT.html",
@@ -5003,8 +4992,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/car_list.html",
@@ -5020,8 +5009,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_pad/caution_antiRust.html",
@@ -5037,8 +5026,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://endless-brake.info/products/brake-pads/for-ccm-discs/",
@@ -5054,8 +5043,8 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.project-mu.co.jp/ja/product-info/type_ps",
@@ -5071,1702 +5060,13 @@
             "ul",
             "li"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         }
       ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
-      "tabPolicyIssues": [
-        {
-          "href": "https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/",
-          "text": "Porsche",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "header",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-3DFFB071-C0F6-474D-8A45-17BE1A006365.html",
-          "text": "คู่มือ Tesla Model 3 ภาษาไทย",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/performance-upgrades/factory-big-brake-kits/disc-choice",
-          "text": "AP Racing อธิบายประโยชน์ของขนาดจานและการระบายอากาศ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/race-car/brake-discs/disc-choice",
-          "text": "แนวทางเลือกจานสำหรับรถแข่ง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html",
-          "text": "คู่มือ Model 3 ภาษาไทยที่ตรวจวันที่ 19 ก.ย. 2569",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
-          "text": "Brembo Prime",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/xtra/max-brake-discs",
-          "text": "Brembo Max",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/xtra/xtra-brake-discs",
-          "text": "Brembo Xtra",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/support/car/how-to-choose-the-right-product/what's-the-best-choice-for-my-car-max-or-xtra-discs-93372",
-          "text": "Brembo อธิบายร่องกับรูและความสำคัญของการทดสอบรูปแบบ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/performance-upgrades/factory-big-brake-kits/disc-choice",
-          "text": "AP Racing แนะนำจานเซาะร่องสำหรับ Track Day ในผลิตภัณฑ์ที่กล่าวถึง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.brembo.com/en/solutions/for-your-car/ev-kit",
-          "text": "Brembo EV Kit",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://asia.bremboparts.com/america/en/support/car/how-to-choose-the-right-product/which-is-the-right-brake-fluid-for-my-car-195105",
-          "text": "Brembo แนะนำให้เลือกตามข้อกำหนดรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/th_th/support/vehicle-maintenance",
-          "text": "Tesla Thailand ระบุการทดสอบสภาพน้ำมันเบรกทุก 4 ปีและเปลี่ยนตามจำเป็น",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.global/jp/products/caliper_a/150",
-          "text": "ENDLESS M6 ในแคตตาล็อก Global",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72.html",
-          "text": "ENDLESS ระบุช่วงอุณหภูมิจานสำหรับผ้า MX72 ที่ 50–700°C",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
-          "text": "AP Racing อธิบายว่าอุณหภูมิลดลงเร็วหลังหยุด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "aside"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/find-a-dealer",
-          "text": "AP Racing ระบุ Essex ในรายชื่อ Distributor ปัจจุบัน",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.brembo.com/jp/ComunicatiStampa/2012/RaceReadybrakekits.pdf",
-          "text": "Brembo ระบุ Race Technologies เป็น commercial partner",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.essexparts.com/essex-designed-ap-racing-radi-cal-competition-brake-kit-front-cp9562380mm-tesla-model-3",
-          "text": "AP Racing by Essex 9561",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "th"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.essexparts.com/storage/wysiwyg/20-99-00012.pdf",
-          "text": "สเปกและรายการอุปกรณ์ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.essexparts.com/storage/wysiwyg/1916.pdf",
-          "text": "ข้อมูลตรวจระยะล้อ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
-          "text": "Brembo GT | M",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "th"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
-          "text": "สเปกและรายการอุปกรณ์ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.racetechnologies.com/cdn/shop/files/1Nx.9076A_DRW.png?v=1782767898",
-          "text": "ข้อมูลตรวจระยะล้อ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_caliper/BrakeCaliper_Carlist/toyota/TOYOTA_Alphard40.html",
-          "text": "ENDLESS ALVELL6",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "th"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_Alvel6.html",
-          "text": "สเปกและรายการอุปกรณ์ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/brake_caliper/car_list/paper_pattern/AV6-1.pdf",
-          "text": "ข้อมูลตรวจระยะล้อ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.project-mu.co.jp/matching/caliper/caliper_matching.files/sheet003.htm",
-          "text": "Project μ FS6",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "th"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
-          "text": "สเปกและรายการอุปกรณ์ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
-          "text": "ข้อมูลตรวจระยะล้อ ↗",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "table",
-            "tbody",
-            "tr",
-            "td"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_Alvel6.html",
-          "text": "ENDLESS ALVELL6",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
-          "text": "Project μ FS6",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
-          "text": "ชุด Brembo GT | M และราคาต้นทาง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://nam3forum.com/forums/forum/main-forum/e46-2001-2006/303813-choosing-brake-pads-for-brembo-gt-big-brake-kit",
-          "text": "เจ้าของ Brembo GT / FM1000 บน BMW · รีวิวปี 2025",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72.html",
-          "text": "ENDLESS MX72 · ข้อมูลผู้ผลิต",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://minkara.carview.co.jp/userid/2381346/car/1882719/11119748/parts.aspx",
-          "text": "เจ้าของ MX72 บน WRX STI · รีวิวปี 2021",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://minkara.carview.co.jp/userid/3131142/car/2765147/10310208/parts.aspx",
-          "text": "เจ้าของ MX72 บน Legacy · รีวิวปี 2020",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/",
-          "text": "Porsche อธิบาย PCCB · ข้อมูลผู้ผลิต",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.reddit.com/r/porsche911/comments/1f3avgw/downsides_with_ceramic_brakes/",
-          "text": "ประสบการณ์เจ้าของ PCCB และค่าดูแล · ปี 2024",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.reddit.com/r/Porsche/comments/1m5wjub/tracking_with_pccb/",
-          "text": "เจ้าของ PCCB รายงานฝุ่นแตกต่างกัน · ปี 2025",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "details",
-            "div",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
-          "text": "Tesla Model S Plaid Track Package",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc",
-          "text": "Brembo ระบุว่าจานคาร์บอนเซรามิกของตนหนักประมาณครึ่งหนึ่งของจานเหล็กหล่อ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
-          "text": "Brembo Prime",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/america/en/catalogue/pad/P65017NX",
-          "text": "Brembo P65017NX ระบุไม่ใช้กับจาน Carbon Ceramic",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
-          "text": "Tesla Model S Plaid Track Package",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/upgrade/carbon-ceramic",
-          "text": "Brembo แยกการสึกของการใช้ถนนกับงานสนามหนัก",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/227283",
-          "text": "สำนักงานประชาสัมพันธ์จังหวัดเชียงใหม่",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://cbtthailand.dasta.or.th/webapp/relattraction/content/1118/",
-          "text": "DASTA อธิบายเส้นทางสูงชันและคดเคี้ยว",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://commons.wikimedia.org/wiki/File:%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C.jpg",
-          "text": "Wikimedia Commons",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "text": "CC BY-SA 3.0",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
-          "text": "AP Racing ให้ช่วงอุณหภูมิเนื้อจาน 400–600°C สำหรับบริบทรถแข่งที่กล่าวถึง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc",
-          "text": "คำอธิบาย Brembo เรื่อง CCB ที่รองรับ peak ใกล้ 1,000°C",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://openstax.org/books/physics/pages/11-2-heat-specific-heat-and-heat-transfer",
-          "text": "OpenStax: Heat and Specific Heat",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "details",
-            "div",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
-          "text": "AP Racing เตือนว่าค่าวัดหลังหยุดลดลงเร็ว",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.global/jp/products/caliper_a/150",
-          "text": "ENDLESS Global — M6 / EC690 / RCP208–209",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_Alvel6.html",
-          "text": "ENDLESS — ALVELL6 และรายการอุปกรณ์ในชุด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_caliper/BrakeCaliper_Carlist/toyota/TOYOTA_Alphard40.html",
-          "text": "ENDLESS — ราคา FIYIXGH40W 380×34 mm และรถที่รองรับ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.project-mu.co.jp/ja/product-info/forged_sports_caliper_6pistons_fs6",
-          "text": "Project μ — FS6 พร้อมรายการอุปกรณ์และผ้ามาตรฐาน",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.project-mu.co.jp/matching/caliper/caliper_matching.files/sheet003.htm",
-          "text": "Project μ — ตาราง Toyota / FS6-T127C 380×32 mm",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.essexparts.com/essex-designed-ap-racing-radi-cal-competition-brake-kit-front-cp9562380mm-tesla-model-3",
-          "text": "AP Racing by Essex — ชุดหน้า 9561/380 mm ราคาและเงื่อนไขล้อ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/find-a-dealer",
-          "text": "AP Racing — รายชื่อ Distributor รวม Essex",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1",
-          "text": "Brembo / Race Technologies — GT | M 1N1.9076A2 380×34 mm",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.brembo.com/jp/ComunicatiStampa/2012/RaceReadybrakekits.pdf",
-          "text": "Brembo — เอกสารที่ระบุ Race Technologies เป็น commercial partner",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/",
-          "text": "Porsche — PCCB explained และภาพปก",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/performance-upgrades/factory-big-brake-kits/disc-choice",
-          "text": "AP Racing — Disc Choice สำหรับชุดอัปเกรด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/race-car/brake-discs/disc-choice",
-          "text": "AP Racing — Disc Choice สำหรับรถแข่ง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://apracing.com/race-car/brake-discs/disc-temperatures",
-          "text": "AP Racing — Disc Temperatures: เนื้อจาน ผิวจาน และการวัด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/support/car/how-to-choose-the-right-product/what's-the-best-choice-for-my-car-max-or-xtra-discs-93372",
-          "text": "Brembo — เลือก Max หรือ Xtra: ร่อง รู และข้อแลกเปลี่ยน",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
-          "text": "Brembo — Prime brake discs และภาพจานเรียบ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/xtra/max-brake-discs",
-          "text": "Brembo — Max และภาพจานเซาะร่อง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/xtra/xtra-brake-discs",
-          "text": "Brembo — Xtra และภาพจานเจาะรู",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc",
-          "text": "Brembo — วัสดุ Carbon Ceramic และขอบเขตอุณหภูมิที่ผู้ผลิตอธิบาย",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/europe/en/products/upgrade/carbon-ceramic",
-          "text": "Brembo — Carbon Ceramic: การใช้งานถนนกับสนาม",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.bremboparts.com/america/en/catalogue/pad/P65017NX",
-          "text": "Brembo — Xtra Ceramic P65017NX: ตัวอย่างผ้าเซรามิกที่ห้ามใช้กับจาน CCB",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://asia.bremboparts.com/america/en/support/car/how-to-choose-the-right-product/which-is-the-right-brake-fluid-for-my-car-195105",
-          "text": "Brembo — การเลือกน้ำมันเบรกให้ตรงข้อกำหนดรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-3DFFB071-C0F6-474D-8A45-17BE1A006365.html",
-          "text": "Tesla Model 3 — คู่มือภาษาไทย: เบรกและ Regenerative Braking",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html",
-          "text": "Tesla Model 3 — คู่มือภาษาไทย: ขนาดจานเบรก",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/th_th/support/vehicle-maintenance",
-          "text": "Tesla Thailand — การบำรุงรักษารถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
-          "text": "Tesla — Model S Plaid Track Package (ตลาด UAE) และภาพชุดเบรก",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/227283",
-          "text": "ประชาสัมพันธ์จังหวัดเชียงใหม่ — สภาพเส้นทาง ทล.1009 จอมทอง–อินทนนท์",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://cbtthailand.dasta.or.th/webapp/relattraction/content/1118/",
-          "text": "DASTA — เส้นทางหล่มเก่า–ภูทับเบิก ผ่าน ทล.2331",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.brembo.com/en/solutions/for-your-car/ev-kit",
-          "text": "Brembo — EV Kit สำหรับการใช้งานเบรกของรถไฟฟ้า",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_pad/SSS.html",
-          "text": "ENDLESS Japan — SSS",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_pad/SSMPLUS.html",
-          "text": "ENDLESS Japan — SSM PLUS",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72.html",
-          "text": "ENDLESS Japan — MX72",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_pad/MX72PLUS.html",
-          "text": "ENDLESS Japan — MX72 PLUS",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_6POT.html",
-          "text": "ENDLESS Japan — 6POT และภาพคาลิเปอร์",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_caliper/car_list.html",
-          "text": "ENDLESS Japan — ตารางรถสำหรับชุดคาลิเปอร์",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.endless-sport.co.jp/products/brake_pad/caution_antiRust.html",
-          "text": "ENDLESS Japan — ข้อควรระวังสำหรับจานเคลือบกันสนิม",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://endless-brake.info/products/brake-pads/for-ccm-discs/",
-          "text": "ENDLESS — ผ้าเบรกสำหรับจาน CCM",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.project-mu.co.jp/ja/product-info/type_ps",
-          "text": "Project μ Japan — TYPE PS",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "ul",
-            "li"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        }
-      ],
+      "tabPolicyIssues": [],
       "nestedAnchorCount": 0
     },
     {

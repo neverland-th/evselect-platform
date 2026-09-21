@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import ComingSoonBanner from "@/components/ComingSoonBanner";
 import PrelaunchPanel from "@/components/PrelaunchPanel";
+import BrandHomeLink from "@/components/BrandHomeLink";
 import { damperArticle } from "@/lib/damper-article";
 
 const journeys = [
@@ -133,7 +134,7 @@ export default function StorefrontPage() {
           >
             <Image
               src="/images/reviews/tesla-model-3-hero.jpg"
-              alt="Tesla Model 3 Highland บนถนน"
+              alt="Tesla Model 3 Highland สีแดงที่งานแสดงรถในเยอรมนี ปี 2024"
               fill
               preload
               sizes="(max-width: 1023px) 100vw, 55vw"
@@ -257,7 +258,7 @@ export default function StorefrontPage() {
             <ShieldCheck className="mb-5 h-7 w-7 text-lime-800" />
             <h2 className="font-bold">ข้อมูลไหนมาจากไหน</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              เนื้อหาควรแยกข้อมูลจากผู้ผลิต หลักการทั่วไป และผลที่ EVSELECT ตรวจเอง
+              เนื้อหาควรแยกข้อมูลจากผู้ผลิต หลักการทั่วไป และผลที่ <BrandHomeLink /> ตรวจเอง
               เพื่อให้คุณรู้ว่าสิ่งใดใช้ตัดสินใจได้ทันทีและสิ่งใดยังต้องยืนยัน
             </p>
             <Link href="/editorial-policy" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">
@@ -272,7 +273,7 @@ export default function StorefrontPage() {
               เป็นแนวทางเลือกหัวข้อที่มีประโยชน์ต่อไป
             </p>
             <Link href="/contact" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">
-              ติดต่อ EVSELECT <ArrowRight className="h-4 w-4" />
+              ติดต่อทีมงาน <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
