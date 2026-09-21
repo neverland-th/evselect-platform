@@ -54,7 +54,7 @@ export default function TeslaModel3HighlandReviewPage() {
       </header>
       <figure className="mb-9">
         <div className="relative aspect-[1280/852] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100"><Image src="/images/reviews/tesla-model-3-hero.jpg" alt="Tesla Model 3 Highland สีแดงที่งาน Autofrühling Ulm ประเทศเยอรมนี ปี 2024" fill priority sizes="(max-width: 1152px) 100vw, 1152px" className="object-contain" /></div>
-        <figcaption className="mt-2 text-xs leading-relaxed text-slate-500">ภาพ Model 3 Highland ในเยอรมนี ถ่ายปี 2024 โดย Alexander-93 (Alexander Migl) / <a href="https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg" className="underline text-lime-800">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" className="underline text-lime-800">CC BY-SA 4.0</a> · ย่อขนาดและแสดงเต็มภาพ อุปกรณ์อาจต่างจากรถสเปกไทยปัจจุบัน</figcaption>
+        <figcaption className="mt-2 text-xs leading-relaxed text-slate-500">ภาพ Model 3 Highland ในเยอรมนี ถ่ายปี 2024 โดย Alexander-93 (Alexander Migl) / <a href="https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg" target="_blank" rel="noopener noreferrer" className="underline text-lime-800">Wikimedia Commons<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className="underline text-lime-800">CC BY-SA 4.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดและแสดงเต็มภาพ อุปกรณ์อาจต่างจากรถสเปกไทยปัจจุบัน</figcaption>
       </figure>
       <aside className="rounded-2xl bg-lime-50 border border-lime-200 p-5 sm:p-6 mb-10 text-sm leading-relaxed">
         <h2 className="font-bold text-base mb-2 flex gap-2 items-center"><Info className="w-5 h-5 shrink-0 text-lime-700" /> อ่านให้ตรงรุ่นและปีของรถ</h2>
@@ -76,7 +76,7 @@ export default function TeslaModel3HighlandReviewPage() {
           </table>
         </div>
         <div className="mt-4 space-y-2 text-xs text-slate-600 leading-relaxed">
-          <p>¹ Performance: 3.1 วินาทีเป็นตัวเลขผู้ผลิตที่หักช่วงออกตัว (rollout) ออก ตามเชิงอรรถใน <a className="underline text-lime-800" href={article.sources.measurement}>Tesla ประเทศไทย ฉบับภาษาอังกฤษ</a> ไม่ใช่ผลจับเวลาของ <BrandHomeLink /></p>
+          <p>¹ Performance: 3.1 วินาทีเป็นตัวเลขผู้ผลิตที่หักช่วงออกตัว (rollout) ออก ตามเชิงอรรถใน <a className="underline text-lime-800" href={article.sources.measurement} target="_blank" rel="noopener noreferrer">Tesla ประเทศไทย ฉบับภาษาอังกฤษ<span className="sr-only"> (เปิดแท็บใหม่)</span></a> ไม่ใช่ผลจับเวลาของ <BrandHomeLink /></p>
           <p>² ล้อมาตรฐานคือ 18 นิ้วสำหรับรุ่นขับหลัง และ 20 นิ้วสำหรับ Performance ค่า 534 กม. ของ Premium RWD ล้อ 18 นิ้วระบุว่า “โดยประมาณ” บนเว็บ Tesla จึงแยกจากค่าที่ระบุ WLTP ระยะวิ่งจริงขึ้นกับความเร็ว อากาศ เส้นทางและการใช้งาน</p>
           <p>³ กำลังชาร์จสูงสุดไม่ใช่กำลังคงที่ตลอดการชาร์จ ไม่มีข้อมูลยืนยันเวลา 10–80% สำหรับรถทุกรุ่นในแหล่งข้อมูลที่ใช้ จึงไม่ระบุเวลา 18 หรือ 22 นาทีเป็นข้อรับประกัน</p>
           <p>⁴ สิ้นสุดตามเวลา หรือระยะทาง อย่างใดถึงก่อน รายละเอียดความคุ้มครองและเงื่อนไขให้ตรวจเอกสารรับประกันรถคันที่ซื้อ</p>
@@ -101,8 +101,8 @@ export default function TeslaModel3HighlandReviewPage() {
       <section id="charging" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
         <h2 className="text-2xl font-extrabold text-slate-900">อ่านตัวเลขแบตเตอรี่และการชาร์จอย่างไร</h2>
         <p>เลือกเปรียบเทียบระยะวิ่งด้วยมาตรฐานเดียวกันและขนาดล้อเดียวกันก่อน ตัวเลข WLTP ใช้เป็นข้อมูลเปรียบเทียบระหว่างรถ ส่วนระยะทางต่อการชาร์จที่คุณใช้งานได้จริงอาจต่างออกไป การเลือก Long Range จึงควรพิจารณาเส้นทาง ความเร็ว และโอกาสชาร์จระหว่างวันด้วย</p>
-        <p>กำลังสูงสุด 175 หรือ 250 kW ไม่ได้บอกเวลา 10–80% โดยตรง อัตราชาร์จขึ้นอยู่กับแบตเตอรี่ ระดับประจุ อุณหภูมิและสถานีที่ใช้ ตามคำอธิบายของ <a href={article.sources.supercharging} className="underline text-lime-800">Tesla เรื่อง Supercharging</a> จึงไม่ควรคำนวณเวลาทั้งช่วงจากค่ากำลังสูงสุดเพียงค่าเดียว</p>
-        <p>สำหรับการชาร์จประจำวัน ให้ใช้ขีดจำกัดที่รถหรือแอปแนะนำสำหรับแบตเตอรี่ของรถคันนั้น ตาม <a href={article.sources.charging} className="underline text-lime-800">คำแนะนำการชาร์จที่บ้านของ Tesla</a> การเห็นชื่อรุ่น RWD อย่างเดียวไม่เพียงพอที่จะสรุปว่าเป็น LFP หรือควรชาร์จถึง 100% ทุกวัน</p>
+        <p>กำลังสูงสุด 175 หรือ 250 kW ไม่ได้บอกเวลา 10–80% โดยตรง อัตราชาร์จขึ้นอยู่กับแบตเตอรี่ ระดับประจุ อุณหภูมิและสถานีที่ใช้ ตามคำอธิบายของ <a href={article.sources.supercharging} target="_blank" rel="noopener noreferrer" className="underline text-lime-800">Tesla เรื่อง Supercharging<span className="sr-only"> (เปิดแท็บใหม่)</span></a> จึงไม่ควรคำนวณเวลาทั้งช่วงจากค่ากำลังสูงสุดเพียงค่าเดียว</p>
+        <p>สำหรับการชาร์จประจำวัน ให้ใช้ขีดจำกัดที่รถหรือแอปแนะนำสำหรับแบตเตอรี่ของรถคันนั้น ตาม <a href={article.sources.charging} target="_blank" rel="noopener noreferrer" className="underline text-lime-800">คำแนะนำการชาร์จที่บ้านของ Tesla<span className="sr-only"> (เปิดแท็บใหม่)</span></a> การเห็นชื่อรุ่น RWD อย่างเดียวไม่เพียงพอที่จะสรุปว่าเป็น LFP หรือควรชาร์จถึง 100% ทุกวัน</p>
       </section>
       <section id="model-years" className="mb-12 rounded-3xl border border-slate-200 bg-slate-50 p-6 sm:p-8 space-y-4 text-slate-600 leading-relaxed">
         <h2 className="text-2xl font-extrabold text-slate-900">ถ้ากำลังดู Highland ปีเก่าหรือรถมือสอง</h2>

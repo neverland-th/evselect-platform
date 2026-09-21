@@ -10685,7 +10685,7 @@
       "mainExternalLinks": [
         {
           "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg",
-          "text": "Wikimedia Commons",
+          "text": "Wikimedia Commons (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -10695,12 +10695,12 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-          "text": "CC BY-SA 4.0",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -10710,8 +10710,8 @@
             "figure",
             "figcaption"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/th_th/model3/design",
@@ -10730,7 +10730,7 @@
         },
         {
           "href": "https://www.tesla.com/en_th/model3",
-          "text": "Tesla ประเทศไทย ฉบับภาษาอังกฤษ",
+          "text": "Tesla ประเทศไทย ฉบับภาษาอังกฤษ (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -10741,12 +10741,12 @@
             "div",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/th_th/support/charging/supercharging",
-          "text": "Tesla เรื่อง Supercharging",
+          "text": "Tesla เรื่อง Supercharging (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -10756,12 +10756,12 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/th_TH/support/charging/home-charging",
-          "text": "คำแนะนำการชาร์จที่บ้านของ Tesla",
+          "text": "คำแนะนำการชาร์จที่บ้านของ Tesla (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -10771,8 +10771,8 @@
             "section",
             "p"
           ],
-          "target": "",
-          "rel": ""
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         },
         {
           "href": "https://www.tesla.com/th_th/model3/design",
@@ -10857,89 +10857,7 @@
       ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
-      "tabPolicyIssues": [
-        {
-          "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg",
-          "text": "Wikimedia Commons",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-          "text": "CC BY-SA 4.0",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "figure",
-            "figcaption"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/en_th/model3",
-          "text": "Tesla ประเทศไทย ฉบับภาษาอังกฤษ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/th_th/support/charging/supercharging",
-          "text": "Tesla เรื่อง Supercharging",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        },
-        {
-          "href": "https://www.tesla.com/th_TH/support/charging/home-charging",
-          "text": "คำแนะนำการชาร์จที่บ้านของ Tesla",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "p"
-          ],
-          "target": "",
-          "rel": "",
-          "reason": "external link needs a new tab and noopener noreferrer"
-        }
-      ],
+      "tabPolicyIssues": [],
       "nestedAnchorCount": 0
     },
     {
