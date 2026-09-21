@@ -36,4 +36,10 @@ No full-site completion or deployment is claimed by this document.
 - Reader review found an additional semantic issue that a linear heading scan cannot prove: the wheel-rate worked example needed its own H3 before the two H4 examples. Added that H3. The standalone setup-log fieldset also now has a real H2 in its legend.
 - The complete final Damper article and setup log have been read in actual desktop and mobile layouts. All article photographs, four diagram states, worked example, three cases, ten FAQs, references and footer were inspected. See `damper-reader-review-2026-09-21.md` for exact scope and version hashes.
 - Earlier completed page reviews are documented in the tyre worklog, `carbon-model3-reader-review-2026-09-21.md`, and `suspension-information-reader-review-2026-09-21.md`. Remaining full-page reviews and the newly expanded tab-policy checks are still open; these checkpoints do not certify the whole site.
-- The latest production build and changed-file ESLint passed. The build verified **72 referenced local images**. No production deployment has occurred.
+- At the Damper checkpoint `4f1f4c6`, the production build and changed-file ESLint passed; that build verified **72 referenced local images**. This is a historical build result, superseded by the current failure below. No production deployment has occurred.
+
+## Powertrain checkpoint, 2026-09-21
+
+- Refreshed the complete 31-route heading inventory after the horsepower/torque rewrite: all returned 200, exactly one H1 each, no empty headings and no skipped descending main/article levels.
+- Completed the rewritten article's actual desktop/mobile reader review, including all images, calculations, table cells, expanded FAQs and references. See `powertrain-reader-review-2026-09-21.md`.
+- Changed-file ESLint passed. The latest build stopped at image verification: three referenced images had been unexpectedly deleted from the working tree. User clarification is pending; no deployment is permitted from this incomplete tree. The heading result does not establish that the missing images or the remaining full-site reader checks are resolved.

@@ -1,732 +1,131 @@
 import Image from 'next/image';
-import { ImageCredit } from '@/components/ImageCredit';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import {
-  ArrowLeft,
-  ArrowRight,
-  CalendarDays,
-  Clock,
-  Sparkles,
-  Award,
-  Zap,
-  CheckCircle2,
-  TrendingUp,
-  Compass,
-  ChevronRight,
-  Flame,
-} from 'lucide-react';
+import type { ReactNode } from 'react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import BrandHomeLink from '@/components/BrandHomeLink';
+import { ImageCredit } from '@/components/ImageCredit';
+import { powertrainArticle as article } from '@/lib/powertrain-article';
+
+const linkStyle = 'font-semibold text-lime-800 underline decoration-lime-400 underline-offset-4 hover:text-lime-950 focus-visible:outline-2 focus-visible:outline-offset-4';
+const sources = {
+  rotation: { title: 'OpenStax: ความสัมพันธ์ระหว่างแรงบิด ความเร็วรอบ และกำลัง', url: 'https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion' },
+  field: { title: 'MathWorks: Field-Weakening Control และข้อจำกัดแรงบิด', url: 'https://www.mathworks.com/help/mcb/gs/field-weakening-control.html' },
+  drag: { title: 'NASA Glenn: สมการแรงต้านอากาศ', url: 'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/' },
+  taycan: { title: 'Porsche Newsroom: ระบบส่งกำลัง Taycan รุ่นเปิดตัวปี 2019', url: 'https://newsroom.porsche.com/en/products/taycan/powertrain-18555.html' },
+  status: { title: 'Tesla Model 3 2024+ คู่มือไทย: สถานะรถและการจำกัดกำลัง', url: 'https://www.tesla.com/ownersmanual/model3/th_th/GUID-80B80D48-E3A9-4857-864B-F4CC9B56FD7E.html' },
+  modes: { title: 'Tesla Model 3 2024+ คู่มือไทย: โหมดการเร่งความเร็ว', url: 'https://www.tesla.com/ownersmanual/model3/th_th/GUID-8EAFF5D8-7209-45ED-A7E0-508FFA60C530.html' },
+};
+const contents = [
+  ['power-and-torque', 'แรงม้ากับแรงบิดบอกคนละอย่าง'], ['wheel-force', 'อัตราทดเปลี่ยนแรงขับที่ล้ออย่างไร'],
+  ['motor-regions', 'ทำไมแรงบิดลดลงเมื่อรอบสูง'], ['speed-and-drag', 'ยิ่งเร็ว ทำไมยิ่งเร่งต่อยาก'],
+  ['two-speed', 'ทำไม Taycan ใช้เกียร์สองสปีด'], ['compare-cars', 'อ่านสเปกและผลทดสอบให้เทียบกันได้'], ['questions', 'คำถามที่เจอบ่อย'],
+] as const;
 
 export const metadata: Metadata = {
-  alternates: { canonical: '/articles/ev-horsepower-vs-torque-explained' },
-  title: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? เจาะลึกกราฟไดโน่และเกียร์ทดเดี่ยว | EVSELECT',
-  description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า PMSM และ Induction: อธิบายกราฟ Constant Torque ตั้งแต่ 0 RPM, โซน Constant Power, ปรากฏการณ์ Back-EMF, หลักการถ่ายทอดแรงขับที่ล้อ และเปรียบเทียบเกียร์ 2 สปีดใน Taycan กับเกียร์ทดเดี่ยวใน Tesla และ BYD Seal',
-  keywords: [
-    'แรงม้า vs แรงบิด รถ EV',
-    'ทำไมรถ EV ปลายเหี่ยว',
-    'กราฟไดโน่มอเตอร์ไฟฟ้า',
-    'Single speed reduction gear EV',
-    'Back EMF มอเตอร์ไฟฟ้า',
-    'Field Weakening EV',
-    'Porsche Taycan 2-speed gearbox',
-    'อัตราทดเกียร์รถยนต์ไฟฟ้า',
-    'กำลังมอเตอร์ไฟฟ้า PMSM',
-    'EVSELECT Powertrain'
-  ],
-  openGraph: {
-    title: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? | EVSELECT',
-    description: 'เจาะลึกฟิสิกส์มอเตอร์ไฟฟ้า: กราฟไดโน่ 0 RPM, ปรากฏการณ์ Back-EMF, หลักการถ่ายทอดแรงฉุดที่ล้อ และระบบเกียร์ทดเดี่ยว',
-    url: 'https://evselects.com/articles/ev-horsepower-vs-torque-explained',
-    siteName: 'EVSELECT Thailand',
-    locale: 'th_TH',
-    type: 'article',
-    images: [
-      {
-        url: '/images/hero-bg.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า EVSELECT'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า | EVSELECT Powertrain & Dynamics',
-    description: 'ไขความลับทำไม EV ออกตัวหลังติดเบาะ แต่ความเร็วปลายเริ่มแผ่ว: กราฟไดโน่, Back-EMF และเกียร์ทดเดี่ยว',
-    images: ['/images/hero-bg.jpg']
-  }
+  title: `${article.title} | EVSELECT`, description: article.description, alternates: { canonical: article.path },
+  openGraph: { title: article.title, description: article.description, url: `https://evselects.com${article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', images: [{ url: article.image, width: 1920, height: 1280, alt: article.imageAlt }] },
+  twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
 };
+function Source({ to, children }: { to: keyof typeof sources; children: ReactNode }) {
+  return <a href={sources[to].url} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
+}
+function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
+  return <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-28 space-y-5"><h2 id={`${id}-title`} className="border-b border-slate-200 pb-3 text-2xl font-bold leading-snug text-slate-950">{title}</h2>{children}</section>;
+}
 
 export default function EVHorsepowerVsTorquePage() {
-  return (
-    <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 text-slate-900 bg-white">
-      {/* 1. Breadcrumbs Navigation */}
-      <nav aria-label="Breadcrumb" className="mb-8">
-        <Link
-          href="/articles"
-          className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-lime-600 transition-colors group font-medium"
-        >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform text-slate-400 group-hover:text-lime-600" />
-          <span>กลับไปหน้ารวมบทความและคู่มือ EV</span>
-        </Link>
-      </nav>
-
-      {/* 2. Article Header & Metadata Badges */}
-      <header className="space-y-6 mb-10">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-semibold">
-            <span className="bg-lime-50 text-lime-700 border border-lime-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
-              <Zap className="w-3.5 h-3.5 text-lime-600" />
-              ระบบขับเคลื่อน &amp; มอเตอร์ไฟฟ้า
-            </span>
-            <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200">
-              Racecar Engineering &amp; Dyno Physics
-            </span>
-            <span className="flex items-center gap-1.5 text-slate-500 font-normal">
-              <CalendarDays className="w-3.5 h-3.5 text-slate-400" /> 27 สิงหาคม 2569
-            </span>
-            <span className="flex items-center gap-1.5 text-slate-500 font-normal">
-              <Clock className="w-3.5 h-3.5 text-slate-400" /> ใช้เวลาอ่าน 9 นาที
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">ระดับการวิเคราะห์</span>
-            <span className="text-sm font-black text-lime-700">MOTOR DYNO PHYSICS</span>
-          </div>
+  return <article className="mx-auto max-w-5xl bg-white px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
+      mainEntityOfPage: `https://evselects.com${article.path}`, image: `https://evselects.com${article.image}`,
+      datePublished: article.publishedAt, dateModified: article.updatedAt, inLanguage: 'th-TH',
+      author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' }, publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
+    }) }} />
+    <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex min-h-11 items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} aria-hidden="true" />บทความและคู่มือ EV</Link></nav>
+    <header className="space-y-5">
+      <p className="text-sm font-semibold text-lime-800">สมรรถนะ · อ่านสเปกรถให้เข้าใจ</p>
+      <h1 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">{article.title}</h1>
+      <p className="max-w-3xl text-lg leading-[1.9] sm:text-xl">คันหนึ่งแรงม้าเยอะกว่า อีกคันแรงบิดสูงกว่า แล้วคันไหนกดคันเร่งแล้วไปได้ดีกว่ากัน? ถ้าเลือกจากตัวเลขสูงสุดเพียงช่องเดียว คุณอาจได้คำตอบผิด — เพราะยังมีน้ำหนักรถ อัตราทด ยาง และความเร็วตอนเริ่มเร่งเข้ามาเกี่ยวด้วย</p>
+      <p className="max-w-3xl">บทความนี้พาไล่จากมอเตอร์ถึงล้อด้วยตัวอย่างที่คำนวณตามได้ แล้วใช้หลักเดียวกันอธิบายว่าทำไมรถที่ออกตัวจัดอาจไม่ได้เร่งแซงดีที่สุดทุกช่วงความเร็ว คุณจะได้อ่านโบรชัวร์และผลทดสอบเป็น ก่อนตัดสินใจจากความรู้สึกหลังติดเบาะอย่างเดียว</p>
+      <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>21 กันยายน 2569</time> · เรียบเรียงโดย <BrandHomeLink /> จากแหล่งข้อมูลที่ระบุท้ายบทความ</p>
+      <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+        <Image src={article.image} alt={article.imageAlt} width={1920} height={1280} preload sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" />
+        <figcaption className="space-y-2 p-4 text-sm leading-relaxed"><p>อินเวอร์เตอร์เหนือมอเตอร์ของ Toyota bZ4X ที่งาน Expo Móvil ประเทศคอสตาริกา ปี 2022 ใช้ประกอบเรื่องระบบขับเคลื่อนไฟฟ้า ไม่ใช่ภาพการทดสอบไดโน่หรือรถสเปกไทยที่เรานำมาทดสอบ</p><ImageCredit author="Mariordo (Mario Roberto Durán Ortiz)" source="https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" className="" /></figcaption>
+      </figure>
+    </header>
+    <aside className="my-9 rounded-2xl border border-lime-200 bg-lime-50 p-5 sm:p-6" aria-labelledby="quick-answer-title">
+      <h2 id="quick-answer-title" className="mb-3 text-xl font-bold text-slate-950">จำสามเรื่องนี้ก่อนดูตัวเลข</h2>
+      <ul className="list-disc space-y-2 pl-5"><li><strong>แรงบิดต้องดูว่าอยู่ตรงไหน:</strong> ที่เพลามอเตอร์กับที่ล้อเป็นคนละค่า เพราะมีอัตราทดคั่นอยู่</li><li><strong>แรงม้าไม่ได้มีไว้ดูความเร็วปลายอย่างเดียว:</strong> กำลังที่ใช้ได้ในช่วงนั้นมีผลต่อการเร่งด้วย</li><li><strong>ความเร็วเปลี่ยน คำตอบก็เปลี่ยน:</strong> เวลา 0–100 กม./ชม. ไม่ได้บอกผลเร่งแซงทุกช่วง และสภาพแบตเตอรี่กับยางต้องเทียบกันได้</li></ul>
+    </aside>
+    <nav aria-label="สารบัญบทความ" className="mb-10 rounded-2xl border border-slate-200 p-5 sm:p-6"><p className="mb-3 font-bold text-slate-950">เลือกอ่านเรื่องที่สงสัย</p><ol className="list-decimal space-y-2 pl-5 text-base">{contents.map(([id, label]) => <li key={id}><a href={`#${id}`} className={linkStyle}>{label}</a></li>)}</ol></nav>
+    <div className="space-y-12">
+      <Section id="power-and-torque" title="1. แรงม้ากับแรงบิดสัมพันธ์กัน แต่บอกคนละอย่าง">
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200 p-5"><h3 className="mb-2 text-xl font-bold text-slate-950">แรงบิด: แรงหมุนที่เพลา</h3><p>Torque วัดเป็นนิวตัน-เมตร (Nm) ลองนึกถึงการใช้ประแจหมุนนอต: ทั้งแรงที่ออกและระยะแขนประแจมีส่วนต่อแรงบิด ในมอเตอร์ ตัวเลขนี้บอกแรงหมุนที่เพลาส่งออกมา ณ เงื่อนไขหนึ่ง</p></div>
+          <div className="rounded-2xl border border-slate-200 p-5"><h3 className="mb-2 text-xl font-bold text-slate-950">กำลัง: ทำงานได้เร็วแค่ไหน</h3><p>Power วัดเป็นกิโลวัตต์ (kW) หรือแรงม้า กำลังจากการหมุนขึ้นกับทั้งแรงบิดและความเร็วรอบ จึงไม่ควรแยกว่า “แรงบิดใช้ออกตัว ส่วนแรงม้าใช้แค่ความเร็วปลาย”</p></div>
         </div>
-
-        <h1
-          className="text-3xl sm:text-3xl md:text-5xl font-black text-slate-900 leading-[1.18] tracking-tight"
-          style={{ textWrap: 'balance' } as React.CSSProperties}
-        >
-          แรงม้า vs แรงบิด ในมอเตอร์ไฟฟ้า: ทำไม EV ถึงออกตัวเร็วกว่า แต่ปลายเหี่ยว? เจาะลึกกราฟไดโน่และเกียร์ทดเดี่ยว
-        </h1>
-
-        <p
-          className="text-base sm:text-base text-slate-600 leading-relaxed font-normal"
-          style={{ textWrap: 'balance' } as React.CSSProperties}
-        >
-          ไขข้อข้องใจอันดับหนึ่งของคนรักความเร็ว: เหตุใดรถยนต์ไฟฟ้าที่มีแรงม้า 500+ ตัว ถึงกระชากออกตัว 0-100 ได้เร็วกว่าซูเปอร์คาร์ แต่พอวิ่งแตะ 160 – 200 กม./ชม. อัตราเร่งกลับเริ่มแผ่วลง? วิเคราะห์ลึกถึง <strong>กราฟไดโน่มอเตอร์ไฟฟ้า 3 ช่วง</strong>, ปรากฏการณ์ <strong>Back-EMF</strong>, การฉีดกระแส <strong>Field Weakening</strong>, และฟิสิกส์ของ <strong>Single-Speed Reduction Gearbox</strong>
-        </p>
-      </header>
-
-      {/* 3. Executive Verdict / Summary Box */}
-      <div className="bg-slate-900 text-white border border-slate-800 p-6 md:p-8 rounded-3xl shadow-xl mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-          <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-800 pb-6 md:pb-0 md:pr-6">
-            <div className="text-xs uppercase tracking-wider text-slate-400 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-400" /> Powertrain Core Equation
-            </div>
-            <div className="text-lg sm:text-xl font-black text-lime-400 leading-tight">
-              Tractive Force at Wheels
-            </div>
-            <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-              &quot;แรงบิดที่ปลายเพลามอเตอร์ (Motor Torque) คือสิ่งที่คุณจ่ายเงินซื้อ แต่แรงขับที่หน้ายางกดลงพื้น (Tractive Force) คือสิ่งที่คุณสัมผัสได้จริงเมื่อหลังติดเบาะ&quot;
-            </p>
-          </div>
-
-          <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-3.5">
-            <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60">
-              <div className="text-[11px] text-slate-400">แรงบิดที่ 0 RPM</div>
-              <div className="text-base font-extrabold text-slate-900 mt-0.5">100% Maximum</div>
-              <div className="text-[10px] text-slate-400">ไม่ต้องรอรอบเหมือน ICE</div>
-            </div>
-            <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60">
-              <div className="text-[11px] text-slate-400">อัตราทดเกียร์เดี่ยว (Typical)</div>
-              <div className="text-base font-bold text-emerald-400 mt-0.5">8.5:1 – 10.5:1</div>
-              <div className="text-[10px] text-slate-400">ทวีคูณแรงบิดเข้าสู่เพลาล้อ</div>
-            </div>
-            <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60">
-              <div className="text-[11px] text-slate-400">รอบหมุนสูงสุด (Redline)</div>
-              <div className="text-base font-bold text-white mt-0.5">16,000 – 22,000 RPM</div>
-              <div className="text-[10px] text-slate-400">โรเตอร์แม่เหล็กถาวรหมุนจัด</div>
-            </div>
-            <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60">
-              <div className="text-[11px] text-slate-400">ขีดจำกัดความเร็วปลาย</div>
-              <div className="text-base font-bold text-amber-400 mt-0.5">Back-EMF Voltage</div>
-              <div className="text-[10px] text-slate-400">แรงดันต้านเท่าแรงดันแบตเตอรี่</div>
-            </div>
-            <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60">
-              <div className="text-[11px] text-slate-400">ประสิทธิภาพการส่งกำลัง</div>
-              <div className="text-base font-bold text-white mt-0.5">&gt; 96 – 98%</div>
-              <div className="text-[10px] text-slate-400">สูญเสียต่ำกว่าเกียร์คลัตช์คู่</div>
-            </div>
-            <div className="bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700/60">
-              <div className="text-[11px] text-slate-400">ระบบเกียร์ 2 สปีด</div>
-              <div className="text-base font-extrabold text-slate-900 mt-0.5">Porsche Taycan</div>
-              <div className="text-[10px] text-slate-400">ปลดล็อกความเร็วปลาย 260 km/h</div>
-            </div>
-          </div>
+        <p>ความสัมพันธ์ตาม <Source to="rotation">หลักกำลังของการหมุนใน OpenStax</Source> คือ P = T × ω โดย P คือกำลัง T คือแรงบิด และ ω คือความเร็วเชิงมุม เมื่อแปลงหน่วยเป็นรอบต่อนาที (rpm) จะเขียนในหน่วยที่คุ้นเคยได้ดังนี้</p>
+        <div className="rounded-2xl bg-slate-100 p-5 text-slate-950"><p className="text-lg font-bold">กำลัง (kW) ≈ แรงบิด (Nm) × รอบต่อนาที ÷ 9,550</p><p className="mt-2 text-base">ตัวอย่างสมมติ: 300 Nm ที่ 3,000 rpm ให้ประมาณ 94 kW ถ้ายังรักษา 300 Nm ได้ที่ 6,000 rpm กำลังจะเป็นประมาณ 188 kW</p></div>
+        <p>ที่เพลาหยุดนิ่ง มอเตอร์อาจสร้างแรงบิดได้ แต่กำลังกลที่เพลาเป็นศูนย์เพราะความเร็วรอบเป็นศูนย์ นั่นไม่ได้แปลว่าไม่ใช้ไฟ และไม่ได้หมายความว่ารถจะส่งแรงบิดสูงสุดทั้งหมดลงถนนได้ทันที</p>
+        <p>เวลาเทียบโบรชัวร์ ให้ใช้หน่วยเดียวกันก่อน คำว่า “แรงม้า” อาจแสดงเป็น hp หรือ PS ซึ่งไม่ใช่ค่าหน่วยเดียวกัน หากมี kW จากผู้ผลิตให้ใช้เป็นฐานเทียบ และอย่าบวกกำลังสูงสุดมอเตอร์หน้า–หลังเองเมื่อผู้ผลิตไม่ได้ยืนยันกำลังรวมระบบ</p>
+      </Section>
+      <Section id="wheel-force" title="2. แรงบิดน้อยกว่า ก็อาจสร้างแรงขับที่ล้อได้มากกว่า">
+        <p>เฟืองทดช่วยเพิ่มแรงบิดที่ล้อ แลกกับล้อหมุนช้าลงเมื่อเทียบกับมอเตอร์ จึงต้องรู้ทั้งอัตราทดรวม รัศมีการกลิ้งของยาง และการสูญเสียในระบบ ก่อนนำตัวเลข Nm ของรถสองคันมาเทียบกัน</p>
+        <div className="rounded-2xl border border-lime-200 bg-lime-50 p-5"><p className="font-bold text-slate-950">แรงขับที่ล้อ ≈ แรงบิดมอเตอร์ × อัตราทดรวม × ประสิทธิภาพ ÷ รัศมีการกลิ้ง</p><p className="mt-2 text-base">แรงขับมีหน่วยนิวตัน (N) ส่วนแรงบิดมีหน่วยนิวตัน-เมตร (Nm) อย่านำสองหน่วยนี้มาใช้แทนกัน</p></div>
+        <h3 className="text-xl font-bold text-slate-950">ตัวอย่างสมมติ A กับ B: เปลี่ยนอัตราทด คำตอบก็เปลี่ยน</h3>
+        <p>กำหนดให้ทั้งคู่มีประสิทธิภาพส่งกำลัง 95% และรัศมีการกลิ้ง 0.34 เมตรเท่ากัน เพื่อดูเฉพาะผลของแรงบิดกับอัตราทด ตัวเลขต่อไปนี้ไม่ใช่สเปกรถจริงหรือผลไดโน่</p>
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200 p-5"><p className="text-sm font-semibold text-slate-500">ตัวอย่าง A</p><h4 className="mt-1 text-xl font-bold text-slate-950">300 Nm × อัตราทด 10:1</h4><p className="mt-3 text-2xl font-bold text-lime-800">≈ 8,382 N</p><p className="mt-2 text-base">300 × 10 × 0.95 ÷ 0.34</p></div>
+          <div className="rounded-2xl border border-slate-200 p-5"><p className="text-sm font-semibold text-slate-500">ตัวอย่าง B</p><h4 className="mt-1 text-xl font-bold text-slate-950">400 Nm × อัตราทด 7:1</h4><p className="mt-3 text-2xl font-bold text-lime-800">≈ 7,824 N</p><p className="mt-2 text-base">400 × 7 × 0.95 ÷ 0.34</p></div>
         </div>
-      </div>
-
-      {/* 4. Hero Banner Image */}
-      <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden mb-12 border border-slate-200 bg-slate-100 shadow-xl">
-        <Image
-          src="/images/articles/ev-power-inverter-toyota-bz4x.jpg"
-          alt="ชุดอินเวอร์เตอร์เหนือมอเตอร์ไฟฟ้าของ Toyota bZ4X"
-          fill
-          sizes="(max-width: 768px) 100vw, 1152px"
-          className="object-cover group-hover:scale-105 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
-        <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs text-white">
-          <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15">
-            ระบบทดสอบ: PMSM Electric Motor Dyno vs ICE Twin-Turbo Powerband
-          </span>
-          <span className="bg-lime-600 text-white font-semibold px-3 py-1 rounded-lg shadow-sm">
-            การวิเคราะห์ทางฟิสิกส์ยานยนต์ (Applied Automotive Physics)
-          </span>
+        <p>A มีแรงบิดมอเตอร์ต่ำกว่า แต่ตัวอย่างนี้ให้แรงขับที่ล้อมากกว่า อย่างไรก็ดี ยังสรุปว่า A เร่งเร็วกว่าตลอดไม่ได้ เพราะที่ความเร็วรถเดียวกัน อัตราทดที่ต่างกันทำให้รอบมอเตอร์ต่างกัน และแต่ละมอเตอร์อาจรักษาแรงบิดข้างต้นไว้ไม่ได้</p>
+        <p>เมื่อแรงสุทธิเท่ากัน รถที่มีมวลมากกว่าจะมีอัตราเร่งต่ำกว่า และแรงขับที่คำนวณได้ยังต้องผ่านข้อจำกัดการยึดเกาะกับการควบคุมของรถด้วย ถ้าจะเลือกยางให้รถแรง อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>วิธีเลือกยางให้ตรงน้ำหนักรถและการใช้งาน</Link> ต่อได้ จำนวนแรงม้าเพียงอย่างเดียวใช้กำหนดขนาดยางหรือพิกัดรับน้ำหนักไม่ได้</p>
+      </Section>
+      <Section id="motor-regions" title="3. ทำไมแรงบิดลดลงเมื่อมอเตอร์หมุนเร็วขึ้น">
+        <p>มอเตอร์และอินเวอร์เตอร์มีขีดจำกัดกระแส แรงดัน และอุณหภูมิ ช่วงรอบต่ำอาจรักษาแรงบิดได้ค่อนข้างคงที่ แต่ไม่ได้มีแรงบิดสูงสุดเท่ากันตลอดทุกความเร็วหรือทุกสถานะแบตเตอรี่</p>
+        <h3 className="text-xl font-bold text-slate-950">Constant Torque และ Constant Power อ่านอย่างไร</h3>
+        <p>ช่วง <strong>Constant Torque</strong> หมายถึงช่วงที่รักษาแรงบิดได้ใกล้คงที่ เมื่อรอบสูงขึ้นกำลังจึงเพิ่มขึ้นตาม ส่วนช่วง <strong>Constant Power</strong> หมายถึงกำลังใกล้คงที่ ดังนั้นแรงบิดต้องลดลงเมื่อรอบเพิ่ม ตามสมการในหัวข้อแรก</p>
+        <p><strong>Back-EMF</strong> คือแรงดันไฟฟ้าเหนี่ยวนำย้อนกลับซึ่งเพิ่มตามความเร็วรอบและสนามแม่เหล็ก การควบคุม <strong>Field Weakening</strong> ปรับกระแสให้สนามแม่เหล็กที่มีผลต่อแรงดันย้อนกลับลดลง เพื่อให้มอเตอร์หมุนพ้นรอบฐานได้ภายใต้ขีดจำกัดแรงดัน โดยแลกกับข้อจำกัดแรงบิด อ่านหลักการใน <Source to="field">เอกสาร Field-Weakening Control ของ MathWorks</Source></p>
+        <p>รอบฐานและรูปกราฟขึ้นกับมอเตอร์ ระบบควบคุม และเงื่อนไขไฟฟ้าของชุดนั้น จึงไม่มีเลข 5,000 หรือ 6,000 rpm ที่ใช้แบ่งทุกคัน และการเข้าช่วงกำลังคงที่ก็ไม่ใช่หลักฐานว่าแบตเตอรี่เสื่อมหรือมอเตอร์ร้อนเกินไป</p>
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h3 className="mb-2 text-xl font-bold text-slate-950">จะเชื่อกราฟไดโน่ ต้องรู้ที่มาของกราฟ</h3><p>ดูว่าทดสอบรถรุ่นย่อยใด วัดที่มอเตอร์หรือที่ล้อ ใช้หน่วยอะไร แบตเตอรี่และอุณหภูมิอยู่ในเงื่อนไขไหน หากไม่มีข้อมูลเหล่านี้ เส้นกราฟสวย ๆ ยังใช้จัดอันดับรถไม่ได้ บทความนี้ไม่มีผลไดโน่จากการทดสอบของ <BrandHomeLink /></p></div>
+      </Section>
+      <Section id="speed-and-drag" title="4. กำลังเท่าเดิม แต่รถเร็วขึ้น แรงที่เหลือเร่งต่ออาจน้อยลง">
+        <p>ที่ความเร็วมากกว่าศูนย์ ใช้ความสัมพันธ์ P = F × v ได้ หากกำลังกลที่ส่งถึงล้อคงที่ เมื่อความเร็วเพิ่มขึ้น แรงขับจากกำลังส่วนนี้จะลดลง พร้อมกับแรงต้านอากาศที่เพิ่มขึ้น</p>
+        <h3 className="text-xl font-bold text-slate-950">ตัวอย่างคำนวณ: สมมติกำลังถึงล้อคงที่ 100 kW</h3>
+        <p>ยังไม่หักแรงต้านอากาศ การกลิ้ง หรือทางชัน และไม่ใช้ตารางนี้ทำนายรถรุ่นใด ตัวเลขความเร็วมีไว้เปรียบเทียบสมการ ไม่ใช่คำแนะนำให้ทดลองบนถนน</p>
+        <div className="overflow-x-auto rounded-2xl border border-slate-200" role="region" aria-label="ตารางตัวอย่างกำลังและแรงขับ เลื่อนแนวนอนได้" tabIndex={0}>
+          <table className="w-full min-w-[440px] border-collapse text-left text-base"><caption className="sr-only">แรงขับเชิงทฤษฎีเมื่อกำลังที่ล้อคงที่ 100 กิโลวัตต์</caption><thead className="bg-slate-100 text-slate-950"><tr><th scope="col" className="p-4">ความเร็วรถ</th><th scope="col" className="p-4">เมตร/วินาที</th><th scope="col" className="p-4">แรงขับ P ÷ v</th></tr></thead><tbody>{[[60, '16.67', '6,000 N'], [90, '25.00', '4,000 N'], [120, '33.33', '3,000 N']].map(([speed, ms, force]) => <tr key={speed} className="border-t border-slate-200"><th scope="row" className="p-4 font-medium">{speed} กม./ชม.</th><td className="p-4">{ms}</td><td className="p-4 font-semibold text-lime-800">{force}</td></tr>)}</tbody></table>
         </div>
-      </div>
-
-      <ImageCredit author="Mariordo (Mario Roberto Durán Ortiz)" source="https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" />
-
-      {/* 5. Key Takeaways Box */}
-      <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
-        <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-lime-600" /> สรุปข้อเท็จจริงสำคัญ (Dyno Fact Sheet)
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-          <div className="space-y-2">
-            <div className="font-bold text-emerald-800 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" /> ออกตัวไวเพราะ Flat Torque
-            </div>
-            <p className="text-slate-600 text-xs leading-relaxed">
-              มอเตอร์ไฟฟ้าให้แรงบิดเต็ม 100% ตั้งแต่ 0 RPM เมื่อคูณด้วยเกียร์ทด 9:1 แรงฉุดที่ล้อจึงสูงถึง 10,000+ นิวตัน ทันที ส่งผลให้อัตราเร่ง 0-60 กม./ชม. ไวกว่ารถสันดาปทุกคัน
-            </p>
-          </div>
-          <div className="space-y-2">
-            <div className="font-bold text-amber-800 flex items-center gap-1.5">
-              <TrendingUp className="w-4 h-4 text-amber-600 shrink-0" /> ปลายแผ่วเพราะ Back-EMF
-            </div>
-            <p className="text-slate-600 text-xs leading-relaxed">
-              เมื่อรอบมอเตอร์หมุนเกิน 6,000 RPM แรงดันไฟฟ้าเหนี่ยวนำย้อนกลับจะสูงขึ้นจนเท่าแรงดันแบตเตอรี่ อินเวอร์เตอร์ต้องลดสนามแม่เหล็ก (Field Weakening) แรงบิดจึงค่อยๆ ลดฮวบลงสวนทางกับความเร็วรอบหมุนของมอเตอร์ที่เพิ่มสูงขึ้น
-            </p>
-          </div>
-          <div className="space-y-2">
-            <div className="font-bold text-blue-800 flex items-center gap-1.5">
-              <Compass className="w-4 h-4 text-blue-600 shrink-0" /> เกียร์ทดเดี่ยวคือความสมดุล
-            </div>
-            <p className="text-slate-600 text-xs leading-relaxed">
-              เกียร์ทดอัตราเดียวช่วยตัดน้ำหนักชุดเกียร์ได้ 80-120 กก. ไม่มีรอยต่อการเปลี่ยนเกียร์ และมีประสิทธิภาพการส่งกำลังสูงถึง 97% เหมาะสมที่สุดสำหรับการใช้งานจริงในชีวิตประจำวัน
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* 6. Main Body Content */}
-      <div className="prose prose-slate prose-lg max-w-none prose-headings:text-slate-900 prose-a:text-lime-600 prose-strong:text-slate-900 text-slate-700">
-
-        {/* SECTION 1: PHYSICAL DEFINITIONS */}
-        <section>
-          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
-            <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            1. นิยามทางฟิสิกส์: แรงบิด (Torque) vs แรงม้า (Horsepower)
-          </h2>
-          <p>
-            เพื่อเข้าใจความแตกต่างระหว่างเครื่องยนต์สันดาปและมอเตอร์ไฟฟ้า เราต้องแยกแยะ 2 พารามิเตอร์พื้นฐานทางฟิสิกส์ให้ชัดเจน:
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose my-8">
-            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-xs">
-              <div className="text-xs font-bold uppercase tracking-wider text-lime-700 bg-lime-100 px-3 py-1 rounded-full inline-block mb-3">
-                แรงบิด (Torque)
-              </div>
-              <h3 className="text-lg font-black text-slate-900 mb-2">แรงบิดหมุนที่สร้างอัตราเร่ง</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                แรงบิดวัดเป็นหน่วย <strong>นิวตัน-เมตร (Nm)</strong> คือขนาดของแรงหมุนที่มอเตอร์สร้างขึ้นได้รอบแกนหมุน เปรียบเสมือน <em>&quot;กล้ามเนื้อ&quot;</em> ที่ใช้ผลักดันน้ำหนักตัวรถ 2 ตันให้ออกตัวพุ่งทะยานจากจุดหยุดนิ่ง
-              </p>
-            </div>
-
-            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-xs">
-              <div className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-3 py-1 rounded-full inline-block mb-3">
-                แรงม้า / กำลัง (Power)
-              </div>
-              <h3 className="text-lg font-black text-slate-900 mb-2">อัตราการทำงานต่อหน่วยเวลา</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                กำลังของมอเตอร์วัดเป็น <strong>กิโลวัตต์ (kW)</strong> หรือเทียบเคียงเป็น <strong>แรงม้า (HP หรือ PS)</strong> เกิดจากการทำงานร่วมกันระหว่างแรงบิดกับความเร็วรอบหมุนของมอเตอร์ เป็นตัวกำหนด <em>&quot;ความสามารถในการรักษาความเร็วสูงอย่างต่อเนื่อง&quot;</em>
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-slate-900 text-lime-400 p-6 rounded-2xl my-6 shadow-inner not-prose">
-            <div className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
-              <Zap className="w-4 h-4 text-lime-400" />
-              หลักการทำงาน: กำลังและแรงม้าสัมพันธ์กับแรงบิดอย่างไร?
-            </div>
-            <p className="text-slate-200 text-sm leading-relaxed mb-3">
-              กำลังหรือแรงม้าไม่ได้เกิดขึ้นมาเดี่ยวๆ แต่เกิดจาก <strong>แรงบิดในการหมุน</strong> ทำงานผสานกับ <strong>ความเร็วรอบหมุนของมอเตอร์</strong> ยิ่งรอบจัดและมีแรงบิดสูง กำลังขับเคลื่อนของรถก็จะยิ่งมหาศาล
-            </p>
-            <div className="text-slate-300 text-xs pt-3 border-t border-slate-800 leading-relaxed">
-              <strong>ข้อสังเกตสำคัญ:</strong> ในช่วงที่มอเตอร์เพิ่งเริ่มหมุนที่ความเร็วรอบต่ำมากๆ ใกล้ 0 RPM แม้มอเตอร์จะปล่อยแรงบิดเต็มพิกัดทันที แต่เนื่องจากความเร็วรอบยังน้อย กำลังหรือแรงม้าที่วัดได้บนหน้าปัดจึงยังดูน้อยตามไปด้วย นี่คือเหตุผลว่าทำไมที่ความเร็ว 0-30 กม./ชม. รถ EV ถึงกระชากหลังติดเบาะอย่างน่าทึ่ง ทั้งที่หน้าปัดแสดงว่าเพิ่งใช้กำลังไปเพียง 50-80 kW เท่านั้น
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 2: CUSTOM SVG DYNO CURVE DIAGRAM */}
-        <section className="my-12 not-prose">
-          <div className="bg-white border-2 border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl overflow-hidden">
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-200">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-lime-700 bg-lime-100 px-3 py-1 rounded-full">
-                  Dyno Technical Diagram
-                </span>
-                <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-2">
-                  เปรียบเทียบกราฟไดโน่: ICE Turbo Engine vs Electric PMSM Motor
-                </h3>
-              </div>
-              <div className="text-xs text-slate-500 max-w-xs text-right">
-                วิเคราะห์ 3 ช่วงกำลัง: Constant Torque, Constant Power, Field Weakening
-              </div>
-            </div>
-
-            {/* Inline SVG Dyno Plot */}
-            <div className="w-full bg-slate-950 rounded-2xl p-4 sm:p-6 text-white overflow-hidden relative">
-              <div className="absolute top-3 left-4 text-xs font-mono text-slate-400">
-                DYNO PLOT COMPARISON :: ICE GASOLINE TURBO vs ELECTRIC MOTOR (PMSM)
-              </div>
-
-              <svg
-                viewBox="0 0 820 480"
-                className="w-full h-auto max-h-[500px] select-none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <pattern id="dynoGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" strokeWidth="0.8" />
-                  </pattern>
-                  <linearGradient id="evTorqueArea" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#84cc16" stopOpacity="0.4" />
-                    <stop offset="100%" stopColor="#84cc16" stopOpacity="0.0" />
-                  </linearGradient>
-                  <linearGradient id="evPowerArea" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.0" />
-                  </linearGradient>
-                </defs>
-
-                <rect width="820" height="480" fill="#090d16" />
-                <rect width="820" height="480" fill="url(#dynoGrid)" />
-
-                {/* Main Dyno Plot Origin (80, 400) */}
-                <g transform="translate(80, 40)">
-                  {/* Y-Axis (Left: Torque Nm, Right: Power kW) */}
-                  <line x1="0" y1="0" x2="0" y2="360" stroke="#475569" strokeWidth="1.5" />
-                  <line x1="680" y1="0" x2="680" y2="360" stroke="#475569" strokeWidth="1.5" />
-                  <line x1="0" y1="360" x2="680" y2="360" stroke="#475569" strokeWidth="1.5" />
-
-                  {/* Y-Axis Labels (Left - Torque) */}
-                  <text x="-12" y="10" fill="#84cc16" fontSize="11" fontWeight="bold" textAnchor="end">500 Nm</text>
-                  <text x="-12" y="90" fill="#84cc16" fontSize="11" textAnchor="end">400 Nm</text>
-                  <text x="-12" y="180" fill="#84cc16" fontSize="11" textAnchor="end">300 Nm</text>
-                  <text x="-12" y="270" fill="#84cc16" fontSize="11" textAnchor="end">150 Nm</text>
-                  <text x="-12" y="360" fill="#84cc16" fontSize="11" textAnchor="end">0 Nm</text>
-
-                  {/* Y-Axis Labels (Right - Power) */}
-                  <text x="692" y="10" fill="#38bdf8" fontSize="11" fontWeight="bold">350 kW (475 HP)</text>
-                  <text x="692" y="90" fill="#38bdf8" fontSize="11">250 kW</text>
-                  <text x="692" y="180" fill="#38bdf8" fontSize="11">150 kW</text>
-                  <text x="692" y="270" fill="#38bdf8" fontSize="11">75 kW</text>
-                  <text x="692" y="360" fill="#38bdf8" fontSize="11">0 kW</text>
-
-                  {/* X-Axis Labels (Motor RPM) */}
-                  <text x="0" y="380" fill="#94a3b8" fontSize="10.5" textAnchor="middle">0</text>
-                  <text x="140" y="380" fill="#94a3b8" fontSize="10.5" textAnchor="middle">3,000</text>
-                  <text x="260" y="380" fill="#facc15" fontSize="11" textAnchor="middle" fontWeight="bold">5,500 (Base Spd)</text>
-                  <text x="420" y="380" fill="#94a3b8" fontSize="10.5" textAnchor="middle">10,000</text>
-                  <text x="560" y="380" fill="#f87171" fontSize="10.5" textAnchor="middle">16,000 (Field Wk)</text>
-                  <text x="660" y="380" fill="#94a3b8" fontSize="10.5" textAnchor="middle">20,000 RPM</text>
-
-                  {/* Vertical Zone Delineations */}
-                  {/* Zone 1: Constant Torque */}
-                  <rect x="0" y="0" width="260" height="360" fill="#84cc16" fillOpacity="0.04" />
-                  <line x1="260" y1="0" x2="260" y2="360" stroke="#ca8a04" strokeWidth="1.5" strokeDasharray="4 4" />
-                  <text x="130" y="25" fill="#a3e635" fontSize="11" textAnchor="middle" fontWeight="bold">
-                    โซนที่ 1: Constant Torque (กระแส Inverter สูงสุด)
-                  </text>
-
-                  {/* Zone 2: Constant Power */}
-                  <rect x="260" y="0" width="300" height="360" fill="#0284c7" fillOpacity="0.04" />
-                  <line x1="560" y1="0" x2="560" y2="360" stroke="#dc2626" strokeWidth="1.5" strokeDasharray="4 4" />
-                  <text x="410" y="25" fill="#38bdf8" fontSize="11" textAnchor="middle" fontWeight="bold">
-                    โซนที่ 2: Constant Power (Field Weakening)
-                  </text>
-
-                  {/* Zone 3: High-RPM Roll-off */}
-                  <text x="615" y="25" fill="#f87171" fontSize="10" textAnchor="middle" fontWeight="bold">
-                    โซน 3: Roll-off
-                  </text>
-
-                  {/* EV MOTOR TORQUE CURVE (LIME GREEN - FLAT THEN ROLL OFF) */}
-                  <path
-                    d="M 0 30 L 260 30 Q 380 90 480 180 T 660 300"
-                    fill="none"
-                    stroke="#84cc16"
-                    strokeWidth="4"
-                  />
-                  <text x="210" y="55" fill="#a3e635" fontSize="11" fontWeight="bold">
-                    EV Torque: 500 Nm คงที่ตั้งแต่ 0 RPM
-                  </text>
-                  <text x="510" y="230" fill="#a3e635" fontSize="10">
-                    แรงบิดค่อยๆ ลดลงที่รอบสูง
-                  </text>
-
-                  {/* EV MOTOR POWER CURVE (CYAN - LINEAR RISE THEN FLAT) */}
-                  <path
-                    d="M 0 360 L 260 50 L 560 50 Q 620 70 660 140"
-                    fill="none"
-                    stroke="#06b6d4"
-                    strokeWidth="3.5"
-                  />
-                  <text x="370" y="70" fill="#38bdf8" fontSize="11" fontWeight="bold">
-                    EV Power: 310 kW (420 HP) คงที่ยาว
-                  </text>
-
-                  {/* ICE COMPARISON CURVE (ORANGE DASHED - DELAYED POWERBAND) */}
-                  <path
-                    d="M 40 340 Q 120 280 200 160 T 320 80 Q 400 120 480 340"
-                    fill="none"
-                    stroke="#f97316"
-                    strokeWidth="2"
-                    strokeDasharray="6 4"
-                  />
-                  <text x="325" y="110" fill="#fb923c" fontSize="10">
-                    ICE Turbo Power Band (แคบและต้องเปลี่ยนเกียร์)
-                  </text>
-
-                  {/* Legend Callouts */}
-                  <g transform="translate(20, 290)">
-                    <rect x="0" y="0" width="220" height="60" rx="8" fill="#0f172a" stroke="#334155" />
-                    <line x1="12" y1="18" x2="35" y2="18" stroke="#84cc16" strokeWidth="3" />
-                    <text x="42" y="22" fill="#cbd5e1" fontSize="10">EV Motor Torque (Nm)</text>
-                    <line x1="12" y1="40" x2="35" y2="40" stroke="#06b6d4" strokeWidth="3" />
-                    <text x="42" y="44" fill="#cbd5e1" fontSize="10">EV Motor Power (kW)</text>
-                  </g>
-                </g>
-              </svg>
-            </div>
-
-            <div className="mt-4 text-xs text-slate-500 leading-relaxed">
-              <strong>คำอธิบายกราฟไดโน่:</strong> มอเตอร์ไฟฟ้าสร้างแรงบิดสูงสุดเต็มร้อย (500 Nm) ตั้งแต่ 0 RPM ในโซนที่ 1 ส่งผลให้แรงม้าไต่ระดับขึ้นเป็นเส้นตรง จนกระทั่งถึง Base Speed (5,500 RPM) ซึ่งเข้าสู่โซนที่ 2 โดยแรงม้าจะคงที่ระดับสูงสุด แต่แรงบิดจะค่อยๆ ลดลงตามความเร็วรอบที่เพิ่มขึ้น
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 2: 3 PHASES OF MOTOR POWER */}
-        <section>
-          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
-            <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            2. ผ่าโครงสร้าง 3 ช่วงการทำงานของมอเตอร์ไฟฟ้า
-          </h2>
-          <p>
-            วิศวกรรมควบคุมมอเตอร์ซิงโครนัสแบบแม่เหล็กถาวร (PMSM) และมอเตอร์เหนี่ยวนำ (Induction Motor) แบ่งย่านการทำงานออกเป็น 3 ช่วงอย่างชัดเจน:
-          </p>
-
-          <div className="space-y-4 not-prose my-8">
-            <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs">
-              <div className="flex items-center gap-2 text-lime-700 font-bold text-sm mb-2">
-                <span className="w-2 h-2 rounded-full bg-lime-500"></span>
-                ช่วงที่ 1: Constant Torque Region (0 ถึง Base Speed ~5,000 RPM)
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                ในช่วงนี้ อินเวอร์เตอร์จะถูกจำกัดด้วยเพดานกระแสไฟฟ้าสูงสุดที่มอเตอร์และสารกึ่งตัวนำ SiC/IGBT สามารถรับได้ อินเวอร์เตอร์จะจ่ายกระแสเพื่อสร้างสนามแม่เหล็กเต็มพิกัด ทำให้ <strong>แรงบิดมีค่าคงที่และเป็นค่าสูงสุดตั้งแต่ 0 RPM</strong> อัตราเร่งในช่วง 0-80 กม./ชม. จึงดุดันและกดหลังติดเบาะทันทีโดยไม่ต้องรอรอบ
-              </p>
-            </div>
-
-            <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs">
-              <div className="flex items-center gap-2 text-blue-700 font-bold text-sm mb-2">
-                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                ช่วงที่ 2: Constant Power &amp; Field Weakening Region (~5,000 ถึง 16,000 RPM)
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                เมื่อโรเตอร์หมุนเร็วขึ้น ขดลวดจะสร้าง <strong>แรงดันไฟฟ้าเหนี่ยวนำย้อนกลับ (Back-EMF)</strong> ซึ่งจะวิ่งต้านแรงดันไฟฟ้ากระแสตรงจากแบตเตอรี่ และเมื่อแรงดันย้อนกลับนี้พุ่งสูงจนชนเพดานแรงดันของระบบ อินเวอร์เตอร์จึงต้องปรับกระแสควบคุมเพื่อ <em>&quot;ลดความเข้มของสนามแม่เหล็กถาวร&quot; (Field Weakening)</em> ส่งผลให้กำลังสูงสุดในหน่วยกิโลวัตต์ (kW) ยังคงที่ได้ แต่แรงบิดจะค่อยๆ ลดลงสวนทางกับความเร็วรอบที่สูงขึ้นเรื่อยๆ
-              </p>
-            </div>
-
-            <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs">
-              <div className="flex items-center gap-2 text-amber-700 font-bold text-sm mb-2">
-                <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                ช่วงที่ 3: High-RPM Roll-off &amp; Thermal Limit (&gt; 16,000 RPM)
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                ที่ความเร็วรอบหมุนสูงจัด ความสูญเสียจากกระแสไหลวน (Eddy Current Losses) และความสูญเสียในแกนเหล็ก (Hysteresis Losses) จะพุ่งสูงขึ้นอย่างก้าวกระโดด ทำให้เกิดความร้อนสะสมในโรเตอร์และสเตเตอร์อย่างรวดเร็ว ระบบ BMS จะสั่งลดกำลัง (Thermal Derating) เพื่อป้องกันฉนวนขดลวดละลาย ทำให้ทั้งแรงบิดและแรงม้าตกลง
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 3: SINGLE-SPEED GEARBOX & TRACTIVE FORCE MATH */}
-        <section>
-          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
-            <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            3. กลไกเกียร์ทดเดี่ยว (Single-Speed Gearbox) และที่มาของแรงขับมหาศาลที่ล้อ
-          </h2>
-          <p>
-            ในขณะที่รถยนต์สันดาปต้องใช้เกียร์อัตโนมัติ 7 – 10 สปีดเพื่อชดเชยช่วง Powerband ที่แคบของเครื่องยนต์ แต่รถยนต์ไฟฟ้ากว่า 98% ในท้องตลาดกลับใช้ <strong>เกียร์ทดเดี่ยว (Fixed Reduction Gear)</strong> เพียงอัตราทดเดียว:
-          </p>
-
-          <div className="bg-slate-900 text-lime-400 p-6 rounded-2xl my-6 shadow-inner not-prose">
-            <div className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
-              <Compass className="w-4 h-4 text-lime-400" />
-              กลไกการถ่ายทอดกำลัง: ทำไมมอเตอร์ลูกเล็กถึงสร้างแรงขับที่ล้อได้มหาศาล?
-            </div>
-            <p className="text-slate-200 text-sm leading-relaxed mb-3">
-              แรงขับจริงที่ผลักดันให้รถพุ่งทะยานไปข้างหน้า ไม่ได้ขึ้นอยู่กับแรงบิดมอเตอร์เพียวๆ แต่เกิดจาก <strong>แรงบิดของมอเตอร์</strong> วิ่งผ่าน <strong>อัตราทดของเฟืองเกียร์</strong> (เช่น เกียร์ทดอัตรา 9 ต่อ 1 ซึ่งช่วยขยายแรงบิดมอเตอร์ให้สูงขึ้นถึง 9 เท่าตัว) หักลบการสูญเสียเล็กน้อยในระบบ แล้วถ่ายทอดลงสู่หน้าสัมผัสถนนผ่าน <strong>รัศมีวงล้อและยาง</strong>
-            </p>
-            <div className="text-slate-300 text-xs pt-3 border-t border-slate-800 leading-relaxed">
-              <strong>ตัวอย่างรถจริง:</strong> มอเตอร์ไฟฟ้าแรงบิด 450 นิวตัน-เมตร เมื่อผ่านชุดเกียร์ทด 9.0:1 จะสามารถสร้างแรงขับฉุดกระชากที่หน้ายางลงสู่พื้นถนนได้สูงถึง <strong>11,550 นิวตัน</strong> ในชั่วพริบตา
-            </div>
-          </div>
-
-          <h3 className="text-xl font-bold text-slate-900 mt-6 mb-3">
-            ตัวอย่างการคำนวณจริง: ทำไมออกตัวถึงแรงมหาศาล แต่ปลายถึงแผ่ว?
-          </h3>
-
-          <div className="overflow-x-auto not-prose my-6">
-            <table className="w-full text-left text-xs border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
-              <thead className="bg-slate-900 text-white uppercase font-mono">
-                <tr>
-                  <th className="p-3.5">ความเร็วรถ</th>
-                  <th className="p-3.5">รอบมอเตอร์ (RPM)</th>
-                  <th className="p-3.5">สถานะมอเตอร์</th>
-                  <th className="p-3.5">แรงบิดที่มอเตอร์</th>
-                  <th className="p-3.5 text-lime-400">แรงขับที่ล้อ (นิวตัน)</th>
-                  <th className="p-3.5">แรงต้านอากาศ (นิวตัน)</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-200 bg-white">
-                <tr className="hover:bg-slate-50">
-                  <td className="p-3.5 font-bold text-slate-900">0 – 30 km/h (ออกตัว)</td>
-                  <td className="p-3.5 text-slate-600">0 – 2,500 RPM</td>
-                  <td className="p-3.5 text-emerald-700 font-bold">Constant Torque</td>
-                  <td className="p-3.5 font-bold text-slate-900">450 Nm</td>
-                  <td className="p-3.5 font-bold text-emerald-700">11,550 N (อัตราเร่ง &gt; 0.95g)</td>
-                  <td className="p-3.5 text-slate-400">~80 N (น้อยมาก)</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <td className="p-3.5 font-bold text-slate-900">80 km/h (แซงในเมือง)</td>
-                  <td className="p-3.5 text-slate-600">6,700 RPM</td>
-                  <td className="p-3.5 text-blue-700 font-bold">Constant Power</td>
-                  <td className="p-3.5 font-bold text-slate-900">350 Nm</td>
-                  <td className="p-3.5 font-bold text-blue-700">8,980 N (ดึงกระชากดีมาก)</td>
-                  <td className="p-3.5 text-slate-500">~380 N</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <td className="p-3.5 font-bold text-slate-900">140 km/h (ไฮเวย์)</td>
-                  <td className="p-3.5 text-slate-600">11,800 RPM</td>
-                  <td className="p-3.5 text-amber-700 font-bold">Field Weakening</td>
-                  <td className="p-3.5 font-bold text-slate-900">200 Nm</td>
-                  <td className="p-3.5 font-bold text-amber-700">5,130 N (เริ่มรู้สึกตึงมือ)</td>
-                  <td className="p-3.5 text-slate-600">~1,150 N</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <td className="p-3.5 font-bold text-slate-900">180 km/h (ความเร็วสูง)</td>
-                  <td className="p-3.5 text-slate-600">15,200 RPM</td>
-                  <td className="p-3.5 text-red-600 font-bold">Deep Weakening</td>
-                  <td className="p-3.5 font-bold text-slate-900">130 Nm</td>
-                  <td className="p-3.5 font-bold text-red-600">3,330 N (แรงขับลดลง 70%)</td>
-                  <td className="p-3.5 text-red-600 font-bold">~1,900 N (กินแรงขับเกินครึ่ง!)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p>
-            <strong>บทสรุปของตัวเลข:</strong> ที่ความเร็ว 180 กม./ชม. แรงบิดของมอเตอร์ลดลงเหลือเพียง 130 Nm ส่งผลให้แรงขับที่ล้อตกลงเหลือ 3,330 นิวตัน ในขณะที่ <strong>แรงต้านอากาศ (Aerodynamic Drag)</strong> พุ่งสูงขึ้นอย่างก้าวกระโดดตามความเร็ว (แทนด้วยตัวแปร v) โดยเมื่อความเร็วเพิ่มขึ้นเป็นสองเท่า แรงต้านลมจะทวีคูณขึ้นถึงสี่เท่า จนกลืนกินแรงขับไปถึง 1,900 นิวตัน แรงขับสุทธิที่เหลือไว้ใช้เร่งแซงจึงเหลือน้อยมาก ทำให้คนขับรู้สึกว่าอัตราเร่งช่วงความเร็วปลายนั้นแผ่วลง หรือ <em>&quot;ปลายเหี่ยว&quot;</em> นั่นเอง
-          </p>
-        </section>
-
-        {/* SECTION 4: 2-SPEED GEARBOX (PORSCHE TAYCAN CASE STUDY) */}
-        <section>
-          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
-            <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            4. กรณีศึกษา: ระบบเกียร์ 2 สปีดใน Porsche Taycan ทำงานอย่างไร?
-          </h2>
-          <p>
-            เพื่อแก้ปัญหาแรงบิดตกที่ย่านความเร็วสูง วิศวกรของ Porsche จึงได้พัฒนา <strong>ระบบเกียร์อัตโนมัติ 2 สปีดแบบ Planetary Gearbox</strong> ติดตั้งที่เพลาล้อหลังของ <strong>Porsche Taycan</strong> และ <strong>Audi e-tron GT</strong>:
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose my-8">
-            <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
-              <div className="text-xs font-bold text-slate-500 uppercase">เกียร์ 1 (1st Gear - Ratio ~15.5:1)</div>
-              <h3 className="text-lg font-black text-slate-900 my-1">อัตราทดจัด สำหรับออกตัว</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                สร้างแรงขับที่ล้อหลังมหาศาลเกิน <strong>13,000 นิวตัน</strong> ในโหมด Launch Control ช่วยให้ตัวถังหนัก 2.3 ตัน พุ่งทะยานจาก 0-100 กม./ชม. ได้ในเวลาเพียง <strong>2.4 – 2.8 วินาที</strong>
-              </p>
-            </div>
-
-            <div className="bg-lime-50 border border-lime-300 p-6 rounded-2xl">
-              <div className="text-xs font-bold text-lime-700 uppercase">เกียร์ 2 (2nd Gear - Ratio ~8.05:1)</div>
-              <h3 className="text-lg font-black text-slate-900 my-1">อัตราทดต่ำ สำหรับความเร็วสูง</h3>
-              <p className="text-xs text-slate-700 leading-relaxed">
-                ระบบจะสั่งสลับเข้าเกียร์ 2 ที่ความเร็วประมาณ 90-100 กม./ชม. ช่วย <strong>ดึงรอบมอเตอร์ลงมาอยู่ในโซน Constant Power</strong> ทำให้มีแรงบิดเหลือเฟือในการเร่งแซง 140-260 กม./ชม. ได้อย่างต่อเนื่อง
-              </p>
-            </div>
-          </div>
-
-          <p>
-            <strong>ทำไม Tesla และ BYD ถึงไม่ใช้เกียร์ 2 สปีด?</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>น้ำหนักและความซับซ้อน:</strong> ชุดเกียร์ 2 สปีดพร้อมคลัตช์ไฮดรอลิกเพิ่มน้ำหนักตัวรถอีกประมาณ 30 – 50 กก. และมีชิ้นส่วนสึกหรอที่ต้องบำรุงรักษา
-            </li>
-            <li>
-              <strong>การสูญเสียทางกล (Parasitic Drag):</strong> เกียร์ทดเดี่ยวมีประสิทธิภาพสูงถึง 97-98% ในขณะที่เกียร์ 2 สปีดมีแรงเสียดทานของคลัตช์ ทำให้กินพลังงานแบตเตอรี่มากกว่าที่ความเร็วต่ำ
-            </li>
-            <li>
-              <strong>มอเตอร์รอบจัดยุคใหม่:</strong> มอเตอร์อย่าง Tesla Model 3 Performance หรือ BYD e-Platform 3.0 สามารถหมุนได้ถึง <strong>18,000 – 21,000 RPM</strong> ซึ่งเพียงพอที่จะทำความเร็วแตะ 250 กม./ชม. ด้วยเกียร์ทดเดี่ยว
-            </li>
-          </ul>
-        </section>
-
-        {/* SECTION 5: THERMAL DERATING & COOLING */}
-        <section>
-          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
-            <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            5. การระบายความร้อน Hairpin Winding และ Thermal Derating
-          </h2>
-          <p>
-            อีกหนึ่งปัจจัยที่ทำให้รถ EV สูญเสียพละกำลังเมื่อขับขี่ด้วยความเร็วสูงต่อเนื่อง คือ <strong>ความร้อนสะสมในมอเตอร์ไฟฟ้า</strong>:
-          </p>
-
-          <div className="my-8 not-prose bg-slate-900 text-white p-6 sm:p-8 rounded-3xl">
-            <h3 className="text-lg font-extrabold text-slate-900 mb-4 flex items-center gap-2">
-              <Flame className="w-5 h-5" /> นวัตกรรมการจัดการความร้อนของมอเตอร์ไฟฟ้าสมัยใหม่
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300">
-              <div className="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
-                <span className="font-bold text-white block mb-1">ขดลวดแบน Hairpin Winding</span>
-                แทนที่ขดลวดกลมแบบเดิม เพิ่มพื้นที่หน้าตัดทองแดง (Slot Fill Factor) จาก 45% เป็น &gt; 70% ลดความต้านทานไฟฟ้าและลดความร้อนสะสมลง 25%
-              </div>
-
-              <div className="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
-                <span className="font-bold text-white block mb-1">การระบายความร้อนด้วยน้ำมันตรง (Direct Oil Cooling)</span>
-                ฉีดน้ำมันไดอิเล็กทริกเข้าสัมผัสกับหัวขดลวดและแกนโรเตอร์โดยตรง ระบายความร้อนได้ไวกว่าการหล่อเย็นด้วยเสื้อน้ำภายนอก (Water Jacket) ถึง 3 เท่า
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 6: HIGHWAY DRIVING & POWER MANAGEMENT TIPS */}
-        <section>
-          <h2 className="text-lg sm:text-xl font-bold flex items-center gap-3 text-slate-900">
-            <span className="w-2 h-7 bg-lime-500 rounded-full inline-block"></span>
-            6. คำแนะนำสำหรับผู้ใช้รถ: ขับทางไกลอย่างไรให้ได้ทั้งสมรรถนะและระยะทาง
-          </h2>
-
-          <div className="space-y-4 not-prose my-8">
-            <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">1</div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm">ช่วงความเร็วที่สมดุลที่สุดบนมอเตอร์เวย์</h3>
-                <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  การขับขี่ที่ความเร็ว 110 – 120 กม./ชม. มอเตอร์จะหมุนที่ประมาณ 9,000 – 10,000 RPM ซึ่งยังอยู่ในโซนประสิทธิภาพสูงสุด (Efficiency &gt; 92%) และไม่สูญเสียพลังงานให้แรงต้านอากาศมากเกินไป
-                </p>
-              </div>
-            </div>
-
-            <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">2</div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm">การเร่งแซงจังหวะสั้น (Punch &amp; Coast)</h3>
-                <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  ใช้ประโยชน์จากแรงบิดฉับพลันกดแซงให้พ้นอย่างรวดเร็ว แล้วผ่อนคันเร่งกลับมารักษาความเร็วเดินทางปกติ จะช่วยประหยัดแบตเตอรี่ได้ดีกว่าการแช่ความเร็วสูงเป็นเวลานาน
-                </p>
-              </div>
-            </div>
-
-            <div className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-start gap-4">
-              <div className="w-8 h-8 rounded-full bg-lime-500 text-black flex items-center justify-center font-bold text-sm shrink-0">3</div>
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm">การเลือกยางที่มีค่าต้านทานการกลิ้งต่ำ (Low RRC)</h3>
-                <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  ยาง EV เฉพาะทางจะออกแบบคอมปาวด์ให้ลดแรงเสียดทานการหมุน แต่รักษาหน้าสัมผัสเกาะถนน ช่วยเพิ่มระยะทางวิ่งต่อการชาร์จได้อีก 5 – 8%
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 7: EVSELECT ACCESSORIES RECOMMENDATIONS */}
-        <section className="my-12 not-prose">
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-72 h-72 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div className="relative z-10">
-              <div className="flex items-center gap-2 text-lime-400 text-xs font-bold uppercase tracking-wider mb-2">
-                <Sparkles className="w-4 h-4" /> PRE-LAUNCH • ยังไม่เปิดจำหน่าย
-              </div>
-              <h3 className="text-lg sm:text-xl font-black text-white mb-3">
-                หมวดอุปกรณ์ที่ EVSELECT กำลังศึกษา
-              </h3>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mb-6">
-                ตัวอย่างหมวดที่อยู่ระหว่างรวบรวมข้อมูล สินค้ายังไม่เปิดจำหน่ายและรายละเอียดอาจเปลี่ยนแปลงก่อนเปิดตัว:
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="bg-slate-800/90 border border-slate-700/80 p-4 rounded-2xl">
-                  <h4 className="font-extrabold text-slate-900 text-sm mb-1">ล้อฟอร์จน้ำหนักเบา (Forged Wheels)</h4>
-                  <p className="text-[11px] text-slate-300 leading-relaxed">
-                    ลดน้ำหนักมวลใต้สปริง (Unsprung Mass) ล้อละ 3-4 กก. ช่วยให้ออกตัวไวยิ่งขึ้นและประหยัดพลังงาน
-                  </p>
-                </div>
-
-                <div className="bg-slate-800/90 border border-slate-700/80 p-4 rounded-2xl">
-                  <h4 className="font-extrabold text-slate-900 text-sm mb-1">เซ็นเซอร์วัดลมยาง TPMS ไร้สาย</h4>
-                  <p className="text-[11px] text-slate-300 leading-relaxed">
-                    ตรวจสอบแรงดันและอุณหภูมิยางแบบ Real-time ป้องกันยางระเบิดจากความร้อนสะสมเมื่อขับขี่ความเร็วสูง
-                  </p>
-                </div>
-
-                <div className="bg-slate-800/90 border border-slate-700/80 p-4 rounded-2xl">
-                  <h4 className="font-extrabold text-slate-900 text-sm mb-1">แผ่นกันกระแทกแบตเตอรี่ใต้ท้อง</h4>
-                  <p className="text-[11px] text-slate-300 leading-relaxed">
-                    อะลูมิเนียมเกรดอากาศยาน 5 มม. ปกป้องโครงสร้างแบตเตอรี่และระบบหล่อเย็นจากเศษหินและสิ่งกีดขวาง
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
-                <span className="text-xs text-slate-400">
-                  บอกรุ่นรถและสิ่งที่คุณอยากให้เราเตรียมข้อมูลก่อนเปิดตัว
-                </span>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-xs px-5 py-2.5 rounded-xl transition-all shadow-md"
-                >
-                  <span>บอกรุ่นรถที่คุณใช้</span>
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-
-      {/* 7. Article Footer Navigation */}
-      <footer className="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <Link
-          href="/articles/hybrid-to-ev-chassis-dynamics-transition"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-lime-600 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>บทความก่อนหน้า: Hybrid สู่ Full EV</span>
-        </Link>
-
-        <div className="flex items-center gap-3">
-          <Link
-            href="/articles"
-            className="inline-flex items-center gap-2 text-sm font-semibold bg-slate-100 hover:bg-lime-50 hover:text-lime-700 text-slate-800 px-4 py-2 rounded-xl border border-slate-200 transition-all"
-          >
-            <span>กลับสู่หน้ารวมบทความทั้งหมด</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </footer>
-    </article>
-  );
+        <p>อีกด้านหนึ่ง <Source to="drag">สมการแรงต้านอากาศของ NASA</Source> ให้แรงต้านแปรตามความเร็วสัมพัทธ์กับอากาศยกกำลังสอง เมื่อปัจจัยอื่นคงเดิมและไม่มีลม ความเร็วเพิ่มเป็นสองเท่าจะทำให้แรงต้านส่วนนี้เพิ่มเป็นสี่เท่า และกำลังที่ใช้ต้านอากาศเพิ่มเป็นแปดเท่า</p>
+        <p>ตัวคูณข้างต้นใช้กับแรงต้านอากาศและกำลังส่วนที่ต้านอากาศเท่านั้น ไม่ได้หมายความว่าการใช้ไฟรวมของรถเพิ่มแปดเท่าเสมอ เพราะยังมีการสูญเสียและการใช้พลังงานส่วนอื่น น้ำหนักบรรทุก ลม และทางชันก็เปลี่ยนผลได้</p>
+        <p>ดังนั้น “เร่งต่อได้น้อยลง” อาจเกิดได้แม้กำลังยังไม่ลด ไม่ควรสรุปจากความรู้สึกเพียงอย่างเดียวว่ามอเตอร์กำลังถูกตัดเพราะร้อน</p>
+      </Section>
+      <Section id="two-speed" title="5. เกียร์เดี่ยวกับเกียร์สองสปีด เลือกคนละจุดสมดุล">
+        <p>อัตราทดเดียวทำให้มอเตอร์กับล้อมีความสัมพันธ์ตายตัว จึงต้องเลือกให้ครอบคลุมการออกตัวและช่วงความเร็วที่ต้องการ ส่วนการมีอีกอัตราทดเพิ่มทางเลือกให้ใช้ช่วงรอบมอเตอร์ต่างกันได้ แต่ผลลัพธ์ต้องดูทั้งชุดขับเคลื่อน</p>
+        <p>ตัวอย่างใน <Source to="taycan">เอกสาร Taycan รุ่นเปิดตัวปี 2019 ของ Porsche</Source> ใช้เกียร์สองสปีดที่เพลาหลัง: เกียร์แรกมีอัตราทดจัดเพื่อการออกตัว ส่วนเกียร์สองยาวกว่าเพื่อประสิทธิภาพและกำลังสำรองที่ความเร็วสูง ตัวอย่างนี้อธิบายแนวคิด ไม่ได้ใช้ยืนยันสเปก Taycan ทุกรุ่นปีปัจจุบัน</p>
+        <p>จึงไม่ควรตัดสินว่ารถเกียร์เดี่ยว “แรงไม่สุด” หรือเกียร์สองสปีด “กินไฟกว่าเสมอ” จากจำนวนเกียร์ ถ้าต้องเลือกซื้อ ให้เทียบผลทดสอบของรถรุ่นจริงในช่วงความเร็วที่คุณใช้งาน พร้อมเงื่อนไขแบตเตอรี่และยาง</p>
+      </Section>
+      <Section id="compare-cars" title="6. ก่อนเทียบรถสองคัน เช็กให้ครบมากกว่า hp และ Nm">
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"><Image src="/images/editorial/tesla-model-3-performance-2024.png" alt="Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ" width={1280} height={640} sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" /><figcaption className="space-y-2 p-4 text-sm leading-relaxed"><p>ภาพ Model 3 Performance ปี 2024 ใช้ประกอบตัวอย่างรถสมรรถนะสูง ตัวเลขคำนวณ A/B และตาราง 100 kW ในบทความไม่ใช่ผลทดสอบของรถในภาพ</p><ImageCredit author="iMoD Official" source="https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png" license="CC BY 3.0" licenseUrl="https://creativecommons.org/licenses/by/3.0/" className="" /></figcaption></figure>
+        <ol className="list-decimal space-y-3 pl-6"><li><strong>รุ่น ปี และตลาดเดียวกันหรือไม่:</strong> ชื่อรุ่นคล้ายกันอาจมีระบบขับเคลื่อนและสเปกต่างกัน เริ่มเทียบจาก <Link href="/articles/tesla-model-3-highland-review" className={linkStyle}>ข้อมูล Model 3 สำหรับตลาดไทย</Link> และเอกสารของรถที่สนใจ</li><li><strong>ตัวเลขวัดตรงไหน:</strong> กำลังที่มอเตอร์ กำลังรวมระบบ และกำลังที่ล้อไม่ใช่ช่องเดียวกัน อย่าเทียบค่าจากคนละวิธีวัดแล้วสรุปผู้ชนะ</li><li><strong>เร่งช่วงไหน:</strong> 0–100 กม./ชม. วัดการออกตัวรวมกับการเร่ง แต่ผลเร่งแซงต้องดูช่วงความเร็วของการทดสอบนั้นโดยตรง</li><li><strong>รถอยู่ในเงื่อนไขไหน:</strong> ระดับแบตเตอรี่ อุณหภูมิ โหมดขับขี่ ยาง พื้นผิว และน้ำหนักบรรทุกต้องระบุให้พอเทียบกันได้</li></ol>
+        <p><Source to="status">คู่มือ Model 3 2024+ ภาษาไทย</Source> ระบุว่ารถอาจจำกัดกำลังเมื่อแบตเตอรี่เหลือน้อย ระบบร้อนหรือเย็น หรือพบความผิดปกติของอินเวอร์เตอร์ ส่วน <Source to="modes">โหมดการเร่งความเร็ว</Source> ก็เปลี่ยนการตอบสนองและการจัดการอุณหภูมิได้ จึงต้องแยก “อัตราเร่งตามเงื่อนไขรถ” ออกจาก “ตัวเลขสูงสุดในโบรชัวร์”</p>
+        <p>หลังจากเข้าใจสเปกแล้ว ถ้าปัญหาที่คุณเจอคือรถโยนหรือกระแทกหลังอัปเกรดล้อ ให้ต่อด้วย <Link href="/articles/ev-suspension-tuning-guide" className={linkStyle}>วิธีไล่อาการช่วงล่างก่อนเปลี่ยนโช้ค</Link> แรงม้าเพิ่มไม่ได้แปลว่าต้องใช้สปริงแข็งขึ้นตามสัดส่วน และจำนวนคลิกของโช้คก็ไม่ได้บอกความสามารถรองรับแรงม้า</p>
+      </Section>
+      <Section id="questions" title="คำถามที่เจอบ่อย">
+        <div className="space-y-4">{[
+          ['แรงบิดสูงกว่า แปลว่าออกตัวเร็วกว่าเสมอไหม?', 'ไม่เสมอ ต้องดูอัตราทด แรงขับที่ล้อ น้ำหนักรถ ยาง และระบบควบคุมร่วมกัน ตัวเลขแรงบิดสูงสุดที่มอเตอร์เพียงค่าเดียวไม่พอจัดอันดับอัตราเร่ง'],
+          ['มอเตอร์มีแรงบิดตอน 0 rpm แล้วทำไมกำลังเป็นศูนย์?', 'กำลังกลจากการหมุนเท่ากับแรงบิดคูณความเร็วเชิงมุม ที่เพลายังไม่หมุน กำลังกลจึงเป็นศูนย์แม้มีแรงบิดอยู่ แต่ระบบยังอาจใช้ไฟและเกิดความร้อนได้'],
+          ['Field Weakening แปลว่ารถเสียหรือแบตเตอรี่เสื่อมหรือไม่?', 'ไม่ใช่ เป็นวิธีควบคุมมอเตอร์เพื่อขยายช่วงรอบภายใต้ข้อจำกัดแรงดัน ต้องดูข้อความเตือนและข้อมูลของรถประกอบ ไม่วินิจฉัยความเสียหายจากคำนี้หรือจากความรู้สึกว่าเร่งแผ่วเพียงอย่างเดียว'],
+          ['จะรู้ได้อย่างไรว่าคันไหนเร่งแซงดีกว่า?', 'ดูผลทดสอบช่วงความเร็วที่สนใจของรุ่นย่อยจริง พร้อมระดับแบตเตอรี่ อุณหภูมิ โหมดขับขี่และเงื่อนไขทดสอบ หากข้อมูลไม่ตรงกัน ให้ถือว่ายังเปรียบเทียบไม่ได้ แทนการใช้แรงม้าสูงสุดฟันธง'],
+        ].map(([question, answer]) => <details key={question} className="rounded-2xl border border-slate-200 p-5"><summary className="cursor-pointer text-lg font-semibold text-slate-950"><h3 className="inline text-lg font-semibold">{question}</h3></summary><p className="mt-3">{answer}</p></details>)}</div>
+      </Section>
+      <Section id="sources" title="แหล่งข้อมูลและขอบเขตของบทความ">
+        <p className="text-base">ตรวจแหล่งข้อมูลวันที่ 21 กันยายน 2569 บทความแยกหลักฟิสิกส์ ตัวอย่างคำนวณสมมติ และข้อมูลผู้ผลิตออกจากกัน ไม่มีการอ้างว่าเราไดโน่หรือจับเวลารถเหล่านี้เอง รายละเอียดและซอฟต์แวร์ของรถจริงอาจต่างกัน ให้ยึดเอกสารตรงรุ่นและตลาด</p>
+        <ul className="list-disc space-y-3 pl-5 text-base">{Object.entries(sources).map(([key, source]) => <li key={key}><Source to={key as keyof typeof sources}>{source.title}</Source></li>)}</ul>
+        <p className="text-base">อ่านวิธีแยกข้อมูลผู้ผลิตออกจากข้อสังเกตใน <Link href="/editorial-policy" className={linkStyle}>แนวทางการเขียนบทความ</Link> ของ <BrandHomeLink /></p>
+      </Section>
+    </div>
+    <footer className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6 text-base"><p><BrandHomeLink /> · เข้าใจรถให้ลึก เลือกให้ตรงใจ</p><Link href="/articles" className={`inline-flex min-h-11 items-center gap-2 ${linkStyle}`}>เลือกอ่านบทความต่อ <ArrowRight size={18} aria-hidden="true" /></Link></footer>
+  </article>;
 }

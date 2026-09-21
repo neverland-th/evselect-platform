@@ -1386,7 +1386,7 @@
         },
         {
           "href": "/articles/ev-horsepower-vs-torque-explained",
-          "text": "ระบบช่วงล่าง8 นาทีระบบช่วงล่างและสมรรถนะ",
+          "text": "ระบบช่วงล่างคู่มือฉบับเต็มระบบช่วงล่างและสมรรถนะ",
           "scope": [
             "html",
             "body",
@@ -1403,7 +1403,7 @@
         },
         {
           "href": "/articles/ev-horsepower-vs-torque-explained",
-          "text": "แรงม้า vs แรงบิดในรถยนต์ไฟฟ้า (EV Power Band): ทำไมแรงบิดมหาศาลที่ 0 RPM ถึงเปลี่ยนพฤติกรรมช่วงล่าง?",
+          "text": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า?",
           "scope": [
             "html",
             "body",
@@ -8713,8 +8713,39 @@
       "route": "/articles/ev-horsepower-vs-torque-explained",
       "mainInternalLinks": [
         {
-          "href": "/contact",
-          "text": "บอกรุ่นรถที่คุณใช้",
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "วิธีเลือกยางให้ตรงน้ำหนักรถและการใช้งาน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
           "scope": [
             "html",
             "body",
@@ -8724,29 +8755,79 @@
             "div",
             "section",
             "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles/hybrid-to-ev-chassis-dynamics-transition",
-          "text": "บทความก่อนหน้า: Hybrid สู่ Full EV",
+          "href": "/articles/tesla-model-3-highland-review",
+          "text": "ข้อมูล Model 3 สำหรับตลาดไทย",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "div",
+            "section",
+            "ol",
+            "li"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles",
-          "text": "กลับสู่หน้ารวมบทความทั้งหมด",
+          "href": "/articles/ev-suspension-tuning-guide",
+          "text": "วิธีไล่อาการช่วงล่างก่อนเปลี่ยนโช้ค",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/editorial-policy",
+          "text": "แนวทางการเขียนบทความ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
           "scope": [
             "html",
             "body",
@@ -8754,7 +8835,21 @@
             "main",
             "article",
             "footer",
-            "div"
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles",
+          "text": "เลือกอ่านบทความต่อ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "footer"
           ],
           "target": "",
           "rel": ""
@@ -8770,6 +8865,9 @@
             "div",
             "main",
             "article",
+            "header",
+            "figure",
+            "figcaption",
             "p"
           ],
           "target": "_blank",
@@ -8784,16 +8882,17 @@
             "div",
             "main",
             "article",
+            "header",
+            "figure",
+            "figcaption",
             "p"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"
-        }
-      ],
-      "unlinkedOrMisdirectedBrandText": [
+        },
         {
-          "text": "หมวดอุปกรณ์ที่ EVSELECT กำลังศึกษา",
-          "href": null,
+          "href": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion",
+          "text": "หลักกำลังของการหมุนใน OpenStax (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -8802,12 +8901,231 @@
             "article",
             "div",
             "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.mathworks.com/help/mcb/gs/field-weakening-control.html",
+          "text": "เอกสาร Field-Weakening Control ของ MathWorks (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
             "div",
+            "main",
+            "article",
             "div",
-            "h3"
-          ]
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+          "text": "สมการแรงต้านอากาศของ NASA (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://newsroom.porsche.com/en/products/taycan/powertrain-18555.html",
+          "text": "เอกสาร Taycan รุ่นเปิดตัวปี 2019 ของ Porsche (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official / Wikimedia Commons",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-80B80D48-E3A9-4857-864B-F4CC9B56FD7E.html",
+          "text": "คู่มือ Model 3 2024+ ภาษาไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-8EAFF5D8-7209-45ED-A7E0-508FFA60C530.html",
+          "text": "โหมดการเร่งความเร็ว (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion",
+          "text": "OpenStax: ความสัมพันธ์ระหว่างแรงบิด ความเร็วรอบ และกำลัง (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.mathworks.com/help/mcb/gs/field-weakening-control.html",
+          "text": "MathWorks: Field-Weakening Control และข้อจำกัดแรงบิด (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+          "text": "NASA Glenn: สมการแรงต้านอากาศ (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://newsroom.porsche.com/en/products/taycan/powertrain-18555.html",
+          "text": "Porsche Newsroom: ระบบส่งกำลัง Taycan รุ่นเปิดตัวปี 2019 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-80B80D48-E3A9-4857-864B-F4CC9B56FD7E.html",
+          "text": "Tesla Model 3 2024+ คู่มือไทย: สถานะรถและการจำกัดกำลัง (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/th_th/GUID-8EAFF5D8-7209-45ED-A7E0-508FFA60C530.html",
+          "text": "Tesla Model 3 2024+ คู่มือไทย: โหมดการเร่งความเร็ว (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
         }
       ],
+      "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],
       "nestedAnchorCount": 0
