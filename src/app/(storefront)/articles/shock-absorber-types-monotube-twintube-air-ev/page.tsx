@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import Image from 'next/image';
 import { ImageCredit } from '@/components/ImageCredit';
 import {
@@ -598,7 +599,7 @@ export default function ShockAbsorberTypesGuidePage() {
             EV
           </div>
           <div>
-            <div className="text-xs font-bold text-slate-900">EVSELECT Hardware &amp; Fitment Engineering</div>
+            <div className="text-xs font-bold text-slate-900"><BrandHomeLink /> Hardware &amp; Fitment Engineering</div>
             <div className="text-[11px] text-slate-500">บทความเจาะลึกมาตรฐานวิศวกรรมช่วงล่าง Racecar Engineering</div>
           </div>
         </div>

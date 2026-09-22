@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import Image from 'next/image';
 import { ImageCredit } from '@/components/ImageCredit';
 import {
@@ -290,7 +291,7 @@ export default function EVCamberAdjustmentGuidePage() {
           <div className="bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl overflow-hidden">
             <div className="text-center mb-6">
               <span className="text-xs font-extrabold text-slate-900 uppercase tracking-widest bg-lime-500/10 border border-lime-500/20 px-3 py-1 rounded-full">
-                EVSELECT Engineering Vector Simulation
+                <BrandHomeLink /> Engineering Vector Simulation
               </span>
               <h3 className="text-lg sm:text-xl font-black text-white mt-2 mb-1">
                 Tyre Contact Patch Deformation &amp; Pressure Distribution Under 1.0g Lateral Load
@@ -396,7 +397,7 @@ export default function EVCamberAdjustmentGuidePage() {
                 <span className="text-slate-900 font-bold">สรุปผลการทดสอบ:</span> แคมเบอร์ลบที่ถูกต้องจะเปลี่ยนเป็น <strong>0.0° สัมพันธ์กับพื้นถนน (Effective Dynamic Zero)</strong> เมื่อตัวถังเอียงตัวในโค้ง
               </div>
               <div className="text-slate-500 font-mono">
-                Source: EVSELECT Kinematics Simulation Laboratory
+                Source: <BrandHomeLink /> Kinematics Simulation Laboratory
               </div>
             </div>
           </div>
@@ -592,7 +593,7 @@ export default function EVCamberAdjustmentGuidePage() {
           <div className="flex items-center gap-3">
             <div className="w-2.5 h-8 bg-lime-500 rounded-full" />
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight m-0">
-              6. อุปกรณ์เสริมและชิ้นส่วนปรับตั้งแคมเบอร์ตรงรุ่น EVSELECT
+              6. อุปกรณ์เสริมและชิ้นส่วนปรับตั้งแคมเบอร์ตรงรุ่น <BrandHomeLink />
             </h2>
           </div>
 
@@ -638,7 +639,7 @@ export default function EVCamberAdjustmentGuidePage() {
             EV
           </div>
           <div>
-            <div className="text-xs font-bold text-slate-900">EVSELECT Editorial &amp; Engineering</div>
+            <div className="text-xs font-bold text-slate-900"><BrandHomeLink /> Editorial &amp; Engineering</div>
             <div className="text-[11px] text-slate-500">เผยแพร่ภายใต้มาตรฐานวิศวกรรมยานยนต์ OptimumG</div>
           </div>
         </div>

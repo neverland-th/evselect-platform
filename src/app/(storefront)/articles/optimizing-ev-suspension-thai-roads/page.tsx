@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import Image from 'next/image';
 import { ImageCredit } from '@/components/ImageCredit';
 import type { Metadata } from 'next';
@@ -102,7 +103,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
           </div>
 
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Technical Level</span>
+            <span className="text-xs text-slate-600 font-medium"><BrandHomeLink /> Technical Level</span>
             <span className="text-sm font-black text-lime-700">Expert / Advanced</span>
           </div>
         </div>
@@ -147,7 +148,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-800 pb-6 md:pb-0 md:pr-6">
             <div className="text-xs uppercase tracking-wider text-slate-400 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-400" /> EVSELECT Suspension Golden Rules
+              <Award className="w-4 h-4 text-lime-400" /> <BrandHomeLink /> Suspension Golden Rules
             </div>
             <div className="text-3xl font-black text-lime-400 flex items-baseline gap-2">
               4 กฎทอง <span className="text-sm font-normal text-slate-400">ช่วงล่าง EV เมืองไทย</span>
@@ -934,7 +935,7 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/20 border border-lime-500/40 text-lime-400 text-xs font-bold rounded-full">
-              <Sparkles className="w-3.5 h-3.5" /> EVSELECT Suspension &amp; Fitment Hub
+              <Sparkles className="w-3.5 h-3.5" /> <BrandHomeLink /> Suspension &amp; Fitment Hub
             </div>
             <h3 className="text-lg sm:text-xl font-black text-white">
               เรียนรู้เรื่องช่วงล่าง สตรัทปรับเกลียว และยางก่อนเลือก
@@ -961,9 +962,9 @@ export default function OptimizingEVSuspensionThaiRoadsPage() {
           className="inline-flex items-center gap-1.5 text-slate-600 hover:text-lime-600 font-semibold transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          กลับสู่หน้ารวมบทความ EVSELECT
+          กลับสู่หน้ารวมบทความ EV
         </Link>
-        <span>© 2026 EVSELECT. สงวนลิขสิทธิ์บทความวิชาการเชิงวิศวกรรมยานยนต์</span>
+        <span>© 2026 <BrandHomeLink />. สงวนลิขสิทธิ์บทความวิชาการเชิงวิศวกรรมยานยนต์</span>
       </footer>
     </article>
   );

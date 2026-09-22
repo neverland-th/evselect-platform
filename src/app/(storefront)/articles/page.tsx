@@ -1,9 +1,11 @@
 import { teslaModel3 } from '@/lib/tesla-model-3';
 import Link from 'next/link';
 import Image from 'next/image';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import { damperArticle } from '@/lib/damper-article';
 import { brakeArticle } from '@/lib/brake-article';
 import { powertrainArticle } from '@/lib/powertrain-article';
+import { batteryArticle } from '@/lib/battery-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -21,7 +23,7 @@ import {
 export const metadata = {
   alternates: { canonical: '/articles' },
   title: 'บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT',
-  description: 'ศูนย์รวมบทความรีวิวรถยนต์ไฟฟ้า EV สเปกไทย ทดสอบอัตราเร่ง 0-100 ระยะทางวิ่งจริง แบตเตอรี่ ช่วงล่าง พร้อมเทคนิคการดูแลรักษาและอุปกรณ์เสริมตรงรุ่น',
+  description: 'รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ',
 };
 
 export interface ArticleItem {
@@ -66,11 +68,12 @@ const ALL_ARTICLES: ArticleItem[] = [
     categorySlug: 'suspension',
     segment: 'tuning',
     segmentName: 'Brake Upgrade',
-    image: '/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg',
-    imageAlt: 'ภาพถ่ายเบรก Porsche PCCB คาลิเปอร์เหลืองทองและจาน Carbon Ceramic หลังล้อ Center Lock',
-    heroImage: '/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg',
+    image: brakeArticle.cover,
+    imageAlt: brakeArticle.coverAlt,
+    imageFit: 'contain',
+    heroImage: brakeArticle.cover,
     date: brakeArticle.updatedAt,
-    dateDisplay: '19 ก.ย. 2569',
+    dateDisplay: '22 ก.ย. 2569',
     readTime: brakeArticle.readTime,
     rating: null,
     priceRange: 'เลือกตามงานและงบจริง',
@@ -351,26 +354,29 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'ev-battery-care',
-    title: '5 วิธีดูแลแบตเตอรี่รถ EV ให้เสื่อมช้าลง และใช้ได้นานเกิน 10 ปี',
+    title: batteryArticle.title,
     shortTitle: 'คู่มือดูแลแบตเตอรี่ EV',
-    excerpt: 'เรียนรู้เทคนิคการชาร์จที่ถูกต้อง การตั้งค่า Limit การชาร์จ (80% vs 100%) และพฤติกรรมที่ควรหลีกเลี่ยงเพื่อยืดอายุแบตเตอรี่รถยนต์ไฟฟ้าของคุณให้ใช้งานได้ยาวนานสูงสุด',
+    excerpt: batteryArticle.description,
     category: 'คู่มือและเทคนิค',
     categorySlug: 'guides',
     segment: 'guide',
     segmentName: 'คู่มือการใช้งาน & เทคนิคการชาร์จ',
-    image: '/images/hero-bg.jpg',
-    date: '2026-08-25',
-    dateDisplay: '25 ส.ค. 2569',
-    readTime: '4 นาที',
+    image: batteryArticle.image,
+    imageAlt: batteryArticle.imageAlt,
+    imageFit: 'contain',
+    date: batteryArticle.updatedAt,
+    publishedAt: batteryArticle.publishedAt,
+    dateDisplay: '22 ก.ย. 2569',
+    readTime: batteryArticle.readTime,
     rating: null,
     ratingText: 'คู่มือแนะนำ',
     priceRange: 'อ่านฟรี',
-    highlights: ['กฎการชาร์จ 20-80%', 'LFP vs NMC Chemistry', 'ตั้งเวลาชาร์จ TOU', 'ป้องกันแบตเตอรี่เสื่อม'],
+    highlights: ['ตั้งขีดจำกัดชาร์จตามรถคันจริง', 'แยกระยะวิ่งออกจากสุขภาพแบตเตอรี่', 'เตรียมรถก่อนจอดนาน', 'ตัวอย่างจากคู่มือผู้ผลิต'],
     featured: false,
       brand: 'EV',
     badge: 'Thailand focus model',
     accessoryOpportunity: 'พรม TPE, ถาดคอนโซล, กันรอยชายประตู',
-    fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
+    fitmentGate: 'ตรวจคู่มือและเมนูชาร์จให้ตรงรุ่น ปี และรุ่นย่อย',
   },
   {
     slug: 'ev-performance-driving-techniques',
@@ -990,14 +996,14 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
       )}
 
       {/* 4. Section Heading for Grid */}
-      <div className="flex items-center justify-between mb-6 pb-3 border-b border-slate-200">
-        <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+      <div className="mb-6 flex flex-col items-start justify-between gap-2 border-b border-slate-200 pb-3 sm:flex-row sm:items-center sm:gap-4">
+        <h2 className="min-w-0 text-lg font-bold text-slate-900 sm:text-xl">
           {activeCategory === 'suspension' ? (
-            <SlidersHorizontal className="w-5 h-5 text-lime-600" />
+            <SlidersHorizontal className="mr-2 inline-block h-5 w-5 align-middle text-lime-600" aria-hidden="true" />
           ) : activeCategory === 'guides' ? (
-            <BookOpen className="w-5 h-5 text-lime-600" />
+            <BookOpen className="mr-2 inline-block h-5 w-5 align-middle text-lime-600" aria-hidden="true" />
           ) : (
-            <Car className="w-5 h-5 text-lime-600" />
+            <Car className="mr-2 inline-block h-5 w-5 align-middle text-lime-600" aria-hidden="true" />
           )}
           <span>
             {activeCategory === 'reviews'
@@ -1008,7 +1014,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               ? 'บทความเทคนิคระบบช่วงล่างและแฮนด์ลิ่ง'
               : 'บทความและรีวิวทั้งหมด'}
           </span>
-          <span className="text-xs text-slate-500 font-normal">
+          <span className="ml-2 inline-block whitespace-nowrap text-xs font-normal text-slate-500">
             ({filteredArticles.length} บทความ)
           </span>
         </h2>
@@ -1016,7 +1022,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
         {(activeSegment !== 'all' || activeCategory !== 'all') && (
           <Link
             href="/articles"
-            className="text-xs text-lime-600 hover:underline font-medium"
+            className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap text-xs font-medium text-lime-700 hover:underline"
           >
             ล้างตัวกรอง
           </Link>
@@ -1107,8 +1113,10 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
+                  {article.slug === 'ev-battery-care' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพแชสซี Volkswagen ID.3: <a href={batteryArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={batteryArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดสำหรับเว็บ</p>}
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
-                    <span className="text-slate-900">{article.brand || article.category}</span>
+                    <span className="text-slate-900">{article.brand === 'EVSELECT' ? <BrandHomeLink /> : article.brand === 'EVSELECT BUYER GUIDE' ? <><BrandHomeLink /> BUYER GUIDE</> : article.brand || article.category}</span>
                     <span aria-hidden="true">•</span>
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
@@ -1172,7 +1180,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed max-w-2xl font-normal">
-              อ่านรีวิวรถรุ่นที่สนใจ หรือส่งคำถามให้ทีม EVSELECT ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
+              อ่านรีวิวรถรุ่นที่สนใจ หรือส่งคำถามให้ทีม <BrandHomeLink /> ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
             </p>
             <div className="pt-2 flex flex-wrap gap-3 text-xs text-slate-700">
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> รุ่นรถและปีผลิต</span>
@@ -1193,7 +1201,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-semibold text-sm px-6 py-3 rounded-xl border border-slate-300 transition-all text-center w-full sm:w-auto lg:w-full shadow-xs"
             >
-              <span>ส่งคำถามให้ทีม EVSELECT</span>
+              <span>ส่งคำถามให้ทีมงาน</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

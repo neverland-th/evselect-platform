@@ -5,10 +5,16 @@ export const brakeArticle = {
   subtitle: 'เสน่ห์ของเบรกระดับซูเปอร์คาร์ และความคุ้มค่าบน EV ที่ขับทุกวัน',
   description: 'Carbon Ceramic คุ้มกับ EV คันโปรดแค่ไหน? ชวนดูทั้งฟีลเบรก ฝุ่น ความสวย และค่าดูแล เทียบกับตัวเลือก Brembo และ ENDLESS พร้อมประสบการณ์จากเจ้าของ Model 3 Performance Highland',
   publishedAt: '2026-09-02',
-  updatedAt: '2026-09-21',
+  updatedAt: '2026-09-22',
   readTime: '30 นาที',
-  cover: '/images/articles/porsche-pccb-carbon-ceramic-brakes.jpg',
-  coverAlt: 'ภาพถ่าย Porsche PCCB คาลิเปอร์เหลืองทองและจาน Carbon Ceramic หลังล้อ Center Lock',
+  cover: '/images/articles/pccb-carrera-s-dan-lindsay.jpg',
+  coverAlt: 'จาน Carbon Ceramic PCCB และคาลิเปอร์สีเหลืองบน Porsche Carrera S รุ่น 997 ขณะถอดล้อ',
+  coverWidth: 1280,
+  coverHeight: 852,
+  coverSource: 'https://commons.wikimedia.org/wiki/File:PCCB_Wiki_9949.jpg',
+  coverAuthor: 'Dan Lindsay (Edgy01)',
+  coverLicense: 'CC0 1.0',
+  coverLicenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
 };
 
 export const brakeSources = {
@@ -21,7 +27,7 @@ export const brakeSources = {
   apDealer: { title: 'AP Racing — รายชื่อ Distributor รวม Essex', url: 'https://apracing.com/find-a-dealer' },
   bremboKit: { title: 'Brembo / Race Technologies — GT | M 1N1.9076A2 380×34 mm', url: 'https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1' },
   bremboPartner: { title: 'Brembo — เอกสารที่ระบุ Race Technologies เป็น commercial partner', url: 'https://www.brembo.com/jp/ComunicatiStampa/2012/RaceReadybrakekits.pdf' },
-  porsche: { title: 'Porsche — PCCB explained และภาพปก', url: 'https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/' },
+  porsche: { title: 'Porsche — PCCB explained: เทคโนโลยีเบรกคาร์บอนเซรามิก', url: 'https://www.porsche.com/stories/innovation/porsche-ceramic-composite-brakes-pccb-explained/' },
   apUpgrade: { title: 'AP Racing — Disc Choice สำหรับชุดอัปเกรด', url: 'https://apracing.com/performance-upgrades/factory-big-brake-kits/disc-choice' },
   apRace: { title: 'AP Racing — Disc Choice สำหรับรถแข่ง', url: 'https://apracing.com/race-car/brake-discs/disc-choice' },
   apTemp: { title: 'AP Racing — Disc Temperatures: เนื้อจาน ผิวจาน และการวัด', url: 'https://apracing.com/race-car/brake-discs/disc-temperatures' },

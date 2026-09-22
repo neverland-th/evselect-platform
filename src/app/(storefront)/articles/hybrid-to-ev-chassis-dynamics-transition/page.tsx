@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ImageCredit } from '@/components/ImageCredit';
 import Link from 'next/link';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import type { Metadata } from 'next';
 import {
   ArrowLeft,
@@ -673,7 +674,7 @@ export default function HybridToEVChassisDynamicsPage() {
                 <Sparkles className="w-4 h-4" /> PRE-LAUNCH • ยังไม่เปิดจำหน่าย
               </div>
               <h3 className="text-lg sm:text-xl font-black text-white mb-3">
-                หมวดอุปกรณ์ที่ EVSELECT กำลังศึกษา
+                หมวดอุปกรณ์ที่ <BrandHomeLink /> กำลังศึกษา
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mb-6">
                 ตัวอย่างหมวดที่อยู่ระหว่างรวบรวมข้อมูลสำหรับการใช้งานในไทย สินค้ายังไม่เปิดจำหน่าย:

@@ -40,6 +40,17 @@ The user requested a more premium real photograph. `public/images/articles/porsc
 - Local file: JPEG, 1308 × 818 pixels, 107,259 bytes; downloaded unchanged, no generated elements or retouching. SHA-256: `f02c0d1a40b38f9597b41d3da7397d566a9d1410c4abeb847d904bab810875e4`.
 - Rights: the Stories page credits Porsche but does not state an open reuse licence. Specific reuse permission for EVSELECT is unconfirmed. Do not label the image Creative Commons, public domain or permission obtained. Porsche Newsroom terms apply to Newsroom material and must not automatically be extended to this Stories asset.
 
+## Carbon Ceramic cover with an explicit reuse basis — 22 September 2026
+
+The local draft replaces the Porsche Stories cover above with a real PCCB photograph whose photographer published it under CC0. The older Stories asset remains on disk but is no longer referenced by the article, catalogue or social metadata; its reuse permission is still unconfirmed. This change is not a production deployment.
+
+- Local asset: `public/images/articles/pccb-carrera-s-dan-lindsay.jpg`, 1280 × 852 JPEG, 167,688 bytes. SHA-256: `37eb37356b505a1756c3763907143bef6c6fa5c1609901f0041939c601a1114a`.
+- Exact source: [PCCB Wiki 9949.jpg](https://commons.wikimedia.org/wiki/File:PCCB_Wiki_9949.jpg). Creator: Dan Lindsay (Edgy01), own work. The description identifies Porsche Ceramic Composite Brakes on a Porsche Carrera S (997); the original upload was 2 June 2011, while original metadata/log identifies the photo as 2009. No claim of a current Thai-market car is made.
+- Rights declaration: the file page explicitly identifies the copyright holder and [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Both pages were checked on 22 September 2026. Retain author/source/licence credit as useful provenance; do not imply manufacturer endorsement.
+- Downloaded unchanged from the linked Wikimedia 1280-pixel thumbnail: `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/PCCB_Wiki_9949.jpg/1280px-PCCB_Wiki_9949.jpg`. No generated content, retouching or extra crop.
+- Individually inspected the local photo: exposed drilled disc, yellow Porsche caliper, blue body/arch and visible suspension. It is a wheel-off technical photograph, not the former centre-lock wheel image and not a Tesla/ENDLESS kit. Article and card alt text/captions now identify that distinction.
+- The article uses the true image ratio; the catalogue uses `contain`. Article, catalogue and Open Graph/Twitter read the same shared cover data. Full final article/catalogue reader review is still required; the focused cover check is not a full publication pass.
+
 ## Model 3 article cover attribution — 21 September 2026
 
 - Existing local asset: `public/images/reviews/tesla-model-3-hero.jpg`, 1280 × 852. Inspected the photograph and its retained EXIF author, Alexander Migl; it depicts the red Highland at Autofrühling Ulm, not the older-model fallback named in the downloader.

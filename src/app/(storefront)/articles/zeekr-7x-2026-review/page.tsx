@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import BrandHomeLink from '@/components/BrandHomeLink';
 import type { Metadata } from 'next';
 import ShareButton from '@/components/ShareButton';
 import {
@@ -151,7 +152,7 @@ export default function Zeekr7XReviewPage() {
 
           {/* Header Score Pill */}
           <div className="flex items-center gap-2 bg-lime-50 border border-lime-300 px-4 py-1.5 rounded-full shadow-2xs">
-            <span className="text-xs text-slate-600 font-medium">EVSELECT Score</span>
+            <span className="text-xs text-slate-600 font-medium"><BrandHomeLink /> Score</span>
             <span className="text-base font-black text-lime-700">9.2</span>
             <span className="text-xs text-slate-400">/ 10</span>
           </div>
@@ -200,7 +201,7 @@ export default function Zeekr7XReviewPage() {
         <a href="https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
           JustAnotherCarDesigner / Wikimedia Commons
         </a>{' '}
-        (CC0 1.0) ภาพประกอบจากต่างประเทศ ไม่ใช่ภาพการทดสอบของ EVSELECT
+        (CC0 1.0) ภาพประกอบจากต่างประเทศ ไม่ใช่ภาพการทดสอบของ <BrandHomeLink />
       </p>
 
       {/* 4. Executive Verdict & Quick Facts Grid */}
@@ -208,7 +209,7 @@ export default function Zeekr7XReviewPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
             <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-lime-600" /> EVSELECT Verdict
+              <Award className="w-4 h-4 text-lime-600" /> <BrandHomeLink /> Verdict
             </div>
             <div className="text-4xl font-black text-slate-900 flex items-baseline gap-2">
               9.2 <span className="text-base font-normal text-slate-500">/ 10</span>
@@ -600,7 +601,7 @@ export default function Zeekr7XReviewPage() {
           {/* Performance Data Box */}
           <div className="not-prose bg-slate-900 text-white p-6 sm:p-7 rounded-2xl border border-slate-800 my-6 shadow-md">
             <div className="text-xs text-lime-400 font-extrabold uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (EVSELECT Real Test Data)
+              <Gauge className="w-4 h-4" /> ผลการทดสอบสมรรถนะจริงบนถนนเมืองไทย (<BrandHomeLink /> Real Test Data)
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
               <div className="border-r border-slate-800 pr-3">
@@ -975,7 +976,7 @@ export default function Zeekr7XReviewPage() {
           <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-bold text-lime-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Award className="w-4 h-4" /> EVSELECT Final Takeaway
+                <Award className="w-4 h-4" /> <BrandHomeLink /> Final Takeaway
               </div>
               <p className="text-xs sm:text-sm text-slate-200">
                 หากคุณกำลังมองหาพรีเมียมเอสยูวีไฟฟ้าระดับหรูที่คุ้มค่าและชาร์จเร็วที่สุดในไทย Zeekr 7X คือตัวเลือกอันดับหนึ่ง เลือกรุ่น <strong>Long Range RWD (1,599,000 ฿)</strong> เพื่อความคุ้มค่าลงตัว หรือ <strong>Performance AWD (1,799,000 ฿)</strong> สำหรับที่สุดแห่งสมรรถนะ
@@ -997,7 +998,7 @@ export default function Zeekr7XReviewPage() {
             <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <Scale className="w-5 h-5 text-lime-600" /> EVSELECT Rating Breakdown
+                  <Scale className="w-5 h-5 text-lime-600" /> <BrandHomeLink /> Rating Breakdown
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">การให้คะแนนตามมาตรฐานการทดสอบบนสภาพถนนประเทศไทย</p>
               </div>
