@@ -1,5 +1,15 @@
 # Editorial image provenance
 
+## MG4 MY2026 Thai photograph — 22 September 2026 draft
+
+- Local asset: `public/images/reviews/mg4-my2026-x-thailand-chanokchon.jpg`, Wikimedia 1280 × 720 JPEG thumbnail. SHA-256: `afd07de4f01999c9c27d7e765d92b585f99dfe232859ac5a06b88a6500804112`.
+- Exact creator page: [2026 MG 4 Electric X.jpg](https://commons.wikimedia.org/wiki/File:2026_MG_4_Electric_X.jpg). Chanokchon identifies own work, MG4 Electric X, Impact Challenger / Muang Thong Thani, Thailand, photographed 28 March 2026.
+- Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), declared by the photographer. Retain this licence for the image and resized derivatives; visible article/card credits link the creator page and licence. No endorsement is implied.
+- Download: `https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/2026_MG_4_Electric_X.jpg/1280px-2026_MG_4_Electric_X.jpg`. No retouching, generated content or additional crop. Article keeps the full ratio; catalogue uses `contain` within its established frame.
+- Individually viewed on disk and in the final desktop/mobile article and card: teal display car, complete front/side, wheels, event surroundings. The windscreen price belongs to the March display date; both captions explicitly distinguish it from a current offer. It is not an EVSELECT test vehicle.
+- Article, catalogue and social metadata share the asset through `src/lib/mg4-article.ts`. The previous `mg4-electric-hero.jpg` remains on disk; its provenance was not established here and its existence is not a reuse approval.
+- Final local reader evidence: `editorial/mg4-reader-review-2026-09-22.md`. Not deployed.
+
 The following article photographs are locally hosted so the catalog, article heroes, and social previews use the same asset. Both depict the named model, but neither was taken during EVSELECT testing. The article pages display this distinction beside the image.
 
 | Local file | Original photograph | Photographer | License |

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-22T00:25:20.841359+00:00",
+  "checkedAt": "2026-09-22T00:56:52.200783+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -355,7 +355,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว MG4 Electric สเปกไทย: รถยนต์ไฟฟ้าขับหลัง 50:50 ที่ขับมันส์ คม หนึบที่สุดในงบไม่เกินล้าน",
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
           "scope": [
             "main",
             "article"
@@ -3951,7 +3951,7 @@
         },
         {
           "level": 1,
-          "text": "รีวิว MG4 Electric สเปกไทย (Standard / Long Range / XPOWER): ขับหลัง 50:50 แฮทช์แบ็กไฟฟ้าที่ขับสนุกและคุ้มค่าที่สุดในงบไม่เกินล้าน",
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
           "scope": [
             "main",
             "article",
@@ -3960,7 +3960,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "text": "เริ่มจาก D แล้วให้เหตุผลการใช้งานพาไปถึง X",
           "scope": [
             "main",
             "article"
@@ -3968,7 +3968,23 @@
         },
         {
           "level": 2,
-          "text": "1. ภาพรวมและบริบทในตลาดรถยนต์ไฟฟ้าไทย",
+          "text": "สเปกที่ต่างกัน และเกี่ยวกับการใช้ทุกวัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "D Standard Range",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "X Long Range",
           "scope": [
             "main",
             "article"
@@ -3976,7 +3992,7 @@
         },
         {
           "level": 2,
-          "text": "2. ราคาจำหน่ายและตารางเปรียบเทียบ 3 ขุมพลังในไทย (Trim Breakdown)",
+          "text": "ราคาและการชาร์จ: อ่านเงื่อนไขคู่กับตัวเลข",
           "scope": [
             "main",
             "article"
@@ -3984,23 +4000,7 @@
         },
         {
           "level": 3,
-          "text": "MG4 Standard (D / X)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "MG4 Long Range (V)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "MG4 XPOWER AWD",
+          "text": "ตัวอย่างข้อเสนอที่มีวันสิ้นสุด",
           "scope": [
             "main",
             "article"
@@ -4008,7 +4008,7 @@
         },
         {
           "level": 2,
-          "text": "3. ดีไซน์ Energetic Agility, ไฟท้ายหงอนคู่ และมิติตัวถัง",
+          "text": "ขับหลังกับ 5 ลิงก์น่าสนใจ แต่ต้องลองกับชีวิตจริง",
           "scope": [
             "main",
             "article"
@@ -4016,23 +4016,7 @@
         },
         {
           "level": 2,
-          "text": "4. ห้องโดยสาร คอนโซลลอยตัว และการใช้งานในเมือง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "หน้าจอสัมผัสคู่ Dual Screen",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "พื้นที่เก็บสัมภาระท้าย Trunk",
+          "text": "เจอ Standard, Long Range V หรือ XPOWER ในประกาศ ต้องเช็กปีด้วย",
           "scope": [
             "main",
             "article"
@@ -4040,7 +4024,7 @@
         },
         {
           "level": 2,
-          "text": "5. สมรรถนะขุมพลัง ขับหลัง RWD vs XPOWER 435 แรงม้า",
+          "text": "ข้อมูลที่ใช้ และสิ่งที่เรายังไม่ได้ทดสอบ",
           "scope": [
             "main",
             "article"
@@ -4048,7 +4032,7 @@
         },
         {
           "level": 2,
-          "text": "6. เปรียบเทียบกับคู่แข่งในกลุ่มคอมแพกต์แฮทช์แบ็ก (Head-to-Head)",
+          "text": "ก่อนจอง ให้ได้คำตอบว่ารุ่นไหนเหมาะกับคุณ",
           "scope": [
             "main",
             "article"
@@ -4056,95 +4040,7 @@
         },
         {
           "level": 3,
-          "text": "เทียบกับ BYD Dolphin",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "เทียบกับ ORA Good Cat",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ความคุ้มค่าบนถนนไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "7. แบตเตอรี่ Rubik's Cube, การชาร์จ DC 140 kW และระยะทางจริง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ระบบความปลอดภัยและระบบช่วยเหลือการขับขี่ MG Pilot L2",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ MG4 Electric",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. จุดเด่น & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "EVSELECT Rating Breakdown",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "บทความและรีวิวที่เกี่ยวข้อง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว BYD Seal สเปกไทย 3 รุ่นย่อย: สปอร์ตซีดานไฟฟ้า 530 แรงม้า",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว BYD Atto 3 สเปกไทย: คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน?",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Tesla Model 3 Highland สเปกไทย ปรับปรุงใหม่ นุ่ม เงียบ พรีเมียมขึ้นแค่ไหน?",
+          "text": "อุปกรณ์เสริมของเราอยู่ระหว่างเตรียมเปิดตัว",
           "scope": [
             "main",
             "article"
@@ -5577,7 +5473,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว MG4 Electric สเปกไทย: รถยนต์ไฟฟ้าขับหลัง 50:50 ที่ขับมันส์ คม หนึบที่สุดในงบไม่เกินล้าน",
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
           "scope": [
             "main",
             "article"
@@ -5962,7 +5858,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว MG4 Electric สเปกไทย: รถยนต์ไฟฟ้าขับหลัง 50:50 ที่ขับมันส์ คม หนึบที่สุดในงบไม่เกินล้าน",
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
           "scope": [
             "main",
             "article"
@@ -6128,7 +6024,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว MG4 Electric สเปกไทย: รถยนต์ไฟฟ้าขับหลัง 50:50 ที่ขับมันส์ คม หนึบที่สุดในงบไม่เกินล้าน",
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
           "scope": [
             "main",
             "article"

@@ -1,5 +1,7 @@
 # Site link draft checkpoint — 22 September 2026
 
+**MG4 follow-up, 22 September:** `mg4-reader-review-2026-09-22.md` records the rewritten Thai MY2026 D/X guide, verified Thai photograph/licence, full final desktop/mobile reading and affected-card review. Removed unsupported test/score claims and separated current specifications from historical trims. Thirteen of the fourteen routes listed below still need complete reader review. The refreshed 31-route link / 42-view heading inventories remain clear; 73 image references and TypeScript pass. Full catalogue review, other source/rights issues, browser-dependent share checks and production release remain open.
+
 **Latest resolution, 22 September:** the full Carbon Ceramic desktop/mobile reading and all image/score/calculator checks are now recorded in `brake-full-reader-review-2026-09-22.md`. Restored the three still-referenced originals from the existing commit; all 72 referenced images now pass the verifier. Earlier missing-image and incomplete Carbon Ceramic-reading statements below are historical. The fourteen other changed routes, full catalogue review, remaining source/rights issues and production release are still outstanding.
 
 Local checkout: `releases/evselect-coilover-skyscraper-2026-09-19`, based on `c34ceac`. Not deployed.

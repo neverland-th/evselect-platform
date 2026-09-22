@@ -927,7 +927,7 @@
         },
         {
           "href": "/articles/mg4-electric-review",
-          "text": "รีวิวรถ EV8 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV6 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -944,7 +944,7 @@
         },
         {
           "href": "/articles/mg4-electric-review",
-          "text": "รีวิว MG4 Electric สเปกไทย: รถยนต์ไฟฟ้าขับหลัง 50:50 ที่ขับมันส์ คม หนึบที่สุดในงบไม่เกินล้าน",
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
           "scope": [
             "html",
             "body",
@@ -1858,6 +1858,46 @@
         }
       ],
       "mainExternalLinks": [
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2026_MG_4_Electric_X.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
         {
           "href": "https://commons.wikimedia.org/wiki/File:PCCB_Wiki_9949.jpg",
           "text": "Dan Lindsay (Edgy01) (เปิดแท็บใหม่)",
@@ -8886,7 +8926,6 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
@@ -8902,9 +8941,56 @@
             "main",
             "article",
             "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-battery-care",
+          "text": "การชาร์จและดูแลแบตเตอรี่ตามคู่มือรถ",
+          "scope": [
+            "html",
+            "body",
             "div",
+            "main",
+            "article",
             "div",
-            "div"
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "หลักเลือกยางและคอยล์โอเวอร์ให้ตรงน้ำหนักและงานของรถ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
           ],
           "target": "",
           "rel": ""
@@ -8921,151 +9007,21 @@
             "div",
             "section",
             "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ MG4 Electric",
+          "text": "บอกรุ่นรถและสิ่งที่กำลังหา",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "section",
             "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/#vehicle-finder",
-          "text": "ค้นหาตามรุ่นรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/byd-seal-review",
-          "text": "Performance EVEV Reviewรีวิว BYD Seal สเปกไทย 3 รุ่นย่อย: สปอร์ตซีดานไฟฟ้า 530 แรงม้าเจาะลึกสมรรถนะ 0-100 ใน 3.8 วิ แชสซี CTB เหนียวแน่น และโช้ค FSD",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/byd-atto-3-review",
-          "text": "Popular SUVEV Reviewรีวิว BYD Atto 3 สเปกไทย: คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน?เจาะลึกความนุ่มนวล ความกว้างขวาง และความคุ้มค่าหลังปรับลดราคาพิเศษ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/tesla-model-3-highland-review",
-          "text": "Electric SedanEV Reviewรีวิว Tesla Model 3 Highland สเปกไทย ปรับปรุงใหม่ นุ่ม เงียบ พรีเมียมขึ้นแค่ไหน?ทดสอบสมรรถนะและเปรียบเทียบจุดเด่นจุดด้อยบนถนนเมืองไทย",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
             "section",
             "div"
           ],
@@ -9074,20 +9030,173 @@
         },
         {
           "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
+          "text": "อ่านบทความ EV เรื่องอื่น",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "div",
+            "section",
+            "div"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2026_MG_4_Electric_X.jpg",
+          "text": "Chanokchon / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "figure",
+            "figcaption",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "figure",
+            "figcaption",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/fdebbe8eb59428ff636625b1d33fb7be.pdf",
+          "text": "ตารางสเปก MG4 MY2026 ประเทศไทย หน้า 2 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.mgcars.com/th/promotions/New-MG4-MY2026",
+          "text": "โปรโมชัน MG เดือนกันยายน 2569 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.mgcars.com/th/cars/mg4-my2026",
+          "text": "หน้ารุ่น MG4 MY2026 ของผู้ผลิต (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.mgcars.com/th/promotions/New-MG4-MY2026",
+          "text": "เงื่อนไขรายการที่อ้างอิง (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.mgcars.com/th/cars/mg4-my2026",
+          "text": "MG ประเทศไทย — MG4 MY2026 และคำอธิบายระบบของรถ (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/fdebbe8eb59428ff636625b1d33fb7be.pdf",
+          "text": "โบรชัวร์ผู้ผลิต — ตาราง D Standard Range / X Long Range หน้า 2 (PDF) (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.mgcars.com/th/promotions/New-MG4-MY2026",
+          "text": "MG — โปรโมชันวันที่ 1–30 กันยายน 2569 และข้อยกเว้นรับประกัน (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],

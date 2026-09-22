@@ -6,6 +6,7 @@ import { damperArticle } from '@/lib/damper-article';
 import { brakeArticle } from '@/lib/brake-article';
 import { powertrainArticle } from '@/lib/powertrain-article';
 import { batteryArticle } from '@/lib/battery-article';
+import { mg4Article } from '@/lib/mg4-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -239,23 +240,25 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'mg4-electric-review',
-    title: 'รีวิว MG4 Electric สเปกไทย: รถยนต์ไฟฟ้าขับหลัง 50:50 ที่ขับมันส์ คม หนึบที่สุดในงบไม่เกินล้าน',
-    shortTitle: 'MG4 Electric',
-    excerpt: 'ผ่าลึกสมรรถนะแฮทช์แบ็กไฟฟ้าขับหลังบาลานซ์ 50:50 ช่วงล่าง Five-Link ขับสนุกเร้าใจ พร้อมรุ่นแรง XPOWER 435 แรงม้า อัตราเร่ง 0-100 ใน 3.8 วินาที',
+    title: mg4Article.title,
+    shortTitle: 'MG4 MY2026',
+    excerpt: mg4Article.description,
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'hatchback',
-    segmentName: 'ฮอตแฮทช์ไฟฟ้าขับเคลื่อนล้อหลัง',
-    image: '/images/reviews/mg4-electric-hero.jpg',
-    date: '2026-08-25',
-    dateDisplay: '25 ส.ค. 2569',
-    readTime: '8 นาที',
-    rating: 8.9,
-    ratingText: '8.9 / 10',
-    priceRange: '569,900 – 1,119,900 บาท',
-    highlights: ['RWD บาลานซ์ 50:50', 'ช่วงล่าง 5-Link อิสระ', 'XPOWER 435 hp', 'วงเลี้ยวแคบ 5.3 ม.'],
+    segmentName: 'แฮทช์แบ็กไฟฟ้าขับหลัง',
+    image: mg4Article.image,
+    imageAlt: mg4Article.imageAlt,
+    imageFit: 'contain',
+    date: mg4Article.updatedAt,
+    publishedAt: mg4Article.publishedAt,
+    dateDisplay: '22 ก.ย. 2569',
+    readTime: mg4Article.readTime,
+    rating: null,
+    priceRange: 'ตรวจข้อเสนอให้ตรงรุ่นและวันที่',
+    highlights: ['เทียบ D กับ X Long Range รุ่นปี 2026', 'แบต LFP 50 / 62.2 kWh · ระยะ NEDC 450 / 540 กม.', 'แยกสเปกปัจจุบันจาก XPOWER รุ่นเดิม'],
     featured: false,
-      brand: 'EV',
+      brand: 'MG',
       badge: 'Thailand focus model',
       accessoryOpportunity: 'พรม TPE, ถาดคอนโซล, กันรอยชายประตู',
       fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
@@ -1115,6 +1118,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 <div>
                   {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
                   {article.slug === 'ev-battery-care' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพแชสซี Volkswagen ID.3: <a href={batteryArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={batteryArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดสำหรับเว็บ</p>}
+                  {article.slug === 'mg4-electric-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ MG4 X ในไทย มี.ค. 2569: <a href={mg4Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={mg4Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด · ป้ายราคาในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
                     <span className="text-slate-900">{article.brand === 'EVSELECT' ? <BrandHomeLink /> : article.brand === 'EVSELECT BUYER GUIDE' ? <><BrandHomeLink /> BUYER GUIDE</> : article.brand || article.category}</span>
                     <span aria-hidden="true">•</span>
