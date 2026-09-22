@@ -1,5 +1,7 @@
 # Carbon Ceramic cover correction — local draft checkpoint
 
+**Later resolution, 22 September:** `brake-full-reader-review-2026-09-22.md` records the complete final desktop/mobile article reading, all ten photographs, all nine score-panel states and the calculator checks. Both missing ENDLESS originals and the MG4 original were restored byte-for-byte from the existing commit; `verify:images` now passes for 72 referenced images. The incomplete-reading/missing-original observations below are historical. Other page reviews, manufacturer-media rights questions and release/live verification remain open; no deployment is claimed.
+
 Based on `c34ceac`, branch `codex/brake-complete-kits-2026-09-19`. No push, deployment or Facebook publication in this checkpoint.
 
 The immediately preceding scheduled heartbeat did not advance the editorial goal: it recognized the repeated event and correctly avoided duplicate submissions. This turn resumes editorial work rather than repeating that unchanged social status.

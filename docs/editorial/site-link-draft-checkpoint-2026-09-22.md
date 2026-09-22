@@ -1,5 +1,7 @@
 # Site link draft checkpoint — 22 September 2026
 
+**Latest resolution, 22 September:** the full Carbon Ceramic desktop/mobile reading and all image/score/calculator checks are now recorded in `brake-full-reader-review-2026-09-22.md`. Restored the three still-referenced originals from the existing commit; all 72 referenced images now pass the verifier. Earlier missing-image and incomplete Carbon Ceramic-reading statements below are historical. The fourteen other changed routes, full catalogue review, remaining source/rights issues and production release are still outstanding.
+
 Local checkout: `releases/evselect-coilover-skyscraper-2026-09-19`, based on `c34ceac`. Not deployed.
 
 Later on 22 September, `brake-cover-reader-check-2026-09-22.md` records replacement of the uncertain-permission Stories cover with a credited CC0 photograph, a responsive catalogue-heading correction, and refreshed identical link/heading counts. The earlier cover concern at the end of this checkpoint is historical; the other outstanding reviews and three missing originals remain. Repository TypeScript checking also passed.
