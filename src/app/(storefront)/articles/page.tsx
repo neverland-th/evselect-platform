@@ -13,6 +13,7 @@ import { thaiRoadsArticle } from '@/lib/thai-roads-article';
 import { zeekr7xArticle } from '@/lib/zeekr-7x-article';
 import { hybridEvArticle } from '@/lib/hybrid-ev-article';
 import { atto3Article } from '@/lib/atto3-article';
+import { sealArticle } from '@/lib/seal-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -197,26 +198,28 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'byd-seal-review',
-    title: 'รีวิว BYD Seal (AWD Performance & Premium): สปอร์ตซีดานไฟฟ้า 530 แรงม้า ที่เขย่าบัลลังก์รถยุโรป',
+    title: sealArticle.title,
     shortTitle: 'BYD Seal',
-    excerpt: 'ทดสอบสมรรถนะสปอร์ตซีดานไฟฟ้าตัวแรง 530 แรงม้า 0-100 ใน 3.8 วินาที ความแข็งแกร่งของเทคโนโลยี CTB แบตเตอรี่ Blade Battery และช่วงล่าง FSD บนถนนไทย',
+    excerpt: sealArticle.description,
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'sedan',
-    segmentName: 'สปอร์ตซีดานไฟฟ้าสมรรถนะสูง',
-    image: '/images/reviews/byd-seal-hero.jpg',
-    date: '2026-08-25',
-    dateDisplay: '25 ส.ค. 2569',
-    readTime: '9 นาที',
-    rating: 9.1,
-    ratingText: '9.1 / 10',
-    priceRange: '849,900 – 1,099,900 บาท',
-    highlights: ['530 hp / 670 Nm', '0-100 ใน 3.8s', 'แบต Blade 82.5 kWh', 'ช่วงล่าง FSD'],
+    segmentName: 'ซีดานไฟฟ้า · สเปกไทย 3 รุ่น',
+    image: sealArticle.image,
+    imageAlt: sealArticle.imageAlt,
+    date: sealArticle.updatedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    publishedAt: sealArticle.publishedAt,
+    readTime: sealArticle.readTime,
+    rating: null,
+    ratingText: 'ข้อมูลผู้ผลิต · ไม่มีคะแนนทดสอบ',
+    priceRange: 'ขอใบเสนอราคาตรงรุ่นและปีรถ',
+    highlights: ['Premium: 650 กม. NEDC', 'AWD: 390 kW · โช้ค FSD หน้า–หลัง'],
     featured: false,
-      brand: 'EV',
-      badge: 'Thailand focus model',
-      accessoryOpportunity: 'พรม TPE, ถาดคอนโซล, กันรอยชายประตู',
-      fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
+    brand: 'BYD',
+    badge: 'สเปกประเทศไทย',
+    accessoryOpportunity: 'ตรวจยางตามข้อกำหนดรถ',
+    fitmentGate: 'แยก Seal จาก Seal 6 และ Seal 5 DM-i',
   },
   {
     slug: 'zeekr-x-review',
@@ -1118,6 +1121,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'byd-seal-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Premium ในไทย ปี 2023: <a href={sealArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{sealArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={sealArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{sealArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ · ป้ายในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   {article.slug === 'byd-atto-3-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพรถไทยปี 2024: <a href={atto3Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{atto3Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={atto3Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{atto3Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'hybrid-to-ev-chassis-dynamics-transition' && <p className="mb-3 text-sm leading-6 text-slate-600">แชสซี Volkswagen ID.3 จัดแสดง: <a href={hybridEvArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hybridEvArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={hybridEvArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hybridEvArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'zeekr-7x-2026-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ ZEEKR 7X จากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย: <a href={zeekr7xArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr7xArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr7xArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC0 1.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
@@ -1133,7 +1137,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>

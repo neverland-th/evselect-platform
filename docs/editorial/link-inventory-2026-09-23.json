@@ -815,7 +815,7 @@
         },
         {
           "href": "/articles/byd-seal-review",
-          "text": "รีวิวรถ EV9 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV6 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -832,7 +832,7 @@
         },
         {
           "href": "/articles/byd-seal-review",
-          "text": "รีวิว BYD Seal (AWD Performance & Premium): สปอร์ตซีดานไฟฟ้า 530 แรงม้า ที่เขย่าบัลลังก์รถยุโรป",
+          "text": "BYD Seal สเปกไทย: เลือกระยะทางของ Premium หรือความแรงของ AWD?",
           "scope": [
             "html",
             "body",
@@ -1939,6 +1939,46 @@
           "rel": "noopener noreferrer"
         },
         {
+          "href": "https://commons.wikimedia.org/wiki/File:2023_BYD_Seal_Premium.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
           "href": "https://commons.wikimedia.org/wiki/File:2026_MG_4_Electric_X.jpg",
           "text": "Chanokchon (เปิดแท็บใหม่)",
           "scope": [
@@ -2509,32 +2549,14 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-horsepower-vs-torque-explained",
+          "text": "แรงม้ากับแรงบิดของรถ EV",
           "scope": [
             "html",
             "body",
@@ -2543,174 +2565,201 @@
             "article",
             "div",
             "section",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ BYD Seal",
+          "href": "/articles/ev-battery-care",
+          "text": "แนวทางดูแลแบตเตอรี่ EV",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/#vehicle-finder",
-          "text": "ค้นหาตามรุ่นรถ",
+          "href": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+          "text": "ประเภทโช้คอัพและระบบควบคุมแรงหน่วง",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "การเลือกยางให้เหมาะกับน้ำหนักและกำลังรถ EV",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles/tesla-model-3-highland-review",
-          "text": "คู่แข่งโดยตรงEV Reviewรีวิว Tesla Model 3 Highland สเปกไทย ปรับปรุงใหม่ นุ่ม เงียบ พรีเมียมขึ้นแค่ไหน?ทดสอบสมรรถนะและเปรียบเทียบจุดเด่นจุดด้อยกับ BYD Seal บนถนนเมืองไทย",
+          "text": "Tesla Model 3 สเปกไทยและความต่างของแต่ละรุ่น",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles/byd-atto-3-review",
-          "text": "BYD FamilyEV Reviewรีวิว BYD Atto 3 สเปกไทย: คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน?เจาะลึกความนุ่มนวล ความกว้างขวาง และความคุ้มค่าหลังปรับลดราคาพิเศษ",
+          "href": "/",
+          "text": "EVSELECT",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-009-review",
-          "text": "Luxury EVFlagship Reviewรีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้าท้าชน Toyota Alphard ด้วยช่วงล่างถุงลมอัจฉริยะและเบาะ Sofaro First Class",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
+            "aside"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
+          "text": "กลับไปเลือกอ่านบทความและคู่มือรถ EV",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "div"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://www.reverautomotive.com/model/seal/overview",
+          "text": "สเปก BYD Seal ของ RÊVER ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2023_BYD_Seal_Premium.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2023_BYD_Seal_AWD_Performance.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.reverautomotive.com/model/seal/overview",
+          "text": "ตารางเทคนิค BYD Seal ประเทศไทยจาก RÊVER (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],
