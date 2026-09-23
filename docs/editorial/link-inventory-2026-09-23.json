@@ -1263,7 +1263,7 @@
         },
         {
           "href": "/articles/ev-performance-driving-techniques",
-          "text": "ระบบช่วงล่าง10 นาทีระบบช่วงล่างและสมรรถนะ",
+          "text": "ระบบช่วงล่าง5 นาทีระบบช่วงล่างและสมรรถนะ",
           "scope": [
             "html",
             "body",
@@ -1280,7 +1280,7 @@
         },
         {
           "href": "/articles/ev-performance-driving-techniques",
-          "text": "เทคนิคการขับขี่รถ EV สมรรถนะสูง: Weight Transfer, Trail Braking และการควบคุม Instant Torque บนแทร็กและโค้ง",
+          "text": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้",
           "scope": [
             "html",
             "body",
@@ -2321,6 +2321,46 @@
         {
           "href": "https://creativecommons.org/publicdomain/zero/1.0/",
           "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -8750,21 +8790,259 @@
       "route": "/articles/ev-performance-driving-techniques",
       "mainInternalLinks": [
         {
-          "href": "/articles",
-          "text": "อ่านบทความอื่นๆ ต่อ",
+          "href": "/",
+          "text": "EVSELECT",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "div"
+            "header",
+            "div",
+            "span"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-horsepower-vs-torque-explained",
+          "text": "ความสัมพันธ์ของแรงม้า แรงบิด และแรงขับที่ล้อ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+          "text": "สิ่งที่เปลี่ยนเมื่อย้ายจาก Hybrid มาใช้ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-battery-care",
+          "text": "แนวทางดูแลแบตเตอรี่และการชาร์จ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "วิธีเลือกยางให้ตรงน้ำหนักและข้อกำหนดรถ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-carbon-ceramic-brakes-guide",
+          "text": "ประเมินความคุ้มค่าก่อนอัปเกรดเบรก Carbon Ceramic",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles",
+          "text": "เลือกอ่านคู่มือ EV เรื่องอื่น",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/contact",
+          "text": "เสนอเรื่องที่อยากให้เราอธิบายเพิ่ม",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-8EAFF5D8-7209-45ED-A7E0-508FFA60C530.html",
+          "text": "คู่มือโหมดอัตราเร่ง Model 3 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.bosch-mobility.com/en/solutions/driving-safety/regenerative-braking-systems/",
+          "text": "Bosch อธิบาย Regenerative Braking (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-3DFFB071-C0F6-474D-8A45-17BE1A006365.html",
+          "text": "คู่มือการเบรกและหยุดรถ Model 3 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-CC0F27E7-FD78-448D-B739-209EBBEDF2C3.html",
+          "text": "คู่มือ Traction Control ของ Model 3 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-92CA3DCA-EDA3-4243-861E-2C770F5506FD.html",
+          "text": "คู่มือ Track Mode ของ Model 3 Performance (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T13:06:10.880983+00:00",
+  "checkedAt": "2026-09-23T13:18:52.965479+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -410,7 +410,7 @@
         },
         {
           "level": 4,
-          "text": "เทคนิคการขับขี่รถ EV สมรรถนะสูง: Weight Transfer, Trail Braking และการควบคุม Instant Torque บนแทร็กและโค้ง",
+          "text": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้",
           "scope": [
             "main",
             "article"
@@ -2544,7 +2544,7 @@
         },
         {
           "level": 1,
-          "text": "ขับรถ EV อย่างไรให้ปลอดภัย?ฉบับการ์ตูนนิทาน เข้าใจง่ายใน 5 นาที 🚗⚡",
+          "text": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้",
           "scope": [
             "main",
             "article",
@@ -2553,7 +2553,7 @@
         },
         {
           "level": 2,
-          "text": "1ความลับของ \"ตุ๊กตาล้มลุก\"",
+          "text": "เริ่มจากคันเร่งที่คุมได้ละเอียด",
           "scope": [
             "main",
             "article"
@@ -2561,7 +2561,7 @@
         },
         {
           "level": 2,
-          "text": "2งบประมาณ \"กาวติดถนน\" (Grip Budget)",
+          "text": "ยกคันเร่งแล้วหน่วง ไม่ได้แปลว่าไม่ต้องใช้เบรก",
           "scope": [
             "main",
             "article"
@@ -2569,7 +2569,7 @@
         },
         {
           "level": 2,
-          "text": "3กับดัก \"ยกเท้า = เบรก\" (One-Pedal)",
+          "text": "ABS ช่วยควบคุมรถ แต่ไม่เพิ่มขีดจำกัดของถนน",
           "scope": [
             "main",
             "article"
@@ -2577,23 +2577,7 @@
         },
         {
           "level": 2,
-          "text": "4วิชาตัวเบาของนินจา (Trail Braking)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ทริคการเบรกขั้นเทพ 🥷",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "สรุปสั้นๆ เอาไปใช้ได้เลย!",
+          "text": "อยากพัฒนาทักษะ ให้แยกการฝึกในสนามออกจากถนน",
           "scope": [
             "main",
             "article"
@@ -4983,7 +4967,7 @@
         },
         {
           "level": 3,
-          "text": "เทคนิคการขับขี่รถ EV สมรรถนะสูง: Weight Transfer, Trail Braking และการควบคุม Instant Torque บนแทร็กและโค้ง",
+          "text": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้",
           "scope": [
             "main",
             "article"

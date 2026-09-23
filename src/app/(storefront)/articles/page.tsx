@@ -20,6 +20,7 @@ import { geelyEx2Article } from '@/lib/geely-ex2-article';
 import { teslaModelYLArticle } from '@/lib/tesla-model-y-l-article';
 import { zeekr009Article } from '@/lib/zeekr-009-article';
 import { zeekrXArticle } from '@/lib/zeekr-x-article';
+import { drivingArticle } from '@/lib/driving-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -397,37 +398,26 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'ev-performance-driving-techniques',
-    title: 'เทคนิคการขับขี่รถ EV สมรรถนะสูง: Weight Transfer, Trail Braking และการควบคุม Instant Torque บนแทร็กและโค้ง',
-    shortTitle: 'เทคนิคขับขี่ EV สมรรถนะสูง',
-    subtitle: 'คู่มือการขับขี่สปอร์ต EV ระดับสนามแข่งตามหลักฟิสิกส์ OptimumG',
-    excerpt: 'เจาะลึกฟิสิกส์การควบคุมรถยนต์ไฟฟ้าน้ำหนัก 2+ ตัน เทคนิค Trail Braking ถ่ายเทน้ำหนักลงล้อหน้า การบริหารแรงยึดเกาะจาก Instant Torque และการแก้อาการ Understeer/Oversteer ตามหลัก OptimumG',
+    title: drivingArticle.title,
+    shortTitle: 'เข้าใจการขับ EV',
+    excerpt: 'รู้จังหวะคันเร่ง Regen และการใช้เบรก พร้อมแยกการขับถนนออกจากการฝึกในสนาม',
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'tuning',
-    segmentName: '🏁 ไดนามิกส์ & การขับขี่ขั้นสูง',
-    image: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1200&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1200&auto=format&fit=crop',
-    date: '2026-08-27',
-    dateDisplay: '27 ส.ค. 2569',
-    publishedAt: '2026-08-27',
-    author: 'EVSELECT Dynamics Lab',
-    readTime: '10 นาที',
-    rating: 9.5,
-    ratingText: 'OptimumG Dynamics Guide',
-    priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'Weight Transfer & Grip Dynamics',
-    highlights: [
-      'Longitudinal Weight Transfer ในรถ 2 ตัน',
-      'Trail Braking เพื่อเพิ่ม Grip ล้อหน้า',
-      'Regen vs Hydraulic Brake Blending',
-      'การแก้อาการ Snap Oversteer ใน EV ขับหลัง'
-    ],
+    segmentName: 'คันเร่ง · Regen · ABS',
+    image: drivingArticle.image,
+    imageAlt: drivingArticle.imageAlt,
+    imageFit: 'contain',
+    date: drivingArticle.updatedAt,
+    publishedAt: drivingArticle.publishedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    readTime: drivingArticle.readTime,
+    rating: null,
+    priceRange: 'คู่มือความรู้การขับขี่',
+    highlights: ['เข้าใจข้อจำกัดของ Regen', 'แยก ABS กับการฝึกในสนาม'],
     featured: false,
-    brand: 'OPTIMUMG DYNAMICS',
-    badge: 'Track & Dynamics Guide',
-    tags: ['OptimumG', 'Weight Transfer', 'Trail Braking', 'Instant Torque', 'Race Driving', 'EV Track Day'],
-    accessoryOpportunity: 'ยาง High Load Rating, ผ้าเบรกคาร์บอนเซรามิก, ชุดสตรัทปรับเกลียว 2-Way',
-    fitmentGate: 'ตรวจสอบพิกัดการกระจายน้ำหนักหน้า-หลัง (Weight Distribution) และค่า CG ของรถ',
+    brand: 'ความรู้การขับขี่',
+    fitmentGate: 'ใช้คู่มือที่ตรงรุ่น ปี และซอฟต์แวร์ของรถ',
   },
   {
     slug: 'hybrid-to-ev-chassis-dynamics-transition',
@@ -1127,6 +1117,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'ev-performance-driving-techniques' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Model 3 Performance ปี 2024 ไม่ใช่รถทดสอบของทีมงาน: <a href={drivingArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{drivingArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={drivingArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{drivingArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'zeekr-x-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Flagship ในไทย ปี 2024: <a href={zeekrXArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekrXArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekrXArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekrXArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'zeekr-009-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Flagship ในไทย ปี 2024: <a href={zeekr009Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr009Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'tesla-model-y-l-premium-6-seater-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพต่างประเทศ ปี 2025: <a href={teslaModelYLArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={teslaModelYLArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
@@ -1149,7 +1140,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review', 'zeekr-009-review', 'zeekr-x-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review', 'zeekr-009-review', 'zeekr-x-review', 'ev-performance-driving-techniques'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
