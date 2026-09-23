@@ -88,6 +88,14 @@ The local draft replaces the Porsche Stories cover above with a real PCCB photog
 - Individually inspected the local photo: exposed drilled disc, yellow Porsche caliper, blue body/arch and visible suspension. It is a wheel-off technical photograph, not the former centre-lock wheel image and not a Tesla/ENDLESS kit. Article and card alt text/captions now identify that distinction.
 - The article uses the true image ratio; the catalogue uses `contain`. Article, catalogue and Open Graph/Twitter read the same shared cover data. Full final article/catalogue reader review is still required; the focused cover check is not a full publication pass.
 
+## Carbon Ceramic body illustrations — 23 September 2026
+
+The latest local brake draft replaces six unconfirmed manufacturer-product image references with these two licensed photographs and direct manufacturer detail links. The previous PCCB cover and the two owner-supplied ENDLESS photographs remain. The removed reference files are not asserted to have reuse permission and were not deleted from the repository.
+
+- `public/images/articles/slotted-disc-numobeer.jpg`: [Freno a disco baffato](https://commons.wikimedia.org/wiki/File:Freno_a_disco_baffato.jpg), Numobeer, own work dated 19 November 2016, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Unmodified 1280 × 720 Commons thumbnail, 228,250 bytes; SHA-256 `e863f81072e54ef193f4d148f768267333bd4997aa10c6ef98b1f42361c9df9b`. Individually inspected: curved grooves are visible on the disc ring. It is a surface-pattern illustration, with no inferred Brembo identity or EV fitment.
+- `public/images/articles/amg-carbon-ceramic-brake-gold.jpg`: the existing Cheeni photograph documented above is now a body illustration of holes in a Carbon Ceramic disc, not the cover. The 1920 × 1278 full-frame version retains [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), source/author/date and resizing credit. SHA-256 `b4606d9c28812c5b04234246c615674435242d8e08a85ee3af552f434d0836ba`. Individually inspected gold AMG caliper and drilled disc; the caption identifies Geneva Auto Show 2011 rather than suggesting a current Tesla retrofit.
+- The actual current rendered page text and captions were read. Renewed complete desktop/mobile visual review is still pending because screenshot capture fails/returns black. The individual source-image inspection and passing image/build checks do not close that gate. Exact draft/source/review evidence: `editorial/brake-photo-update-2026-09-23.md`. No deployment is claimed.
+
 ## Model 3 article cover attribution — 21 September 2026
 
 - Existing local asset: `public/images/reviews/tesla-model-3-hero.jpg`, 1280 × 852. Inspected the photograph and its retained EXIF author, Alexander Migl; it depicts the red Highland at Autofrühling Ulm, not the older-model fallback named in the downloader.

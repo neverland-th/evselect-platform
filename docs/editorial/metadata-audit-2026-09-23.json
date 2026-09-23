@@ -1,0 +1,221 @@
+{
+  "checkedAt": "2026-09-23T14:03:59.416295+00:00",
+  "base": "http://127.0.0.1:3117",
+  "scope": "Local HTTP metadata only; not browser reader review or production evidence.",
+  "sitemapUrls": 24,
+  "brakeModified": "2026-09-23",
+  "pendingExcluded": 6,
+  "robotsValid": true,
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "canonical": "https://evselects.com",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles",
+      "status": 200,
+      "canonical": "https://evselects.com/articles",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/byd-atto-3-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/byd-atto-3-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/byd-seal-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/byd-seal-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/deepal-s05-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/deepal-s05-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/deepal-s07-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/deepal-s07-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-battery-care",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-battery-care",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-carbon-ceramic-brakes-guide",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-horsepower-vs-torque-explained",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-horsepower-vs-torque-explained",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-performance-driving-techniques",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-performance-driving-techniques",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-suspension-tuning-guide",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-suspension-tuning-guide",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/ev-tyre-and-coilover-selection-guide",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/geely-ex2-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/geely-ex2-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/mg4-electric-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/mg4-electric-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/optimizing-ev-suspension-thai-roads",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/optimizing-ev-suspension-thai-roads",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/tesla-model-3-highland-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/tesla-model-3-highland-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/tesla-model-y-l-premium-6-seater-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/tesla-model-y-l-premium-6-seater-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/zeekr-009-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/zeekr-7x-2026-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/zeekr-7x-2026-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/articles/zeekr-x-review",
+      "status": 200,
+      "canonical": "https://evselects.com/articles/zeekr-x-review",
+      "metaRobots": "",
+      "inSitemap": true
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "canonical": "https://evselects.com/about",
+      "metaRobots": "noindex, follow",
+      "inSitemap": false
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "canonical": "https://evselects.com/contact",
+      "metaRobots": "noindex, follow",
+      "inSitemap": false
+    },
+    {
+      "route": "/editorial-policy",
+      "status": 200,
+      "canonical": "https://evselects.com/editorial-policy",
+      "metaRobots": "noindex, follow",
+      "inSitemap": false
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "canonical": "https://evselects.com/privacy",
+      "metaRobots": "noindex, follow",
+      "inSitemap": false
+    },
+    {
+      "route": "/terms",
+      "status": 200,
+      "canonical": "https://evselects.com/terms",
+      "metaRobots": "noindex, follow",
+      "inSitemap": false
+    },
+    {
+      "route": "/warranty",
+      "status": 200,
+      "canonical": "https://evselects.com/warranty",
+      "metaRobots": "noindex, follow",
+      "inSitemap": false
+    }
+  ]
+}

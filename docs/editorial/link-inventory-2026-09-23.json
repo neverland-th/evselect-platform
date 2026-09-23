@@ -5043,8 +5043,8 @@
           "rel": "noopener noreferrer"
         },
         {
-          "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
-          "text": "Brembo Prime",
+          "href": "https://commons.wikimedia.org/wiki/File:Freno_a_disco_baffato.jpg",
+          "text": "Numobeer",
           "scope": [
             "html",
             "body",
@@ -5061,8 +5061,8 @@
           "rel": "noopener noreferrer"
         },
         {
-          "href": "https://www.bremboparts.com/europe/en/products/xtra/max-brake-discs",
-          "text": "Brembo Max",
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0",
           "scope": [
             "html",
             "body",
@@ -5079,8 +5079,26 @@
           "rel": "noopener noreferrer"
         },
         {
-          "href": "https://www.bremboparts.com/europe/en/products/xtra/xtra-brake-discs",
-          "text": "Brembo Xtra",
+          "href": "https://commons.wikimedia.org/wiki/File:Amg_carbon_ceramic_brake_geneva_auto_show_2011.JPG",
+          "text": "Cheeni",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "text": "CC BY-SA 3.0",
           "scope": [
             "html",
             "body",
@@ -5124,6 +5142,22 @@
             "div",
             "section",
             "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
+          "text": "Brembo Prime",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "aside"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"
@@ -5507,9 +5541,7 @@
             "article",
             "div",
             "section",
-            "div",
-            "figure",
-            "figcaption"
+            "p"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"
@@ -5525,9 +5557,7 @@
             "article",
             "div",
             "section",
-            "div",
-            "figure",
-            "figcaption"
+            "p"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"
@@ -5693,24 +5723,6 @@
           "rel": "noopener noreferrer"
         },
         {
-          "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
-          "text": "Tesla Model S Plaid Track Package",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "figure",
-            "figcaption"
-          ],
-          "target": "_blank",
-          "rel": "noopener noreferrer"
-        },
-        {
           "href": "https://www.brembo.com/en/motorsport/50motorsport/innovation-carbon-ceramic-disc",
           "text": "Brembo ระบุว่าจานคาร์บอนเซรามิกของตนหนักประมาณครึ่งหนึ่งของจานเหล็กหล่อ",
           "scope": [
@@ -5721,7 +5733,6 @@
             "article",
             "div",
             "section",
-            "div",
             "div",
             "p"
           ],
@@ -5926,6 +5937,74 @@
             "div",
             "section",
             "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Freno_a_disco_baffato.jpg",
+          "text": "Numobeer — ภาพจานเซาะร่อง (2016)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Amg_carbon_ceramic_brake_geneva_auto_show_2011.JPG",
+          "text": "Cheeni — ภาพเบรก Carbon Ceramic AMG ที่ Geneva Auto Show 2011",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "Creative Commons BY-SA 4.0 — เงื่อนไขใช้ภาพ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "text": "Creative Commons BY-SA 3.0 — เงื่อนไขใช้ภาพ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"
@@ -6170,7 +6249,7 @@
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/prime/brake-discs",
-          "text": "Brembo — Prime brake discs และภาพจานเรียบ",
+          "text": "Brembo — Prime brake discs และจานผิวเรียบ",
           "scope": [
             "html",
             "body",
@@ -6187,7 +6266,7 @@
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/xtra/max-brake-discs",
-          "text": "Brembo — Max และภาพจานเซาะร่อง",
+          "text": "Brembo — Max และจานเซาะร่อง",
           "scope": [
             "html",
             "body",
@@ -6204,7 +6283,7 @@
         },
         {
           "href": "https://www.bremboparts.com/europe/en/products/xtra/xtra-brake-discs",
-          "text": "Brembo — Xtra และภาพจานเจาะรู",
+          "text": "Brembo — Xtra และจานเจาะรู",
           "scope": [
             "html",
             "body",
@@ -6340,7 +6419,7 @@
         },
         {
           "href": "https://shop.tesla.com/en_ae/product/model-s-plaid-track-package",
-          "text": "Tesla — Model S Plaid Track Package (ตลาด UAE) และภาพชุดเบรก",
+          "text": "Tesla — Model S Plaid Track Package (ตลาด UAE) และรายการอุปกรณ์",
           "scope": [
             "html",
             "body",
@@ -6476,7 +6555,7 @@
         },
         {
           "href": "https://www.endless-sport.co.jp/products/brake_caliper/index_6POT.html",
-          "text": "ENDLESS Japan — 6POT และภาพคาลิเปอร์",
+          "text": "ENDLESS Japan — 6POT และรายละเอียดคาลิเปอร์",
           "scope": [
             "html",
             "body",
