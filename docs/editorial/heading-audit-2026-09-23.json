@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T09:31:07.988705+00:00",
+  "checkedAt": "2026-09-23T09:51:08.890168+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -458,7 +458,7 @@
         },
         {
           "level": 4,
-          "text": "การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รอยต่อคอสะพาน ลอนคลื่น และลูกระนาด",
+          "text": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง",
           "scope": [
             "main",
             "article"
@@ -4060,7 +4060,7 @@
         },
         {
           "level": 1,
-          "text": "การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รับมือรอยต่อสะพาน, คอสะพานทรุด, ลูกระนาด และน้ำท่วมขัง",
+          "text": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง",
           "scope": [
             "main",
             "article",
@@ -4069,7 +4069,7 @@
         },
         {
           "level": 2,
-          "text": "1. สภาพถนนเมืองไทย: บททดสอบสุดหินของรถยนต์ไฟฟ้าน้ำหนัก 2 ตัน",
+          "text": "ก่อนซื้อโช้ค ให้ตอบสามข้อนี้ได้ก่อน",
           "scope": [
             "main",
             "article"
@@ -4077,7 +4077,7 @@
         },
         {
           "level": 2,
-          "text": "2. อุณหภูมิผิวถนน 50–65°C: ศัตรูเงียบที่ทำให้น้ำมันโช้คเหลวและเกิด Cavitation",
+          "text": "กระแทก เด้ง และสั่น ต้องเล่าให้ต่างกัน",
           "scope": [
             "main",
             "article"
@@ -4085,7 +4085,23 @@
         },
         {
           "level": 3,
-          "text": "พฤติกรรมของน้ำมันโช้คอัพภายใต้ความร้อนสะสมสูง (Thermal Thinning & Damping Fade)",
+          "text": "กระแทกตอนเจอรอยต่อหรือขอบฝาท่อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ผ่านเนินแล้วตัวรถยังเด้งหรือโยนต่อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "พวงมาลัยสั่น หรือรถดึงซ้าย–ขวา",
           "scope": [
             "main",
             "article"
@@ -4093,7 +4109,15 @@
         },
         {
           "level": 2,
-          "text": "3. ไดอะแกรมวิศวกรรม: การวิเคราะห์ระยะยุบ (Bump Travel) และการชน Bump Stop",
+          "text": "ตั้งต้นจากยาง น้ำหนักบรรทุก และโหมดเดิม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ตัวอย่าง: Model 3 Performance ที่มีช่วงล่าง Adaptive",
           "scope": [
             "main",
             "article"
@@ -4101,7 +4125,7 @@
         },
         {
           "level": 2,
-          "text": "4. ศาสตร์แห่งวาล์วไดเกรสซีฟ (Digressive Valving): คุมตัวถัง 2 ตันนิ่งสนิท แต่ซับรอยต่อสะพานนุ่มมือ",
+          "text": "รถเตี้ยลง ต้องตรวจมากกว่าระยะใต้ท้อง",
           "scope": [
             "main",
             "article"
@@ -4109,31 +4133,7 @@
         },
         {
           "level": 2,
-          "text": "5. มาตรการป้องกันสนิมและน้ำท่วมขัง: เลือกวัสดุอย่างไรให้อยู่รอดเกิน 5 ปีในไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กระบอกสแตนเลส INOX หรืออลูมิเนียมเกรดอากาศยาน",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "หัวเบ้าโช้คยางสังเคราะห์ (Rubber Top Mount)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ยางกันฝุ่นและซีลปิดกั้นคราบโคลน (Full Dust Boot)",
+          "text": "ถ้าปรับโช้คได้ เริ่มจากค่าอ้างอิงของชุดนั้น",
           "scope": [
             "main",
             "article"
@@ -4141,7 +4141,7 @@
         },
         {
           "level": 2,
-          "text": "6. Road Condition Setting Cheat Sheet: สูตรปรับคลิกช็อกอัพ 5 สภาพถนนไทย",
+          "text": "หน้าฝน: ความสูงรถไม่ใช่ใบอนุญาตลุยน้ำ",
           "scope": [
             "main",
             "article"
@@ -4149,47 +4149,7 @@
         },
         {
           "level": 2,
-          "text": "7. คู่มือการเซ็ตติ้งเฉพาะรุ่นสำหรับ 5 รถยนต์ไฟฟ้ายอดนิยมในไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "BYD Seal (Dynamic / Premium / AWD Performance)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Tesla Model Y (RWD / Long Range / Performance)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "MG4 Electric (Standard / Long Range / XPOWER)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Deepal S07 (Smart Electric SUV)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Zeekr X (Standard RWD / Flagship AWD)",
+          "text": "ก่อนอนุมัติงาน ขอคำตอบจากร้านให้ครบ",
           "scope": [
             "main",
             "article"
@@ -4197,15 +4157,7 @@
         },
         {
           "level": 2,
-          "text": "8. 7 ขั้นตอนตรวจเช็คก่อนส่งมอบรถ (EV Fitment & QC Checklist)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "เรียนรู้เรื่องช่วงล่าง สตรัทปรับเกลียว และยางก่อนเลือก",
+          "text": "แหล่งข้อมูลและขอบเขตบทความ",
           "scope": [
             "main",
             "article"
@@ -6295,7 +6247,7 @@
         },
         {
           "level": 3,
-          "text": "การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รอยต่อคอสะพาน ลอนคลื่น และลูกระนาด",
+          "text": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง",
           "scope": [
             "main",
             "article"

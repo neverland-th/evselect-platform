@@ -1,5 +1,11 @@
 # Editorial image provenance
 
+## Thai-road suspension — 23 September 2026 draft
+
+- Complete final desktop/mobile article and changed-card reading is recorded in `editorial/thai-roads-reader-review-2026-09-23.md`. No new image downloads or retouching.
+- The catalogue's unrelated Lamborghini photo is replaced with the existing `editorial/tesla-model-3-performance-2024.png`, 1280 × 640: [2024 Model 3 Performance exact creator page](https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png), iMoD Official, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), rechecked 23 September. Full-ratio photo is also the article cover. Both captions identify the car and distinguish illustration from a Thai road test, with creator/license/resize credit. SHA-256 `f041c22e816dd5372e3755922e868376435416788ff64edfc27158b2cb34d03a`.
+- Retained `articles/single-wishbone-suspension.jpg`, 1920 × 849: [exact Commons page](https://commons.wikimedia.org/wiki/File:Basic_Construction_of_Single_Wishbone_Suspension_System.jpg), Atharv Chandel, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), rechecked 23 September. Removed the crop/overlay presentation, retained all five labels and added their Thai meanings plus a working full-image link. Caption says generic MacPherson construction, not Model 3 or an EV-specific installation drawing. SHA-256 `34ebbf539f6850a9786e0d537b37cdd482c66c868db482d99f6f2437d77939c1`.
+
 ## Shock types article — 23 September 2026 draft
 
 - Complete desktop/mobile and changed-card image inspection: `editorial/shock-types-reader-review-2026-09-23.md`.

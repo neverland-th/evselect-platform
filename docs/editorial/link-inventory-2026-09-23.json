@@ -1620,7 +1620,7 @@
         },
         {
           "href": "/articles/optimizing-ev-suspension-thai-roads",
-          "text": "ระบบช่วงล่าง9 นาทีระบบช่วงล่างและสมรรถนะ",
+          "text": "ระบบช่วงล่าง6 นาทีระบบช่วงล่างและสมรรถนะ",
           "scope": [
             "html",
             "body",
@@ -1658,7 +1658,7 @@
         },
         {
           "href": "/articles/optimizing-ev-suspension-thai-roads",
-          "text": "การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รอยต่อคอสะพาน ลอนคลื่น และลูกระนาด",
+          "text": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง",
           "scope": [
             "html",
             "body",
@@ -2022,6 +2022,46 @@
         {
           "href": "https://creativecommons.org/publicdomain/zero/1.0/",
           "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9525,15 +9565,14 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+          "text": "การอ่านใบตั้งศูนย์และแคมเบอร์",
           "scope": [
             "html",
             "body",
@@ -9541,33 +9580,17 @@
             "main",
             "article",
             "div",
+            "section",
             "div",
             "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles/ev-tyre-and-coilover-selection-guide",
-          "text": "อ่านต่อ: คู่มือเลือกซื้อยางและสตรัท EV",
+          "text": "วิธีเลือกยางและคอยล์โอเวอร์ให้รับน้ำหนักรถ EV",
           "scope": [
             "html",
             "body",
@@ -9575,21 +9598,57 @@
             "main",
             "article",
             "div",
-            "div"
+            "section",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles",
-          "text": "กลับสู่หน้ารวมบทความ EV",
+          "href": "/images/articles/single-wishbone-suspension.jpg",
+          "text": "ดูภาพโครงสร้างขนาดเต็ม",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+          "text": "ประเภทโช้คและระบบถุงลม",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "วิธีปรับ Bump และ Rebound",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
           ],
           "target": "",
           "rel": ""
@@ -9603,8 +9662,41 @@
             "div",
             "main",
             "article",
-            "footer",
-            "span"
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles",
+          "text": "บทความและคู่มือรถ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
@@ -9612,14 +9704,133 @@
       ],
       "mainExternalLinks": [
         {
-          "href": "https://commons.wikimedia.org/wiki/File:Basic_Construction_of_Single_Wishbone_Suspension_System.jpg",
-          "text": "Atharv Chandel / Wikimedia Commons",
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official / Wikimedia Commons (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://kyb.com.au/faqs/",
+          "text": "หลักการทำงานของโช้คจาก KYB (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html",
+          "text": "คู่มือดูแลยาง Tesla (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html",
+          "text": "Tesla เตือนไม่ให้ปล่อยลมยางร้อนเพื่อให้เท่าค่าแนะนำตอนเย็น (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-877ACE2D-B62F-4596-A6AD-A74F7905741C.html",
+          "text": "ข้อมูลน้ำหนักรวมและน้ำหนักเพลาของ Model 3 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-E41C80C9-3132-4F4C-B4ED-4A3136488334.html",
+          "text": "คู่มือ Model 3 สำหรับประเทศไทย หัวข้อ Suspension (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Basic_Construction_of_Single_Wishbone_Suspension_System.jpg",
+          "text": "Atharv Chandel / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
             "p"
           ],
           "target": "_blank",
@@ -9627,14 +9838,152 @@
         },
         {
           "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-          "text": "CC BY-SA 4.0",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
             "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.kwsuspensions.com/us-en/technology/function-and-quality",
+          "text": "KW อธิบายการปรับ Compression และ Rebound (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-5D2AF796-2052-4A24-9327-E3C0E2DB9B19.html",
+          "text": "คำแนะนำ Tesla เมื่อรถจมน้ำ (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html",
+          "text": "ยางและศูนย์ล้อ (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-877ACE2D-B62F-4596-A6AD-A74F7905741C.html",
+          "text": "น้ำหนักบรรทุก (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-E41C80C9-3132-4F4C-B4ED-4A3136488334.html",
+          "text": "ระบบช่วงล่าง Performance (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-5D2AF796-2052-4A24-9327-E3C0E2DB9B19.html",
+          "text": "กรณีรถจมน้ำ (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://kyb.com.au/faqs/",
+          "text": "KYB: คำถามเรื่องการทำงานของโช้ค (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.kwsuspensions.com/us-en/technology/function-and-quality",
+          "text": "KW: Function & Quality (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"

@@ -9,6 +9,7 @@ import { batteryArticle } from '@/lib/battery-article';
 import { mg4Article } from '@/lib/mg4-article';
 import { camberArticle } from '@/lib/camber-article';
 import { shockTypesArticle } from '@/lib/shock-types-article';
+import { thaiRoadsArticle } from '@/lib/thai-roads-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -589,37 +590,38 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'optimizing-ev-suspension-thai-roads',
-    title: 'การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รอยต่อคอสะพาน ลอนคลื่น และลูกระนาด',
-    shortTitle: 'เซ็ตติ้งช่วงล่าง EV ถนนเมืองไทย',
-    subtitle: 'คู่มือแก้ปัญหาช่วงล่างดีดย้วย รอยต่อทางด่วน และรักษาระยะความสูงปลอดภัยบนถนนไทย',
-    excerpt: 'แนวทางการแก้ปัญหารถ EV ย้วยโยนบนถนนคอนกรีตลอนคลื่นและกระแทกแรงที่คอสะพาน การเพิ่ม Bump Travel >45mm การจัดค่าวาล์ว Digressive ซับแรงกระแทกความเร็วสูง และการป้องกันน้ำท่วมขังใต้ท้องรถ',
+    title: thaiRoadsArticle.title,
+    shortTitle: 'เช็กช่วงล่าง EV ก่อนเปลี่ยนโช้ค',
+    subtitle: 'แยกอาการและเตรียมข้อมูลคุยกับร้าน',
+    excerpt: thaiRoadsArticle.description,
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'tuning',
-    segmentName: '🇹🇭 ปรับแต่งช่วงล่างถนนไทย',
-    image: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=1200&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=1200&auto=format&fit=crop',
-    date: '2026-08-27',
-    dateDisplay: '27 ส.ค. 2569',
-    publishedAt: '2026-08-27',
-    author: 'กองบรรณาธิการ EVSELECT',
-    readTime: '9 นาที',
-    rating: 9.6,
-    ratingText: 'คู่มือสำหรับบริบทถนนไทย',
-    priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'Thai Asphalt & Concrete Setup',
+    segmentName: 'ช่วงล่างกับเส้นทางประจำวัน',
+    image: thaiRoadsArticle.image,
+    imageAlt: thaiRoadsArticle.imageAlt,
+    imageFit: 'contain',
+    heroImage: thaiRoadsArticle.image,
+    date: '2026-09-23',
+    dateDisplay: '23 ก.ย. 2569',
+    publishedAt: thaiRoadsArticle.publishedAt,
+    author: 'EVSELECT',
+    readTime: thaiRoadsArticle.readTime,
+    rating: null,
+    priceRange: 'คู่มือก่อนเปลี่ยนช่วงล่าง',
+    performanceText: 'แยกอาการ · ตรวจสภาพ · คุยกับช่าง',
     highlights: [
-      'การรับมือรอยต่อคอสะพานทางด่วนกรุงเทพฯ',
-      'Bump Travel ขั้นต่ำ >45mm สำหรับรถ EV หนัก',
-      'Digressive High-speed Blow-off Valve',
-      'Ground Clearance ป้องกันแบตเตอรี่ครูดน้ำท่วม'
+      'แยกกระแทก เด้ง และพวงมาลัยสั่น',
+      'ตรวจยางกับโหมดช่วงล่างเดิมก่อนซื้อของใหม่',
+      'เก็บข้อมูลก่อนปรับ Bump / Rebound',
+      'ห้าคำถามที่ควรถามร้านติดตั้ง'
     ],
     featured: false,
     brand: 'EVSELECT',
-    badge: 'Thailand Road Setup',
-    tags: ['Thai Road Tuning', 'Bridge Expansion Joints', 'Bump Travel', 'Digressive Valving', 'Battery Ground Clearance'],
-    accessoryOpportunity: 'ชุดสปริงคอมฟอร์ทลดเด้ง, แดมเปอร์วาล์วไทยแลนด์สเปก, การ์ดกันกระแทกใต้ท้องแบตเตอรี่',
-    fitmentGate: 'วัดระยะความสูงใต้ท้องรถ (Ride Height) หลังติดตั้งสปริงโหลดไม่ต่ำกว่า 135mm',
+    badge: 'รู้ก่อนเปลี่ยนช่วงล่าง',
+    tags: ['ช่วงล่างถนนไทย', 'รอยต่อสะพาน', 'ยาง', 'แดมเปอร์', 'Model 3 Performance'],
+    accessoryOpportunity: 'ตรวจหาสาเหตุและกำหนดเป้าหมายก่อนเลือกชุดช่วงล่าง',
+    fitmentGate: 'ใช้คู่มือที่ตรงรุ่นและรหัสชุด ตรวจระยะทำงาน ศูนย์ล้อ และระบบไฟฟ้าเดิม',
   },
   {
     slug: 'ev-tyre-and-coilover-selection-guide',
@@ -1121,6 +1123,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
                   {article.slug === 'ev-camber-adjustment-wheel-alignment-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ LADA บนแท่นตั้งศูนย์ ไม่ใช่รถ EV: <a href={camberArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={camberArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'shock-absorber-types-monotube-twintube-air-ev' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพประกอบ ZEEKR 7X ไม่ยืนยันรุ่นย่อยไทย: <a href={shockTypesArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{shockTypesArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={shockTypesArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{shockTypesArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
+                  {article.slug === 'optimizing-ev-suspension-thai-roads' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Model 3 Performance ปี 2024 ไม่ใช่ภาพทดสอบถนนไทย: <a href={thaiRoadsArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{thaiRoadsArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={thaiRoadsArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{thaiRoadsArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'ev-battery-care' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพแชสซี Volkswagen ID.3: <a href={batteryArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={batteryArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดสำหรับเว็บ</p>}
                   {article.slug === 'mg4-electric-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ MG4 X ในไทย มี.ค. 2569: <a href={mg4Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={mg4Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด · ป้ายราคาในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
