@@ -10,6 +10,7 @@ import { mg4Article } from '@/lib/mg4-article';
 import { camberArticle } from '@/lib/camber-article';
 import { shockTypesArticle } from '@/lib/shock-types-article';
 import { thaiRoadsArticle } from '@/lib/thai-roads-article';
+import { zeekr7xArticle } from '@/lib/zeekr-7x-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -88,33 +89,31 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'zeekr-7x-2026-review',
-    title: 'รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง',
-    shortTitle: 'Zeekr 7X 2026',
-    excerpt: 'เจาะลึกพรีเมียมเอสยูวีไฟฟ้าแพลตฟอร์ม SEA สถาปัตยกรรม 800V SiC มอเตอร์คู่แรงสุด 646 แรงม้า 0-100 ใน 3.8 วินาที ชิป Snapdragon 8295 ช่วงล่างถุงลม และทดสอบระยะวิ่งจริงบนถนนเมืองไทย',
+    title: zeekr7xArticle.title,
+    shortTitle: 'ZEEKR 7X สเปกไทย',
+    excerpt: zeekr7xArticle.description,
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'suv',
-    segmentName: 'พรีเมียมสมาร์ทเอสยูวี D-Segment',
-    image: '/images/editorial/zeekr-7x-photo.jpg',
-    date: '2026-08-26',
-    dateDisplay: '26 ส.ค. 2569',
-    readTime: '12 นาที',
-    rating: 9.2,
-    ratingText: '9.2 / 10',
-    priceRange: '1,399,000 – 1,799,000 บาท',
-    performanceText: '310 – 475 kW (416 – 637 hp / 422 – 646 PS) / 710 Nm',
+    segmentName: 'SUV ไฟฟ้า · เทียบสามรุ่นไทย',
+    image: zeekr7xArticle.image,
+    imageAlt: zeekr7xArticle.imageAlt,
+    imageFit: 'contain',
+    date: zeekr7xArticle.updatedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    readTime: zeekr7xArticle.readTime,
+    rating: null,
+    priceRange: 'หน้าเว็บผู้ผลิตเริ่ม 1,399,000 บาท · ตรวจ 23 ก.ย. 2569',
+    performanceText: 'Performance AWD: 475 kW / 637 hp · น้ำหนัก 2,535 กก.',
     highlights: [
-      'สถาปัตยกรรม 800V SiC ชาร์จ DC 420kW',
-      'สูงสุด 637 hp / 646 PS (AWD) 0-100 ใน 3.8s',
-      'On-Board Charger AC 22kW ทุกรุ่น',
-      'ชิป Snapdragon 8295 + จอ 16 นิ้ว Mini LED',
-      'ช่วงล่างถุงลมปรับระดับ + แดมเปอร์ CCD'
+      'แยกถุงลมและอุปกรณ์ตามรุ่นย่อย',
+      'NEDC 566 / 730 / 635 กม. ตามลำดับรุ่น',
+      'เลือกยางจากสเปกเต็ม ไม่ใช่แรงม้าอย่างเดียว'
     ],
     featured: true,
-    brand: 'Zeekr',
+    brand: 'ZEEKR',
     badge: 'Thailand focus model',
-    accessoryOpportunity: 'พรม TPE 3D, ม่านบังแดดหลังคาแก้ว, ฟิล์มกระจก 9H, ถาดคอนโซล',
-    fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
+    fitmentGate: 'ตรวจรุ่นย่อย ปีผลิต และสเปกยางของรถคันจริง',
   },
   {
     slug: 'zeekr-009-review',
@@ -898,13 +897,12 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto min-h-[300px] overflow-hidden bg-slate-100">
                 <Image
                   src={featuredArticle.image}
-                  alt={featuredArticle.title}
+                  alt={featuredArticle.imageAlt ?? featuredArticle.title}
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover object-left group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                  className={featuredArticle.imageFit === 'contain' ? 'object-contain' : 'object-cover object-left'}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-white/10 lg:to-white"></div>
                 
                 {/* Spotlight Floating Badges */}
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">
@@ -918,13 +916,13 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 </div>
 
                 {/* Score Pill overlay on image */}
-                <div className="absolute bottom-4 left-4 lg:hidden">
+                {featuredArticle.rating !== null && <div className="absolute bottom-4 left-4 lg:hidden">
                   <div className="bg-white/95 backdrop-blur border border-lime-500 px-3 py-1 rounded-xl flex items-center gap-1.5 shadow-xs">
                     <Award className="w-4 h-4 text-lime-600" />
                     <span className="text-xs text-slate-600 font-medium">คะแนนรวม</span>
                     <span className="text-sm font-black text-lime-700">{featuredArticle.ratingText}</span>
                   </div>
-                </div>
+                </div>}
               </div>
 
               {/* Right/Bottom Content Column */}
@@ -934,11 +932,11 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-xs font-semibold text-lime-800 tracking-wider uppercase bg-lime-50 border border-lime-200 px-2.5 py-1 rounded-lg">
                       {featuredArticle.segmentName}
                     </span>
-                    <div className="hidden lg:flex items-center gap-1.5 bg-lime-50 border border-lime-200 px-3 py-1 rounded-full">
+                    {featuredArticle.rating !== null && <div className="hidden lg:flex items-center gap-1.5 bg-lime-50 border border-lime-200 px-3 py-1 rounded-full">
                       <Award className="w-4 h-4 text-lime-600" />
                       <span className="text-xs text-slate-500">Score</span>
                       <span className="text-sm font-black text-lime-700">{featuredArticle.ratingText}</span>
-                    </div>
+                    </div>}
                   </div>
 
                   <h2
@@ -953,22 +951,23 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   <p className="text-sm text-slate-600 leading-relaxed font-normal line-clamp-3">
                     {featuredArticle.excerpt}
                   </p>
+                  {featuredArticle.slug === 'zeekr-7x-2026-review' && <p className="text-sm leading-6 text-slate-600">ภาพ ZEEKR 7X จากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย: <a href={zeekr7xArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr7xArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr7xArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC0 1.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
 
                   {/* Highlights Grid */}
                   <div className="grid grid-cols-2 gap-2.5 pt-2">
                     <div className="bg-slate-50 border border-slate-200 p-2.5 rounded-xl">
-                      <div className="text-[11px] text-slate-500">ราคาจำหน่าย</div>
-                      <div className="text-xs sm:text-sm font-bold text-slate-900 mt-0.5 truncate">{featuredArticle.priceRange}</div>
+                      <div className="text-xs text-slate-500">ราคาอ้างอิง</div>
+                      <div className="text-sm font-bold text-slate-900 mt-0.5">{featuredArticle.priceRange}</div>
                     </div>
                     <div className="bg-slate-50 border border-slate-200 p-2.5 rounded-xl">
-                      <div className="text-[11px] text-slate-500">สมรรถนะสูงสุด</div>
-                      <div className="text-xs sm:text-sm font-bold text-lime-700 mt-0.5">{featuredArticle.performanceText || '646 PS (0-100: 3.8s)'}</div>
+                      <div className="text-xs text-slate-500">สเปกจากผู้ผลิต</div>
+                      <div className="text-sm font-bold text-lime-700 mt-0.5">{featuredArticle.performanceText}</div>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-1.5 pt-1">
                     {featuredArticle.highlights.map((h, i) => (
-                      <span key={i} className="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md border border-slate-200">
+                      <span key={i} className="text-sm bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md border border-slate-200">
                         {h}
                       </span>
                     ))}
@@ -992,7 +991,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     href={`/articles/${featuredArticle.slug}`}
                     className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black text-xs sm:text-sm font-bold px-4 py-2 rounded-xl shadow-xs transition-all"
                   >
-                    <span>อ่านรีวิวฉบับเต็ม</span>
+                    <span>อ่านบทความ</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -1120,6 +1119,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'zeekr-7x-2026-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ ZEEKR 7X จากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย: <a href={zeekr7xArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr7xArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr7xArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC0 1.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
                   {article.slug === 'ev-camber-adjustment-wheel-alignment-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ LADA บนแท่นตั้งศูนย์ ไม่ใช่รถ EV: <a href={camberArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={camberArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'shock-absorber-types-monotube-twintube-air-ev' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพประกอบ ZEEKR 7X ไม่ยืนยันรุ่นย่อยไทย: <a href={shockTypesArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{shockTypesArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={shockTypesArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{shockTypesArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}

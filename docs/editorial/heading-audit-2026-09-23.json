@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T09:51:08.890168+00:00",
+  "checkedAt": "2026-09-23T10:14:47.764111+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -294,7 +294,7 @@
         },
         {
           "level": 2,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "text": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม?",
           "scope": [
             "main"
           ]
@@ -4891,7 +4891,7 @@
         },
         {
           "level": 1,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V ชาร์จไวสุดขีด 420kW ออปชันหรูระดับเรือธง",
+          "text": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม?",
           "scope": [
             "main",
             "article",
@@ -4900,23 +4900,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "1. บทนำและภาพรวมในตลาดไทย (Introduction & Market Context)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "2. เจาะลึก 3 รุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "text": "เลือกรุ่นจากสิ่งที่ใช้ทุกวัน",
           "scope": [
             "main",
             "article"
@@ -4924,7 +4908,7 @@
         },
         {
           "level": 3,
-          "text": "Standard RWD",
+          "text": "Standard RWD: เริ่มที่ความต้องการพื้นฐาน",
           "scope": [
             "main",
             "article"
@@ -4932,7 +4916,7 @@
         },
         {
           "level": 3,
-          "text": "Long Range RWD",
+          "text": "Long Range RWD: เน้นระยะทางและอุปกรณ์ห้องโดยสาร",
           "scope": [
             "main",
             "article"
@@ -4940,7 +4924,7 @@
         },
         {
           "level": 3,
-          "text": "Performance AWD",
+          "text": "Performance AWD: ต้องการทั้งกำลังและช่วงล่างถุงลม",
           "scope": [
             "main",
             "article"
@@ -4948,7 +4932,7 @@
         },
         {
           "level": 2,
-          "text": "3. ดีไซน์ภายนอก แผงไฟ Stargate และมิติตัวถัง (Exterior Design & Dimensions)",
+          "text": "เทียบสเปกไทยทั้งสามรุ่นให้ตรงคอลัมน์",
           "scope": [
             "main",
             "article"
@@ -4956,7 +4940,7 @@
         },
         {
           "level": 2,
-          "text": "4. ภายในห้องโดยสาร ความสบาย และความจุสัมภาระ (Interior Space & Practicality)",
+          "text": "2,535 กก. กับ 637 hp ทำให้เรื่องยางสำคัญอย่างไร",
           "scope": [
             "main",
             "article"
@@ -4964,7 +4948,7 @@
         },
         {
           "level": 2,
-          "text": "5. ระบบอินโฟเทนเมนต์ หน้าจอ และระบบเสียง (Infotainment, Screens & Audio Tech)",
+          "text": "ถุงลมพร้อม CCD มีเฉพาะ Performance AWD",
           "scope": [
             "main",
             "article"
@@ -4972,7 +4956,7 @@
         },
         {
           "level": 2,
-          "text": "6. ขุมพลัง สมรรถนะ และการทดสอบขับขี่บนถนนไทย (Powertrain & Real Driving Performance)",
+          "text": "อุปกรณ์ที่ต้องลอง ไม่ใช่ดูแค่จำนวน",
           "scope": [
             "main",
             "article"
@@ -4980,7 +4964,7 @@
         },
         {
           "level": 2,
-          "text": "7. ช่วงล่างถุงลมอัจฉริยะ ความนุ่มนวล และการเก็บเสียง (Ride Quality, Suspension & NVH)",
+          "text": "800V และ AC 22 kW: ต้องดูระบบที่ใช้ชาร์จด้วย",
           "scope": [
             "main",
             "article"
@@ -4988,7 +4972,7 @@
         },
         {
           "level": 2,
-          "text": "8. สถาปัตยกรรม 800V แบตเตอรี่ และระบบชาร์จไวสุดขีด (800V Architecture & Charging)",
+          "text": "ระบบช่วยขับ: เช็กวิธีใช้และข้อจำกัดตอนรับรถ",
           "scope": [
             "main",
             "article"
@@ -4996,7 +4980,7 @@
         },
         {
           "level": 2,
-          "text": "9. ระบบช่วยเหลือการขับขี่และความปลอดภัย (Active Safety & ADAS - ZEEKR AD)",
+          "text": "ราคาและการรับประกัน: ขอเงื่อนไขเป็นลายลักษณ์อักษร",
           "scope": [
             "main",
             "article"
@@ -5004,63 +4988,7 @@
         },
         {
           "level": 2,
-          "text": "10. ตารางเปรียบเทียบกับคู่แข่งในไทย (Competitor Comparison)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Zeekr 7X 2026",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "11. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "EVSELECT Rating Breakdown",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "บทความและรีวิวที่เกี่ยวข้อง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphard",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Tesla Model Y L (Premium 6-Seater): รถ EV ครอบครัวที่ลงตัวที่สุด",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Zeekr X (Flagship AWD): พรีเมียมคอมแพกต์ 489 แรงม้า ดีไซน์สแกนดิเนเวีย",
+          "text": "รุ่นที่ควรลองก่อน ขึ้นอยู่กับโจทย์ของคุณ",
           "scope": [
             "main",
             "article"
@@ -5539,7 +5467,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "text": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม?",
           "scope": [
             "main",
             "article"
@@ -5714,7 +5642,7 @@
         },
         {
           "level": 2,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "text": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม?",
           "scope": [
             "main"
           ]
@@ -6076,7 +6004,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "text": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม?",
           "scope": [
             "main",
             "article"

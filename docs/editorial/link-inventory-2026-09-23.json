@@ -610,7 +610,7 @@
         },
         {
           "href": "/articles/zeekr-7x-2026-review",
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "text": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม?",
           "scope": [
             "html",
             "body",
@@ -629,7 +629,7 @@
         },
         {
           "href": "/articles/zeekr-7x-2026-review",
-          "text": "อ่านรีวิวฉบับเต็ม",
+          "text": "อ่านบทความ",
           "scope": [
             "html",
             "body",
@@ -1879,6 +1879,44 @@
         }
       ],
       "mainExternalLinks": [
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg",
+          "text": "JustAnotherCarDesigner (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "section",
+            "div",
+            "div",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "section",
+            "div",
+            "div",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
         {
           "href": "https://commons.wikimedia.org/wiki/File:2026_MG_4_Electric_X.jpg",
           "text": "Chanokchon (เปิดแท็บใหม่)",
@@ -11226,7 +11264,6 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
@@ -11241,6 +11278,74 @@
             "div",
             "main",
             "article",
+            "div",
+            "section",
+            "div",
+            "table",
+            "caption"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "วิธีเลือกยางและคอยล์โอเวอร์สำหรับ EV แรงและหนัก",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+          "text": "ความต่างของโช้ค ระบบปรับแรงหน่วง และถุงลม",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/optimizing-ev-suspension-thai-roads",
+          "text": "คู่มือประเมินอาการช่วงล่างบนถนนไทย",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-battery-care",
+          "text": "แนวทางดูแลและชาร์จแบตเตอรี่ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
             "p"
           ],
           "target": "",
@@ -11256,9 +11361,8 @@
             "main",
             "article",
             "div",
-            "div",
-            "div",
-            "div"
+            "section",
+            "p"
           ],
           "target": "",
           "rel": ""
@@ -11273,174 +11377,23 @@
             "main",
             "article",
             "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ Zeekr 7X",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "ค้นหาตามรุ่นรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/#vehicle-finder",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูทั้งหมด",
+          "text": "เลือกอ่านบทความ EV ตามเรื่องที่กำลังตัดสินใจ",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-009-review",
-          "text": "Luxury MPVIn-Depth Reviewรีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphardทดสอบขับจริง เบาะ Sofaro First Class ช่วงล่างถุงลม และเทียบตรงตัวกับ Toyota Alphard",
-          "scope": [
-            "html",
-            "body",
             "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/tesla-model-y-l-premium-6-seater-review",
-          "text": "6-Seater SUVNew Releaseรีวิว Tesla Model Y L (Premium 6-Seater): รถ EV ครอบครัวที่ลงตัวที่สุดเจาะลึกเลย์เอาต์เบาะ 2+2+2 Captain Seats และความอเนกประสงค์เพื่อครอบครัวยุคใหม่",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-x-review",
-          "text": "Compact CrossoverCompact Reviewรีวิว Zeekr X (Flagship AWD): พรีเมียมคอมแพกต์ 489 แรงม้า ดีไซน์สแกนดิเนเวียแพลตฟอร์ม SEA ลำโพง Yamaha 13 ตัว และสมรรถนะ 0-100 ใน 3.7 วินาที",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "footer"
+            "aside"
           ],
           "target": "",
           "rel": ""
@@ -11448,14 +11401,143 @@
       ],
       "mainExternalLinks": [
         {
-          "href": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg",
-          "text": "JustAnotherCarDesigner / Wikimedia Commons",
+          "href": "https://www.zeekrlife.com/en-th/models/7x",
+          "text": "สเปก ZEEKR 7X ประเทศไทย (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg",
+          "text": "JustAnotherCarDesigner (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.datocms-assets.com/142974/1756887361-7x-brochure-aug2025-correct.pdf",
+          "text": "โบรชัวร์ ZEEKR 7X ไทย หน้า 3–4 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.michelin.co.th/auto/advice/ev-guide/high-load-capacity-tyres",
+          "text": "คำอธิบายยางรับน้ำหนักสูงของ Michelin (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zeekrlife.com/en-th/models/7x",
+          "text": "มิติตัวถัง ZEEKR 7X (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zeekrlife.com/en-th/offers",
+          "text": "ข้อเสนอจาก ZEEKR ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
             "p"
           ],
           "target": "_blank",

@@ -99,3 +99,10 @@ The local draft replaces the Porsche Stories cover above with a real PCCB photog
 - Licence as recorded on Commons: CC BY 3.0, https://creativecommons.org/licenses/by/3.0/ . Article credits creator, source, licence and resize.
 - Viewed the downloaded image before inclusion: grey Highland Performance, front-left three-quarter view, whole vehicle and wheels visible. Does not establish current Thailand specifications or represent an EVSELECT road test.
 - Specification evidence is separate: Tesla Thai owner's manual for factory 20-inch front/rear tyre sizes.
+
+## ZEEKR 7X Thai specification article — 23 September 2026
+
+- Reused `public/images/editorial/zeekr-7x-photo.jpg`, 1920 × 1440, from [Zeekr 7X 011.jpg](https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg). JustAnotherCarDesigner, own work dated 10 April 2025, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Exact source/license record rechecked. SHA-256: `fc5cb0c0fc5dcf83ffc1056576f22818cc85a630a05613d9a09d0e4382b20fe7`.
+- Full grey car and both visible wheels retained in article and contained catalogue cards; no added crop or retouch. Caption identifies it as a foreign model illustration and does not assert Thai trim/equipment. Creator, source, licence and resize notice are visible.
+- Reused the 2024 Model 3 Performance photograph described above as the second tyre-guide example; full 1280 × 640 ratio and its CC BY 3.0 credit retained. Neither photo represents EVSELECT road testing or proves a tyre's load rating.
+- Both local originals and every article/card placement were individually inspected on final desktop/mobile rendering. Complete record: `editorial/zeekr-7x-reader-review-2026-09-23.md`. No production deployment is claimed.
