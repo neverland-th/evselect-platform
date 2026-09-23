@@ -33,3 +33,7 @@ Complete local desktop/mobile reader review and card review: `seal-reader-review
 ## Deepal S05 follow-up — 23 September 2026
 
 Complete local desktop/mobile article and card reading: `deepal-s05-reader-review-2026-09-23.md`. Four contextual links clicked to matching destinations; manufacturer/photo links keep protected new-tab semantics. Nine of fourteen affected legacy routes reviewed; five still pending. Current inventories clear at 31 routes / 42 views; no full-site editorial approval or deployment claimed.
+
+## Deepal NEW S07 follow-up — 23 September 2026
+
+Complete local reader record: `deepal-s07-reader-review-2026-09-23.md`. Replaced mixed-generation figures and unsupported test/score claims with the Thai NEW S07 brochure, clear photo provenance, practical buyer checks and four verified contextual links. Full article and changed-card desktop/mobile reading completed; mobile excerpt clipping fixed and final card reread. Ten of fourteen legacy routes reviewed, four remaining plus final catalogue/release/live gates. 31-route link and 42-view heading inventories clear; 81 referenced images, TypeScript and changed-file ESLint pass. No push or production deployment.

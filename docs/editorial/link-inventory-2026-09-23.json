@@ -983,7 +983,7 @@
         },
         {
           "href": "/articles/deepal-s07-review",
-          "text": "รีวิวรถ EV8 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV6 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -1000,7 +1000,7 @@
         },
         {
           "href": "/articles/deepal-s07-review",
-          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "text": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว",
           "scope": [
             "html",
             "body",
@@ -1980,6 +1980,46 @@
         },
         {
           "href": "https://commons.wikimedia.org/wiki/File:2026_MG_4_Electric_X.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2025_Deepal_S07.jpg",
           "text": "Chanokchon (เปิดแท็บใหม่)",
           "scope": [
             "html",
@@ -3084,32 +3124,14 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-battery-care",
+          "text": "การดูแลแบตเตอรี่และตั้งขีดจำกัดการชาร์จ",
           "scope": [
             "html",
             "body",
@@ -3118,174 +3140,204 @@
             "article",
             "div",
             "section",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ Deepal S07",
+          "href": "/articles/optimizing-ev-suspension-thai-roads",
+          "text": "วิธีแยกอาการช่วงล่างบนถนนไทย",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/#vehicle-finder",
-          "text": "ค้นหาตามรุ่นรถ",
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "แนวทางเลือกยางและ Coilover สำหรับรถ EV",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles/deepal-s05-review",
-          "text": "Smart Tech SUVIn-Depth Reviewรีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตรเจาะลึกเอสยูวีไฟฟ้าน้องใหม่สายแคมปิ้ง ออปชันไฮเทค และการชาร์จเร็ว 3C",
+          "text": "Deepal S05: เลือก BEV หรือ REEV ให้ตรงการใช้งาน",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles/geely-ex2-review",
-          "text": "Urban City EVIn-Depth Reviewรีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-linkสัมผัสแรกกับซิตี้คาร์ไฟฟ้าขับหลัง 116 แรงม้า ที่นุ่มนวลที่สุดในงบ 4 แสนบาท",
+          "href": "/",
+          "text": "EVSELECT",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/ev-battery-care",
-          "text": "Editorial GuideTips & Guideดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?เลือกขีดจำกัดการชาร์จให้ตรงรถ เข้าใจการใช้ AC/DC การจอดนาน และการอ่านระยะวิ่ง พร้อมตัวอย่างจากคู่มือ Tesla Model 3 และลิงก์ตรวจสอบด้วยตัวเอง",
-          "scope": [
-            "html",
-            "body",
             "div",
-            "main",
-            "article",
-            "section",
-            "div"
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
+          "text": "เลือกอ่านบทความรถ EV และช่วงล่างเรื่องอื่น",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "div",
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/contact",
+          "text": "ดูช่องทางติดต่อทีมงาน",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://api.www.changan.co.th/uploads/NEW_S07_Brochure_TH_b34490ecda.pdf",
+          "text": "สเปก Deepal NEW S07 ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.changan.co.th/th/deepal/s07-th/",
+          "text": "เว็บไซต์ CHANGAN Thailand (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2025_Deepal_S07.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Deepal_S07_IAA_2025_DSC_1894.jpg",
+          "text": "Alexander Migl (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],

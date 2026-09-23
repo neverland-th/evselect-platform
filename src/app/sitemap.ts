@@ -10,6 +10,7 @@ import { hybridEvArticle } from '@/lib/hybrid-ev-article';
 import { atto3Article } from '@/lib/atto3-article';
 import { sealArticle } from '@/lib/seal-article';
 import { deepalS05Article } from '@/lib/deepal-s05-article';
+import { deepalS07Article } from '@/lib/deepal-s07-article';
 import { publicSiteRoutes, siteOrigin } from '@/lib/public-site-routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(path === zeekr7xArticle.path ? { lastModified: zeekr7xArticle.updatedAt } : {}),
     ...(path === sealArticle.path ? { lastModified: sealArticle.updatedAt } : {}),
     ...(path === deepalS05Article.path ? { lastModified: deepalS05Article.updatedAt } : {}),
+    ...(path === deepalS07Article.path ? { lastModified: deepalS07Article.updatedAt } : {}),
     ...(path === atto3Article.path ? { lastModified: atto3Article.updatedAt } : {}),
     ...(path === hybridEvArticle.path ? { lastModified: hybridEvArticle.updatedAt } : {}),
   }));

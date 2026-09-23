@@ -15,6 +15,7 @@ import { hybridEvArticle } from '@/lib/hybrid-ev-article';
 import { atto3Article } from '@/lib/atto3-article';
 import { sealArticle } from '@/lib/seal-article';
 import { deepalS05Article } from '@/lib/deepal-s05-article';
+import { deepalS07Article } from '@/lib/deepal-s07-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -273,26 +274,27 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'deepal-s07-review',
-    title: 'รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?',
-    shortTitle: 'Changan Deepal S07',
-    excerpt: 'เจาะลึกเอสยูวีไซเบอร์พังก์ มอเตอร์หลัง 258 แรงม้า หลังคาแก้วพร้อมม่านไฟฟ้าเปิด-ปิดได้จริง จอ Sunflower 15.6 นิ้ว ชาร์จไว DC 167 kW และ Frunk หน้า 125 ลิตร',
+    title: deepalS07Article.title,
+    shortTitle: 'Deepal NEW S07',
+    excerpt: 'แยก NEW S07 จากรุ่นก่อน ตรวจสเปกไทย พร้อมจุดที่ควรลองเรื่องจอ ม่านไฟฟ้า ล้อ 20 นิ้วและการชาร์จก่อนซื้อ',
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'suv',
-    segmentName: 'สมาร์ทเอสยูวีขนาดกลาง D-Segment',
-    image: '/images/reviews/deepal-s07-hero.jpg',
-    date: '2026-08-25',
-    dateDisplay: '25 ส.ค. 2569',
-    readTime: '8 นาที',
-    rating: 8.8,
-    ratingText: '8.8 / 10',
-    priceRange: '1,099,000 – 1,399,000 บาท',
-    highlights: ['258 hp / 320 Nm', 'ชาร์จไว DC 167 kW', 'ม่านหลังคาไฟฟ้ากันร้อน', 'Frunk หน้า 125 ลิตร'],
+    segmentName: 'เอสยูวีไฟฟ้า 5 ที่นั่ง',
+    image: deepalS07Article.image,
+    imageAlt: deepalS07Article.imageAlt,
+    date: deepalS07Article.updatedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    publishedAt: deepalS07Article.publishedAt,
+    readTime: deepalS07Article.readTime,
+    rating: null,
+    priceRange: 'ขอใบเสนอราคาตรงรุ่นและวันที่ซื้อ',
+    highlights: ['แยก NEW S07 จากรุ่นก่อน', 'จอ ม่านไฟฟ้าและล้อ 20 นิ้ว', 'ข้อมูลจากโบรชัวร์ไทย', 'ตรวจการชาร์จและรถคันที่จะรับ'],
     featured: false,
-      brand: 'EV',
-      badge: 'Thailand focus model',
-      accessoryOpportunity: 'พรม TPE, ถาดคอนโซล, กันรอยชายประตู',
-      fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
+    brand: 'Deepal',
+    badge: 'คู่มือเลือกซื้อจากสเปกไทย',
+    accessoryOpportunity: 'ตรวจรถจริงก่อนเลือกอุปกรณ์เสริม',
+    fitmentGate: 'ยืนยัน NEW S07 ปีผลิตและอุปกรณ์กับรถจริง',
   },
   {
     slug: 'byd-atto-3-review',
@@ -1123,6 +1125,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'deepal-s07-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ NEW S07 ในไทย ปี 2025: <a href={deepalS07Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={deepalS07Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'deepal-s05-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Max ในไทย ปี 2025: <a href={deepalS05Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS05Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={deepalS05Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS05Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ · ป้ายในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   {article.slug === 'byd-seal-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Premium ในไทย ปี 2023: <a href={sealArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{sealArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={sealArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{sealArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ · ป้ายในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   {article.slug === 'byd-atto-3-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพรถไทยปี 2024: <a href={atto3Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{atto3Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={atto3Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{atto3Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
@@ -1140,7 +1143,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>

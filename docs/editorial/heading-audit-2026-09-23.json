@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T11:51:01.681718+00:00",
+  "checkedAt": "2026-09-23T12:06:54.786068+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -363,7 +363,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "text": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว",
           "scope": [
             "main",
             "article"
@@ -815,7 +815,7 @@
         },
         {
           "level": 1,
-          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย วิ่งจริงไกลแค่ไหน?",
+          "text": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว",
           "scope": [
             "main",
             "article",
@@ -824,7 +824,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "text": "เริ่มจากสเปก NEW S07 ให้ตรงกับรถที่จะซื้อ",
           "scope": [
             "main",
             "article"
@@ -832,7 +832,7 @@
         },
         {
           "level": 2,
-          "text": "1. ภาพรวม & บริบทในตลาดรถยนต์ไฟฟ้าไทย",
+          "text": "ห้องโดยสาร: ลองใช้จริงให้มากกว่าดูออปชัน",
           "scope": [
             "main",
             "article"
@@ -840,23 +840,7 @@
         },
         {
           "level": 2,
-          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Deepal S07 Standard BEV",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Deepal S07 L (Long Range)",
+          "text": "ชาร์จ 15 นาที ต้องเริ่มและจบที่กี่เปอร์เซ็นต์?",
           "scope": [
             "main",
             "article"
@@ -864,7 +848,7 @@
         },
         {
           "level": 2,
-          "text": "3. ดีไซน์ภายนอก ระบบไฟส่องสว่าง และมิติตัวถัง",
+          "text": "ล้อ 20 นิ้วและช่วงล่าง ควรลองตรงไหน?",
           "scope": [
             "main",
             "article"
@@ -872,143 +856,7 @@
         },
         {
           "level": 2,
-          "text": "4. ห้องโดยสาร หน้าจอ Sunflower 15.6 นิ้ว และพื้นที่สัมภาระ",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "หลังคาแก้ว + ม่านบังแดดไฟฟ้า",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "พื้นที่เก็บสัมภาระ Frunk + Trunk",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "5. ขุมพลังมอเตอร์ไฟฟ้า สมรรถนะ และอัตราเร่ง 0-100",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "6. ฟีลลิ่งช่วงล่าง การซับแรงกระแทก และการเก็บเสียง NVH บนถนนไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การซับแรงกระแทกคอสะพานและรอยต่อถนน (Bumps & Expansion Joints)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การทรงตัวในโค้งความเร็วสูง (High-Speed Cornering & Body Roll)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การเก็บเสียงรบกวน NVH (Noise, Vibration, Harshness)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "7. แบตเตอรี่ ระยะทางวิ่งจริง และความเร็วในการชาร์จ AC / DC",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ผลทดสอบระยะทางวิ่งจริง (Real-World Highway Range Test)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ระบบความปลอดภัยอัจฉริยะและระบบช่วยเหลือการขับขี่ ADAS L2+",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Changan Deepal S07",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "EVSELECT Rating Breakdown",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "บทความและรีวิวที่เกี่ยวข้อง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "text": "ควรไปต่อกับ S07 หรือเทียบรุ่นอื่นก่อน?",
           "scope": [
             "main",
             "article"
@@ -4979,7 +4827,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "text": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว",
           "scope": [
             "main",
             "article"
@@ -5184,7 +5032,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "text": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว",
           "scope": [
             "main",
             "article"
@@ -5516,7 +5364,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "text": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว",
           "scope": [
             "main",
             "article"
