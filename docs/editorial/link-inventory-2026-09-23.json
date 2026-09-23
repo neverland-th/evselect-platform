@@ -1564,7 +1564,7 @@
         },
         {
           "href": "/articles/shock-absorber-types-monotube-twintube-air-ev",
-          "text": "ระบบช่วงล่าง10 นาทีระบบช่วงล่างและสมรรถนะ",
+          "text": "ระบบช่วงล่าง8 นาทีระบบช่วงล่างและสมรรถนะ",
           "scope": [
             "html",
             "body",
@@ -1581,7 +1581,7 @@
         },
         {
           "href": "/articles/shock-absorber-types-monotube-twintube-air-ev",
-          "text": "เจาะลึกประเภทโช้คอัพสำหรับรถยนต์ไฟฟ้า: Monotube vs Twin-tube vs Air Suspension",
+          "text": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา",
           "scope": [
             "html",
             "body",
@@ -1982,6 +1982,46 @@
         {
           "href": "https://creativecommons.org/licenses/by-sa/4.0/",
           "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg",
+          "text": "JustAnotherCarDesigner (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "text": "CC0 1.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9610,51 +9650,16 @@
       "mainInternalLinks": [
         {
           "href": "/",
-          "text": "ดูโช้คอัพ Monotube ตรงรุ่น",
+          "text": "EVSELECT",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "header",
             "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "ดูชุดอัปเกรดช่วงล่าง SUV",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "อ่านรีวิวช่วงล่าง Zeekr 7X",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div"
+            "span"
           ],
           "target": "",
           "rel": ""
@@ -9668,24 +9673,105 @@
             "div",
             "main",
             "article",
-            "footer",
             "div",
-            "div",
-            "div"
+            "section",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles",
-          "text": "กลับไปหน้ารวมบทความระบบช่วงล่าง",
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "ช่องปรับคอยล์โอเวอร์และสิ่งที่ต้องเช็กให้ตรงรถ",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "วิธีแยก Bump กับ Rebound และแนวทางปรับแดมเปอร์",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+          "text": "วิธีอ่านใบตั้งศูนย์และแยก Camber/Toe",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ol",
+            "li"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles?category=suspension",
+          "text": "เลือกอ่านคู่มือช่วงล่างต่อ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside"
           ],
           "target": "",
           "rel": ""
@@ -9693,15 +9779,50 @@
       ],
       "mainExternalLinks": [
         {
-          "href": "https://commons.wikimedia.org/wiki/File:Damper_1.jpg",
-          "text": "TEy~commonswiki / Wikimedia Commons",
+          "href": "https://kyb.com.au/faqs/",
+          "text": "คำอธิบายโครงสร้างจาก KYB (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "header",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.kwsuspensions.com/uk/technology/damping-technology",
+          "text": "KW V3 ที่ใช้โครงสร้าง Twin-tube (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Damper_1.jpg",
+          "text": "TEy~commonswiki / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
             "p"
           ],
           "target": "_blank",
@@ -9709,15 +9830,291 @@
         },
         {
           "href": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "text": "CC BY-SA 3.0",
+          "text": "CC BY-SA 3.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "header",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
             "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://workshop.bilstein.com/en-us/shock-absorber-failure-analysis-approaches/",
+          "text": "BILSTEIN อธิบายในงานสตรัท MacPherson (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.kwsuspensions.com/uk/technology/damping-technology",
+          "text": "KW ระบุทั้งถังในตัว ถังติดกระบอก และถังต่อสาย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zf.com/products/en/cars/products_64273.html",
+          "text": "ZF Continuous Damping Control (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.magneride.com/",
+          "text": "MagneRide ของ BWI (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.monroe.com/en-eu/products/light-vehicles/springs/air-springs.html",
+          "text": "Monroe อธิบายการรองรับภาระบรรทุกของ Air spring (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg",
+          "text": "JustAnotherCarDesigner / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zeekrlife.com/en-th/models/7x",
+          "text": "สเปก ZEEKR 7X ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.datocms-assets.com/142974/1756887361-7x-brochure-aug2025-correct.pdf",
+          "text": "โบรชัวร์ไทย สิงหาคม 2025 หน้า 3 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://kyb.com.au/faqs/",
+          "text": "KYB — หลักการทำงานและโครงสร้าง Twin-tube/Monotube (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.kwsuspensions.com/uk/technology/damping-technology",
+          "text": "KW — โครงสร้างและระบบปรับของผลิตภัณฑ์แต่ละกลุ่ม (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://workshop.bilstein.com/en-us/shock-absorber-failure-analysis-approaches/",
+          "text": "BILSTEIN — โครงสร้างหัวกลับและการวิเคราะห์ความเสียหาย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zf.com/products/en/cars/products_64273.html",
+          "text": "ZF — การควบคุมแรงหน่วง CDC (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.magneride.com/",
+          "text": "BWI — เทคโนโลยี MagneRide (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.monroe.com/en-eu/products/light-vehicles/springs/air-springs.html",
+          "text": "Monroe — Air spring (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.datocms-assets.com/142974/1756887361-7x-brochure-aug2025-correct.pdf",
+          "text": "ZEEKR — โบรชัวร์ประเทศไทย ตารางอุปกรณ์และรุ่นย่อย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "ul",
+            "li"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"

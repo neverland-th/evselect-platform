@@ -1,5 +1,12 @@
 # Editorial image provenance
 
+## Shock types article — 23 September 2026 draft
+
+- Complete desktop/mobile and changed-card image inspection: `editorial/shock-types-reader-review-2026-09-23.md`.
+- Retained `gas-damper-photo.jpg`, 400 × 525. Exact [Commons file](https://commons.wikimedia.org/wiki/File:Damper_1.jpg) lists TEy~commonswiki as assumed author based on copyright claims and allows [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Full image at a maximum 200 CSS px wide; credit qualifier and 2006 archive date are visible. It illustrates external hardware, not EV compatibility. SHA-256 `cc7ae518959e15a5aead1274300ced380a5f825627bb4becd8eac81ef448db1b`.
+- Reused `images/editorial/zeekr-7x-photo.jpg`, 1920 × 1440, for the Thai-trim example and contained catalogue image. [Exact Commons file](https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg): JustAnotherCarDesigner, own work, 10 April 2025, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Caption separates model illustration from Thai trim/equipment proof. SHA-256 `fc5cb0c0fc5dcf83ffc1056576f22818cc85a630a05613d9a09d0e4382b20fe7`.
+- Two original simplified SVG structure drawings replace numerical ranking diagrams. They are not vendor artwork, production dimensions or test data. No new image files or image transformations were authored here.
+
 ## Camber/alignment photograph and diagrams — 23 September 2026 draft
 
 - Retained local `public/images/articles/wheel-alignment-lada.jpg`, 1624 × 875 JPEG. SHA-256 `3c81da050ea31ad973cbdbde7b0794edc29c4cb49af50e5b1206c4364a20e39e`.

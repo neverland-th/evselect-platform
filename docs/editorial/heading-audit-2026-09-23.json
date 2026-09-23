@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T09:04:29.571442+00:00",
+  "checkedAt": "2026-09-23T09:31:07.988705+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -450,7 +450,7 @@
         },
         {
           "level": 4,
-          "text": "เจาะลึกประเภทโช้คอัพสำหรับรถยนต์ไฟฟ้า: Monotube vs Twin-tube vs Air Suspension",
+          "text": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา",
           "scope": [
             "main",
             "article"
@@ -4250,7 +4250,7 @@
         },
         {
           "level": 1,
-          "text": "เจาะลึกประเภทโช้คอัพ: Monotube vs Twin-tube vs Inverted vs ถุงลมอัจฉริยะ (Air Suspension) แบบไหนตอบโจทย์ EV มากที่สุด?",
+          "text": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา",
           "scope": [
             "main",
             "article",
@@ -4259,24 +4259,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปความแตกต่างเชิงโครงสร้างสำหรับรถ EV (Architecture Summary)",
-          "scope": [
-            "main",
-            "article",
-            "header"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "1. ผ่าโครงสร้างภายใน: กายวิภาค Monotube vs Twin-tube vs Inverted",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Internal Architecture: Monotube vs Twin-tube vs Inverted Monotube",
+          "text": "สามคำถามที่ต้องแยก ก่อนเทียบราคา",
           "scope": [
             "main",
             "article"
@@ -4284,7 +4267,23 @@
         },
         {
           "level": 2,
-          "text": "2. ตารางเปรียบเทียบสถาปัตยกรรมโช้คอัพ 5 รูปแบบ (Comprehensive Engineering Matrix)",
+          "text": "Monotube กับ Twin-tube ต่างกันตรงไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Twin-tube: กระบอกสองชั้น",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Monotube: กระบอกเดียว",
           "scope": [
             "main",
             "article"
@@ -4292,31 +4291,7 @@
         },
         {
           "level": 2,
-          "text": "3. สถาปัตยกรรมช่วงล่างอัจฉริยะ: CDC vs Magnetorheological vs Dual-Chamber Air",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "1. Continuous Damping Control (CDC)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "2. Magnetorheological (MagneRide)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "3. Dual-Chamber Air Suspension",
+          "text": "Inverted และซับแทงก์ บอกการออกแบบเพิ่มอีกชั้น",
           "scope": [
             "main",
             "article"
@@ -4324,7 +4299,7 @@
         },
         {
           "level": 2,
-          "text": "4. บทวิเคราะห์ความทนทานและการระบายความร้อนในสภาพภูมิอากาศเมืองไทย",
+          "text": "แดมเปอร์ไฟฟ้าไม่ใช่ถุงลม และแต่ละระบบใช้วิธีต่างกัน",
           "scope": [
             "main",
             "article"
@@ -4332,7 +4307,23 @@
         },
         {
           "level": 3,
-          "text": "วิกฤตความร้อนสะสมของโช้คอัพบนผิวถนนไทย (Tropical Heat Challenge)",
+          "text": "CDC: ปรับแรงหน่วงผ่านวาล์ว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "MagneRide: ใช้ของไหล MR",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Air spring: ถุงลมทำหน้าที่สปริง",
           "scope": [
             "main",
             "article"
@@ -4340,31 +4331,23 @@
         },
         {
           "level": 2,
-          "text": "5. คำแนะนำในการเลือกอัปเกรดโช้คอัพให้ตรงรุ่นรถ EV ของคุณ",
+          "text": "ตัวอย่างสเปกไทย: ZEEKR 7X ต้องดูรุ่นย่อย",
           "scope": [
             "main",
             "article"
           ]
         },
         {
-          "level": 3,
-          "text": "Tesla Model 3 / BYD Seal / MG4",
+          "level": 2,
+          "text": "ก่อนซื้อ ให้ร้านตอบห้าข้อนี้ให้ได้",
           "scope": [
             "main",
             "article"
           ]
         },
         {
-          "level": 3,
-          "text": "Tesla Model Y / Deepal S07 / BYD Atto 3",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Zeekr 009 / Zeekr 7X / Denza D9",
+          "level": 2,
+          "text": "แหล่งอ้างอิงและขอบเขตของบทความ",
           "scope": [
             "main",
             "article"
@@ -6304,7 +6287,7 @@
         },
         {
           "level": 3,
-          "text": "เจาะลึกประเภทโช้คอัพสำหรับรถยนต์ไฟฟ้า: Monotube vs Twin-tube vs Air Suspension",
+          "text": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา",
           "scope": [
             "main",
             "article"

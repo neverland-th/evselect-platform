@@ -8,6 +8,7 @@ import { powertrainArticle } from '@/lib/powertrain-article';
 import { batteryArticle } from '@/lib/battery-article';
 import { mg4Article } from '@/lib/mg4-article';
 import { camberArticle } from '@/lib/camber-article';
+import { shockTypesArticle } from '@/lib/shock-types-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -553,37 +554,38 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'shock-absorber-types-monotube-twintube-air-ev',
-    title: 'เจาะลึกประเภทโช้คอัพสำหรับรถยนต์ไฟฟ้า: Monotube vs Twin-tube vs Air Suspension',
-    shortTitle: 'ประเภทโช้คอัพ Monotube vs Twin-tube',
-    subtitle: 'เปรียบเทียบโครงสร้างภายใน ข้อดี-ข้อจำกัด และระบบวาล์วแปรผันอัจฉริยะ',
-    excerpt: 'เปรียบเทียบข้อดี-ข้อเสียเชิงวิศวกรรม โครงสร้างลูกสูบเดี่ยว Monotube แรงดันไนโตรเจนสูง vs Twin-tube วาล์วฐานคู่ และระบบถุงลม Dual-Chamber Air Suspension พร้อมระบบแดมเปอร์แปรผัน CDC ในรถ EV พรีเมียม',
+    title: shockTypesArticle.title,
+    shortTitle: 'เลือกโช้ค EV ให้ตรงปัญหา',
+    subtitle: 'แยกโครงสร้างโช้ค แรงหน่วง และถุงลมก่อนเลือกชุด',
+    excerpt: shockTypesArticle.description,
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'dampers',
-    segmentName: '🔩 เทคโนโลยีโช้คอัพ & แอร์สปริง',
-    image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop',
-    date: '2026-08-27',
-    dateDisplay: '27 ส.ค. 2569',
-    publishedAt: '2026-08-27',
-    author: 'EVSELECT Hardware Lab',
-    readTime: '10 นาที',
-    rating: 9.5,
-    ratingText: 'Shock Absorber Architecture',
-    priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'Piston Diameter & Gas Pressure',
+    segmentName: 'โครงสร้างโช้คและถุงลม',
+    image: shockTypesArticle.image,
+    imageAlt: shockTypesArticle.imageAlt,
+    imageFit: 'contain',
+    heroImage: shockTypesArticle.image,
+    date: '2026-09-23',
+    dateDisplay: '23 ก.ย. 2569',
+    publishedAt: shockTypesArticle.publishedAt,
+    author: 'EVSELECT',
+    readTime: shockTypesArticle.readTime,
+    rating: null,
+    priceRange: 'คู่มือก่อนเลือกชุด',
+    performanceText: 'โครงสร้าง · แรงหน่วง · สปริง',
     highlights: [
-      'Monotube Large Piston & Heat Dissipation',
-      'Twin-tube Internal Construction & Cavitation Risk',
-      'Inverted Monotube Unsprung Mass Reduction',
-      'Dual-Chamber Air Suspension + CDC System'
+      'แยก Monotube / Twin-tube โดยไม่จัดเกรดจากชื่อ',
+      'CDC และ MagneRide ต่างกันอย่างไร',
+      'ถุงลม ZEEKR 7X ไทย ต้องดูรุ่นย่อย',
+      'ห้าคำถามก่อนเปลี่ยนช่วงล่าง'
     ],
     featured: false,
-    brand: 'RACECAR SHOCK LAB',
-    badge: 'Hardware Architecture',
-    tags: ['Shock Absorber Types', 'Monotube', 'Twin Tube', 'Air Suspension', 'CDC Damper', 'FSD Valve'],
-    accessoryOpportunity: 'โช้คอัพ Monotube ตรงรุ่น, ชุดอัปเกรดถุงลมไฟฟ้า, วาล์ว FSD อัตโนมัติ',
-    fitmentGate: 'ตรวจสอบขนาดรูยึด Top Mount และขายึดสายเซนเซอร์ ABS / เบรก',
+    brand: 'คู่มือหลายแบรนด์',
+    badge: 'รู้ก่อนเปลี่ยนโช้ค',
+    tags: ['Monotube', 'Twin-tube', 'Inverted', 'Air Suspension', 'CDC', 'MagneRide'],
+    accessoryOpportunity: 'เลือกระบบให้ตรงอาการ พร้อมดูการติดตั้งและบริการหลังการขาย',
+    fitmentGate: 'ยืนยันรหัสสินค้า รุ่น ปี รุ่นย่อย น้ำหนักเพลา และระบบไฟฟ้าเดิมจากผู้ผลิต',
   },
   {
     slug: 'optimizing-ev-suspension-thai-roads',
@@ -1118,6 +1120,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 <div>
                   {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
                   {article.slug === 'ev-camber-adjustment-wheel-alignment-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ LADA บนแท่นตั้งศูนย์ ไม่ใช่รถ EV: <a href={camberArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={camberArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
+                  {article.slug === 'shock-absorber-types-monotube-twintube-air-ev' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพประกอบ ZEEKR 7X ไม่ยืนยันรุ่นย่อยไทย: <a href={shockTypesArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{shockTypesArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={shockTypesArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{shockTypesArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'ev-battery-care' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพแชสซี Volkswagen ID.3: <a href={batteryArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={batteryArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดสำหรับเว็บ</p>}
                   {article.slug === 'mg4-electric-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ MG4 X ในไทย มี.ค. 2569: <a href={mg4Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={mg4Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด · ป้ายราคาในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
@@ -1127,7 +1130,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   </div>
 
                   <ArticleHeading className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
-                    <Link href={`/articles/${article.slug}`}>{article.title}</Link>
+                    <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
 
