@@ -7,6 +7,7 @@ import { brakeArticle } from '@/lib/brake-article';
 import { powertrainArticle } from '@/lib/powertrain-article';
 import { batteryArticle } from '@/lib/battery-article';
 import { mg4Article } from '@/lib/mg4-article';
+import { camberArticle } from '@/lib/camber-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -484,37 +485,36 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'ev-camber-adjustment-wheel-alignment-guide',
-    title: 'คู่มือการตั้งมุมแคมเบอร์ (Camber) และศูนย์ล้อรถ EV: Static vs Dynamic Camber และการคุม Contact Patch',
+    title: camberArticle.title,
     shortTitle: 'คู่มือตั้งมุมแคมเบอร์ & ศูนย์ล้อ EV',
-    subtitle: 'ศาสตร์การเซ็ตศูนย์ล้อและ Camber Gain Curve เพื่อเสถียรภาพสูงสุดตามหลัก Suspension Secrets',
-    excerpt: 'เข้าใจพฤติกรรมหน้ายางรถ EV ใต้แรงเหวี่ยงหนีศูนย์ การชดเชย Camber Gain Curve ตามมุม Roll ของตัวถัง การเซ็ตติ้ง Toe-in/Toe-out และ Caster เพื่อลดอาการกินยางและเพิ่มเสถียรภาพตามหลัก Suspension Secrets',
+    subtitle: 'เข้าใจมุมล้อและอ่านใบตั้งศูนย์ก่อนตัดสินใจเปลี่ยนอะไหล่',
+    excerpt: camberArticle.description,
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'alignment',
     segmentName: '📏 เรขาคณิตศูนย์ล้อ & แคมเบอร์',
-    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200&auto=format&fit=crop',
-    date: '2026-08-27',
-    dateDisplay: '27 ส.ค. 2569',
-    publishedAt: '2026-08-27',
-    author: 'EVSELECT Kinematics Lab',
-    readTime: '11 นาที',
-    rating: 9.6,
-    ratingText: 'Suspension Secrets Spec',
+    image: camberArticle.image,
+    imageAlt: camberArticle.imageAlt,
+    imageFit: 'contain',
+    heroImage: camberArticle.image,
+    date: camberArticle.updatedAt,
+    dateDisplay: '22 ก.ย. 2569',
+    publishedAt: camberArticle.publishedAt,
+    author: 'EVSELECT',
+    readTime: camberArticle.readTime,
+    rating: null,
     priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'Camber Gain & Contact Patch',
+    performanceText: 'Camber · Toe · Caster',
     highlights: [
-      'Static vs Dynamic Camber ภายใต้ Body Roll',
-      'Camber Gain Curve ต่อองศาการเอียงตัวถัง',
-      'Contact Patch Pressure Distribution',
-      'การปรับ Toe & Caster สำหรับแชสซี EV หนัก'
+      'ยางสึกด้านเดียวไม่ได้บอกสาเหตุเดียว',
+      'อ่านค่ารายล้อ หน่วย และเงื่อนไขก่อน–หลัง',
+      'ตรวจสเปกตรงรุ่นก่อนซื้ออาร์มแต่ง'
     ],
     featured: false,
-    brand: 'SUSPENSION SECRETS',
+    brand: 'EVSELECT',
     badge: 'Kinematics & Alignment',
-    tags: ['Camber Adjustment', 'Wheel Alignment', 'Dynamic Camber', 'Contact Patch', 'Toe and Caster', 'Suspension Secrets'],
-    accessoryOpportunity: 'Pillowball Camber Plates, อาร์มปรับมุมแคมเบอร์หลังปรับเกลียว, สลักแคมเบอร์แต่ง',
-    fitmentGate: 'ตรวจสอบระยะเคลียร์แลนซ์ซุ้มล้อและโช้คเมื่อปรับ Negative Camber เกิน -1.8 องศา',
+    tags: ['Camber', 'Wheel Alignment', 'Toe', 'Caster', 'ใบตั้งศูนย์'],
+    fitmentGate: 'ให้ร้านยืนยันรุ่น ปี รุ่นย่อย และเงื่อนไขที่ใช้วัด',
   },
   {
     slug: 'ev-damper-tuning-bump-rebound-guide',
@@ -1117,6 +1117,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
                   {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
+                  {article.slug === 'ev-camber-adjustment-wheel-alignment-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ LADA บนแท่นตั้งศูนย์ ไม่ใช่รถ EV: <a href={camberArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={camberArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'ev-battery-care' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพแชสซี Volkswagen ID.3: <a href={batteryArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={batteryArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดสำหรับเว็บ</p>}
                   {article.slug === 'mg4-electric-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ MG4 X ในไทย มี.ค. 2569: <a href={mg4Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={mg4Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด · ป้ายราคาในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">

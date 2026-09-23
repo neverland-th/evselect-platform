@@ -1,5 +1,13 @@
 # Editorial image provenance
 
+## Camber/alignment photograph and diagrams — 23 September 2026 draft
+
+- Retained local `public/images/articles/wheel-alignment-lada.jpg`, 1624 × 875 JPEG. SHA-256 `3c81da050ea31ad973cbdbde7b0794edc29c4cb49af50e5b1206c4364a20e39e`.
+- [Exact creator page](https://commons.wikimedia.org/wiki/File:LADA_Vesta_Sport,_Wheel_alignment.jpg): Dmitry Racer, own work, LADA Vesta Sport, 23 August 2019, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Rechecked on 22 September.
+- Individually inspected in the complete final desktop/mobile article and affected catalogue card. Black LADA on alignment lift with wheel targets; the full ratio is retained. Captions explicitly distinguish this non-EV illustration from an EVSELECT workshop or Thai-car fitment demonstration. Creator and licence remain linked, and resizing is declared.
+- Three original inline SVG drawings now explain negative/zero/positive camber. Each is labelled as an exaggerated terminology illustration, not a measured grip/contact-pressure result. No manufacturer or laboratory simulation is implied.
+- Reader record: `editorial/camber-reader-review-2026-09-23.md`. Local draft only.
+
 ## MG4 MY2026 Thai photograph — 22 September 2026 draft
 
 - Local asset: `public/images/reviews/mg4-my2026-x-thailand-chanokchon.jpg`, Wikimedia 1280 × 720 JPEG thumbnail. SHA-256: `afd07de4f01999c9c27d7e765d92b585f99dfe232859ac5a06b88a6500804112`.

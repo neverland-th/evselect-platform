@@ -1,0 +1,6772 @@
+{
+  "checkedAt": "2026-09-23T09:04:29.571442+00:00",
+  "base": "http://127.0.0.1:3117",
+  "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
+  "catalogueFilterUrls": [
+    "http://127.0.0.1:3117/articles?category=all&segment=city",
+    "http://127.0.0.1:3117/articles?category=all&segment=hatchback",
+    "http://127.0.0.1:3117/articles?category=all&segment=sedan",
+    "http://127.0.0.1:3117/articles?category=all&segment=suv",
+    "http://127.0.0.1:3117/articles?category=guides",
+    "http://127.0.0.1:3117/articles?category=reviews",
+    "http://127.0.0.1:3117/articles?category=reviews&segment=city",
+    "http://127.0.0.1:3117/articles?category=reviews&segment=hatchback",
+    "http://127.0.0.1:3117/articles?category=reviews&segment=sedan",
+    "http://127.0.0.1:3117/articles?category=reviews&segment=suv",
+    "http://127.0.0.1:3117/articles?category=suspension"
+  ],
+  "results": [
+    {
+      "url": "http://127.0.0.1:3117/",
+      "finalUrl": "http://127.0.0.1:3117/",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เริ่มจากรถของคุณแล้วค่อยตัดสินใจ",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "Model 3 รุ่นไหนตรงกับการใช้งานของคุณ",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "วันนี้คุณกำลังหาคำตอบเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเลือกรถ EV",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "มีรถแล้ว อยากแก้ปัญหา",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รออุปกรณ์เปิดตัว",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คำตอบที่คนใช้รถกำลังหา",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Tesla Model 3 Highland",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ดูแลแบตเตอรี่รถ EV ในชีวิตประจำวัน",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ของแต่ง EVที่คุณต้องมี!",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สำรวจคู่มือตามระบบของรถ",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ช่วงล่างและแดมเปอร์",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ยาง คอยล์โอเวอร์ และศูนย์ล้อ",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เทคนิคใช้รถ EV",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ฟังจากคนใช้รถก่อน",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ตรวจข้อมูลให้พร้อม",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ค่อยเปิดจำหน่าย",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ข้อมูลไหนมาจากไหน",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อยากให้เราศึกษาเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/about",
+      "finalUrl": "http://127.0.0.1:3117/about",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เกี่ยวกับเรา",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านข้อมูลพร้อมที่มาและข้อจำกัด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles",
+      "finalUrl": "http://127.0.0.1:3117/articles",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวทั้งหมด(21 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิวรถ EV",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว BYD Seal (AWD Performance & Premium): สปอร์ตซีดานไฟฟ้า 530 แรงม้า ที่เขย่าบัลลังก์รถยุโรป",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว BYD Atto 3 (Extended Range & Dynamic): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่า น่าใช้แค่ไหนในปี 2026?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Changan Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง และ Frunk หน้า 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ระบบช่วงล่างและสมรรถนะ",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "เทคนิคการขับขี่รถ EV สมรรถนะสูง: Weight Transfer, Trail Braking และการควบคุม Instant Torque บนแทร็กและโค้ง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "การเปลี่ยนผ่านจาก Hybrid สู่ EV: พลศาสตร์แชสซี จุดศูนย์ถ่วง (CoG) และ Polar Moment of Inertia",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ยางกินใน ต้องแก้แคมเบอร์ไหม? อ่านใบตั้งศูนย์ EV ก่อนเปลี่ยนอะไหล่",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "เจาะลึกประเภทโช้คอัพสำหรับรถยนต์ไฟฟ้า: Monotube vs Twin-tube vs Air Suspension",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รอยต่อคอสะพาน ลอนคลื่น และลูกระนาด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "เลือกยางและคอยล์โอเวอร์ EV อย่างไร ให้รับทั้งน้ำหนักและแรงม้า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "คู่มือและเทคนิค",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/byd-atto-3-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/byd-atto-3-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว BYD Atto 3 สเปกไทย (Standard / Premium / Extended Range): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหนในปี 2026?",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. บทนำและภาพรวมในตลาดไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BYD Atto 3 Standard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BYD Atto 3 Premium",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Atto 3 Extended Range",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก Dragon Face และมิติตัวถัง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ภายในห้องโดยสาร Muscle Streamline, จอหมุน 15.6 นิ้ว และม่านไฟฟ้า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ขุมพลังมอเตอร์ สมรรถนะ และฟีลลิ่งการขับขี่บนถนนไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. เปรียบเทียบกับคู่แข่งในกลุ่มคอมแพกต์เอสยูวี (Head-to-Head)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เทียบกับ MG ZS EV",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เทียบกับ ORA Good Cat",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความคุ้มค่าบนถนนไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. แบตเตอรี่ Blade Battery, ระยะทางวิ่งจริง และการชาร์จไฟ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (ADAS)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ BYD Atto 3 สเปกไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว BYD Seal สเปกไทย 3 รุ่นย่อย: สปอร์ตซีดานไฟฟ้า 530 แรงม้า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว MG4 Electric สเปกไทย: ขับหลัง 50:50 แฮทช์แบ็กไฟฟ้าที่ขับสนุกที่สุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Deepal S07 สเปกไทย: สมาร์ทเอสยูวีพรีเมียม ประตูไร้กรอบ ขับหลัง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/byd-seal-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/byd-seal-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว BYD Seal สเปกไทย 3 รุ่นย่อย (Dynamic / Premium / AWD Performance): สปอร์ตซีดานไฟฟ้า 530 แรงม้า เขย่าบัลลังก์ D-Segment ยุโรป",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. บทนำและภาพรวมในตลาดไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BYD Seal Dynamic",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BYD Seal Premium",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BYD Seal AWD Performance",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก แสงไฟ และมิติตัวถัง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ภายในห้องโดยสาร ความสบาย และระบบอินโฟเทนเมนต์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ขุมพลังมอเตอร์ สมรรถนะ และฟีลลิ่งการขับขี่",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. เปรียบเทียบกับคู่แข่งโดยตรงในตลาดไทย (Head-to-Head)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เทียบกับ Tesla Model 3",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เทียบกับ Deepal SL03",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความคุ้มค่าบนถนนไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. แบตเตอรี่ Blade Battery, ระยะทางวิ่งจริง และการชาร์จไฟ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (ADAS)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ BYD Seal สเปกไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Tesla Model 3 Highland สเปกไทย ปรับปรุงใหม่ นุ่ม เงียบ พรีเมียมขึ้นแค่ไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว BYD Atto 3 สเปกไทย: คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่าน่าใช้แค่ไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/deepal-s05-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/deepal-s05-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว Changan Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง และ Frunk หน้า 159 ลิตร",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. ภาพรวม & บริบทในตลาดรถยนต์ไฟฟ้าไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Deepal S05 Standard BEV",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Deepal S05 Smart Tech Edition",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก นวัตกรรมกล้อง 4K Gimbal & มิติตัวถัง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "นวัตกรรม 4K Smart Gimbal Camera บนหลังคา",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ห้องโดยสาร จอ Sunflower 15.4 นิ้ว และ Frunk หน้า 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Frunk หน้ารถขนาดมหึมา 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "โหมด Outdoor Party & ลำโพงภายนอก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ขุมพลังมอเตอร์ไฟฟ้าหลัง 238 แรงม้า และสมรรถนะ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. ช่วงล่าง การซับแรงสะเทือน และความสูงลุยน้ำท่วมขังในไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความสูง Ground Clearance 170 มม. กับน้ำท่วมขัง กทม.",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความมั่นคงบนทางตรงมอเตอร์เวย์ (Highway Stability)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. แบตเตอรี่ Golden Shield และการชาร์จเร็ว 3C ชาร์จ 15 นาที",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ผลทดสอบระยะทางวิ่งจริง (Real-World Highway Range Test)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ระบบความปลอดภัยและระบบช่วยเหลือการขับขี่ ADAS L2",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Changan Deepal S05",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S07: มอเตอร์ 258 แรงม้า ม่านบังแดดไฟฟ้าสู้แดดไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/deepal-s07-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/deepal-s07-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู ม่านบังแดดไฟฟ้าสู้แดดไทย วิ่งจริงไกลแค่ไหน?",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. ภาพรวม & บริบทในตลาดรถยนต์ไฟฟ้าไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Deepal S07 Standard BEV",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Deepal S07 L (Long Range)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก ระบบไฟส่องสว่าง และมิติตัวถัง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ห้องโดยสาร หน้าจอ Sunflower 15.6 นิ้ว และพื้นที่สัมภาระ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หลังคาแก้ว + ม่านบังแดดไฟฟ้า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "พื้นที่เก็บสัมภาระ Frunk + Trunk",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ขุมพลังมอเตอร์ไฟฟ้า สมรรถนะ และอัตราเร่ง 0-100",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. ฟีลลิ่งช่วงล่าง การซับแรงกระแทก และการเก็บเสียง NVH บนถนนไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การซับแรงกระแทกคอสะพานและรอยต่อถนน (Bumps & Expansion Joints)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การทรงตัวในโค้งความเร็วสูง (High-Speed Cornering & Body Roll)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การเก็บเสียงรบกวน NVH (Noise, Vibration, Harshness)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. แบตเตอรี่ ระยะทางวิ่งจริง และความเร็วในการชาร์จ AC / DC",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ผลทดสอบระยะทางวิ่งจริง (Real-World Highway Range Test)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ระบบความปลอดภัยอัจฉริยะและระบบช่วยเหลือการขับขี่ ADAS L2+",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Changan Deepal S07",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-battery-care",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-battery-care",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ก่อนเปลี่ยนวิธีชาร์จ เช็กสามเรื่องนี้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. ชาร์จ 80% หรือ 100% ดูขีดจำกัดที่รถแนะนำ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. ใช้ AC และ DC ตามแผนเดินทางและคู่มือรถ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ห้องโดยสารร้อน กับแบตเตอรี่ร้อน ต้องแยกให้ออก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. จอดหลายสัปดาห์ วางแผนก่อนล็อกรถ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. วิ่งได้น้อยลง ยังไม่ใช่คำตอบว่าแบตเตอรี่เสื่อมเท่าไร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คำถามที่ควรตอบให้ชัดก่อนทำตาม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ดูแลดีแล้วรับรองว่าแบตเตอรี่ใช้เกิน 10 ปีได้ไหม?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รถ LFP ทุกคันต้องชาร์จ 100% ทุกสัปดาห์หรือเปล่า?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ถ้าจะเริ่มดูแลวันนี้ ควรทำอะไรก่อน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แหล่งข้อมูลและขอบเขตของคำแนะนำ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อให้ตรงคำถามของคุณ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เลือก Model 3 รุ่นไหนดี?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เปลี่ยนยางแล้วต้องดูอะไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ยางกินใน ต้องแก้แคมเบอร์ไหม? อ่านใบตั้งศูนย์ EV ก่อนเปลี่ยนอะไหล่",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เริ่มจากหาสาเหตุ ไม่เริ่มจากซื้ออาร์มแต่ง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "Camber, Toe และ Caster มองคนละมุม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Camber — ล้อเอียงเข้าหรือออก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Toe — ล้อชี้หุบเข้าหรือกางออก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Caster — แนวแกนเลี้ยวเอียงไปทางไหน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านใบตั้งศูนย์ให้มากกว่าสีเขียวกับสีแดง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ตัวอย่าง Tesla: ชื่อรุ่นเดียวกัน ยังต้องดูเงื่อนไข",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "โหลดรถหรือเปลี่ยนช่วงล่างแล้ว ควรคุยอะไรกับร้าน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ไม่มีสูตรองศาเดียวที่รับรอง EV ได้ทุกรุ่น",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แหล่งอ้างอิงที่เปิดตรวจต่อได้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ก่อนจ่ายค่าอะไหล่ ให้ได้คำตอบสามข้อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-carbon-ceramic-brakes-guide",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-carbon-ceramic-brakes-guide",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คำแนะนำของเรา: ชุดที่ตรวจที่มาได้ และตรงกับงานของรถ",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เลือกอ่านจากสิ่งที่กำลังสงสัย",
+          "scope": [
+            "main",
+            "article",
+            "nav"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. อยากให้เบรกดีขึ้น — ดีขึ้นด้านไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. แรงม้าพารถไปเร็ว แต่มวลกับความเร็วกำหนดพลังงานที่ต้องลด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ลองเปลี่ยนรถ เปลี่ยนความเร็ว แล้วดูภาระเบรก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ทางลงยาวเพิ่มพลังงานมาอีกทาง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รถหนักเท่ากัน ความเร็วเพิ่ม 20% แต่พลังงานเพิ่ม 44%",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. จานใหญ่ขึ้น หนาขึ้น มีประโยชน์ต่างกันอย่างไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เส้นผ่านศูนย์กลาง → แขนแรง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความหนา มวล และช่องลม → การรับและคายความร้อน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ดูตัวเลขจากรถจริง แต่ต้องตรงคู่มือคันนั้น",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. จานเรียบ เซาะร่อง เจาะรู — ลายจานบอกอะไรและไม่บอกอะไร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ถ้าถามว่า EV ไม่เกินกี่แรงม้า ควรลงทุนกับเบรกแบบไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. สาย Value: อัปเกรดตามลำดับที่แก้ปัญหาได้จริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "คืนสภาพมาตรฐานให้ครบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เลือกผ้าให้ตรงชีวิตประจำวัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "จานขนาดเดิมหรือชุดเหล็กหล่อที่ออกแบบมาดี",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BBK เมื่อมีโจทย์ที่ต้องใช้ความสามารถเพิ่ม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "น้ำมันเบรก: “ตรงสเปกและสดพอ” มาก่อนตัวเลขบนขวด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. เคสเจ้าของรถ: ENDLESS 6 พอต จาน 375 mm บน Model 3 Performance Highland",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ถ้าวัดได้ไม่เกิน 200°C ทำไมต้องจ่ายเพิ่มเพื่อ 700°C?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. เทียบชุดหน้าแท้มือหนึ่ง: ต้องรู้รหัสและรู้ว่าได้อะไร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "9. Brembo / ENDLESS / Carbon Ceramic: แตะวงเพื่อดูคะแนน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เทียบให้เห็น ก่อนจ่ายหลักแสน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "Brembo",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ENDLESS",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "Carbon Ceramic",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "10. สายจัดเต็ม: Carbon Ceramic มีเหตุผลให้ชอบ โดยไม่ต้องอ้างว่าทุกคนต้องใช้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สิ่งที่ได้ เมื่อเลือกชุดเหมาะกับรถ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แยก 4 ชื่อที่มักถูกปนกัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "150,000–400,000 บาท อาจเป็น “เฉพาะจาน”",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ทำไมชุดแพงจึงขายเป็นระบบ มากกว่าแค่จานสองใบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สิ่งที่ราคาแพงไม่ได้ลบออกไป",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "11. ถนนไทยเส้นไหนจะทำเบรกถึง 1,000°C ได้จริง?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "จอมทอง–ดอยอินทนนท์ · ทล.1009",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หล่มเก่า–ภูทับเบิก · ผ่าน ทล.2331",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ชีวิตจริง ภาระหนักมาจากอะไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "12. พลังงาน 1 MJ ไม่ได้แปลว่าจานจะร้อนกี่องศา",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ผิวหน้าจาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เนื้อจาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ผ้า / น้ำมันเบรก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ถ้าต้องการรู้จริง ต้องวัดให้ตอบคำถามเดียวกัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "13. ก่อนจ่ายเงิน ให้ร้านตอบเรื่องเหล่านี้ครบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ต้นทุนที่ควรเทียบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "14. คำถามที่คนซื้อเบรกเจอบ่อย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ที่มาและขอบเขตของบทความ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เลือกเบรกแล้ว ต่อภาพให้ครบทั้งคัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-damper-tuning-bump-rebound-guide",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-damper-tuning-bump-rebound-guide",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!?",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คำตอบสั้น ๆ ก่อนลงรายละเอียด",
+          "scope": [
+            "main",
+            "article",
+            "header",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ใส่รถรุ่นเดียวกันได้ ทำไมคนหนึ่งบอกจบ อีกคนอยากถอด?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ด่านที่ 1 · Fitment: ชุดนี้ออกแบบให้รถเราหรือไม่",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ด่านที่ 2 · Suitability: ชุดนี้ตรงชีวิตที่ใช้รถหรือไม่",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ถ้าใส่แล้วไม่ลงตัว ยังไม่ต้องเริ่มที่โช้คชุดถัดไป",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เริ่มจากพื้นฐาน: ยาง สปริง Damper และ Bump stop ทำงานคนละหน้าที่",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ยาง · จุดรับอินพุตแรก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สปริง · รับน้ำหนักและเก็บพลังงาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Damper · คุมการเคลื่อนไหว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Bump stop · ส่วนหนึ่งของช่วงปลายระยะ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "โช้คสตรัทปรับเกลียวมีกี่แบบ? อย่าเอาสามเรื่องมาปนกัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Monotube / Twin-tube",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เบ้าสปริง / ความยาวชุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Fixed / 1 / 2 / 3-Way",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "Spring rate, Preload และระยะยุบ: พื้นฐานต้องลงตัวก่อนจูนปุ่ม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Spring rate คืออัตราสปริง ไม่ใช่เลขคลิก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Preload ไม่ใช่ปุ่มเปลี่ยนสปริงอ่อนให้กลายเป็นสปริงแข็ง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Travel ต้องเหลือทั้งทางยุบและทางยืด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รถยุบสุดบ่อย ปุ่มแข็งขึ้นอาจแค่กลบอาการ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ซื้อชุดถูก แต่บูชบิดค้าง ก็ทำให้รถผิดบุคลิกได้",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "อ่านต่อแบบลงลึก: สปริง 100 N/mm เท่ากัน แต่ที่ล้ออาจไม่เท่ากัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ตัวอย่าง A · MR = 1.0",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ตัวอย่าง B · MR = 0.7",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เห็นภาพในหนึ่งนาที: หนึ่งปุ่มไม่ได้แปลว่าหนึ่งผลลัพธ์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หนึ่งช่องปรับ ไม่ได้แปลว่าทำงานแค่ทิศเดียว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ปุ่มเดียว เปลี่ยนสองทิศทางตามวงจรที่ออกแบบไว้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แยกสองช่อง เพื่อไม่ต้องขยับสองฝั่งพร้อมกันทุกครั้ง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เพิ่มช่องฝั่งยุบ ไม่ใช่เพิ่มปุ่ม “ความเร็วรถ”",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "หมุนคลิกแล้วเกิดอะไรขึ้นข้างในโช้ค?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สปริงเก็บพลังงาน ส่วนแดมเปอร์คุมการเคลื่อนไหว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ลูกสูบเคลื่อน น้ำมันผ่านวาล์ว แล้วปุ่มไปเกี่ยวตรงไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "Low-Speed ไม่ใช่ขับช้า: จุดที่คนปรับโช้คเข้าใจผิดบ่อย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ไม่มีเส้นแบ่งเดียวที่ใช้ได้กับทุกแบรนด์",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1-Way: ปุ่มเดียว แต่ไม่ได้ปรับเหมือนกันทุกยี่ห้อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แนวทางแรก: ปรับ Rebound ส่วน Compression โรงงานจัดมาให้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แนวทางที่สอง: ปุ่มเดียวขยับทั้งยุบและยืดไปด้วยกัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "16 ระดับ ไม่ใช่ 16 ช่องอิสระ",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2-Way: อยากคุมยุบ แต่ไม่อยากรั้งยืด ต้องแยกช่องปรับ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แยกปุ่มได้ ไม่ได้แปลว่าข้างในแยกขาดทุกสภาวะ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3-Way: ช่องที่เพิ่มมา ไม่ได้มีไว้เพิ่มความแข็งอย่างเดียว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Low-speed Compression",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "High-speed Compression",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Rebound",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ทำไมแยก Low กับ High แล้วจึงมีประโยชน์?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านสเปกให้พ้นชื่อรุ่น: เทียบตัวอย่างหลายแบรนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แล้ว HKS HIPERMAX อยู่ตรงไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ข้อมูลปี 2026 ที่มีผลกับการซื้อ: ชื่อเดิมอาจไม่ใช่รหัสเดิม",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "มีบริบทในไทย ไม่เท่ากับมีหลักฐานว่า “ขายดีที่สุด”",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "โช้คแต่ละชุดมีนิสัยของมัน แล้วเข้ากับถนนที่เราขับไหม?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แบรนด์เดียวกัน ยังทำโช้คมาคนละโจทย์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ถนนเยอรมันกับถนนไทย: รีวิวดีที่นั่น ไม่ได้แปลว่าจะถูกใจเราที่นี่",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "จูนได้ ไม่ได้แปลว่าเปลี่ยนนิสัยได้หมด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ก่อนถามว่าแบรนด์ไหนดี ลองบอกให้ร้านรู้ว่าเราใช้รถยังไง",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ซับแทงก์ไม่ได้มีไว้โชว์—แต่ก็ไม่ใช่ใบรับประกันความนุ่ม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Monotube กับ Twin-tube: อ่านรูปแบบ ไม่ตัดสินจากคำเดียว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กราฟ F–V มีประโยชน์ เมื่อรู้ว่ากำลังดูข้อมูลอะไร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เด้ง กระด้าง หรือยุบสุด? ฟังอาการให้ถูกก่อนจับปุ่ม",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ผ่านเนินแล้วเด้งซ้ำ ไม่ยอมหยุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สะเทือนแหลม ๆ ทันทีที่เจอรอยต่อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เจอคลื่นต่อเนื่องแล้วรถเหมือนยุบค้าง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รถก้ม เงย หรือเอียงตัวมาก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กระแทกตึง มีเสียง หรือยางเสียดสี",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความรู้สึกแน่นขึ้น ไม่ใช่หลักฐานว่าเกาะถนนขึ้นเสมอ",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สามสถานการณ์ที่คนแต่งรถเจอ—คุณจะเริ่มตรวจตรงไหน?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "01 · คลานผ่านรอยต่อ แต่กระแทกแรง: ต้องดู Low-speed เสมอไหม?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "02 · ลดปุ่มเดียวแล้วนั่งสบายขึ้น แต่เด้งตาม: ซื้อ 3-Way เลยไหม?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "03 · คนเต็มคันแล้วตึงเหมือนชนอะไร: เพิ่มความแข็งช่วยจบไหม?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แต่ง EV ให้จบ ต้องดูมากกว่าคำว่า “รองรับรถหนัก”",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เริ่มจูนจากหลักฐาน ไม่ใช่สูตรคลิกในคอมเมนต์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เปลี่ยนคำว่า “อยากได้ตัวจบ” เป็นโจทย์ที่ร้านตอบได้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ตัวอย่างโจทย์สมมติสำหรับรถใช้งานทุกวัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สิ่งที่ควรได้กลับมา นอกเหนือจากชื่อยี่ห้อและราคา",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อย่าให้ค่าที่ดีหายไป: เก็บ Baseline และถามร้านให้ครบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ประเมิน A–B–A ให้รู้ว่าอะไรเปลี่ยน ไม่ใช่แค่จำว่ารอบหลังดีกว่า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ขับทุกวันหรือ Track Day—ควรจ่ายถึงกี่ Way ถึงพอดี?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ใช้ถนนเป็นหลัก: เริ่มจากชุดที่ตรงโจทย์ ไม่ใช่ช่องปรับมากที่สุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รู้แล้วว่าอยากแยกยุบกับยืด: 2-Way เพิ่มเครื่องมือที่ตรงงาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ทำ Track Day จริงจัง: 3-Way ควรมาพร้อมแผนทดสอบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "คำแนะนำของ EVSELECT",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ก่อนกดสั่ง: คำถามที่ช่วยกันเสียเงินซ้ำ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต้นฉบับจากผู้ผลิต",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เข้าใจโช้คแล้ว ต่อภาพช่วงล่างให้ครบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-horsepower-vs-torque-explained",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-horsepower-vs-torque-explained",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า?",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "จำสามเรื่องนี้ก่อนดูตัวเลข",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. แรงม้ากับแรงบิดสัมพันธ์กัน แต่บอกคนละอย่าง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แรงบิด: แรงหมุนที่เพลา",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลัง: ทำงานได้เร็วแค่ไหน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. แรงบิดน้อยกว่า ก็อาจสร้างแรงขับที่ล้อได้มากกว่า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ตัวอย่างสมมติ A กับ B: เปลี่ยนอัตราทด คำตอบก็เปลี่ยน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "300 Nm × อัตราทด 10:1",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "400 Nm × อัตราทด 7:1",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ทำไมแรงบิดลดลงเมื่อมอเตอร์หมุนเร็วขึ้น",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Constant Torque และ Constant Power อ่านอย่างไร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "จะเชื่อกราฟไดโน่ ต้องรู้ที่มาของกราฟ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. กำลังเท่าเดิม แต่รถเร็วขึ้น แรงที่เหลือเร่งต่ออาจน้อยลง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ตัวอย่างคำนวณ: สมมติกำลังถึงล้อคงที่ 100 kW",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. เกียร์เดี่ยวกับเกียร์สองสปีด เลือกคนละจุดสมดุล",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. ก่อนเทียบรถสองคัน เช็กให้ครบมากกว่า hp และ Nm",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คำถามที่เจอบ่อย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แรงบิดสูงกว่า แปลว่าออกตัวเร็วกว่าเสมอไหม?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "มอเตอร์มีแรงบิดตอน 0 rpm แล้วทำไมกำลังเป็นศูนย์?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Field Weakening แปลว่ารถเสียหรือแบตเตอรี่เสื่อมหรือไม่?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "จะรู้ได้อย่างไรว่าคันไหนเร่งแซงดีกว่า?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แหล่งข้อมูลและขอบเขตของบทความ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-performance-driving-techniques",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-performance-driving-techniques",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ขับรถ EV อย่างไรให้ปลอดภัย?ฉบับการ์ตูนนิทาน เข้าใจง่ายใน 5 นาที 🚗⚡",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1ความลับของ \"ตุ๊กตาล้มลุก\"",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2งบประมาณ \"กาวติดถนน\" (Grip Budget)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3กับดัก \"ยกเท้า = เบรก\" (One-Pedal)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4วิชาตัวเบาของนินจา (Trail Braking)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ทริคการเบรกขั้นเทพ 🥷",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สรุปสั้นๆ เอาไปใช้ได้เลย!",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-suspension-tuning-guide",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-suspension-tuning-guide",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. บอกอาการให้ชัด ก่อนฟันธงว่าโช้คไม่ดี",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กระแทกเป็นจังหวะสั้น ๆ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "โยนต่อหลังผ่านเนิน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เข้าใจ Bump และ Rebound เท่าที่ใช้คุยกับร้าน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. เทียบรุ่นสินค้าให้ตรง แทนการจัดอันดับทั้งแบรนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "KW V3",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Öhlins Road & Track",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BC Racing BR Series",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "H-Drive Euro Spec / Euro R",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ขอข้อมูลห้าข้อนี้ ก่อนวางมัดจำ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. เทียบก่อน–หลังด้วยสิ่งที่คุณใช้รถจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เลือกอ่านต่อให้ตรงเรื่องที่ยังสงสัย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/ev-tyre-and-coilover-selection-guide",
+      "finalUrl": "http://127.0.0.1:3117/articles/ev-tyre-and-coilover-selection-guide",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เลือกยางและคอยล์โอเวอร์ EV อย่างไร ให้รับทั้งน้ำหนักและแรงม้า",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เริ่มจากสามเรื่องนี้ก่อนเลือกแบรนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. รถหนักและแรง ทำให้ต้องอ่านสเปกยางให้ละเอียดขึ้น",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ZEEKR 7X Performance AWD: น้ำหนัก 2,535 กก. กับกำลัง 637 hp",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Tesla Model 3 Performance: ยางหน้า–หลังอาจไม่ใช่ชุดเดียวกัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. อ่าน Load Index, XL และ HL ให้ถูกเรื่อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เติมลมตามรถ ไม่ใช่ตามตัวเลขสูงสุดบนแก้มยาง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. เลือกความนุ่ม เงียบ และการยึดเกาะให้ตรงชีวิตจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. คอยล์โอเวอร์ที่เหมาะ เริ่มจากตรงรุ่นและอาการที่อยากแก้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Spring Rate ไม่ใช่คะแนนว่าใครเกาะถนนกว่า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ถามร้านให้ครบก่อนวางมัดจำ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. โหลดเตี้ยแค่ไหน ต้องดูรถ ชุดช่วงล่าง และเส้นทางจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. ยาง สปริง และแดมเปอร์เกี่ยวข้องกันอย่างไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. เช็กลิสต์ที่ใช้คุยกับร้านได้ทันที",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/geely-ex2-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/geely-ex2-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. ภาพรวม & บริบทในตลาดรถยนต์ไฟฟ้าไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Geely EX2 Pro",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Geely EX2 Max",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก ความน่ารักทันสมัย และมิติตัวถัง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ห้องโดยสาร ระบบ Flyme Auto 14.6 นิ้ว และช่องเก็บของ 36 จุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ช่องเก็บของ Frunk หน้า 70 ลิตร + ท้าย 375L",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ลิ้นชักผู้โดยสารหน้า 10 ลิตร และช่องเก็บของ 36 จุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ขุมพลัง 11-in-1 E-Drive ขับหลัง RWD และอัตราเร่ง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. จุดเปลี่ยนเกม: ช่วงล่างหลังอิสระ Multi-link บนถนนเมืองไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความนุ่มนวลในการซับรอยต่อถนนและลูกระนาด (Ride Plushness)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การเข้าโค้งและการเกาะถนน (Rear-Wheel Drive Stability)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. แบตเตอรี่ Aegis Short Blade ทนความร้อนสูง และการชาร์จ DC",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การทดสอบระยะทางวิ่งจริงในเมืองหลวง กทม.",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ระบบความปลอดภัยและโครงสร้างตัวถัง High-Strength Steel",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Geely EX2",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S07: มอเตอร์ 258 แรงม้า ม่านบังแดดไฟฟ้าสู้แดดไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "finalUrl": "http://127.0.0.1:3117/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เจาะลึกการเปลี่ยนผ่านจาก Hybrid สู่ Full EV: พลศาสตร์แชสซี, การกระจายน้ำหนัก และฟีลลิ่งการขับขี่",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปประเด็นเปลี่ยนผ่านที่ผู้ขับขี่ต้องรู้ (Transition Summary)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. ความแตกต่างเชิงสถาปัตยกรรม: HEV, PHEV และ Pure BEV Skateboard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "โครงสร้างดั้งเดิมเพิ่มมอเตอร์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความซับซ้อนสูงสุด น้ำหนักสองต่อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Skateboard Platform แท้",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความแข็งแกร่งในการต้านทานการบิดตัว (Torsional Rigidity)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เปรียบเทียบสถาปัตยกรรมแชสซี: Hybrid vs Dedicated Skateboard EV",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. อัตราตอบสนองแรงบิด 10ms vs 300ms และผลกระทบต่อช่วงล่าง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ความจำเป็นของ Anti-Squat Suspension Geometry",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ภาระมวลใต้สปริง (Unsprung Mass Penalty) และการเซ็ตติ้งโช้คอัพ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ระบบเบรกไฟฟ้า Brake-by-Wire และเทคโนโลยี Brake Blending",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กลไกการทำงานของ Brake Blending System",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ตารางเปรียบเทียบเชิงวิศวกรรม: HEV vs PHEV vs Dedicated BEV",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. คู่มือการปรับตัวสำหรับผู้ขับขี่ (Driver Adaptation Guidelines)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การควบคุมน้ำหนักเท้าขวา (Modulate Throttle)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การกะระยะเบรกและการเว้นระยะห่าง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การปรับตัวกับความเงียบและเสียงยาง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หมวดอุปกรณ์ที่ EVSELECT กำลังศึกษา",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ชุดโช้คอัพสเปกถนนไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "พรมปูพื้น TPE ซับเสียง 3D",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "ม่านบังแดดหลังคาแก้ว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/mg4-electric-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/mg4-electric-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เริ่มจาก D แล้วให้เหตุผลการใช้งานพาไปถึง X",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สเปกที่ต่างกัน และเกี่ยวกับการใช้ทุกวัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "D Standard Range",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "X Long Range",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ราคาและการชาร์จ: อ่านเงื่อนไขคู่กับตัวเลข",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ตัวอย่างข้อเสนอที่มีวันสิ้นสุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ขับหลังกับ 5 ลิงก์น่าสนใจ แต่ต้องลองกับชีวิตจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เจอ Standard, Long Range V หรือ XPOWER ในประกาศ ต้องเช็กปีด้วย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ข้อมูลที่ใช้ และสิ่งที่เรายังไม่ได้ทดสอบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ก่อนจอง ให้ได้คำตอบว่ารุ่นไหนเหมาะกับคุณ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "อุปกรณ์เสริมของเราอยู่ระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/optimizing-ev-suspension-thai-roads",
+      "finalUrl": "http://127.0.0.1:3117/articles/optimizing-ev-suspension-thai-roads",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รับมือรอยต่อสะพาน, คอสะพานทรุด, ลูกระนาด และน้ำท่วมขัง",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. สภาพถนนเมืองไทย: บททดสอบสุดหินของรถยนต์ไฟฟ้าน้ำหนัก 2 ตัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. อุณหภูมิผิวถนน 50–65°C: ศัตรูเงียบที่ทำให้น้ำมันโช้คเหลวและเกิด Cavitation",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "พฤติกรรมของน้ำมันโช้คอัพภายใต้ความร้อนสะสมสูง (Thermal Thinning & Damping Fade)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ไดอะแกรมวิศวกรรม: การวิเคราะห์ระยะยุบ (Bump Travel) และการชน Bump Stop",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ศาสตร์แห่งวาล์วไดเกรสซีฟ (Digressive Valving): คุมตัวถัง 2 ตันนิ่งสนิท แต่ซับรอยต่อสะพานนุ่มมือ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. มาตรการป้องกันสนิมและน้ำท่วมขัง: เลือกวัสดุอย่างไรให้อยู่รอดเกิน 5 ปีในไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กระบอกสแตนเลส INOX หรืออลูมิเนียมเกรดอากาศยาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หัวเบ้าโช้คยางสังเคราะห์ (Rubber Top Mount)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ยางกันฝุ่นและซีลปิดกั้นคราบโคลน (Full Dust Boot)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. Road Condition Setting Cheat Sheet: สูตรปรับคลิกช็อกอัพ 5 สภาพถนนไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. คู่มือการเซ็ตติ้งเฉพาะรุ่นสำหรับ 5 รถยนต์ไฟฟ้ายอดนิยมในไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "BYD Seal (Dynamic / Premium / AWD Performance)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Tesla Model Y (RWD / Long Range / Performance)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "MG4 Electric (Standard / Long Range / XPOWER)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Deepal S07 (Smart Electric SUV)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Zeekr X (Standard RWD / Flagship AWD)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. 7 ขั้นตอนตรวจเช็คก่อนส่งมอบรถ (EV Fitment & QC Checklist)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เรียนรู้เรื่องช่วงล่าง สตรัทปรับเกลียว และยางก่อนเลือก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "finalUrl": "http://127.0.0.1:3117/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เจาะลึกประเภทโช้คอัพ: Monotube vs Twin-tube vs Inverted vs ถุงลมอัจฉริยะ (Air Suspension) แบบไหนตอบโจทย์ EV มากที่สุด?",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปความแตกต่างเชิงโครงสร้างสำหรับรถ EV (Architecture Summary)",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. ผ่าโครงสร้างภายใน: กายวิภาค Monotube vs Twin-tube vs Inverted",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Internal Architecture: Monotube vs Twin-tube vs Inverted Monotube",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. ตารางเปรียบเทียบสถาปัตยกรรมโช้คอัพ 5 รูปแบบ (Comprehensive Engineering Matrix)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. สถาปัตยกรรมช่วงล่างอัจฉริยะ: CDC vs Magnetorheological vs Dual-Chamber Air",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "1. Continuous Damping Control (CDC)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "2. Magnetorheological (MagneRide)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "3. Dual-Chamber Air Suspension",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. บทวิเคราะห์ความทนทานและการระบายความร้อนในสภาพภูมิอากาศเมืองไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "วิกฤตความร้อนสะสมของโช้คอัพบนผิวถนนไทย (Tropical Heat Challenge)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. คำแนะนำในการเลือกอัปเกรดโช้คอัพให้ตรงรุ่นรถ EV ของคุณ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Tesla Model 3 / BYD Seal / MG4",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Tesla Model Y / Deepal S07 / BYD Atto 3",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Zeekr 009 / Zeekr 7X / Denza D9",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/tesla-model-3-highland-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/tesla-model-3-highland-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านให้ตรงรุ่นและปีของรถ",
+          "scope": [
+            "main",
+            "article",
+            "aside"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ตารางสเปก Model 3 ประเทศไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "เลือกรุ่นจากสิ่งที่ใช้งานจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Model 3 ขับหลัง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Premium RWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Premium Long Range RWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Performance AWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คิดเรื่องล้อ ช่วงล่าง และเบรกต่อจากสเปก",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านตัวเลขแบตเตอรี่และการชาร์จอย่างไร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ถ้ากำลังดู Highland ปีเก่าหรือรถมือสอง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แหล่งข้อมูลและวันที่ตรวจสอบ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/tesla-model-y-l-premium-6-seater-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/tesla-model-y-l-premium-6-seater-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัว 6 ที่นั่งที่สมบูรณ์แบบที่สุดในไทย?",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. บทนำและบริบทตลาด: การปฏิวัติรถครอบครัว 6 ที่นั่ง (Market Context)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึกการเปรียบเทียบไลน์อัป Model Y และความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Model Y Standard 5-Seater",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Model Y L Premium 6-Seater",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Model Y Long Range 5-Seater",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก ฐานล้อยาวขึ้น และมิติตัวถัง (Exterior & Extended Dimensions)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ห้องโดยสารระดับพรีเมียม เลย์เอาต์ 2+2+2 และเบาะ Captain Seats",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ประสบการณ์ขับขี่จริงบนถนนไทย: ความนุ่มนวลและสมรรถนะ (Driving Dynamics & NVH)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. เปรียบเทียบตรงตัว: Tesla Model Y L vs คู่แข่งในตลาดไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. เทคโนโลยี ความปลอดภัย และฮาร์ดแวร์ HW4 (Technology & Safety)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Tesla Model Y L (6 ที่นั่ง)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Tesla Model 3 Highland: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยี",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kW",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/zeekr-009-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/zeekr-009-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า เบาะ First Class ท้าชิงบัลลังก์ Toyota Alphard",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. บทนำและบริบทตลาด: ผู้ท้าชิงบัลลังก์ Toyota Alphard (Market Context)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึก 3 รุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Standard FWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Premium AWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Flagship AWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "สรุปคำแนะนำ: เลือกรุ่นไหนให้คุ้มค่าที่สุดสำหรับคุณ?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอกและมิติตัวถัง (Exterior Design & Dimensions)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ห้องโดยสารระดับ First Class และความสบาย (Interior & Sofaro Luxury)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ประสบการณ์ขับขี่จริงบนถนนไทย: NVH, ช่วงล่างถุงลม และอัตราเร่ง (Driving Dynamics & NVH)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. เปรียบเทียบตรงตัว: ZEEKR 009 vs TOYOTA ALPHARD (Head-to-Head Comparison)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "1. ประสบการณ์ผู้โดยสารตอนหลัง (Passenger Experience):",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "2. ความเงียบและความนุ่มนวล (NVH & Ride Refinement):",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "3. ความคุ้มค่าด้านราคาและต้นทุนการใช้งาน (Value Proposition & TCO):",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. เทคโนโลยี ความบันเทิง และความปลอดภัย 720 องศา (Tech & 720° Safety)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ ZEEKR 009 สเปกไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr X: พรีเมียมคอมแพกต์เอสยูวีสำหรับคนเมือง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การเซ็ตอัปช่วงล่าง EV สำหรับถนนเมืองไทย: นุ่มนวล ไม่เด้ง ไม่กระด้าง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/zeekr-7x-2026-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/zeekr-7x-2026-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V ชาร์จไวสุดขีด 420kW ออปชันหรูระดับเรือธง",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. บทนำและภาพรวมในตลาดไทย (Introduction & Market Context)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึก 3 รุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Standard RWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Long Range RWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Performance AWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก แผงไฟ Stargate และมิติตัวถัง (Exterior Design & Dimensions)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ภายในห้องโดยสาร ความสบาย และความจุสัมภาระ (Interior Space & Practicality)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ระบบอินโฟเทนเมนต์ หน้าจอ และระบบเสียง (Infotainment, Screens & Audio Tech)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. ขุมพลัง สมรรถนะ และการทดสอบขับขี่บนถนนไทย (Powertrain & Real Driving Performance)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. ช่วงล่างถุงลมอัจฉริยะ ความนุ่มนวล และการเก็บเสียง (Ride Quality, Suspension & NVH)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. สถาปัตยกรรม 800V แบตเตอรี่ และระบบชาร์จไวสุดขีด (800V Architecture & Charging)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "9. ระบบช่วยเหลือการขับขี่และความปลอดภัย (Active Safety & ADAS - ZEEKR AD)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "10. ตารางเปรียบเทียบกับคู่แข่งในไทย (Competitor Comparison)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Zeekr 7X 2026",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "11. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Tesla Model Y L (Premium 6-Seater): รถ EV ครอบครัวที่ลงตัวที่สุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr X (Flagship AWD): พรีเมียมคอมแพกต์ 489 แรงม้า ดีไซน์สแกนดิเนเวีย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles/zeekr-x-review",
+      "finalUrl": "http://127.0.0.1:3117/articles/zeekr-x-review",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. บทนำและภาพรวมในตลาดไทย (Introduction & Market Context)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Standard RWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Flagship AWD",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. ดีไซน์ภายนอก ประตูไร้กรอบ และมิติตัวถัง (Exterior & Frameless Doors)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "4. ภายในห้องโดยสาร ความสบาย และระบบอินโฟเทนเมนต์ (Interior Luxury)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "5. ประสบการณ์ขับขี่จริงบนถนนไทย: สมรรถนะและช่วงล่าง (Driving Dynamics & NVH)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "6. เปรียบเทียบตรงตัว: Zeekr X vs Volvo EX30 & BYD Atto 3",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "7. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (Zeekr AD)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Zeekr X สเปกไทย",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "EVSELECT Rating Breakdown",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวที่เกี่ยวข้อง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kW",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Tesla Model 3 Highland: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยี",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=all&segment=city",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=all&segment=city",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวทั้งหมด(1 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิวรถ EV",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=all&segment=hatchback",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=all&segment=hatchback",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวทั้งหมด(1 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิวรถ EV",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=all&segment=sedan",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=all&segment=sedan",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวทั้งหมด(2 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิวรถ EV",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว BYD Seal (AWD Performance & Premium): สปอร์ตซีดานไฟฟ้า 530 แรงม้า ที่เขย่าบัลลังก์รถยุโรป",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=all&segment=suv",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=all&segment=suv",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความและรีวิวทั้งหมด(7 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิวรถ EV",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว BYD Atto 3 (Extended Range & Dynamic): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่า น่าใช้แค่ไหนในปี 2026?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 4,
+          "text": "รีวิว Changan Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง และ Frunk หน้า 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=guides",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=guides",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คู่มือและเทคนิคการใช้งาน(1 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=reviews",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=reviews",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รีวิวรถยนต์ไฟฟ้าทั้งหมด(11 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว BYD Seal (AWD Performance & Premium): สปอร์ตซีดานไฟฟ้า 530 แรงม้า ที่เขย่าบัลลังก์รถยุโรป",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว BYD Atto 3 (Extended Range & Dynamic): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่า น่าใช้แค่ไหนในปี 2026?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง และ Frunk หน้า 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=reviews&segment=city",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=reviews&segment=city",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รีวิวรถยนต์ไฟฟ้าทั้งหมด(1 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=reviews&segment=hatchback",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=reviews&segment=hatchback",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รีวิวรถยนต์ไฟฟ้าทั้งหมด(1 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=reviews&segment=sedan",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=reviews&segment=sedan",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รีวิวรถยนต์ไฟฟ้าทั้งหมด(2 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว BYD Seal (AWD Performance & Premium): สปอร์ตซีดานไฟฟ้า 530 แรงม้า ที่เขย่าบัลลังก์รถยุโรป",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=reviews&segment=suv",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=reviews&segment=suv",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รีวิวรถยนต์ไฟฟ้าทั้งหมด(7 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวีไฟฟ้า 800V สถาปัตยกรรมล้ำ ชาร์จไวสุดขีด ออปชันหรูระดับเรือธง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S07 สเปกไทย: เอสยูวีไฟฟ้าไซเบอร์พังก์ ออปชันหรู วิ่งจริงไกลแค่ไหนบนถนนเมืองไทย?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว BYD Atto 3 (Extended Range & Dynamic): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่า น่าใช้แค่ไหนในปี 2026?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "รีวิว Changan Deepal S05 สเปกไทย: เอสยูวีสายแคมปิ้ง-Vlog กล้อง 4K บนหลังคา ไฟหน้าฉายหนัง และ Frunk หน้า 159 ลิตร",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/articles?category=suspension",
+      "finalUrl": "http://127.0.0.1:3117/articles?category=suspension",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "เข้าใจรถให้ลึกขึ้นก่อนเลือกและก่อนปรับแต่ง",
+          "scope": [
+            "main",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "บทความเทคนิคระบบช่วงล่างและแฮนด์ลิ่ง(9 บทความ)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เทคนิคการขับขี่รถ EV สมรรถนะสูง: Weight Transfer, Trail Braking และการควบคุม Instant Torque บนแทร็กและโค้ง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การเปลี่ยนผ่านจาก Hybrid สู่ EV: พลศาสตร์แชสซี จุดศูนย์ถ่วง (CoG) และ Polar Moment of Inertia",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ยางกินใน ต้องแก้แคมเบอร์ไหม? อ่านใบตั้งศูนย์ EV ก่อนเปลี่ยนอะไหล่",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!?",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เจาะลึกประเภทโช้คอัพสำหรับรถยนต์ไฟฟ้า: Monotube vs Twin-tube vs Air Suspension",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "การเซ็ตติ้งช่วงล่างรถ EV ให้สมบูรณ์แบบบนถนนเมืองไทย: รอยต่อคอสะพาน ลอนคลื่น และลูกระนาด",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "เลือกยางและคอยล์โอเวอร์ EV อย่างไร ให้รับทั้งน้ำหนักและแรงม้า",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านครบแล้ว แต่ยังไม่แน่ใจว่าควรเริ่มจากเรื่องไหน?",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/contact",
+      "finalUrl": "http://127.0.0.1:3117/contact",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ติดต่อทีมงาน",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "คุยกับเราทาง Facebook",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ยังไม่เปิดรับคำสั่งซื้อ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/downloads/evselect-damper-setup-log.html",
+      "finalUrl": "http://127.0.0.1:3117/downloads/evselect-damper-setup-log.html",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 1,
+          "text": "แบบบันทึกช่วงล่างและ Damper Baseline",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "1. รถและเงื่อนไขที่ต้องเทียบกันได้",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "2. ค่าตั้งต้นที่กลับไปได้ — จดทุกมุม",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หน้าซ้าย (FL)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หน้าขวา (FR)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หลังซ้าย (RL)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "หลังขวา (RR)",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "3. แผน A–B–A: เปลี่ยนทีละตัวแปรและบันทึกข้อจำกัด",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "A — ค่าตั้งต้นที่ตรวจแล้ว",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "B — เปลี่ยนหนึ่งตัวแปรตามคู่มือและผู้จูน",
+          "scope": [
+            "main"
+          ]
+        },
+        {
+          "level": 3,
+          "text": "A อีกครั้ง — กลับค่าเดิมเมื่อเหมาะสมและปลอดภัย",
+          "scope": [
+            "main"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/editorial-policy",
+      "finalUrl": "http://127.0.0.1:3117/editorial-policy",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "แนวทางจัดทำบทความ",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ระบุว่าเรารู้จากไหน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ตรวจจากหน้าที่คนอ่านเห็นจริง",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/privacy",
+      "finalUrl": "http://127.0.0.1:3117/privacy",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "นโยบายความเป็นส่วนตัว",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "มีคำถามเกี่ยวกับข้อมูลของคุณ",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/terms",
+      "finalUrl": "http://127.0.0.1:3117/terms",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ข้อตกลงและเงื่อนไข",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "สถานะช่วงเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:3117/warranty",
+      "finalUrl": "http://127.0.0.1:3117/warranty",
+      "status": 200,
+      "h1Count": 1,
+      "contentLevelSkips": [],
+      "headings": [
+        {
+          "level": 2,
+          "text": "เมนูหลัก",
+          "scope": [
+            "header"
+          ]
+        },
+        {
+          "level": 1,
+          "text": "ข้อมูลการรับประกัน",
+          "scope": [
+            "main",
+            "article",
+            "header"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ข้อมูลในบทความไม่ใช่ข้อเสนอรับประกัน",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "อ่านต่อระหว่างเตรียมเปิดตัว",
+          "scope": [
+            "main",
+            "article"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "รุ่นรถที่มีบทความ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "ติดตามการเปิดตัวและติดต่อ",
+          "scope": [
+            "footer"
+          ]
+        },
+        {
+          "level": 2,
+          "text": "แนวทาง EVSELECT",
+          "scope": [
+            "footer"
+          ]
+        }
+      ]
+    }
+  ]
+}
