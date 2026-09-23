@@ -143,3 +143,9 @@ The local draft replaces the Porsche Stories cover above with a real PCCB photog
 
 - /images/reviews/geely-ex2-max-thailand-2025.jpg: [2025 Geely EX2 Max](https://commons.wikimedia.org/wiki/File:2025_Geely_EX2_Max.jpg), Chanokchon, own work, Impact Challenger/Muang Thong Thani, Thailand, 30 November 2025; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Native Wikimedia 1280 × 720 thumbnail, no local editing. Article/card show dated Thai exhibition context and credit, without suggesting EVSELECT road testing.
 - Original and complete final article/card placements individually inspected in desktop/mobile. Source scope, reader observations and hashes: editorial/geely-ex2-reader-review-2026-09-23.md. No deployment claimed.
+
+## Tesla Model Y L source review — 23 September 2026
+
+- Existing /images/editorial/tesla-model-y-l-photo.jpg: [Tesla Model Y L 004](https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_L_004.jpg), JustAnotherCarDesigner, own work, 25 December 2025, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). 1920 × 1440 derivative. Rechecked source and individual photo; article/card identify foreign-market illustration and resizing.
+- New /images/reviews/tesla-model-y-l-interior-ph-2026.jpg: [Tesla Model Y L Premium Long Range AWD interior](https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_L_Premium_Long_Range_AWD_interior.jpg), Ethan Llamas, own work, Philippines, 18 April 2026, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Native Wikimedia 1280 × 853 thumbnail, no local editing. Above-image text and caption explicitly identify LHD/foreign-market context; not evidence of Thai cabin equipment or rear-seat space.
+- Both photographs and final desktop/mobile placements individually reviewed. Hashes, source details and reader observations: editorial/model-y-l-reader-review-2026-09-23.md. No deployment claimed.

@@ -703,7 +703,7 @@
         },
         {
           "href": "/articles/tesla-model-y-l-premium-6-seater-review",
-          "text": "รีวิวรถ EV8 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV6 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -720,7 +720,7 @@
         },
         {
           "href": "/articles/tesla-model-y-l-premium-6-seater-review",
-          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "text": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ",
           "scope": [
             "html",
             "body",
@@ -1931,6 +1931,46 @@
             "section",
             "div",
             "div",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_L_004.jpg",
+          "text": "JustAnotherCarDesigner (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
             "div",
             "div",
             "p"
@@ -11338,21 +11378,86 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/zeekr-7x-2026-review",
+          "text": "ZEEKR 7X สเปกไทย",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/optimizing-ev-suspension-thai-roads",
+          "text": "วิธีแยกอาการช่วงล่างบนถนนไทย",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "คู่มือเลือกยางสำหรับ EV หนักและแรง",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "บทความ Bump และ Rebound",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-battery-care",
+          "text": "การดูแลแบตเตอรี่และวางแผนชาร์จ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
             "p"
           ],
           "target": "",
@@ -11367,192 +11472,38 @@
             "div",
             "main",
             "article",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ Model Y L",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "ค้นหาตามรุ่นรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/#vehicle-finder",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูทั้งหมด",
+          "text": "อ่านบทความรถ EV และช่วงล่างเรื่องอื่น",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "section",
-            "div"
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles/tesla-model-3-highland-review",
-          "text": "Electric SedanIn-Depth Reviewรีวิว Tesla Model 3 Highland: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยีกระจก Acoustic 360 องศา ช่วงล่างใหม่ และเบาะเป่าลมเย็น",
+          "href": "/contact",
+          "text": "บอกรุ่นรถและสิ่งที่อยากให้เราศึกษาเพิ่ม",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-7x-2026-review",
-          "text": "800V SUVIn-Depth Reviewรีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kWทดสอบสมรรถนะ 646 แรงม้า ชิป Snapdragon 8295 และช่วงล่างถุงลม CCD",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-009-review",
-          "text": "Luxury MPVMaster Reviewรีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphardทดสอบขับจริง เบาะ Sofaro First Class ช่วงล่างถุงลม และเทียบตรงตัวกับ Toyota Alphard",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "footer"
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
@@ -11560,14 +11511,143 @@
       ],
       "mainExternalLinks": [
         {
-          "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_L_004.jpg",
-          "text": "JustAnotherCarDesigner / Wikimedia Commons",
+          "href": "https://www.tesla.com/th_th/modely",
+          "text": "สเปก Model Y L Premium บน Tesla ประเทศไทย (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_L_004.jpg",
+          "text": "JustAnotherCarDesigner (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/modely/th_th/GUID-52117C21-F5C7-451C-A499-95D946B50A1B.html",
+          "text": "วิธีปรับเบาะ Model Y แบบ 6 ที่นั่ง (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/modely/th_th/GUID-AF5E4CCC-E4C1-4158-9A7C-66C226BEBDBA.html",
+          "text": "คู่มือคาร์ซีตของ Tesla สำหรับรุ่น 6 ที่นั่ง (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/modely/th_th/GUID-1E76B638-7B12-4D9A-8767-94B7F1E92A0E.html",
+          "text": "คู่มือมิติและพื้นที่เก็บของ Model Y L (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_L_Premium_Long_Range_AWD_interior.jpg",
+          "text": "Ethan Llamas / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/th_th/modely/design?cfg=%24MTY69",
+          "text": "ราคาและอุปกรณ์ Model Y L ในหน้าจัดสเปก Tesla ไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
             "p"
           ],
           "target": "_blank",

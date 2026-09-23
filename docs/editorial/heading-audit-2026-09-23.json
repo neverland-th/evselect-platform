@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T12:23:29.692835+00:00",
+  "checkedAt": "2026-09-23T12:40:22.722618+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -323,7 +323,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "text": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"
@@ -3663,7 +3663,7 @@
         },
         {
           "level": 1,
-          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัว 6 ที่นั่งที่สมบูรณ์แบบที่สุดในไทย?",
+          "text": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article",
@@ -3672,7 +3672,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "text": "อ่านสเปกให้ตรงกับรุ่น L 6 ที่นั่ง",
           "scope": [
             "main",
             "article"
@@ -3680,7 +3680,7 @@
         },
         {
           "level": 2,
-          "text": "1. บทนำและบริบทตลาด: การปฏิวัติรถครอบครัว 6 ที่นั่ง (Market Context)",
+          "text": "พาคนที่จะนั่งแถวสามไปลองด้วย",
           "scope": [
             "main",
             "article"
@@ -3688,31 +3688,7 @@
         },
         {
           "level": 2,
-          "text": "2. เจาะลึกการเปรียบเทียบไลน์อัป Model Y และความคุ้มค่า (Trim Value Breakdown)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Model Y Standard 5-Seater",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Model Y L Premium 6-Seater",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Model Y Long Range 5-Seater",
+          "text": "2,539 ลิตร ไม่ใช่พื้นที่กระเป๋าเมื่อนั่งครบหกคน",
           "scope": [
             "main",
             "article"
@@ -3720,7 +3696,7 @@
         },
         {
           "level": 2,
-          "text": "3. ดีไซน์ภายนอก ฐานล้อยาวขึ้น และมิติตัวถัง (Exterior & Extended Dimensions)",
+          "text": "หน้าจอต้องใช้คล่องทั้งคนขับและคนนั่งหลัง",
           "scope": [
             "main",
             "article"
@@ -3728,7 +3704,7 @@
         },
         {
           "level": 2,
-          "text": "4. ห้องโดยสารระดับพรีเมียม เลย์เอาต์ 2+2+2 และเบาะ Captain Seats",
+          "text": "ลองช่วงล่างพร้อมผู้โดยสาร ก่อนคิดเปลี่ยนล้อ",
           "scope": [
             "main",
             "article"
@@ -3736,79 +3712,7 @@
         },
         {
           "level": 2,
-          "text": "5. ประสบการณ์ขับขี่จริงบนถนนไทย: ความนุ่มนวลและสมรรถนะ (Driving Dynamics & NVH)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "6. เปรียบเทียบตรงตัว: Tesla Model Y L vs คู่แข่งในตลาดไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "7. เทคโนโลยี ความปลอดภัย และฮาร์ดแวร์ HW4 (Technology & Safety)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Tesla Model Y L (6 ที่นั่ง)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "EVSELECT Rating Breakdown",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "บทความและรีวิวที่เกี่ยวข้อง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Tesla Model 3 Highland: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยี",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kW",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphard",
+          "text": "ให้แผนชาร์จและของที่ต้องขนเป็นตัวตัดสิน",
           "scope": [
             "main",
             "article"
@@ -4667,7 +4571,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "text": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"
@@ -4848,7 +4752,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "text": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"
@@ -5204,7 +5108,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?",
+          "text": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"

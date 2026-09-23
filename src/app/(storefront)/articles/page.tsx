@@ -17,6 +17,7 @@ import { sealArticle } from '@/lib/seal-article';
 import { deepalS05Article } from '@/lib/deepal-s05-article';
 import { deepalS07Article } from '@/lib/deepal-s07-article';
 import { geelyEx2Article } from '@/lib/geely-ex2-article';
+import { teslaModelYLArticle } from '@/lib/tesla-model-y-l-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -153,27 +154,29 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'tesla-model-y-l-premium-6-seater-review',
-    title: 'รีวิว 2026 Tesla Model Y L (Premium 6-Seater): หรือนี่จะเป็น EV ครอบครัวที่สมบูรณ์แบบที่สุดในไทย?',
+    title: teslaModelYLArticle.title,
     shortTitle: 'Tesla Model Y L (6-Seater)',
-    excerpt: 'การปรับฐานล้อให้ยาวขึ้นและรื้อโครงสร้างห้องโดยสารใหม่ทั้งหมด ทำให้ Tesla สามารถเปลี่ยนภาพลักษณ์จากรถ SUV 5 ที่นั่งสำหรับใช้งานทั่วไป ให้กลายเป็นรถครอบครัวตัวจริงที่รองรับผู้โดยสารได้มากขึ้น...',
+    excerpt: 'เช็กเบาะสามแถว พื้นที่กระเป๋าเมื่อนั่งครบหกคน และแผนชาร์จ จากข้อมูล Tesla ประเทศไทย',
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'suv',
     segmentName: 'พรีเมียม 6 ที่นั่ง SUV',
-    image: '/images/editorial/tesla-model-y-l-photo.jpg',
-    date: '2026-08-26',
-    dateDisplay: '26 ส.ค. 2569',
-    readTime: '8 นาที',
-    rating: 8.8,
-    ratingText: '8.8 / 10',
-    priceRange: '1,999,000 บาท',
-    performanceText: 'Long Range AWD (0-100: 5.0s)',
-    highlights: ['2+2+2 Captain Seats', '0-100 ใน 5.0s', 'Long Range AWD', 'จอควบคุมแถวหลัง 8 นิ้ว'],
+    image: teslaModelYLArticle.image,
+    imageAlt: teslaModelYLArticle.imageAlt,
+    imageFit: 'contain',
+    date: teslaModelYLArticle.updatedAt,
+    publishedAt: teslaModelYLArticle.publishedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    readTime: teslaModelYLArticle.readTime,
+    rating: null,
+    priceRange: 'ตรวจราคาตามสเปกและวันสั่งซื้อ',
+    performanceText: 'AWD · 5.0 วินาที · 681 กม. WLTP',
+    highlights: ['เบาะ 2+2+2 พร้อมจุดที่ควรลอง', 'แยกพื้นที่เก็บของตามจำนวนคน', 'อ่านสเปกไทยและข้อจำกัดการชาร์จ'],
     featured: false,
     brand: 'Tesla',
-    badge: 'Family 6-Seater',
+    badge: 'คู่มือรถครอบครัว 6 ที่นั่ง',
     accessoryOpportunity: 'พรม TPE 3 แถว, ถาดท้ายรถเมื่อพับเบาะ, ตัวจัดระเบียบ Frunk',
-    fitmentGate: 'ตรวจเช็คเลย์เอาต์เบาะ 6 ที่นั่งและแอร์หลัง',
+    fitmentGate: 'ยืนยันรุ่น L 6 ที่นั่ง ปีผลิตและอุปกรณ์กับรถจริง',
   },
   {
     slug: 'tesla-model-3-highland-review',
@@ -1127,6 +1130,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'tesla-model-y-l-premium-6-seater-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพต่างประเทศ ปี 2025: <a href={teslaModelYLArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={teslaModelYLArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'geely-ex2-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ EX2 Max ในไทย ปี 2025: <a href={geelyEx2Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={geelyEx2Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'deepal-s07-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ NEW S07 ในไทย ปี 2025: <a href={deepalS07Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={deepalS07Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'deepal-s05-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Max ในไทย ปี 2025: <a href={deepalS05Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS05Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={deepalS05Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS05Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ · ป้ายในภาพเป็นข้อมูลวันจัดแสดง</p>}
@@ -1146,7 +1150,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
