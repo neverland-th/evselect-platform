@@ -1151,7 +1151,7 @@
         },
         {
           "href": "/articles/geely-ex2-review",
-          "text": "รีวิวรถ EV7 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV5 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -1168,7 +1168,7 @@
         },
         {
           "href": "/articles/geely-ex2-review",
-          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "text": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ",
           "scope": [
             "html",
             "body",
@@ -2100,6 +2100,46 @@
         },
         {
           "href": "https://commons.wikimedia.org/wiki/File:2025_Deepal_S05_Max.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2025_Geely_EX2_Max.jpg",
           "text": "Chanokchon (เปิดแท็บใหม่)",
           "scope": [
             "html",
@@ -9284,32 +9324,14 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-horsepower-vs-torque-explained",
+          "text": "แรงม้ากับแรงบิดในการเลือกรถ EV",
           "scope": [
             "html",
             "body",
@@ -9318,174 +9340,187 @@
             "article",
             "div",
             "section",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ Geely EX2",
+          "href": "/articles/optimizing-ev-suspension-thai-roads",
+          "text": "วิธีดูอาการช่วงล่างบนถนนไทย",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/#vehicle-finder",
-          "text": "ค้นหาตามรุ่นรถ",
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "การเลือกยางและ Coilover ให้ตรงรถและการใช้งาน",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/deepal-s05-review",
-          "text": "Smart Tech SUVIn-Depth Reviewรีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตรเจาะลึกเอสยูวีไฟฟ้าน้องใหม่สายแคมปิ้ง ออปชันไฮเทค และการชาร์จเร็ว 3C",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/deepal-s07-review",
-          "text": "D-Segment SUVIn-Depth Reviewรีวิว Changan Deepal S07: มอเตอร์ 258 แรงม้า ม่านบังแดดไฟฟ้าสู้แดดไทยเจาะลึกเอสยูวีไฟฟ้ารุ่นพี่ ออปชันหรูหรา และการชาร์จ DC 167 kW",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles/ev-battery-care",
-          "text": "Editorial GuideTips & Guideดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?เลือกขีดจำกัดการชาร์จให้ตรงรถ เข้าใจการใช้ AC/DC การจอดนาน และการอ่านระยะวิ่ง พร้อมตัวอย่างจากคู่มือ Tesla Model 3 และลิงก์ตรวจสอบด้วยตัวเอง",
+          "text": "การดูแลแบตเตอรี่และวางแผนชาร์จรถ EV",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div"
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
+          "text": "อ่านบทความรถ EV และช่วงล่างเรื่องอื่น",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "div",
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/contact",
+          "text": "บอกรุ่นรถและสิ่งที่อยากให้เราศึกษาเพิ่ม",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://imgcdn.zigwheels.co.th/brochures/110/3840/geely-ex2-826410.pdf",
+          "text": "โบรชัวร์ Geely EX2 ประเทศไทย ฉบับ 12/25 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2025_Geely_EX2_Max.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://global.geely.com/en/news/2025/geely-ex2-thailand-debut",
+          "text": "ข้อมูลเปิดตัว EX2 ในไทยจาก Geely (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.thonburineustern.com/service/brochure/",
+          "text": "หน้ารวมโบรชัวร์ของผู้จำหน่ายทางการไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],

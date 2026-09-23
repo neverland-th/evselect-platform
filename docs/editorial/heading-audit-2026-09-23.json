@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T12:06:54.786068+00:00",
+  "checkedAt": "2026-09-23T12:23:29.692835+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -387,7 +387,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "text": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"
@@ -2930,7 +2930,7 @@
         },
         {
           "level": 1,
-          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "text": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article",
@@ -2939,7 +2939,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "text": "Pro กับ Max ใช้ขุมพลังเดียวกัน",
           "scope": [
             "main",
             "article"
@@ -2947,7 +2947,7 @@
         },
         {
           "level": 2,
-          "text": "1. ภาพรวม & บริบทในตลาดรถยนต์ไฟฟ้าไทย",
+          "text": "อุปกรณ์ที่ต่างกัน มีอะไรที่คุณจะใช้จริง?",
           "scope": [
             "main",
             "article"
@@ -2955,23 +2955,7 @@
         },
         {
           "level": 2,
-          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Geely EX2 Pro",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Geely EX2 Max",
+          "text": "รถเล็กที่ต้องลองทั้งคน ของ และโทรศัพท์",
           "scope": [
             "main",
             "article"
@@ -2979,7 +2963,7 @@
         },
         {
           "level": 2,
-          "text": "3. ดีไซน์ภายนอก ความน่ารักทันสมัย และมิติตัวถัง",
+          "text": "ขับหลังและ Multi-link บอกโครงสร้าง แต่ยังต้องลองความสบาย",
           "scope": [
             "main",
             "article"
@@ -2987,135 +2971,7 @@
         },
         {
           "level": 2,
-          "text": "4. ห้องโดยสาร ระบบ Flyme Auto 14.6 นิ้ว และช่องเก็บของ 36 จุด",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ช่องเก็บของ Frunk หน้า 70 ลิตร + ท้าย 375L",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ลิ้นชักผู้โดยสารหน้า 10 ลิตร และช่องเก็บของ 36 จุด",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "5. ขุมพลัง 11-in-1 E-Drive ขับหลัง RWD และอัตราเร่ง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "6. จุดเปลี่ยนเกม: ช่วงล่างหลังอิสระ Multi-link บนถนนเมืองไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ความนุ่มนวลในการซับรอยต่อถนนและลูกระนาด (Ride Plushness)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การเข้าโค้งและการเกาะถนน (Rear-Wheel Drive Stability)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "7. แบตเตอรี่ Aegis Short Blade ทนความร้อนสูง และการชาร์จ DC",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การทดสอบระยะทางวิ่งจริงในเมืองหลวง กทม.",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ระบบความปลอดภัยและโครงสร้างตัวถัง High-Strength Steel",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Geely EX2",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "EVSELECT Rating Breakdown",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "บทความและรีวิวที่เกี่ยวข้อง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Changan Deepal S05: กล้อง 4K Gimbal ไฟหน้า DLP ฉายหนัง และ Frunk 159 ลิตร",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Changan Deepal S07: มอเตอร์ 258 แรงม้า ม่านบังแดดไฟฟ้าสู้แดดไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร?",
+          "text": "แผนชาร์จพร้อมแล้ว ค่อยตัดสินว่ารุ่นไหนเหมาะ",
           "scope": [
             "main",
             "article"
@@ -4565,7 +4421,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "text": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"
@@ -5056,7 +4912,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "text": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"
@@ -5123,7 +4979,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง",
+          "text": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ",
           "scope": [
             "main",
             "article"

@@ -37,3 +37,7 @@ Complete local desktop/mobile article and card reading: `deepal-s05-reader-revie
 ## Deepal NEW S07 follow-up — 23 September 2026
 
 Complete local reader record: `deepal-s07-reader-review-2026-09-23.md`. Replaced mixed-generation figures and unsupported test/score claims with the Thai NEW S07 brochure, clear photo provenance, practical buyer checks and four verified contextual links. Full article and changed-card desktop/mobile reading completed; mobile excerpt clipping fixed and final card reread. Ten of fourteen legacy routes reviewed, four remaining plus final catalogue/release/live gates. 31-route link and 42-view heading inventories clear; 81 referenced images, TypeScript and changed-file ESLint pass. No push or production deployment.
+
+## Geely EX2 follow-up — 23 September 2026
+
+Completed the source-scoped Pro/Max replacement and entire final desktop/mobile reader review, including nine-row horizontal table and licensed Thai photograph. Four contextual body links actually clicked to their correct same-tab destinations. Complete affected catalogue card read in both views; title opens the corrected guide. See geely-ex2-reader-review-2026-09-23.md for source limitations and concrete observations. Eleven of fourteen legacy routes reviewed; Model Y L, ZEEKR 009, ZEEKR X and full catalogue/release/live gates remain. Link inventory still passes 31 routes and heading inventory 42 views; 82 images, TypeScript and changed-file lint pass. No push/deployment.

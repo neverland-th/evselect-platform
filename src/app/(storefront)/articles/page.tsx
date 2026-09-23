@@ -16,6 +16,7 @@ import { atto3Article } from '@/lib/atto3-article';
 import { sealArticle } from '@/lib/seal-article';
 import { deepalS05Article } from '@/lib/deepal-s05-article';
 import { deepalS07Article } from '@/lib/deepal-s07-article';
+import { geelyEx2Article } from '@/lib/geely-ex2-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -346,26 +347,27 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'geely-ex2-review',
-    title: 'รีวิว Geely EX2 สเปกไทย: รถไฟฟ้าซิตี้คาร์ขับหลัง ช่วงล่างหลังอิสระ Multi-link ที่ยกระดับมาตรฐานรถเล็กในเมือง',
+    title: geelyEx2Article.title,
     shortTitle: 'Geely EX2',
-    excerpt: 'สัมผัสแรกกับซิตี้คาร์ไฟฟ้าระบบขับเคลื่อนล้อหลัง RWD มอเตอร์ 116 แรงม้า ช่วงล่างหลังอิสระ Multi-link หนึ่งเดียวในงบ 4 แสน แบตเตอรี่ Aegis 39.4 kWh และระบบ Flyme Auto',
+    excerpt: 'เทียบ Pro กับ Max จากโบรชัวร์ไทย ดูอุปกรณ์ช่วยขับ ล้อและการชาร์จ พร้อมจุดที่ควรลองก่อนซื้อ',
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'city',
     segmentName: 'ซิตี้คาร์ไฟฟ้าขับหลังขนาดกะทัดรัด',
-    image: '/images/reviews/geely-ex2-hero.jpg',
-    date: '2026-08-25',
-    dateDisplay: '25 ส.ค. 2569',
-    readTime: '7 นาที',
-    rating: 8.6,
-    ratingText: '8.6 / 10',
-    priceRange: '429,990 – 459,990 บาท',
-    highlights: ['มอเตอร์ 116 hp (RWD)', 'ช่วงล่างหลัง Multi-link', 'แบต Aegis 39.4 kWh', 'Frunk หน้า 70 ลิตร'],
+    image: geelyEx2Article.image,
+    imageAlt: geelyEx2Article.imageAlt,
+    date: geelyEx2Article.updatedAt,
+    publishedAt: geelyEx2Article.publishedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    readTime: geelyEx2Article.readTime,
+    rating: null,
+    priceRange: 'ขอใบเสนอราคาตรงรุ่นและวันที่ซื้อ',
+    highlights: ['ขุมพลังเหมือนกัน อุปกรณ์ต่างกัน', 'เทียบกล้อง ล้อและระบบช่วยขับ', 'ยืนยันซอฟต์แวร์กับรถคันจริง'],
     featured: false,
-      brand: 'EV',
-      badge: 'Thailand focus model',
-      accessoryOpportunity: 'พรม TPE, ถาดคอนโซล, กันรอยชายประตู',
-      fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
+    brand: 'Geely',
+    badge: 'คู่มือเลือกซื้อจากสเปกไทย',
+    accessoryOpportunity: 'ตรวจรถไทยก่อนเลือกอุปกรณ์เสริม',
+    fitmentGate: 'ยืนยัน Pro / Max ปีผลิตและซอฟต์แวร์ก่อนรับรถ',
   },
   {
     slug: 'ev-battery-care',
@@ -1125,6 +1127,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'geely-ex2-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ EX2 Max ในไทย ปี 2025: <a href={geelyEx2Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={geelyEx2Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'deepal-s07-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ NEW S07 ในไทย ปี 2025: <a href={deepalS07Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={deepalS07Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'deepal-s05-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Max ในไทย ปี 2025: <a href={deepalS05Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS05Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={deepalS05Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS05Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ · ป้ายในภาพเป็นข้อมูลวันจัดแสดง</p>}
                   {article.slug === 'byd-seal-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Premium ในไทย ปี 2023: <a href={sealArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{sealArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={sealArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{sealArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ · ป้ายในภาพเป็นข้อมูลวันจัดแสดง</p>}
@@ -1143,7 +1146,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
