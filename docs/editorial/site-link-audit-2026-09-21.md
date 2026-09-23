@@ -29,3 +29,7 @@ Remaining: individual brand-link corrections on 16 routes; Carbon Ceramic's rene
 ## BYD Seal follow-up — 23 September 2026
 
 Complete local desktop/mobile reader review and card review: `seal-reader-review-2026-09-23.md`. Five body links exercised to matching destinations; manufacturer/source links retained with protected new-tab semantics. Eight of fourteen affected legacy routes reviewed, six still pending. Current inventories: 31 route link checks and 42 heading views clear; this is not a full-site editorial approval or deployment.
+
+## Deepal S05 follow-up — 23 September 2026
+
+Complete local desktop/mobile article and card reading: `deepal-s05-reader-review-2026-09-23.md`. Four contextual links clicked to matching destinations; manufacturer/photo links keep protected new-tab semantics. Nine of fourteen affected legacy routes reviewed; five still pending. Current inventories clear at 31 routes / 42 views; no full-site editorial approval or deployment claimed.
