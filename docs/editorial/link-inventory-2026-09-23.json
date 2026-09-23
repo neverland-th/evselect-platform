@@ -647,7 +647,7 @@
         },
         {
           "href": "/articles/zeekr-009-review",
-          "text": "รีวิวรถ EV16 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV5 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -664,7 +664,7 @@
         },
         {
           "href": "/articles/zeekr-009-review",
-          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "text": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย",
           "scope": [
             "html",
             "body",
@@ -1931,6 +1931,46 @@
             "section",
             "div",
             "div",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Zeekr_009_Flagship_AWD.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
             "div",
             "div",
             "p"
@@ -11673,32 +11713,14 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-horsepower-vs-torque-explained",
+          "text": "ความต่างของแรงม้าและแรงบิดในรถ EV",
           "scope": [
             "html",
             "body",
@@ -11707,15 +11729,14 @@
             "article",
             "div",
             "section",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ ZEEKR 009",
+          "href": "/articles/tesla-model-y-l-premium-6-seater-review",
+          "text": "สิ่งที่ครอบครัวควรลองใน Tesla Model Y L",
           "scope": [
             "html",
             "body",
@@ -11724,17 +11745,14 @@
             "article",
             "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/contact",
-          "text": "ค้นหาตามรุ่นรถ",
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "คู่มือเลือกยางสำหรับ EV หนักและแรง",
           "scope": [
             "html",
             "body",
@@ -11743,17 +11761,14 @@
             "article",
             "div",
             "section",
-            "div",
-            "div",
-            "div",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+          "text": "ความต่างของสปริงถุงลมกับโช้คอัพ",
           "scope": [
             "html",
             "body",
@@ -11762,124 +11777,184 @@
             "article",
             "div",
             "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/#vehicle-finder",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-7x-2026-review",
-          "text": "ภาพประกอบ: Zeekr 7XSUV ไฟฟ้า 800VZEEKR Reviewรีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีดขุมพลัง 646 แรงม้า 800V SiC และช่วงล่างถุงลมปรับระดับ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-x-review",
-          "text": "Compact LuxuryZEEKR Reviewรีวิว Zeekr X: พรีเมียมคอมแพกต์เอสยูวีสำหรับคนเมืองความคล่องตัวสไตล์ยุโรป ดีไซน์สแกนดิเนเวีย และสมรรถนะเกินตัว",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles/optimizing-ev-suspension-thai-roads",
-          "text": "Chassis Tuning GuideSuspension Techการเซ็ตอัปช่วงล่าง EV สำหรับถนนเมืองไทย: นุ่มนวล ไม่เด้ง ไม่กระด้างวิเคราะห์โช้คอัพ ถุงลม Air Suspension และการรับมือน้ำหนักแบตเตอรี่",
+          "text": "วิธีแยกอาการช่วงล่างบนถนนไทย",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div"
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-battery-care",
+          "text": "แนวทางดูแลแบตเตอรี่และวางแผนชาร์จ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
+          "text": "อ่านบทความรถ EV และช่วงล่างเรื่องอื่น",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/contact",
+          "text": "บอกรุ่นรถและสิ่งที่อยากให้เราศึกษาเพิ่ม",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://www.zeekrlife.com/en-th/models/009",
+          "text": "สเปก ZEEKR 009 บนเว็บไซต์ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Zeekr_009_Flagship_AWD.jpg",
+          "text": "Chanokchon / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.datocms-assets.com/142974/1742294973-01-zeekr-009_brochure_2025_green180324_m-1.pdf",
+          "text": "โบรชัวร์ ZEEKR 009 ไทยฉบับปี 2025 (PDF) (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zeekrlife.com/en-th/posts/zeekr-009-esrimthaphrun-standard-t-kyamkhwaamepnphuunam-luxury-ev-mpv-thiiaihkhrb",
+          "text": "ข่าวเปิดตัว Standard ของ ZEEKR ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zeekrlife.com/en-th/test-drive?model=ZEEKR+009",
+          "text": "นัดทดลองขับ ZEEKR 009 กับผู้ผลิต (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],

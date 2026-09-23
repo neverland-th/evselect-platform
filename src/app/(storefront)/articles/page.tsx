@@ -18,6 +18,7 @@ import { deepalS05Article } from '@/lib/deepal-s05-article';
 import { deepalS07Article } from '@/lib/deepal-s07-article';
 import { geelyEx2Article } from '@/lib/geely-ex2-article';
 import { teslaModelYLArticle } from '@/lib/tesla-model-y-l-article';
+import { zeekr009Article } from '@/lib/zeekr-009-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -124,33 +125,29 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'zeekr-009-review',
-    title: 'รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard',
+    title: zeekr009Article.title,
     shortTitle: 'ZEEKR 009',
-    excerpt: 'เจาะลึกอัลตร้าลักชัวรีเอ็มพีวี 3 รุ่นย่อย (Standard FWD, Premium AWD, Flagship AWD) ขุมพลังสูงสุด 603 แรงม้า วิ่งไกล 686-712 กม. เบาะ Sofaro First Class พร้อมโครงสร้าง 720 องศา',
+    excerpt: 'เทียบสามรุ่นย่อยไทย พร้อมจุดที่ควรลองเรื่องเบาะ ช่วงล่าง และพื้นที่จอดก่อนซื้อ',
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'suv',
-    segmentName: '👑 อัลตร้าลักชัวรีเอ็มพีวีไฟฟ้า',
-    image: '/images/reviews/zeekr-009-hero.jpg',
-    date: '2026-08-26',
-    dateDisplay: '26 ส.ค. 2569',
-    readTime: '16 นาที',
-    rating: 9.4,
-    ratingText: '9.4 / 10',
-    priceRange: '3,099,000 – 3,599,000 บาท',
-    performanceText: '450 kW (603 hp) / 693 Nm (0-100: 4.5s)',
-    highlights: [
-      'มอเตอร์คู่ 603 hp / 693 Nm (0-100: 4.5s)',
-      'แบตเตอรี่ 116 kWh วิ่งไกล 686 กม. (NEDC)',
-      'เบาะ Sofaro First Class + Eames Lounge Mode',
-      'ลำโพง YAMAHA 30 จุด + จอเพดาน OLED 17 นิ้ว',
-      'ช่วงล่างถุงลม Dual Chamber + CCD'
-    ],
+    segmentName: 'MPV ไฟฟ้า · 6 หรือ 7 ที่นั่ง',
+    image: zeekr009Article.image,
+    imageAlt: zeekr009Article.imageAlt,
+    imageFit: 'contain',
+    date: zeekr009Article.updatedAt,
+    publishedAt: zeekr009Article.publishedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    readTime: zeekr009Article.readTime,
+    rating: null,
+    priceRange: 'ตรวจราคาตามรุ่นและวันสั่งซื้อ',
+    performanceText: 'Standard 335 hp / รุ่น AWD 603 hp',
+    highlights: ['เลือกจำนวนที่นั่งก่อนเลือกความแรง', 'ลองขึ้นลงรถและจัดกระเป๋ากับคันจริง', 'แยกข้อมูลสามรุ่นจาก ZEEKR ประเทศไทย'],
     featured: false,
-    brand: 'Zeekr',
-    badge: 'Flagship Luxury MPV',
+    brand: 'ZEEKR',
+    badge: 'คู่มือ MPV ครอบครัว',
     accessoryOpportunity: 'พรม TPE 3 แถวตรงรุ่น, ฟิล์มกันรอยจอหลังคา, ถาดจัดระเบียบตู้เย็น',
-    fitmentGate: 'เช็คเลย์เอาต์ที่นั่ง 6 ที่นั่ง (Sofaro) หรือ 7 ที่นั่ง (Walkthrough)',
+    fitmentGate: 'ตรวจรุ่นย่อย จำนวนที่นั่งและปีผลิตกับรถคันจริง',
   },
   {
     slug: 'tesla-model-y-l-premium-6-seater-review',
@@ -1130,6 +1127,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'zeekr-009-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Flagship ในไทย ปี 2024: <a href={zeekr009Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr009Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'tesla-model-y-l-premium-6-seater-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพต่างประเทศ ปี 2025: <a href={teslaModelYLArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={teslaModelYLArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'geely-ex2-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ EX2 Max ในไทย ปี 2025: <a href={geelyEx2Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={geelyEx2Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'deepal-s07-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ NEW S07 ในไทย ปี 2025: <a href={deepalS07Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={deepalS07Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{deepalS07Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
@@ -1150,7 +1148,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review', 'zeekr-009-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>

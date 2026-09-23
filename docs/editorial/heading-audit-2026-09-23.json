@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T12:40:22.722618+00:00",
+  "checkedAt": "2026-09-23T12:52:18.068522+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -315,7 +315,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "text": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย",
           "scope": [
             "main",
             "article"
@@ -3757,7 +3757,7 @@
         },
         {
           "level": 1,
-          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า เบาะ First Class ท้าชิงบัลลังก์ Toyota Alphard",
+          "text": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย",
           "scope": [
             "main",
             "article",
@@ -3766,7 +3766,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "text": "สามรุ่นย่อย ต่างกันตรงไหนที่มีผลกับคุณ",
           "scope": [
             "main",
             "article"
@@ -3774,7 +3774,7 @@
         },
         {
           "level": 2,
-          "text": "1. บทนำและบริบทตลาด: ผู้ท้าชิงบัลลังก์ Toyota Alphard (Market Context)",
+          "text": "พาครอบครัวไปลองทั้งแถวสองและแถวสาม",
           "scope": [
             "main",
             "article"
@@ -3782,39 +3782,7 @@
         },
         {
           "level": 2,
-          "text": "2. เจาะลึก 3 รุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Standard FWD",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Premium AWD",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Flagship AWD",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "สรุปคำแนะนำ: เลือกรุ่นไหนให้คุ้มค่าที่สุดสำหรับคุณ?",
+          "text": "รถยาวกว่า 5 เมตร ต้องลองช่องจอดด้วย",
           "scope": [
             "main",
             "article"
@@ -3822,7 +3790,7 @@
         },
         {
           "level": 2,
-          "text": "3. ดีไซน์ภายนอกและมิติตัวถัง (Exterior Design & Dimensions)",
+          "text": "มีถุงลมและ CCD ก็ยังต้องลองนั่ง",
           "scope": [
             "main",
             "article"
@@ -3830,111 +3798,7 @@
         },
         {
           "level": 2,
-          "text": "4. ห้องโดยสารระดับ First Class และความสบาย (Interior & Sofaro Luxury)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "5. ประสบการณ์ขับขี่จริงบนถนนไทย: NVH, ช่วงล่างถุงลม และอัตราเร่ง (Driving Dynamics & NVH)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "6. เปรียบเทียบตรงตัว: ZEEKR 009 vs TOYOTA ALPHARD (Head-to-Head Comparison)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "1. ประสบการณ์ผู้โดยสารตอนหลัง (Passenger Experience):",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "2. ความเงียบและความนุ่มนวล (NVH & Ride Refinement):",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "3. ความคุ้มค่าด้านราคาและต้นทุนการใช้งาน (Value Proposition & TCO):",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "7. เทคโนโลยี ความบันเทิง และความปลอดภัย 720 องศา (Tech & 720° Safety)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ ZEEKR 009 สเปกไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "EVSELECT Rating Breakdown",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "บทความและรีวิวที่เกี่ยวข้อง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Zeekr X: พรีเมียมคอมแพกต์เอสยูวีสำหรับคนเมือง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การเซ็ตอัปช่วงล่าง EV สำหรับถนนเมืองไทย: นุ่มนวล ไม่เด้ง ไม่กระด้าง",
+          "text": "วางแผนชาร์จและขอเงื่อนไขให้ครบก่อนจอง",
           "scope": [
             "main",
             "article"
@@ -4563,7 +4427,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "text": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย",
           "scope": [
             "main",
             "article"
@@ -4744,7 +4608,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "text": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย",
           "scope": [
             "main",
             "article"
@@ -5100,7 +4964,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว ZEEKR 009 สเปกไทย 3 รุ่นย่อย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Toyota Alphard",
+          "text": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย",
           "scope": [
             "main",
             "article"

@@ -45,3 +45,7 @@ Completed the source-scoped Pro/Max replacement and entire final desktop/mobile 
 ## Model Y L follow-up — 23 September 2026
 
 Complete final desktop/mobile guide and catalogue-card reading: `model-y-l-reader-review-2026-09-23.md`. Five contextual links clicked to matching same-tab destinations; manufacturer/manual/photo references retain protected new-tab behavior. Thai six-seat specifications replace unsupported tests and mixed-model figures. Twelve of fourteen legacy routes reviewed; ZEEKR 009/X and full catalogue/source/release/live checks remain. 31-route links, 42-view headings, 83 images, TypeScript and changed-file lint pass. No push or deployment.
+
+## ZEEKR 009 follow-up — 23 September 2026
+
+Complete final desktop/mobile article, six-row table and catalogue card reading recorded in zeekr-009-reader-review-2026-09-23.md. Six contextual body links clicked to matching destinations. Thai source scope, old brochure limits and licensed exhibition-photo provenance are explicit; fabricated scores/road testing removed. Thirteen of fourteen legacy routes reviewed; ZEEKR X and full catalogue/source/release/live gates remain. 31-route links, 42-view headings, 82 images, TypeScript and changed-file lint pass. No push or deployment.
