@@ -187,6 +187,8 @@ const ALL_ARTICLES: ArticleItem[] = [
     segment: 'sedan',
     segmentName: 'พรีเมียมซีดานไฟฟ้า D-Segment',
     image: '/images/reviews/tesla-model-3-hero.jpg',
+    imageAlt: 'Tesla Model 3 Highland สีแดงในเยอรมนี ปี 2024 ภาพประกอบรุ่นรถ',
+    imageFit: 'contain',
     date: teslaModel3.checkedDate,
     dateDisplay: '14 ก.ย. 2569',
     readTime: '7 นาที',
@@ -529,8 +531,8 @@ const ALL_ARTICLES: ArticleItem[] = [
     imageAlt: damperArticle.coverAlt,
     imageFit: 'contain',
     heroImage: damperArticle.cover.src,
-    date: '2026-08-27',
-    dateDisplay: 'อัปเดต 19 ก.ย. 2569',
+    date: damperArticle.updatedAt,
+    dateDisplay: '19 ก.ย. 2569',
     publishedAt: damperArticle.publishedAt,
     author: 'EVSELECT',
     readTime: 'คู่มือฉบับเต็ม',
@@ -631,14 +633,15 @@ const ALL_ARTICLES: ArticleItem[] = [
     segment: 'coilovers',
     segmentName: '🛞 ยาง & สตรัทปรับเกลียวตรงรุ่น',
     image: '/images/editorial/tesla-model-3-performance-2024.png',
+    imageAlt: drivingArticle.imageAlt,
+    imageFit: 'contain',
     heroImage: '/images/editorial/tesla-model-3-performance-2024.png',
-    date: '2026-08-27',
-    dateDisplay: '27 ส.ค. 2569',
+    date: '2026-09-21',
+    dateDisplay: '21 ก.ย. 2569',
     publishedAt: '2026-08-27',
     author: 'EVSELECT',
     readTime: '8 นาที',
-    rating: 9.7,
-    ratingText: 'Comprehensive Buyer Guide',
+    rating: null,
     priceRange: 'คู่มือเชิงลึก',
     performanceText: 'Load Index & Coilover Fitment',
     highlights: [
@@ -860,7 +863,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
-              🚙 เอสยูวี / ครอสโอเวอร์ ({suvCount})
+              🚙 เอสยูวี / ครอสโอเวอร์ / MPV ({suvCount})
             </Link>
             <Link
               href={`/articles?category=${activeCategory}&segment=hatchback`}
@@ -1117,7 +1120,10 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
-                  {article.slug === 'ev-performance-driving-techniques' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Model 3 Performance ปี 2024 ไม่ใช่รถทดสอบของทีมงาน: <a href={drivingArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{drivingArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={drivingArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{drivingArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
+                  {['ev-performance-driving-techniques', 'ev-tyre-and-coilover-selection-guide'].includes(article.slug) && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Model 3 Performance ปี 2024 ไม่ใช่รถทดสอบของทีมงาน: <a href={drivingArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{drivingArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={drivingArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{drivingArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
+                  {article.slug === 'tesla-model-3-highland-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Highland ในเยอรมนี ปี 2024: <a href="https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Alexander Migl<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC BY-SA 4.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
+                  {article.slug === 'ev-horsepower-vs-torque-explained' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพอินเวอร์เตอร์ Toyota bZ4X ปี 2022: <a href="https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Mariordo<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC BY-SA 4.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดและครอป</p>}
+                  {article.slug === 'ev-damper-tuning-bump-rebound-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ KW จากเจ้าของเว็บไซต์ ใช้ประกอบภาพรวม ไม่ยืนยันรุ่นรถที่ติดตั้ง · <a href="https://www.kwsuspensions.com/uk/products/street-performance" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">ดูผลิตภัณฑ์ KW<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
                   {article.slug === 'zeekr-x-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Flagship ในไทย ปี 2024: <a href={zeekrXArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekrXArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekrXArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekrXArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'zeekr-009-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Flagship ในไทย ปี 2024: <a href={zeekr009Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr009Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'tesla-model-y-l-premium-6-seater-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพต่างประเทศ ปี 2025: <a href={teslaModelYLArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={teslaModelYLArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
@@ -1137,10 +1143,10 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
                     <span className="text-slate-900">{article.brand === 'EVSELECT' ? <BrandHomeLink /> : article.brand === 'EVSELECT BUYER GUIDE' ? <><BrandHomeLink /> BUYER GUIDE</> : article.brand || article.category}</span>
                     <span aria-hidden="true">•</span>
-                    <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
+                    <span className="text-lime-700">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review', 'zeekr-009-review', 'zeekr-x-review', 'ev-performance-driving-techniques'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug" style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
@@ -1160,7 +1166,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     {article.fitmentGate && (
                       <div className="rounded-xl bg-lime-50 p-3">
                         <dt className="text-xs font-bold text-lime-800 mb-1">จุดที่ควรตรวจสอบ</dt>
-                        <dd className="text-sm text-slate-700 leading-relaxed line-clamp-2">{article.fitmentGate}</dd>
+                        <dd className="text-sm text-slate-700 leading-relaxed">{article.fitmentGate}</dd>
                       </div>
                     )}
                   </dl>

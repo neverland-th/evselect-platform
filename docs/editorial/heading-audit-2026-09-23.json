@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T13:18:52.965479+00:00",
+  "checkedAt": "2026-09-23T13:32:13.701323+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [

@@ -565,7 +565,7 @@
         },
         {
           "href": "/articles?category=all&segment=suv",
-          "text": "🚙 เอสยูวี / ครอสโอเวอร์ (7)",
+          "text": "🚙 เอสยูวี / ครอสโอเวอร์ / MPV (7)",
           "scope": [
             "html",
             "body",
@@ -2019,6 +2019,46 @@
           "rel": "noopener noreferrer"
         },
         {
+          "href": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg",
+          "text": "Alexander Migl (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
           "href": "https://commons.wikimedia.org/wiki/File:2023_BYD_Seal_Premium.jpg",
           "text": "Chanokchon (เปิดแท็บใหม่)",
           "scope": [
@@ -2419,6 +2459,46 @@
           "rel": "noopener noreferrer"
         },
         {
+          "href": "https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg",
+          "text": "Mariordo (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
           "href": "https://commons.wikimedia.org/wiki/File:LADA_Vesta_Sport,_Wheel_alignment.jpg",
           "text": "Dmitry Racer (เปิดแท็บใหม่)",
           "scope": [
@@ -2459,6 +2539,26 @@
           "rel": "noopener noreferrer"
         },
         {
+          "href": "https://www.kwsuspensions.com/uk/products/street-performance",
+          "text": "ดูผลิตภัณฑ์ KW (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
           "href": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg",
           "text": "JustAnotherCarDesigner (เปิดแท็บใหม่)",
           "scope": [
@@ -2481,6 +2581,46 @@
         {
           "href": "https://creativecommons.org/publicdomain/zero/1.0/",
           "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png",
+          "text": "iMoD Official (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by/3.0/",
+          "text": "CC BY 3.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
