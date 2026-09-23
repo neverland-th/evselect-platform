@@ -49,3 +49,6 @@ Complete final desktop/mobile guide and catalogue-card reading: `model-y-l-reade
 ## ZEEKR 009 follow-up — 23 September 2026
 
 Complete final desktop/mobile article, six-row table and catalogue card reading recorded in zeekr-009-reader-review-2026-09-23.md. Six contextual body links clicked to matching destinations. Thai source scope, old brochure limits and licensed exhibition-photo provenance are explicit; fabricated scores/road testing removed. Thirteen of fourteen legacy routes reviewed; ZEEKR X and full catalogue/source/release/live gates remain. 31-route links, 42-view headings, 82 images, TypeScript and changed-file lint pass. No push or deployment.
+# ZEEKR X follow-up — 23 September 2026
+
+Replaced the unsupported scored/road-tested review with a Thai Standard/Flagship guide using the current linked July 2026 brochure. Five body anchors now lead to the power/torque, ZEEKR 7X, tyre/coilover, Carbon Ceramic and battery articles; every one was clicked and destination-confirmed. The exact manufacturer model/PDF/test-drive and licensed image records use protected new tabs. Complete final desktop/mobile reading, table states and catalogue card evidence: `zeekr-x-reader-review-2026-09-23.md`. All fourteen legacy route reader reviews now recorded, but whole catalogue/source/release/live gates remain. No deployment claim.

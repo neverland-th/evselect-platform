@@ -19,6 +19,7 @@ import { deepalS07Article } from '@/lib/deepal-s07-article';
 import { geelyEx2Article } from '@/lib/geely-ex2-article';
 import { teslaModelYLArticle } from '@/lib/tesla-model-y-l-article';
 import { zeekr009Article } from '@/lib/zeekr-009-article';
+import { zeekrXArticle } from '@/lib/zeekr-x-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -226,27 +227,26 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'zeekr-x-review',
-    title: 'รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์',
-    shortTitle: 'Zeekr X',
-    excerpt: 'สัมผัสความหรูหราสไตล์สแกนดิเนเวีย แพลตฟอร์ม SEA มอเตอร์คู่ 489 แรงม้า 0-100 ใน 3.7 วินาที ประตูไร้กรอบไฟฟ้า ลำโพง Yamaha 13 จุด และการขับขี่สุดเฟิร์ม',
+    title: zeekrXArticle.title,
+    shortTitle: 'ZEEKR X',
+    excerpt: 'เทียบสองรุ่นย่อยไทย พร้อมสิ่งที่ควรลองเรื่องล้อ ยาง ห้องโดยสาร และการชาร์จก่อนซื้อ',
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'suv',
-    segmentName: 'พรีเมียมคอมแพกต์ครอสโอเวอร์',
-    image: '/images/reviews/zeekr-x-hero.jpg',
-    date: '2026-08-25',
-    dateDisplay: '25 ส.ค. 2569',
-    readTime: '9 นาที',
-    rating: 9.0,
-    ratingText: '9.0 / 10',
-    priceRange: '899,000 – 1,049,000 บาท',
-    performanceText: '250 – 365 kW (335 – 489 hp) / 373 – 573 Nm (0-100: 3.7s)',
-    highlights: ['489 hp (AWD Flagship)', '0-100 ใน 3.7s', 'แบต 61-66 kWh (450-470 กม.)', 'Yamaha 13 ลำโพง'],
+    segmentName: 'คอมแพกต์ SUV · Standard / Flagship',
+    image: zeekrXArticle.image,
+    imageAlt: zeekrXArticle.imageAlt,
+    imageFit: 'contain',
+    date: zeekrXArticle.updatedAt,
+    publishedAt: zeekrXArticle.publishedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    readTime: zeekrXArticle.readTime,
+    rating: null,
+    priceRange: 'ตรวจราคาตามรุ่นและวันสั่งซื้อ',
+    highlights: ['เทียบสเปกไทยจากโบรชัวร์ปี 2026', 'ล้อ ยาง และ AC 11 / 22 kW ต่างกันอย่างไร'],
     featured: false,
-    brand: 'Zeekr',
-    badge: 'Thailand focus model',
-    accessoryOpportunity: 'พรม TPE, ถาดคอนโซล, กันรอยชายประตู',
-    fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
+    brand: 'ZEEKR',
+    fitmentGate: 'ตรวจรุ่นย่อย ปีผลิต และขนาดล้อของรถคันจริง',
   },
   {
     slug: 'mg4-electric-review',
@@ -1127,6 +1127,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'zeekr-x-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Flagship ในไทย ปี 2024: <a href={zeekrXArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekrXArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekrXArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekrXArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'zeekr-009-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ Flagship ในไทย ปี 2024: <a href={zeekr009Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr009Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr009Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'tesla-model-y-l-premium-6-seater-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพต่างประเทศ ปี 2025: <a href={teslaModelYLArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={teslaModelYLArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{teslaModelYLArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'geely-ex2-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ EX2 Max ในไทย ปี 2025: <a href={geelyEx2Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={geelyEx2Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{geelyEx2Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
@@ -1148,7 +1149,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review', 'zeekr-009-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review', 'byd-seal-review', 'deepal-s05-review', 'deepal-s07-review', 'geely-ex2-review', 'tesla-model-y-l-premium-6-seater-review', 'zeekr-009-review', 'zeekr-x-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>

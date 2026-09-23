@@ -14,6 +14,7 @@ import { deepalS07Article } from '@/lib/deepal-s07-article';
 import { geelyEx2Article } from '@/lib/geely-ex2-article';
 import { teslaModelYLArticle } from '@/lib/tesla-model-y-l-article';
 import { zeekr009Article } from '@/lib/zeekr-009-article';
+import { zeekrXArticle } from '@/lib/zeekr-x-article';
 import { publicSiteRoutes, siteOrigin } from '@/lib/public-site-routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -32,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(path === deepalS07Article.path ? { lastModified: deepalS07Article.updatedAt } : {}),
     ...(path === geelyEx2Article.path ? { lastModified: geelyEx2Article.updatedAt } : {}),
     ...(path === teslaModelYLArticle.path ? { lastModified: teslaModelYLArticle.updatedAt } : {}),
+    ...(path === zeekrXArticle.path ? { lastModified: zeekrXArticle.updatedAt } : {}),
     ...(path === zeekr009Article.path ? { lastModified: zeekr009Article.updatedAt } : {}),
     ...(path === atto3Article.path ? { lastModified: atto3Article.updatedAt } : {}),
     ...(path === hybridEvArticle.path ? { lastModified: hybridEvArticle.updatedAt } : {}),

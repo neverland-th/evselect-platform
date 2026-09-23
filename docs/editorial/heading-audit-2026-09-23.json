@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T12:52:18.068522+00:00",
+  "checkedAt": "2026-09-23T13:06:10.880983+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -347,7 +347,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "text": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ",
           "scope": [
             "main",
             "article"
@@ -3985,7 +3985,7 @@
         },
         {
           "level": 1,
-          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "text": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ",
           "scope": [
             "main",
             "article",
@@ -3994,7 +3994,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปภาพรวมสำหรับผู้ซื้อในไทย (Executive Takeaways)",
+          "text": "เทียบสองรุ่นให้ครบกว่าแรงม้า",
           "scope": [
             "main",
             "article"
@@ -4002,7 +4002,7 @@
         },
         {
           "level": 2,
-          "text": "1. บทนำและภาพรวมในตลาดไทย (Introduction & Market Context)",
+          "text": "อุปกรณ์ที่เพิ่มมา คุณจะใช้บ่อยแค่ไหน",
           "scope": [
             "main",
             "article"
@@ -4010,23 +4010,7 @@
         },
         {
           "level": 2,
-          "text": "2. เจาะลึกรุ่นย่อย และการวิเคราะห์ความคุ้มค่า (Trim Value Breakdown)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Standard RWD",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Flagship AWD",
+          "text": "ล้อ 19 กับ 20 นิ้ว ต้องลองบนถนนที่ใช้จริง",
           "scope": [
             "main",
             "article"
@@ -4034,7 +4018,7 @@
         },
         {
           "level": 2,
-          "text": "3. ดีไซน์ภายนอก ประตูไร้กรอบ และมิติตัวถัง (Exterior & Frameless Doors)",
+          "text": "ชาร์จ AC 22 kW จะได้ใช้จริงหรือเปล่า",
           "scope": [
             "main",
             "article"
@@ -4042,87 +4026,7 @@
         },
         {
           "level": 2,
-          "text": "4. ภายในห้องโดยสาร ความสบาย และระบบอินโฟเทนเมนต์ (Interior Luxury)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "5. ประสบการณ์ขับขี่จริงบนถนนไทย: สมรรถนะและช่วงล่าง (Driving Dynamics & NVH)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "6. เปรียบเทียบตรงตัว: Zeekr X vs Volvo EX30 & BYD Atto 3",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "7. ระบบความปลอดภัยและเทคโนโลยีช่วยขับขี่ (Zeekr AD)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กำลังเตรียมข้อมูลอุปกรณ์สำหรับ Zeekr X สเปกไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "8. ข้อดี & ข้อสังเกต (จุดเด่น & ข้อสังเกต)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "EVSELECT Rating Breakdown",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "บทความและรีวิวที่เกี่ยวข้อง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphard",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kW",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "รีวิว Tesla Model 3 Highland: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยี",
+          "text": "เลือกจากสิ่งที่ใช้ แล้วค่อยเทียบราคาสุทธิ",
           "scope": [
             "main",
             "article"
@@ -4443,7 +4347,7 @@
         },
         {
           "level": 4,
-          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "text": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ",
           "scope": [
             "main",
             "article"
@@ -4640,7 +4544,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "text": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ",
           "scope": [
             "main",
             "article"
@@ -4980,7 +4884,7 @@
         },
         {
           "level": 3,
-          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "text": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ",
           "scope": [
             "main",
             "article"

@@ -871,7 +871,7 @@
         },
         {
           "href": "/articles/zeekr-x-review",
-          "text": "รีวิวรถ EV9 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV5 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -888,7 +888,7 @@
         },
         {
           "href": "/articles/zeekr-x-review",
-          "text": "รีวิว Zeekr X (Flagship AWD & Standard): พรีเมียมคอมแพกต์ครอสโอเวอร์ 489 แรงม้า ดีไซน์ล้ำ ออปชันหรูระดับไฮเอนด์",
+          "text": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ",
           "scope": [
             "html",
             "body",
@@ -2020,6 +2020,46 @@
         },
         {
           "href": "https://commons.wikimedia.org/wiki/File:2023_BYD_Seal_Premium.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Zeekr_X_Flagship_AWD.jpg",
           "text": "Chanokchon (เปิดแท็บใหม่)",
           "scope": [
             "html",
@@ -12273,32 +12313,14 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-horsepower-vs-torque-explained",
+          "text": "แรงม้าและแรงบิดต่างกันอย่างไร",
           "scope": [
             "html",
             "body",
@@ -12307,179 +12329,200 @@
             "article",
             "div",
             "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ Zeekr X",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "ค้นหาตามรุ่นรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/#vehicle-finder",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "div",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/zeekr-009-review",
-          "text": "Luxury MPVIn-Depth Reviewรีวิว ZEEKR 009 สเปกไทย: อัลตร้าลักชัวรีเอ็มพีวี 603 แรงม้า ท้าชน Alphardทดสอบขับจริง เบาะ Sofaro First Class ช่วงล่างถุงลม และเทียบตรงตัวกับ Toyota Alphard",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles/zeekr-7x-2026-review",
-          "text": "ภาพประกอบ: Zeekr 7X800V SUVIn-Depth Reviewรีวิว Zeekr 7X 2026 สเปกไทย: พรีเมียมเอสยูวี 800V ชาร์จไวสุดขีด 420kWทดสอบสมรรถนะ 646 แรงม้า ชิป Snapdragon 8295 และช่วงล่างถุงลม CCD",
+          "text": "สเปกและข้อพิจารณาของ ZEEKR 7X",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/articles/tesla-model-3-highland-review",
-          "text": "Electric SedanIn-Depth Reviewรีวิว Tesla Model 3 Highland: อัปเกรดความเงียบ นุ่มนวล และเทคโนโลยีกระจก Acoustic 360 องศา ช่วงล่างใหม่ และเบาะเป่าลมเย็น",
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "วิธีเลือกยางและช่วงล่างให้เหมาะกับ EV",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "div",
             "section",
-            "div"
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-carbon-ceramic-brakes-guide",
+          "text": "Carbon Ceramic คุ้มไหมสำหรับการใช้งานของคุณ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-battery-care",
+          "text": "แนวทางดูแลแบตเตอรี่และวางแผนชาร์จ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
+          "text": "อ่านบทความรถ EV และช่วงล่างเรื่องอื่น",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer"
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/contact",
+          "text": "บอกรุ่นรถและสิ่งที่อยากให้เราศึกษาเพิ่ม",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://www.datocms-assets.com/142974/1783065261-the-new-zeekr-x-brochure-july-2026.pdf",
+          "text": "โบรชัวร์ ZEEKR X ประเทศไทย ฉบับกรกฎาคม 2026 (PDF) (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_Zeekr_X_Flagship_AWD.jpg",
+          "text": "Chanokchon / Wikimedia Commons (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zeekrlife.com/en-th/models/x",
+          "text": "ตารางสเปก ZEEKR X บนเว็บไซต์ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.zeekrlife.com/en-th/test-drive?model=ZEEKR+X",
+          "text": "นัดทดลองขับ ZEEKR X กับผู้ผลิต (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],
