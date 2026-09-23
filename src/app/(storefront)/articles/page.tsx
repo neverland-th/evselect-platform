@@ -11,6 +11,7 @@ import { camberArticle } from '@/lib/camber-article';
 import { shockTypesArticle } from '@/lib/shock-types-article';
 import { thaiRoadsArticle } from '@/lib/thai-roads-article';
 import { zeekr7xArticle } from '@/lib/zeekr-7x-article';
+import { hybridEvArticle } from '@/lib/hybrid-ev-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -419,37 +420,33 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'hybrid-to-ev-chassis-dynamics-transition',
-    title: 'การเปลี่ยนผ่านจาก Hybrid สู่ EV: พลศาสตร์แชสซี จุดศูนย์ถ่วง (CoG) และ Polar Moment of Inertia',
-    shortTitle: 'พลศาสตร์แชสซี Hybrid สู่ EV',
-    subtitle: 'เปรียบเทียบสถาปัตยกรรมแชสซี ICE/HEV vs Skateboard BEV ตามหลัก Racecar Engineering',
-    excerpt: 'วิเคราะห์ความแตกต่างเชิงโครงสร้างระหว่าง HEV/PHEV กับ Skateboard BEV จุดศูนย์ถ่วงต่ำพิเศษ Polar Moment of Inertia และการกระจาย Roll Stiffness หน้า-หลัง ตามหลัก Racecar Engineering',
+    title: hybridEvArticle.title,
+    shortTitle: 'เปลี่ยนจาก Hybrid เป็น EV',
+    excerpt: hybridEvArticle.description,
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'chassis',
-    segmentName: '📐 พลศาสตร์แชสซี & แพลตฟอร์ม',
-    image: 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200&auto=format&fit=crop',
-    date: '2026-08-27',
-    dateDisplay: '27 ส.ค. 2569',
-    publishedAt: '2026-08-27',
-    author: 'EVSELECT Engineering',
-    readTime: '9 นาที',
-    rating: 9.4,
-    ratingText: 'Racecar Eng. Architecture',
-    priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'CoG Height & Polar Moment',
+    segmentName: 'คันเร่ง · เบรก · ช่วงล่าง',
+    image: hybridEvArticle.image,
+    imageAlt: hybridEvArticle.imageAlt,
+    imageFit: 'contain',
+    date: hybridEvArticle.updatedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    publishedAt: hybridEvArticle.publishedAt,
+    author: 'EVSELECT',
+    readTime: hybridEvArticle.readTime,
+    rating: null,
+    priceRange: 'คู่มือก่อนเลือกและปรับรถ',
+    performanceText: 'แยกการตอบสนองกับอาการช่วงล่าง',
     highlights: [
-      'Skateboard Battery Tray Structure',
-      'Polar Moment of Inertia รอบแกน Yaw',
-      'Roll Stiffness Distribution 55:45',
-      'Torsional Rigidity มากกว่า 40,000 Nm/deg'
+      'เข้าใจ Regen และการใช้แป้นเบรก',
+      'ลองรถให้ตรงกับผู้โดยสารและถนนที่ใช้'
     ],
     featured: false,
-    brand: 'RACECAR ENGINEERING',
-    badge: 'Chassis Architecture',
-    tags: ['Chassis Dynamics', 'Center of Gravity', 'Polar Moment of Inertia', 'Skateboard Platform', 'Roll Stiffness'],
-    accessoryOpportunity: 'ค้ำโช้คหน้า-หลังอะลูมิเนียม, บาร์กันโคลงปรับระดับได้, ซับเฟรมบูชยูรีเทน',
-    fitmentGate: 'วัดระยะ Torsional Rigidity และจุดยึด Subframe เฉพาะของแพลตฟอร์ม EV',
+    brand: 'EVSELECT',
+    badge: 'เข้าใจก่อนตัดสินใจแต่ง',
+    tags: ['Hybrid', 'Regen', 'ช่วงล่าง'],
+    fitmentGate: 'ตรวจรุ่นย่อย ล้อ ยาง และคู่มือของรถคันจริง',
   },
   {
     slug: 'ev-horsepower-vs-torque-explained',
@@ -1119,6 +1116,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'hybrid-to-ev-chassis-dynamics-transition' && <p className="mb-3 text-sm leading-6 text-slate-600">แชสซี Volkswagen ID.3 จัดแสดง: <a href={hybridEvArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hybridEvArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={hybridEvArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hybridEvArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'zeekr-7x-2026-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ ZEEKR 7X จากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย: <a href={zeekr7xArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr7xArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr7xArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC0 1.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
                   {article.slug === 'ev-camber-adjustment-wheel-alignment-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ LADA บนแท่นตั้งศูนย์ ไม่ใช่รถ EV: <a href={camberArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={camberArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
@@ -1132,8 +1130,8 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors line-clamp-2 leading-snug" style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
-                    <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.title}</Link>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                    <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
 

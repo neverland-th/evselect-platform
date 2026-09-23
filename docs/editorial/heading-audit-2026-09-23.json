@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T10:14:47.764111+00:00",
+  "checkedAt": "2026-09-23T10:42:44.112835+00:00",
   "base": "http://127.0.0.1:3117",
   "scope": "HTTP markup from sitemap plus static storefront routes and optional observed catalogue filters. No browser interaction or full reader-review certification.",
   "catalogueFilterUrls": [
@@ -418,7 +418,7 @@
         },
         {
           "level": 4,
-          "text": "การเปลี่ยนผ่านจาก Hybrid สู่ EV: พลศาสตร์แชสซี จุดศูนย์ถ่วง (CoG) และ Polar Moment of Inertia",
+          "text": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน?",
           "scope": [
             "main",
             "article"
@@ -3712,7 +3712,7 @@
         },
         {
           "level": 1,
-          "text": "เจาะลึกการเปลี่ยนผ่านจาก Hybrid สู่ Full EV: พลศาสตร์แชสซี, การกระจายน้ำหนัก และฟีลลิ่งการขับขี่",
+          "text": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน?",
           "scope": [
             "main",
             "article",
@@ -3721,7 +3721,7 @@
         },
         {
           "level": 2,
-          "text": "สรุปประเด็นเปลี่ยนผ่านที่ผู้ขับขี่ต้องรู้ (Transition Summary)",
+          "text": "HEV, PHEV และ BEV บอกระบบขับเคลื่อน ไม่ได้บอกความนุ่ม",
           "scope": [
             "main",
             "article"
@@ -3729,47 +3729,7 @@
         },
         {
           "level": 2,
-          "text": "1. ความแตกต่างเชิงสถาปัตยกรรม: HEV, PHEV และ Pure BEV Skateboard",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "โครงสร้างดั้งเดิมเพิ่มมอเตอร์",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ความซับซ้อนสูงสุด น้ำหนักสองต่อ",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "Skateboard Platform แท้",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ความแข็งแกร่งในการต้านทานการบิดตัว (Torsional Rigidity)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "เปรียบเทียบสถาปัตยกรรมแชสซี: Hybrid vs Dedicated Skateboard EV",
+          "text": "แบตเตอรี่ใต้พื้นช่วยจัดวางน้ำหนัก แต่ไม่ได้ทำให้ทุกคันบาลานซ์เหมือนกัน",
           "scope": [
             "main",
             "article"
@@ -3777,15 +3737,7 @@
         },
         {
           "level": 2,
-          "text": "2. อัตราตอบสนองแรงบิด 10ms vs 300ms และผลกระทบต่อช่วงล่าง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "ความจำเป็นของ Anti-Squat Suspension Geometry",
+          "text": "คันเร่งไวแค่ไหน ต้องดูโหมดและรถจริงด้วย",
           "scope": [
             "main",
             "article"
@@ -3793,7 +3745,7 @@
         },
         {
           "level": 2,
-          "text": "3. ภาระมวลใต้สปริง (Unsprung Mass Penalty) และการเซ็ตติ้งโช้คอัพ",
+          "text": "Regen ช่วยชะลอรถ ส่วนเบรกยังต้องพร้อมใช้งาน",
           "scope": [
             "main",
             "article"
@@ -3801,15 +3753,7 @@
         },
         {
           "level": 2,
-          "text": "4. ระบบเบรกไฟฟ้า Brake-by-Wire และเทคโนโลยี Brake Blending",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "กลไกการทำงานของ Brake Blending System",
+          "text": "รถโยนกับรถกระแทก ต้องแยกอาการก่อนเปลี่ยนโช้ค",
           "scope": [
             "main",
             "article"
@@ -3817,71 +3761,7 @@
         },
         {
           "level": 2,
-          "text": "5. ตารางเปรียบเทียบเชิงวิศวกรรม: HEV vs PHEV vs Dedicated BEV",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 2,
-          "text": "6. คู่มือการปรับตัวสำหรับผู้ขับขี่ (Driver Adaptation Guidelines)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การควบคุมน้ำหนักเท้าขวา (Modulate Throttle)",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การกะระยะเบรกและการเว้นระยะห่าง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "การปรับตัวกับความเงียบและเสียงยาง",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 3,
-          "text": "หมวดอุปกรณ์ที่ EVSELECT กำลังศึกษา",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 4,
-          "text": "ชุดโช้คอัพสเปกถนนไทย",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 4,
-          "text": "พรมปูพื้น TPE ซับเสียง 3D",
-          "scope": [
-            "main",
-            "article"
-          ]
-        },
-        {
-          "level": 4,
-          "text": "ม่านบังแดดหลังคาแก้ว",
+          "text": "ลองรถให้ได้คำตอบกลับบ้าน",
           "scope": [
             "main",
             "article"
@@ -6135,7 +6015,7 @@
         },
         {
           "level": 3,
-          "text": "การเปลี่ยนผ่านจาก Hybrid สู่ EV: พลศาสตร์แชสซี จุดศูนย์ถ่วง (CoG) และ Polar Moment of Inertia",
+          "text": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน?",
           "scope": [
             "main",
             "article"

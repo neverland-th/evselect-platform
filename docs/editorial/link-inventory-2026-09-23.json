@@ -1319,7 +1319,7 @@
         },
         {
           "href": "/articles/hybrid-to-ev-chassis-dynamics-transition",
-          "text": "ระบบช่วงล่าง9 นาทีระบบช่วงล่างและสมรรถนะ",
+          "text": "ระบบช่วงล่าง6 นาทีระบบช่วงล่างและสมรรถนะ",
           "scope": [
             "html",
             "body",
@@ -1335,8 +1335,29 @@
           "rel": ""
         },
         {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "div",
+            "span"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
           "href": "/articles/hybrid-to-ev-chassis-dynamics-transition",
-          "text": "การเปลี่ยนผ่านจาก Hybrid สู่ EV: พลศาสตร์แชสซี จุดศูนย์ถ่วง (CoG) และ Polar Moment of Inertia",
+          "text": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน?",
           "scope": [
             "html",
             "body",
@@ -1980,6 +2001,46 @@
         {
           "href": "https://creativecommons.org/publicdomain/zero/1.0/",
           "text": "CC0 1.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Volkswagen_ID.3_electric_car_chassis_DSC_0060_(52146930872).jpg",
+          "text": "Bill Abbott (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "text": "CC BY-SA 2.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
@@ -9207,18 +9268,16 @@
             "div",
             "main",
             "article",
+            "header",
             "div",
-            "section",
-            "div",
-            "div",
-            "h3"
+            "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/contact",
-          "text": "บอกรุ่นรถที่คุณใช้",
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "วิธีเลือกยางและคอยล์โอเวอร์สำหรับ EV แรงและหนัก",
           "scope": [
             "html",
             "body",
@@ -9227,38 +9286,100 @@
             "article",
             "div",
             "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/ev-performance-driving-techniques",
-          "text": "บทความก่อนหน้า: เทคนิคการขับ EV สมรรถนะสูง",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "footer"
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles/ev-horsepower-vs-torque-explained",
-          "text": "บทความถัดไป: แรงม้า vs แรงบิดในรถ EV",
+          "text": "แรงม้ากับแรงบิดในรถ EV",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "footer",
-            "div"
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-carbon-ceramic-brakes-guide",
+          "text": "Carbon Ceramic คุ้มไหมสำหรับการอัปเกรดเบรก EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/optimizing-ev-suspension-thai-roads",
+          "text": "วิธีประเมินอาการช่วงล่างบนถนนไทย",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-damper-tuning-bump-rebound-guide",
+          "text": "แนวทางปรับ Bump และ Rebound",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/",
+          "text": "EVSELECT",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles",
+          "text": "เลือกอ่านบทความ EV ตามเรื่องที่กำลังตัดสินใจ",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "aside"
           ],
           "target": "",
           "rel": ""
@@ -9267,27 +9388,191 @@
       "mainExternalLinks": [
         {
           "href": "https://commons.wikimedia.org/wiki/File:Volkswagen_ID.3_electric_car_chassis_DSC_0060_(52146930872).jpg",
-          "text": "Bill Abbott / Wikimedia Commons",
+          "text": "Bill Abbott (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "p"
+            "figure",
+            "figcaption"
           ],
           "target": "_blank",
           "rel": "noopener noreferrer"
         },
         {
           "href": "https://creativecommons.org/licenses/by-sa/2.0/",
-          "text": "CC BY-SA 2.0",
+          "text": "CC BY-SA 2.0 (เปิดแท็บใหม่)",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://afdc.energy.gov/vehicles/electric",
+          "text": "คำอธิบายรถไฟฟ้าและไฮบริดของ U.S. Department of Energy (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.volkswagen-newsroom.com/en/the-new-id3-6240/drive-running-gear-and-safety-6246",
+          "text": "การจัดวางแบตเตอรี่ของ Volkswagen ID.3 ในเอกสารปี 2020 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html",
+          "text": "การดูแลยาง Model 3 ในคู่มือประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-8EAFF5D8-7209-45ED-A7E0-508FFA60C530.html",
+          "text": "โหมดอัตราเร่งของ Model 3 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg",
+          "text": "Mariordo (Mario Roberto Durán Ortiz) (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.bosch-mobility.com/en/solutions/driving-safety/regenerative-braking-systems/",
+          "text": "Bosch อธิบาย Regenerative Braking (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.bosch-mobility.com/en/solutions/driving-safety/integrated-power-brake/",
+          "text": "Integrated Power Brake ของ Bosch (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.tesla.com/ownersmanual/model3/en_th/GUID-3DFFB071-C0F6-474D-8A45-17BE1A006365.html",
+          "text": "คู่มือการเบรก Model 3 สำหรับประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://kyb.com.au/faqs/",
+          "text": "คำอธิบายหน้าที่โช้คอัพของ KYB (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
             "p"
           ],
           "target": "_blank",

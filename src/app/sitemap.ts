@@ -6,6 +6,7 @@ import { camberArticle } from '@/lib/camber-article';
 import { shockTypesArticle } from '@/lib/shock-types-article';
 import { thaiRoadsArticle } from '@/lib/thai-roads-article';
 import { zeekr7xArticle } from '@/lib/zeekr-7x-article';
+import { hybridEvArticle } from '@/lib/hybrid-ev-article';
 import { publicSiteRoutes, siteOrigin } from '@/lib/public-site-routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,5 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(path === shockTypesArticle.path ? { lastModified: shockTypesArticle.updatedAt } : {}),
     ...(path === thaiRoadsArticle.path ? { lastModified: thaiRoadsArticle.updatedAt } : {}),
     ...(path === zeekr7xArticle.path ? { lastModified: zeekr7xArticle.updatedAt } : {}),
+    ...(path === hybridEvArticle.path ? { lastModified: hybridEvArticle.updatedAt } : {}),
   }));
 }

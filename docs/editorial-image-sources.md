@@ -1,5 +1,11 @@
 # Editorial image provenance
 
+## Hybrid-to-EV article — 23 September 2026 draft
+
+- Reused `articles/ev-chassis-volkswagen-id3.jpg` (1920 × 1198) and `articles/ev-power-inverter-toyota-bz4x.jpg` (1920 × 1280), without new download or retouching. Exact Commons records were reopened and both local originals viewed individually. Complete final article/card inspection: `editorial/hybrid-ev-reader-review-2026-09-23.md`.
+- ID.3 source: https://commons.wikimedia.org/wiki/File:Volkswagen_ID.3_electric_car_chassis_DSC_0060_(52146930872).jpg — Bill Abbott, 19 October 2021, CC BY-SA 2.0. Article full ratio and contained card; visible credit/licence/resize notice. Caption identifies a display chassis, not Thai specification proof or an EVSELECT test.
+- Toyota source: https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg — Mariordo (Mario Roberto Durán Ortiz), ExpoMóvil Costa Rica, 11 March 2022, CC BY-SA 4.0. Full-ratio body photo. Caption identifies inverter position as source description, not a response measurement, current Thai trim or installation instruction.
+
 ## Thai-road suspension — 23 September 2026 draft
 
 - Complete final desktop/mobile article and changed-card reading is recorded in `editorial/thai-roads-reader-review-2026-09-23.md`. No new image downloads or retouching.
