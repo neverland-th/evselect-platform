@@ -1039,7 +1039,7 @@
         },
         {
           "href": "/articles/byd-atto-3-review",
-          "text": "รีวิวรถ EV8 นาทีรีวิวรถ EV",
+          "text": "รีวิวรถ EV6 นาทีรีวิวรถ EV",
           "scope": [
             "html",
             "body",
@@ -1056,7 +1056,7 @@
         },
         {
           "href": "/articles/byd-atto-3-review",
-          "text": "รีวิว BYD Atto 3 (Extended Range & Dynamic): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่า น่าใช้แค่ไหนในปี 2026?",
+          "text": "BYD Atto 3 สเปกไทย MY2026: Premium หรือ Extended เลือกรุ่นไหนดี?",
           "scope": [
             "html",
             "body",
@@ -1979,6 +1979,46 @@
           "rel": "noopener noreferrer"
         },
         {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_BYD_Atto_3_Extended.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "div",
+            "div",
+            "div",
+            "div",
+            "article",
+            "div",
+            "div",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
           "href": "https://commons.wikimedia.org/wiki/File:PCCB_Wiki_9949.jpg",
           "text": "Dan Lindsay (Edgy01) (เปิดแท็บใหม่)",
           "scope": [
@@ -2238,15 +2278,14 @@
             "article",
             "header",
             "div",
-            "div",
             "span"
           ],
           "target": "",
           "rel": ""
         },
         {
-          "href": "/",
-          "text": "EVSELECT",
+          "href": "/articles/ev-horsepower-vs-torque-explained",
+          "text": "แรงม้ากับแรงบิดในรถ EV",
           "scope": [
             "html",
             "body",
@@ -2254,9 +2293,56 @@
             "main",
             "article",
             "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-battery-care",
+          "text": "แนวทางดูแลแบตเตอรี่ EV",
+          "scope": [
+            "html",
+            "body",
             "div",
+            "main",
+            "article",
             "div",
-            "div"
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/optimizing-ev-suspension-thai-roads",
+          "text": "วิธีแยกอาการช่วงล่างบนถนนไทย",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/articles/ev-tyre-and-coilover-selection-guide",
+          "text": "การเลือกยางและคอยล์โอเวอร์สำหรับ EV",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
           ],
           "target": "",
           "rel": ""
@@ -2270,176 +2356,140 @@
             "div",
             "main",
             "article",
-            "div",
-            "section",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "แจ้งความสนใจสำหรับ BYD Atto 3",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/#vehicle-finder",
-          "text": "ค้นหาตามรุ่นรถ",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/contact",
-          "text": "บอกรุ่นรถที่คุณใช้",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/",
-          "text": "EVSELECT",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div",
-            "div",
-            "div",
-            "h3"
+            "aside",
+            "p"
           ],
           "target": "",
           "rel": ""
         },
         {
           "href": "/articles",
-          "text": "ดูทั้งหมด",
+          "text": "เลือกอ่านบทความ EV ตามเรื่องที่กำลังตัดสินใจ",
           "scope": [
             "html",
             "body",
             "div",
             "main",
             "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/byd-seal-review",
-          "text": "BYD FamilyEV Reviewรีวิว BYD Seal สเปกไทย 3 รุ่นย่อย: สปอร์ตซีดานไฟฟ้า 530 แรงม้าเจาะลึกสมรรถนะ 0-100 ใน 3.8 วิ แชสซี CTB เหนียวแน่น และโช้ค FSD",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/mg4-electric-review",
-          "text": "Hot HatchEV Reviewรีวิว MG4 Electric สเปกไทย: ขับหลัง 50:50 แฮทช์แบ็กไฟฟ้าที่ขับสนุกที่สุดทดสอบสมรรถนะช่วงล่าง 5-Link การชาร์จ DC 140 kW และตัวแรง XPOWER",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles/deepal-s07-review",
-          "text": "SUV RivalEV Reviewรีวิว Deepal S07 สเปกไทย: สมาร์ทเอสยูวีพรีเมียม ประตูไร้กรอบ ขับหลังเจาะลึกดีไซน์สุดล้ำ ชิป Snapdragon 8155 และความนุ่มนวลบนถนนเมืองไทย",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "section",
-            "div"
-          ],
-          "target": "",
-          "rel": ""
-        },
-        {
-          "href": "/articles",
-          "text": "ดูบทความและรีวิวทั้งหมด",
-          "scope": [
-            "html",
-            "body",
-            "div",
-            "main",
-            "article",
-            "footer"
+            "aside"
           ],
           "target": "",
           "rel": ""
         }
       ],
-      "mainExternalLinks": [],
+      "mainExternalLinks": [
+        {
+          "href": "https://www.reverautomotive.com/media/models/new-atto3/brochure/bydatto3_MY2026.pdf",
+          "text": "โบรชัวร์ BYD Atto 3 ประเทศไทย MY2026 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "header",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:2024_BYD_Atto_3_Extended.jpg",
+          "text": "Chanokchon (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.reverautomotive.com/media/models/new-atto3/brochure/bydatto3_MY2026.pdf",
+          "text": "ข้อมูลสเปกในโบรชัวร์ หน้า 4 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_Premium_interior.jpg",
+          "text": "Ethan Llamas (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "text": "CC BY-SA 4.0 (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "figure",
+            "figcaption"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "https://www.reverautomotive.com/model/newatto3/overview",
+          "text": "หน้า BYD Atto 3 ของ RÊVER ประเทศไทย (เปิดแท็บใหม่)",
+          "scope": [
+            "html",
+            "body",
+            "div",
+            "main",
+            "article",
+            "div",
+            "section",
+            "p"
+          ],
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
       "unlinkedOrMisdirectedBrandText": [],
       "brokenInternalTargets": [],
       "tabPolicyIssues": [],

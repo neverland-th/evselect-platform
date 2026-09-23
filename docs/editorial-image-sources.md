@@ -112,3 +112,10 @@ The local draft replaces the Porsche Stories cover above with a real PCCB photog
 - Full grey car and both visible wheels retained in article and contained catalogue cards; no added crop or retouch. Caption identifies it as a foreign model illustration and does not assert Thai trim/equipment. Creator, source, licence and resize notice are visible.
 - Reused the 2024 Model 3 Performance photograph described above as the second tyre-guide example; full 1280 × 640 ratio and its CC BY 3.0 credit retained. Neither photo represents EVSELECT road testing or proves a tyre's load rating.
 - Both local originals and every article/card placement were individually inspected on final desktop/mobile rendering. Complete record: `editorial/zeekr-7x-reader-review-2026-09-23.md`. No production deployment is claimed.
+
+
+## BYD Atto 3 source replacement — 23 September 2026
+
+- `/images/reviews/byd-atto3-thailand-2024-chanokchon.jpg`: [2024 BYD Atto 3 Extended](https://commons.wikimedia.org/wiki/File:2024_BYD_Atto_3_Extended.jpg), Chanokchon, own work at Muang Thong Thani, Thailand, 29 March 2024; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Native Wikimedia 1280 × 720 thumbnail (221,667 bytes); no local editing. Caption and card explicitly identify 2024, not MY2026 equipment proof.
+- `/images/reviews/byd-atto3-interior-llamas.jpg`: [BYD Atto 3 Premium interior](https://commons.wikimedia.org/wiki/File:BYD_Atto_3_Premium_interior.jpg), Ethan Llamas, own work, 6 December 2025; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Native Wikimedia 1280 × 853 thumbnail (279,707 bytes); no local editing. LHD cabin explicitly disclosed; Thai RHD equipment must be checked against the brochure.
+- Original photographs individually inspected and final article placements/captions reviewed completely on desktop/mobile. Hero card crop/credit also reread after final title fix. Details and hashes: `editorial/atto3-reader-review-2026-09-23.md`. Not deployed.

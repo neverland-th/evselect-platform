@@ -12,6 +12,7 @@ import { shockTypesArticle } from '@/lib/shock-types-article';
 import { thaiRoadsArticle } from '@/lib/thai-roads-article';
 import { zeekr7xArticle } from '@/lib/zeekr-7x-article';
 import { hybridEvArticle } from '@/lib/hybrid-ev-article';
+import { atto3Article } from '@/lib/atto3-article';
 import { 
   ArrowRight, 
   Clock, 
@@ -291,26 +292,27 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'byd-atto-3-review',
-    title: 'รีวิว BYD Atto 3 (Extended Range & Dynamic): คอมแพกต์เอสยูวีไฟฟ้ายอดนิยม คุ้มค่า น่าใช้แค่ไหนในปี 2026?',
+    title: atto3Article.title,
     shortTitle: 'BYD Atto 3',
-    excerpt: 'รีวิวเจาะลึกเอสยูวีไฟฟ้าขวัญใจมหาชน ทดสอบความทนทานของแบตเตอรี่ Blade Battery ช่วงล่างนุ่มนั่งสบาย ม่านบังแดดไฟฟ้าในตัว และความคุ้มค่าหลังปรับโครงสร้างราคาใหม่',
+    excerpt: atto3Article.description,
     category: 'รีวิวรถ EV',
     categorySlug: 'reviews',
     segment: 'suv',
-    segmentName: 'คอมแพกต์เอสยูวีครอบครัวยอดนิยม',
-    image: '/images/reviews/byd-atto-3-hero.jpg',
-    date: '2026-08-25',
-    dateDisplay: '25 ส.ค. 2569',
-    readTime: '8 นาที',
-    rating: 8.8,
-    ratingText: '8.8 / 10',
-    priceRange: '669,900 – 799,900 บาท',
-    highlights: ['201 hp / 310 Nm', 'วิ่งไกล 480 กม. (NEDC)', 'Blade Battery ทนทาน', 'ม่านซันรูฟไฟฟ้า'],
+    segmentName: 'เอสยูวี 5 ที่นั่ง · สเปกไทย MY2026',
+    image: atto3Article.image,
+    imageAlt: atto3Article.imageAlt,
+    date: atto3Article.updatedAt,
+    dateDisplay: '23 ก.ย. 2569',
+    publishedAt: atto3Article.publishedAt,
+    readTime: atto3Article.readTime,
+    rating: null,
+    priceRange: 'ขอใบเสนอราคาตรงปีรุ่นและวันที่ซื้อ',
+    highlights: ['Premium / Extended', '50.25 / 60.48 kWh', '410 / 480 กม. NEDC', 'DC สูงสุด 70 / 88 kW'],
     featured: false,
-      brand: 'EV',
-      badge: 'Thailand focus model',
-      accessoryOpportunity: 'พรม TPE, ถาดคอนโซล, กันรอยชายประตู',
-      fitmentGate: 'เช็คโมเดลปี และความแตกต่างของรุ่นย่อยในไทย',
+    brand: 'BYD',
+    badge: 'คู่มือเลือกซื้อจากสเปกไทย',
+    accessoryOpportunity: 'วัดพื้นที่และตรวจรถจริงก่อนเลือกอุปกรณ์',
+    fitmentGate: 'ตรวจปีรุ่นและรุ่นย่อยกับรถคันที่จะรับ',
   },
   {
     slug: 'deepal-s05-review',
@@ -1116,6 +1118,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               {/* Card Body */}
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
+                  {article.slug === 'byd-atto-3-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพรถไทยปี 2024: <a href={atto3Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{atto3Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={atto3Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{atto3Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพย่อ</p>}
                   {article.slug === 'hybrid-to-ev-chassis-dynamics-transition' && <p className="mb-3 text-sm leading-6 text-slate-600">แชสซี Volkswagen ID.3 จัดแสดง: <a href={hybridEvArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hybridEvArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={hybridEvArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hybridEvArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'zeekr-7x-2026-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ ZEEKR 7X จากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย: <a href={zeekr7xArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{zeekr7xArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={zeekr7xArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC0 1.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'ev-carbon-ceramic-brakes-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ PCCB บน Porsche Carrera S (997): <a href={brakeArticle.coverSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={brakeArticle.coverLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{brakeArticle.coverLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
@@ -1130,7 +1133,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     <span className="text-lime-700 line-clamp-1">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className={`text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug ${['hybrid-to-ev-chassis-dynamics-transition', 'byd-atto-3-review'].includes(article.slug) ? '' : 'line-clamp-2'}`} style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
