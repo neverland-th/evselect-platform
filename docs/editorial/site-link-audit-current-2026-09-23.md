@@ -1,5 +1,7 @@
 # EVSELECT contextual-link audit — current draft, 23 September 2026
 
+Update, 24 September: use `contextual-link-review-2026-09-24.md` for the current strict 31-page audit, production reconciliation and desktop reader review. The catalogue now has an inline link to the suspension overview, and the brake symptom section has explicit tyre/damper links. Renewed mobile review remains incomplete; neither this map nor the technical checks authorize a publication bypass.
+
 This is the current completion map, superseding the remaining-route counts in the chronological 21–22 September worklogs. It does not claim a production release. Checked against local production-mode build based on `0273eef`, with the brake-photo changes recorded in `brake-photo-update-2026-09-23.md`.
 
 ## Scope and evidence

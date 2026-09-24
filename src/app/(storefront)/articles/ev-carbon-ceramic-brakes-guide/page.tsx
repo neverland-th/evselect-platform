@@ -89,6 +89,7 @@ export default function CarbonCeramicBrakesGuidePage() {
           ].map(([title, text]) => <details className={styles.detail} key={title}><summary>{title}</summary><p className="text-base text-slate-600">{text}</p></details>)}
         </div>
         <Note>เบรกที่แรงพอจะทำให้ระบบ ABS จำกัดแรงอยู่แล้ว กับเบรกที่รับความร้อนซ้ำได้สม่ำเสมอ เป็นคนละโจทย์ ส่วนอาการผิดปกติไม่ควรวินิจฉัยจากข้อความอย่างเดียว ให้ผู้เชี่ยวชาญตรวจรถก่อนใช้งานต่อ</Note>
+        <p>ถ้ายังไม่แน่ใจว่าจะเริ่มจากยางหรือเบรก อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="font-medium text-lime-800 underline underline-offset-4">วิธีเลือกยางให้เหมาะกับน้ำหนักและการใช้รถ EV</Link> ประกอบก่อน ส่วนอาการหน้ารถยุบหรือคืนตัวหลังเบรก เชื่อมต่อไปที่ <Link href="/articles/ev-damper-tuning-bump-rebound-guide#basics" className="font-medium text-lime-800 underline underline-offset-4">หน้าที่ของแดมเปอร์และการควบคุมการยุบ–ยืด</Link> เพื่อแยกปัญหาการเคลื่อนตัวของช่วงล่างออกจากการทำงานของเบรก</p>
       </Section>
 
       <Section id="energy" title="2. แรงม้าพารถไปเร็ว แต่มวลกับความเร็วกำหนดพลังงานที่ต้องลด">
@@ -173,7 +174,8 @@ export default function CarbonCeramicBrakesGuidePage() {
 
       <Section id="complete-kits" title="8. เทียบชุดหน้าแท้มือหนึ่ง: ต้องรู้รหัสและรู้ว่าได้อะไร">
         <p>ชุดอ้างอิงต่อไปนี้อยู่ในช่วงจาน <strong>375–390 mm และคาลิเปอร์ตั้งแต่ 6 พอต</strong> โดยมีผู้ผลิตหรือคู่ค้าทางการระบุรุ่น อุปกรณ์ และราคา ใช้ข้อมูลชุดสำเร็จที่ตรวจย้อนกลับได้ ไม่ใช้ราคาคาลิเปอร์เดี่ยว ราคาจานเดี่ยว หรือชุดผสมที่ไม่ระบุผู้รับผิดชอบทางวิศวกรรมมาแทน</p>
-        <p><Ref to="apDealer">AP Racing ระบุ Essex ในรายชื่อ Distributor ปัจจุบัน</Ref> ส่วน <Ref to="bremboPartner">Brembo ระบุ Race Technologies เป็น commercial partner</Ref> และหน้ารุ่นปัจจุบันให้รายการอุปกรณ์ครบชุด การนำหลายยี่ห้อมาประกอบอาจเป็นระบบที่ออกแบบได้ แต่ต้องมีผู้รับผิดชอบ เอกสาร และการทดสอบรองรับ โลโก้อย่างเดียวไม่ใช่หลักฐานดังกล่าว</p>
+        <p><Ref to="apDealer">AP Racing ระบุ Essex ในรายชื่อ Distributor</Ref> ส่วน <Ref to="bremboPartner">เอกสาร Brembo ปี 2012 ระบุ Race Technologies เป็นคู่ค้าด้านการจำหน่าย</Ref> สำหรับราคาและอุปกรณ์ของชุด GT | M ที่นำมาเทียบ เราอ้างอิง <Ref to="bremboKit">หน้าสินค้า 1N1.9076A2 ของ Race Technologies</Ref> โดยตรง การนำหลายยี่ห้อมาประกอบอาจเป็นระบบที่ออกแบบได้ แต่ต้องมีผู้รับผิดชอบ เอกสาร และการทดสอบรองรับ โลโก้อย่างเดียวไม่ใช่หลักฐานดังกล่าว</p>
+        <Note><strong>ชุด Essex มีจุดที่ต้องถามให้ชัดก่อนซื้อ:</strong> หน้าสินค้าใช้ชื่อ Road Brake Kit แต่ <Ref to="apInstall">คู่มือติดตั้ง Essex หน้า 2</Ref> กลับระบุว่าใช้แบบ off-road เท่านั้น และไม่ได้ออกแบบสำหรับถนนสาธารณะ ข้อมูลสองส่วนนี้ยังขัดกัน จึงไม่ควรใช้ชื่อ Road มายืนยันว่าใช้บนถนนไทยได้ ควรขอคำชี้แจงเป็นลายลักษณ์อักษรจาก Essex ก่อนตัดสินใจ</Note>
         <BrakeKitReferences />
         <Note><strong>รถกับล้อต้องตรงก่อนราคา:</strong> สองชุดญี่ปุ่นเป็นตัวอย่างระดับราคาชุดสำเร็จสำหรับ Alphard/Vellfire ตามแคตตาล็อก ไม่ใช่ชุดที่ยืนยันสำหรับ Tesla ส่วนรายการ Model 3 ต้องตรวจปีและรุ่นย่อย รวมถึง Highland อีกครั้ง ล้อ 20 นิ้วหรือ Advan 20×10.5 เพียงอย่างเดียวยังไม่ยืนยันระยะก้านล้อและกระบอกล้อ</Note>
         <p>ดูภาพและรายละเอียดชุดที่ต้นทาง: <Ref to="alvell6">ENDLESS ALVELL6</Ref> เป็นคนละตระกูลกับ M6 ในภาพรถของเจ้าของ ส่วน <Ref to="fs6">Project μ FS6</Ref> ต้องอ่านร่วมกับรหัสชุดหน้า FS6-T127C และจาน 380 mm ในตาราง ไม่ใช้ภาพคาลิเปอร์เพียงอย่างเดียวสรุปว่าอุปกรณ์ครบหรือใส่รถรุ่นใดได้</p>

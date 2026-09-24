@@ -45,7 +45,7 @@
   flex-shrink: 0;
 }
 .brand { font-size: .8125rem; line-height: 1.6; letter-spacing: .12em; font-weight: 800; color: #4d7c0f; }
-.heading h2 { margin: .125rem 0 0; font-size: 1.5rem; line-height: 1.5; font-weight: 800; }
+.menuTitle { margin: .125rem 0 0; font-size: 1.5rem; line-height: 1.5; font-weight: 800; }
 .content {
   min-height: 0;
   overflow-y: auto;

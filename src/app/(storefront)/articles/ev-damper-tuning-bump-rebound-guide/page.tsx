@@ -46,7 +46,7 @@ const sources = {
   bcER: { title: 'BC Racing — ER: Compression และ Rebound แยกช่องปรับ', url: 'https://www.bcracing.co.nz/types/er/' },
   bcZR: { title: 'BC Racing — ZR: สามช่องปรับและรูปแบบ Reservoir', url: 'https://bcracing-na.com/series/zr-series/' },
   ohlins: { title: 'Öhlins — DFV: การไหลของน้ำมันและการชดเชยอุณหภูมิ', url: 'https://www.ohlins.com/en-us/technology/dfv-technology' },
-  ohlinsRT: { title: 'Öhlins — Road & Track รหัส TES MA10S1 สำหรับ Model 3 2020: ตัวอย่างช่องปรับร่วม', url: 'https://www.ohlins.com/en-us/automotive/road-and-track/tesla-model-3-model-y-road-and-track-set?v=tesla-model-3-2020' },
+  ohlinsRT: { title: 'Öhlins — Road & Track รหัส TES MA10S1 สำหรับ Model 3 2020: ตัวอย่างช่องปรับร่วม', url: 'https://www.ohlins.com/en-th/automotive/road-and-track/tesla-model-3-model-y-road-and-track-set?v=tesla-model-3-2020' },
   ohlinsManual: { title: 'Öhlins — คู่มือ Road & Track Automotive: Preload, ระยะทำงาน และความปลอดภัย', url: 'https://www.ohlins.com/storage/7AC688BED0B27E53064F094EF615E1B088E4D8FEA94635A5D2ECCC5FB1894053/b31b9618ad354b438a407241ceb64a6d/pdf/media/d60188c2ea574151aad35b903c54e441/OM_07451-01_7_R_T.pdf' },
   eibach: { title: 'Eibach — Suspension Worksheet: Motion ratio และ Wheel rate', url: 'https://eibach.com/storage/catalogs/suspension-worksheet.pdf' },
   penske: { title: 'Penske — Suspension Tuning: อุปกรณ์เดียวกันไม่ได้เหมาะกับผู้ขับทุกคน', url: 'https://www.penskeshocks.com/master-the-process-of-suspension-tuning-penske-racing-shocks' },

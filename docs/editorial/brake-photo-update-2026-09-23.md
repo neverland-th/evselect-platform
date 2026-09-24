@@ -1,5 +1,7 @@
 # Carbon Ceramic photo update — draft, 23 September 2026
 
+Update, 24 September: desktop screenshots recovered and the complete final brake desktop review passed. Production safeguards/source corrections were reconciled. Mobile captures remain unreliable; publication is still gated. See `contextual-link-review-2026-09-24.md` for the exact current scope, hashes and remaining checks. The entries below are chronological evidence for the earlier revision, not current completion claims.
+
 Based on `0273eef`. The previous goal turn made progress by completing/committing catalogue reader review and building successfully. This continuation changes authoritative article content and refreshes technical evidence; it is not a no-progress wait or a production release.
 
 ## Image decisions

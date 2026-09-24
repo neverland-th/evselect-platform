@@ -734,6 +734,9 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           เปรียบเทียบสเปก แยกหลักการทางเทคนิค และชี้จุดที่ควรตรวจสอบกับรถของคุณ
           เพื่อให้ตัดสินใจได้ง่ายขึ้นโดยไม่ต้องเปิดหลายเว็บไซต์
         </p>
+        <p className="text-sm leading-relaxed text-slate-600">
+          เริ่มเรื่องช่วงล่างจาก <Link href="/articles/ev-suspension-tuning-guide" className="font-semibold text-lime-800 underline underline-offset-4">คู่มือแยกอาการช่วงล่าง EV</Link> แล้วเลือกอ่านเรื่องยาง โช้ค หรือศูนย์ล้อให้ตรงกับสิ่งที่อยากปรับ
+        </p>
 
         {/* Quick Highlights Counter Badges */}
         <div className="pt-2 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-slate-600">

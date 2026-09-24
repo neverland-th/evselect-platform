@@ -14,7 +14,7 @@ export const brakeComparisonProducts: BrakeComparisonProduct[] = [
     id: 'ap-essex-9561', name: 'AP Racing by Essex 9561', part: '20.01.10013',
     pistons: 6, diameterMm: 380, thicknessMm: 36, construction: 'จานเหล็ก 2 ชิ้น Floating · J Hook · 72 ช่องลม',
     vehicle: 'Tesla Model 3 ตามรายการ Essex',
-    fitmentNote: 'แคตตาล็อกระบุล้อ OEM 20 นิ้ว ต้องตรวจปี รุ่นย่อย และ template อีกครั้ง โดยเฉพาะ Highland และล้อแต่ง',
+    fitmentNote: 'แคตตาล็อกระบุล้อ OEM 20 นิ้ว แต่คู่มือติดตั้งเตือน off-road use only แม้หน้าสินค้าใช้ชื่อ Road ต้องขอคำชี้แจงจาก Essex และตรวจปี รุ่นย่อยกับ template โดยเฉพาะ Highland และล้อแต่ง',
     contents: 'คาลิเปอร์คู่หน้า จานคู่พร้อมดุมกลาง ผ้า Ferodo DS2500 ขายึด สายเบรก และอุปกรณ์ติดตั้งตามคู่มือชุด',
     pad: 'Ferodo DS2500', price: 5249, currency: 'USD',
     priceNote: 'ราคาชุดหน้าในสหรัฐฯ ไม่เลือกบริการ bedding เพิ่ม $100; ภาษีและค่าขนส่งตามปลายทางต้องขอแยก',
@@ -35,7 +35,7 @@ export const brakeComparisonProducts: BrakeComparisonProduct[] = [
     source: 'https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1',
     technicalSource: 'https://www.racetechnologies.com/products/brembo-gt-m-front-brake-system-6-piston-caliper-2-piece-disc-18-model-3-awd-18-model-3-rwd-1',
     wheelSource: 'https://www.racetechnologies.com/cdn/shop/files/1Nx.9076A_DRW.png?v=1782767898',
-    authority: 'Race Technologies เป็น Official Partner ของ Brembo; ใช้ราคาและรายการของชุด Brembo เอง',
+    authority: 'Brembo ระบุ Race Technologies เป็นคู่ค้าด้านการจำหน่ายในเอกสารปี 2012; ราคาชุดนี้อ้างอิงหน้าสินค้าของ Race Technologies',
     dustNote: 'Data unavailable: ไม่มีค่าฝุ่นจากการทดสอบร่วมกับอีกสามชุด จำนวนพอตไม่ได้ใช้ทำนายฝุ่น',
   },
   {
