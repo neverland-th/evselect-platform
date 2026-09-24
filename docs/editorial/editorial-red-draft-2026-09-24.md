@@ -1,34 +1,43 @@
-# Editorial red catalogue draft — 24 September 2026
+# Editorial red catalogue — reader review, 24 September 2026
 
-Status: DRAFT. Not approved for production by the rendered reader-review gate.
+Web implementation source: e62ebfc. Branch: codex/editorial-red-2026-09-24.
+Status: LOCAL RENDERED REVIEW PASSED for the /articles catalogue. Production deployment pending. Figma file remains unfinished; do not describe it as final.
 
-## Scope and artifacts
-- Figma file: https://www.figma.com/design/PTZ3zyMVN0YT2Aoeog3aJZ
-- Desktop frame 6:129 has clipped auto-layout rows; mobile frame 6:227 exists. Figma is not final.
-- Figma API quota exhausted; browser editing is blocked by Terms of Service confirmation awaiting the user. No terms accepted.
-- Implementation: white/navy/red article catalogue, catalogue-only header wordmark, tyre feature, three HTML editorial covers, category filters preserved.
-- Image provenance: tyre concept supplied by site owner on 24 September; illustrative, no product/fitment/test claim. KW photo already supplied by owner. MacPherson diagram retains its existing Commons author/license link on the card.
-- Complete article bodies and social OG/Twitter images are unchanged. Current covers are rendered HTML, not exported social images.
-- Simplified cards retain full excerpt, credit, date and reading action. Detailed specification/fitment material remains in the articles.
+## Scope
+- Catalogue-only white/navy/red presentation and header wordmark, tyre guide feature, three subject-specific HTML covers.
+- Full excerpts, image provenance, publication dates and reading links retained. Card detail lists removed; article bodies unchanged.
+- Tyre image is the owner's supplied concept, labelled as illustration rather than a tested or available product. KW is the existing owner-supplied image. MacPherson illustration retains its author and CC BY-SA link.
+- Article-body, OG/Twitter and JSON-LD images are unchanged. This release changes the rendered catalogue covers; it is not a new social-image release.
 
-## Actual rendered observations
-- URL: http://localhost:3119/articles and ?category=suspension on the current branch, before commit.
-- Desktop: header, introduction, feature and category controls visually inspected. Initial concept crop exposed embedded template text; changed crop to tyre/car detail. Active category count changed from dark to white text.
-- Mobile: DOM-confirmed 390 x 844 viewport. Introduction and image checked; no horizontal overflow observed in the inspected top section. KW cover and complete adjacent card text/credit read at mobile size.
-- Read rendered accessibility content for all 21 default cards and nine suspension cards. This is NOT a substitute for inspecting every card/image visually.
-- Browser Page.captureScreenshot timed out twice in succession while continuing mobile review; complete final desktop/mobile review is pending. Do not deploy from this record.
-- Experimental cover screenshot exports had inconsistent viewport scaling, were rejected and removed. Temporary export route removed.
+## Complete rendered reading
+URL: http://localhost:3119/articles, production-mode Next server built from e62ebfc.
+- Desktop reading: actual 2297 x 1074 CSS viewport, plus top/header at DOM-confirmed 1440 x 1000. Read the complete introduction, feature, all 21 cards in order, captions/credits, dates, calls to action and footer. Inspected every card image individually, including the new KW, MacPherson and tyre concept covers.
+- Mobile reading: DOM-confirmed 390 x 844. Read from the prelaunch banner through the complete footer in overlapping scroll steps. All 11 review cards, nine suspension cards and battery guide were read with their complete excerpts and credits; each image inspected at mobile size.
+- Reader observations: headline states the site's value before the catalogue; guide action leads to reading rather than a sale. Full excerpts explain what each article answers. Foreign-market photos are labelled without implying a Thai test vehicle. Prelaunch status does not claim stock. Credit links are smaller than body copy but remain readable and separate from the article action.
+- New covers show distinct subject matter rather than reusing vehicle photos. The tyre concept crop shows tyres/car detail without the template's embedded marketing text. Small diagram labels are illustrative; the article title and excerpt provide the readable meaning.
+- No horizontal overflow seen at 390 pixels. Header, title wrapping, full excerpts, credits and reading actions remain within the viewport.
+- Earlier capture failures and stale blank image layers were resolved by bringing the tab compositor forward and reopening the filtered page. Loaded image dimensions alone were not treated as visual proof; all three covers were subsequently observed with visible imagery on both desktop and mobile.
 
-## Validation
+## Interactive states
+- Opened and read the slide-in menu on desktop and mobile. Verified keyboard open/close and focus on the close button.
+- Reviewed the review-filter spotlight image and all its visible copy/specification/date/CTA at desktop and mobile sizes.
+- Category results: all 21; reviews 11 (one spotlight plus ten standard cards); suspension nine; guides one.
+- Keyboard-activated body filters: sedan two, SUV/crossover/MPV seven, hatchback one, city one. Correct resulting URLs and card sets observed. Mobile pointer automation under emulation was unreliable; keyboard activation was used instead, not claimed as a physical-device touch test.
+- One H1 in the inspected category/segment states; no horizontal overflow in the inspected mobile states.
+- Opened / separately: legacy header logo appears once; catalogue wordmark does not leak into the home page.
+- Evidence screenshot: scratch/editorial-red-review-2026-09-24/desktop-top.png. Other complete reading observations are present in the browser tool outputs for this task.
+
+## Technical validation (unchanged implementation)
 - Changed TSX ESLint passed.
-- Production build passed: 43 routes generated.
+- Production build passed, 43 routes.
 - Referenced public image audit: 79 passed.
 - Content/link tests: 11 passed.
 - Strict built-content audit: 31 pages, 1,844 links, zero findings; sitemap 24 entries.
-- These are local results, not live production verification.
+- These checks support, but do not replace, the rendered reading above.
 
-## Remaining release work
-1. Complete Figma desktop auto-layout after user accepts/authorizes the displayed terms.
-2. Reopen production-mode local preview; read every card and inspect every image, full footer, menu and filter states at desktop/mobile sizes.
-3. Decide final social exports from approved frames; currently not changed.
-4. Re-run relevant checks only if revised, then commit/push final approved version, deploy Vercel and verify exact public aliases and rendered output.
+## Figma outstanding
+https://www.figma.com/design/PTZ3zyMVN0YT2Aoeog3aJZ
+Mobile frame 6:227 and three cover frames exist. Desktop frame 6:129 still has clipped auto-layout rows and needs correction. API quota is exhausted; browser editing is at a Terms of Service confirmation awaiting the user. No terms were accepted. Figma is not final.
+
+## Release next step
+Commit this review record, push the existing branch, deploy the reviewed web source to Vercel, then verify the production aliases, live catalogue and image loading. Keep the Figma deliverable explicitly pending.
