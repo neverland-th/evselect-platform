@@ -1,0 +1,14 @@
+.cover { container-type:inline-size; width:100%; aspect-ratio:1200/630; padding:5%; background:#f8fafb; color:#152632; display:flex; flex-direction:column; justify-content:space-between; }
+.top { display:flex; justify-content:space-between; align-items:center; font-size:2.3cqw; letter-spacing:.08em; color:#c90020; }
+.wordmark { font:italic 850 4cqw/1 Arial,sans-serif; letter-spacing:-.045em; color:#152632; }
+.wordmark b { color:#e60023; }
+.body { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:3%; min-height:0; }
+.copy { display:flex; flex-direction:column; gap:1.8cqw; }
+.copy strong { font-size:5.1cqw; line-height:1.4; text-wrap:balance; }
+.copy strong+strong { color:#d60020; font-size:4.3cqw; }
+.copy span { font-size:2.5cqw; color:#536575; line-height:1.6; }
+.subject { position:relative; aspect-ratio:1.2; }
+.subject img { object-fit:contain; }
+.concept { position:relative; width:100%; aspect-ratio:290/230; overflow:hidden; background:#e9f1f5; }
+.concept img { position:absolute; width:324.483%; max-width:none; height:auto; left:-174.138%; top:-169.130%; }
+.rule { width:9%; height:3px; background:#e60023; }

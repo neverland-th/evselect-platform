@@ -40,8 +40,9 @@ export default function StorefrontLayout({
           <div className="flex items-center gap-1 sm:gap-2">
             <MobileMenu />
             <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
+            <span className="editorial-wordmark hidden" aria-label="EVSELECT — DRIVE BETTER. SELECT SMARTER."><span><b>EV</b>SELECT</span><small>DRIVE BETTER. SELECT SMARTER.</small></span>
             {/* Mobile Logo */}
-            <div className="xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
+            <div className="legacy-wordmark xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image
                 src="/logo.png"
                 alt="EVSELECT"
@@ -53,7 +54,7 @@ export default function StorefrontLayout({
             </div>
 
             {/* Desktop / PC Logo */}
-            <div className="hidden xl:flex relative w-40 lg:w-44 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
+            <div className="legacy-wordmark hidden xl:flex relative w-40 lg:w-44 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
               <Image
                 src="/logo-desktop.png"
                 alt="EVSELECT - DRIVE BETTER. SELECT SMARTER."
