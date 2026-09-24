@@ -43,10 +43,10 @@ export default function StorefrontLayout({
             {/* Mobile Logo */}
             <div className="legacy-wordmark xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image
-                src="/logo.png"
+                src="/logo-brand.png"
                 alt="EVSELECT"
-                width={140}
-                height={40}
+                width={380}
+                height={190}
                 className="object-contain w-full h-full"
                 priority
               />
@@ -55,7 +55,7 @@ export default function StorefrontLayout({
             {/* Desktop / PC Logo */}
             <div className="legacy-wordmark hidden xl:flex relative w-40 lg:w-44 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
               <Image
-                src="/logo-desktop.png"
+                src="/logo-brand.png"
                 alt="EVSELECT - DRIVE BETTER. SELECT SMARTER."
                 width={380}
                 height={190}
@@ -116,7 +116,7 @@ export default function StorefrontLayout({
             <div className="md:col-span-1 space-y-4">
               <Link href="/" className="relative w-48 h-14 overflow-hidden rounded-xl bg-white p-1.5 flex items-center justify-center border border-zinc-800 shadow-sm">
                 <Image
-                  src="/logo-desktop.png"
+                  src="/logo-brand.png"
                   alt="EVSELECT"
                   width={380}
                   height={190}
