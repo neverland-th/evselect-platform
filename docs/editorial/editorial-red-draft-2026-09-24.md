@@ -41,3 +41,14 @@ Mobile frame 6:227 and three cover frames exist. Desktop frame 6:129 still has c
 
 ## Release next step
 Commit this review record, push the existing branch, deploy the reviewed web source to Vercel, then verify the production aliases, live catalogue and image loading. Keep the Figma deliverable explicitly pending.
+
+## Confirmed production release
+- Deployed source commit: 80a1e7a713f5f450556612de68416dbc65a2b675 (implementation e62ebfc plus this review record).
+- Deployment: dpl_hTiJATJDksxKgoTtW28J5NN8iDaa, READY, https://evselect-platform-dstkm4bzz-evselect-com.vercel.app.
+- API-confirmed aliases: evselects.com, www.evselects.com, evselect-platform-evselect-com.vercel.app.
+- Live https://evselects.com/articles rendered with the new introduction and tyre feature, 21 cards and three editorial covers. Opened the suspension category on production and visually confirmed all three new cover images and complete associated cards.
+- Production desktop top and covers inspected at 1296 x 900; mobile top at 390 x 844, no horizontal overflow. Hero image visibly loaded in both views. No error-level browser logs returned for the live tab.
+- Both /articles hosts, all three cover source assets, sitemap.xml and robots.txt returned HTTP 200 with appropriate content types. These network checks are separate from the rendered checks.
+- Live screenshots: scratch/editorial-red-review-2026-09-24/production-desktop-top.png, production-three-covers.png, production-mobile-top.png.
+- Shared home-page header regression checked locally; article bodies and social images unchanged.
+- Figma still pending. Current UI again shows the Terms of Service Continue dialog and a connection/sync warning. No agreement accepted, no claim of a finished/synced Figma desktop frame.
