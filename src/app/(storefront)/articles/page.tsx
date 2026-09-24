@@ -728,14 +728,14 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
             href="/articles"
             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
               activeCategory === 'all'
-                ? 'bg-rose-700 text-white shadow-xs'
+                ? 'bg-lime-500 text-black shadow-xs'
                 : 'bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 shadow-xs'
             }`}
           >
             <Sparkles className="w-4 h-4" />
             <span>ทั้งหมด</span>
             <span className={`text-[11px] px-2 py-0.5 rounded-full ${
-              activeCategory === 'all' ? 'bg-white/20 text-white font-bold' : 'bg-slate-100 text-slate-600'
+              activeCategory === 'all' ? 'bg-white/40 text-lime-950 font-bold' : 'bg-slate-100 text-slate-600'
             }`}>
               {totalCount}
             </span>
@@ -745,14 +745,14 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
             href="/articles?category=reviews"
             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
               activeCategory === 'reviews'
-                ? 'bg-rose-700 text-white shadow-xs'
+                ? 'bg-lime-500 text-black shadow-xs'
                 : 'bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 shadow-xs'
             }`}
           >
             <Car className="w-4 h-4" />
             <span>รีวิวเจาะลึกรถ EV</span>
             <span className={`text-[11px] px-2 py-0.5 rounded-full ${
-              activeCategory === 'reviews' ? 'bg-white/20 text-white font-bold' : 'bg-slate-100 text-slate-600'
+              activeCategory === 'reviews' ? 'bg-white/40 text-lime-950 font-bold' : 'bg-slate-100 text-slate-600'
             }`}>
               {reviewsCount}
             </span>
@@ -762,14 +762,14 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
             href="/articles?category=suspension"
             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
               activeCategory === 'suspension'
-                ? 'bg-rose-700 text-white shadow-xs'
+                ? 'bg-lime-500 text-black shadow-xs'
                 : 'bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 shadow-xs'
             }`}
           >
             <SlidersHorizontal className="w-4 h-4" />
             <span>ระบบช่วงล่าง &amp; แฮนด์ลิ่ง</span>
             <span className={`text-[11px] px-2 py-0.5 rounded-full ${
-              activeCategory === 'suspension' ? 'bg-white/20 text-white font-bold' : 'bg-slate-100 text-slate-600'
+              activeCategory === 'suspension' ? 'bg-white/40 text-lime-950 font-bold' : 'bg-slate-100 text-slate-600'
             }`}>
               {suspensionCount}
             </span>
@@ -779,14 +779,14 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
             href="/articles?category=guides"
             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
               activeCategory === 'guides'
-                ? 'bg-rose-700 text-white shadow-xs'
+                ? 'bg-lime-500 text-black shadow-xs'
                 : 'bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 shadow-xs'
             }`}
           >
             <BookOpen className="w-4 h-4" />
             <span>คู่มือ &amp; เคล็ดลับการใช้งาน</span>
             <span className={`text-[11px] px-2 py-0.5 rounded-full ${
-              activeCategory === 'guides' ? 'bg-white/20 text-white font-bold' : 'bg-slate-100 text-slate-600'
+              activeCategory === 'guides' ? 'bg-white/40 text-lime-950 font-bold' : 'bg-slate-100 text-slate-600'
             }`}>
               {guidesCount}
             </span>
@@ -813,7 +813,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               href={`/articles?category=${activeCategory}&segment=sedan`}
               className={`px-3 py-1 rounded-lg transition-all ${
                 activeSegment === 'sedan'
-                  ? 'bg-rose-50 text-rose-800 font-semibold border border-rose-300'
+                  ? 'bg-lime-50 text-lime-800 font-semibold border border-lime-300'
                   : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
@@ -823,7 +823,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               href={`/articles?category=${activeCategory}&segment=suv`}
               className={`px-3 py-1 rounded-lg transition-all ${
                 activeSegment === 'suv'
-                  ? 'bg-rose-50 text-rose-800 font-semibold border border-rose-300'
+                  ? 'bg-lime-50 text-lime-800 font-semibold border border-lime-300'
                   : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
@@ -833,7 +833,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               href={`/articles?category=${activeCategory}&segment=hatchback`}
               className={`px-3 py-1 rounded-lg transition-all ${
                 activeSegment === 'hatchback'
-                  ? 'bg-rose-50 text-rose-800 font-semibold border border-rose-300'
+                  ? 'bg-lime-50 text-lime-800 font-semibold border border-lime-300'
                   : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
@@ -843,7 +843,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               href={`/articles?category=${activeCategory}&segment=city`}
               className={`px-3 py-1 rounded-lg transition-all ${
                 activeSegment === 'city'
-                  ? 'bg-rose-50 text-rose-800 font-semibold border border-rose-300'
+                  ? 'bg-lime-50 text-lime-800 font-semibold border border-lime-300'
                   : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
@@ -856,7 +856,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
       {/* 3. Featured Spotlight Card (When viewing All or Reviews with all segments) */}
       {isShowSpotlight && (
         <section className="mb-14" aria-label="Featured Article Spotlight">
-          <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 hover:border-rose-500 transition-all duration-300 shadow-md group">
+          <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 hover:border-lime-500 transition-all duration-300 shadow-md group">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
               {/* Left/Top Hero Image */}
               <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto min-h-[300px] overflow-hidden bg-slate-100">
@@ -871,7 +871,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 
                 {/* Spotlight Floating Badges */}
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                  <span className="bg-rose-700 text-white text-xs font-black px-3 py-1 rounded-full shadow-xs flex items-center gap-1.5">
+                  <span className="bg-lime-500 text-black text-xs font-black px-3 py-1 rounded-full shadow-xs flex items-center gap-1.5">
                     <Star className="w-3.5 h-3.5 fill-black" />
                     บทความแนะนำ
                   </span>
@@ -882,10 +882,10 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
 
                 {/* Score Pill overlay on image */}
                 {featuredArticle.rating !== null && <div className="absolute bottom-4 left-4 lg:hidden">
-                  <div className="bg-white/95 backdrop-blur border border-rose-500 px-3 py-1 rounded-xl flex items-center gap-1.5 shadow-xs">
-                    <Award className="w-4 h-4 text-rose-600" />
+                  <div className="bg-white/95 backdrop-blur border border-lime-500 px-3 py-1 rounded-xl flex items-center gap-1.5 shadow-xs">
+                    <Award className="w-4 h-4 text-lime-600" />
                     <span className="text-xs text-slate-600 font-medium">คะแนนรวม</span>
-                    <span className="text-sm font-black text-rose-700">{featuredArticle.ratingText}</span>
+                    <span className="text-sm font-black text-lime-700">{featuredArticle.ratingText}</span>
                   </div>
                 </div>}
               </div>
@@ -894,18 +894,18 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-xs font-semibold text-rose-800 tracking-wider uppercase bg-rose-50 border border-rose-200 px-2.5 py-1 rounded-lg">
+                    <span className="text-xs font-semibold text-lime-800 tracking-wider uppercase bg-lime-50 border border-lime-200 px-2.5 py-1 rounded-lg">
                       {featuredArticle.segmentName}
                     </span>
-                    {featuredArticle.rating !== null && <div className="hidden lg:flex items-center gap-1.5 bg-rose-50 border border-rose-200 px-3 py-1 rounded-full">
-                      <Award className="w-4 h-4 text-rose-600" />
+                    {featuredArticle.rating !== null && <div className="hidden lg:flex items-center gap-1.5 bg-lime-50 border border-lime-200 px-3 py-1 rounded-full">
+                      <Award className="w-4 h-4 text-lime-600" />
                       <span className="text-xs text-slate-500">Score</span>
-                      <span className="text-sm font-black text-rose-700">{featuredArticle.ratingText}</span>
+                      <span className="text-sm font-black text-lime-700">{featuredArticle.ratingText}</span>
                     </div>}
                   </div>
 
                   <h2
-                    className="text-lg sm:text-xl lg:text-3xl font-extrabold text-slate-900 group-hover:text-rose-700 transition-colors leading-tight"
+                    className="text-lg sm:text-xl lg:text-3xl font-extrabold text-slate-900 group-hover:text-lime-700 transition-colors leading-tight"
                     style={{ textWrap: 'balance' } as React.CSSProperties}
                   >
                     <Link href={`/articles/${featuredArticle.slug}`}>
@@ -926,7 +926,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                     </div>
                     <div className="bg-slate-50 border border-slate-200 p-2.5 rounded-xl">
                       <div className="text-xs text-slate-500">สเปกจากผู้ผลิต</div>
-                      <div className="text-sm font-bold text-rose-700 mt-0.5">{featuredArticle.performanceText}</div>
+                      <div className="text-sm font-bold text-lime-700 mt-0.5">{featuredArticle.performanceText}</div>
                     </div>
                   </div>
 
@@ -954,7 +954,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
 
                   <Link
                     href={`/articles/${featuredArticle.slug}`}
-                    className="inline-flex items-center gap-2 bg-rose-700 hover:bg-rose-800 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl shadow-xs transition-all"
+                    className="inline-flex items-center gap-2 bg-lime-500 hover:bg-lime-400 text-black text-xs sm:text-sm font-bold px-4 py-2 rounded-xl shadow-xs transition-all"
                   >
                     <span>อ่านบทความ</span>
                     <ArrowRight className="w-4 h-4" />
@@ -970,11 +970,11 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
       <div className="mb-6 flex flex-col items-start justify-between gap-2 border-b border-slate-200 pb-3 sm:flex-row sm:items-center sm:gap-4">
         <h2 className="min-w-0 text-lg font-bold text-slate-900 sm:text-xl">
           {activeCategory === 'suspension' ? (
-            <SlidersHorizontal className="mr-2 inline-block h-5 w-5 align-middle text-rose-600" aria-hidden="true" />
+            <SlidersHorizontal className="mr-2 inline-block h-5 w-5 align-middle text-lime-600" aria-hidden="true" />
           ) : activeCategory === 'guides' ? (
-            <BookOpen className="mr-2 inline-block h-5 w-5 align-middle text-rose-600" aria-hidden="true" />
+            <BookOpen className="mr-2 inline-block h-5 w-5 align-middle text-lime-600" aria-hidden="true" />
           ) : (
-            <Car className="mr-2 inline-block h-5 w-5 align-middle text-rose-600" aria-hidden="true" />
+            <Car className="mr-2 inline-block h-5 w-5 align-middle text-lime-600" aria-hidden="true" />
           )}
           <span>
             {activeCategory === 'reviews'
@@ -993,7 +993,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
         {(activeSegment !== 'all' || activeCategory !== 'all') && (
           <Link
             href="/articles"
-            className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap text-xs font-medium text-rose-700 hover:underline"
+            className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap text-xs font-medium text-lime-700 hover:underline"
           >
             ล้างตัวกรอง
           </Link>
@@ -1006,7 +1006,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
           <p className="text-slate-600 text-sm mb-4">ไม่พบบทความในหมวดหมู่ที่เลือก</p>
           <Link
             href="/articles"
-            className="inline-flex items-center gap-2 text-xs font-bold text-black bg-rose-500 px-4 py-2 rounded-xl"
+            className="inline-flex items-center gap-2 text-xs font-bold text-black bg-lime-500 px-4 py-2 rounded-xl"
           >
             ดูบทความทั้งหมด
           </Link>
@@ -1021,7 +1021,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 <div className="flex items-center justify-between pb-4 border-b border-slate-200">
                   <div className="flex items-center gap-3">
                     <h3 className="text-lg sm:text-xl font-black text-slate-900">{group.title}</h3>
-                    <span className="bg-rose-100 text-rose-800 font-bold text-xs px-2.5 py-1 rounded-full">{group.items.length} บทความ</span>
+                    <span className="bg-lime-100 text-lime-800 font-bold text-xs px-2.5 py-1 rounded-full">{group.items.length} บทความ</span>
                   </div>
                 </div>
               )}
@@ -1029,7 +1029,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 {group.items.map((article) => (
             <article
               key={article.slug}
-              className="group flex flex-col bg-white border border-slate-200 hover:border-rose-500 rounded-2xl overflow-hidden transition-colors duration-200 shadow-xs"
+              className="group flex flex-col bg-white border border-slate-200 hover:border-lime-500 rounded-2xl overflow-hidden transition-colors duration-200 shadow-xs"
             >
               {/* Card Image Container with Direct Link */}
               <Link href={`/articles/${article.slug}`} className="article-card-media relative aspect-[1200/630] w-full overflow-hidden bg-slate-100 block">
@@ -1047,7 +1047,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
                   <span className={`text-xs font-bold px-2.5 py-1 rounded-full shadow-xs flex items-center gap-1 ${
                     article.categorySlug === 'reviews'
-                      ? 'bg-rose-400 text-black'
+                      ? 'bg-lime-400 text-black'
                       : article.categorySlug === 'suspension'
                       ? 'bg-amber-400 text-black'
                       : 'bg-cyan-500 text-white'
@@ -1089,10 +1089,10 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
                     <span className="text-slate-900">{article.brand === 'EVSELECT' ? <BrandHomeLink /> : article.brand === 'EVSELECT BUYER GUIDE' ? <><BrandHomeLink /> BUYER GUIDE</> : article.brand || article.category}</span>
                     <span aria-hidden="true">•</span>
-                    <span className="text-rose-700">{article.segmentName}</span>
+                    <span className="text-lime-700">{article.segmentName}</span>
                   </div>
 
-                  <ArticleHeading className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-rose-700 transition-colors leading-snug" style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
+                  <ArticleHeading className="text-lg font-bold text-slate-900 mb-2.5 group-hover:text-lime-700 transition-colors leading-snug" style={{ textWrap: 'balance', fontSize: 'clamp(1.125rem, 1rem + 0.5vw, 1.375rem)', lineHeight: 1.45 }}>
                     <Link href={`/articles/${article.slug}`}>{article.slug === 'shock-absorber-types-monotube-twintube-air-ev' ? <>{article.title.split('ถุงลม')[0]}<span className="whitespace-nowrap">ถุงลม</span>{article.title.split('ถุงลม')[1]}</> : article.slug === 'hybrid-to-ev-chassis-dynamics-transition' ? <>{article.title.split('คันเร่ง')[0]}<span className="whitespace-nowrap">คันเร่ง</span>{article.title.split('คันเร่ง')[1]}</> : article.title}</Link>
                   </ArticleHeading>
                   <p className="text-sm text-slate-600 mb-4 leading-relaxed">{article.excerpt}</p>
@@ -1123,7 +1123,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
 
                 <div className="flex items-center justify-between gap-3 text-xs text-slate-500 pt-3.5 border-t border-slate-100">
                   <span>{article.dateDisplay}</span>
-                  <Link href={`/articles/${article.slug}`} className="min-h-11 text-sm font-semibold text-rose-700 hover:text-rose-800 inline-flex items-center gap-1 group/btn">
+                  <Link href={`/articles/${article.slug}`} className="min-h-11 text-sm font-semibold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1 group/btn">
                     <span>{article.categorySlug === 'reviews' ? 'อ่านรีวิวฉบับเต็ม' : 'อ่านบทความฉบับเต็ม'}</span>
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -1140,11 +1140,11 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
 
       {/* 6. Bottom Banner: EVSELECT Fitment Storefront Integration */}
       <section className="mt-16 sm:mt-20 bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
-        <div className="absolute -top-24 -right-24 w-72 h-72 bg-rose-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute -top-24 -right-24 w-72 h-72 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
           <div className="lg:col-span-8 space-y-3">
-            <div className="inline-flex items-center gap-2 text-rose-800 text-xs font-bold bg-rose-100 border border-rose-200 px-3 py-1 rounded-full">
-              <ShieldCheck className="w-4 h-4 text-rose-600" />
+            <div className="inline-flex items-center gap-2 text-lime-800 text-xs font-bold bg-lime-100 border border-lime-200 px-3 py-1 rounded-full">
+              <ShieldCheck className="w-4 h-4 text-lime-600" />
               <span>เริ่มจากข้อมูลของรถที่คุณใช้</span>
             </div>
             <h2
@@ -1157,16 +1157,16 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               อ่านรีวิวรถรุ่นที่สนใจ หรือส่งคำถามให้ทีม <BrandHomeLink /> ช่วยชี้ข้อมูลที่ควรตรวจสอบก่อนตัดสินใจ
             </p>
             <div className="pt-2 flex flex-wrap gap-3 text-xs text-slate-700">
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-rose-600" /> รุ่นรถและปีผลิต</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-rose-600" /> ลักษณะการใช้งาน</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-rose-600" /> สิ่งที่ต้องตรวจสอบก่อนซื้อ</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> รุ่นรถและปีผลิต</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> ลักษณะการใช้งาน</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-lime-600" /> สิ่งที่ต้องตรวจสอบก่อนซื้อ</span>
             </div>
           </div>
 
           <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
             <Link
               href="/articles?category=reviews"
-              className="inline-flex items-center justify-center gap-2 bg-rose-700 hover:bg-rose-800 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all text-center w-full sm:w-auto lg:w-full"
+              className="inline-flex items-center justify-center gap-2 bg-lime-500 hover:bg-lime-400 text-black font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-all text-center w-full sm:w-auto lg:w-full"
             >
               <Car className="w-4 h-4" />
               <span>ดูรีวิวรถ EV</span>

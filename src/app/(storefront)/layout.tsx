@@ -40,7 +40,6 @@ export default function StorefrontLayout({
           <div className="flex items-center gap-1 sm:gap-2">
             <MobileMenu />
             <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
-            <span className="editorial-wordmark hidden" aria-label="EVSELECT — DRIVE BETTER. SELECT SMARTER."><span><b>EV</b>SELECT</span><small>DRIVE BETTER. SELECT SMARTER.</small></span>
             {/* Mobile Logo */}
             <div className="legacy-wordmark xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image

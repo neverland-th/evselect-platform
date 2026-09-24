@@ -1,12 +1,12 @@
 .section { margin:0 0 3rem; }
-.hero { display:grid; grid-template-columns:1fr 1fr; background:#152632; border-radius:10px; overflow:hidden; color:white; }
+.hero { display:grid; grid-template-columns:1fr 1fr; background:#18181b; border-radius:10px; overflow:hidden; color:white; }
 .copy { padding:clamp(24px,3vw,44px); display:flex; flex-direction:column; align-items:flex-start; gap:18px; }
-.copy .eyebrow { color:#ff6579; font-size:13px; letter-spacing:.2em; font-weight:700; }
+.copy .eyebrow { color:#a3e635; font-size:13px; letter-spacing:.2em; font-weight:700; }
 .copy h2 { font-size:clamp(28px,3vw,42px); line-height:1.35; color:white; font-weight:800; text-wrap:balance; }
-.copy h2 span { color:#ff6579; }
+.copy h2 span { color:#a3e635; }
 .copy p { font-size:17px; line-height:1.8; color:#e1e8ec; }
-.copy a { display:inline-flex; align-items:center; gap:14px; min-height:48px; padding:12px 22px; border-radius:5px; background:#d60020; font-weight:700; color:white; }
-.copy a:hover { background:#bc001c; }
+.copy a { display:inline-flex; align-items:center; gap:14px; min-height:48px; padding:12px 22px; border-radius:5px; background:#84cc16; font-weight:700; color:#18181b; }
+.copy a:hover { background:#a3e635; }
 .copy a:focus-visible { outline:3px solid white; outline-offset:4px; }
 .picture { display:flex; align-items:center; background:#e9f1f5; overflow:hidden; }
 .picture > div { flex-shrink:0; }
