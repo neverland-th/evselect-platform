@@ -1,3 +1,4 @@
+import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient } from '@/generated/prisma/client';
 
 const globalForPrisma = globalThis as unknown as {
@@ -5,32 +6,25 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient(): PrismaClient {
-  try {
-    // Dynamic require so module load doesn't crash on serverless if driver is absent
-    const { PrismaBetterSqlite3 } = require('@prisma/adapter-better-sqlite3');
-    const adapter = new PrismaBetterSqlite3({
-      url: process.env.DATABASE_URL || 'file:./dev.db',
-    });
-    return new PrismaClient({
-      adapter,
-      log: process.env.NODE_ENV === 'development' ? ['query'] : [],
-    });
-  } catch {
-    // Return a resilient Proxy stub that throws on execution so caller try/catch catches it
-    return new Proxy({} as PrismaClient, {
-      get(_target, _model) {
-        return new Proxy({}, {
-          get(_subTarget, _method) {
-            return async () => {
-              throw new Error('Database is not configured or unreachable');
-            };
-          }
-        });
-      }
-    });
+  if (!process.env.DATABASE_URL) {
+    throw new Error('DATABASE_URL is required; connect the Neon database before starting the app.');
   }
+
+  const connectionUrl = new URL(process.env.DATABASE_URL);
+  if (!['postgres:', 'postgresql:'].includes(connectionUrl.protocol)) {
+    throw new Error('DATABASE_URL must point to PostgreSQL.');
+  }
+  // Verify the database certificate as well as encrypting the connection.
+  connectionUrl.searchParams.set('sslmode', 'verify-full');
+  const adapter = new PrismaPg({
+    connectionString: connectionUrl.toString(),
+    max: 3,
+    connectionTimeoutMillis: 15_000,
+    idleTimeoutMillis: 10_000,
+  });
+  return new PrismaClient({ adapter });
 }
 
 export const prisma = globalForPrisma.prisma ?? createPrismaClient();
 
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+globalForPrisma.prisma = prisma;

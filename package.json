@@ -18,11 +18,12 @@
     "verify:shopee": "node scripts/shopee_ev_select/verify.test.js"
   },
   "dependencies": {
-    "@prisma/adapter-better-sqlite3": "^7.9.1",
+    "@next/env": "^16.3.6",
+    "@prisma/adapter-pg": "^7.9.1",
     "@prisma/client": "^7.9.1",
-    "better-sqlite3": "^13.0.3",
     "lucide-react": "^1.33.0",
-    "next": "16.3.2",
+    "next": "^16.3.6",
+    "pg": "^8.23.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
@@ -32,7 +33,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.2",
+    "eslint-config-next": "^16.3.6",
     "fast-xml-parser": "5.11.1",
     "linkedom": "0.18.13",
     "playwright": "^1.62.1",

@@ -1,0 +1,8 @@
+.env*
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+scratch/
+.agents/
+node_modules/
