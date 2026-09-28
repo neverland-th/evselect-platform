@@ -49,3 +49,13 @@ Implementation and pre-publication review passed on 29 September 2026. Productio
 These checks do not establish Google indexing, ranking, search volume, keyword difficulty or Core Web Vitals improvements. Serpstat metrics remain unavailable under the connected plan.
 
 Reader-review correction: shortened the mobile damper anchor to “วิธีเช็กอาการก่อนเปลี่ยนโช้ค”. Its `#symptoms` landing was verified at 112px below the viewport top. The alignment article's existing `#read-report` H2 landed underneath its sticky header, so Home links to the full alignment guide instead; the article itself was not edited. Simplified the FAQ section heading to natural Thai rather than forcing the longer accessory keyword into it.
+
+## Production release and live verification
+
+- Released from clean commit `946bf9c557b8f164088e1c82c44f056d210476cc` on `codex/homepage-thai-search-2026-09-29`, without merging into main or touching the concurrent tyre worktree. A pre-upload dry run confirmed no environment, database, Git or scratch files were included; only empty ignored-directory placeholders appeared.
+- Deployment `dpl_Dg5idnEJABusfG1ZyP5C1S4BGCtC`, `https://evselect-platform-2n2wo6l5h-evselect-com.vercel.app`, completed READY on the existing production project. Both `evselects.com` and `www.evselects.com` resolved to this deployment, with no alias error.
+- Live checks at `2026-09-28T22:38:20.606Z` (29 September, Thailand): the Home test passed 3/3 against `https://evselects.com`; the strict audit passed 31 pages / 1,853 links, including 1,313 internal links and 91 contextual candidates, with zero issues. Robots and all three sitemap endpoints passed. The 31 audited content/link fingerprints matched the locally reviewed build exactly. Home fingerprint: `d63eee252e8abda0f3f411849846949ab2c38de19933f104ccc9d8a9d6e955cb`.
+- Opened the real domain after publication and verified the new title/H1, hero, checklist and FAQ at 1440 x 1000 desktop and 390 x 1000 mobile. All five content images loaded, all four FAQ answers opened, no horizontal overflow and no captured browser errors/warnings. The live checklist link landed below the sticky header. The complete line-by-line reader review was performed before publication; this was a production smoke test, not a claim that Google has indexed the changes.
+- Local evidence (ignored, not deployed): `scratch/home-production-link-audit.json`, its internal-link CSV, `scratch/home-production-desktop.png`, and `scratch/home-production-mobile.png`.
+
+No database, checkout, DNS, article route, paid subscription or tracking-project changes were made. Serpstat volume/difficulty/ranking metrics are still unavailable; no SEO impact or indexing improvement is claimed.
