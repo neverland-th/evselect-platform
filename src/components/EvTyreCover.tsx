@@ -9,7 +9,6 @@ export default function EvTyreCover({ className = 'h-auto w-full', eager = false
   return <picture>
     <source media="(min-width: 768px)" srcSet={desktop.srcSet} sizes={desktop.sizes} width={article.imageWidth} height={article.imageHeight} />
     {/* getImageProps supplies Next.js optimized sources for native picture art direction. */}
-    {/* eslint-disable-next-line @next/next/no-img-element */}
     <img {...mobile} alt={article.imageAlt} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} className={className} />
   </picture>;
 }

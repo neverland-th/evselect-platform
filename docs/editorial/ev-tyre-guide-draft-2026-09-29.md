@@ -1,6 +1,16 @@
 # EV tyre guide — v1.2, 29 September 2026
 
-Current status: IMPLEMENTED. Final responsive-image review and deployment pending.
+Current status: IMPLEMENTED and VERIFIED locally. Production deployment pending.
+
+## v1.2 final pre-publication review
+
+- Reviewed the final rendered article in reading order at 1280 × 800 and 390 × 800 on `http://127.0.0.1:3091/articles/ev-tyre-and-coilover-selection-guide`. Read the full body, all six model images and credits, both comparison tables including every horizontally scrolled mobile column, FAQs, references and footer. Evidence: `scratch/ev-tyres/v12-final-desktop-0..21.png`, `v12-final-mobile-0..30.png`, and the two `v12-mobile-*-right.png` table views. Additional duplicate bottom captures are not counted as new coverage.
+- Final fixes: captions now distinguish the three real Michelin photographs from manufacturer product renders; removed an unsupported country label from the e.Primacy photo caption; linked the cover-caption brand mentions to the homepage. Reread the complete final article after these corrections. No clipped article text, missing model images or page-level horizontal overflow remained. The horizontal tables scroll using the keyboard.
+- Desktop selects the optimized `ev-tyre-cover-desktop.png`; mobile selects optimized `ev-tyre-cover.png`. All seven article images loaded. Checked the updated catalogue card at both viewports (`v12-catalogue-desktop.png`, `v12-catalogue-mobile.png`).
+- Preserved production commit `946bf9c557b8f164088e1c82c44f056d210476cc` via merge `a3614aa`. The only homepage difference from that production version is the tyre topic's title and description. Read the complete resulting homepage at both viewports, including all four expanded FAQs (`v12-home-desktop-0..9.png`, `v12-home-mobile-0..15.png`). All images loaded; no page-level overflow. The unchanged 11 incoming articles retain their completed v1.1 rendered review below.
+- `npm run build` passed: public image validation, 11 content-link tests, Next.js/TypeScript compilation and strict audit of 31 pages / 1,903 links / zero findings. Log: `scratch/ev-tyres/build-v1.2-final.log`. Targeted ESLint passed with no warnings; `git diff --check` passed.
+- Local HTTP/metadata check passed: HTTP 200, exactly one H1 with the requested title, unchanged canonical, desktop cover in OG/Twitter/Article schema, no broken fragment links. Energy conversions remain 18.02 / 16.34 kWh per 100 km and 10.3% relative difference. All three existing homepage content tests passed.
+- Vercel dry run confirmed Next.js, 595 entries / 76.07 MiB and zero nonempty secret, database, scratch, Git, Vercel-state or node_modules files in the upload set. Immediately before release, the production alias still resolved to READY deployment `dpl_Dg5idnEJABusfG1ZyP5C1S4BGCtC`, source `946bf9c`, in the intended project.
 
 ## v1.2 current changes and user direction
 

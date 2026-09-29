@@ -62,14 +62,14 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>29 กันยายน 2569</time> · อ่านประมาณ {article.readTime} · เรียบเรียงโดย <Link href="/" className={linkStyle}>EVSELECTS.COM</Link></p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <EvTyreCover eager />
-        <figcaption className="p-4 text-sm leading-relaxed text-slate-600">ภาพปกเป็นภาพประกอบแนวคิดของ EVSELECT โดยเวอร์ชันแนวนอนจัดทำด้วย AI จากภาพต้นฉบับ คุณสมบัติด้านเสียง น้ำหนักบรรทุก และการยึดเกาะต้องตรวจตามรุ่นและขนาดยาง ไม่ใช่คุณสมบัติที่ยาง EV ทุกเส้นให้ได้เท่ากัน</figcaption>
+        <figcaption className="p-4 text-sm leading-relaxed text-slate-600">ภาพปกเป็นภาพประกอบแนวคิดของ <Link href="/" className={linkStyle}>EVSELECT</Link> โดยเวอร์ชันแนวนอนจัดทำด้วย AI จากภาพต้นฉบับ คุณสมบัติด้านเสียง น้ำหนักบรรทุก และการยึดเกาะต้องตรวจตามรุ่นและขนาดยาง ไม่ใช่คุณสมบัติที่ยาง EV ทุกเส้นให้ได้เท่ากัน</figcaption>
       </figure>
     </header>
     <div className="mt-10 space-y-12">
       <aside className="space-y-3 rounded-2xl border border-lime-200 bg-lime-50 p-5 sm:p-7" aria-label="ขอบเขตของบทความ">
         <p className="font-bold text-slate-950">อ่านบทความนี้แล้วจะเลือกยางได้ชัดขึ้นยังไง</p>
         <p>แยกได้ว่ากำลังจ่ายให้กับระยะวิ่ง ความเงียบ หรือการควบคุม และรู้ว่าต้องขอข้อมูลอะไรจากร้านก่อนซื้อ เราอ้างข้อมูลผู้ผลิตเพื่ออธิบายการออกแบบ แล้วเสริมด้วยผลทดสอบของ ADAC และ Tire Rack ในรุ่นที่มีข้อมูล โดยระบุขนาดและเงื่อนไขแยกไว้ ไม่ใช่ผลทดลองขับยางทั้งหกรุ่นของเรา</p>
-        <p className="text-sm">ภาพยางในเนื้อหาเป็นภาพผลิตภัณฑ์ตรงรุ่นจากผู้ผลิต ซึ่งอาจเป็นภาพเรนเดอร์ของแบรนด์ ไม่ใช่ภาพที่เราถ่ายหรือภาพยางสมมติจาก AI ขนาดและรหัสบนภาพเป็นเพียงตัวอย่างของรุ่นนั้น</p>
+        <p className="text-sm">ภาพยางในเนื้อหามีทั้งภาพถ่ายรุ่นจริงจาก Wikimedia Commons และภาพผลิตภัณฑ์จากผู้ผลิต ซึ่งอาจเป็นภาพเรนเดอร์ของแบรนด์ แต่ละภาพระบุแหล่งที่มาไว้ ขนาดและรหัสบนภาพเป็นเพียงตัวอย่างของรุ่นนั้น ไม่ใช่ภาพการทดสอบของเรา</p>
       </aside>
       <nav aria-label="สารบัญบทความ" className="rounded-2xl border border-slate-200 p-5 sm:p-7"><p className="mb-3 font-bold text-slate-950">เลือกอ่านหัวข้อ</p><ol className="list-decimal space-y-2 pl-6">{contents.map(([id, label]) => <li key={id}><a href={`#${id}`} className={linkStyle}>{label}</a></li>)}</ol></nav>
 
