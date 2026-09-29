@@ -1,6 +1,6 @@
 # Home keyword follow-up — 29 September 2026
 
-Status: IMPLEMENTED and VERIFIED locally; production deployment pending.
+Status: IMPLEMENTED, VERIFIED and DEPLOYED to production on 29 September 2026.
 
 ## Research and scope
 
@@ -44,3 +44,13 @@ Home retains its UI, metadata and pre-launch status. New content explains compar
 Rollback target: prior READY production deployment `dpl_1WVJoe4axcHv5uZ7QYvdk4TVTBth`. A release-induced failure to render Home, broken image/guide link, lost latest tyre content, or incorrect production alias is a rollback/fix trigger. No database migration or irreversible data mutation is involved. CI was not run; the checks above ran locally against the production build. Live verification remains pending.
 
 Google indexing, rankings, Similarweb volumes/difficulty and conversion effects are not verified by this work.
+
+## Production release and verification
+
+- Deployed the clean Home branch at `db6c79467cff2231aef10971cac21fadf488f1c1`, including the latest tyre release. No merge to main, push, database change, paid-plan change or DNS change. Pre-upload dry run: 597 entries, zero nonempty environment, database, Git, node_modules or scratch files.
+- Existing Vercel project `prj_ofl9vlHAbWCLmdsTbAfuw22LUJLZ`, team `team_9eIBjV1sGR5IuVLX2i3NACGC`, production deployment `dpl_7YrcUPqEYj42vbmrwJC2UuSUWA8c`, `https://evselect-platform-pabarmljk-evselect-com.vercel.app`. Deployment reached READY and the public `evselects.com` alias resolved to that deployment; `www.evselects.com` is listed on the same deployment. No alias error.
+- Live Home tests passed 4/4. Live strict content audit passed 31 pages / 1,909 links, zero findings. Both indexes and the 24-URL sitemap returned HTTP 200 with valid XML and expected production URLs; robots references passed. All 31 content/link fingerprints matched the reviewed local build exactly.
+- Opened the actual domain at 1440 × 1000 and 390 × 1000. The new image, heading, complete desktop checklist and new native FAQ rendered correctly. No horizontal overflow in either viewport. Live screenshots: `scratch/keyword-production-desktop.png` and `scratch/keyword-production-mobile.png`.
+- Live keyboard navigation verified Home → latest tyre article (H1 `ยาง EV ต่างจากยางทั่วไปยังไง?`) in the same tab. Michelin's exact markings guide opened a separate tab. FAQ → checklist landed at 112 px below the top after scrolling settled, below the mobile header. An immediate during-scroll measurement was not treated as the final position. Browser captured no errors/warnings. Temporary viewport overrides were cleared.
+- Vercel runtime-log query scoped to this deployment, production, error/fatal levels and the last 10 minutes returned no matching entries at the post-release check. This is a short smoke-test window, not long-term monitoring or a performance claim.
+- The complete reader review above was pre-publication; production checks confirm the delivered version. Google Search Console/indexing/ranking changes and monthly keyword volumes remain unverified.
