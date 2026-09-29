@@ -100,8 +100,8 @@ const topicLinks = [
     icon: SlidersHorizontal,
   },
   {
-    title: "เลือกยางรถไฟฟ้าให้เหมาะกับเรา",
-    description: "ดูขนาด พิกัดรับน้ำหนัก ความเงียบ และการใช้งานบนถนนเปียก ก่อนเลือกยางชุดใหม่",
+    title: "ยาง EV กับยาง Performance",
+    description: "เจาะการออกแบบ ข้อดีและข้อจำกัด เทียบกับ Pilot Sport 4 S",
     href: "/articles/ev-tyre-and-coilover-selection-guide",
     icon: ShieldCheck,
   },

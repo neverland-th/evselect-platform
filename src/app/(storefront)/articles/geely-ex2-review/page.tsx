@@ -88,7 +88,7 @@ export default function GeelyEx2ArticlePage() {
       <section className="space-y-5" aria-labelledby="ride">
         <h2 id="ride" className={headingStyle}>ขับหลังและ Multi-link บอกโครงสร้าง แต่ยังต้องลองความสบาย</h2>
         <p><Source href={sources.thailandLaunch}>ข้อมูลเปิดตัว EX2 ในไทยจาก Geely</Source> ระบุระบบขับหลังและช่วงล่างหลัง Multi-link สอดคล้องกับโบรชัวร์ แต่นี่ไม่ใช่หลักฐานว่ารถนุ่มที่สุดหรือดีกว่าคู่แข่งทุกคัน ล้อและยางของ Pro กับ Max ต่างขนาดกัน จึงควรทดลองรุ่นที่คิดจะซื้อ พร้อมผู้โดยสารที่นั่งด้วยประจำ</p>
-        <p>สังเกตการผ่านรอยต่อถนน การเด้งต่อหลังผ่านลูกระนาด และความสบายของเบาะหลังบนเส้นทางที่ใช้จริง หากต้องการแยกอาการ อ่าน <Link href="/articles/optimizing-ev-suspension-thai-roads" className={linkStyle}>วิธีดูอาการช่วงล่างบนถนนไทย</Link> ส่วนแผนเปลี่ยนยางหรือโช้คควรเริ่มจาก <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>การเลือกยางและ Coilover ให้ตรงรถและการใช้งาน</Link> ก่อนซื้ออุปกรณ์มาแก้ปัญหาที่ยังไม่ชัด</p>
+        <p>สังเกตการผ่านรอยต่อถนน การเด้งต่อหลังผ่านลูกระนาด และความสบายของเบาะหลังบนเส้นทางที่ใช้จริง หากต้องการแยกอาการ อ่าน <Link href="/articles/optimizing-ev-suspension-thai-roads" className={linkStyle}>วิธีดูอาการช่วงล่างบนถนนไทย</Link> ส่วนแผนเปลี่ยนยางหรือโช้คควรเริ่มจาก <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>การเลือกยาง EV ให้ตรงรถและการใช้งาน</Link> ก่อนซื้ออุปกรณ์มาแก้ปัญหาที่ยังไม่ชัด</p>
       </section>
 
       <section className="space-y-5" aria-labelledby="charging-and-choice">

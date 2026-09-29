@@ -1,4 +1,5 @@
 import EditorialCover, { hasEditorialCover } from '@/components/EditorialCover';
+import EvTyreCover from '@/components/EvTyreCover';
 import EditorialHubHero from '@/components/EditorialHubHero';
 import './editorial-index.css';
 import { teslaModel3 } from '@/lib/tesla-model-3';
@@ -6,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import { damperArticle } from '@/lib/damper-article';
+import { evTyreArticle } from '@/lib/ev-tyre-article';
 import { brakeArticle } from '@/lib/brake-article';
 import { powertrainArticle } from '@/lib/powertrain-article';
 import { batteryArticle } from '@/lib/battery-article';
@@ -627,37 +629,37 @@ const ALL_ARTICLES: ArticleItem[] = [
   },
   {
     slug: 'ev-tyre-and-coilover-selection-guide',
-    title: 'เลือกยางและคอยล์โอเวอร์ EV อย่างไร ให้รับทั้งน้ำหนักและแรงม้า',
-    shortTitle: 'คู่มือเลือกยางและสตรัทสำหรับ EV',
-    subtitle: 'เริ่มจากสเปกรถจริง ก่อนเลือกความนุ่ม เงียบ และการตอบสนอง',
-    excerpt: 'ดู Load Index, XL/HL และการเลือกช่วงล่างให้ตรงรถ ผ่านตัวอย่าง ZEEKR 7X Performance AWD และ Tesla Model 3 Performance พร้อมเช็กลิสต์คุยกับร้าน',
+    title: evTyreArticle.title,
+    shortTitle: evTyreArticle.title,
+    subtitle: 'เจาะการออกแบบยาง 6 รุ่น เทียบกับ Pilot Sport 4 S',
+    excerpt: evTyreArticle.description,
     category: 'ระบบช่วงล่างและสมรรถนะ',
     categorySlug: 'suspension',
     segment: 'coilovers',
-    segmentName: '🛞 ยาง & สตรัทปรับเกลียวตรงรุ่น',
-    image: '/images/editorial/tesla-model-3-performance-2024.png',
-    imageAlt: drivingArticle.imageAlt,
+    segmentName: '🛞 ยาง EV และ Performance',
+    image: evTyreArticle.image,
+    imageAlt: evTyreArticle.imageAlt,
     imageFit: 'contain',
-    heroImage: '/images/editorial/tesla-model-3-performance-2024.png',
-    date: '2026-09-21',
-    dateDisplay: '21 ก.ย. 2569',
+    heroImage: evTyreArticle.image,
+    date: '2026-09-29',
+    dateDisplay: '29 ก.ย. 2569',
     publishedAt: '2026-08-27',
     author: 'EVSELECT',
-    readTime: '8 นาที',
+    readTime: evTyreArticle.readTime,
     rating: null,
     priceRange: 'คู่มือเชิงลึก',
-    performanceText: 'Load Index & Coilover Fitment',
+    performanceText: 'EV Tyres vs Performance',
     highlights: [
-      'อ่าน Load Index, XL และ HL ให้ตรงสเปกรถ',
-      'ตัวอย่าง ZEEKR 7X Performance AWD 2,535 กก.',
-      'ขนาดยางหน้า–หลัง Model 3 Performance',
-      'เลือกคอยล์โอเวอร์และระยะติดตั้งตามคู่มือ'
+      'ยาง EV ต่างกันมากกว่าโฟมลดเสียง',
+      'Michelin, Hankook, Continental และ Pirelli',
+      'ข้อดี–ข้อจำกัด เทียบกับ Pilot Sport 4 S',
+      'อ่านฉลากและเลือกสเปกให้ตรงรถไทย'
     ],
     featured: false,
     brand: 'EVSELECT BUYER GUIDE',
-    badge: 'Fitment & Hardware Guide',
-    tags: ['EV Tyres', 'High Load Capacity', 'Coilover Selection', 'Spring Rate', 'Linear Springs', 'Acoustic Foam'],
-    accessoryOpportunity: 'ชุดสตรัทปรับเกลียว Full-Tap ตรงรุ่น, ยาง EV เกรด HL, น็อตล้อฟอร์จน้ำหนักเบา',
+    badge: 'EV Tyre Guide',
+    tags: ['EV Tyres', 'Pilot Sport 4 S', 'Rolling Resistance', 'Wet Grip', 'Acoustic Foam'],
+    accessoryOpportunity: 'ยางตรงขนาดและพิกัดรถ โดยตรวจเทคโนโลยีและรหัสสินค้าจริง',
     fitmentGate: 'ตรวจสอบ Load Index และ Speed Rating ตามสมุดคู่มือประจำรถ',
   },
 ];
@@ -1033,14 +1035,14 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
             >
               {/* Card Image Container with Direct Link */}
               <Link href={`/articles/${article.slug}`} className="article-card-media relative aspect-[1200/630] w-full overflow-hidden bg-slate-100 block">
-                {hasEditorialCover(article.slug) ? <EditorialCover slug={article.slug} /> : <>
-                <Image
+                {article.slug !== 'ev-tyre-and-coilover-selection-guide' && hasEditorialCover(article.slug) ? <EditorialCover slug={article.slug} /> : <>
+                {article.slug === 'ev-tyre-and-coilover-selection-guide' ? <EvTyreCover className="h-full w-full object-contain" /> : <Image
                   src={article.image}
                   alt={article.imageAlt ?? article.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className={`${article.imageFit === 'contain' ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-500 ease-out`}
-                />
+                />}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 
                 {/* Category badge */}
@@ -1115,7 +1117,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                   {article.slug === 'ev-camber-adjustment-wheel-alignment-guide' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ LADA บนแท่นตั้งศูนย์ ไม่ใช่รถ EV: <a href={camberArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={camberArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{camberArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด</p>}
                   {article.slug === 'ev-battery-care' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพแชสซี Volkswagen ID.3: <a href={batteryArticle.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={batteryArticle.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{batteryArticle.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดสำหรับเว็บ</p>}
                   {article.slug === 'mg4-electric-review' && <p className="mb-3 text-sm leading-6 text-slate-600">ภาพ MG4 X ในไทย มี.ค. 2569: <a href={mg4Article.imageSource} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageAuthor}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href={mg4Article.imageLicenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{mg4Article.imageLicense}<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด · ป้ายราคาในภาพเป็นข้อมูลวันจัดแสดง</p>}
-                  {article.slug === 'ev-tyre-and-coilover-selection-guide' && <p>ภาพคอนเซปต์จากเจ้าของเว็บไซต์ ไม่ใช่ผลทดสอบหรือสินค้าที่เปิดขาย</p>}
+                  {article.slug === 'ev-tyre-and-coilover-selection-guide' && <p>ภาพปก <Link href="/" className="underline underline-offset-2">EVSELECT</Link> เป็นภาพประกอบแนวคิด คุณสมบัติของยางต้องตรวจตามรุ่นและขนาด</p>}
                   {article.slug === 'shock-absorber-types-monotube-twintube-air-ev' && <p>ภาพ KW จากเจ้าของเว็บไซต์ ใช้ประกอบภาพรวม ไม่ยืนยันการติดตั้งตรงรุ่น · <a href="https://www.kwsuspensions.com/uk/products/street-performance" target="_blank" rel="noopener noreferrer">ดูผลิตภัณฑ์ KW<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>}
                   {article.slug === 'optimizing-ev-suspension-thai-roads' && <p>ภาพโครงสร้าง MacPherson: <a href="https://commons.wikimedia.org/wiki/File:Basic_Construction_of_Single_Wishbone_Suspension_System.jpg" target="_blank" rel="noopener noreferrer">Atharv Chandel<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ภาพประกอบทั่วไป</p>}
 </div>

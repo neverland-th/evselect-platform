@@ -417,7 +417,7 @@ export default function EVDamperTuningGuidePage() {
           <p>ก่อนเลือกแบรนด์ ให้เริ่มจากตัวรถ: <strong>ยี่ห้อ รุ่น ปี รุ่นย่อย ตลาดจำหน่าย และระบบช่วงล่างเดิม</strong> จากนั้นจึงตรวจรหัสสินค้าผู้ผลิต ช่วงน้ำหนักเพลาที่รองรับและเงื่อนไขติดตั้ง ชื่อรุ่นรถที่คล้ายกัน รูปขายออนไลน์ หรือคำว่า “ใส่ได้” จากโพสต์เดียวไม่เพียงพอจะยืนยันกับรถสเปกไทย</p>
           <ul className="list-disc space-y-3 pl-6 marker:text-lime-700">
             <li><strong>ระยะทำงานและความสูง:</strong> ตรวจช่วงความสูงที่ผู้ผลิตอนุญาต ระยะยุบ–ยืด และส่วนใต้ท้องรถ ไม่ลดรถจนกระทบพื้นที่ป้องกันแบตเตอรี่หรือจุดที่ต้องมีระยะปลอดภัย</li>
-            <li><strong>ล้อ ยาง และศูนย์ล้อ:</strong> ขนาดยาง น้ำหนักล้อ Offset และมุมล้อเปลี่ยนพฤติกรรมรถได้ ชุดโช้คไม่ใช่คำตอบแยกขาดจากสิ่งเหล่านี้ อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="text-lime-800 underline underline-offset-4">วิธีเลือกยางกับโช้คให้ทำงานร่วมกัน</Link> โดยเริ่มจากขนาดยางและพิกัดรับน้ำหนักของรถ</li>
+            <li><strong>ล้อ ยาง และศูนย์ล้อ:</strong> ขนาดยาง น้ำหนักล้อ Offset และมุมล้อเปลี่ยนพฤติกรรมรถได้ ชุดโช้คไม่ใช่คำตอบแยกขาดจากสิ่งเหล่านี้ อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="text-lime-800 underline underline-offset-4">วิธีเลือกยาง EV และยาง Performance</Link> โดยเริ่มจากขนาดยางและพิกัดรับน้ำหนักของรถ</li>
             <li><strong>Top mount และ NVH:</strong> รูปแบบจุดยึดมีผลต่อเส้นทางส่งเสียงและแรงสะเทือน หากเปลี่ยนเป็นจุดยึดแข็งขึ้น ต้องคุยเรื่องความสบายและเสียงที่ยอมรับได้ ไม่ถือว่ามี Pillowball แล้วดีกว่าสำหรับทุกการใช้งาน</li>
             <li><strong>ระบบปรับไฟฟ้าเดิม:</strong> หากรถมีแดมเปอร์ควบคุมอิเล็กทรอนิกส์ ต้องตรวจความเข้ากันได้และวิธีจัดการระบบตามเอกสาร ไม่สมมติว่าชุดปรับมือแทนได้โดยไม่มีผลกับโหมดรถหรือไฟแจ้งเตือน</li>
             <li><strong>บริการหลังติดตั้ง:</strong> ใครตั้งศูนย์ ใครตรวจซ้ำ มีอะไหล่และบริการซ่อมตามรุ่นหรือไม่ เงื่อนไขรับประกันไทยเป็นอย่างไร ให้ยืนยันเป็นเอกสาร ไม่ใช้เงื่อนไขตลาดสหรัฐฯ หรือยุโรปแทน</li>
@@ -502,7 +502,7 @@ export default function EVDamperTuningGuidePage() {
         <section aria-labelledby="related-title" className="border-t border-slate-200 pt-8">
           <h2 id="related-title" className="mb-5 text-2xl font-bold text-slate-950">เข้าใจโช้คแล้ว ต่อภาพช่วงล่างให้ครบ</h2>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="rounded-2xl border border-slate-200 p-5 text-base font-semibold transition hover:border-lime-500">ยางกับโช้คสตรัทปรับเกลียว ต้องเลือกให้ทำงานด้วยกัน <ArrowRight className="mt-3 h-5 w-5 text-lime-700" aria-hidden="true" /></Link>
+            <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="rounded-2xl border border-slate-200 p-5 text-base font-semibold transition hover:border-lime-500">ยาง EV ต่างจากยางทั่วไปยังไง? <ArrowRight className="mt-3 h-5 w-5 text-lime-700" aria-hidden="true" /></Link>
             <Link href="/articles/shock-absorber-types-monotube-twintube-air-ev" className="rounded-2xl border border-slate-200 p-5 text-base font-semibold transition hover:border-lime-500">Monotube, Twin-tube และถุงลม ต่างกันตรงไหน <ArrowRight className="mt-3 h-5 w-5 text-lime-700" aria-hidden="true" /></Link>
           </div>
         </section>

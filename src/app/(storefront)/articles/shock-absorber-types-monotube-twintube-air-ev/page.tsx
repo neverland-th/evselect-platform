@@ -100,7 +100,7 @@ export default function ShockAbsorberTypesGuidePage() {
         <h2 id="extra-hardware" className={headingStyle}>Inverted และซับแทงก์ บอกการออกแบบเพิ่มอีกชั้น</h2>
         <p><strong>Inverted หรือโช้คหัวกลับ</strong> เป็นการกลับการจัดวางชุดแดมเปอร์ <Source href={sources.bilstein}>BILSTEIN อธิบายในงานสตรัท MacPherson</Source> ว่าชุดไกด์ช่วยรับแรงที่เกี่ยวกับการนำทางล้อ ประโยชน์ต้องดูร่วมกับจุดยึดและช่วงล่างของรถ ไม่ใช่ข้อสรุปว่า SUV ไฟฟ้าทุกคันต้องใช้หัวกลับ</p>
         <p><strong>Reservoir หรือซับแทงก์</strong> เป็นส่วนของการจัดการปริมาตรของไหลและแก๊สในแบบที่ออกแบบไว้ เช่น <Source href={sources.kw}>KW ระบุทั้งถังในตัว ถังติดกระบอก และถังต่อสาย</Source> ในผลิตภัณฑ์บางกลุ่ม การมีถังให้เห็นไม่ได้ยืนยันว่าเย็นกว่ากี่เท่าหรือขับสบายกว่ารุ่นไม่มีถัง ต้องเทียบข้อมูลและผลใช้งานของชุดจริง</p>
-        <p>ถ้ากำลังเลือกระหว่างโช้คปรับหนึ่งทางกับหลายทาง อ่านต่อเรื่อง <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>ช่องปรับคอยล์โอเวอร์และสิ่งที่ต้องเช็กให้ตรงรถ</Link> จำนวนปุ่มไม่ควรเป็นเหตุผลหลักในการเพิ่มงบ</p>
+        <p>ถ้ากำลังเลือกระหว่างโช้คปรับหนึ่งทางกับหลายทาง อ่านต่อเรื่อง <Link href="/articles/ev-damper-tuning-bump-rebound-guide" className={linkStyle}>การปรับแดมเปอร์และสิ่งที่ต้องเช็กให้ตรงรถ</Link> จำนวนปุ่มไม่ควรเป็นเหตุผลหลักในการเพิ่มงบ</p>
       </section>
 
       <section className="space-y-4" aria-labelledby="electronic-and-air">

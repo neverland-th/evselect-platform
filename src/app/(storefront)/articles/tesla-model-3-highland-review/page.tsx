@@ -95,7 +95,7 @@ export default function TeslaModel3HighlandReviewPage() {
       </section>
       <section id="wheels-and-chassis" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
         <h2 className="text-2xl font-extrabold text-slate-900">คิดเรื่องล้อ ช่วงล่าง และเบรกต่อจากสเปก</h2>
-        <p>ถ้าสนใจ Performance หรือกำลังจะเปลี่ยนล้อ ลองอ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="underline text-lime-800">วิธีเลือกยางและคอยล์โอเวอร์ให้เหมาะกับรถ EV</Link> เพื่อดูขนาดยาง น้ำหนักบรรทุก และสิ่งที่ต้องตรวจร่วมกับรถจริง ส่วนอาการเด้ง ย้วย หรือกระแทก ควรแยกสาเหตุก่อนเริ่ม <Link href="/articles/ev-damper-tuning-bump-rebound-guide" className="underline text-lime-800">ปรับแดมเปอร์ Bump และ Rebound</Link></p>
+        <p>ถ้าสนใจ Performance หรือกำลังจะเปลี่ยนล้อ ลองอ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="underline text-lime-800">ยาง EV กับยาง Performance เลือกแบบไหน</Link> เพื่อดูขนาดยาง น้ำหนักบรรทุก และสิ่งที่ต้องตรวจร่วมกับรถจริง ส่วนอาการเด้ง ย้วย หรือกระแทก ควรแยกสาเหตุก่อนเริ่ม <Link href="/articles/ev-damper-tuning-bump-rebound-guide" className="underline text-lime-800">ปรับแดมเปอร์ Bump และ Rebound</Link></p>
         <p>หากกำลังเล็งชุดเบรกใหม่ บทความ <Link href="/articles/ev-carbon-ceramic-brakes-guide" className="underline text-lime-800">Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV</Link> จะช่วยแยกเรื่องฟีลเบรก ความร้อน ฝุ่น และค่าใช้จ่าย พร้อมเคส ENDLESS จาน 375 mm บน Model 3 Performance Highland ของเจ้าของรถ</p>
       </section>
       <section id="charging" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
