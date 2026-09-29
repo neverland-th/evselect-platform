@@ -10,7 +10,7 @@ export default function ComingSoonBanner() {
         <div className={styles.visual}>
           <Image
             src="/images/launch/evselect-coming-soon.webp"
-            alt="ภาพคอนเซ็ปต์รถใต้ผ้าคลุมสำหรับแคมเปญเตรียมเปิดตัวอุปกรณ์เสริม EVSELECT"
+            alt="ภาพคอนเซ็ปต์รถใต้ผ้าคลุมสำหรับแคมเปญเตรียมเปิดตัวอุปกรณ์เสริม EVSELECTS"
             width={1672}
             height={941}
             sizes="(max-width: 767px) 100vw, (max-width: 1279px) 95vw, 1216px"
@@ -20,14 +20,14 @@ export default function ComingSoonBanner() {
         <div className={styles.copy}>
           <div className={styles.brand}>
             <span className={styles.selector} aria-hidden="true"><i /><i /></span>
-            <Link href="/" className="underline underline-offset-4">EVSELECT</Link>
+            <Link href="/" className="underline underline-offset-4">EVSELECTS</Link>
           </div>
           <p className={styles.eyebrow}><span aria-hidden="true" />COMING SOON</p>
           <h2 id="coming-soon-heading" className={styles.title}>
             ของแต่ง EV<br /><span>ที่คุณต้องมี!</span>
           </h2>
           <p className={styles.description}>
-            เรากำลังคัดอุปกรณ์เสริม พร้อมเตรียมข้อมูลรุ่นรถและการติดตั้งให้ชัดเจน ก่อนเปิดตัวให้ดูกันที่นี่
+            กำลังเลือกของแต่งและอุปกรณ์เสริม พร้อมเช็กรุ่นรถที่ใส่ได้และวิธีติดตั้งให้ครบ ติดตามข่าวเปิดตัวได้ที่นี่
           </p>
           <div className={styles.actions}>
             <a href="https://www.facebook.com/evselects" target="_blank" rel="noopener noreferrer" className={styles.primary}>

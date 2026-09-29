@@ -14,8 +14,8 @@ const launchSteps = [
   },
   {
     number: "03",
-    title: "ค่อยเปิดจำหน่าย",
-    description: "เปิดรายละเอียดสินค้าและราคาเมื่อมีข้อมูลพอให้ตัดสินใจอย่างรับผิดชอบ",
+    title: "แจ้งรายละเอียดก่อนเปิดขาย",
+    description: "บอกราคา สิ่งที่ได้ และเงื่อนไขให้ครบก่อนเริ่มรับคำสั่งซื้อ",
   },
 ];
 
@@ -28,10 +28,10 @@ export default function PrelaunchPanel() {
         <div className="relative grid gap-10 p-7 sm:p-10 lg:grid-cols-[1.08fr_0.92fr] lg:p-14">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-lime-300/30 bg-lime-300/10 px-3 py-1.5 text-xs font-semibold text-lime-300">
-              <Rocket className="h-4 w-4" aria-hidden="true" /> <Link href="/" className="underline underline-offset-4 hover:text-white">EVSELECT</Link> กำลังเตรียมเปิดตัว
+              <Rocket className="h-4 w-4" aria-hidden="true" /> <Link href="/" className="underline underline-offset-4 hover:text-white">EVSELECTS</Link> กำลังเตรียมเปิดตัว
             </span>
             <h2 id="launch-heading" className="mt-6 max-w-2xl font-bold text-white">
-              เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม
+              ของแต่งกำลังมา ระหว่างนี้อ่านคู่มือกันก่อน
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300">
               ตอนนี้คุณอ่านรีวิวและคู่มือได้เต็มที่ ส่วนอุปกรณ์เสริมอยู่ระหว่างการคัดเลือก
