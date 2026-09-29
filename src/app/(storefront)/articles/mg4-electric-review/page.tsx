@@ -112,7 +112,7 @@ export default function MG4ElectricReviewPage() {
           <li><strong className="text-slate-950">ลองจอกับโทรศัพท์ของตัวเอง:</strong> ทดสอบการเชื่อมต่อ แผนที่ การปรับแอร์ และกล้องถอย เพื่อประเมินความสะดวกของซอฟต์แวร์ในรถคันนั้น</li>
           <li><strong className="text-slate-950">ถามค่ายางตามขนาดจริง:</strong> D กับ X ใช้ล้อและยางต่างขนาด ให้นำค่าเปลี่ยนยางและการใช้งานมารวมในงบระยะยาว</li>
         </ul>
-        <p>หากคิดจะเปลี่ยนล้อหรือช่วงล่างหลังรับรถ เริ่มจาก <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>หลักเลือกยางและคอยล์โอเวอร์ให้ตรงน้ำหนักและงานของรถ</Link> แล้วเก็บอาการของรถเดิมไว้เป็นจุดเปรียบเทียบก่อนซื้อชิ้นส่วนเพิ่ม</p>
+        <p>หากคิดจะเปลี่ยนล้อหรือช่วงล่างหลังรับรถ เริ่มจาก <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>หลักเลือกยาง EV ให้ตรงสเปกและการใช้รถ</Link> แล้วเก็บอาการของรถเดิมไว้เป็นจุดเปรียบเทียบก่อนซื้อชิ้นส่วนเพิ่ม</p>
       </section>
 
       <section className="space-y-4" aria-labelledby="model-year">

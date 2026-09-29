@@ -2,145 +2,185 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { ImageCredit } from '@/components/ImageCredit';
+import EvTyreCover from '@/components/EvTyreCover';
+import { evTyreArticle as article, tyreModels, tyreSources as sources } from '@/lib/ev-tyre-article';
 
-const title = 'เลือกยางและคอยล์โอเวอร์ EV อย่างไร ให้รับทั้งน้ำหนักและแรงม้า';
-const description = 'เลือกยางและคอยล์โอเวอร์ให้ตรงรถและการใช้งาน ดู Load Index, XL/HL, ขนาดยางหน้า–หลัง และระยะยุบ ผ่านตัวอย่าง ZEEKR 7X Performance AWD และ Tesla Model 3 Performance';
-const path = '/articles/ev-tyre-and-coilover-selection-guide';
-const hero = '/images/editorial/tesla-model-3-performance-2024.png';
-const teslaManual = 'https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html';
-const zeekrBrochure = 'https://www.datocms-assets.com/142974/1756887361-7x-brochure-aug2025-correct.pdf';
 const linkStyle = 'font-semibold text-lime-800 underline decoration-lime-500 underline-offset-4 hover:text-lime-950 focus-visible:outline-2 focus-visible:outline-offset-4';
-
 export const metadata: Metadata = {
-  title: `${title} | EVSELECT`, description,
-  alternates: { canonical: path },
-  openGraph: { title, description, url: `https://evselects.com${path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', images: [{ url: hero, width: 1280, height: 640, alt: 'Tesla Model 3 Performance ปี 2024' }] },
-  twitter: { card: 'summary_large_image', title, description, images: [hero] },
+  title: `${article.title} | EVSELECTS.COM`, description: article.description,
+  alternates: { canonical: article.path },
+  openGraph: {
+    title: article.title, description: article.description, url: `https://evselects.com${article.path}`,
+    type: 'article', locale: 'th_TH', siteName: 'EVSELECTS.COM',
+    publishedTime: article.publishedAt, modifiedTime: article.updatedAt,
+    images: [{ url: article.image, width: article.imageWidth, height: article.imageHeight, alt: article.imageAlt }],
+  },
+  twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
 };
-
-function Section({ id, title: heading, children }: { id: string; title: string; children: ReactNode }) {
+function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-28 space-y-5">
-    <h2 id={`${id}-title`} className="border-b border-slate-200 pb-3 text-2xl font-bold leading-snug text-slate-900">{heading}</h2>
-    {children}
+    <h2 id={`${id}-title`} className="border-b border-slate-200 pb-3 text-2xl font-bold leading-snug text-slate-900">{title}</h2>{children}
   </section>;
 }
 function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
+const contents = [
+  ['what-is-ev-tyre', 'คำว่า EV บอกอะไร'], ['engineering', 'ข้างในยางต่างกันตรงไหน'],
+  ['models', 'ดูยางแต่ละรุ่นและข้อดี–ข้อจำกัด'], ['comparison', 'เทียบกับ Pilot Sport 4 S'],
+  ['read-the-evidence', 'อ่านตัวเลขให้ไม่หลงทาง'], ['before-you-buy', 'เลือกให้ตรงรถและถนนไทย'], ['faq', 'คำถามที่เจอบ่อย'],
+] as const;
+const comparison = [
+  ['e.Primacy', 'ให้น้ำหนักกับพลังงานและการเดินทางประจำวัน', 'ประหยัดกี่เปอร์เซ็นต์ หรือเบรกต่างกี่เมตรบนรถเรา', sources.eprimacy, 'Michelin ไทย'],
+  ['Pilot Sport EV', 'รวมโจทย์สปอร์ต EV เสียง และแรงต้านการหมุน', 'ไม่ได้แปลว่าเป็น 4 S ที่เงียบและเกาะกว่าทุกด้าน', sources.pilotEv, 'Michelin ไทย'],
+  ['iON evo', 'ออกแบบหลายส่วนร่วมกันเพื่อเสียง การสึก และพลังงาน', 'ผลของรุ่น AS หรือ SUV ใช้แทนรุ่น Summer ไม่ได้', sources.hankook, 'Hankook สหรัฐฯ'],
+  ['EcoContact 7', 'แรงต้านการหมุนต่ำและลดเสียงภายนอกในเมือง', 'ไม่ใช่ 7 S; ยังไม่ยืนยันเสียงในห้องโดยสารของรถเรา', sources.continentalPress, 'Continental สากล'],
+  ['P Zero E', 'UHP ที่ตั้งโจทย์พลังงานและเทคโนโลยี Elect ร่วมด้วย', 'Triple A ไม่ใช่คะแนนการเข้าโค้งหรือผลชนะ 4 S', sources.pirelli, 'Pirelli · เปิดตัวปี 2023'],
+  ['Pilot Sport 4 S', 'การควบคุมและการยึดเกาะแนวสปอร์ต ใช้ถนนและสนามเป็นครั้งคราว', 'ไม่ได้ยืนยันว่าจะกินไฟมากกว่าหรือดังกว่าทุกตัวเลือก', sources.ps4s, 'Michelin ไทย'],
+] as const;
 
 export default function EVTyreAndCoiloverSelectionGuidePage() {
+  const structuredData = {
+    '@context': 'https://schema.org', '@type': 'Article', headline: article.title,
+    description: article.description, image: [`https://evselects.com${article.image}`],
+    datePublished: article.publishedAt, dateModified: article.updatedAt,
+    mainEntityOfPage: `https://evselects.com${article.path}`,
+    author: { '@type': 'Organization', name: 'EVSELECTS.COM', url: 'https://evselects.com/' },
+    publisher: { '@type': 'Organization', name: 'EVSELECTS.COM', url: 'https://evselects.com/' },
+  };
   return <article className="mx-auto max-w-5xl px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
-    <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} />บทความและคู่มือ EV</Link></nav>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
+    <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} aria-hidden="true" />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">
-      <p className="text-sm font-semibold text-lime-800">ยางและช่วงล่าง · คู่มือก่อนอัปเกรด</p>
-      <h1 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">{title}</h1>
-      <p className="max-w-3xl text-lg leading-[1.9] sm:text-xl">รถ EV อาจเร่งได้ทันใจตั้งแต่เดิม แต่ความมั่นใจตอนเบรก เลี้ยว หรือเจอรอยต่อถนน ยังขึ้นอยู่กับยางและช่วงล่างด้วย ของราคาแพงอาจยังไม่ตอบโจทย์ ถ้าขนาด พิกัดรับน้ำหนัก และลักษณะการทำงานไม่เหมาะกับรถคันนั้น</p>
-      <p className="max-w-3xl">คู่มือนี้ชวนเริ่มจากสเปกรถจริง แล้วค่อยเลือกว่าต้องการความนุ่ม เงียบ หรือการตอบสนองแบบไหน โดยใช้ ZEEKR 7X Performance AWD และ Tesla Model 3 Performance เป็นตัวอย่าง เพื่อให้คุยกับร้านได้ตรงประเด็นก่อนจ่ายเงิน</p>
-      <p className="text-sm text-slate-500">อัปเดต <time dateTime="2026-09-21">21 กันยายน 2569</time> · เรียบเรียงโดย <Link href="/" className={linkStyle}>EVSELECT</Link> จากข้อมูลผู้ผลิต</p>
+      <p className="text-sm font-semibold text-lime-800">รู้ก่อนเปลี่ยนยาง · EV และ Performance</p>
+      <h1 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">{article.title}</h1>
+      <p className="max-w-3xl text-lg leading-[1.9] sm:text-xl">พอถึงเวลาเปลี่ยนยางรถไฟฟ้า คำถามมักไม่จบแค่เลือกยี่ห้อไหนดี แต่กลายเป็นว่า “ต้องซื้อยาง EV ไหม แล้วถ้าใส่ Pilot Sport 4 S จะได้อะไรและเสียอะไรไป?”</p>
+      <p><strong>ความต่างอยู่ที่โจทย์ออกแบบของยางแต่ละรุ่น</strong> บางรุ่นเน้นใช้พลังงานน้อย บางรุ่นพยายามเก็บทั้งความเงียบและการควบคุม ส่วนยาง Performance ก็ใช้กับ EV ได้เมื่อสเปกตรงรถ อย่าง <Source href={sources.ps4s}>Michelin Pilot Sport 4 S</Source> ซึ่งหน้าไทยระบุว่ารองรับรถไฟฟ้า</p>
+      <p>เราจะดูตัวอย่างจาก Michelin, Hankook, Continental และ Pirelli ว่าแต่ละรุ่นปรับอะไรเพื่อแก้โจทย์เหล่านี้ แล้วค่อยกลับมาตอบว่าแบบไหนตรงกับการขับของเรามากกว่า</p>
+      <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>29 กันยายน 2569</time> · อ่านประมาณ {article.readTime} · เรียบเรียงโดย <Link href="/" className={linkStyle}>EVSELECTS.COM</Link></p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-        <Image src={hero} alt="Tesla Model 3 Performance ปี 2024 สีเทา มองด้านหน้าซ้าย เห็นล้อและตัวรถเต็มคัน" width={1280} height={640} sizes="(max-width: 1024px) 100vw, 960px" preload className="h-auto w-full" />
-        <figcaption className="space-y-2 p-4 text-sm leading-relaxed text-slate-600">
-          <p>Tesla Model 3 Performance ปี 2024 — ภาพประกอบรุ่นรถ ไม่ใช่รถทดสอบของเรา และไม่ใช้ภาพนี้ยืนยันสเปกยางของรถแต่ละคัน</p>
-          <ImageCredit author="iMoD Official" source="https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png" license="CC BY 3.0" licenseUrl="https://creativecommons.org/licenses/by/3.0/" className="" />
-          <p>ภาพจาก <Source href="https://www.youtube.com/watch?v=Lr1FdX7Pi5o">วิดีโอต้นฉบับของ iMoD Official</Source> ผ่าน Wikimedia Commons; ใช้ภาพย่อโดยไม่รีทัช</p>
-        </figcaption>
+        <EvTyreCover eager />
+        <figcaption className="p-4 text-sm leading-relaxed text-slate-600">ภาพปกเป็นภาพประกอบแนวคิดของ EVSELECT โดยเวอร์ชันแนวนอนจัดทำด้วย AI จากภาพต้นฉบับ คุณสมบัติด้านเสียง น้ำหนักบรรทุก และการยึดเกาะต้องตรวจตามรุ่นและขนาดยาง ไม่ใช่คุณสมบัติที่ยาง EV ทุกเส้นให้ได้เท่ากัน</figcaption>
       </figure>
     </header>
-
     <div className="mt-10 space-y-12">
-      <section aria-labelledby="start-here" className="rounded-2xl border border-lime-200 bg-lime-50 p-5 sm:p-7">
-        <h2 id="start-here" className="mb-4 text-xl font-bold text-slate-950">เริ่มจากสามเรื่องนี้ก่อนเลือกแบรนด์</h2>
-        <ul className="space-y-3">
-          <li><strong>ตรงรถ:</strong> ขนาดยาง พิกัดรับน้ำหนัก พิกัดความเร็ว และล้อที่ใช้ ต้องตรงข้อกำหนดของรุ่นและปีรถ</li>
-          <li><strong>ตรงการใช้งาน:</strong> ขับคนเดียวทุกวันกับพาครอบครัวและสัมภาระเดินทางไกล มีโจทย์ต่างกัน</li>
-          <li><strong>แก้ถูกอาการ:</strong> ยางสึกผิดรูป ลมไม่เหมาะ หรือช่วงล่างหลวม ควรตรวจให้ชัดก่อนซื้อชุดใหม่</li>
-        </ul>
-      </section>
+      <aside className="space-y-3 rounded-2xl border border-lime-200 bg-lime-50 p-5 sm:p-7" aria-label="ขอบเขตของบทความ">
+        <p className="font-bold text-slate-950">อ่านบทความนี้แล้วจะเลือกยางได้ชัดขึ้นยังไง</p>
+        <p>แยกได้ว่ากำลังจ่ายให้กับระยะวิ่ง ความเงียบ หรือการควบคุม และรู้ว่าต้องขอข้อมูลอะไรจากร้านก่อนซื้อ เราอ้างข้อมูลผู้ผลิตเพื่ออธิบายการออกแบบ แล้วเสริมด้วยผลทดสอบของ ADAC และ Tire Rack ในรุ่นที่มีข้อมูล โดยระบุขนาดและเงื่อนไขแยกไว้ ไม่ใช่ผลทดลองขับยางทั้งหกรุ่นของเรา</p>
+        <p className="text-sm">ภาพยางในเนื้อหาเป็นภาพผลิตภัณฑ์ตรงรุ่นจากผู้ผลิต ซึ่งอาจเป็นภาพเรนเดอร์ของแบรนด์ ไม่ใช่ภาพที่เราถ่ายหรือภาพยางสมมติจาก AI ขนาดและรหัสบนภาพเป็นเพียงตัวอย่างของรุ่นนั้น</p>
+      </aside>
+      <nav aria-label="สารบัญบทความ" className="rounded-2xl border border-slate-200 p-5 sm:p-7"><p className="mb-3 font-bold text-slate-950">เลือกอ่านหัวข้อ</p><ol className="list-decimal space-y-2 pl-6">{contents.map(([id, label]) => <li key={id}><a href={`#${id}`} className={linkStyle}>{label}</a></li>)}</ol></nav>
 
-      <Section id="heavy-ev" title="1. รถหนักและแรง ทำให้ต้องอ่านสเปกยางให้ละเอียดขึ้น">
-        <h3 className="text-xl font-bold text-slate-900">ZEEKR 7X Performance AWD: น้ำหนัก 2,535 กก. กับกำลัง 637 hp</h3>
-        <p>ตัวเลขใน <Source href="https://www.zeekrlife.com/en-th/models/7x">สเปก ZEEKR 7X</Source> รุ่น Performance AWD ประเทศไทยระบุกำลังสูงสุด 475 kW / 637 hp ส่วน <Source href={zeekrBrochure}>โบรชัวร์ไทย</Source> ระบุน้ำหนักรถ 2,535 กก. และยางขนาด 265/40R21 ตัวเลขนี้เป็นของรุ่นย่อยนั้น ไม่ควรนำไปใช้แทน Standard RWD หรือ Long Range RWD</p>
-        <figure className="overflow-hidden rounded-2xl border border-slate-200">
-          <Image src="/images/editorial/zeekr-7x-photo.jpg" alt="ZEEKR 7X สีเทา มองด้านหน้าซ้าย เห็นตัวรถและล้อ" width={1920} height={1440} sizes="(max-width: 1024px) 100vw, 960px" className="h-auto w-full" />
-          <figcaption className="space-y-2 bg-slate-50 p-4 text-sm leading-relaxed text-slate-600">
-            <p>ภาพประกอบ ZEEKR 7X; อุปกรณ์และรุ่นย่อยของรถในภาพอาจต่างจากรุ่นไทย ตัวเลขข้างต้นอ้างอิงเอกสารผู้ผลิต ไม่ได้อนุมานจากภาพ</p>
-            <ImageCredit author="JustAnotherCarDesigner" source="https://commons.wikimedia.org/wiki/File:Zeekr_7X_011.jpg" license="CC0 1.0" licenseUrl="https://creativecommons.org/publicdomain/zero/1.0/" className="" />
-          </figcaption>
-        </figure>
-        <p>น้ำหนักทำให้พิกัดรับน้ำหนักของยางเป็นเรื่องที่มองข้ามไม่ได้ ขณะที่การใช้กำลังรถต้องอาศัยการยึดเกาะด้วย แต่ไม่มีสูตรแปลง “637 แรงม้า” เป็น Load Index และไม่ควรนำ 2,535 หารสี่แล้วเลือกยางจากคำตอบนั้นเพียงอย่างเดียว เพราะยังมีผู้โดยสาร สัมภาระ และข้อกำหนดน้ำหนักลงแต่ละเพลาของรถ</p>
-        <p>หากกำลังเทียบรุ่นย่อย อ่าน <Link href="/articles/zeekr-7x-2026-review" className={linkStyle}>รีวิวและสเปก ZEEKR 7X สำหรับไทย</Link> ต่อได้ แล้วกลับมาตรวจป้ายข้อมูลของรถคันที่จะเปลี่ยนยางอีกครั้ง</p>
-        <h3 className="text-xl font-bold text-slate-900">Tesla Model 3 Performance: ยางหน้า–หลังอาจไม่ใช่ชุดเดียวกัน</h3>
-        <p>สำหรับ Model 3 ชุดล้อโรงงาน 20 นิ้ว <Source href={teslaManual}>คู่มือ Tesla ภาษาไทยเรื่องล้อและยาง</Source> ระบุยางหน้า 235/35R20 และหลัง 275/30R20 ตัวอย่างนี้เตือนว่าแค่บอก “ยาง 20 นิ้วสำหรับ Model 3” ยังไม่พอ ต้องตรวจรุ่นย่อย ปีรถ ตำแหน่งล้อ และป้ายข้อมูลยางของคันจริง โดยเฉพาะรถที่เจ้าของเดิมเปลี่ยนล้อมาแล้ว</p>
-        <p>รถที่เปลี่ยนล้อหรือยางจากโรงงานควรให้ผู้ติดตั้งตรวจความเข้ากันได้ทั้งชุด รวมถึงระยะห่างจากเบรกและช่วงล่าง อย่าคัดลอกขนาดจากภาพรถแต่งอย่างเดียว ดูพื้นฐานรุ่นรถได้ที่ <Link href="/articles/tesla-model-3-highland-review" className={linkStyle}>คู่มือ Tesla Model 3 Highland สเปกไทย</Link></p>
+      <Section id="what-is-ev-tyre" title="1. ยาง EV ไม่ได้มีบุคลิกแบบเดียวกันทั้งหมด">
+        <p>คำว่า “ยางทั่วไป” กว้างมาก ตั้งแต่ยางเน้นนุ่มเงียบ ยางประหยัดพลังงาน ไปจนถึงยางสปอร์ต จึงเทียบว่า EV ดีกว่าหรือแย่กว่าทั้งกลุ่มไม่ได้ ต้องระบุรุ่นให้ตรงก่อน เช่น e.Primacy กับ Pilot Sport 4 S เป็นยางคนละโจทย์ แม้ทั้งคู่จะมีตัวเลือกสำหรับรถไฟฟ้า</p>
+        <p>มีทั้งรุ่นที่ตั้งโจทย์ EV โดยเฉพาะอย่าง <Source href={sources.hankook}>Hankook iON evo</Source> และยางที่พัฒนารองรับรถหลายระบบขับเคลื่อนอย่าง <Source href={sources.continental}>Continental EcoContact 7</Source> ซึ่งใช้เครื่องหมาย EV-compatible ส่วน <Source href={sources.pirelliElect}>Elect ของ Pirelli</Source> เป็นชื่อเทคโนโลยีที่ต้องตรวจในรุ่นและขนาดนั้น ไม่ใช่ชื่อยางที่ใช้แทน P Zero E ได้ทุกกรณี</p>
+        <p>สิ่งที่ควรทำก่อนถามว่า “มีคำว่า EV ไหม” คือ <strong>ตรวจว่ายางเส้นนั้นตรงขนาด พิกัดรับน้ำหนัก และพิกัดความเร็วที่รถกำหนดหรือไม่</strong> แล้วค่อยเลือกว่าอยากได้บุคลิกแบบไหน โดยใช้ <Source href={sources.parameters}>ขนาดและ Service Description ของยาง</Source> เป็นข้อมูลตั้งต้น</p>
       </Section>
 
-      <Section id="tyre-spec" title="2. อ่าน Load Index, XL และ HL ให้ถูกเรื่อง">
-        <p><strong>Load Index คือดัชนีรับน้ำหนัก</strong> ส่วน Speed Rating คือพิกัดความเร็ว ต้องอ่านควบคู่กับขนาดและเครื่องหมายอื่นบนแก้มยาง โดยเทียบกับคู่มือหรือป้ายประจำรถ การเห็นคำว่า EV บนชื่อสินค้าอย่างเดียวจึงยังไม่ยืนยันว่าใส่กับรถเราได้</p>
-        <div className="overflow-x-auto rounded-2xl border border-slate-200">
-          <table className="w-full min-w-[560px] text-left text-base leading-relaxed">
-            <caption className="p-4 text-left font-semibold text-slate-900">คำบนสเปกยางบอกอะไร และยังต้องตรวจอะไรต่อ</caption>
-            <thead className="bg-slate-100 text-slate-900"><tr><th scope="col" className="p-4">คำหรือรหัส</th><th scope="col" className="p-4">ความหมาย</th><th scope="col" className="p-4">ก่อนเลือกซื้อ</th></tr></thead>
+      <Section id="engineering" title="2. ข้างในยางต่างกันตรงไหน ทำไมแค่เพิ่มโฟมจึงยังไม่พอ">
+        <h3 className="text-xl font-bold text-slate-900">เนื้อยาง: ลดพลังงานสูญเสีย แต่ยังต้องยึดเกาะถนน</h3>
+        <p>ยางเปลี่ยนรูปตลอดเวลาขณะหมุน พลังงานส่วนหนึ่งสูญเสียไปในวัสดุ ผู้ผลิตจึงปรับสูตรยาง สารเสริมแรง และโครงสร้างเพื่อลด Rolling Resistance หรือแรงต้านการหมุน แต่การยึดเกาะบนถนนเปียกเป็นอีกโจทย์ที่ต้องรักษาไว้ การพัฒนายางจึงเป็นการหาสมดุลหลายด้าน อ่านคำอธิบายเรื่อง <Source href="https://energy-efficient-products.ec.europa.eu/product-list/tyres/tyres-properties-introduction_en">คุณสมบัติยางจาก European Commission</Source> จะเห็นว่าต้องดูพลังงานและ Wet Grip แยกกัน</p>
+        <h3 className="text-xl font-bold text-slate-900">โครงยาง: รับน้ำหนักให้ได้ โดยไม่เหมารวมว่า EV ทุกคันต้องใช้ HL</h3>
+        <p>รถไฟฟ้าหลายรุ่นมีน้ำหนักมาก แต่ขนาดตัวรถและพิกัดแต่ละเพลาก็ต่างกัน XL หมายถึง Extra Load ส่วน HL คือ High Load Capacity ทั้งสองอย่างต้องอ่านร่วมกับ Load Index และแรงดันที่กำหนด ไม่ใช่คะแนนความแข็งของแก้มยางหรือใบรับรองว่าใส่กับ EV ได้ทุกคัน <Source href={sources.load}>Michelin อธิบายความต่างของ HL และ XL</Source> โดยแยกความสามารถรับน้ำหนักออกจากชื่อการตลาดของยาง</p>
+        <h3 className="text-xl font-bold text-slate-900">ดอกยางกับโฟม: แก้เสียงกันคนละส่วน</h3>
+        <p>รูปทรงและการเรียงบล็อกดอกยางสัมพันธ์กับเสียงขณะกลิ้ง ส่วนโฟมด้านในมุ่งลดเสียงก้องของโพรงอากาศในยาง จึงไม่ใช่อุปกรณ์ที่ทำให้เสียงทุกชนิดหายไป และไม่ใช่ตัวเพิ่มแรงยึดเกาะโดยตรง ดูหลักการของ <Source href={sources.acoustic}>Michelin Acoustic Technology</Source> คู่กับการปรับลายดอกยางของ <Source href={sources.hankook}>Hankook iON evo</Source> จะเห็นว่าผู้ผลิตแก้ปัญหามากกว่าจุดเดียว</p>
+        <h3 className="text-xl font-bold text-slate-900">แรงบิดและการสึก: ยางช่วยได้ แต่ไม่แทนการดูแลรถ</h3>
+        <p>ผู้ผลิตยาง EV ให้ความสำคัญกับความแข็งของบล็อกดอกยางและการกระจายแรงกด เช่น <Source href={sources.pilotEvPress}>ElectricGrip ใน Pilot Sport EV</Source> แต่การมีชื่อ EV ไม่ได้ลบผลจากลมยางไม่เหมาะหรือมุมล้อผิด หากยางสึกข้างเดียวให้ตรวจสาเหตุร่วมกับ <Link href="/articles/ev-camber-adjustment-wheel-alignment-guide" className={linkStyle}>เรื่อง Camber และการตั้งศูนย์ล้อ</Link> ก่อนเปลี่ยนยี่ห้อเพื่อหวังแก้ทุกอาการ</p>
+      </Section>
+
+      <Section id="models" title="3. ยางแต่ละรุ่นทำมาเพื่ออะไร มีข้อดีและข้อจำกัดยังไง">
+        <p>คำว่า <strong>ข้อดี</strong> ด้านล่างอธิบายประโยชน์ตามแนวทางออกแบบที่ผู้ผลิตระบุ ส่วน <strong>ข้อจำกัด</strong> คือสิ่งที่ยังต้องชั่งน้ำหนักหรือขอหลักฐานเพิ่ม ไม่ได้หมายความว่าเราทดสอบแล้วพบว่ารุ่นนั้นแพ้ในด้านดังกล่าว</p>
+        <div className="space-y-12">{tyreModels.map((tyre, index) => <section key={tyre.id} id={tyre.id} aria-labelledby={`${tyre.id}-title`} className="scroll-mt-28 space-y-5 border-b border-slate-200 pb-10 last:border-0 last:pb-0">
+          <div className="space-y-2"><h3 id={`${tyre.id}-title`} className="text-xl font-bold text-slate-950 sm:text-2xl">{index + 1}. {tyre.name}</h3><p className="font-semibold text-lime-800">{tyre.direction}</p></div>
+          <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <Image src={tyre.image} alt={tyre.alt} width={tyre.width} height={tyre.height} sizes="(max-width: 640px) 100vw, 640px" className="mx-auto h-auto max-h-[460px] w-full object-contain" />
+            <figcaption className="space-y-2 bg-slate-50 p-4 text-sm leading-relaxed text-slate-600"><p>{tyre.caption}</p>{'imageAuthor' in tyre ? <ImageCredit author={tyre.imageAuthor} source={tyre.imageSource} license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" className="" /> : <p>ภาพผลิตภัณฑ์: <Source href={tyre.imageSource}>{tyre.credit} · แหล่งภาพต้นฉบับ</Source></p>}</figcaption>
+          </figure>
+          <p><strong>ออกแบบมาเพื่ออะไร:</strong> {tyre.engineering} <Source href={tyre.source}>รายละเอียดจาก {tyre.credit}</Source></p>
+          <p><strong className="text-slate-900">ข้อดี:</strong> {tyre.pro}</p>
+          <p><strong className="text-slate-900">ข้อจำกัด:</strong> {tyre.con}</p>
+          {tyre.id === 'michelin-eprimacy' && <p className="rounded-xl bg-slate-50 p-4 text-base"><strong>สิ่งที่ผลทดสอบพบ:</strong> <Source href={sources.adac}>ADAC ปี 2023 ขนาด 205/55 R16 91V</Source> ให้ e.Primacy เด่นด้านประสิทธิภาพและการสึกต่ำ แต่พบจุดอ่อนบนถนนเปียก ระยะเบรกบนแอสฟัลต์เปียกจาก 80–0 กม./ชม. อยู่ที่ 43.7 เมตร ขณะที่ค่าดีที่สุดของชุดทดสอบคือ 34.4 เมตร ข้อมูลนี้ใช้กับยางสเปกที่ทดสอบ ไม่ใช่คำตัดสินแทนทุกขนาด หรือรุ่น e.Primacy ST ที่ร้านอาจเสนอในไทย</p>}
+          {tyre.id === 'michelin-pilot-sport-4-s' && <p className="rounded-xl bg-slate-50 p-4 text-base"><strong>สิ่งที่ผลทดสอบพบ:</strong> <Source href={sources.tireRack}>Tire Rack บน Tesla Model 3 ปี 2023</Source> ชมการตอบสนองและการควบคุมของ 4 S แต่พบความกระด้างและเสียงที่ยังรับรู้ได้ พร้อมการใช้พลังงานค่อนข้างสูงในชุดทดสอบ ดูตัวเลขและคู่เทียบในหัวข้อถัดไป</p>}
+          <p className="border-l-4 border-lime-500 pl-4"><strong>เหมาะกับโจทย์ไหน:</strong> {tyre.fit}</p>
+        </section>)}</div>
+        <p className="text-sm text-slate-500">รุ่นที่ยกมาเป็นตัวอย่างแนวคิด ไม่ใช่รายชื่อรุ่นใหม่ทั้งหมดของปี 2026 เช่น Michelin เปิดตัว <Source href={sources.newMichelin}>Primacy 5 energy และ Pilot Sport 5 energy</Source> เพิ่มแล้ว บทความนี้จึงไม่ใช้คำว่า “รุ่นล่าสุด” แทนยางทุกตัวในตาราง</p>
+      </Section>
+
+      <Section id="comparison" title="4. ถ้าเทียบกับ Pilot Sport 4 S ความต่างอยู่ตรงไหน">
+        <p>ลองแยกคำถามออกเป็น “ผู้ผลิตพัฒนายางมาเพื่ออะไร” กับ “ทดสอบจริงแล้วใครทำได้ดีกว่า” ตารางนี้ตอบข้อแรก จึงไม่มีคะแนนหนึบ เงียบ หรือเปอร์เซ็นต์ประหยัดไฟที่นำมาจากคนละรถ คนละขนาด และคนละวิธีวัด</p>
+        <p className="text-sm text-slate-500 sm:hidden">เลื่อนตารางไปทางซ้าย–ขวาเพื่ออ่านครบทุกช่อง</p>
+        <div className="relative overflow-x-auto rounded-2xl border border-slate-200" role="region" aria-label="ตารางเปรียบเทียบยาง เลื่อนแนวนอนได้" tabIndex={0}>
+          <table className="w-full min-w-[780px] text-left text-base leading-relaxed">
+            <caption className="p-4 text-left font-semibold text-slate-900">เปรียบเทียบเป้าหมายการออกแบบ ไม่ใช่อันดับผลทดสอบ</caption>
+            <thead className="bg-slate-100 text-slate-900"><tr>{['รุ่น', 'จุดเน้นเมื่อเทียบกับ 4 S', 'สิ่งที่ยังสรุปไม่ได้', 'แหล่งข้อมูล / Source', 'สถานะ / Label'].map(label => <th key={label} scope="col" className="p-4">{label}</th>)}</tr></thead>
+            <tbody className="divide-y divide-slate-200">{comparison.map(([name, focus, limit, href, source]) => <tr key={name}><th scope="row" className="p-4">{name}</th><td className="p-4">{focus}</td><td className="p-4">{limit}</td><td className="p-4"><Source href={href}>{source}</Source></td><td className="p-4">ข้อมูลผู้ผลิต (CLAIM)</td></tr>)}</tbody>
+          </table>
+        </div>
+        <p><strong>ข้อสรุปในการเลือกของเรา (INFERENCE):</strong> ถ้าสนใจพลังงานกับความสบายเป็นหลัก ให้เริ่มเทียบยางกลุ่มที่วางโจทย์ด้านนี้ก่อน ถ้าอยากได้การควบคุมแนวสปอร์ต ให้เอา Pilot Sport 4 S มาร่วมเทียบได้ แต่ต้องไม่ลดพิกัดยางเพื่อให้ได้รุ่นที่อยากใส่</p>
+        <p>สำหรับตัวเลขเปรียบเทียบทั้งหกรุ่นบนรถ EV คันเดียว ขนาดและเงื่อนไขเดียวกัน <strong>ยังไม่มีข้อมูลที่ตรวจยืนยันได้ในบทความนี้</strong> จึงไม่จัดอันดับผู้ชนะด้านเบรก ฝน เสียง หรือระยะวิ่ง</p>
+        <h3 className="text-xl font-bold text-slate-900">ตัวอย่างผลทดสอบจริง: ได้การควบคุม แล้วแลกพลังงานเท่าไร?</h3>
+        <p><Source href={sources.tireRack}>Tire Rack · 2024 Test 1</Source> ใช้ Tesla Model 3 ปี 2023 เปรียบเทียบยางหลายประเภท ตัวอย่างสองรุ่นขนาด 235/40 R19 ให้ผลการใช้พลังงานดังนี้ ตัวเลข kWh/100 กม. แปลงจาก Wh/mi ด้วย 1 ไมล์ = 1.609344 กม. และปัดทศนิยมสองตำแหน่ง</p>
+        <div className="relative overflow-x-auto rounded-2xl border border-slate-200" role="region" aria-label="ผลทดสอบพลังงานของ Tire Rack" tabIndex={0}>
+          <table className="w-full min-w-[660px] text-left text-base leading-relaxed">
+            <caption className="p-4 text-left font-semibold">ผลของยางสเปกที่ทดสอบ ไม่ใช่ค่ารับประกันของรถทุกคัน</caption>
+            <thead className="bg-slate-100"><tr>{['ยางที่ทดสอบ', 'Wh/mi ต้นฉบับ', 'kWh/100 กม.', 'แหล่งข้อมูล / Source', 'สถานะ / Label'].map(label => <th key={label} scope="col" className="p-4">{label}</th>)}</tr></thead>
             <tbody className="divide-y divide-slate-200">
-              <tr><th scope="row" className="p-4">Load Index</th><td className="p-4">รหัสพิกัดรับน้ำหนักของยางเส้นนั้น</td><td className="p-4">เทียบข้อกำหนดของรถ ไม่เลือกจากน้ำหนักรถหารสี่อย่างเดียว</td></tr>
-              <tr><th scope="row" className="p-4">SL / XL</th><td className="p-4">Standard Load / Extra Load; เป็นประเภทการรับน้ำหนัก</td><td className="p-4">อ่านขนาดและ Load Index ร่วมกัน ไม่เหมารวมว่า XL ทุกเส้นรับน้ำหนักได้เท่ากัน</td></tr>
-              <tr><th scope="row" className="p-4">HL</th><td className="p-4">High Load Capacity สำหรับความสามารถรับน้ำหนักที่สูงขึ้น</td><td className="p-4">ยึดสเปกที่ผู้ผลิตรถอนุมัติ ไม่ถือว่ารถ EV ทุกคันต้องใช้ HL</td></tr>
-              <tr><th scope="row" className="p-4">Speed Rating</th><td className="p-4">พิกัดความเร็วภายใต้เงื่อนไขของยาง</td><td className="p-4">เลือกตามข้อกำหนดรถ ไม่ใช่ตามความเร็วที่คิดว่าจะขับเพียงอย่างเดียว</td></tr>
+              <tr><th scope="row" className="p-4">Pilot Sport 4 S · 96Y</th><td className="p-4">290</td><td className="p-4">18.02</td><td className="p-4"><Source href={sources.tireRack}>Tire Rack</Source></td><td className="p-4">ตรวจต้นฉบับแล้ว (VERIFIED)</td></tr>
+              <tr><th scope="row" className="p-4">iON evo AS · 96W</th><td className="p-4">263</td><td className="p-4">16.34</td><td className="p-4"><Source href={sources.tireRack}>Tire Rack</Source></td><td className="p-4">ตรวจต้นฉบับแล้ว (VERIFIED)</td></tr>
             </tbody>
           </table>
         </div>
-        <p>อ่าน <Source href="https://www.michelin.co.th/auto/advice/ev-guide/high-load-capacity-tyres">ความแตกต่างของยาง HL และ XL จาก Michelin</Source> ประกอบได้ ความสามารถรับน้ำหนักต้องพิจารณาร่วมกับแรงดันลมและสเปกยาง จึงไม่ควรกำหนดตัวเลขรับน้ำหนักตายตัวให้ทั้งกลุ่ม SL, XL หรือ HL</p>
-        <h3 className="text-xl font-bold text-slate-900">เติมลมตามรถ ไม่ใช่ตามตัวเลขสูงสุดบนแก้มยาง</h3>
-        <p>Tesla ระบุให้ดูแรงดันจากฉลากข้อมูลยางที่เสาประตูฝั่งคนขับ และแยกชัดว่าค่าแรงดันสูงสุดบนแก้มยางไม่ใช่ค่าที่ใช้ขับทั่วไป ดังนั้นคำแนะนำ “EV ทุกคันเติม 40 psi” จึงข้ามรายละเอียดสำคัญของรถ ยาง และการบรรทุกไป ให้ใช้ <Source href={teslaManual}>ข้อมูลแรงดันยางในคู่มือรถ</Source> เป็นจุดตั้งต้น</p>
+        <p>ในคู่นี้ 4 S ใช้พลังงานมากกว่าราว 10.3% ขณะที่ผู้ทดสอบพบข้อจำกัดเรื่องการยึดเกาะเปียกของ iON evo AS จึงเลือกผู้ชนะจากช่องพลังงานอย่างเดียวไม่ได้ <strong>AS คือ All Season ไม่ใช่ iON evo Summer ในหัวข้อก่อนหน้า</strong> และผลนี้ไม่ได้เปรียบเทียบ 4 S กับ Pilot Sport EV หรือ P Zero E</p>
       </Section>
 
-      <Section id="choose-tyre" title="3. เลือกความนุ่ม เงียบ และการยึดเกาะให้ตรงชีวิตจริง">
-        <p>เมื่อผ่านสเปกพื้นฐานแล้ว ค่อยเทียบคุณสมบัติที่คุณต้องการ ยางที่โดดเด่นด้านหนึ่งไม่ได้แปลว่าจะดีที่สุดทุกด้าน และชื่อรุ่นเดียวกันอาจมีหลายขนาดหรือหลายสเปกย่อย</p>
+      <Section id="read-the-evidence" title="5. ตัวเลขที่ดูน่าเชื่อ ต้องอ่านอะไรต่อ">
+        <h3 className="text-xl font-bold text-slate-900">ระยะวิ่งเพิ่มของ Pilot Sport EV ไม่ได้เทียบกับ Pilot Sport 4 S</h3>
+        <p>เชิงอรรถบน <Source href={sources.pilotEv}>หน้า Pilot Sport EV ของ Michelin ไทย</Source> อธิบายคำกล่าวเรื่องระยะวิ่งเพิ่มมากกว่า 60 กม. โดยอ้างแรงต้านการหมุนจากการทดสอบภายในเดือนตุลาคม 2020 เทียบกับ <strong>Pilot Sport 4 SUV</strong> ขนาด 255/45 R19 และคำนวณด้วยเงื่อนไขรถน้ำหนัก 2,151 กก. ระยะวิ่งตั้งต้น 540 กม. นี่จึงไม่ใช่ผลว่าเปลี่ยนจาก 4 S แล้วรถทุกคันจะวิ่งได้เพิ่ม 60 กม.</p>
+        <h3 className="text-xl font-bold text-slate-900">เสียงบนฉลาก EU ไม่ใช่เสียงที่หูเราได้ยินในรถ</h3>
+        <p><Source href={sources.labels}>ฉลากยางของ European Commission</Source> แสดงแรงต้านการหมุน การยึดเกาะเปียก และเสียงกลิ้งภายนอก ค่าดีซิเบลนั้นวัดเสียงที่คนภายนอกรถได้ยินเมื่อรถผ่าน จึงใช้สรุปตรง ๆ ว่ายางหนึ่งจะเงียบกว่าอีกเส้นในห้องโดยสารไม่ได้</p>
+        <p>ถ้าอยากเทียบความเงียบในรถ ต้องดูผลวัดภายในรถเดียวกัน ความเร็ว ผิวถนน ลมยาง และสภาพยางใกล้เคียงกัน ส่วนโฟมต้องตรวจที่รหัสสินค้าจริง ไม่ใช่เห็นชื่อรุ่นแล้วถือว่ามีทุกเส้น</p>
+        <h3 className="text-xl font-bold text-slate-900">A/A/A ไม่ได้แปลว่าชนะทุกการทดสอบ</h3>
+        <p>ฉลากเป็นข้อมูลที่ช่วยคัดตัวเลือก แต่ไม่ครอบคลุมการตอบสนองพวงมาลัย การเหินน้ำ ความสบาย และการสึกในทุกสถานการณ์ ทั้งยังต้องดู <Source href={sources.parameters}>รหัสและขนาดของยางที่ได้รับฉลาก</Source> ให้ตรงของที่จะซื้อ ค่าของขนาดหนึ่งไม่ใช่คะแนนกลางของทั้งรุ่น</p>
+      </Section>
+
+      <Section id="before-you-buy" title="6. เลือกให้ตรงรถและการขับในไทย ก่อนเลือกว่าเอา EV หรือ Performance">
+        <ol className="list-decimal space-y-4 pl-6">
+          <li><strong>เริ่มจากรถคันจริง:</strong> จดรุ่น ปี รุ่นย่อย ขนาดล้อ และยางหน้า–หลัง ตรวจป้ายรถกับคู่มือ เพราะบางรุ่นใช้ขนาดหน้าและหลังต่างกัน ตัวอย่างดูได้จาก <Source href={sources.manual}>คู่มือ Model 3 ภาษาไทย</Source></li>
+          <li><strong>ขอรหัสยางเต็ม:</strong> ขนาด, Load Index, Speed Rating, XL/HL, เครื่องหมาย OE และเทคโนโลยีของสเปกนั้น เช่น Acoustic, Elect หรือระบบที่ช่วยเมื่อยางสูญเสียแรงดัน</li>
+          <li><strong>เลือกโจทย์สำคัญสองอย่าง:</strong> เช่น เบรกเปียกกับความเงียบ หรือการควบคุมกับระยะวิ่ง แล้วหาข้อมูลที่วัดเรื่องนั้นจริง ชื่อแบรนด์อย่างเดียวตอบแทนไม่ได้</li>
+          <li><strong>ดูถนนและฝนที่เจอจริง:</strong> อ่านผลเบรกเปียกและการเหินน้ำแยกกัน อย่าใช้คำว่า Summer เป็นเหตุผลว่าห้ามเจอฝน และอย่าใช้คำว่า EV เป็นการรับรองว่าลุยน้ำได้</li>
+          <li><strong>ถามเรื่องของที่จะได้รับ:</strong> ราคาเป็นชุดหรือเส้น ปีผลิต สเปกไทยหรือสินค้านำเข้า ผู้รับประกัน และการซ่อม หากมีโฟม ให้ตรวจตาม <Source href={sources.repair}>แนวทางซ่อมยางของผู้ผลิต</Source></li>
+          <li><strong>หลังติดตั้ง:</strong> ตั้งลมขณะยางเย็นตามข้อกำหนดรถ ตรวจการตั้งศูนย์เมื่อมีอาการหรือการสึกผิดปกติ แล้วติดตามพลังงานกับเสียงบนเส้นทางที่เทียบกันได้ ไม่ตัดสินจากเที่ยวแรกเพียงเที่ยวเดียว</li>
+        </ol>
+        <p>ถ้าเปลี่ยนยางเพราะรถกระแทกหรือเด้ง อย่าเพิ่งสรุปว่ายาง EV เป็นต้นเหตุทั้งหมด ลองแยกอาการตาม <Link href="/articles/optimizing-ev-suspension-thai-roads" className={linkStyle}>แนวทางตรวจยางและช่วงล่างบนถนนไทย</Link> ส่วนการเลือกชุดโช้คอ่านต่อใน <Link href="/articles/ev-suspension-tuning-guide" className={linkStyle}>คู่มือเลือกช่วงล่าง EV ตามลักษณะการใช้งาน</Link></p>
+      </Section>
+
+      <Section id="faq" title="7. คำถามที่เจอบ่อยก่อนเปลี่ยนยาง EV">
+        <h3 className="text-xl font-bold text-slate-900">รถ EV จำเป็นต้องใช้ยางที่มีคำว่า EV เท่านั้นไหม?</h3>
+        <p>ไม่จำเป็นต้องมีคำนี้ในชื่อรุ่นเสมอไป ตัวอย่างคือ <Source href={sources.ps4s}>Pilot Sport 4 S ที่ Michelin ระบุว่ารองรับรถไฟฟ้า</Source> แต่การใช้ได้กับรถคันไหนยังขึ้นกับขนาดและข้อกำหนดของรถ ไม่ใช่เลือกได้ทุกขนาดที่ร้านมี</p>
+        <h3 className="text-xl font-bold text-slate-900">ถ้าอยากขับสนุกขึ้น เลือก 4 S จบเลยไหม?</h3>
+        <p>เป็นตัวเลือกที่มีโจทย์ด้านสปอร์ตชัด แต่ยังต้องผ่านสเปกรถและเทียบสิ่งที่ยอมแลกได้ ทั้งความสบาย เสียง และพลังงาน เราไม่มีผลทดสอบชุดเดียวกันพอจะรับรองว่า 4 S เหมาะที่สุดกับ EV ทุกคัน</p>
+        <h3 className="text-xl font-bold text-slate-900">ยางมีโฟมแปลว่าเงียบกว่ายางไม่มีโฟมเสมอไหม?</h3>
+        <p>สรุปแบบนั้นไม่ได้ โฟมช่วยลดเสียงก้องเฉพาะส่วน แต่เสียงที่คนขับได้ยินยังมีองค์ประกอบอื่น การเทียบควรใช้ผลวัดภายในรถและเงื่อนไขเดียวกัน อ่านขอบเขตเทคโนโลยีจาก <Source href={sources.acoustic}>Michelin Acoustic</Source> ประกอบได้</p>
+        <h3 className="text-xl font-bold text-slate-900">ยาง EV ต้องเติมลมแข็งกว่ายางธรรมดาไหม?</h3>
+        <p>ให้ใช้ข้อกำหนดรถและการบรรทุกเป็นหลัก ไม่ตั้งค่าเดียวให้ EV ทุกคัน และไม่ใช้แรงดันสูงสุดบนแก้มยางแทนแรงดันใช้งานตาม <Source href={sources.manual}>ป้ายข้อมูลยางและคู่มือรถ</Source></p>
+      </Section>
+
+      <Section id="sources" title="แหล่งข้อมูลและขอบเขตที่ยังต้องตรวจต่อ">
+        <p>ตรวจแหล่งอ้างอิงวันที่ 29 กันยายน 2569 ข้อมูลการออกแบบมาจากผู้ผลิต ส่วนผลทดสอบที่ยกมาเป็นของ ADAC และ Tire Rack ซึ่งเป็นผู้จำหน่ายยางที่มีโครงการทดสอบเอง ไม่ใช่การทดลองของ <Link href="/" className={linkStyle}>EVSELECTS.COM</Link> แหล่งภาพและข้อมูลสเปกแสดงอยู่ข้างรุ่นที่เกี่ยวข้อง</p>
         <ul className="list-disc space-y-3 pl-6">
-          <li><strong>ขับทุกวัน เจอฝนบ่อย:</strong> ให้ความสำคัญกับข้อมูลการยึดเกาะและเบรกบนถนนเปียกของขนาดที่กำลังซื้อ พร้อมตรวจสภาพดอกยางและศูนย์ล้อ</li>
-          <li><strong>อยากเงียบขึ้น:</strong> โฟมซับเสียงช่วยจัดการเสียงบางลักษณะ แต่ไม่ใช่คำรับรองว่าจะเงียบทุกผิวถนน อ่านหลักการของ <Source href="https://www.michelin.co.th/why-michelin/innovation/acoustic-technology">Michelin Acoustic Technology</Source> แล้วตรวจว่ายางรหัสที่ซื้อมีเทคโนโลยีนั้นจริงหรือไม่</li>
-          <li><strong>สนใจระยะวิ่ง:</strong> เทียบข้อมูลแรงต้านการหมุนภายใต้เงื่อนไขเดียวกัน ไม่ควรนำตัวเลขประหยัดไฟของรถทดสอบรุ่นหนึ่งมารับรองระยะวิ่งของรถเรา</li>
-          <li><strong>มีวันลงสนาม:</strong> แยกโจทย์ถนนสาธารณะกับสนามให้ชัด ขอคำแนะนำสำหรับรถและยางชุดนั้นจากผู้ผลิตหรือผู้เชี่ยวชาญ ไม่ใช้พิกัดความเร็วเป็นคำรับรองการยึดเกาะทุกสถานการณ์</li>
+          <li>Michelin ประเทศไทย: <Source href={sources.eprimacy}>e.Primacy</Source>, <Source href={sources.pilotEv}>Pilot Sport EV พร้อมเชิงอรรถการทดสอบ</Source> และ <Source href={sources.ps4s}>Pilot Sport 4 S</Source></li>
+          <li><Source href={sources.hankook}>Hankook iON evo · สเปกและเทคโนโลยีตลาดสหรัฐฯ</Source>; <Source href={sources.continentalPress}>Continental EcoContact 7 / 7 S · ข่าวเปิดตัว 5 ก.พ. 2025</Source></li>
+          <li><Source href={sources.pirelli}>Pirelli P Zero E · ข่าวเปิดตัว 13 ก.ค. 2023</Source> และ <Source href={sources.pirelliElect}>หน้ารุ่นและการตรวจ Elect ตามขนาด</Source></li>
+          <li><Source href={sources.labels}>European Commission · ฉลากยาง</Source> และ <Source href={sources.parameters}>วิธีอ่านขนาดและ Service Description</Source></li>
+          <li><Source href={sources.adac}>ADAC · e.Primacy 205/55 R16 · 2023</Source> และ <Source href={sources.tireRack}>Tire Rack · EV และยางทั่วไปบน Model 3 · ชุดทดสอบ 2024</Source></li>
         </ul>
-        <p>ก่อนตัดสินใจ ขอชื่อรุ่น ขนาด และรหัสยางเต็มจากร้าน แล้วตรวจใน <Source href="https://www.michelin.co.th/auto/advice/choose-tyres/car-tyre-size-table">คู่มืออ่านขนาดและพิกัดยางของ Michelin</Source> หากยางมีโฟมและต้องซ่อมภายหลัง ให้ร้านตรวจจากด้านในตาม <Source href="https://www.michelin.co.th/auto/advice/change-tyres/tyre-repair">แนวทางซ่อมยางของผู้ผลิต</Source> แทนการสรุปวิธีซ่อมจากรอยรั่วภายนอกเพียงอย่างเดียว</p>
+        <p><strong>ก่อนใช้บทความนี้เป็นคำตอบซื้อยาง:</strong> ยังต้องได้รหัสยางที่ร้านเสนอจริง สเปกรถคันที่จะใส่ และผลเปรียบเทียบที่ตรงขนาดหากต้องการตัดสินเรื่องเบรกหรือระยะวิ่ง รุ่นที่อ้างจากต่างประเทศยังต้องตรวจการจำหน่ายและการรับประกันในไทยด้วย</p>
+        <p className="border-l-4 border-lime-500 pl-4">ยางที่เหมาะไม่ได้ชนะเพราะชื่อมีคำว่า EV หรือ Performance แต่เพราะตรงสเปกรถ และให้น้ำหนักกับสิ่งที่เราใช้จริงได้พอดี</p>
       </Section>
-
-      <Section id="coilover" title="4. คอยล์โอเวอร์ที่เหมาะ เริ่มจากตรงรุ่นและอาการที่อยากแก้">
-        <p>คอยล์โอเวอร์เป็นชุดสปริงและแดมเปอร์ที่มีการปรับความสูงตามการออกแบบของชุดนั้น ก่อนเทียบจำนวนปุ่มปรับ ให้ระบุว่าต้องการแก้อาการอะไร เช่น รถกระแทกบนรอยต่อ โยนต่อหลังผ่านเนิน หรืออยากลดความสูงโดยยังใช้งานประจำวันได้ แล้วตรวจสภาพยางและช่วงล่างเดิมก่อน</p>
-        <h3 className="text-xl font-bold text-slate-900">Spring Rate ไม่ใช่คะแนนว่าใครเกาะถนนกว่า</h3>
-        <p>Spring Rate บอกความแข็งของสปริง แต่ความรู้สึกที่ล้อยังขึ้นกับตำแหน่งและอัตราทดการติดตั้ง น้ำหนักที่สปริงรองรับ ระยะยุบ และการทำงานของแดมเปอร์ จึงไม่ควรคัดลอกค่า 8K หรือ 10K จากรถคนละรุ่น หรือคำนวณสั่งสปริงจากน้ำหนักรถรวมเพียงตัวเดียว</p>
-        <p>สปริง Linear มีอัตราความแข็งคงที่ในช่วงการทำงานที่ออกแบบไว้ ส่วน Progressive มีอัตราความแข็งเปลี่ยนไปตามระยะยุบ ทั้งสองแบบต้องทำงานร่วมกับชุดช่วงล่างที่ออกแบบมารองรับ จึงไม่ควรจัดอันดับว่าแบบหนึ่งนุ่มหรือดีกว่าอีกแบบเสมอไป หากต้องการเทียบแนวทางแต่ละแบรนด์ อ่าน <Link href="/articles/ev-suspension-tuning-guide" className={linkStyle}>คู่มือเลือกช่วงล่าง EV ตามลักษณะการใช้งาน</Link></p>
-        <h3 className="text-xl font-bold text-slate-900">ถามร้านให้ครบก่อนวางมัดจำ</h3>
-        <ul className="list-disc space-y-3 pl-6">
-          <li>รหัสชุดตรงกับรุ่น ปี รุ่นย่อย และพิกัดน้ำหนักเพลาของรถเราหรือไม่ มีคู่มือติดตั้งให้ตรวจไหม?</li>
-          <li>ช่วงปรับความสูงที่ผู้ผลิตอนุญาตเท่าไร และยังเหลือระยะยุบใช้งานเพียงพอกับการบรรทุกของเราหรือไม่?</li>
-          <li>หากรถมีแดมเปอร์ไฟฟ้าหรือระบบปรับระดับเดิม ชุดใหม่รองรับระบบนั้นอย่างไร และฟังก์ชันใดจะเปลี่ยนไป?</li>
-          <li>หลังติดตั้งมีการตั้งศูนย์ ตรวจระยะล้อ–ยาง และบันทึกค่าตั้งต้นให้หรือไม่ รวมถึงบริการซ่อมและอะไหล่ในอนาคต?</li>
-        </ul>
-        <p>เก็บคู่มือติดตั้งที่ตรงรหัสชุดและรายการตั้งค่าหลังติดตั้งไว้ด้วย เมื่อกลับไปตรวจซ้ำ คุณกับร้านจะมีข้อมูลชุดเดียวกันสำหรับเทียบว่าปรับอะไรไปบ้าง และอาการเปลี่ยนไปอย่างไร</p>
-      </Section>
-
-      <Section id="ride-height" title="5. โหลดเตี้ยแค่ไหน ต้องดูรถ ชุดช่วงล่าง และเส้นทางจริง">
-        <p>ความสูงที่ดูลงตัวในรูปอาจไม่พอกับทางเข้าบ้าน ลูกระนาด หรือผู้โดยสารเต็มคัน ไม่ควรใช้ตัวเลขลดความสูงหรือระยะใต้ท้องค่าเดียวกับ EV ทุกคัน ให้ตรวจช่วงปรับที่ผู้ผลิตชุดช่วงล่างอนุญาตและระยะจริงหลังติดตั้ง รวมทั้งช่วงที่ล้อเลี้ยวและช่วงล่างยุบตัว</p>
-        <p>การเปลี่ยนความสูงยังสัมพันธ์กับมุมล้อและเรขาคณิตช่วงล่าง จึงควรตรวจและตั้งศูนย์หลังติดตั้ง อ่าน <Link href="/articles/ev-camber-adjustment-wheel-alignment-guide" className={linkStyle}>เรื่อง Camber และการตั้งศูนย์ล้อ EV</Link> เพื่อเข้าใจว่าทำไมรถที่เตี้ยขึ้นจึงยังต้องตรวจการสึกของยางและการตอบสนองของพวงมาลัย</p>
-      </Section>
-
-      <Section id="damper-next" title="6. ยาง สปริง และแดมเปอร์เกี่ยวข้องกันอย่างไร?">
-        <p>ยางเป็นจุดสัมผัสถนน สปริงรองรับน้ำหนักและเปิดให้ช่วงล่างเคลื่อนตัว ส่วนแดมเปอร์ควบคุมการเคลื่อนไหวนั้น เมื่อเลือกยางและชุดช่วงล่างตรงรถแล้ว จึงค่อยประเมินจังหวะยุบและยืดให้เข้ากับการใช้งาน</p>
-        <p>รายละเอียดปุ่มปรับและกราฟแรงหน่วงอยู่ใน <Link href="/articles/ev-damper-tuning-bump-rebound-guide" className={linkStyle}>คู่มือปรับแดมเปอร์: Bump และ Rebound</Link> ซึ่งอธิบายเรื่องนี้โดยเฉพาะ บทความหน้านี้เน้นช่วยเลือกอุปกรณ์ให้ถูกชุดก่อนเริ่มปรับ</p>
-      </Section>
-
-      <Section id="before-you-buy" title="7. เช็กลิสต์ที่ใช้คุยกับร้านได้ทันที">
-        <ul className="space-y-4">
-          {['ถ่ายป้ายข้อมูลยางและจดรุ่น ปี รุ่นย่อย พร้อมขนาดล้อ–ยางที่ใช้อยู่จริง', 'ระบุการใช้งานหลัก จำนวนผู้โดยสาร และอาการที่ต้องการแก้ให้ชัด', 'ขอรหัสยางหรือชุดช่วงล่างเต็ม พร้อมเอกสารยืนยันความเข้ากันได้', 'ตกลงงานตั้งศูนย์ ตรวจระยะติดตั้ง และค่าตั้งต้นที่จะได้รับหลังงานเสร็จ', 'ขอเงื่อนไขการรับประกัน การตรวจซ้ำ และบริการอะไหล่เป็นลายลักษณ์อักษร'].map(item => <li key={item} className="flex gap-3"><CheckCircle2 className="mt-1.5 shrink-0 text-lime-600" size={20} /><span>{item}</span></li>)}
-        </ul>
-        <p>เป้าหมายคือรถที่ตอบโจทย์คุณมากขึ้น โดยมีข้อมูลอธิบายได้ว่าของแต่ละชิ้นเหมาะอย่างไร <Link href="/" className={linkStyle}>EVSELECT</Link> กำลังเปิดความรู้ก่อนเปิดขายสินค้า ตอนนี้ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน</p>
-      </Section>
-      <footer className="flex flex-wrap gap-6 border-t border-slate-200 pt-6 text-base">
-        <Link href="/articles" className={linkStyle}>อ่านบทความและคู่มือทั้งหมด</Link>
-        <Link href="/articles/ev-carbon-ceramic-brakes-guide" className={`${linkStyle} inline-flex items-center gap-2`}>อ่านต่อ: Carbon Ceramic คุ้มกับรถคุณไหม?<ArrowRight size={18} /></Link>
-      </footer>
     </div>
+    <div className="mt-12 flex flex-wrap gap-4 border-t border-slate-200 pt-6 text-base"><Link href="/articles" className={linkStyle}>อ่านบทความและคู่มือทั้งหมด</Link><Link href="/articles/ev-camber-adjustment-wheel-alignment-guide" className={`inline-flex items-center gap-2 ${linkStyle}`}>อ่านต่อ: ยางสึกกับการตั้งศูนย์ล้อ <ArrowRight size={16} aria-hidden="true" /></Link></div>
   </article>;
 }

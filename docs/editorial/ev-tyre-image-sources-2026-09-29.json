@@ -1,0 +1,61 @@
+[
+  {
+    "name": "michelin-eprimacy-real.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:The_tire_wheel_of_Toyota_CROWN_CROSSOVER_RS%22Advanced%22_(5AA-TZSH35-AETAT(F)).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/The_tire_wheel_of_Toyota_CROWN_CROSSOVER_RS%22Advanced%22_(5AA-TZSH35-AETAT(F)).jpg",
+    "rights": "CC BY-SA 4.0; author and license linked in visible caption",
+    "author": "Tokumeigakarinoaoshima",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "bytes": 2539780
+  },
+  {
+    "name": "michelin-ev-real.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:The_tire_wheel_of_Mercedes-AMG_EQS_53_4MATIC%2B_(ZAA-297155).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/The_tire_wheel_of_Mercedes-AMG_EQS_53_4MATIC%2B_(ZAA-297155).jpg",
+    "rights": "CC BY-SA 4.0; author and license linked in visible caption",
+    "author": "Tokumeigakarinoaoshima",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "bytes": 3735007
+  },
+  {
+    "name": "michelin-ps4s-real.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Wheel_with_Michelin_Pilot_Sport_4_S_Tire.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Cadillac_Wheel_with_Michelin_Pilot_Sport_4_S_Tire.jpg",
+    "rights": "CC BY-SA 4.0; author and license linked in visible caption",
+    "author": "TaurusEmerald",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "bytes": 2074403
+  },
+  {
+    "name": "hankook-ion-evo.jpg",
+    "url": "https://www.hankooktire-mediacenter.com/fileadmin/user_upload_DL/MediaCenter/pressreleases/2025/03/20250331_iON_evo/img/iON_evo_Key_Visual_01.jpg",
+    "rights": "Editorial use under Hankook Media Center legal notice; verify exact image and credit.",
+    "bytes": 7905886
+  },
+  {
+    "name": "continental-ecocontact-7.jpg",
+    "url": "https://cdn.continental.com/fileadmin/__imported/sites/corporate/_international/english/hubpages/10_20press/01_press_releases/05_20plt/2025/pp-ecocontact7_ecocontact7s__1_.jpg",
+    "rights": "User-directed use of manufacturer website image with source/credit and manufacturer link, 2026-09-29. Independent republication licence not established; not represented as licensed.",
+    "bytes": 860336
+  },
+  {
+    "name": "pirelli-p-zero-e.jpg",
+    "url": "https://tyre24.pirelli.com/pressRelease/images/PZero_E_20in_3_4.jpg",
+    "rights": "User-directed use of manufacturer website image with source/credit and manufacturer link, 2026-09-29. Independent republication licence not established; not represented as licensed.",
+    "bytes": 443984
+  },
+  {
+    "name": "ev-tyre-cover.png",
+    "source": "User attachment ยาง EV.png",
+    "rights": "User supplied and explicitly requested as mobile cover",
+    "width": 941,
+    "height": 1672
+  },
+  {
+    "name": "ev-tyre-cover-desktop.png",
+    "source": "Built-in image tool adaptation of user-supplied cover",
+    "rights": "User requested desktop adaptation; caption identifies AI illustration",
+    "width": 1731,
+    "height": 909
+  }
+]

@@ -78,8 +78,8 @@ const topicLinks = [
     icon: SlidersHorizontal,
   },
   {
-    title: "ยาง คอยล์โอเวอร์ และศูนย์ล้อ",
-    description: "มองทั้งความสบาย การเกาะถนน และผลต่อการใช้งานจริงร่วมกัน",
+    title: "ยาง EV กับยาง Performance",
+    description: "เจาะการออกแบบ ข้อดีและข้อจำกัด เทียบกับ Pilot Sport 4 S",
     href: "/articles/ev-tyre-and-coilover-selection-guide",
     icon: ShieldCheck,
   },

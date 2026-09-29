@@ -70,7 +70,7 @@ export default function EvSuspensionTuningGuidePage() {
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h3 className="mb-2 text-xl font-bold text-slate-900">กระแทกเป็นจังหวะสั้น ๆ</h3><p>บันทึกว่าเกิดกับรอยต่อเล็ก ๆ หรือเนินใหญ่ พร้อมขนาดยางและแรงดันลมตอนยางเย็น ให้ร้านตรวจทั้งยางและระยะการทำงานของช่วงล่างก่อนเสนอเปลี่ยนอะไหล่</p></div>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h3 className="mb-2 text-xl font-bold text-slate-900">โยนต่อหลังผ่านเนิน</h3><p>แยกว่าเป็นหน้า–หลังหรือซ้าย–ขวา และต่างกันไหมเมื่อมีผู้โดยสารเต็มคัน ใช้เป็นข้อมูลให้ช่างตรวจสภาพและการตั้งค่า ไม่ใช่หลักฐานว่าแบรนด์ใดจะรักษาอาการนี้ได้แน่นอน</p></div>
         </div>
-        <p>เริ่มจาก <Source href={sources.tesla}>ข้อกำหนดแรงดันและการตรวจยางในคู่มือรถ</Source> ตัวอย่าง Tesla ให้ยึดฉลากข้อมูลยางของคันจริง ไม่ใช้ค่าแรงดันสูงสุดบนแก้มยางแทน จากนั้นอ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>วิธีเลือกยางและคอยล์โอเวอร์ให้ตรงน้ำหนักรถ</Link> หากล้อหรือยางถูกเปลี่ยนจากโรงงาน</p>
+        <p>เริ่มจาก <Source href={sources.tesla}>ข้อกำหนดแรงดันและการตรวจยางในคู่มือรถ</Source> ตัวอย่าง Tesla ให้ยึดฉลากข้อมูลยางของคันจริง ไม่ใช้ค่าแรงดันสูงสุดบนแก้มยางแทน จากนั้นอ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>วิธีเลือกยาง EV ให้ตรงสเปกและการใช้งาน</Link> หากล้อหรือยางถูกเปลี่ยนจากโรงงาน</p>
         <p className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-base text-slate-800">หากมีเสียงผิดปกติ น้ำมันรั่ว หรือการควบคุมรถเปลี่ยนไปฉับพลัน ให้หยุดในที่ปลอดภัยและตรวจหาสาเหตุก่อนปรับโช้คต่อ แนวทางนี้สอดคล้องกับ <Source href={sources.ohlinsManual}>ข้อควรปฏิบัติในคู่มือ Öhlins Road &amp; Track</Source></p>
       </Section>
 
@@ -116,7 +116,7 @@ export default function EvSuspensionTuningGuidePage() {
         <h2 id="read-next-title" className="mb-3 text-2xl font-bold text-slate-900">เลือกอ่านต่อให้ตรงเรื่องที่ยังสงสัย</h2>
         <ul className="list-disc space-y-3 pl-6">
           <li>ยังแยกชนิดโช้คไม่ออก: <Link href="/articles/shock-absorber-types-monotube-twintube-air-ev" className={linkStyle}>Monotube, Twin-tube และช่วงล่างถุงลมต่างกันอย่างไร</Link></li>
-          <li>กำลังเปลี่ยนล้อและยางพร้อมกัน: <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>เลือกยางและคอยล์โอเวอร์ให้เป็นชุดเดียวกัน</Link></li>
+          <li>กำลังเปลี่ยนล้อและยางพร้อมกัน: <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>เปรียบเทียบยาง EV กับยาง Performance</Link></li>
           <li>มีโช้คปรับได้อยู่แล้ว: <Link href="/articles/ev-damper-tuning-bump-rebound-guide" className={linkStyle}>ทำความเข้าใจสปริง ระยะยุบ และการปรับแดมเปอร์</Link></li>
         </ul>
       </section>
