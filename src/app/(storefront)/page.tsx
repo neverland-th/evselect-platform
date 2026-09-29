@@ -94,16 +94,16 @@ const featuredArticles = [
 
 const topicLinks = [
   {
+    title: "ยาง EV ต่างจากยางทั่วไปยังไง?",
+    description: "ดูจุดเด่นและข้อจำกัดของยางแต่ละรุ่น ก่อนเลือกระหว่างยาง EV กับยาง Performance",
+    href: "/articles/ev-tyre-and-coilover-selection-guide",
+    icon: ShieldCheck,
+  },
+  {
     title: "โช้คแต่งและช่วงล่างรถไฟฟ้า",
     description: "สปริงกับโช้คทำหน้าที่ต่างกันยังไง และทำไมปรับแข็งขึ้นไม่ได้แปลว่าขับดีขึ้นเสมอ",
     href: "/articles/ev-suspension-tuning-guide",
     icon: SlidersHorizontal,
-  },
-  {
-    title: "ยาง EV กับยาง Performance",
-    description: "เจาะการออกแบบ ข้อดีและข้อจำกัด เทียบกับ Pilot Sport 4 S",
-    href: "/articles/ev-tyre-and-coilover-selection-guide",
-    icon: ShieldCheck,
   },
   {
     title: "ยางกินใน ต้องตั้งศูนย์ไหม?",
@@ -126,6 +126,10 @@ const homeFaqs = [
       <p>ไม่จำเป็นต้องดูแค่ชื่อรุ่นยาง ให้ตรวจว่าผู้ผลิตรองรับการใช้งานกับรถของคุณ และเลือกขนาด พิกัดรับน้ำหนัก กับพิกัดความเร็วให้ตรงข้อกำหนดของรถ จากนั้นค่อยเทียบความเงียบ การยึดเกาะ และแรงต้านการหมุนใน <Link className={textLink} href="/articles/ev-tyre-and-coilover-selection-guide">คู่มือเลือกยางรถไฟฟ้า</Link></p>
       <p className="mt-3 text-sm">อ่านคำอธิบายจากผู้ผลิตเพิ่มเติม: <a className={textLink} href="https://www.michelin.co.th/auto/advice/ev-guide/tyres-for-electric-cars" target="_blank" rel="noopener noreferrer">Michelin: รถ EV จำเป็นต้องใช้ยางเฉพาะหรือไม่<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>
     </>,
+  },
+  {
+    question: "ถามราคายางรถ EV ต้องบอกร้านว่าอะไรบ้าง?",
+    answer: <p>บอกรุ่นรถ ปี รุ่นย่อย ขนาดล้อ และขนาดยางหน้า–หลังที่ใช้อยู่ ถ้าเปลี่ยนล้อหรือช่วงล่างมาแล้วก็บอกด้วยครับ ขอให้ร้านยืนยันสเปกที่รองรับรถ แล้วแยกราคาต่อเส้น จำนวนเส้น ค่าใส่ ถ่วงล้อ และเงื่อนไขรับประกันให้ครบ ใช้ <Link className={textLink} href="#compare-ev-tyre-prices">เช็กลิสต์เทียบราคายาง</Link> ช่วยถามได้ โดยยังไม่ต้องตัดสินจากราคาเริ่มต้นในโฆษณา</p>,
   },
   {
     question: "ของแต่งจากต่างประเทศ ใส่รถสเปกไทยได้เลยไหม?",
@@ -277,7 +281,7 @@ export default function StorefrontPage() {
       <section id="ev-upgrade-guides" className="mx-auto max-w-7xl scroll-mt-28 px-5 py-14 sm:px-8 md:py-20">
         <div className="mb-8 max-w-2xl">
           <p className="mb-2 text-xs font-semibold text-lime-800">เลือกอ่านก่อนเลือกของ</p>
-          <h2 className="font-bold">โช้ค ยาง หรือศูนย์ล้อ เริ่มตรงไหนดี?</h2>
+          <h2 className="font-bold">เลือกยาง เปลี่ยนโช้ค หรือตั้งศูนย์ เริ่มตรงไหนดี?</h2>
           <p className="mt-4 leading-relaxed text-slate-600">
             รถเด้งไม่ได้แปลว่าต้องเปลี่ยนโช้คเสมอไป และยางกินในก็ไม่ควรรีบโทษแคมเบอร์
             ลองทำความเข้าใจแต่ละส่วน แล้วคุยกับร้านให้ตรงกับอาการที่เจอ
@@ -298,6 +302,43 @@ export default function StorefrontPage() {
               </span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section id="compare-ev-tyre-prices" aria-labelledby="compare-ev-tyre-prices-heading" className="scroll-mt-28 border-t border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 md:py-16">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-2 text-xs font-semibold text-lime-800">กำลังจะเปลี่ยนยางชุดใหม่?</p>
+            <h2 id="compare-ev-tyre-prices-heading" className="font-bold">เทียบราคายางรถ EV อย่าดูแค่ราคาเริ่มต้น</h2>
+            <p className="mt-4 leading-relaxed text-slate-600">เห็นยางชื่อเดียวกัน แต่สองร้านให้ราคาต่างกัน อย่าเพิ่งสรุปว่าร้านไหนแพงกว่า ลองเช็กว่าขนาด รหัสยาง และบริการที่ได้ตรงกันหรือยัง สามข้อนี้ช่วยให้ถามร้านได้ครบขึ้น</p>
+          </div>
+          <div className="grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
+              <Image src="/images/articles/ev-tyre-michelin-audi.jpg" alt="แก้มยาง Michelin Pilot Sport All Season 4 บนล้อ Audi เห็นชื่อรุ่นและรหัสขนาดยาง" width={1920} height={1920} sizes="(max-width: 1023px) 100vw, 40vw" className="h-auto w-full" />
+              <figcaption className="space-y-2 p-5 text-xs leading-relaxed text-slate-600">
+                <p>ภาพตัวอย่างตำแหน่งชื่อรุ่นและรหัสบนแก้มยาง ไม่ใช่การแนะนำยางเส้นนี้ให้รถ EV ทุกรุ่น</p>
+                <p>ภาพ: <a className={textLink} href="https://commons.wikimedia.org/wiki/File:Audi_Wheel_with_Michelin_Pilot_Sport_All_Season_4_Tire.jpg" target="_blank" rel="noopener noreferrer">TaurusEmerald / Wikimedia Commons<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a className={textLink} href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด ไม่แต่งภาพ</p>
+              </figcaption>
+            </figure>
+            <div>
+              <ol className="space-y-4">
+                <li className="rounded-3xl border border-slate-200 bg-white p-6">
+                  <h3 className="font-bold">1. เทียบให้ตรงรุ่น ตรงขนาด</h3>
+                  <p className="mt-3 leading-relaxed text-slate-600">ขอชื่อรุ่นยาง ขนาด พิกัดรับน้ำหนัก และพิกัดความเร็วให้ครบ แล้วตรวจตามคู่มือรถ อย่าดูแค่ยี่ห้อหรือขอบล้อ ถ้ายังไม่แน่ใจว่าจะเลือกยางแนวไหน อ่าน <Link className={textLink} href="/articles/ev-tyre-and-coilover-selection-guide">ความต่างของยาง EV กับยาง Performance</Link> ก่อนขอราคา</p>
+                  <p className="mt-3 text-sm leading-relaxed"><a className={textLink} href="https://www.michelin.co.th/auto/advice/tyre-basics/tyre-markings-explained" target="_blank" rel="noopener noreferrer">วิธีอ่านขนาดและรหัสบนแก้มยางจาก Michelin<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>
+                </li>
+                <li className="rounded-3xl border border-slate-200 bg-white p-6">
+                  <h3 className="font-bold">2. ราคานี้ต่อเส้น หรือรวมทั้งชุด?</h3>
+                  <p className="mt-3 leading-relaxed text-slate-600">ให้ร้านระบุจำนวนเส้น ภาษี ค่าใส่ ถ่วงล้อ และค่าอุปกรณ์เพิ่มเติม ถามว่ารวมตั้งศูนย์หรือคิดแยก หากยางสึกไม่เท่ากัน ลองอ่านเรื่อง <Link className={textLink} href="/articles/ev-camber-adjustment-wheel-alignment-guide">ยางกินในกับการตั้งศูนย์ล้อ</Link> และให้ร้านตรวจหาสาเหตุก่อนใส่ชุดใหม่</p>
+                </li>
+                <li className="rounded-3xl border border-slate-200 bg-white p-6">
+                  <h3 className="font-bold">3. เช็กเงื่อนไขหลังจ่ายด้วย</h3>
+                  <p className="mt-3 leading-relaxed text-slate-600">ขอข้อมูลสัปดาห์และปีผลิต เงื่อนไขรับประกัน ใครเป็นผู้รับเคลม และบริการหลังติดตั้ง เก็บใบเสนอราคาพร้อมวันที่และวันหมดโปรไว้ จะได้ไม่เอาราคาคนละช่วงหรือคนละเงื่อนไขมาเทียบกัน</p>
+                </li>
+              </ol>
+              <p className="mt-5 text-sm leading-relaxed text-slate-600">หน้านี้เป็นแนวทางเช็กราคา ไม่ใช่ใบเสนอขาย เรายังไม่มีราคายางรายรุ่นที่ยืนยันกับร้าน จึงไม่ใส่ตัวเลขประมาณให้เข้าใจว่าเป็นราคาซื้อได้จริง</p>
+            </div>
+          </div>
         </div>
       </section>
 
