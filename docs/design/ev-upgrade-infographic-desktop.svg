@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title description">
+<title id="title">แต่งรถ EV เริ่มจากอะไรดี?</title>
+<desc id="description">เริ่มจากสิ่งที่อยากเปลี่ยน: ของใช้ในรถ ล้อและยาง หรือช่วงล่าง แล้วเช็กรุ่นรถ การใช้งาน และงบรวมติดตั้ง</desc>
+<rect width="1200" height="780" rx="28" fill="#0f172a"/>
+<g font-family="Prompt, Noto Sans Thai, sans-serif">
+<text x="40" y="55" font-size="13" font-weight="600" fill="#bef264">EVSELECTS / QUICK GUIDE</text>
+<text x="40" y="109" font-size="34" font-weight="700" fill="#fff">แต่งรถ EV เริ่มจากอะไรดี?</text>
+<text x="40" y="148" font-size="18" fill="#cbd5e1">ไม่ต้องแต่งทั้งคัน เริ่มจากจุดที่อยากเปลี่ยนก่อน</text>
+<g transform="translate(150 175)">
+<path d="M72 270H828M110 292H790" stroke="#334155" stroke-width="1"/>
+<path d="M110 198L136 158L258 143L335 79Q345 70 382 70H515Q549 70 574 90L636 139L748 154Q783 159 792 186L796 218Q796 233 771 235H753Q748 189 698 189Q650 189 642 236H277Q270 189 222 189Q173 189 165 235H127Q102 231 104 209Z" fill="#cbd5e1" stroke="#e2e8f0" stroke-width="2"/>
+<path d="M289 142L351 86H412L411 142Z" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+<path d="M432 86H518Q541 87 555 102L604 142H432Z" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+<path d="M111 185L170 172M735 172L781 183" stroke="#bef264" stroke-width="7" stroke-linecap="round"/>
+<path d="M409 154L405 218M619 152L631 219M310 222H601" stroke="#94a3b8" stroke-width="2"/>
+<path d="M446 162H468M331 162H351" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+<path d="M278 238H641" stroke="#bef264" stroke-width="4"/>
+<rect x="390" y="241" width="150" height="7" rx="3.5" fill="#65a30d"/>
+<circle cx="222" cy="237" r="44" fill="#020617" stroke="#64748b" stroke-width="3"/>
+<circle cx="222" cy="237" r="28" fill="#334155" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M222 211V263M196 237H248M204 219L240 255M204 255L240 219" stroke="#94a3b8" stroke-width="3"/>
+<circle cx="222" cy="237" r="8" fill="#cbd5e1"/>
+<circle cx="698" cy="237" r="44" fill="#020617" stroke="#64748b" stroke-width="3"/>
+<circle cx="698" cy="237" r="28" fill="#334155" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M698 211V263M672 237H724M680 219L716 255M680 255L716 219" stroke="#94a3b8" stroke-width="3"/>
+<circle cx="698" cy="237" r="8" fill="#cbd5e1"/>
+<path d="M472 110V38M222 214L183 136H101M700 186L747 102H809" stroke="#bef264" stroke-width="2" stroke-dasharray="5 6"/>
+<circle cx="472" cy="110" r="5" fill="#bef264"/><circle cx="222" cy="214" r="5" fill="#bef264"/><circle cx="700" cy="186" r="5" fill="#bef264"/>
+
+<circle cx="472" cy="31" r="22" fill="#bef264"/><text x="472" y="37" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">01</text>
+<circle cx="82" cy="136" r="22" fill="#bef264"/><text x="82" y="142" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">02</text>
+<circle cx="828" cy="102" r="22" fill="#bef264"/><text x="828" y="108" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">03</text>
+</g>
+<g transform="translate(40 498)">
+<rect width="364" height="172" rx="16" fill="#1e293b" stroke="#334155"/>
+<circle cx="34" cy="34" r="16" fill="#bef264"/>
+<text x="34" y="39" font-size="12" font-weight="700" text-anchor="middle" fill="#0f172a">01</text>
+<text x="62" y="41" font-size="21" font-weight="600" fill="#fff">ใช้รถสะดวกขึ้น</text>
+<text x="20" y="80" font-size="15" fill="#cbd5e1">พรม · ถาดคอนโซล · ที่เก็บของ</text>
+<text x="20" y="108" font-size="15" fill="#cbd5e1">เลือกรุ่น ปี และโฉมให้ตรงรถ</text>
+<text x="20" y="148" font-size="15" font-weight="600" fill="#bef264">ดูตัวอย่างของแต่ง Tesla →</text>
+</g>
+<g transform="translate(418 498)">
+<rect width="364" height="172" rx="16" fill="#1e293b" stroke="#334155"/>
+<circle cx="34" cy="34" r="16" fill="#bef264"/>
+<text x="34" y="39" font-size="12" font-weight="700" text-anchor="middle" fill="#0f172a">02</text>
+<text x="62" y="41" font-size="21" font-weight="600" fill="#fff">เปลี่ยนล้อหรือยาง</text>
+<text x="20" y="80" font-size="15" fill="#cbd5e1">ขนาด · พิกัด · การใช้งาน</text>
+<text x="20" y="108" font-size="15" fill="#cbd5e1">เช็กสเปกก่อนเลือกหน้าตาล้อ</text>
+<text x="20" y="148" font-size="15" font-weight="600" fill="#bef264">อ่านวิธีเลือกยางรถไฟฟ้า →</text>
+</g>
+<g transform="translate(796 498)">
+<rect width="364" height="172" rx="16" fill="#1e293b" stroke="#334155"/>
+<circle cx="34" cy="34" r="16" fill="#bef264"/>
+<text x="34" y="39" font-size="12" font-weight="700" text-anchor="middle" fill="#0f172a">03</text>
+<text x="62" y="41" font-size="21" font-weight="600" fill="#fff">อยากปรับช่วงล่าง</text>
+<text x="20" y="80" font-size="15" fill="#cbd5e1">เด้ง · กระแทก · โยน</text>
+<text x="20" y="108" font-size="15" fill="#cbd5e1">แยกอาการก่อนเลือกโช้ค</text>
+<text x="20" y="148" font-size="15" font-weight="600" fill="#bef264">ดูอาการก่อนปรับโช้ค →</text>
+</g>
+<path d="M40 695H1160" stroke="#334155"/>
+<text x="40" y="731" font-size="16" font-weight="600" fill="#fff">ก่อนซื้อ เช็กให้ครบ</text>
+<text x="250" y="731" font-size="16" fill="#bef264">รุ่นรถและปี → การใช้งาน → งบรวมติดตั้ง</text>
+<text x="40" y="761" font-size="12" fill="#94a3b8">แนวทางเริ่มเลือก ไม่ใช่สูตรที่ใช้ได้กับรถทุกคัน</text>
+</g></svg>

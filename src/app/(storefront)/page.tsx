@@ -17,11 +17,12 @@ import {
 } from "lucide-react";
 import ComingSoonBanner from "@/components/ComingSoonBanner";
 import PrelaunchPanel from "@/components/PrelaunchPanel";
+import EvUpgradeInfographic from "@/components/EvUpgradeInfographic";
 import { damperArticle } from "@/lib/damper-article";
 import { batteryArticle } from "@/lib/battery-article";
 
-const title = "EVSELECTS | ของแต่งรถไฟฟ้า รีวิวรถ EV และคู่มือแต่งรถ";
-const description = "เลือกของแต่งรถไฟฟ้าให้ตรงกับรถและการใช้งาน อ่านเรื่องโช้คสตรัทปรับเกลียว ยางรถไฟฟ้า ตั้งศูนย์ล้อ และดูแลแบตเตอรี่ พร้อมรีวิวรถ EV สเปกไทย";
+const title = "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS";
+const description = "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย";
 
 export const metadata: Metadata = {
   title,
@@ -62,6 +63,48 @@ const journeys = [
     href: "#before-you-buy",
     linkLabel: "ดูเช็กลิสต์ก่อนซื้อของแต่ง",
     icon: Package,
+  },
+];
+
+const upgradeIdeas = [
+  {
+    title: "โช้คสตรัทปรับเกลียว",
+    description: "อยากลดความสูงรถ หรือเปลี่ยนความรู้สึกตอนขับ? ดูทั้งสปริง ระยะยุบ และการปรับโช้ค ไม่ใช่แค่จำนวนคลิกหรือชื่อแบรนด์",
+    image: damperArticle.cover,
+    imageAlt: damperArticle.coverAlt,
+    imageFit: "contain",
+    href: "/articles/ev-damper-tuning-bump-rebound-guide",
+    linkLabel: "ทำความเข้าใจโช้คก่อนเลือกชุดใหม่",
+  },
+  {
+    title: "ล้อและยางรถไฟฟ้า",
+    description: "อยากเงียบขึ้นหรือขับกระชับขึ้น เริ่มจากเลือกยางให้ตรงกับการใช้งาน แล้วตรวจขนาดและพิกัดตามคู่มือรถก่อนซื้อ",
+    image: "/images/articles/ev-tyre-michelin-audi.jpg",
+    imageAlt: "ล้อ Audi พร้อมยาง Michelin Pilot Sport All Season 4 ใช้เป็นตัวอย่างการอ่านแก้มยาง",
+    imageFit: "cover",
+    href: "/articles/ev-tyre-and-coilover-selection-guide",
+    linkLabel: "อ่านวิธีเลือกยางรถไฟฟ้า",
+  },
+];
+
+// Real manufacturer photographs, kept in this local draft pending publication rights.
+// Source links describe examples, not site inventory or universal fitment.
+const teslaAccessoryExamples = [
+  {
+    title: "ถาดคอนโซลกลาง",
+    description: "ของเล็ก ๆ หาไม่เจอ ลองแยกช่องเก็บให้หยิบง่ายขึ้น ตัวอย่างนี้เป็นถาดสำหรับ Model 3 รุ่นอัปเกรดตามข้อมูลของ Tesla",
+    image: "/images/accessories/tesla-model-3-center-console-trays.jpg",
+    imageAlt: "ถาดคอนโซลกลางสีดำสองชิ้นจาก Tesla Shop สำหรับ Model 3 รุ่นอัปเกรด",
+    source: "https://shop.tesla.com/th_th/product/upgraded-center-console-trays",
+    linkLabel: "ดูถาดคอนโซลรุ่นนี้จาก Tesla",
+  },
+  {
+    title: "พรมและแผ่นปูพื้นรถ",
+    description: "ดูรูปทรง จุดยึด และวิธีทำความสะอาดให้เหมาะกับรถ ตัวอย่างในภาพเป็นชุดแผ่นปูพื้นสำหรับ Model 3 รุ่นอัปเกรด ไม่ใช่พรมที่ใช้แทนกันได้ทุกรุ่น",
+    image: "/images/accessories/tesla-model-3-all-weather-liners.jpg",
+    imageAlt: "แผ่นปูพื้นสีดำสามชิ้นจาก Tesla Shop สำหรับ Model 3 รุ่นอัปเกรด",
+    source: "https://shop.tesla.com/th_th/product/upgraded-model-3--all-weather-liner-",
+    linkLabel: "ดูแผ่นปูพื้นรุ่นนี้จาก Tesla",
   },
 ];
 
@@ -118,6 +161,10 @@ const textLink = "font-medium text-lime-800 underline decoration-lime-500/50 und
 
 const homeFaqs = [
   {
+    question: "ของแต่ง Tesla Model 3 กับ Model Y ใช้ด้วยกันได้ไหม?",
+    answer: <p>ต้องเช็กเป็นชิ้น ๆ ครับ อย่าใช้แค่ชื่อ Tesla เป็นคำยืนยัน ให้เทียบรุ่น ปี โฉม รหัสสินค้า และรถพวงมาลัยขวา ตัวอย่างถาดคอนโซลกับแผ่นปูพื้นด้านบน ผู้ผลิตระบุสำหรับ Model 3 รุ่นอัปเกรด จึงไม่ควรสรุปว่าใช้กับ Model Y ได้ด้วย ดู <Link className={textLink} href="#tesla-accessories">ตัวอย่างของแต่ง Tesla และข้อมูลที่ต้องเช็ก</Link> ก่อนเลือกซื้อ</p>,
+  },
+  {
     question: "ใส่โช้คแต่งแล้ว รถจะนุ่มขึ้นไหม?",
     answer: <p>ไม่เสมอไปครับ ขึ้นอยู่กับสปริง ระยะยุบ การปรับโช้ค ยาง และถนนที่ขับ โช้คที่เหมาะกับลงสนามอาจไม่ถูกใจเวลาขับไปทำงาน เริ่มจากแยกว่ารถเด้ง กระแทก หรือโยน แล้วอ่าน <Link className={textLink} href="/articles/ev-damper-tuning-bump-rebound-guide#symptoms">วิธีสังเกตอาการก่อนปรับโช้ค</Link> แทนการหมุนตามจำนวนคลิกของรถคนอื่น</p>,
   },
@@ -155,22 +202,22 @@ export default function StorefrontPage() {
                 สำหรับคนใช้ EV และคนชอบแต่งรถ
               </p>
               <h1 className="max-w-2xl font-extrabold tracking-tight">
-                ของแต่งรถไฟฟ้า
+                แต่งรถ EV
                 <span className="block text-lime-300">แต่งให้ถูกจุด ขับให้ถูกใจ</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-                อยากเปลี่ยนโช้ค เลือกยางใหม่ หรือเพิ่งรับรถ EV?
-                รวมรีวิวรถไฟฟ้าและคู่มือแต่งรถที่ช่วยให้รู้ว่าควรเช็กอะไรก่อนซื้อ
-                เลือกอ่านจากเรื่องที่กำลังเจอได้เลย
+                เลือกของแต่งรถไฟฟ้าจากสิ่งที่อยากเปลี่ยน ทั้งของใช้ในรถ ยาง และช่วงล่าง
+                ดูตัวอย่างของแต่ง Tesla หรือเริ่มจากคู่มือที่ช่วยตอบคำถามก่อนซื้อ
+                พร้อมรีวิวรถ EV ที่ขายในไทย
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
-                href="#choose-your-path"
+                href="#ev-accessories"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 transition-colors hover:bg-lime-200"
               >
-                เลือกเรื่องที่อยากรู้ <ArrowRight className="h-4 w-4" />
+                ดูไอเดียของแต่ง <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/articles"
@@ -235,6 +282,67 @@ export default function StorefrontPage() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="ev-accessories" aria-labelledby="ev-accessories-heading" className="mx-auto max-w-7xl scroll-mt-28 px-5 py-14 sm:px-8 md:py-20">
+        <div className="mb-8 max-w-3xl">
+          <p className="mb-2 text-xs font-semibold text-lime-800">อยากเปลี่ยนอะไรให้รถคันนี้?</p>
+          <h2 id="ev-accessories-heading" className="font-bold">ของแต่งรถไฟฟ้า เริ่มแต่งอะไรดี?</h2>
+          <p className="mt-4 leading-relaxed text-slate-600">
+            ถ้าอยากเปลี่ยนความรู้สึกตอนขับ ลองทำความเข้าใจยางกับช่วงล่างก่อน
+            ถ้าอยากใช้รถสะดวกขึ้น ดู <Link className={textLink} href="#tesla-accessories">ตัวอย่างของแต่งภายใน Tesla</Link> ด้านล่างได้
+            เลือกจากสิ่งที่ใช้จริง ไม่จำเป็นต้องแต่งทั้งคัน
+          </p>
+        </div>
+        <EvUpgradeInfographic />
+        <div className="grid gap-6 md:grid-cols-2">
+          {upgradeIdeas.map((idea) => (
+            <Link key={idea.href} href={idea.href} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-colors hover:border-lime-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
+              <div className="relative aspect-[16/10] bg-slate-50">
+                <Image src={idea.image} alt={idea.imageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" className={idea.imageFit === "contain" ? "object-contain p-5" : "object-cover"} />
+              </div>
+              <div className="p-5 sm:p-6">
+                <h3 className="font-bold">{idea.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">{idea.description}</p>
+                <span className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">{idea.linkLabel} <ArrowRight className="h-4 w-4 shrink-0" /></span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section id="tesla-accessories" aria-labelledby="tesla-accessories-heading" className="scroll-mt-28 border-y border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 md:py-16">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-2 text-xs font-semibold text-lime-800">ของใช้ในรถ เลือกให้ตรงรุ่น</p>
+            <h2 id="tesla-accessories-heading" className="font-bold">ของแต่ง Tesla ชิ้นไหนเหมาะกับรถเรา?</h2>
+            <p className="mt-4 leading-relaxed text-slate-600">
+              ขับ Model 3 หรือ Model Y อยู่? เริ่มจากรุ่น ปี และโฉมของรถ
+              พรมกับถาดคอนโซลที่หน้าตาคล้ายกันอาจใช้แทนกันไม่ได้
+              อุปกรณ์สองชุดนี้เป็นตัวอย่างจาก Tesla Shop สำหรับ Model 3 รุ่นอัปเกรด ไม่ใช่รายการสินค้าของเรา
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {teslaAccessoryExamples.map((accessory) => (
+              <article key={accessory.image} className="flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white">
+                <div className="relative aspect-[4/3] bg-[#f7f7f7]">
+                  <Image src={accessory.image} alt={accessory.imageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" className="object-contain" />
+                </div>
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 className="font-bold">{accessory.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{accessory.description}</p>
+                  <a href={accessory.source} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-sm font-semibold text-lime-800 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
+                    {accessory.linkLabel} <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" /><span className="sr-only"> (เปิดแท็บใหม่)</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600">
+            <p>ยังไม่แน่ใจว่ารถเป็นโฉมไหน? เริ่มจาก <Link className={textLink} href="/articles/tesla-model-3-highland-review">ข้อมูล Tesla Model 3 Highland ตลาดไทย</Link> แล้วเช็กรหัสอุปกรณ์กับผู้ผลิตอีกครั้ง ถ้าใช้ Model Y ให้ดู <a className={textLink} href="https://shop.tesla.com/th_th/category/vehicle-accessories" target="_blank" rel="noopener noreferrer">อุปกรณ์แยกตามรุ่นจาก Tesla Shop<span className="sr-only"> (เปิดแท็บใหม่)</span></a> อย่าเลือกจากรูปอย่างเดียว</p>
+            <p className="mt-3">ภาพใช้ประกอบตัวอย่างการเลือกของแต่ง ดูที่มาได้ใน <Link className={textLink} href="/image-credits#image-48">เครดิตภาพจาก Tesla</Link> <Link className={textLink} href="/">EVSELECTS</Link> ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน และไม่ได้ยืนยันว่าเป็นตัวแทนจำหน่าย Tesla</p>
           </div>
         </div>
       </section>

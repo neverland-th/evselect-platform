@@ -31,7 +31,7 @@ export default function ImageCreditsPage() {
         {!image.license && <p className="text-xs leading-5 text-slate-500">ไม่มีการระบุใบอนุญาตแบบเปิดสำหรับภาพนี้ ลิงก์ผู้ผลิตเป็นแหล่งที่มา ไม่ใช่การอนุญาตให้ใช้ภาพซ้ำ</p>}
         <details className="space-y-3 text-sm leading-6">
           <summary className="min-h-11 cursor-pointer py-2 font-semibold text-slate-700">บริบทภาพและการปรับขนาด</summary>
-          {image.notes.map((note, index) => <p key={index}><BrandText text={note} /></p>)}
+          {image.notes.map((note, index) => <p key={index} className="[overflow-wrap:anywhere]"><BrandText text={note} /></p>)}
         </details>
         <Link href={image.asset} prefetch={false} className={`${linkStyle} inline-flex min-h-11 items-center text-sm`}>ดูไฟล์ภาพนี้</Link>
       </article>)}
