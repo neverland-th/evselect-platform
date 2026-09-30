@@ -51,3 +51,13 @@ The mockups reuse the local server's automatically optimized photographs, embedd
 - Actual candidate screenshot evidence: `scratch/home-staged-desktop.png`, `scratch/home-staged-mobile.png`. These are not mockup-wrapper screenshots.
 - Local built server restarted at http://127.0.0.1:4359/ . Existing blocked browser error tabs were not bypassed or retried; rendered verification used the READY HTTPS candidate.
 - Remaining release boundary: publication permission for the two new Tesla photographs is still unverified. Attribution is not permission. Production promotion has not occurred; the question about final publication destination is still unanswered at this checkpoint.
+
+## Rights verification follow-up
+
+Checked 2026-09-30 against primary sources, not an inferred blanket editorial licence:
+
+- Tesla Thailand intellectual-property terms: https://www.tesla.com/th_th/legal/additional-resources (Intellectual Property / Copyright / No Licences). The page restricts commercial copying, distribution, modification and reposting, and does not grant intellectual-property rights merely through access to the website.
+- Tesla Gallery: https://www.tesla.com/tesla-gallery . Its permission is limited to specified news-media uses of assets appearing in that gallery, with attribution and exclusions for promotional/commercial uses. This is not blanket permission for the two Tesla Shop product photos in this draft.
+- Exact product pages remain accessible: https://shop.tesla.com/th_th/product/upgraded-center-console-trays and https://shop.tesla.com/th_th/product/upgraded-model-3--all-weather-liner- . Product identification is verified separately from republication permission.
+- No matching permission for these exact two shop photographs was established. Do not represent gallery terms, an attribution link, or permission to deploy as a photo licence. Release requires authorised replacement photographs or evidence of permission for the existing photographs. No legal conclusion about statutory exceptions is asserted.
+- Production rechecked with Vercel CLI: evselects.com still resolves to `dpl_Fh8djHnuze2DjeFzRWcPMudS4q9x`. No promotion, protection-setting change, or database write in this follow-up.
