@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: article.title, description: article.description, url: article.url,
     siteName: 'EVSELECT Thailand', locale: 'th_TH', type: 'article',
-    publishedTime: '2026-08-25T08:00:00+07:00', modifiedTime: `${article.checkedDate}T12:00:00+07:00`,
+    publishedTime: '2026-08-25T08:00:00+07:00', modifiedTime: article.updatedAt,
     images: [{ url: article.image, width: 1200, height: 675, alt: 'ภาพประกอบ Tesla Model 3 Highland' }],
   },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title,
   description: article.description, mainEntityOfPage: article.url, image: article.image,
-  datePublished: '2026-08-25T08:00:00+07:00', dateModified: `${article.checkedDate}T12:00:00+07:00`,
+  datePublished: '2026-08-25T08:00:00+07:00', dateModified: article.updatedAt,
   inLanguage: 'th-TH', author: { '@type': 'Organization', name: 'EVSELECT Editorial Team' },
   publisher: { '@type': 'Organization', name: 'EVSELECT Thailand', url: 'https://evselects.com' },
   citation: Object.values(article.sources),
@@ -50,6 +50,7 @@ export default function TeslaModel3HighlandReviewPage() {
         <div className="flex flex-wrap gap-3 items-center text-xs font-semibold">
           <span className="inline-flex items-center gap-2 rounded-full border border-lime-200 bg-lime-50 text-lime-800 px-3 py-1.5"><Car className="w-4 h-4" /> วิเคราะห์สเปกประเทศไทย</span>
           <span className="inline-flex items-center gap-2 text-slate-500"><CalendarDays className="w-4 h-4" /> ตรวจสอบ {article.checkedLabel}</span>
+          <span className="text-slate-500">อัปเดตภาพ <time dateTime={article.updatedAt}>1 ตุลาคม 2569</time></span>
         </div>
         <h1 className="text-3xl md:text-5xl font-black leading-tight tracking-tight" style={{ textWrap: 'balance' }}>{article.title}</h1>
         <p className="text-base sm:text-lg leading-relaxed text-slate-600">Model 3 แต่ละรุ่นไม่ได้ต่างกันแค่ความแรง บทความนี้รวบรวมราคาและอุปกรณ์ที่ Tesla ประเทศไทยแสดงในวันที่ตรวจสอบ เพื่อช่วยเปรียบเทียบรุ่นขับหลังทั้งสามรุ่นกับ Performance AWD ก่อนเลือกทดลองขับ</p>
@@ -94,6 +95,17 @@ export default function TeslaModel3HighlandReviewPage() {
           <p className={`text-sm leading-relaxed mb-5 ${trim.id === 'performance' ? 'text-slate-300' : 'text-slate-600'}`}>{trim.summary}</p>
           <p className={`text-sm leading-relaxed mt-auto border-t pt-4 ${trim.id === 'performance' ? 'border-slate-700' : 'border-slate-200'}`}>{trim.consideration}</p>
         </section>)}</div>
+      </section>
+      <section id="cabin" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
+        <h2 className="text-2xl font-extrabold text-slate-900">ดูห้องโดยสารและเบาะให้ตรงรุ่นที่จะซื้อ</h2>
+        <p>ภาพห้องโดยสารด้านหน้าเป็น Model 3 Highland สเปกญี่ปุ่นพวงมาลัยขวา ถ่ายปี 2025 เห็นตำแหน่งจอกลางและคอนโซล ส่วนเบาะและอุปกรณ์รุ่นไทยให้เทียบตามตารางด้านบน โดยเฉพาะรุ่นขับหลังพื้นฐานกับกลุ่ม Premium</p>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+          <Image src="/images/reviews/tesla-model-3-highland-rhd-cockpit-japan.webp" alt="ห้องโดยสาร Tesla Model 3 Highland สเปกญี่ปุ่น พวงมาลัยขวา เห็นจอกลางและคอนโซล ปี 2025" width={1280} height={720} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+        </figure>
+        <p>ภาพแถวหลังเป็นรถญี่ปุ่นคันเดียวกันที่มีจอผู้โดยสารหลัง เมื่อเทียบรถไทย ให้ดูแถวอุปกรณ์จอหลังในตาราง: รุ่นขับหลังพื้นฐานไม่มีจอนี้ ส่วน Premium และ Performance ระบุจอ 8 นิ้ว พาผู้โดยสารประจำไปลองท่านั่ง พื้นที่เข่า และการขึ้นลงกับคันที่จะรับจริง</p>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+          <Image src="/images/reviews/tesla-model-3-highland-rear-seats-japan.webp" alt="เบาะแถวหลังและจอผู้โดยสารหลัง Tesla Model 3 Highland สเปกญี่ปุ่น ปี 2025" width={1280} height={720} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+        </figure>
       </section>
       <section id="wheels-and-chassis" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
         <h2 className="text-2xl font-extrabold text-slate-900">คิดเรื่องล้อ ช่วงล่าง และเบรกต่อจากสเปก</h2>

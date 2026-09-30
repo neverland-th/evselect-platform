@@ -3,7 +3,7 @@ export const zeekr7xArticle = {
   title: 'ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม?',
   description: 'เทียบ Standard RWD, Long Range RWD และ Performance AWD จากสเปกไทย พร้อมเรื่องยางสำหรับรถหนัก 2,535 กก. การชาร์จ และสิ่งที่ควรลองก่อนเลือกรุ่น',
   publishedAt: '2026-08-26T08:00:00+07:00',
-  updatedAt: '2026-09-23T17:15:00+07:00',
+  updatedAt: '2026-10-01T05:25:00+07:00',
   readTime: '8 นาที',
   image: '/images/editorial/zeekr-7x-photo.jpg',
   imageAlt: 'ZEEKR 7X สีเทา มุมด้านหน้า ภาพประกอบรุ่นรถจากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย',

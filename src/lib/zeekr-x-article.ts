@@ -3,7 +3,7 @@ export const zeekrXArticle = {
   title: 'ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ',
   description: 'เทียบ ZEEKR X Standard RWD กับ Flagship AWD จากโบรชัวร์ไทย พร้อมเรื่องล้อ ยาง ห้องโดยสาร และการชาร์จที่ควรลองก่อนซื้อ',
   publishedAt: '2026-08-25T08:00:00+07:00',
-  updatedAt: '2026-09-23T20:05:00+07:00',
+  updatedAt: '2026-10-01T05:25:00+07:00',
   readTime: '5 นาที',
   image: '/images/reviews/zeekr-x-flagship-thailand-2024.jpg',
   imageAlt: 'ZEEKR X Flagship AWD สีขาว จัดแสดงที่เซ็นทรัล อีสต์วิลล์ กรุงเทพฯ เดือนกรกฎาคม 2024',

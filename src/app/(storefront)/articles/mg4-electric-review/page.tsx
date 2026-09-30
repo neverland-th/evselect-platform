@@ -59,7 +59,7 @@ export default function MG4ElectricReviewPage() {
       <h1 className="text-3xl font-black leading-tight text-slate-950 sm:text-4xl">{mg4Article.title}</h1>
       <p>ถ้าชอบ MG4 เพราะอยากได้รถไฟฟ้าขับหลังที่คล่องตัว คำถามต่อไปคือรุ่น D เพียงพอแล้ว หรือแบตเตอรี่และอุปกรณ์ที่เพิ่มใน X Long Range คุ้มกับเงินส่วนต่างสำหรับคุณ? เริ่มเทียบจากระยะที่ขับจริง จุดชาร์จที่ใช้ และอุปกรณ์ที่ต้องใช้ทุกวัน จะเลือกได้ง่ายกว่าดูแรงม้าหรือราคาป้ายเพียงอย่างเดียว</p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-500">
-        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={mg4Article.updatedAt}>22 กันยายน 2569</time></span>
+        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={mg4Article.updatedAt}>1 ตุลาคม 2569</time></span>
         <span className="inline-flex items-center gap-2"><Clock size={16} />ประมาณ {mg4Article.readTime}</span>
         <span>เรียบเรียงโดย <BrandHomeLink /></span>
       </div>
@@ -88,6 +88,10 @@ export default function MG4ElectricReviewPage() {
           </div>)}
         </div>
         <p>ทั้งสองรุ่นใช้ช่วงล่างหน้าแมคเฟอร์สันสตรัตและหลังอิสระ 5 ลิงก์ มีหน้าจอกลาง 12.8 นิ้วและช่องแอร์หลังตามโบรชัวร์ ส่วนรายการช่วยขับ เบาะ และการเชื่อมต่อมีรายละเอียดแยกรุ่น ควรเปิดตารางอุปกรณ์เทียบกับรถที่ส่งมอบ</p>
+        <p>ภาพจาก MG Motor Europe แสดงจอและคอนโซลของ MG4 รุ่นปรับปรุงปี 2026 เป็นรถพวงมาลัยซ้ายตลาดยุโรป สีเบาะและอุปกรณ์ให้ตรวจแยกจาก D Standard Range และ X Long Range ไทย</p>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+          <Image src="/images/reviews/mg4-my2026-europe-cockpit.webp" alt="จอกลางและคอนโซล MG4 รุ่นปรับปรุงปี 2026 พวงมาลัยซ้าย ภาพจาก MG Motor Europe" width={1440} height={1080} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+        </figure>
         <p>ตัวเลข 450 กับ 540 กม. ใช้มาตรฐานเดียวกัน จึงช่วยเทียบรุ่นบนกระดาษได้ แต่ไม่ได้รับรองว่าคุณจะวิ่งได้เท่านั้นทุกครั้ง ให้เผื่อสภาพทาง ความเร็ว น้ำหนักบรรทุก และจุดชาร์จที่พร้อมใช้งาน อ่านต่อเรื่อง <Link href="/articles/ev-battery-care" className={linkStyle}>การชาร์จและดูแลแบตเตอรี่ตามคู่มือรถ</Link> ก่อนนำคำแนะนำของรถรุ่นอื่นมาใช้</p>
       </section>
 

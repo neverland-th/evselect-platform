@@ -3,7 +3,7 @@ export const deepalS05Article = {
   title: 'Deepal S05 สเปกไทย: เลือก BEV หรือ REEV ให้ตรงชีวิตประจำวัน',
   description: 'แยก Deepal S05 ไฟฟ้าล้วนกับ REEV เทียบแบตเตอรี่ การชาร์จ อุปกรณ์และล้อแต่ละรุ่นจากโบรชัวร์ไทย พร้อมจุดที่ต้องตรวจรถจริงก่อนซื้อ',
   publishedAt: '2026-08-25T08:00:00+07:00',
-  updatedAt: '2026-09-23T18:50:00+07:00',
+  updatedAt: '2026-10-01T05:25:00+07:00',
   readTime: '6 นาที',
   image: '/images/reviews/deepal-s05-max-thailand-2025.jpg',
   imageAlt: 'Deepal S05 Max สีขาวจัดแสดงที่เมืองทองธานี ประเทศไทย เดือนมีนาคม 2025',

@@ -3,7 +3,7 @@ export const mg4Article = {
   title: 'MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน',
   description: 'เทียบ MG4 MY2026 รุ่น D และ X Long Range จากเอกสาร MG ประเทศไทย: แบตเตอรี่ ระยะ NEDC ล้อ อุปกรณ์ และสิ่งที่ควรลองก่อนซื้อ พร้อมแยกจาก XPOWER รุ่นเดิม',
   publishedAt: '2026-08-25T08:00:00.000Z',
-  updatedAt: '2026-09-22T01:00:00+07:00',
+  updatedAt: '2026-10-01T05:25:00+07:00',
   readTime: '6 นาที',
   image: '/images/reviews/mg4-my2026-x-thailand-chanokchon.jpg',
   imageAlt: 'MG4 Electric X รุ่นปี 2026 สีฟ้าเขียวจัดแสดงในงาน Bangkok International Motor Show ที่เมืองทองธานี',

@@ -46,7 +46,7 @@ export default function DeepalS05ArticlePage() {
       <h1 className="text-3xl font-black leading-tight text-slate-950 sm:text-4xl" style={{ textWrap: 'balance' }}>{article.title}</h1>
       <p>ชอบ S05 แต่ยังไม่รู้จะเลือกรุ่นไหน? เริ่มจากชีวิตหลังรับรถก่อน: คุณเสียบชาร์จได้ที่ไหน และเดินทางแบบไหนบ่อยที่สุด เพราะ S05 มีทั้งไฟฟ้าล้วน BEV และ REEV ที่เพิ่มเครื่องยนต์สำหรับผลิตไฟฟ้า หน้าตาใกล้กัน แต่แบตเตอรี่ การชาร์จ และพื้นที่เก็บของหน้าไม่เหมือนกัน ส่วนต่างที่คุ้มสำหรับคนหนึ่งอาจเป็นอุปกรณ์ที่อีกคนแทบไม่ได้ใช้</p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-500">
-        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>23 กันยายน 2569</time></span>
+        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>1 ตุลาคม 2569</time></span>
         <span className="inline-flex items-center gap-2"><Clock size={16} />ประมาณ {article.readTime}</span>
         <span>เรียบเรียงโดย <BrandHomeLink /></span>
       </div>
@@ -87,6 +87,10 @@ export default function DeepalS05ArticlePage() {
 
       <section className="space-y-5" aria-labelledby="equipment">
         <h2 id="equipment" className={headingStyle}>อุปกรณ์ที่ควรลองด้วยตัวเองก่อนจ่ายส่วนต่าง</h2>
+        <p>ภาพ S05 ที่งาน IAA ปี 2025 ให้เห็นจอกลางและพื้นที่คอนโซล เป็นรถพวงมาลัยซ้ายสำหรับจัดแสดงในเยอรมนี จึงต้องแยกรายการอุปกรณ์ Lite, Plus และ Max ไทยตามโบรชัวร์</p>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+          <Image src="/images/reviews/deepal-s05-cockpit-iaa-2025.webp" alt="ห้องโดยสาร Deepal S05 พวงมาลัยซ้ายที่งาน IAA ปี 2025 เห็นจอกลางและคอนโซล" width={1280} height={856} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+        </figure>
         <p>จอกลางขนาด 15.4 นิ้วมีทุกคัน แต่แบบ Sunflower ที่ปรับเอียงได้อยู่ใน Max, Max Long Range และ REEV Max เช่นเดียวกับลำโพง 14 ตำแหน่ง หลังคากระจกพร้อมม่านไฟฟ้า และเบาะหน้าที่มีระบบระบายความร้อนกับอุ่นเบาะ ส่วน Lite, Plus และ REEV Plus ระบุลำโพง 8 ตำแหน่ง</p>
         <p>Lite ไม่มีระบบแสดงข้อมูลบนกระจกหน้า AR-HUD ตามตาราง ขณะที่รุ่นอื่นมี ถ้าคุณให้ความสำคัญกับการมองความเร็วและนำทาง ลองปรับท่านั่งจริงแล้วตรวจว่ามองข้อมูลได้ชัดและใช้งานถนัดก่อนตัดสินใจ</p>
         <p>ระบบเตือนมุมอับสายตา BSD ระบุใน Max, Max Long Range และ REEV Max อย่าเหมาว่าระบบช่วยขับมีเท่ากันทุกรุ่น ให้ขอรายการอุปกรณ์รุ่นย่อยควบคู่กับคู่มือการใช้งาน และให้พนักงานอธิบายข้อจำกัดโดยไม่ลองสร้างสถานการณ์เสี่ยงบนถนน</p>

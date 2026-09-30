@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { ArrowLeft, CalendarDays, Clock } from 'lucide-react';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import { zeekr7xArticle as article, zeekr7xSources as sources } from '@/lib/zeekr-7x-article';
-import { thaiRoadsArticle as teslaPhoto } from '@/lib/thai-roads-article';
 
 const linkStyle = 'font-semibold text-lime-800 underline underline-offset-4 decoration-lime-500 hover:text-lime-950 focus-visible:outline-2 focus-visible:outline-offset-4';
 const headingStyle = 'text-xl font-bold leading-snug text-slate-950 sm:text-2xl';
@@ -49,7 +48,7 @@ export default function Zeekr7XReviewPage() {
       <h1 className="text-3xl font-black leading-tight text-slate-950 sm:text-4xl" style={{ textWrap: 'balance' }}>{article.title}</h1>
       <p>เห็น ZEEKR 7X รุ่นท็อป 637 hp พร้อมช่วงล่างถุงลมแล้วน่าสนใจ แต่ถ้าใช้เดินทางกับครอบครัว รุ่น Long Range ที่วิ่งได้ไกลกว่าตามมาตรฐาน NEDC อาจตอบโจทย์กว่า ความต่างของสามรุ่นไม่ได้มีแค่แรงม้า: แบตเตอรี่ ล้อ เบาะ และระบบเสียงก็เปลี่ยนด้วย บทนี้แยกให้เห็นว่าเงินที่เพิ่มซื้ออะไร และเรื่องไหนต้องไปลองกับรถจริงก่อนตัดสินใจ</p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-500">
-        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>23 กันยายน 2569</time></span>
+        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>1 ตุลาคม 2569</time></span>
         <span className="inline-flex items-center gap-2"><Clock size={16} />ประมาณ {article.readTime}</span>
         <span>เรียบเรียงโดย <BrandHomeLink /></span>
       </div>
@@ -90,7 +89,7 @@ export default function Zeekr7XReviewPage() {
         <p>เริ่มจากป้ายประจำรถและคู่มือของรถคันนั้น ตรวจขนาด ดัชนีรับน้ำหนักหรือ Load Index พิกัดความเร็ว และแรงดันที่กำหนด ขอรหัสยางเต็มจากร้าน รวมถึงเครื่องหมาย XL หรือ HL ถ้ามี <Source href={sources.tyres}>คำอธิบายยางรับน้ำหนักสูงของ Michelin</Source> ช่วยแยกความหมายของเครื่องหมายเหล่านี้ แต่ไม่ได้เป็นใบรับรองว่ายางทุกรุ่นในหมวดนั้นใส่กับ 7X ได้</p>
         <p>ไม่มีสูตรแปลงแรงม้าเป็น Load Index และการเอาน้ำหนักรถหารสี่ไม่พอสำหรับเลือกยาง เพราะยังต้องคำนึงถึงการบรรทุกและข้อกำหนดของแต่ละเพลา อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>วิธีเลือกยางให้ตรงพิกัดและการใช้งานของ EV</Link> เพื่อเตรียมข้อมูลให้ร้านตรวจความเหมาะสมก่อนซื้อ</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-          <Image src={teslaPhoto.image} alt="Tesla Model 3 Performance ปี 2024 สีเทา เห็นตัวรถและล้อ เป็นตัวอย่างรถอีกแบบที่ต้องตรวจสเปกยางแยกตามรุ่น" width={1280} height={640} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+          <Image src="/images/reviews/zeekr-7x-performance-thailand-wheels.webp" alt="ZEEKR 7X Performance AWD สีเทาในโชว์รูมขอนแก่น ปี 2025 เห็นล้อและคาลิปเปอร์สีส้ม" width={1280} height={960} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
 
         </figure>
       </section>
@@ -104,6 +103,10 @@ export default function Zeekr7XReviewPage() {
 
       <section className="space-y-5" aria-labelledby="cabin">
         <h2 id="cabin" className={headingStyle}>อุปกรณ์ที่ต้องลอง ไม่ใช่ดูแค่จำนวน</h2>
+        <p>ภาพห้องโดยสาร 7X จากงาน Auto Zürich ปี 2025 ช่วยให้เห็นตำแหน่งจอกลาง คอนโซล และเบาะหน้า รถในภาพเป็นพวงมาลัยซ้าย ส่วนอุปกรณ์ของรุ่นไทยให้เทียบตามรายการด้านล่าง</p>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+          <Image src="/images/reviews/zeekr-7x-cockpit-zurich-2025.webp" alt="ห้องโดยสาร ZEEKR 7X พวงมาลัยซ้ายที่งาน Auto Zürich ปี 2025 เห็นจอกลาง คอนโซลและเบาะหน้า" width={1280} height={856} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+        </figure>
         <p>ทั้งสามรุ่นมีจอกลาง Mini LED 16 นิ้ว, Snapdragon 8295 และรองรับ Apple CarPlay กับ Android Auto ตามโบรชัวร์ ส่วนรายการที่ต่างกันและควรเช็กกับรถคันจริงมีดังนี้</p>
         <ul className="list-disc space-y-3 pl-6">
           <li><strong>ระบบเสียง:</strong> Standard มี 10 ตำแหน่ง ส่วน Long Range และ Performance มี Sound Pro 21 ตำแหน่ง ลองเพลงที่ฟังประจำในระดับเสียงใช้งานจริง</li>

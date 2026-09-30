@@ -48,7 +48,7 @@ export default function SealArticlePage() {
       <h1 className="text-3xl font-black leading-tight text-slate-950 sm:text-4xl" style={{ textWrap: 'balance' }}>{article.title}</h1>
       <p>Seal รุ่นที่เร่งเร็วที่สุด ไม่ใช่รุ่นที่มีตัวเลขระยะทางมากที่สุด Premium กับ AWD Performance ใช้แบตเตอรี่ความจุเท่ากัน แต่ให้คนละจุดเด่น: รุ่นหนึ่งเน้นระยะตามมาตรฐาน อีกรุ่นเพิ่มกำลังและขับเคลื่อนสี่ล้อ ก่อนจ่ายส่วนต่าง ลองเริ่มจากว่าคุณอยากได้อะไรเพิ่มจากรถคันใหม่ แล้วค่อยดูว่า Dynamic ที่เป็นรุ่นเริ่มต้นตอบโจทย์นั้นพอหรือยัง</p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-500">
-        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>23 กันยายน 2569</time></span>
+        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>1 ตุลาคม 2569</time></span>
         <span className="inline-flex items-center gap-2"><Clock size={16} />ประมาณ {article.readTime}</span>
         <span>เรียบเรียงโดย <BrandHomeLink /></span>
       </div>
@@ -99,6 +99,10 @@ export default function SealArticlePage() {
 
       <section className="space-y-5" aria-labelledby="daily-use">
         <h2 id="daily-use" className={headingStyle}>สิ่งที่ควรลองให้ครบก่อนรับใบเสนอราคา</h2>
+        <p>ภาพเบาะหน้าและคอนโซลนี้เป็น Seal ไฟฟ้าล้วนพวงมาลัยซ้ายที่ถ่ายในญี่ปุ่นปี 2022 ช่วยให้เห็นรูปทรงเบาะและการจัดวางจอ สี วัสดุ และอุปกรณ์ของรถไทยแต่ละรุ่นควรตรวจจากคันที่จะซื้อ</p>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+          <Image src="/images/reviews/byd-seal-front-seats-and-console.webp" alt="เบาะหน้า จอกลางและคอนโซล BYD Seal ไฟฟ้าล้วนพวงมาลัยซ้าย ในภาพถ่ายที่ญี่ปุ่น ปี 2022" width={1280} height={960} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+        </figure>
         <p><strong>ท่านั่งและการขึ้นลง:</strong> ปรับเบาะหน้าเป็นท่าขับจริง แล้วให้ผู้โดยสารประจำนั่งหลัง ตรวจพื้นที่ศีรษะ ตำแหน่งเท้า และการเข้าออก หากใช้คาร์ซีตหรือมีผู้สูงอายุเดินทางด้วย ควรลองกับการใช้งานนั้นโดยตรง แทนการตัดสินจากขนาดตัวถัง</p>
         <p><strong>ทางลาดและสัมภาระ:</strong> ผู้ผลิตระบุความสูงใต้ท้องรถ 120 มม. และที่เก็บของท้ายรถ 400 ลิตร ตัวเลขแรกไม่รับรองว่าจะผ่านทางลาดบ้านคุณได้ทุกสภาพบรรทุก และตัวเลขลิตรไม่บอกว่ากระเป๋าหรือรถเข็นจะผ่านช่องเปิดท้ายรถหรือไม่ ให้ตรวจของจริงอย่างปลอดภัย</p>
         <p><strong>ความสบายและการใช้งานจอ:</strong> ลองรถช่วงเวลาที่คุณใช้ประจำ ปรับแอร์ ตำแหน่งเบาะ และหน้าจอด้วยตัวเองก่อนออกเดินทาง ถ้ามีประเด็นเรื่องความร้อนจากหลังคาหรือเสียงยาง ให้จดเงื่อนไขที่พบ ไม่เหมารวมว่าต้องซื้ออุปกรณ์เสริมก่อนรับรถทุกคัน</p>

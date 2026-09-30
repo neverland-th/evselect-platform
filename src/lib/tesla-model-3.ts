@@ -5,6 +5,7 @@ export const teslaModel3 = {
   url: 'https://evselects.com/articles/tesla-model-3-highland-review',
   image: 'https://evselects.com/images/reviews/tesla-model-3-hero.jpg',
   checkedDate: '2026-09-14', checkedLabel: '14 กันยายน 2569',
+  updatedAt: '2026-10-01T05:25:00+07:00',
   sources: {
     design: 'https://www.tesla.com/th_th/model3/design',
     specs: 'https://www.tesla.com/th_th/model3',

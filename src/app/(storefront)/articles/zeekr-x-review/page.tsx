@@ -45,7 +45,7 @@ export default function ZeekrXArticlePage() {
       <h1 className="text-3xl font-black leading-tight text-slate-950 sm:text-4xl" style={{ textWrap: 'balance' }}>{article.title}</h1>
       <p>เล็ง ZEEKR X เพราะขนาดกำลังดีและชอบดีไซน์ แล้วควรขยับไป Flagship ไหม? ส่วนต่างที่ต้องดูไม่ได้มีแค่อัตราเร่ง แต่รวมถึงล้อ ยาง การชาร์จ AC และอุปกรณ์ที่ใช้ทุกวัน บทนี้พาเทียบ Standard RWD กับ Flagship AWD สเปกไทย เพื่อให้คุณรู้ว่าควรลองอะไรที่โชว์รูมก่อนตัดสินใจ</p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-500">
-        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>23 กันยายน 2569</time></span>
+        <span className="inline-flex items-center gap-2"><CalendarDays size={16} />อัปเดต <time dateTime={article.updatedAt}>1 ตุลาคม 2569</time></span>
         <span className="inline-flex items-center gap-2"><Clock size={16} />ประมาณ {article.readTime}</span>
         <span>เรียบเรียงโดย <BrandHomeLink /></span>
       </div>
@@ -72,6 +72,10 @@ export default function ZeekrXArticlePage() {
       </section>
       <section className="space-y-5" aria-labelledby="cabin">
         <h2 id="cabin" className={headingStyle}>อุปกรณ์ที่เพิ่มมา คุณจะใช้บ่อยแค่ไหน</h2>
+        <p>จอกลางและคอนโซลในภาพเป็นของ ZEEKR X พวงมาลัยซ้ายรุ่นปี 2025 ใช้ดูการจัดวางห้องโดยสาร ส่วนความต่าง Standard กับ Flagship ไทยให้ยึดโบรชัวร์ที่อ้างอิงในบทนี้</p>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+          <Image src="/images/reviews/zeekr-x-cockpit-2025.webp" alt="จอกลางและคอนโซล ZEEKR X พวงมาลัยซ้าย รุ่นปี 2025 ในภาพของ Ethan Llamas" width={1280} height={853} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
+        </figure>
         <p>โบรชัวร์ระบุจอกลาง 14.6 นิ้ว ระบบเสียง Yamaha 13 ตำแหน่ง และเบาะหน้าระบายอากาศในทั้งสองรุ่น ส่วน Flagship เพิ่มประตูไฟฟ้าคู่หน้า จอที่เสา B และจอ AR HUD ขนาด 24.3 นิ้วสำหรับฉายข้อมูลบนกระจกหน้า จึงควรลองใช้อุปกรณ์เหล่านี้จริงก่อนตีมูลค่าส่วนต่าง</p>
         <p>ลองเปิดประตูในพื้นที่แคบ ปรับเบาะจนได้ท่าขับ แล้วดูว่าจอ HUD อ่านสบายตาหรือไม่ ต่อโทรศัพท์เครื่องที่คุณใช้ ทดลองนำทาง ฟังเพลง และปรับแอร์จากตำแหน่งคนขับ ไม่ควรสรุปความสะดวกจากขนาดจอหรือจำนวนลำโพงเพียงอย่างเดียว</p>
         <p>ตัวรถยาว 4,432 มม. กว้าง 1,836 มม. สูง 1,566 มม. ฐานล้อ 2,750 มม. ให้คนที่นั่งหลังประจำลองนั่งพร้อมกัน และนำสัมภาระจริงไปลองวาง หากพื้นที่ยังไม่พอ อ่าน <Link href="/articles/zeekr-7x-2026-review" className={linkStyle}>สเปกและข้อพิจารณาของ ZEEKR 7X</Link> แล้วเปรียบเทียบโดยใช้คนและกระเป๋าชุดเดียวกัน</p>

@@ -3,7 +3,7 @@ export const sealArticle = {
   title: 'BYD Seal สเปกไทย: เลือกระยะทางของ Premium หรือความแรงของ AWD?',
   description: 'เทียบ BYD Seal Dynamic, Premium และ AWD Performance สเปกไทย แบตเตอรี่ ระยะ NEDC การชาร์จและช่วงล่าง พร้อมคำถามก่อนทดลองขับและซื้อ',
   publishedAt: '2026-08-25T08:00:00+07:00',
-  updatedAt: '2026-09-23T18:30:00+07:00',
+  updatedAt: '2026-10-01T05:25:00+07:00',
   readTime: '6 นาที',
   image: '/images/reviews/byd-seal-premium-thailand-2023.jpg',
   imageAlt: 'BYD Seal Premium สีขาวจัดแสดงในโชว์รูมที่ขอนแก่น ประเทศไทย ปี 2023',

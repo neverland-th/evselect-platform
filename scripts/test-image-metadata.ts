@@ -9,8 +9,15 @@ test('Image registry has unique local assets and separates sources from licences
     assert.match(image.asset, /^\/images\//);
     assert.ok(image.creditText && image.alt && image.notes.length && image.pages.length);
     if (image.license) {
-      assert.equal(new URL(image.license).hostname, 'creativecommons.org');
-      assert.ok(image.source && image.originalTitle, 'Preserve original title and source for CC attribution');
+      assert.ok(image.source && image.originalTitle, 'Preserve original title and source for attribution');
+      if (new URL(image.license).hostname !== 'creativecommons.org') {
+        // This press-bank item explicitly permits editorial reuse. Product pages still do not.
+        assert.equal(image.asset, '/images/reviews/mg4-my2026-europe-cockpit.webp');
+        assert.equal(image.originalTitle, 'Day-Interior-LHD.jpg');
+        assert.equal(image.license, 'https://news.mgmotor.eu/nl/image-bank/mg4-ev-mce-2026/');
+        assert.equal(image.source, image.license);
+        assert.ok(image.notes.some(note => note.includes('Use for editorial purposes free of charge')));
+      }
     }
   }
 });
