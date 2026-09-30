@@ -55,7 +55,9 @@ export default function EvUpgradeInfographic() {
       </div>
 
       <ol className="grid gap-6 md:grid-cols-3 md:gap-7">
-        {startingPoints.map(({ number, category, title, description, href, linkLabel, image, imageAlt, imageClass }) => (
+        {startingPoints.map(({ number, category, title, description, href, linkLabel, image, imageAlt, imageClass }) => {
+          const ReadingLink = href.startsWith("#") ? "a" : Link;
+          return (
           <li key={number} className="grid min-w-0 grid-cols-[6rem_minmax(0,1fr)] items-start gap-4 sm:grid-cols-[8rem_minmax(0,1fr)] md:flex md:flex-col md:gap-0">
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl sm:aspect-square md:aspect-[16/10]">
               <Image src={image} alt={imageAlt} fill sizes="(max-width: 639px) 96px, (max-width: 767px) 128px, (max-width: 1279px) 30vw, 384px" className={imageClass} />
@@ -64,12 +66,13 @@ export default function EvUpgradeInfographic() {
               <p className="flex items-center gap-2 text-xs font-semibold text-slate-500"><span aria-hidden="true" className="text-lime-800">{number}</span><span aria-hidden="true" className="h-px w-4 bg-slate-300" />{category}</p>
               <h4 className="mt-2 text-lg font-bold leading-relaxed">{title}</h4>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">{description}</p>
-              <Link href={href} className="mt-auto inline-flex min-h-11 items-center gap-2 pt-3 text-sm font-semibold text-lime-800 underline underline-offset-4 hover:text-lime-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
+              <ReadingLink href={href} className="mt-auto inline-flex min-h-11 items-center gap-2 pt-3 text-sm font-semibold text-lime-800 underline underline-offset-4 hover:text-lime-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
                 {linkLabel}<ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0" />
-              </Link>
+              </ReadingLink>
             </div>
           </li>
-        ))}
+          );
+        })}
       </ol>
 
       <div className="mt-7 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-lime-50 px-4 py-4 sm:px-5">

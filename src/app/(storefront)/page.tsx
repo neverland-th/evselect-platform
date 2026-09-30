@@ -161,7 +161,7 @@ const textLink = "font-medium text-lime-800 underline decoration-lime-500/50 und
 const homeFaqs = [
   {
     question: "ของแต่ง Tesla Model 3 กับ Model Y ใช้ด้วยกันได้ไหม?",
-    answer: <p>ต้องเช็กเป็นชิ้น ๆ ครับ อย่าใช้แค่ชื่อ Tesla เป็นคำยืนยัน ให้เทียบรุ่น ปี โฉม รหัสสินค้า และรถพวงมาลัยขวา พรมหรือถาดคอนโซลที่ระบุสำหรับ Model 3 ไม่ได้ยืนยันว่าใช้กับ Model Y หรือ Model Y L ได้ด้วย ดู <Link className={textLink} href="#tesla-accessories">แนวทางเลือกของแต่ง Tesla ให้ตรงรุ่น</Link> ก่อนเลือกซื้อ</p>,
+    answer: <p>ต้องเช็กเป็นชิ้น ๆ ครับ อย่าใช้แค่ชื่อ Tesla เป็นคำยืนยัน ให้เทียบรุ่น ปี โฉม รหัสสินค้า และรถพวงมาลัยขวา พรมหรือถาดคอนโซลที่ระบุสำหรับ Model 3 ไม่ได้ยืนยันว่าใช้กับ Model Y หรือ Model Y L ได้ด้วย ดู <a className={textLink} href="#tesla-accessories">แนวทางเลือกของแต่ง Tesla ให้ตรงรุ่น</a> ก่อนเลือกซื้อ</p>,
   },
   {
     question: "ใส่โช้คแต่งแล้ว รถจะนุ่มขึ้นไหม?",
@@ -176,15 +176,15 @@ const homeFaqs = [
   },
   {
     question: "ถามราคายางรถ EV ต้องบอกร้านว่าอะไรบ้าง?",
-    answer: <p>บอกรุ่นรถ ปี รุ่นย่อย ขนาดล้อ และขนาดยางหน้า–หลังที่ใช้อยู่ ถ้าเปลี่ยนล้อหรือช่วงล่างมาแล้วก็บอกด้วยครับ ขอให้ร้านยืนยันสเปกที่รองรับรถ แล้วแยกราคาต่อเส้น จำนวนเส้น ค่าใส่ ถ่วงล้อ และเงื่อนไขรับประกันให้ครบ ใช้ <Link className={textLink} href="#compare-ev-tyre-prices">เช็กลิสต์เทียบราคายาง</Link> ช่วยถามได้ โดยยังไม่ต้องตัดสินจากราคาเริ่มต้นในโฆษณา</p>,
+    answer: <p>บอกรุ่นรถ ปี รุ่นย่อย ขนาดล้อ และขนาดยางหน้า–หลังที่ใช้อยู่ ถ้าเปลี่ยนล้อหรือช่วงล่างมาแล้วก็บอกด้วยครับ ขอให้ร้านยืนยันสเปกที่รองรับรถ แล้วแยกราคาต่อเส้น จำนวนเส้น ค่าใส่ ถ่วงล้อ และเงื่อนไขรับประกันให้ครบ ใช้ <a className={textLink} href="#compare-ev-tyre-prices">เช็กลิสต์เทียบราคายาง</a> ช่วยถามได้ โดยยังไม่ต้องตัดสินจากราคาเริ่มต้นในโฆษณา</p>,
   },
   {
     question: "ของแต่งจากต่างประเทศ ใส่รถสเปกไทยได้เลยไหม?",
-    answer: <p>ยังสรุปไม่ได้จากชื่อรุ่นหรือหน้าตารถเพียงอย่างเดียว ต้องเทียบปี รุ่นย่อย รุ่นก่อนหรือหลังปรับโฉม ระบบขับเคลื่อน และตำแหน่งติดตั้งของรถพวงมาลัยขวา ขอรหัสสินค้าและเอกสารยืนยันจากผู้ผลิตหรือผู้ติดตั้งก่อนซื้อ โดยเฉพาะชิ้นส่วนช่วงล่าง เบรก และอุปกรณ์ไฟฟ้า ดูรายการที่ควรเตรียมใน <Link className={textLink} href="#before-you-buy">เช็กลิสต์ก่อนซื้อของแต่ง EV</Link></p>,
+    answer: <p>ยังสรุปไม่ได้จากชื่อรุ่นหรือหน้าตารถเพียงอย่างเดียว ต้องเทียบปี รุ่นย่อย รุ่นก่อนหรือหลังปรับโฉม ระบบขับเคลื่อน และตำแหน่งติดตั้งของรถพวงมาลัยขวา ขอรหัสสินค้าและเอกสารยืนยันจากผู้ผลิตหรือผู้ติดตั้งก่อนซื้อ โดยเฉพาะชิ้นส่วนช่วงล่าง เบรก และอุปกรณ์ไฟฟ้า ดูรายการที่ควรเตรียมใน <a className={textLink} href="#before-you-buy">เช็กลิสต์ก่อนซื้อของแต่ง EV</a></p>,
   },
   {
     question: "ตอนนี้สั่งซื้ออุปกรณ์เสริมได้หรือยัง?",
-    answer: <p>ตอนนี้ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงินครับ อ่านบทความได้ตามปกติ ส่วนสินค้ายังอยู่ระหว่างคัดเลือกและตรวจข้อมูลรุ่นรถ หากมีของแต่งที่กำลังหา <Link className={textLink} href="/contact">บอกรุ่นรถและสิ่งที่อยากได้กับทีมงาน</Link> หรือดู <Link className={textLink} href="#launch">สถานะการเปิดตัวสินค้า</Link> ได้ที่นี่</p>,
+    answer: <p>ตอนนี้ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงินครับ อ่านบทความได้ตามปกติ ส่วนสินค้ายังอยู่ระหว่างคัดเลือกและตรวจข้อมูลรุ่นรถ หากมีของแต่งที่กำลังหา <Link className={textLink} href="/contact">บอกรุ่นรถและสิ่งที่อยากได้กับทีมงาน</Link> หรือดู <a className={textLink} href="#launch">สถานะการเปิดตัวสินค้า</a> ได้ที่นี่</p>,
   },
 ];
 
@@ -212,12 +212,12 @@ export default function StorefrontPage() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
+              <a
                 href="#ev-accessories"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 transition-colors hover:bg-lime-200"
               >
                 ดูไอเดียของแต่ง <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
               <Link
                 href="/articles"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/25 px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
@@ -262,8 +262,10 @@ export default function StorefrontPage() {
             <h2 className="font-bold">วันนี้คุณกำลังหาคำตอบเรื่องไหน?</h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
-            {journeys.map(({ eyebrow, title, description, href, linkLabel, icon: Icon }) => (
-              <Link
+            {journeys.map(({ eyebrow, title, description, href, linkLabel, icon: Icon }) => {
+              const JourneyLink = href.startsWith("#") ? "a" : Link;
+              return (
+              <JourneyLink
                 key={title}
                 href={href}
                 className="group flex min-h-64 flex-col rounded-3xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-lime-500 hover:shadow-xl hover:shadow-slate-200/70"
@@ -279,8 +281,9 @@ export default function StorefrontPage() {
                 <span className="mt-auto inline-flex items-center gap-2 pt-7 text-sm font-semibold text-lime-800">
                   {linkLabel} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
-              </Link>
-            ))}
+              </JourneyLink>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -291,7 +294,7 @@ export default function StorefrontPage() {
           <h2 id="ev-accessories-heading" className="font-bold">ของแต่งรถไฟฟ้า เริ่มแต่งอะไรดี?</h2>
           <p className="mt-4 leading-relaxed text-slate-600">
             ถ้าอยากเปลี่ยนความรู้สึกตอนขับ ลองทำความเข้าใจยางกับช่วงล่างก่อน
-            ถ้าอยากใช้รถสะดวกขึ้น ดู <Link className={textLink} href="#tesla-accessories">แนวทางเลือกของแต่ง Tesla และ ZEEKR ให้ตรงรุ่น</Link> ด้านล่างได้
+            ถ้าอยากใช้รถสะดวกขึ้น ดู <a className={textLink} href="#tesla-accessories">แนวทางเลือกของแต่ง Tesla และ ZEEKR ให้ตรงรุ่น</a> ด้านล่างได้
             เลือกจากสิ่งที่ใช้จริง ไม่จำเป็นต้องแต่งทั้งคัน
           </p>
         </div>
