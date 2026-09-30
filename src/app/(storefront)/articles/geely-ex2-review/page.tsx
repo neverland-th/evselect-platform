@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -37,6 +38,7 @@ export default function GeelyEx2ArticlePage() {
     ['เบาะหลังพับ 60:40', 'มี', 'มี'],
   ];
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/geely-ex2-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -53,7 +55,7 @@ export default function GeelyEx2ArticlePage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1280} height={720} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">EX2 Max จัดแสดงที่เมืองทองธานี เดือนพฤศจิกายน 2025 ภาพประกอบรถไทย ไม่ใช่ภาพทดลองขับของทีมงาน ภาพ: <Source href={article.imageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
     </figure>
 
     <div className="space-y-12">

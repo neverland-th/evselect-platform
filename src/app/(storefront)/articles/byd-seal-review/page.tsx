@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -39,6 +40,7 @@ export default function SealArticlePage() {
     ['โช้คอัพ FSD ตามตารางไทย', 'ไม่มีระบุ', 'ไม่มีระบุ', 'หน้าและหลัง'],
   ];
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/byd-seal-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -55,7 +57,7 @@ export default function SealArticlePage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1280} height={960} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">Seal Premium ที่โชว์รูมในขอนแก่น ปี 2023 ภาพประกอบตัวรถและล้อ ป้ายในภาพเป็นข้อมูลวันจัดแสดง ไม่ใช่ข้อเสนอขายปัจจุบัน ภาพ: <Source href={article.imageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
     </figure>
 
     <div className="space-y-12">
@@ -89,7 +91,7 @@ export default function SealArticlePage() {
         <p>FSD คือแนวทางให้แรงหน่วงของโช้คตอบสนองตามความถี่การเคลื่อนไหว ไม่ใช่ชื่อระบบขับอัตโนมัติ อ่านเรื่อง <Link href="/articles/shock-absorber-types-monotube-twintube-air-ev" className={linkStyle}>ประเภทโช้คอัพและระบบควบคุมแรงหน่วง</Link> เพื่อแยกโครงสร้างโช้คออกจากวิธีควบคุม ก่อนนำศัพท์แต่ละระบบมาเทียบกัน</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src={article.awdImage} alt="BYD Seal AWD Performance สีดำในโชว์รูมขอนแก่น ปี 2023 เห็นด้านหน้าและล้อ" width={1280} height={960} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="p-4 text-sm leading-6">Seal AWD Performance ในประเทศไทย ปี 2023 ใช้ดูรูปทรงตัวรถและล้อ ไม่ใช่ภาพทดสอบช่วงล่างหรือหลักฐานพิกัดรับน้ำหนักยาง ภาพ: <Source href={article.awdImageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
         </figure>
         <p>Dynamic ระบุยาง 225/50 R18 ส่วน Premium และ AWD ใช้ 235/45 R19 หากจะเปลี่ยนยาง ให้ตรวจขนาด ดัชนีรับน้ำหนัก ดัชนีความเร็ว และแรงดันตามข้อกำหนดของรถคันนั้น อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>การเลือกยางให้เหมาะกับน้ำหนักและกำลังรถ EV</Link> แทนการเลือกจากความกว้างหรือลายดอกยางอย่างเดียว</p>
         <p>ตอนทดลองขับให้ใช้เส้นทางใกล้เคียงชีวิตประจำวัน และพาคนที่นั่งด้วยไปลอง ให้แยกว่าปัญหาคือกระแทกตอนผ่านรอยต่อ หรือรถยังโคลงหลังผ่านไปแล้ว ข้อมูลนี้มีประโยชน์กว่าคำว่า “แข็ง” คำเดียว โดยไม่ต้องตั้งค่าโช้คหรือโหลดรถตามสูตรทั่วไป</p>

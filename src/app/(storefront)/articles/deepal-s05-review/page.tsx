@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -37,6 +38,7 @@ export default function DeepalS05ArticlePage() {
     ['ขนาดยาง', '225/60 R18', '225/60 R18', '245/45 R20', '225/60 R18'],
   ];
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/deepal-s05-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -53,7 +55,7 @@ export default function DeepalS05ArticlePage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1280} height={720} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">S05 Max ในงานแสดงรถที่เมืองทองธานี ปี 2025 ใช้ประกอบรูปทรงตัวรถ ป้ายราคาและสเปกบนกระจกเป็นข้อมูลวันจัดแสดง ไม่ใช่ข้อเสนอปัจจุบัน ภาพ: <Source href={article.imageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
     </figure>
 
     <div className="space-y-12">
@@ -64,7 +66,7 @@ export default function DeepalS05ArticlePage() {
         <p>ช่องเก็บของใต้ฝากระโปรงหน้า 159 ลิตรที่เห็นในข้อมูล S05 ระบุเฉพาะกลุ่ม BEV ในโบรชัวร์ไทย ไม่ใช่อุปกรณ์ของ REEV ถ้าคุณเลือกรถเพราะพื้นที่เก็บของส่วนนี้ ให้เปิดดูรถรุ่นที่จะซื้อจริง และอย่าใช้ภาพรวมของชื่อ S05 แทนรายการอุปกรณ์</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src={article.reevImage} alt="Deepal S05 Max REEV สีขาวในงานแสดงรถที่เมืองทองธานี ปี 2025 เห็นป้าย REEV บนกระจกหน้า" width={1280} height={960} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="p-4 text-sm leading-6">S05 Max REEV จัดแสดงในไทย ปี 2025 ภายนอกคล้าย BEV จึงควรตรวจชื่อรุ่นกับเอกสาร ไม่ใช้ภาพตัดสินระบบขับเคลื่อน ป้ายราคาและข้อความบนกระจกเป็นข้อมูลในเวลานั้น ภาพ: <Source href={article.reevImageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
         </figure>
       </section>
 

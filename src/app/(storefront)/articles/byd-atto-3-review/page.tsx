@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -38,6 +39,7 @@ export default function Atto3ArticlePage() {
     ['ขนาดยาง', '235/50 R18', '235/50 R18'],
   ];
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/byd-atto-3-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -54,7 +56,7 @@ export default function Atto3ArticlePage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1280} height={720} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">Atto 3 Extended จัดแสดงที่เมืองทองธานี ประเทศไทย ปี 2024 ใช้ประกอบภาพตัวรถ รายละเอียดอุปกรณ์ MY2026 ให้ยึดโบรชัวร์ ภาพ: <Source href={article.imageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
     </figure>
 
     <div className="space-y-12">
@@ -86,7 +88,7 @@ export default function Atto3ArticlePage() {
         <p>ลองปรับเบาะให้เป็นท่าขับของคุณก่อนดูจอและกระจก จากนั้นให้ผู้โดยสารประจำนั่งด้านหลัง ลองขึ้นลงรถ วางเท้า และใช้ช่องแอร์ หากมีคาร์ซีตหรือรถเข็นเด็ก ให้นำขนาดจริงไปตรวจพื้นที่: โบรชัวร์ระบุห้องเก็บสัมภาระ 440 ลิตร และ 1,340 ลิตรเมื่อพับเบาะ แต่ตัวเลขลิตรไม่บอกว่าของชิ้นหนึ่งจะผ่านช่องประตูท้ายได้หรือไม่</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src={article.interior} alt="ห้องโดยสาร BYD Atto 3 รุ่นพวงมาลัยซ้าย เห็นจอกลาง พวงมาลัย และคอนโซล" width={1280} height={853} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="p-4 text-sm leading-6">ภาพห้องโดยสาร Atto 3 Premium พวงมาลัยซ้าย ปี 2025 ใช้ประกอบการดูรูปแบบจอและคอนโซล รถไทยเป็นพวงมาลัยขวาและต้องตรวจอุปกรณ์ตามปีรุ่น ภาพ: <Source href={article.interiorSource}>Ethan Llamas</Source> · <Source href={article.imageLicenseUrl}>CC BY-SA 4.0</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
         </figure>
         <p>ระบบช่วยขับในโบรชัวร์มีทั้งระบบควบคุมความเร็วแบบปรับระยะห่างและระบบเบรกฉุกเฉินอัตโนมัติ ให้ผู้ส่งมอบสอนการเปิดปิด ข้อจำกัด และข้อความเตือนจากคู่มือ รถยังต้องมีผู้ขับดูแลตลอดเวลา ไม่ทดลองด้วยการสร้างสถานการณ์เสี่ยงบนถนน</p>
       </section>

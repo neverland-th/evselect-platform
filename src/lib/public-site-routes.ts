@@ -5,6 +5,7 @@ export const siteOrigin = 'https://evselects.com';
 export const publicSiteRoutes = [
   '/',
   '/articles',
+  '/image-credits',
   '/articles/byd-atto-3-review',
   '/articles/byd-seal-review',
   '/articles/deepal-s05-review',

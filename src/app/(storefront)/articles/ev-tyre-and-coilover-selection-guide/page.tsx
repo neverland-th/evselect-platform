@@ -1,9 +1,10 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { ImageCredit } from '@/components/ImageCredit';
+
 import EvTyreCover from '@/components/EvTyreCover';
 import { evTyreArticle as article, tyreModels, tyreSources as sources } from '@/lib/ev-tyre-article';
 
@@ -51,6 +52,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
     publisher: { '@type': 'Organization', name: 'EVSELECTS.COM', url: 'https://evselects.com/' },
   };
   return <article className="mx-auto max-w-5xl px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
+      <ImageMetadata pagePath="/articles/ev-tyre-and-coilover-selection-guide" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} aria-hidden="true" />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">
@@ -62,7 +64,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>29 กันยายน 2569</time> · อ่านประมาณ {article.readTime} · เรียบเรียงโดย <Link href="/" className={linkStyle}>EVSELECTS.COM</Link></p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <EvTyreCover eager />
-        <figcaption className="p-4 text-sm leading-relaxed text-slate-600">ภาพปกเป็นภาพประกอบแนวคิดของ <Link href="/" className={linkStyle}>EVSELECT</Link> โดยเวอร์ชันแนวนอนจัดทำด้วย AI จากภาพต้นฉบับ คุณสมบัติด้านเสียง น้ำหนักบรรทุก และการยึดเกาะต้องตรวจตามรุ่นและขนาดยาง ไม่ใช่คุณสมบัติที่ยาง EV ทุกเส้นให้ได้เท่ากัน</figcaption>
+
       </figure>
     </header>
     <div className="mt-10 space-y-12">
@@ -96,7 +98,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
           <div className="space-y-2"><h3 id={`${tyre.id}-title`} className="text-xl font-bold text-slate-950 sm:text-2xl">{index + 1}. {tyre.name}</h3><p className="font-semibold text-lime-800">{tyre.direction}</p></div>
           <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
             <Image src={tyre.image} alt={tyre.alt} width={tyre.width} height={tyre.height} sizes="(max-width: 640px) 100vw, 640px" className="mx-auto h-auto max-h-[460px] w-full object-contain" />
-            <figcaption className="space-y-2 bg-slate-50 p-4 text-sm leading-relaxed text-slate-600"><p>{tyre.caption}</p>{'imageAuthor' in tyre ? <ImageCredit author={tyre.imageAuthor} source={tyre.imageSource} license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" className="" /> : <p>ภาพผลิตภัณฑ์: <Source href={tyre.imageSource}>{tyre.credit} · แหล่งภาพต้นฉบับ</Source></p>}</figcaption>
+
           </figure>
           <p><strong>ออกแบบมาเพื่ออะไร:</strong> {tyre.engineering} <Source href={tyre.source}>รายละเอียดจาก {tyre.credit}</Source></p>
           <p><strong className="text-slate-900">ข้อดี:</strong> {tyre.pro}</p>

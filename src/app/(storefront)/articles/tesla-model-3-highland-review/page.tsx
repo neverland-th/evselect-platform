@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -40,6 +41,7 @@ const rows = [
 export default function TeslaModel3HighlandReviewPage() {
   return (
     <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 text-slate-900 bg-white">
+      <ImageMetadata pagePath="/articles/tesla-model-3-highland-review" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav aria-label="เส้นทางนำทาง" className="mb-8">
         <Link href="/articles" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-lime-700"><ArrowLeft className="w-4 h-4" /> กลับไปหน้าบทความและรีวิวรถยนต์ไฟฟ้า</Link>
@@ -54,7 +56,7 @@ export default function TeslaModel3HighlandReviewPage() {
       </header>
       <figure className="mb-9">
         <div className="relative aspect-[1280/852] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100"><Image src="/images/reviews/tesla-model-3-hero.jpg" alt="Tesla Model 3 Highland สีแดงที่งาน Autofrühling Ulm ประเทศเยอรมนี ปี 2024" fill priority sizes="(max-width: 1152px) 100vw, 1152px" className="object-contain" /></div>
-        <figcaption className="mt-2 text-xs leading-relaxed text-slate-500">ภาพ Model 3 Highland ในเยอรมนี ถ่ายปี 2024 โดย Alexander-93 (Alexander Migl) / <a href="https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg" target="_blank" rel="noopener noreferrer" className="underline text-lime-800">Wikimedia Commons<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className="underline text-lime-800">CC BY-SA 4.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาดและแสดงเต็มภาพ อุปกรณ์อาจต่างจากรถสเปกไทยปัจจุบัน</figcaption>
+
       </figure>
       <aside className="rounded-2xl bg-lime-50 border border-lime-200 p-5 sm:p-6 mb-10 text-sm leading-relaxed">
         <h2 className="font-bold text-base mb-2 flex gap-2 items-center"><Info className="w-5 h-5 shrink-0 text-lime-700" /> อ่านให้ตรงรุ่นและปีของรถ</h2>

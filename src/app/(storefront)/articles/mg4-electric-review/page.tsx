@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -50,6 +51,7 @@ const trims = [
 
 export default function MG4ElectricReviewPage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/mg4-electric-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={`${linkStyle} inline-flex items-center gap-2 text-sm`}><ArrowLeft size={16} />บทความรถ EV</Link></nav>
     <header className="space-y-6">
@@ -64,10 +66,7 @@ export default function MG4ElectricReviewPage() {
       <p className="text-sm leading-6">หน้านี้สังเคราะห์เอกสารผู้ผลิตและเสนอแนวทางทดลองรถ ไม่มีผลทดสอบขับหรือคะแนนจากทีมงาน ข้อมูลหลักครอบคลุม D Standard Range และ X Long Range รุ่นปี 2026 ในไทย</p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <Image src={mg4Article.image} alt={mg4Article.imageAlt} width={1280} height={720} preload sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-        <figcaption className="space-y-2 p-4 text-sm leading-6">
-          <p>MG4 Electric X รุ่นปี 2026 ที่เมืองทองธานี ถ่ายวันที่ 28 มีนาคม 2569 ป้ายราคาในภาพเป็นข้อมูลของวันจัดแสดง ไม่ใช่ข้อเสนอปัจจุบันหรือรถทดสอบของเรา</p>
-          <p>ภาพ: <Source href={mg4Article.imageSource}>{mg4Article.imageAuthor} / Wikimedia Commons</Source> · <Source href={mg4Article.imageLicenseUrl}>{mg4Article.imageLicense}</Source> · ใช้ภาพย่อจากต้นฉบับโดยไม่รีทัช</p>
-        </figcaption>
+
       </figure>
     </header>
 

@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -27,6 +28,7 @@ const jsonLd = {
 
 export default function HybridToEVChassisDynamicsPage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/hybrid-to-ev-chassis-dynamics-transition" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -43,7 +45,7 @@ export default function HybridToEVChassisDynamicsPage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1920} height={1198} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">แชสซี Volkswagen ID.3 จัดแสดง เห็นชุดแบตเตอรี่ขนาดใหญ่ระหว่างล้อ ภาพปี 2021 ใช้ประกอบเรื่องการจัดวางอุปกรณ์ ไม่ใช่ภาพเปรียบเทียบรถไฮบริดหรือหลักฐานสเปกรถไทย ภาพ: <Source href={article.imageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ย่อขนาด</figcaption>
+
     </figure>
 
     <div className="space-y-12">
@@ -71,7 +73,7 @@ export default function HybridToEVChassisDynamicsPage() {
         <p>ตอนลองรถ เริ่มจากการออกตัวและผ่อนความเร็วอย่างต่อเนื่องในเส้นทางที่ได้รับอนุญาต สังเกตว่าคุมความเร็วต่ำได้ง่ายหรือไม่ และผู้โดยสารรู้สึกอย่างไร ไม่จำเป็นต้องกดเต็มคันเร่งเพื่อหาคำตอบ หากสงสัยว่าตัวเลขกำลังต่างจากแรงดึงที่รู้สึกอย่างไร อ่าน <Link href="/articles/ev-horsepower-vs-torque-explained" className={linkStyle}>แรงม้ากับแรงบิดในรถ EV</Link> ต่อได้</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src={article.motorImage} alt="ห้องอุปกรณ์ใต้ฝากระโปรง Toyota bZ4X เห็นอินเวอร์เตอร์ สายสีส้ม และแบตเตอรี่แรงดันต่ำ" width={1920} height={1280} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="p-4 text-sm leading-6">อินเวอร์เตอร์อยู่เหนือมอเตอร์ของ Toyota bZ4X ตามคำอธิบายต้นฉบับ ภาพรถจัดแสดงในคอสตาริกา ปี 2022 ใช้ดูอุปกรณ์ ไม่ใช่ผลทดสอบการตอบสนองหรือสเปกไทย ภาพ: <Source href={article.motorSource}>Mariordo (Mario Roberto Durán Ortiz)</Source> · <Source href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</Source> · ย่อขนาด</figcaption>
+
         </figure>
       </section>
 

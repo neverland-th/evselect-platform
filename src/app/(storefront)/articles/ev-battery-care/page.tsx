@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -54,6 +55,7 @@ const jsonLd = {
 
 export default function EVBatteryCareArticle() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/ev-battery-care" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-8 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">
@@ -68,10 +70,7 @@ export default function EVBatteryCareArticle() {
       <p className="text-sm leading-6 text-slate-600">ตัวอย่างคำแนะนำในหน้านี้อ้างอิงคู่มือ Tesla Model 3 สำหรับภูมิภาคไทยฉบับภาษาอังกฤษ รถยี่ห้ออื่นหรือรุ่นปีต่างกันต้องตรวจคู่มือของตัวเอง ไม่ใช้ตัวเลขของ Tesla แทนกันโดยอัตโนมัติ</p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <Image src={batteryArticle.image} alt={batteryArticle.imageAlt} width={1920} height={1198} sizes="(max-width: 896px) 100vw, 832px" preload className="h-auto w-full" />
-        <figcaption className="space-y-2 p-4 text-sm leading-6 text-slate-600">
-          <p>แชสซีจัดแสดง Volkswagen ID.3 ช่วยให้เห็นตำแหน่งชุดแบตเตอรี่ใต้พื้นรถ ภาพนี้ใช้ประกอบความเข้าใจเรื่องโครงสร้าง ไม่ใช่ผลทดสอบแบตเตอรี่หรือภาพรถของทีมงาน</p>
-          <p>ภาพ: <Source href={batteryArticle.imageSource}>{batteryArticle.imageAuthor} / Wikimedia Commons</Source> · <Source href={batteryArticle.imageLicenseUrl}>{batteryArticle.imageLicense}</Source> · ย่อขนาดสำหรับเว็บโดยไม่รีทัช</p>
-        </figcaption>
+
       </figure>
     </header>
 
@@ -94,10 +93,7 @@ export default function EVBatteryCareArticle() {
 
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <Image src="/images/reviews/tesla-model-3-hero.jpg" alt="Tesla Model 3 Highland สีแดงจัดแสดงที่เมือง Ulm ประเทศเยอรมนี" width={1280} height={852} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-        <figcaption className="space-y-2 p-4 text-sm leading-6 text-slate-600">
-          <p>Tesla Model 3 Highland ถ่ายที่ Ulm ประเทศเยอรมนีในปี 2024 ใช้ประกอบตัวอย่างรถที่มีคู่มืออ้างอิงในบทความ ภาพภายนอกไม่ยืนยันชนิดแบตเตอรี่หรือขีดจำกัดการชาร์จของรถแต่ละคัน</p>
-          <p>ภาพ: <Source href="https://commons.wikimedia.org/wiki/File:Tesla_Model_3_(2023)_Autofr%C3%BChling_Ulm_IMG_9282.jpg">Alexander Migl / Wikimedia Commons</Source> · <Source href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</Source> · ย่อขนาดสำหรับเว็บโดยไม่รีทัช</p>
-        </figcaption>
+
       </figure>
 
       <section aria-labelledby="ac-dc" className="space-y-4">

@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
@@ -148,6 +149,7 @@ export default function EVDamperTuningGuidePage() {
 
   return (
     <article className="mx-auto max-w-5xl bg-white px-4 py-10 text-slate-900 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/ev-damper-tuning-bump-rebound-guide" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ EVSELECT', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: damperArticle.title, item: damperArticle.url }] }).replace(/</g, '\\u003c') }} />
       <nav aria-label="เส้นทางบทความ" className="mb-8">
@@ -172,7 +174,7 @@ export default function EVDamperTuningGuidePage() {
         </nav>
         <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
           <Image src={damperArticle.cover} alt={damperArticle.coverAlt} sizes="(max-width: 1024px) 100vw, 960px" preload className="h-auto w-full object-contain" />
-          <figcaption className="border-t border-slate-200 bg-white px-5 py-4 text-xs leading-relaxed text-slate-500">ภาพโช้คสตรัทปรับเกลียว KW ที่เจ้าของเว็บไซต์จัดส่งให้ ใช้อธิบายภาพรวม ไม่ระบุรุ่นของแต่ละชิ้นหรือยืนยันการติดตั้งกับรถใด · <a href="https://www.kwsuspensions.com/uk/products/street-performance" target="_blank" rel="noopener noreferrer" className="text-lime-800 underline underline-offset-4">ดูผลิตภัณฑ์จาก KW ↗<span className="sr-only"> (เปิดแท็บใหม่)</span></a></figcaption>
+
         </figure>
         <Note title="คำตอบสั้น ๆ ก่อนลงรายละเอียด" headingLevel={2}>
           <p className="leading-relaxed"><strong>อย่าเริ่มจาก “ยี่ห้อไหนจบ” ให้เริ่มจาก “อาการไหนอยากแก้ และอะไรที่ยอมเสียไม่ได้”</strong> เลือกชุดที่รองรับรถจริง มีสปริงและระยะทำงานเหมาะกับโหลด ติดตั้งถูก และมีคนดูแลค่าตั้งต้นให้ ก่อนเพิ่มจำนวนช่องปรับ ปุ่มมากขึ้นช่วยแยกการจูน แต่ไม่ซ่อมยางผิดสเปก เพิ่มระยะยุบที่หายไป หรือแก้บูชที่ติดตั้งบิดค้าง</p>

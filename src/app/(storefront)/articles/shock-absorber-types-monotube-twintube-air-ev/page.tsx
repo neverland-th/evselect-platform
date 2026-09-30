@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -47,6 +48,7 @@ function DamperDiagram({ twin }: { twin: boolean }) {
 
 export default function ShockAbsorberTypesGuidePage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/shock-absorber-types-monotube-twintube-air-ev" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={`${linkStyle} inline-flex items-center gap-2 text-sm`}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -87,12 +89,9 @@ export default function ShockAbsorberTypesGuidePage() {
         </div>
         <p className="text-sm leading-6">ภาพวาดโดย <BrandHomeLink /> เพื่ออธิบายหลักการทั่วไป ไม่ใช่สัดส่วนจริงหรือภาพตัดของยี่ห้อใด และไม่แสดงค่าประสิทธิภาพจากการทดสอบ</p>
         <p>ตัวอย่างที่หักล้างความเข้าใจว่า Twin-tube ต้องเป็นของประหยัดเสมอ คือ <Source href={sources.kw}>KW V3 ที่ใช้โครงสร้าง Twin-tube</Source> และแยกปรับ Compression กับ Rebound ได้ ชื่อกระบอกจึงไม่พอจะตัดสินว่าโช้คตัวไหนเหมาะกับคุณกว่า</p>
-        <figure className="grid items-center gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:grid-cols-[200px_1fr]">
+        <figure className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <Image src="/images/articles/gas-damper-photo.jpg" alt="โช้ค Pro Comp ES9000 สีขาว ก้านโลหะยืดออก บนพื้นหลังสีฟ้า" width={400} height={525} sizes="200px" className="mx-auto h-auto w-full max-w-[200px] rounded-lg" />
-          <figcaption className="space-y-3 text-sm leading-6">
-            <p>ภาพโช้คแก๊สให้เห็นก้าน กระบอก และจุดยึดภายนอก รูปลักษณ์ภายนอกเพียงอย่างเดียวไม่ยืนยันโครงสร้างภายในหรือความเข้ากันได้กับรถ EV</p>
-            <p>ภาพในคลังปี 2549: <Source href={sources.damperPhoto}>TEy~commonswiki / Wikimedia Commons</Source> (เครดิตตามหน้าคลังภาพ) · <Source href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</Source> · แสดงเต็มภาพและย่อขนาด ไม่ใช่สินค้าที่เราเสนอขาย</p>
-          </figcaption>
+
         </figure>
       </section>
 
@@ -117,7 +116,7 @@ export default function ShockAbsorberTypesGuidePage() {
         <h2 id="thai-example" className={headingStyle}>ตัวอย่างสเปกไทย: ZEEKR 7X ต้องดูรุ่นย่อย</h2>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src={article.image} alt={article.imageAlt} width={1920} height={1440} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="space-y-2 p-4 text-sm leading-6"><p>ZEEKR 7X ภาพประกอบรุ่นรถ ภาพนี้ไม่ยืนยันตลาดจำหน่าย รุ่นย่อย หรืออุปกรณ์ของรถสเปกไทย ข้อมูลช่วงล่างอ้างจากโบรชัวร์ด้านล่าง</p><p>ภาพ: <Source href={article.imageSource}>{article.imageAuthor} / Wikimedia Commons</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ย่อขนาด แสดงเต็มสัดส่วน</p></figcaption>
+
         </figure>
         <p><Source href={sources.zeekr}>สเปก ZEEKR 7X ประเทศไทย</Source> มี Standard RWD, Long Range RWD และ Performance AWD แต่ <Source href={sources.zeekrBrochure}>โบรชัวร์ไทย สิงหาคม 2025 หน้า 3</Source> ทำเครื่องหมายอุปกรณ์ “ถุงลมพร้อม CCD Electromagnetic Vibration Reduction System” เฉพาะ <strong>Performance AWD</strong> ส่วนสองรุ่น RWD เป็นขีด จึงไม่ควรเหมารวมว่า 7X ทุกรุ่นได้ช่วงล่างชุดเดียวกัน</p>
         <p>โบรชัวร์เดียวกันระบุน้ำหนัก Performance AWD ที่ <strong>2,535 กก.</strong> และกำลัง <strong>475 kW / 637 แรงม้า</strong> ตัวอย่างนี้ชี้ว่าการเลือกช่วงล่างและยางต้องรู้รุ่นย่อยจริง ไม่ใช้แค่ชื่อรถ ส่วนคำว่า CCD ในเอกสารยังไม่พอให้สรุปว่าเป็น ZF CDC หรือ BWI MagneRide</p>

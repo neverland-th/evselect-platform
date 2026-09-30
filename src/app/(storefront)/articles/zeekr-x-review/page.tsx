@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -36,6 +37,7 @@ export default function ZeekrXArticlePage() {
     ['ล้อและขนาดยาง', '19 นิ้ว · 235/50 R19', '20 นิ้ว Forged · 245/45 R20'],
   ];
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/zeekr-x-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -51,7 +53,7 @@ export default function ZeekrXArticlePage() {
     </header>
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1280} height={720} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">Flagship AWD จัดแสดงที่กรุงเทพฯ วันที่ 20 กรกฎาคม 2024 ใช้ประกอบรูปทรงรถ ไม่ใช่ภาพ The New ZEEKR X ตามโบรชัวร์ปี 2026 หรือรถทดสอบของเรา ภาพ: <Source href={article.imageSource}>{article.imageAuthor} / Wikimedia Commons</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ใช้ภาพย่อ</figcaption>
+
     </figure>
     <div className="space-y-12">
       <section className="space-y-5" aria-labelledby="thai-trims">

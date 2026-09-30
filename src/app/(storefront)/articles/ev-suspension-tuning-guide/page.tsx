@@ -1,10 +1,11 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import BrandHomeLink from '@/components/BrandHomeLink';
-import { ImageCredit } from '@/components/ImageCredit';
+
 import { damperArticle } from '@/lib/damper-article';
 
 const title = 'ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค';
@@ -40,6 +41,7 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
 
 export default function EvSuspensionTuningGuidePage() {
   return <article className="mx-auto max-w-5xl px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
+      <ImageMetadata pagePath="/articles/ev-suspension-tuning-guide" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
       mainEntityOfPage: `https://evselects.com${path}`, image: `https://evselects.com${hero}`,
@@ -56,10 +58,7 @@ export default function EvSuspensionTuningGuidePage() {
       <p className="text-sm text-slate-500">อัปเดต <time dateTime="2026-09-21">21 กันยายน 2569</time> · เรียบเรียงโดย <BrandHomeLink /> จากเอกสารผู้ผลิต</p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <Image src={hero} alt="Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ" width={1280} height={640} preload sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" />
-        <figcaption className="space-y-2 p-4 text-sm leading-relaxed text-slate-600">
-          <p>ภาพ Tesla Model 3 Performance ปี 2024 ใช้ประกอบเรื่องการเลือกช่วงล่าง ไม่ใช่รถทดสอบหรือหลักฐานว่าโช้คทั้งสี่แบรนด์ติดตั้งกับรถในภาพได้</p>
-          <ImageCredit author="iMoD Official" source="https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png" license="CC BY 3.0" licenseUrl="https://creativecommons.org/licenses/by/3.0/" className="" />
-        </figcaption>
+
       </figure>
     </header>
 
@@ -84,7 +83,7 @@ export default function EvSuspensionTuningGuidePage() {
         <p>ตัวอย่างต่อไปนี้ใช้ให้เห็นความต่างของระบบปรับตามข้อมูลผู้ผลิต ไม่ใช่ผลทดสอบความนุ่มหรือความเกาะถนนบนรถคันเดียวกัน และยังไม่ยืนยันว่าแต่ละชุดรองรับรถของคุณ</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src={damperArticle.cover.src} alt={damperArticle.coverAlt} width={damperArticle.cover.width} height={damperArticle.cover.height} sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" />
-          <figcaption className="p-4 text-sm leading-relaxed text-slate-600">ภาพผลิตภัณฑ์ KW ที่เจ้าของเว็บไซต์จัดส่งให้ ใช้ประกอบภาพรวมคอยล์โอเวอร์ ไม่ระบุรุ่นของแต่ละชิ้นหรือยืนยันการติดตั้งกับรถใด · <Source href="https://www.kwsuspensions.com/uk/products/street-performance">ดูผลิตภัณฑ์จาก KW</Source></figcaption>
+
         </figure>
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="space-y-3 rounded-2xl border border-slate-200 p-5"><h3 className="text-xl font-bold text-slate-900">KW V3</h3><p>หน้า V3 ของ KW ระบุปรับ Compression ช่วง Low-speed 12 คลิก และ Rebound ช่วง Low-speed 16 คลิกแยกกัน คำว่า Low-speed ในที่นี้หมายถึงการเคลื่อนที่ของแกนโช้ค ไม่ใช่ความเร็วรถ</p><p>ก่อนเลือก ให้ขอรหัสชุด ช่วงความสูง และคำแนะนำสำหรับรถรุ่นย่อยของคุณโดยเฉพาะ</p><Source href={sources.kw}>ข้อมูลระบบปรับ KW V3 จากผู้ผลิต</Source></div>

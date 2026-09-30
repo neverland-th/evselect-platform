@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -144,6 +145,7 @@ const homeFaqs = [
 export default function StorefrontPage() {
   return (
     <div className="bg-white text-slate-950">
+      <ImageMetadata pagePath="/" />
       <section className="border-b border-slate-200 bg-slate-950 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 md:py-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
           <div className="flex flex-col justify-between gap-8 lg:py-4">
@@ -315,10 +317,7 @@ export default function StorefrontPage() {
           <div className="grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
               <Image src="/images/articles/ev-tyre-michelin-audi.jpg" alt="แก้มยาง Michelin Pilot Sport All Season 4 บนล้อ Audi เห็นชื่อรุ่นและรหัสขนาดยาง" width={1920} height={1920} sizes="(max-width: 1023px) 100vw, 40vw" className="h-auto w-full" />
-              <figcaption className="space-y-2 p-5 text-xs leading-relaxed text-slate-600">
-                <p>ภาพตัวอย่างตำแหน่งชื่อรุ่นและรหัสบนแก้มยาง ไม่ใช่การแนะนำยางเส้นนี้ให้รถ EV ทุกรุ่น</p>
-                <p>ภาพ: <a className={textLink} href="https://commons.wikimedia.org/wiki/File:Audi_Wheel_with_Michelin_Pilot_Sport_All_Season_4_Tire.jpg" target="_blank" rel="noopener noreferrer">TaurusEmerald / Wikimedia Commons<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · <a className={textLink} href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0<span className="sr-only"> (เปิดแท็บใหม่)</span></a> · ย่อขนาด ไม่แต่งภาพ</p>
-              </figcaption>
+
             </figure>
             <div>
               <ol className="space-y-4">

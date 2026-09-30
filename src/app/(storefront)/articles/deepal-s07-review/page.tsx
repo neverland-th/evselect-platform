@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -37,6 +38,7 @@ export default function DeepalS07ArticlePage() {
     ['ยาว × กว้าง × สูง', '4,750 × 1,930 × 1,625 มม.'],
   ];
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/deepal-s07-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -53,7 +55,7 @@ export default function DeepalS07ArticlePage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1280} height={960} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">รถป้าย DEEPAL NEW S07 จัดแสดงที่เมืองทองธานี เดือนพฤศจิกายน 2025 ใช้ประกอบรูปทรงตัวรถ ไม่ใช่ภาพทดลองขับของทีมงาน ภาพ: <Source href={article.imageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ภาพย่อจาก Wikimedia Commons</figcaption>
+
     </figure>
 
     <div className="space-y-12">
@@ -78,7 +80,7 @@ export default function DeepalS07ArticlePage() {
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <p className="border-b border-slate-200 p-4 text-sm font-semibold leading-6">ภาพประกอบห้องโดยสาร S07 พวงมาลัยซ้ายในเยอรมนี รถไทยเป็นพวงมาลัยขวาและอุปกรณ์อาจต่างกัน</p>
           <Image src={article.cabinImage} alt="ห้องโดยสาร Deepal S07 พวงมาลัยซ้าย จอกลางและคอนโซล ในงาน IAA 2025 ประเทศเยอรมนี" width={1280} height={856} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="p-4 text-sm leading-6">ใช้ดูแนวทางจัดวางจอกลางและคอนโซลเท่านั้น ไม่ใช้ยืนยันรายการอุปกรณ์ของ NEW S07 ไทย ภาพ: <Source href={article.cabinImageSource}>Alexander Migl</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · IAA 2025 · ภาพย่อจาก Wikimedia Commons</figcaption>
+
         </figure>
       </section>
 

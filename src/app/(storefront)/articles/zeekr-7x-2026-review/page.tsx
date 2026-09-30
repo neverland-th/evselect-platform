@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -40,6 +41,7 @@ const specs = [
 
 export default function Zeekr7XReviewPage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/zeekr-7x-2026-review" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -56,7 +58,7 @@ export default function Zeekr7XReviewPage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1920} height={1440} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">ภาพประกอบ ZEEKR 7X จากต่างประเทศ ใช้ดูรูปทรงรถ ไม่ยืนยันรุ่นย่อยหรืออุปกรณ์สเปกไทย ภาพ: <Source href={article.imageSource}>{article.imageAuthor}</Source> · <Source href={article.imageLicenseUrl}>{article.imageLicense}</Source> · ย่อขนาด</figcaption>
+
     </figure>
 
     <div className="space-y-12">
@@ -89,7 +91,7 @@ export default function Zeekr7XReviewPage() {
         <p>ไม่มีสูตรแปลงแรงม้าเป็น Load Index และการเอาน้ำหนักรถหารสี่ไม่พอสำหรับเลือกยาง เพราะยังต้องคำนึงถึงการบรรทุกและข้อกำหนดของแต่ละเพลา อ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className={linkStyle}>วิธีเลือกยางให้ตรงพิกัดและการใช้งานของ EV</Link> เพื่อเตรียมข้อมูลให้ร้านตรวจความเหมาะสมก่อนซื้อ</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src={teslaPhoto.image} alt="Tesla Model 3 Performance ปี 2024 สีเทา เห็นตัวรถและล้อ เป็นตัวอย่างรถอีกแบบที่ต้องตรวจสเปกยางแยกตามรุ่น" width={1280} height={640} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="p-4 text-sm leading-6">Model 3 Performance เป็นอีกตัวอย่างในคู่มือเลือกยาง รูปรถทั้งสองช่วยเห็นบริบทการใช้งาน แต่ใช้ยืนยันขนาดหรือพิกัดยางแทนคู่มือไม่ได้ ภาพปี 2024: <Source href={teslaPhoto.imageSource}>iMoD Official / Wikimedia Commons</Source> · <Source href={teslaPhoto.imageLicenseUrl}>CC BY 3.0</Source> · ย่อขนาด ไม่ใช่ภาพทดสอบของทีมงาน</figcaption>
+
         </figure>
       </section>
 

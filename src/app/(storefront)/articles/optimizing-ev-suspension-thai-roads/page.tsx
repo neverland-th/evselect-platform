@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -28,6 +29,7 @@ const jsonLd = {
 
 export default function ThaiRoadSuspensionGuidePage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/optimizing-ev-suspension-thai-roads" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -43,7 +45,7 @@ export default function ThaiRoadSuspensionGuidePage() {
 
     <figure className="my-9 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <Image src={article.image} alt={article.imageAlt} width={1280} height={640} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" priority />
-      <figcaption className="p-4 text-sm leading-6">Model 3 Performance ปี 2024 เป็นตัวอย่างรถที่มีระบบปรับแรงหน่วงจากโรงงาน ซึ่งควรตรวจการตั้งค่าก่อนเลือกชุดใหม่ ภาพ: <Source href={article.imageSource}>iMoD Official / Wikimedia Commons</Source> · <Source href={article.imageLicenseUrl}>CC BY 3.0</Source> · ย่อขนาด ไม่ใช่ภาพทดสอบบนถนนไทย</figcaption>
+
     </figure>
 
     <div className="space-y-12">
@@ -83,12 +85,9 @@ export default function ThaiRoadSuspensionGuidePage() {
         <p>อย่าใช้ระยะยุบขั้นต่ำหรือจำนวนมิลลิเมตรที่โหลดได้เพียงค่าเดียวกับ EV ทุกคัน ขอให้ร้านอธิบายว่าความสูงที่เสนออยู่ในช่วงที่ผู้ผลิตชุดนั้นกำหนดอย่างไร รวมถึงต้องตั้งศูนย์หรือปรับเทียบระบบใดตามขั้นตอนของรถรุ่นนั้น</p>
         <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
           <Image src="/images/articles/single-wishbone-suspension.jpg" alt="แบบจำลอง MacPherson strut พร้อมลูกศรชี้ชุดสตรัท คอม้า ดุมและสตัดล้อ ปีกนกล่าง และชุดเบรก" width={1920} height={849} sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-          <figcaption className="space-y-3 p-4 text-sm leading-6">
-            <p>ภาพโครงสร้างทั่วไปเพื่อให้เห็นชิ้นส่วนรอบโช้ค ไม่ใช่ช่วงล่าง Model 3 หรือแบบสำหรับติดตั้งกับ EV รุ่นใดโดยเฉพาะ ภาพ: <Source href={sources.diagram}>Atharv Chandel / Wikimedia Commons</Source> · <Source href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</Source> · ย่อขนาด</p>
-            <p>อ่านป้ายในภาพ: MacPherson Strut = ชุดสตรัท, Steering Knuckle = คอม้า, Wheel Studs &amp; Wheel Hub = สตัดล้อและดุมล้อ, Lower Wishbone = ปีกนกล่าง, Brake Assembly = ชุดเบรก</p>
-            <Link href="/images/articles/single-wishbone-suspension.jpg" prefetch={false} className={linkStyle}>ดูภาพโครงสร้างขนาดเต็ม</Link>
-          </figcaption>
+
         </figure>
+        <p>ในแผนภาพ MacPherson Strut คือชุดสตรัท, Steering Knuckle คือคอม้า, Wheel Studs &amp; Wheel Hub คือสตัดล้อและดุมล้อ, Lower Wishbone คือปีกนกล่าง และ Brake Assembly คือชุดเบรก เป็นโครงสร้างทั่วไป ไม่ใช่แบบติดตั้งกับ Model 3 หรือ EV รุ่นใดโดยเฉพาะ <Link href="/images/articles/single-wishbone-suspension.jpg" prefetch={false} className={linkStyle}>เปิดภาพโครงสร้างขนาดเต็ม</Link> เพื่ออ่านป้ายแต่ละชิ้น</p>
         <p>สปริงกับแดมเปอร์ต้องทำงานร่วมกัน ส่วนชื่อ Monotube, Twin-tube และถุงลมบอกคนละคุณสมบัติ อ่าน <Link href="/articles/shock-absorber-types-monotube-twintube-air-ev" className={linkStyle}>ประเภทโช้คและระบบถุงลม</Link> เพื่อเทียบชุดที่ร้านเสนอให้ตรงหน้าที่ของมัน</p>
       </section>
 

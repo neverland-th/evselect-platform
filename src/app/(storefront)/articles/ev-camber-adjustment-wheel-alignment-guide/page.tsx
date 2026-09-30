@@ -1,3 +1,4 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
@@ -35,6 +36,7 @@ const directions = [
 
 export default function EVCamberAdjustmentGuidePage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
+      <ImageMetadata pagePath="/articles/ev-camber-adjustment-wheel-alignment-guide" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={`${linkStyle} inline-flex items-center gap-2 text-sm`}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
@@ -48,10 +50,7 @@ export default function EVCamberAdjustmentGuidePage() {
       </div>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <Image src={camberArticle.image} alt={camberArticle.imageAlt} width={1624} height={875} preload sizes="(max-width: 896px) 100vw, 832px" className="h-auto w-full" />
-        <figcaption className="space-y-2 p-4 text-sm leading-6">
-          <p>LADA Vesta Sport บนแท่นตั้งศูนย์ ภาพวันที่ 23 สิงหาคม 2562 ใช้อธิบายการติดเป้าวัดที่ล้อ รถในภาพไม่ใช่ EV และสถานที่ไม่ใช่ศูนย์บริการของเรา</p>
-          <p>ภาพ: <Source href={camberArticle.imageSource}>{camberArticle.imageAuthor} / Wikimedia Commons</Source> · <Source href={camberArticle.imageLicenseUrl}>{camberArticle.imageLicense}</Source> · แสดงเต็มสัดส่วนและย่อขนาดสำหรับเว็บ</p>
-        </figcaption>
+
       </figure>
     </header>
 
@@ -75,12 +74,13 @@ export default function EVCamberAdjustmentGuidePage() {
           <div><h3 className="text-lg font-bold text-slate-950">Toe — ล้อชี้หุบเข้าหรือกางออก</h3><p>มองจากด้านบน: ถ้าส่วนหน้าของล้อคู่เดียวกันหันเข้าหากันคือ Toe-in ถ้าหันออกคือ Toe-out มุมโทเกี่ยวข้องกับการสึกของยางด้วย จึงไม่ควรดูเฉพาะแคมเบอร์เมื่อยางสึกผิดปกติ</p></div>
           <div><h3 className="text-lg font-bold text-slate-950">Caster — แนวแกนเลี้ยวเอียงไปทางไหน</h3><p>มองจากด้านข้างรถ: เป็นมุมของแกนเลี้ยว ไม่ใช่มุมเอียงของวงล้อแบบแคมเบอร์ มุมนี้เกี่ยวข้องกับพฤติกรรมพวงมาลัย และวิธีปรับได้มากน้อยแค่ไหนขึ้นกับช่วงล่างของแต่ละรุ่น</p></div>
         </div>
+        <p>แผนภาพด้านล่างมองจากด้านหน้ารถ เส้นประคือแนวดิ่ง มุมเอียงวาดให้เห็นง่าย ไม่ใช่สเกลจริง ค่าแนะนำ หรือผลจำลองการยึดเกาะ</p>
         <figure className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
           <div className="grid gap-5 sm:grid-cols-3">{directions.map(item => <div key={item.id} className="text-center">
             <svg viewBox="0 0 260 135" role="img" aria-labelledby={`camber-${item.id}`} className="mx-auto w-full max-w-60"><title id={`camber-${item.id}`}>{`${item.label}: ${item.text} เมื่อมองจากด้านหน้า`}</title><rect x="92" y="18" width="76" height="62" rx="14" fill="#d9f99d" stroke="#4d7c0f" strokeWidth="2" /><line x1="20" y1="120" x2="240" y2="120" stroke="#94a3b8" strokeWidth="2" /><line x1="70" y1="20" x2="70" y2="113" stroke="#94a3b8" strokeDasharray="4 4" /><line x1="190" y1="20" x2="190" y2="113" stroke="#94a3b8" strokeDasharray="4 4" /><line x1={item.leftTop} y1="38" x2={item.leftBottom} y2="108" stroke="#0f172a" strokeWidth="14" strokeLinecap="round" /><line x1={item.rightTop} y1="38" x2={item.rightBottom} y2="108" stroke="#0f172a" strokeWidth="14" strokeLinecap="round" /></svg>
             <p className="font-bold text-slate-950">{item.label}</p><p className="text-sm leading-6">{item.text}</p>
           </div>)}</div>
-          <figcaption className="mt-5 text-sm leading-6">ภาพอธิบายทิศทางแคมเบอร์เมื่อมองจากด้านหน้า เส้นประคือแนวดิ่ง มุมเอียงวาดให้เห็นง่าย ไม่ใช่สเกลจริง ค่าแนะนำ หรือผลจำลองการยึดเกาะ</figcaption>
+
         </figure>
         <p>ส่วน <Source href={camberSources.thaiAlignment}>การตั้งศูนย์กับการถ่วงล้อ</Source> เป็นคนละงาน: ตั้งศูนย์ดูมุมและทิศทางล้อ ส่วนถ่วงล้อแก้ความไม่สมดุลของชุดล้อและยาง อาการสั่นหรือรถดึงจึงควรให้ช่างตรวจแยกสาเหตุ ไม่สั่งทำอย่างใดอย่างหนึ่งจากชื่ออาการอย่างเดียว</p>
       </section>

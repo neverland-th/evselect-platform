@@ -1,10 +1,11 @@
+import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import BrandHomeLink from '@/components/BrandHomeLink';
-import { ImageCredit } from '@/components/ImageCredit';
+
 import { powertrainArticle as article } from '@/lib/powertrain-article';
 
 const linkStyle = 'font-semibold text-lime-800 underline decoration-lime-400 underline-offset-4 hover:text-lime-950 focus-visible:outline-2 focus-visible:outline-offset-4';
@@ -36,6 +37,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
 
 export default function EVHorsepowerVsTorquePage() {
   return <article className="mx-auto max-w-5xl bg-white px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
+      <ImageMetadata pagePath="/articles/ev-horsepower-vs-torque-explained" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
       mainEntityOfPage: `https://evselects.com${article.path}`, image: `https://evselects.com${article.image}`,
@@ -51,7 +53,7 @@ export default function EVHorsepowerVsTorquePage() {
       <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>21 กันยายน 2569</time> · เรียบเรียงโดย <BrandHomeLink /> จากแหล่งข้อมูลที่ระบุท้ายบทความ</p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <Image src={article.image} alt={article.imageAlt} width={1920} height={1280} preload sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" />
-        <figcaption className="space-y-2 p-4 text-sm leading-relaxed"><p>อินเวอร์เตอร์เหนือมอเตอร์ของ Toyota bZ4X ที่งาน Expo Móvil ประเทศคอสตาริกา ปี 2022 ใช้ประกอบเรื่องระบบขับเคลื่อนไฟฟ้า ไม่ใช่ภาพการทดสอบไดโน่หรือรถสเปกไทยที่เรานำมาทดสอบ</p><ImageCredit author="Mariordo (Mario Roberto Durán Ortiz)" source="https://commons.wikimedia.org/wiki/File:Electric_motor_Toyota_bZ4X_Expo_2022_CRI_4894.jpg" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" className="" /></figcaption>
+
       </figure>
     </header>
     <aside className="my-9 rounded-2xl border border-lime-200 bg-lime-50 p-5 sm:p-6" aria-labelledby="quick-answer-title">
@@ -107,7 +109,7 @@ export default function EVHorsepowerVsTorquePage() {
         <p>จึงไม่ควรตัดสินว่ารถเกียร์เดี่ยว “แรงไม่สุด” หรือเกียร์สองสปีด “กินไฟกว่าเสมอ” จากจำนวนเกียร์ ถ้าต้องเลือกซื้อ ให้เทียบผลทดสอบของรถรุ่นจริงในช่วงความเร็วที่คุณใช้งาน พร้อมเงื่อนไขแบตเตอรี่และยาง</p>
       </Section>
       <Section id="compare-cars" title="6. ก่อนเทียบรถสองคัน เช็กให้ครบมากกว่า hp และ Nm">
-        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"><Image src="/images/editorial/tesla-model-3-performance-2024.png" alt="Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ" width={1280} height={640} sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" /><figcaption className="space-y-2 p-4 text-sm leading-relaxed"><p>ภาพ Model 3 Performance ปี 2024 ใช้ประกอบตัวอย่างรถสมรรถนะสูง ตัวเลขคำนวณ A/B และตาราง 100 kW ในบทความไม่ใช่ผลทดสอบของรถในภาพ</p><ImageCredit author="iMoD Official" source="https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png" license="CC BY 3.0" licenseUrl="https://creativecommons.org/licenses/by/3.0/" className="" /></figcaption></figure>
+        <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"><Image src="/images/editorial/tesla-model-3-performance-2024.png" alt="Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ" width={1280} height={640} sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" /></figure>
         <ol className="list-decimal space-y-3 pl-6"><li><strong>รุ่น ปี และตลาดเดียวกันหรือไม่:</strong> ชื่อรุ่นคล้ายกันอาจมีระบบขับเคลื่อนและสเปกต่างกัน เริ่มเทียบจาก <Link href="/articles/tesla-model-3-highland-review" className={linkStyle}>ข้อมูล Model 3 สำหรับตลาดไทย</Link> และเอกสารของรถที่สนใจ</li><li><strong>ตัวเลขวัดตรงไหน:</strong> กำลังที่มอเตอร์ กำลังรวมระบบ และกำลังที่ล้อไม่ใช่ช่องเดียวกัน อย่าเทียบค่าจากคนละวิธีวัดแล้วสรุปผู้ชนะ</li><li><strong>เร่งช่วงไหน:</strong> 0–100 กม./ชม. วัดการออกตัวรวมกับการเร่ง แต่ผลเร่งแซงต้องดูช่วงความเร็วของการทดสอบนั้นโดยตรง</li><li><strong>รถอยู่ในเงื่อนไขไหน:</strong> ระดับแบตเตอรี่ อุณหภูมิ โหมดขับขี่ ยาง พื้นผิว และน้ำหนักบรรทุกต้องระบุให้พอเทียบกันได้</li></ol>
         <p><Source to="status">คู่มือ Model 3 2024+ ภาษาไทย</Source> ระบุว่ารถอาจจำกัดกำลังเมื่อแบตเตอรี่เหลือน้อย ระบบร้อนหรือเย็น หรือพบความผิดปกติของอินเวอร์เตอร์ ส่วน <Source to="modes">โหมดการเร่งความเร็ว</Source> ก็เปลี่ยนการตอบสนองและการจัดการอุณหภูมิได้ จึงต้องแยก “อัตราเร่งตามเงื่อนไขรถ” ออกจาก “ตัวเลขสูงสุดในโบรชัวร์”</p>
         <p>หลังจากเข้าใจสเปกแล้ว ถ้าปัญหาที่คุณเจอคือรถโยนหรือกระแทกหลังอัปเกรดล้อ ให้ต่อด้วย <Link href="/articles/ev-suspension-tuning-guide" className={linkStyle}>วิธีไล่อาการช่วงล่างก่อนเปลี่ยนโช้ค</Link> แรงม้าเพิ่มไม่ได้แปลว่าต้องใช้สปริงแข็งขึ้นตามสัดส่วน และจำนวนคลิกของโช้คก็ไม่ได้บอกความสามารถรองรับแรงม้า</p>

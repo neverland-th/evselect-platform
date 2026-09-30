@@ -11,6 +11,8 @@ const response = await fetch(new URL('/', base), { signal: AbortSignal.timeout(2
 assert.equal(response.status, 200, 'Home must return HTTP 200');
 const html = await response.text();
 const { document } = parseHTML(html);
+const visibleMain = document.querySelector('main').cloneNode(true);
+for (const script of visibleMain.querySelectorAll('script')) script.remove();
 
 test('Home has specific Thai metadata and exactly one matching H1', () => {
   assert.equal(document.title, 'EVSELECTS | ของแต่งรถไฟฟ้า รีวิวรถ EV และคู่มือแต่งรถ');
@@ -31,7 +33,7 @@ test('Useful Home content and all five accessible FAQs are in server HTML', () =
     assert.ok(faq.querySelector('p')?.textContent.trim().length > 70, 'Answer is present without client JS');
   }
   assert.match(document.querySelector('main').textContent, /ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน/);
-  assert.doesNotMatch(document.querySelector('main').textContent, /คอยล์โอเวอร์/);
+  assert.doesNotMatch(visibleMain.textContent, /คอยล์โอเวอร์/);
   assert.ok(document.querySelector('a[href="/articles/ev-battery-care"] img')?.getAttribute('src')?.includes('ev-chassis-volkswagen-id3'));
 });
 
@@ -45,8 +47,12 @@ test('Tyre price guidance gives an actionable comparison without pretending to s
   assert.ok(section.querySelector('a[href="/articles/ev-tyre-and-coilover-selection-guide"]'));
   assert.ok(section.querySelector('a[href="/articles/ev-camber-adjustment-wheel-alignment-guide"]'));
   assert.ok(section.querySelector('figure img[width="1920"][height="1920"]'));
-  assert.match(section.querySelector('figcaption').textContent, /TaurusEmerald/);
-  assert.match(section.querySelector('figcaption').textContent, /CC BY-SA 4.0/);
+  assert.equal(section.querySelector('figcaption'), null, 'No visible image caption');
+  const images = JSON.parse(document.querySelector('script[data-image-metadata]').textContent)['@graph'];
+  const photo = images.find(image => image.contentUrl.endsWith('/ev-tyre-michelin-audi.jpg'));
+  assert.equal(photo.creator.name, 'TaurusEmerald');
+  assert.equal(photo.license, 'https://creativecommons.org/licenses/by-sa/4.0/');
+  assert.ok(document.querySelector('footer a[href="/image-credits"]'), 'Accessible credits without under-image text');
   assert.doesNotMatch(section.textContent, /[0-9][0-9,.]*\s*บาท/);
 });
 

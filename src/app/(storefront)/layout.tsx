@@ -177,6 +177,7 @@ export default function StorefrontLayout({
                 >
                   <span>อ่านนโยบายบทความ</span>
                 </Link>
+                <Link href="/image-credits" className="ml-3 min-h-[44px] inline-flex items-center text-xs text-zinc-400 underline underline-offset-4 hover:text-white">เครดิตภาพ</Link>
               </div>
             </div>
           </div>
