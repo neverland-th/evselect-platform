@@ -1,4 +1,4 @@
-# Review photo audit — 2026-10-01, v1
+# Review photo audit — 2026-10-01, v2
 
 ## Scope and baseline
 
@@ -53,4 +53,16 @@ Existing 009 manufacturer/HeadLight photos retain their previously recorded unre
 
 ## Production release
 
-Pending in this pre-release record. Append the actual deployment identity, alias and live verification after release; local checks alone do not establish production status.
+- Application/source commit: `563c88f`, branch `codex/review-photos-2026-10-01`.
+- Deployment: `dpl_38qgBgTQ7davYoh4Lw4FMRPdjnEP`, READY, production target, https://evselect-platform-ayhj9gk8d-evselect-com.vercel.app/ . Correct project `prj_ofl9vlHAbWCLmdsTbAfuw22LUJLZ`, team `evselect-com`.
+- Built with the existing `npm run build` on Vercel, including normal Turbopack, TypeScript/static generation, image/link/metadata tests, strict content audit and attribution verification. All passed.
+- Created with `--skip-domain`, checked on its deployment URL, then promoted using the existing Vercel project. `vercel alias ls` confirmed both apex and www point to this exact deployment.
+- Candidate and live review-image checks: 11 reviews, 35 optimized image responses, all successful; all eight new direct image bytes matched local SHA-256 hashes.
+- All 32 candidate page fingerprints matched the locally rendered version after applying the audit's existing issue-hash normalization. Candidate-host strict audit rejected Vercel's deployment-URL `x-robots-tag: noindex`; the subsequent canonical production-domain strict audit passed. No robots configuration was changed.
+- Live strict content audit: 32 routes, 2,056 links, zero findings; sitemap checks passed. Live attribution: 28 page/filter variants, 125 ImageObjects, 66 accessible credit records.
+- All 32 live page fingerprints match the reviewed build. Only the six intended reviews and `/image-credits` differ from the prior baseline; homepage, article catalogue and all other routes remain identical.
+- Actual live desktop/mobile views checked for all six changed articles, including all new photos, nearby market/trim boundaries, canonical URLs and October 1 update metadata. Images painted and no horizontal page overflow was observed. One Seal image was still loading during an initial scroll; it was rechecked and visibly painted successfully. Live MG editorial-permission credit was opened on mobile.
+- Live screenshot evidence: `scratch/review-photos/screenshots/live-7x-desktop-wheels.jpg`, `live-7x-desktop-cabin.jpg`, and other `live-*` files. `live-review-evidence.json`, `live-images.json` and `live-content-audit.json` retain focused verification evidence. Temporary viewport override was reset.
+- Deployment error-log scan over the preceding 10 minutes found no logs; captured browser error observations were empty. This is a bounded release check, not ongoing monitoring.
+
+This v2 record is a later documentation-only update. It does not change the deployed application commit and does not require another deployment.
