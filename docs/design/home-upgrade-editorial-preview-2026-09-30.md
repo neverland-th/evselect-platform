@@ -1,6 +1,6 @@
 # EV upgrade guide — photographic editorial revision
 
-Status: IMPLEMENTED in the existing local Home draft, NOT DEPLOYED.
+Current status: IMPLEMENTED, VERIFIED on a staged Vercel deployment; NOT promoted to evselects.com. See the follow-up below. Earlier verification notes are retained as history.
 
 ## Scope
 
@@ -34,3 +34,20 @@ The mockups reuse the local server's automatically optimized photographs, embedd
 - Vercel project lookup remains NOT VERIFIED: the connector advertises `projectId`, but runtime requires `idOrName`; supplying the documented field, the runtime field, and both fields did not produce a valid project response. No deployment or project mutation was attempted.
 - No commits, pushes, merges, database changes, domain changes, or production deployment were performed.
 - Complete the full Home rendered review and resolve image publication rights before releasing this draft.
+
+## Follow-up: staged Vercel verification, 2026-09-30
+
+- Application commit: `32dff658d642b0b272b0ce699a039a8fc7f7ca28`, branch `codex/homepage-thai-search-2026-09-29`.
+- Preserved the current production ZEEKR 009 implementation and all 58 existing image-credit records, adding only the two Home Tesla records and Home usage for TEIN. The ZEEKR application files and image assets match `188d4a9` exactly. No main merge or push.
+- Vercel team `evselect-com`, project `evselect-platform` (`prj_ofl9vlHAbWCLmdsTbAfuw22LUJLZ`) verified through CLI and connected read tools.
+- First Preview deployment `dpl_9vWoQmqPv8xXV32xGdo1MiKXgf9J` failed because Preview lacks `DATABASE_URL`; no credential copying, database mutation, or configuration workaround was applied.
+- Staged deployment `dpl_3YMYeJo8pfkzZM1qYuxXbhDfmHPH` is READY: https://evselect-platform-jznllddiz-evselect-com.vercel.app . Created using the existing production environment with `--skip-domain`; it is a review candidate, not the live custom-domain release.
+- After staging, `vercel inspect https://evselects.com` still resolved to the earlier READY deployment `dpl_Fh8djHnuze2DjeFzRWcPMudS4q9x` / `evselect-platform-rbl25uqcb-evselect-com.vercel.app`.
+- Fresh merged-source build passed TypeScript, static generation, strict 32-page local content/link/sitemap audit (zero findings), and 28 attribution page/filter variants (117 ImageObjects, 60 credit records).
+- Candidate Home tests passed 6/6. Candidate attribution verification passed all 28 variants, 117 ImageObjects and 60 credit records. Targeted ESLint and `git diff --check` passed.
+- The production-strict audit against the staged Vercel URL stopped on its `X-Robots-Tag: noindex` header. This is not a passed remote indexability audit; the check was not disabled or modified. The local strict audit passed. No Google indexing or ranking claim is made.
+- Actual candidate Home was reviewed top-to-bottom at 1440x1000 and 390x1000, including all six expanded FAQs, every image, photo crops, article cards, banners and footer. No broken loaded images, horizontal overflow or console warnings/errors observed. Additional 320px viewport DOM measurement showed client and scroll widths both 312px.
+- Tested mobile menu open/close, hero `#ev-accessories`, infographic Tesla `#tesla-accessories`, the tyre article, the damper `#symptoms` destination, and Tesla credit anchor. All internal destinations stayed in the same tab. Mobile credit cards and long-text wrapping were reviewed. Viewport overrides reset.
+- Actual candidate screenshot evidence: `scratch/home-staged-desktop.png`, `scratch/home-staged-mobile.png`. These are not mockup-wrapper screenshots.
+- Local built server restarted at http://127.0.0.1:4359/ . Existing blocked browser error tabs were not bypassed or retried; rendered verification used the READY HTTPS candidate.
+- Remaining release boundary: publication permission for the two new Tesla photographs is still unverified. Attribution is not permission. Production promotion has not occurred; the question about final publication destination is still unanswered at this checkpoint.
