@@ -37,7 +37,7 @@ test('Useful Home content and all six accessible FAQs are in server HTML', () =>
   assert.ok(document.querySelector('a[href="/articles/ev-battery-care"] img')?.getAttribute('src')?.includes('ev-chassis-volkswagen-id3'));
 });
 
-test('Three keyword topics have relevant server-rendered content and real accessory examples', () => {
+test('Three keyword topics retain the existing two-card layout with the requested vehicle photos', () => {
   const description = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
   for (const keyword of ['แต่งรถ EV', 'ของแต่ง Tesla', 'ของแต่งรถไฟฟ้า']) {
     assert.ok(description.includes(keyword), `Description accurately covers ${keyword}`);
@@ -54,24 +54,26 @@ test('Three keyword topics have relevant server-rendered content and real access
   assert.equal(tesla.querySelectorAll('article').length, 2);
   assert.match(tesla.textContent, /ไม่ใช่รายการสินค้าของเรา/);
   const images = JSON.parse(document.querySelector('script[data-image-metadata]').textContent)['@graph'];
-  for (const [asset, source] of [
-    ['/images/accessories/tesla-model-3-center-console-trays.jpg', 'https://shop.tesla.com/th_th/product/upgraded-center-console-trays'],
-    ['/images/accessories/tesla-model-3-all-weather-liners.jpg', 'https://shop.tesla.com/th_th/product/upgraded-model-3--all-weather-liner-'],
+  for (const [asset, href, author, license] of [
+    ['/images/editorial/tesla-model-y-l-photo.jpg', '/articles/tesla-model-y-l-premium-6-seater-review', 'JustAnotherCarDesigner', 'https://creativecommons.org/publicdomain/zero/1.0/'],
+    ['/images/reviews/zeekr-x-flagship-thailand-2024.jpg', '/articles/zeekr-x-review', 'Chanokchon', 'https://creativecommons.org/licenses/by-sa/4.0/'],
   ]) {
     const image = [...tesla.querySelectorAll('img')].find(img => {
       const src = img.getAttribute('src') || '';
       return src.includes(asset) || src.includes(encodeURIComponent(asset));
     });
-    assert.ok(image, `Render real product photo ${asset}`);
-    assert.match(image.getAttribute('alt'), /Model 3 รุ่นอัปเกรด/);
-    const link = tesla.querySelector(`a[href="${source}"]`);
-    assert.equal(link?.getAttribute('target'), '_blank');
-    assert.equal(link?.getAttribute('rel'), 'noopener noreferrer');
+    assert.ok(image, `Render the requested vehicle photo ${asset}`);
+    const link = tesla.querySelector(`a[href="${href}"]`);
+    assert.ok(link, 'Photo card links to the matching vehicle article');
+    assert.equal(link.getAttribute('target'), null, 'Internal article links stay in this tab');
     const credit = images.find(item => item.contentUrl.endsWith(asset));
-    assert.equal(credit?.creditText, 'Tesla Shop');
-    assert.equal(credit?.isBasedOn, source);
-    assert.equal(credit?.license, undefined, 'Do not invent a reusable image licence');
+    assert.equal(credit?.creditText, author);
+    assert.equal(credit?.license, license);
   }
+  assert.match(tesla.textContent, /Flagship AWD ปี 2024/);
+  assert.doesNotMatch(visibleMain.outerHTML, /tesla-model-3-center-console-trays|tesla-model-3-all-weather-liners|tein-flex-z/);
+  assert.equal([...document.querySelectorAll('img')].filter(img => (img.getAttribute('alt') || '').includes('Model Y L สีเงิน')).length, 1);
+  assert.equal([...document.querySelectorAll('img')].filter(img => (img.getAttribute('alt') || '').includes('ZEEKR X Flagship AWD สีขาว')).length, 1);
   assert.doesNotMatch(tesla.textContent, /[0-9][0-9,.]*\s*บาท|สินค้าพร้อมส่ง/);
 });
 
@@ -113,9 +115,9 @@ test('EV upgrade guide replaces the cartoon with credited photos and keeps reada
   for (const link of links) assert.equal(link.getAttribute('target'), null, 'Internal links stay in this tab');
   const metadata = JSON.parse(document.querySelector('script[data-image-metadata]').textContent)['@graph'];
   for (const [index, asset, credit, source] of [
-    [0, '/images/accessories/tesla-model-3-center-console-trays.jpg', 'Tesla Shop', 'https://shop.tesla.com/th_th/product/upgraded-center-console-trays'],
+    [0, '/images/editorial/tesla-model-3-performance-2024.png', 'iMoD Official', 'https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png'],
     [1, '/images/articles/ev-tyre-michelin-audi.jpg', 'TaurusEmerald', 'https://commons.wikimedia.org/wiki/File:Audi_Wheel_with_Michelin_Pilot_Sport_All_Season_4_Tire.jpg'],
-    [2, '/images/articles/damper-guide/tein-flex-z.webp', 'TEIN', 'https://www.tein.com/products/flex_z.html'],
+    [2, '/images/articles/damper-guide/bc-zr.webp', 'BC Racing North America', 'https://bcracing-na.com/series/zr-series/'],
   ]) {
     const photo = map.querySelectorAll('img')[index];
     const src = photo.getAttribute('src') || '';

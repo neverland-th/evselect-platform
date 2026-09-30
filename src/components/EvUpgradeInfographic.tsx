@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
-import tein from "../../public/images/articles/damper-guide/tein-flex-z.webp";
+import bc from "../../public/images/articles/damper-guide/bc-zr.webp";
 
 const startingPoints = [
   {
@@ -11,8 +11,8 @@ const startingPoints = [
     description: "พรม ถาดคอนโซล ที่เก็บของ เลือกชิ้นที่ใช้จริง และเช็กรุ่นรถให้ตรงก่อนซื้อ",
     href: "#tesla-accessories",
     linkLabel: "ดูของแต่งภายใน Tesla",
-    image: "/images/accessories/tesla-model-3-center-console-trays.jpg",
-    imageAlt: "ถาดคอนโซลกลางสีดำสองชิ้นจาก Tesla Shop สำหรับ Model 3 รุ่นอัปเกรด",
+    image: "/images/editorial/tesla-model-3-performance-2024.png",
+    imageAlt: "Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ",
     imageClass: "bg-[#f7f7f7] object-contain",
   },
   {
@@ -33,9 +33,9 @@ const startingPoints = [
     description: "ลองแยกอาการก่อน รถเด้ง กระแทก หรือโยน ไม่ได้แก้ด้วยโช้คแบบเดียวกันเสมอไป",
     href: "/articles/ev-damper-tuning-bump-rebound-guide#symptoms",
     linkLabel: "เข้าใจอาการก่อนปรับโช้ค",
-    image: tein,
-    imageAlt: "ชุดโช้ค TEIN FLEX Z จากหน้าผลิตภัณฑ์ TEIN",
-    imageClass: "bg-[#111111] object-contain",
+    image: bc,
+    imageAlt: "โช้ค BC Racing ZR พร้อมซับแทงก์และสายเชื่อมแยกจากกระบอก",
+    imageClass: "bg-white object-contain",
   },
 ];
 

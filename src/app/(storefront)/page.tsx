@@ -87,24 +87,23 @@ const upgradeIdeas = [
   },
 ];
 
-// Real manufacturer photographs, kept in this local draft pending publication rights.
-// Source links describe examples, not site inventory or universal fitment.
-const teslaAccessoryExamples = [
+// Real vehicle photographs illustrate model-specific shopping, not accessory fitment.
+const vehicleAccessoryExamples = [
   {
-    title: "ถาดคอนโซลกลาง",
-    description: "ของเล็ก ๆ หาไม่เจอ ลองแยกช่องเก็บให้หยิบง่ายขึ้น ตัวอย่างนี้เป็นถาดสำหรับ Model 3 รุ่นอัปเกรดตามข้อมูลของ Tesla",
-    image: "/images/accessories/tesla-model-3-center-console-trays.jpg",
-    imageAlt: "ถาดคอนโซลกลางสีดำสองชิ้นจาก Tesla Shop สำหรับ Model 3 รุ่นอัปเกรด",
-    source: "https://shop.tesla.com/th_th/product/upgraded-center-console-trays",
-    linkLabel: "ดูถาดคอนโซลรุ่นนี้จาก Tesla",
+    title: "Tesla Model Y L",
+    description: "จะเลือกพรม ถาดคอนโซล หรือที่เก็บของ ให้เช็กว่าระบุ Model Y L ตรงรุ่น อย่าเลือกจากคำว่า Model Y อย่างเดียว",
+    image: "/images/editorial/tesla-model-y-l-photo.jpg",
+    imageAlt: "Tesla Model Y L สีเงินมุมด้านข้าง ภาพต่างประเทศเดือนธันวาคม 2025",
+    href: "/articles/tesla-model-y-l-premium-6-seater-review",
+    linkLabel: "อ่านข้อมูล Model Y L ก่อนเลือกของแต่ง",
   },
   {
-    title: "พรมและแผ่นปูพื้นรถ",
-    description: "ดูรูปทรง จุดยึด และวิธีทำความสะอาดให้เหมาะกับรถ ตัวอย่างในภาพเป็นชุดแผ่นปูพื้นสำหรับ Model 3 รุ่นอัปเกรด ไม่ใช่พรมที่ใช้แทนกันได้ทุกรุ่น",
-    image: "/images/accessories/tesla-model-3-all-weather-liners.jpg",
-    imageAlt: "แผ่นปูพื้นสีดำสามชิ้นจาก Tesla Shop สำหรับ Model 3 รุ่นอัปเกรด",
-    source: "https://shop.tesla.com/th_th/product/upgraded-model-3--all-weather-liner-",
-    linkLabel: "ดูแผ่นปูพื้นรุ่นนี้จาก Tesla",
+    title: "ZEEKR X Flagship",
+    description: "คันสีขาวในภาพคือ Flagship AWD ปี 2024 ก่อนเลือกของแต่งให้เทียบปี รุ่นย่อย และโฉมกับรถเราอีกครั้ง โดยเฉพาะล้อกับช่วงล่าง",
+    image: "/images/reviews/zeekr-x-flagship-thailand-2024.jpg",
+    imageAlt: "ZEEKR X Flagship AWD สีขาว จัดแสดงที่เซ็นทรัล อีสต์วิลล์ กรุงเทพฯ เดือนกรกฎาคม 2024",
+    href: "/articles/zeekr-x-review",
+    linkLabel: "อ่านข้อมูล ZEEKR X ก่อนเลือกของแต่ง",
   },
 ];
 
@@ -162,7 +161,7 @@ const textLink = "font-medium text-lime-800 underline decoration-lime-500/50 und
 const homeFaqs = [
   {
     question: "ของแต่ง Tesla Model 3 กับ Model Y ใช้ด้วยกันได้ไหม?",
-    answer: <p>ต้องเช็กเป็นชิ้น ๆ ครับ อย่าใช้แค่ชื่อ Tesla เป็นคำยืนยัน ให้เทียบรุ่น ปี โฉม รหัสสินค้า และรถพวงมาลัยขวา ตัวอย่างถาดคอนโซลกับแผ่นปูพื้นด้านบน ผู้ผลิตระบุสำหรับ Model 3 รุ่นอัปเกรด จึงไม่ควรสรุปว่าใช้กับ Model Y ได้ด้วย ดู <Link className={textLink} href="#tesla-accessories">ตัวอย่างของแต่ง Tesla และข้อมูลที่ต้องเช็ก</Link> ก่อนเลือกซื้อ</p>,
+    answer: <p>ต้องเช็กเป็นชิ้น ๆ ครับ อย่าใช้แค่ชื่อ Tesla เป็นคำยืนยัน ให้เทียบรุ่น ปี โฉม รหัสสินค้า และรถพวงมาลัยขวา พรมหรือถาดคอนโซลที่ระบุสำหรับ Model 3 ไม่ได้ยืนยันว่าใช้กับ Model Y หรือ Model Y L ได้ด้วย ดู <Link className={textLink} href="#tesla-accessories">แนวทางเลือกของแต่ง Tesla ให้ตรงรุ่น</Link> ก่อนเลือกซื้อ</p>,
   },
   {
     question: "ใส่โช้คแต่งแล้ว รถจะนุ่มขึ้นไหม?",
@@ -292,7 +291,7 @@ export default function StorefrontPage() {
           <h2 id="ev-accessories-heading" className="font-bold">ของแต่งรถไฟฟ้า เริ่มแต่งอะไรดี?</h2>
           <p className="mt-4 leading-relaxed text-slate-600">
             ถ้าอยากเปลี่ยนความรู้สึกตอนขับ ลองทำความเข้าใจยางกับช่วงล่างก่อน
-            ถ้าอยากใช้รถสะดวกขึ้น ดู <Link className={textLink} href="#tesla-accessories">ตัวอย่างของแต่งภายใน Tesla</Link> ด้านล่างได้
+            ถ้าอยากใช้รถสะดวกขึ้น ดู <Link className={textLink} href="#tesla-accessories">แนวทางเลือกของแต่ง Tesla และ ZEEKR ให้ตรงรุ่น</Link> ด้านล่างได้
             เลือกจากสิ่งที่ใช้จริง ไม่จำเป็นต้องแต่งทั้งคัน
           </p>
         </div>
@@ -317,15 +316,15 @@ export default function StorefrontPage() {
         <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 md:py-16">
           <div className="mb-8 max-w-3xl">
             <p className="mb-2 text-xs font-semibold text-lime-800">ของใช้ในรถ เลือกให้ตรงรุ่น</p>
-            <h2 id="tesla-accessories-heading" className="font-bold">ของแต่ง Tesla ชิ้นไหนเหมาะกับรถเรา?</h2>
+            <h2 id="tesla-accessories-heading" className="font-bold">ของแต่ง Tesla และ ZEEKR เลือกให้ตรงรุ่น</h2>
             <p className="mt-4 leading-relaxed text-slate-600">
-              ขับ Model 3 หรือ Model Y อยู่? เริ่มจากรุ่น ปี และโฉมของรถ
-              พรมกับถาดคอนโซลที่หน้าตาคล้ายกันอาจใช้แทนกันไม่ได้
-              อุปกรณ์สองชุดนี้เป็นตัวอย่างจาก Tesla Shop สำหรับ Model 3 รุ่นอัปเกรด ไม่ใช่รายการสินค้าของเรา
+              ขับ Model 3, Model Y L หรือ ZEEKR X อยู่? เริ่มจากรุ่น ปี และโฉมของรถ
+              พรม ถาดคอนโซล ล้อ และช่วงล่างที่หน้าตาคล้ายกันอาจใช้แทนกันไม่ได้
+              ภาพรถด้านล่างใช้ประกอบการเลือกรุ่น ไม่ใช่รายการสินค้าของเรา
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            {teslaAccessoryExamples.map((accessory) => (
+            {vehicleAccessoryExamples.map((accessory) => (
               <article key={accessory.image} className="flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white">
                 <div className="relative aspect-[4/3] bg-[#f7f7f7]">
                   <Image src={accessory.image} alt={accessory.imageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" className="object-contain" />
@@ -333,16 +332,16 @@ export default function StorefrontPage() {
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
                   <h3 className="font-bold">{accessory.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">{accessory.description}</p>
-                  <a href={accessory.source} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-sm font-semibold text-lime-800 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
-                    {accessory.linkLabel} <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" /><span className="sr-only"> (เปิดแท็บใหม่)</span>
-                  </a>
+                  <Link href={accessory.href} className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-sm font-semibold text-lime-800 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
+                    {accessory.linkLabel} <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  </Link>
                 </div>
               </article>
             ))}
           </div>
           <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600">
             <p>ยังไม่แน่ใจว่ารถเป็นโฉมไหน? เริ่มจาก <Link className={textLink} href="/articles/tesla-model-3-highland-review">ข้อมูล Tesla Model 3 Highland ตลาดไทย</Link> แล้วเช็กรหัสอุปกรณ์กับผู้ผลิตอีกครั้ง ถ้าใช้ Model Y ให้ดู <a className={textLink} href="https://shop.tesla.com/th_th/category/vehicle-accessories" target="_blank" rel="noopener noreferrer">อุปกรณ์แยกตามรุ่นจาก Tesla Shop<span className="sr-only"> (เปิดแท็บใหม่)</span></a> อย่าเลือกจากรูปอย่างเดียว</p>
-            <p className="mt-3">ภาพใช้ประกอบตัวอย่างการเลือกของแต่ง ดูที่มาได้ใน <Link className={textLink} href="/image-credits#image-48">เครดิตภาพจาก Tesla</Link> <Link className={textLink} href="/">EVSELECTS</Link> ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน และไม่ได้ยืนยันว่าเป็นตัวแทนจำหน่าย Tesla</p>
+            <p className="mt-3">ภาพ Model Y L เป็นรถต่างประเทศ ส่วน ZEEKR X เป็น Flagship AWD ปี 2024 ที่จัดแสดงในไทย ภาพไม่ใช่หลักฐานว่าอุปกรณ์ใส่กับรถเราได้ ดู <Link className={textLink} href="/image-credits#image-42">เครดิตภาพ Model Y L</Link> และ <Link className={textLink} href="/image-credits#image-45">เครดิตภาพ ZEEKR X</Link> <Link className={textLink} href="/">EVSELECTS</Link> ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน และไม่ได้ยืนยันว่าเป็นตัวแทนจำหน่ายของทั้งสองแบรนด์</p>
           </div>
         </div>
       </section>
