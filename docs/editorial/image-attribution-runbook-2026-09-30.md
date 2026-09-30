@@ -1,7 +1,7 @@
 # Runbook: image attribution without visible captions
 
 Owner: EVSELECTS website maintainers. Frequency: each editorial/image release.
-Last updated: 2026-09-30. Status: implemented locally; production verification pending.
+Last updated: 2026-09-30. Status: implemented, verified and deployed to production.
 
 ## Purpose
 
@@ -60,7 +60,7 @@ Missing copyright/permission evidence or ambiguous image identity: website owner
 
 ## Rendered reader review — complete before release
 
-Version: current scoped changes on `codex/homepage-thai-search-2026-09-29`, parent `85ea0cf`; final local build passed on 2026-09-30. Preview origin: `http://127.0.0.1:4349`. No release for this change has been deployed yet. Review is performed in the actual Chrome-rendered pages, not inferred from HTTP checks.
+Version: release `637b46377f17089ec9b9a9e4aa31dfffb362355c` on `codex/homepage-thai-search-2026-09-29`, parent `85ea0cf`; final local build passed on 2026-09-30. Preview origin: `http://127.0.0.1:4349`. This section records the completed pre-publication review. Review was performed in the actual Chrome-rendered pages, not inferred from HTTP checks.
 
 - `/articles/ev-damper-tuning-bump-rebound-guide`: full desktop 1440 px and mobile 390 px review completed, including all 9 photo placements, 14 expanded disclosures, four adjustment modes, brand comparison, diagrams, FAQs and 28 source links. Desktop ordered scroll 0–28900, mobile 0–48300, overlapping captures through the footer. Product photos remain complete; comparison cards fit mobile without sideways scrolling. No additional content change required.
 - `/image-credits`: all 47 disclosures opened and complete desktop/mobile text and card layout reviewed. Desktop ordered captures 0–20400; mobile 0–25200, through the footer. Source, title, licence and modification notes remain accessible. One redundant nested `main` found earlier was changed to `div` and the rebuilt final page was reread. No horizontal overflow at 390 px.
@@ -89,4 +89,18 @@ Version: current scoped changes on `codex/homepage-thai-search-2026-09-29`, pare
 - `/articles/ev-carbon-ceramic-brakes-guide`: complete desktop 0–23800 and mobile 0–37800 review through the footer (page heights 23911 / 39569). All six photo placements, diagrams, three comparison tables, 19 expanded disclosures, methodology, FAQs, owner-report boundaries and every reference read. Mobile comparisons display their complete cards without outer overflow. Calculator speed control changed 100 to 110 km/h, observed energy 0.85 to 1.03 MJ, then restored 100; no production data was written.
 - `/articles/ev-tyre-and-coilover-selection-guide`: complete desktop 0–13600 and mobile 0–18900 review through the footer (page heights 14603 / 19742). All seven images, six tyre-model explanations, FAQs, claim/test boundaries and references read. Both mobile tables were panned; the five-column table was reviewed at left, middle and right positions to include all cells. Desktop/mobile picture variants rendered successfully after responsive loading. No outer overflow.
 
-All 25 affected pages (Home, article index, 22 article bodies and credits page) have complete actual rendered desktop/mobile reader review. Final build: 88 local assets, 11 link-policy tests, four image-metadata tests, TypeScript/Next static generation, strict 32-route crawl and 28-variant image-attribution verification passed. Production deployment and verification are still pending at this pre-release record.
+All 25 affected pages (Home, article index, 22 article bodies and credits page) have complete actual rendered desktop/mobile reader review. Final build: 88 local assets, 11 link-policy tests, four image-metadata tests, TypeScript/Next static generation, strict 32-route crawl and 28-variant image-attribution verification passed.
+
+## Production release verification — 2026-09-30
+
+- Deployed commit: `637b46377f17089ec9b9a9e4aa31dfffb362355c`. This later verification-record update is documentation-only and does not change the deployed application.
+- Verified project/team: `evselect-com/evselect-platform`, `prj_ofl9vlHAbWCLmdsTbAfuw22LUJLZ`, `team_9eIBjV1sGR5IuVLX2i3NACGC`.
+- Previous production/rollback target: `dpl_7YrcUPqEYj42vbmrwJC2UuSUWA8c` (`evselect-platform-pabarmljk-evselect-com.vercel.app`). No rollback or domain/DNS change was performed.
+- New production: `dpl_2byzXyX7dXXewGCA1Gp9ixYVbESA` (`evselect-platform-fc2aymg8e-evselect-com.vercel.app`). Actual READY, target production, alias error null; both `evselects.com` and `www.evselects.com` resolve to this deployment in Vercel. CLI deployment metadata does not include the Git SHA, so deployed content was independently compared with the reviewed local build.
+- Dry upload manifest inspected: 603 entries, registry/runbook included, no secret environment file, database file, node_modules or scratch/agent file uploaded. No database/CMS/backend mutation and no new dependencies.
+- Live strict audit: 32 routes; 25 published, six pending noindex and one supporting noindex; 1969 links, 1434 internal and 91 contextual candidates; zero findings/blockers. All 32 local/live content fingerprints match. Reports: `scratch/image-attribution-live-audit-2026-09-30.json` and its internal-link CSV (ignored local evidence).
+- Live attribution verifier: 28 route/filter variants, 103 rendered ImageObjects and all 47 accessible credit anchors pass; referenced image content URLs return HTTP 200. No under-image `figcaption` or article-card credit blocks.
+- Live Home tests: all four pass. Targeted ESLint and scoped Git whitespace checks pass. `/sitemap_index.xml` and typo-compatible `/sitemap_indexl.xml` return XML HTTP 200 with one child sitemap; `/sitemap.xml` returns XML HTTP 200 with 25 canonical entries, including `/image-credits`. Robots crawl/sitemap checks pass.
+- Actual live rendering: Home and damper article checked at 1440×1000 / 390×1000; BILSTEIN/Öhlins pictures complete and no under-photo credits or mobile outer overflow. Credits page has one canonical H1 and 47 records; its first disclosure opens and shows original attribution/licence/context. Production captures: `scratch/image-attribution-production-desktop.png` and `scratch/image-attribution-production-mobile.png`.
+- Vercel runtime-error query over the selected ten-minute window: no errors found. Deployment-scoped error/fatal logs: no matches. Browser warnings observed originate from an installed Chrome extension, not the site; no site error was observed in the inspected views.
+- Not verified: Google indexing, rankings, rich-result eligibility or traffic impact. Metadata retains known attribution only; it does not establish new permission for manufacturer/user-supplied images.
