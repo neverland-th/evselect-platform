@@ -1,0 +1,68 @@
+{
+  "seven-seats": {
+    "src": "/images/reviews/zeekr-009/seven-seats.webp",
+    "alt": "ห้องโดยสาร ZEEKR 009 แบบ 7 ที่นั่ง จากเว็บไซต์ ZEEKR ประเทศไทย",
+    "width": 1440,
+    "height": 960
+  },
+  "six-seats": {
+    "src": "/images/reviews/zeekr-009/six-seats.webp",
+    "alt": "ห้องโดยสาร ZEEKR 009 แบบ 6 ที่นั่ง จากเว็บไซต์ ZEEKR ประเทศไทย",
+    "width": 1440,
+    "height": 960
+  },
+  "folding-tables": {
+    "src": "/images/reviews/zeekr-009/folding-tables.webp",
+    "alt": "โต๊ะพับบริเวณเบาะแถวสองของ ZEEKR 009 แบบ 6 ที่นั่ง",
+    "width": 1440,
+    "height": 959
+  },
+  "refrigerator": {
+    "src": "/images/reviews/zeekr-009/refrigerator.webp",
+    "alt": "ตู้เย็นแบบลิ้นชักด้านหลังคอนโซลกลางของ ZEEKR 009",
+    "width": 1440,
+    "height": 960
+  },
+  "roof-screen": {
+    "src": "/images/reviews/zeekr-009/roof-screen.webp",
+    "alt": "จอเพดานสำหรับผู้โดยสารหลังในห้องโดยสาร ZEEKR 009 พวงมาลัยขวา",
+    "width": 1440,
+    "height": 810
+  },
+  "thai-cockpit": {
+    "src": "/images/reviews/zeekr-009/thai-cockpit.webp",
+    "alt": "ห้องขับ ZEEKR 009 พวงมาลัยขวาในภาพข่าวเปิดตัวรุ่น 7 ที่นั่งประเทศไทย ปี 2025",
+    "width": 900,
+    "height": 599
+  },
+  "thai-premium-seats": {
+    "src": "/images/reviews/zeekr-009/thai-premium-seats.webp",
+    "alt": "เบาะแถวสองสีอ่อนและหลังคากระจกของ ZEEKR 009 รุ่น 7 ที่นั่งในไทย ปี 2025",
+    "width": 900,
+    "height": 599
+  },
+  "thai-sliding-door": {
+    "src": "/images/reviews/zeekr-009/thai-sliding-door.webp",
+    "alt": "ZEEKR 009 สีขาวเปิดประตูสไลด์ในชุดภาพรถไทยของ HeadLight Magazine ปี 2024",
+    "width": 900,
+    "height": 558
+  },
+  "thai-third-row": {
+    "src": "/images/reviews/zeekr-009/thai-third-row.webp",
+    "alt": "เบาะแถวสามสองตำแหน่งของ ZEEKR 009 แบบ 6 ที่นั่งในชุดภาพรถไทย ปี 2024",
+    "width": 900,
+    "height": 1111
+  },
+  "thai-luggage": {
+    "src": "/images/reviews/zeekr-009/thai-luggage.webp",
+    "alt": "พื้นที่ท้าย ZEEKR 009 แบบ 6 ที่นั่งเมื่อยกพนักพิงแถวสามขึ้น ในภาพรถไทย ปี 2024",
+    "width": 900,
+    "height": 600
+  },
+  "thai-air-suspension": {
+    "src": "/images/reviews/zeekr-009/thai-air-suspension.webp",
+    "alt": "เปรียบเทียบระดับสูงและระดับมาตรฐานของช่วงล่าง ZEEKR 009 ในชุดภาพรถไทย ปี 2024",
+    "width": 900,
+    "height": 533
+  }
+}
