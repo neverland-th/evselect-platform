@@ -22,3 +22,7 @@ The user's placement clarification was to replace images in their existing posit
 The existing Model 3, Model Y L and ZEEKR X Commons source pages were checked for model identity and their CC BY 3.0, CC0 and CC BY-SA 4.0 notices respectively. Attribution is registered on the site's image-credit page. The BC Racing ZR image is the existing article asset, cross-checked with the manufacturer's ZR page; no new reuse permission is claimed. Unused Tesla Shop photos were removed from the active credit registry but their asset files were retained.
 
 Screenshots: `scratch/home-replacement-photos-desktop.png` and `scratch/home-replacement-cars-desktop.png` (local review artifacts, not production assets).
+
+## Later authorized production release
+
+The subsequent user goal explicitly requested rechecking and deploying this Home. The final production promotion and navigation repair are recorded in [home-photo-production-2026-10-01.md](home-photo-production-2026-10-01.md). The earlier not-promoted statements above describe the initial review checkpoint only.
