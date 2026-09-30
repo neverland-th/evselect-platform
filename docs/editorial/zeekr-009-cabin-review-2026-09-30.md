@@ -29,3 +29,13 @@
 
 - Figma file creation succeeded, but the first design-edit/inspection call hit the Starter plan MCP tool quota. No design nodes were created and no paid upgrade was attempted. Website implementation continued using the established site design. Do not describe the empty Figma file as a completed design.
 - Production deployment and live verification to be recorded below after execution; local success alone does not establish publication, indexing or SEO impact.
+
+## Production verification
+
+- Deployed application commit: `4517790c151bec20953606de4f5d8adeb00eaac4`. Production deployment `dpl_Fh8djHnuze2DjeFzRWcPMudS4q9x`, `evselect-platform-rbl25uqcb-evselect-com.vercel.app`, verified READY with both `evselects.com` and `www.evselects.com` aliases and null alias error. No main merge, DNS change, database mutation or paid service was performed.
+- Pre-deployment comparison differed only at `/articles`, `/articles/zeekr-009-review` and `/image-credits`. The affected article card was also visually reviewed at desktop/mobile widths; title, image and 12-minute reading time fit the established layout.
+- Post-deployment strict audit: all 32 local/live content fingerprints match; 2,017 links, zero findings. Live attribution: 28 variants, 114 ImageObjects and 58 accessible credits pass. All eleven new original WebP assets return 200 and their SHA-256 hashes exactly match the reviewed local files.
+- Actual production article inspected at 1440 × 1000 and 390 × 844: new sections, working TOC fragment, twelve image elements, single H1, no outer horizontal overflow; rendered new interior photo and surrounding Thai copy read. Screenshots: `scratch/zeekr-009/production-desktop.png`, `production-mobile.png`.
+- No browser error logs observed on the inspected production tab. Vercel runtime errors over the selected ten-minute window: none. Deployment-scoped error/fatal logs: none.
+- Temporary viewport override reset. Production article tab retained as the deliverable. This subsequent verification-record commit changes documentation only, not the deployed application.
+- Not verified: photo republication licences, Google indexing/rankings/traffic, and a completed Figma design (Starter MCP quota prevented design work).
