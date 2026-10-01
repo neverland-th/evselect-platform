@@ -13,6 +13,7 @@
     "verify:seo": "tsx scripts/verify-public-seo.ts",
     "verify:attribution": "node scripts/verify-image-attribution.mjs",
     "test:image-metadata": "tsx --test scripts/test-image-metadata.ts",
+    "test:analytics": "tsx --test scripts/test-analytics.ts",
     "audit:content": "tsx scripts/audit-content-links.ts --strict",
     "test:content-links": "node --test scripts/test-content-links.mjs && tsx --test scripts/test-link-policy.ts",
     "generate-posts": "tsx scripts/generate-posts.ts",

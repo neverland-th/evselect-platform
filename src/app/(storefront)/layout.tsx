@@ -1,4 +1,6 @@
 import MobileMenu from "@/components/MobileMenu";
+import CookieConsent, { CookieSettingsButton } from '@/components/CookieConsent';
+import { getAnalyticsMeasurementId } from '@/lib/analytics';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -161,6 +163,8 @@ export default function StorefrontLayout({
                   </a>
                 </li>
                 <li><Link href="/contact" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">ติดต่อทีมงาน</Link></li>
+                <li><Link href="/privacy" className="min-h-[44px] py-2.5 flex items-center hover:text-lime-400 transition-colors">นโยบายความเป็นส่วนตัว</Link></li>
+                <li><CookieSettingsButton className="min-h-[44px] py-2.5 text-left hover:text-lime-400 transition-colors" /></li>
               </ul>
             </div>
 
@@ -190,6 +194,7 @@ export default function StorefrontLayout({
           </div>
         </div>
       </footer>
+      <CookieConsent measurementId={getAnalyticsMeasurementId({ NODE_ENV: process.env.NODE_ENV, VERCEL_ENV: process.env.VERCEL_ENV, GA4_MEASUREMENT_ID: process.env.GA4_MEASUREMENT_ID })} />
     </div>
   );
 }
