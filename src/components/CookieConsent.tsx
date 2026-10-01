@@ -5,7 +5,7 @@ import Script from 'next/script';
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import {
   CONSENT_SETTINGS_EVENT, disableAnalytics, initializeAnalytics, isProductionHostname,
-  parseConsent, readConsentValue, saveConsent, subscribeConsent, trackIntent,
+  isPrivateAnalyticsPath, parseConsent, pauseAnalytics, readConsentValue, saveConsent, subscribeConsent, trackIntent,
 } from '@/lib/analytics';
 
 const actionStyle = 'min-h-11 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-700';
@@ -45,13 +45,33 @@ export default function CookieConsent({ measurementId }: { measurementId: string
       if (disableAnalytics()) window.location.reload();
       return;
     }
+    // A fresh document restarts one automatic page-view owner after leaving an internal page.
+    if (window.evselectAnalyticsId && window[`ga-disable-${window.evselectAnalyticsId}`]) {
+      window.location.reload();
+      return;
+    }
+    const guardNavigation = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !(event.target instanceof Element)) return;
+      const anchor = event.target.closest('a[href]');
+      if (anchor instanceof HTMLAnchorElement && (!anchor.target || anchor.target === '_self') && !anchor.hasAttribute('download') && anchor.origin === window.location.origin && isPrivateAnalyticsPath(anchor.pathname)) pauseAnalytics();
+    };
+    const guardHistory = () => {
+      if (isPrivateAnalyticsPath(window.location.pathname)) pauseAnalytics();
+    };
     const onClick = (event: MouseEvent) => {
       if (event.defaultPrevented || event.button !== 0 || !(event.target instanceof Element)) return;
       const anchor = event.target.closest('a[href]');
       if (anchor instanceof HTMLAnchorElement) trackIntent(anchor.href);
     };
     document.addEventListener('click', onClick);
-    return () => document.removeEventListener('click', onClick);
+    document.addEventListener('click', guardNavigation, true);
+    window.addEventListener('popstate', guardHistory, true);
+    return () => {
+      document.removeEventListener('click', onClick);
+      document.removeEventListener('click', guardNavigation, true);
+      window.removeEventListener('popstate', guardHistory, true);
+      pauseAnalytics();
+    };
   }, [canTrack, measurementId]);
 
   const choose = (analytics: boolean) => {

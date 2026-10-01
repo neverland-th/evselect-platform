@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { afterEach, test } from 'node:test';
 import {
   analyticsUrl, CONSENT_MAX_AGE_MS, CONSENT_STORAGE_KEY, disableAnalytics,
-  getAnalyticsMeasurementId, initializeAnalytics, intentDestination, parseConsent,
+  getAnalyticsMeasurementId, initializeAnalytics, intentDestination, isPrivateAnalyticsPath, parseConsent, pauseAnalytics,
   saveConsent, trackIntent,
 } from '../src/lib/analytics';
 
@@ -89,6 +89,17 @@ test('preview and local hosts cannot start tracking even with consent', () => {
     assert.equal(initializeAnalytics('G-ABC1234567'), false);
     assert.equal(browser.dataLayer, undefined);
   }
+});
+
+test('internal routes are scoped out and pausing suppresses subsequent intent events', () => {
+  for (const path of ['/vehicles', '/products', '/product/private-id', '/export', '/categories/edit']) assert.equal(isPrivateAnalyticsPath(path), true);
+  for (const path of ['/', '/articles/zeekr-x-review', '/privacy', '/contact']) assert.equal(isPrivateAnalyticsPath(path), false);
+  const { commands, cookies } = browserHarness(true);
+  initializeAnalytics('G-ABC1234567');
+  assert.equal(pauseAnalytics(), true);
+  trackIntent('https://m.me/evselects');
+  assert.equal(commands().length, 4);
+  assert.equal(cookies.length, 0);
 });
 
 test('consent initializes once, leaves ads denied and relies on automatic page views', () => {

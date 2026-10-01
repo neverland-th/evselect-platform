@@ -37,6 +37,10 @@ export function isProductionHostname(hostname: string): boolean {
   return hostname === 'evselects.com' || hostname === 'www.evselects.com';
 }
 
+export function isPrivateAnalyticsPath(pathname: string): boolean {
+  return ['/categories', '/vehicles', '/export', '/products', '/product'].some(path => pathname === path || pathname.startsWith(`${path}/`));
+}
+
 export function readConsentValue(): string | null {
   if (typeof window === 'undefined') return null;
   try { return window.localStorage.getItem(CONSENT_STORAGE_KEY); } catch { return null; }
@@ -133,9 +137,14 @@ export function trackIntent(raw: string): void {
   });
 }
 
-export function disableAnalytics(): boolean {
+export function pauseAnalytics(): boolean {
   const id = window.evselectAnalyticsId;
   if (id) window[`ga-disable-${id}`] = true;
+  return Boolean(id);
+}
+
+export function disableAnalytics(): boolean {
+  const initialized = pauseAnalytics();
   // Do not send a denied-consent ping. Reload removes Google's existing timers and listeners.
   const domains = ['', window.location.hostname, `.${window.location.hostname}`, '.evselects.com'];
   for (const cookie of document.cookie.split(';')) {
@@ -143,5 +152,5 @@ export function disableAnalytics(): boolean {
     if (!/^evselect_ga(?:_|$)/.test(name)) continue;
     for (const domain of domains) document.cookie = `${name}=; Max-Age=0; Path=/;${domain ? ` Domain=${domain};` : ''} SameSite=Lax`;
   }
-  return Boolean(id);
+  return initialized;
 }

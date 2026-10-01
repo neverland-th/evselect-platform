@@ -18,6 +18,7 @@ Direct Google tag, basic consent, no GTM or extra tracking dependency. Added 202
 - Cookies are prefixed `evselect`, expire after 180 days and do not extend on each visit. Storage failure leaves tracking off.
 - Withdrawal immediately sets Google's disable flag, deletes only the site's GA cookies and reloads to remove active automatic listeners/timers. No denied-consent ping is emitted. Cross-tab withdrawal also stops an already active tab.
 - GA is mounted only in the storefront layout, outside the admin/CMS layouts.
+- Capture-phase link/back-navigation guards pause an initialized tag before entering existing internal routes; unmounting the storefront also pauses it. Returning to the storefront after a pause reloads once to restart the automatic page-view owner in a fresh document. Verify this boundary with the real stream before activation.
 
 ## Measurement contract
 
@@ -50,6 +51,6 @@ For paid social, use `utm_medium=paid_social` consistently. Do not put personal 
 
 ## Status
 
-Website integration prepared. Account/property creation or reuse, GA4 stream settings, production activation and Supermetrics authentication require verified account access. Update this status only after those actions actually pass.
+Website integration, Thai consent controls and privacy policy deployed on 2026-10-01 with GA4 collection disabled because no verified measurement ID is configured. The analytics tests and production build pass; consent interactions were reviewed in desktop/mobile browsers. Account/property creation or reuse, stream settings, real Tag Assistant/DebugView checks, campaign attribution and Supermetrics reporting remain pending account sign-in. Do not treat this release as verified data collection. Update this status only after those actions actually pass.
 
 Primary references: [Next.js scripts](https://nextjs.org/docs/app/guides/scripts), [GA4 SPA measurement](https://developers.google.com/analytics/devguides/collection/ga4/single-page-applications), [consent mode](https://developers.google.com/tag-platform/security/concepts/consent-mode), [data redaction](https://support.google.com/analytics/answer/13544947), [Supermetrics connection](https://docs.supermetrics.com/docs/google-analytics-4-connection-guide).
