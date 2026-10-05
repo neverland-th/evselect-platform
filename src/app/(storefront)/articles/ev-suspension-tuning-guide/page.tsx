@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,10 +9,11 @@ import { ArrowLeft } from 'lucide-react';
 import BrandHomeLink from '@/components/BrandHomeLink';
 
 import { damperArticle } from '@/lib/damper-article';
+import { suspensionArticle } from '@/lib/suspension-article';
 
 const title = 'ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค';
 const description = 'เริ่มจากอาการ ยาง และการใช้งาน ก่อนเลือกช่วงล่าง EV เทียบระบบปรับของ KW V3, Öhlins Road & Track, BC Racing BR และ H-Drive พร้อมคำถามที่ควรถามร้าน';
-const path = '/articles/ev-suspension-tuning-guide';
+const path = suspensionArticle.path;
 const hero = '/images/editorial/tesla-model-3-performance-2024.png';
 const linkStyle = 'font-semibold text-lime-800 underline decoration-lime-500 underline-offset-4 hover:text-lime-950 focus-visible:outline-2 focus-visible:outline-offset-4';
 const sources = {
@@ -23,9 +26,9 @@ const sources = {
 };
 
 export const metadata: Metadata = {
-  title: `${title} | EVSELECT`, description,
+  title: `${title} | ${siteName}`, description,
   alternates: { canonical: path },
-  openGraph: { title, description, url: `https://evselects.com${path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', images: [{ url: hero, width: 1280, height: 640, alt: 'Tesla Model 3 Performance ปี 2024 สีเทา' }] },
+  openGraph: { title, description, url: `https://evselects.com${path}`, type: 'article', locale: 'th_TH', siteName: siteName, images: [{ url: hero, width: 1280, height: 640, alt: 'Tesla Model 3 Performance ปี 2024 สีเทา' }] },
   twitter: { card: 'summary_large_image', title, description, images: [hero] },
 };
 
@@ -42,12 +45,12 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
 export default function EvSuspensionTuningGuidePage() {
   return <article className="mx-auto max-w-5xl px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
       <ImageMetadata pagePath="/articles/ev-suspension-tuning-guide" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({
       '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
       mainEntityOfPage: `https://evselects.com${path}`, image: `https://evselects.com${hero}`,
-      datePublished: '2026-09-03', dateModified: '2026-09-21', inLanguage: 'th-TH',
-      author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com' },
-      publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com' },
+      datePublished: suspensionArticle.publishedAt, dateModified: suspensionArticle.updatedAt, inLanguage: 'th-TH',
+      author: editorialOrganization,
+      publisher: editorialOrganization,
     }) }} />
     <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">
@@ -55,7 +58,7 @@ export default function EvSuspensionTuningGuidePage() {
       <h1 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">{title}</h1>
       <p className="max-w-3xl text-lg leading-[1.9] sm:text-xl">ขับผ่านรอยต่อทีไรสะเทือนทั้งคัน แต่พอขึ้นคอสะพานกลับโยนต่ออีกหลายจังหวะ — ถ้ารถคุณมีอาการแบบนี้ คำถามแรกคือ “เกิดอะไรขึ้นกับช่วงล่าง?” แล้วค่อยตัดสินใจว่าจำเป็นต้องเปลี่ยนโช้คหรือไม่</p>
       <p className="max-w-3xl">คู่มือนี้ช่วยเรียงสิ่งที่ควรเช็กก่อนจ่ายเงิน ตั้งแต่ยาง สภาพชิ้นส่วน ไปจนถึงระบบปรับของโช้คแต่ละรุ่น คุณจะได้คุยกับร้านด้วยอาการและเป้าหมายที่ชัดเจน แทนการซื้อจากราคา จำนวนคลิก หรือชื่อแบรนด์เพียงอย่างเดียว</p>
-      <p className="text-sm text-slate-500">อัปเดต <time dateTime="2026-09-21">21 กันยายน 2569</time> · เรียบเรียงโดย <BrandHomeLink /> จากเอกสารผู้ผลิต</p>
+      <p className="text-sm text-slate-500">อัปเดต <time dateTime={suspensionArticle.updatedAt}>21 กันยายน 2569</time> · เรียบเรียงโดย <BrandHomeLink /> จากเอกสารผู้ผลิต</p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <Image src={hero} alt="Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ" width={1280} height={640} preload sizes="(max-width: 768px) 100vw, 960px" className="h-auto w-full object-contain" />
 

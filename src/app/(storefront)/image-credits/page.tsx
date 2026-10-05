@@ -1,10 +1,11 @@
+import { siteName } from '@/lib/site-identity';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { imageCredits } from '@/lib/image-credits';
 
 export const metadata: Metadata = {
-  title: 'เครดิตภาพและแหล่งที่มา | EVSELECTS.COM',
-  description: 'ชื่อผู้ถ่าย แหล่งภาพต้นฉบับ ใบอนุญาต และบริบทของภาพประกอบบน EVSELECTS.COM',
+  title: `เครดิตภาพและแหล่งที่มา | ${siteName}`,
+  description: `ชื่อผู้ถ่าย แหล่งภาพต้นฉบับ ใบอนุญาต และบริบทของภาพประกอบบน ${siteName}`,
   alternates: { canonical: '/image-credits' },
 };
 
@@ -17,7 +18,7 @@ export default function ImageCreditsPage() {
   return <div className="mx-auto max-w-5xl space-y-10 px-4 py-12 text-slate-700 sm:px-6 sm:py-16">
     <header className="space-y-4">
       <h1 className="text-3xl font-bold text-slate-950 sm:text-4xl">เครดิตภาพและแหล่งที่มา</h1>
-      <p className="leading-7">รวมเครดิตภาพที่ใช้ในบทความและหน้ารวมของ <Link href="/" className={linkStyle}>EVSELECTS.COM</Link> ไว้ที่นี่ เพื่อให้หน้าบทความอ่านต่อได้ลื่นขึ้น โดยยังตรวจชื่อผู้ถ่าย แหล่งต้นฉบับ และเงื่อนไขการใช้ภาพได้</p>
+      <p className="leading-7">รวมเครดิตภาพที่ใช้ในบทความและหน้ารวมของ <Link href="/" className={linkStyle}>{siteName}</Link> ไว้ที่นี่ เพื่อให้หน้าบทความอ่านต่อได้ลื่นขึ้น โดยยังตรวจชื่อผู้ถ่าย แหล่งต้นฉบับ และเงื่อนไขการใช้ภาพได้</p>
       <p className="text-sm leading-6">ภาพประกอบไม่ใช่ผลทดสอบของทีมงาน และไม่ยืนยันอุปกรณ์หรือความเข้ากันได้กับรถสเปกไทย ภาพจากผู้ผลิตที่ไม่มีใบอนุญาตระบุไว้ยังไม่ถือว่าเป็นภาพที่เปิดให้ใช้ซ้ำทั่วไป ส่วนภาพที่เจ้าของเว็บไซต์จัดส่งให้ ไม่ได้หมายความว่าเว็บไซต์เป็นผู้ถ่ายหรือผู้ถือสิทธิ์ต้นฉบับ</p>
       <Link href="/articles" className={linkStyle}>กลับไปเลือกอ่านบทความรถ EV</Link>
     </header>

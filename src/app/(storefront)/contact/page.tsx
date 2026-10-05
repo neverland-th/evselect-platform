@@ -1,11 +1,12 @@
+import { siteName } from '@/lib/site-identity';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
 export const metadata = {
   alternates: { canonical: '/contact' },
   robots: { index: false, follow: true },
-  title: 'ติดต่อเรา | EVSELECT',
-  description: 'ติดต่อทีม EVSELECT ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ',
+  title: `ติดต่อเรา | ${siteName}`,
+  description: `ติดต่อทีม ${siteName} ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ`,
 };
 
 export default function ContactPage() {

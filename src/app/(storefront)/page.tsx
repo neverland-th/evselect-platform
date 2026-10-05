@@ -1,3 +1,5 @@
+import { siteIdentitySchema, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -21,7 +23,7 @@ import EvUpgradeInfographic from "@/components/EvUpgradeInfographic";
 import { damperArticle } from "@/lib/damper-article";
 import { batteryArticle } from "@/lib/battery-article";
 
-const title = "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS";
+const title = `แต่งรถ EV และของแต่งรถไฟฟ้า | ${siteName}`;
 const description = "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย";
 
 export const metadata: Metadata = {
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: "https://evselects.com/",
-    siteName: "EVSELECTS",
+    siteName: siteName,
     locale: "th_TH",
     type: "website",
   },
@@ -192,6 +194,7 @@ export default function StorefrontPage() {
   return (
     <div className="bg-white text-slate-950">
       <ImageMetadata pagePath="/" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(siteIdentitySchema) }} />
       <section className="border-b border-slate-200 bg-slate-950 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 md:py-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
           <div className="flex flex-col justify-between gap-8 lg:py-4">
@@ -344,7 +347,7 @@ export default function StorefrontPage() {
           </div>
           <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600">
             <p>ยังไม่แน่ใจว่ารถเป็นโฉมไหน? เริ่มจาก <Link className={textLink} href="/articles/tesla-model-3-highland-review">ข้อมูล Tesla Model 3 Highland ตลาดไทย</Link> แล้วเช็กรหัสอุปกรณ์กับผู้ผลิตอีกครั้ง ถ้าใช้ Model Y ให้ดู <a className={textLink} href="https://shop.tesla.com/th_th/category/vehicle-accessories" target="_blank" rel="noopener noreferrer">อุปกรณ์แยกตามรุ่นจาก Tesla Shop<span className="sr-only"> (เปิดแท็บใหม่)</span></a> อย่าเลือกจากรูปอย่างเดียว</p>
-            <p className="mt-3">ภาพ Model Y L เป็นรถต่างประเทศ ส่วน ZEEKR X เป็น Flagship AWD ปี 2024 ที่จัดแสดงในไทย ภาพไม่ใช่หลักฐานว่าอุปกรณ์ใส่กับรถเราได้ ดู <Link className={textLink} href="/image-credits#image-42">เครดิตภาพ Model Y L</Link> และ <Link className={textLink} href="/image-credits#image-45">เครดิตภาพ ZEEKR X</Link> <Link className={textLink} href="/">EVSELECTS</Link> ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน และไม่ได้ยืนยันว่าเป็นตัวแทนจำหน่ายของทั้งสองแบรนด์</p>
+            <p className="mt-3">ภาพ Model Y L เป็นรถต่างประเทศ ส่วน ZEEKR X เป็น Flagship AWD ปี 2024 ที่จัดแสดงในไทย ภาพไม่ใช่หลักฐานว่าอุปกรณ์ใส่กับรถเราได้ ดู <Link className={textLink} href="/image-credits#image-42">เครดิตภาพ Model Y L</Link> และ <Link className={textLink} href="/image-credits#image-45">เครดิตภาพ ZEEKR X</Link> <Link className={textLink} href="/">{siteName}</Link> ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน และไม่ได้ยืนยันว่าเป็นตัวแทนจำหน่ายของทั้งสองแบรนด์</p>
           </div>
         </div>
       </section>
@@ -512,7 +515,7 @@ export default function StorefrontPage() {
             <ShieldCheck className="mb-5 h-7 w-7 text-lime-800" />
             <h2 className="font-bold">อ่านแล้วรู้ว่าข้อมูลมาจากไหน</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              บทความของ <Link href="/" className={textLink}>EVSELECTS</Link> มีทั้งข้อมูลจากผู้ผลิตและคำอธิบายหลักการทำงาน
+              บทความของ <Link href="/" className={textLink}>{siteName}</Link> มีทั้งข้อมูลจากผู้ผลิตและคำอธิบายหลักการทำงาน
               อ่านแหล่งอ้างอิงและข้อจำกัดประกอบด้วย โดยเฉพาะสเปกรถและการใส่อุปกรณ์ให้ตรงรุ่น
             </p>
             <Link href="/editorial-policy" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">

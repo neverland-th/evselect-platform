@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,8 +26,8 @@ const contents = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: `${article.title} | EVSELECT`, description: article.description, alternates: { canonical: article.path },
-  openGraph: { title: article.title, description: article.description, url: `https://evselects.com${article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', images: [{ url: article.image, width: 1920, height: 1280, alt: article.imageAlt }] },
+  title: `${article.title} | ${siteName}`, description: article.description, alternates: { canonical: article.path },
+  openGraph: { title: article.title, description: article.description, url: `https://evselects.com${article.path}`, type: 'article', locale: 'th_TH', siteName: siteName, images: [{ url: article.image, width: 1920, height: 1280, alt: article.imageAlt }] },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
 };
 function Source({ to, children }: { to: keyof typeof sources; children: ReactNode }) {
@@ -38,11 +40,11 @@ function Section({ id, title, children }: { id: string; title: string; children:
 export default function EVHorsepowerVsTorquePage() {
   return <article className="mx-auto max-w-5xl bg-white px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
       <ImageMetadata pagePath="/articles/ev-horsepower-vs-torque-explained" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({
       '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
       mainEntityOfPage: `https://evselects.com${article.path}`, image: `https://evselects.com${article.image}`,
       datePublished: article.publishedAt, dateModified: article.updatedAt, inLanguage: 'th-TH',
-      author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' }, publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
+      author: editorialOrganization, publisher: editorialOrganization,
     }) }} />
     <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex min-h-11 items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} aria-hidden="true" />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">

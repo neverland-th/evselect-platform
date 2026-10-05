@@ -1,3 +1,4 @@
+import { siteName } from '@/lib/site-identity';
 import Link from 'next/link';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
@@ -5,8 +6,8 @@ import InformationPage, { informationLinkStyle } from '@/components/InformationP
 export const metadata = {
   alternates: { canonical: '/about' },
   robots: { index: false, follow: true },
-  title: 'เกี่ยวกับเรา | EVSELECT',
-  description: 'รู้จัก EVSELECT: บทความรถ EV และแนวทางเลือกอุปกรณ์เสริมสำหรับผู้ใช้รถในไทย พร้อมสถานะการเตรียมเปิดตัวสินค้า',
+  title: `เกี่ยวกับเรา | ${siteName}`,
+  description: `รู้จัก ${siteName}: บทความรถ EV และแนวทางเลือกอุปกรณ์เสริมสำหรับผู้ใช้รถในไทย พร้อมสถานะการเตรียมเปิดตัวสินค้า`,
 };
 
 export default function AboutPage() {

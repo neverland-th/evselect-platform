@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,7 +25,7 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
 }
 
 export const metadata: Metadata = {
-  title: `${batteryArticle.title} | EVSELECT`,
+  title: `${batteryArticle.title} | ${siteName}`,
   description: batteryArticle.description,
   alternates: { canonical: batteryArticle.path },
   openGraph: {
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     url: `https://evselects.com${batteryArticle.path}`,
     type: 'article',
     locale: 'th_TH',
-    siteName: 'EVSELECT',
+    siteName: siteName,
     publishedTime: batteryArticle.publishedAt,
     modifiedTime: batteryArticle.updatedAt,
     images: [{ url: batteryArticle.image, width: 1920, height: 1198, alt: batteryArticle.imageAlt }],
@@ -48,15 +50,15 @@ const jsonLd = {
   image: `https://evselects.com${batteryArticle.image}`,
   datePublished: batteryArticle.publishedAt,
   dateModified: batteryArticle.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://evselects.com${batteryArticle.path}` },
 };
 
 export default function EVBatteryCareArticle() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
       <ImageMetadata pagePath="/articles/ev-battery-care" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
     <nav aria-label="Breadcrumb" className="mb-8 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">
       <p className="inline-flex items-center gap-2 rounded-full bg-lime-50 px-4 py-1 text-sm font-semibold text-lime-800"><BatteryCharging size={18} />คู่มือการใช้งาน · แบตเตอรี่และการชาร์จ</p>

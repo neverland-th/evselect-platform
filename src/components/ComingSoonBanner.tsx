@@ -1,3 +1,4 @@
+import { siteName } from '@/lib/site-identity';
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -20,7 +21,7 @@ export default function ComingSoonBanner() {
         <div className={styles.copy}>
           <div className={styles.brand}>
             <span className={styles.selector} aria-hidden="true"><i /><i /></span>
-            <Link href="/" className="underline underline-offset-4">EVSELECTS</Link>
+            <Link href="/" className="underline underline-offset-4">{siteName}</Link>
           </div>
           <p className={styles.eyebrow}><span aria-hidden="true" />COMING SOON</p>
           <h2 id="coming-soon-heading" className={styles.title}>

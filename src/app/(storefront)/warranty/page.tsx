@@ -1,11 +1,12 @@
+import { siteName } from '@/lib/site-identity';
 import Link from 'next/link';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
 export const metadata = {
   alternates: { canonical: '/warranty' },
   robots: { index: false, follow: true },
-  title: 'นโยบายการรับประกัน | EVSELECT',
-  description: 'สถานะข้อมูลการรับประกันในช่วงที่ EVSELECT ยังไม่เปิดจำหน่ายสินค้า',
+  title: `นโยบายการรับประกัน | ${siteName}`,
+  description: `สถานะข้อมูลการรับประกันในช่วงที่ ${siteName} ยังไม่เปิดจำหน่ายสินค้า`,
 };
 
 export default function WarrantyPage() {

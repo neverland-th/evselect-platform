@@ -1,3 +1,4 @@
+import { siteName } from '@/lib/site-identity';
 import Link from 'next/link';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
@@ -5,8 +6,8 @@ import InformationPage, { informationLinkStyle } from '@/components/InformationP
 export const metadata = {
   alternates: { canonical: '/editorial-policy' },
   robots: { index: false, follow: true },
-  title: 'นโยบายบรรณาธิการ | EVSELECT',
-  description: 'แนวทางจัดทำบทความ EVSELECT: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข',
+  title: `นโยบายบรรณาธิการ | ${siteName}`,
+  description: `แนวทางจัดทำบทความ ${siteName}: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข`,
 };
 
 export default function EditorialPolicyPage() {

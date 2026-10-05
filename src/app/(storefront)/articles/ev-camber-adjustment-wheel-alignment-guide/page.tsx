@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -14,17 +16,17 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
 }
 
 export const metadata: Metadata = {
-  title: `${camberArticle.title} | EVSELECT`, description: camberArticle.description,
+  title: `${camberArticle.title} | ${siteName}`, description: camberArticle.description,
   alternates: { canonical: camberArticle.path },
-  openGraph: { title: camberArticle.title, description: camberArticle.description, url: `https://evselects.com${camberArticle.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', publishedTime: camberArticle.publishedAt, modifiedTime: camberArticle.updatedAt, images: [{ url: camberArticle.image, width: 1624, height: 875, alt: camberArticle.imageAlt }] },
+  openGraph: { title: camberArticle.title, description: camberArticle.description, url: `https://evselects.com${camberArticle.path}`, type: 'article', locale: 'th_TH', siteName: siteName, publishedTime: camberArticle.publishedAt, modifiedTime: camberArticle.updatedAt, images: [{ url: camberArticle.image, width: 1624, height: 875, alt: camberArticle.imageAlt }] },
   twitter: { card: 'summary_large_image', title: camberArticle.title, description: camberArticle.description, images: [camberArticle.image] },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: camberArticle.title, description: camberArticle.description,
   image: `https://evselects.com${camberArticle.image}`, datePublished: camberArticle.publishedAt, dateModified: camberArticle.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://evselects.com${camberArticle.path}` },
 };
 
@@ -37,7 +39,7 @@ const directions = [
 export default function EVCamberAdjustmentGuidePage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
       <ImageMetadata pagePath="/articles/ev-camber-adjustment-wheel-alignment-guide" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={`${linkStyle} inline-flex items-center gap-2 text-sm`}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
       <p className="text-sm font-bold text-lime-800">คู่มือเจ้าของรถ · ศูนย์ล้อและการสึกของยาง</p>

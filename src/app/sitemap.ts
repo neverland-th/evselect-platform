@@ -17,12 +17,20 @@ import { zeekr009Article } from '@/lib/zeekr-009-article';
 import { zeekrXArticle } from '@/lib/zeekr-x-article';
 import { drivingArticle } from '@/lib/driving-article';
 import { evTyreArticle } from '@/lib/ev-tyre-article';
+import { damperArticle } from '@/lib/damper-article';
+import { powertrainArticle } from '@/lib/powertrain-article';
+import { suspensionArticle } from '@/lib/suspension-article';
+import { teslaModel3 } from '@/lib/tesla-model-3';
 import { publicSiteRoutes, siteOrigin } from '@/lib/public-site-routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return publicSiteRoutes.map(path => ({
     url: `${siteOrigin}${path}`,
     // Only publish a modification date when it is maintained with the content.
+    ...(path === damperArticle.path ? { lastModified: damperArticle.updatedAt } : {}),
+    ...(path === powertrainArticle.path ? { lastModified: powertrainArticle.updatedAt } : {}),
+    ...(path === suspensionArticle.path ? { lastModified: suspensionArticle.updatedAt } : {}),
+    ...(path === new URL(teslaModel3.url).pathname ? { lastModified: teslaModel3.updatedAt } : {}),
     ...(path === brakeArticle.path ? { lastModified: brakeArticle.updatedAt } : {}),
     ...(path === batteryArticle.path ? { lastModified: batteryArticle.updatedAt } : {}),
     ...(path === mg4Article.path ? { lastModified: mg4Article.updatedAt } : {}),

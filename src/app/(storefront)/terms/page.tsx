@@ -1,11 +1,12 @@
+import { siteName } from '@/lib/site-identity';
 import Link from 'next/link';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
 export const metadata = {
   alternates: { canonical: '/terms' },
   robots: { index: false, follow: true },
-  title: 'ข้อตกลงและเงื่อนไข | EVSELECT',
-  description: 'สถานะการจัดทำข้อตกลงและเงื่อนไข EVSELECT และข้อมูลช่วงเตรียมเปิดตัวสินค้า',
+  title: `ข้อตกลงและเงื่อนไข | ${siteName}`,
+  description: `สถานะการจัดทำข้อตกลงและเงื่อนไข ${siteName} และข้อมูลช่วงเตรียมเปิดตัวสินค้า`,
 };
 
 export default function TermsPage() {

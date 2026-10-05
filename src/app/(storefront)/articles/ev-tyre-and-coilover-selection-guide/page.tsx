@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,11 +12,11 @@ import { evTyreArticle as article, tyreModels, tyreSources as sources } from '@/
 
 const linkStyle = 'font-semibold text-lime-800 underline decoration-lime-500 underline-offset-4 hover:text-lime-950 focus-visible:outline-2 focus-visible:outline-offset-4';
 export const metadata: Metadata = {
-  title: `${article.title} | EVSELECTS.COM`, description: article.description,
+  title: `${article.title} | ${siteName}`, description: article.description,
   alternates: { canonical: article.path },
   openGraph: {
     title: article.title, description: article.description, url: `https://evselects.com${article.path}`,
-    type: 'article', locale: 'th_TH', siteName: 'EVSELECTS.COM',
+    type: 'article', locale: 'th_TH', siteName: siteName,
     publishedTime: article.publishedAt, modifiedTime: article.updatedAt,
     images: [{ url: article.image, width: article.imageWidth, height: article.imageHeight, alt: article.imageAlt }],
   },
@@ -48,12 +50,12 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
     description: article.description, image: [`https://evselects.com${article.image}`],
     datePublished: article.publishedAt, dateModified: article.updatedAt,
     mainEntityOfPage: `https://evselects.com${article.path}`,
-    author: { '@type': 'Organization', name: 'EVSELECTS.COM', url: 'https://evselects.com/' },
-    publisher: { '@type': 'Organization', name: 'EVSELECTS.COM', url: 'https://evselects.com/' },
+    author: editorialOrganization,
+    publisher: editorialOrganization,
   };
   return <article className="mx-auto max-w-5xl px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
       <ImageMetadata pagePath="/articles/ev-tyre-and-coilover-selection-guide" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(structuredData) }} />
     <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} aria-hidden="true" />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">
       <p className="text-sm font-semibold text-lime-800">รู้ก่อนเปลี่ยนยาง · EV และ Performance</p>
@@ -61,7 +63,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <p className="max-w-3xl text-lg leading-[1.9] sm:text-xl">พอถึงเวลาเปลี่ยนยางรถไฟฟ้า คำถามมักไม่จบแค่เลือกยี่ห้อไหนดี แต่กลายเป็นว่า “ต้องซื้อยาง EV ไหม แล้วถ้าใส่ Pilot Sport 4 S จะได้อะไรและเสียอะไรไป?”</p>
       <p><strong>ความต่างอยู่ที่โจทย์ออกแบบของยางแต่ละรุ่น</strong> บางรุ่นเน้นใช้พลังงานน้อย บางรุ่นพยายามเก็บทั้งความเงียบและการควบคุม ส่วนยาง Performance ก็ใช้กับ EV ได้เมื่อสเปกตรงรถ อย่าง <Source href={sources.ps4s}>Michelin Pilot Sport 4 S</Source> ซึ่งหน้าไทยระบุว่ารองรับรถไฟฟ้า</p>
       <p>เราจะดูตัวอย่างจาก Michelin, Hankook, Continental และ Pirelli ว่าแต่ละรุ่นปรับอะไรเพื่อแก้โจทย์เหล่านี้ แล้วค่อยกลับมาตอบว่าแบบไหนตรงกับการขับของเรามากกว่า</p>
-      <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>29 กันยายน 2569</time> · อ่านประมาณ {article.readTime} · เรียบเรียงโดย <Link href="/" className={linkStyle}>EVSELECTS.COM</Link></p>
+      <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>29 กันยายน 2569</time> · อ่านประมาณ {article.readTime} · เรียบเรียงโดย <Link href="/" className={linkStyle}>{siteName}</Link></p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <EvTyreCover eager />
 
@@ -171,7 +173,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       </Section>
 
       <Section id="sources" title="แหล่งข้อมูลและขอบเขตที่ยังต้องตรวจต่อ">
-        <p>ตรวจแหล่งอ้างอิงวันที่ 29 กันยายน 2569 ข้อมูลการออกแบบมาจากผู้ผลิต ส่วนผลทดสอบที่ยกมาเป็นของ ADAC และ Tire Rack ซึ่งเป็นผู้จำหน่ายยางที่มีโครงการทดสอบเอง ไม่ใช่การทดลองของ <Link href="/" className={linkStyle}>EVSELECTS.COM</Link> แหล่งภาพและข้อมูลสเปกแสดงอยู่ข้างรุ่นที่เกี่ยวข้อง</p>
+        <p>ตรวจแหล่งอ้างอิงวันที่ 29 กันยายน 2569 ข้อมูลการออกแบบมาจากผู้ผลิต ส่วนผลทดสอบที่ยกมาเป็นของ ADAC และ Tire Rack ซึ่งเป็นผู้จำหน่ายยางที่มีโครงการทดสอบเอง ไม่ใช่การทดลองของ <Link href="/" className={linkStyle}>{siteName}</Link> แหล่งภาพและข้อมูลสเปกแสดงอยู่ข้างรุ่นที่เกี่ยวข้อง</p>
         <ul className="list-disc space-y-3 pl-6">
           <li>Michelin ประเทศไทย: <Source href={sources.eprimacy}>e.Primacy</Source>, <Source href={sources.pilotEv}>Pilot Sport EV พร้อมเชิงอรรถการทดสอบ</Source> และ <Source href={sources.ps4s}>Pilot Sport 4 S</Source></li>
           <li><Source href={sources.hankook}>Hankook iON evo · สเปกและเทคโนโลยีตลาดสหรัฐฯ</Source>; <Source href={sources.continentalPress}>Continental EcoContact 7 / 7 S · ข่าวเปิดตัว 5 ก.พ. 2025</Source></li>

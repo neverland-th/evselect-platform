@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -14,23 +16,23 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
 }
 
 export const metadata: Metadata = {
-  title: article.title + ' | EVSELECT', description: article.description,
+  title: article.title + ` | ${siteName}`, description: article.description,
   alternates: { canonical: article.path },
-  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1280, height: 640, alt: article.imageAlt }] },
+  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: siteName, publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1280, height: 640, alt: article.imageAlt }] },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
 };
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
   image: 'https://evselects.com' + article.image, datePublished: article.publishedAt, dateModified: article.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://evselects.com' + article.path },
 };
 
 export default function ThaiRoadSuspensionGuidePage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
       <ImageMetadata pagePath="/articles/optimizing-ev-suspension-thai-roads" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={linkStyle + ' inline-flex items-center gap-2 text-sm'}><ArrowLeft size={16} />บทความและคู่มือรถ EV</Link></nav>
     <header className="space-y-6">
       <p className="text-sm font-bold text-lime-800">คู่มือช่วงล่าง · เริ่มจากอาการบนเส้นทางที่คุณใช้จริง</p>
@@ -132,7 +134,7 @@ export default function ThaiRoadSuspensionGuidePage() {
       </section>
       <aside className="rounded-2xl bg-slate-950 p-6 text-slate-200">
         <p className="font-bold text-white">เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม</p>
-        <p className="mt-2 text-sm leading-7"><Link href="/" className="font-semibold text-lime-300 underline underline-offset-4">EVSELECT</Link> ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน อ่าน <Link href="/articles" className="font-semibold text-lime-300 underline underline-offset-4">บทความและคู่มือรถ EV</Link> เพื่อเตรียมข้อมูลก่อนเลือกอุปกรณ์ได้ครับ</p>
+        <p className="mt-2 text-sm leading-7"><Link href="/" className="font-semibold text-lime-300 underline underline-offset-4">{siteName}</Link> ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน อ่าน <Link href="/articles" className="font-semibold text-lime-300 underline underline-offset-4">บทความและคู่มือรถ EV</Link> เพื่อเตรียมข้อมูลก่อนเลือกอุปกรณ์ได้ครับ</p>
       </aside>
     </div>
   </article>;

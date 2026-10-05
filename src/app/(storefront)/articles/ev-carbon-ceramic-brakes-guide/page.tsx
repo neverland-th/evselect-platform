@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -12,10 +14,10 @@ import BrakeKitReferences from '@/components/articles/BrakeKitReferences';
 import styles from '@/components/articles/BrakeGuide.module.css';
 
 export const metadata: Metadata = {
-  title: `${brakeArticle.title} | EVSELECT`,
+  title: `${brakeArticle.title} | ${siteName}`,
   description: brakeArticle.description,
   alternates: { canonical: brakeArticle.path },
-  openGraph: { title: brakeArticle.title, description: brakeArticle.description, url: brakeArticle.url, siteName: 'EVSELECT Thailand', locale: 'th_TH', type: 'article', publishedTime: brakeArticle.publishedAt, modifiedTime: brakeArticle.updatedAt, images: [{ url: brakeArticle.cover, width: brakeArticle.coverWidth, height: brakeArticle.coverHeight, alt: brakeArticle.coverAlt }] },
+  openGraph: { title: brakeArticle.title, description: brakeArticle.description, url: brakeArticle.url, siteName: siteName, locale: 'th_TH', type: 'article', publishedTime: brakeArticle.publishedAt, modifiedTime: brakeArticle.updatedAt, images: [{ url: brakeArticle.cover, width: brakeArticle.coverWidth, height: brakeArticle.coverHeight, alt: brakeArticle.coverAlt }] },
   twitter: { card: 'summary_large_image', title: brakeArticle.title, description: brakeArticle.description, images: [brakeArticle.cover] },
 };
 
@@ -51,11 +53,11 @@ const faqs = [
 ];
 
 export default function CarbonCeramicBrakesGuidePage() {
-  const articleSchema = { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: brakeArticle.title, description: brakeArticle.description, datePublished: brakeArticle.publishedAt, dateModified: brakeArticle.updatedAt, mainEntityOfPage: brakeArticle.url, image: new URL(brakeArticle.cover, brakeArticle.url).href, inLanguage: 'th-TH', author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com' }, citation: Object.values(brakeSources).map(source => source.url) };
+  const articleSchema = { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: brakeArticle.title, description: brakeArticle.description, datePublished: brakeArticle.publishedAt, dateModified: brakeArticle.updatedAt, mainEntityOfPage: brakeArticle.url, image: new URL(brakeArticle.cover, brakeArticle.url).href, inLanguage: 'th-TH', author: editorialOrganization, publisher: editorialOrganization, citation: Object.values(brakeSources).map(source => source.url) };
   return <article className={`${styles.article} mx-auto max-w-5xl bg-white px-4 py-10 font-sans text-slate-900 sm:px-6 md:py-16 lg:px-8`}>
       <ImageMetadata pagePath="/articles/ev-carbon-ceramic-brakes-guide" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: brakeArticle.title, item: brakeArticle.url }] }) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: brakeArticle.title, item: brakeArticle.url }] }) }} />
     <Link href="/articles" className="mb-7 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-slate-500 hover:text-lime-800"><ArrowLeft className="h-4 w-4" aria-hidden="true" />กลับไปบทความและคู่มือ EV</Link>
     <header className="space-y-6">
       <span className="inline-flex items-center gap-2 rounded-full bg-lime-100 px-4 py-2 text-sm font-bold text-lime-900"><Disc3 className="h-4 w-4" aria-hidden="true" />เลือกของให้ตรงงาน · ระบบเบรก EV</span>

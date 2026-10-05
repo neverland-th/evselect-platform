@@ -1,3 +1,4 @@
+import { siteName } from '@/lib/site-identity';
 import type { Metadata, Viewport } from "next";
 import { Prompt } from "next/font/google";
 import "./globals.css";
@@ -16,8 +17,8 @@ const promptFont = Prompt({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://evselects.com'),
-  title: 'EVSELECT | รีวิวรถ EV และอุปกรณ์เสริมสำหรับคนรักรถ',
-  description: 'บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับคนรักรถ EV ในไทย ติดตามข่าวการเปิดตัวสินค้าจาก EVSELECT',
+  title: `${siteName} | รีวิวรถ EV และอุปกรณ์เสริมสำหรับคนรักรถ`,
+  description: `บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับคนรักรถ EV ในไทย ติดตามข่าวการเปิดตัวสินค้าจาก ${siteName}`,
   icons: {
     icon: '/logo.png',
   },
@@ -25,10 +26,10 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'EVSELECT | เข้าใจรถให้ลึก เลือกให้ตรงใจ',
+    title: `${siteName} | เข้าใจรถให้ลึก เลือกให้ตรงใจ`,
     description: 'อ่านรีวิวรถ EV ความรู้เรื่องช่วงล่าง และติดตามอุปกรณ์เสริมที่กำลังเตรียมเปิดตัว',
     url: 'https://evselects.com',
-    siteName: 'EVSELECT Thailand',
+    siteName: siteName,
     locale: 'th_TH',
     type: 'website',
   },

@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,12 +10,12 @@ import BrandHomeLink from '@/components/BrandHomeLink';
 import { teslaModel3 as article, teslaModel3Trims as trims } from '@/lib/tesla-model-3';
 
 export const metadata: Metadata = {
-  title: `${article.title} | EVSELECT`, description: article.description,
+  title: `${article.title} | ${siteName}`, description: article.description,
   alternates: { canonical: article.url },
   openGraph: {
     title: article.title, description: article.description, url: article.url,
-    siteName: 'EVSELECT Thailand', locale: 'th_TH', type: 'article',
-    publishedTime: '2026-08-25T08:00:00+07:00', modifiedTime: article.updatedAt,
+    siteName: siteName, locale: 'th_TH', type: 'article',
+    publishedTime: article.publishedAt, modifiedTime: article.updatedAt,
     images: [{ url: article.image, width: 1200, height: 675, alt: 'ภาพประกอบ Tesla Model 3 Highland' }],
   },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
@@ -22,9 +24,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title,
   description: article.description, mainEntityOfPage: article.url, image: article.image,
-  datePublished: '2026-08-25T08:00:00+07:00', dateModified: article.updatedAt,
-  inLanguage: 'th-TH', author: { '@type': 'Organization', name: 'EVSELECT Editorial Team' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT Thailand', url: 'https://evselects.com' },
+  datePublished: article.publishedAt, dateModified: article.updatedAt,
+  inLanguage: 'th-TH', author: editorialOrganization,
+  publisher: editorialOrganization,
   citation: Object.values(article.sources),
   about: { '@type': 'Car', name: 'Tesla Model 3', brand: { '@type': 'Brand', name: 'Tesla' } },
 };
@@ -42,7 +44,7 @@ export default function TeslaModel3HighlandReviewPage() {
   return (
     <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 text-slate-900 bg-white">
       <ImageMetadata pagePath="/articles/tesla-model-3-highland-review" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
       <nav aria-label="เส้นทางนำทาง" className="mb-8">
         <Link href="/articles" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-lime-700"><ArrowLeft className="w-4 h-4" /> กลับไปหน้าบทความและรีวิวรถยนต์ไฟฟ้า</Link>
       </nav>
@@ -53,6 +55,7 @@ export default function TeslaModel3HighlandReviewPage() {
           <span className="text-slate-500">อัปเดตภาพ <time dateTime={article.updatedAt}>1 ตุลาคม 2569</time></span>
         </div>
         <h1 className="text-3xl md:text-5xl font-black leading-tight tracking-tight" style={{ textWrap: 'balance' }}>{article.title}</h1>
+        <p className="text-sm text-slate-500">เรียบเรียงโดย <BrandHomeLink /> · เผยแพร่ <time dateTime={article.publishedAt}>25 สิงหาคม 2569</time> · รวบรวมข้อมูลจากผู้ผลิต ไม่มีผลทดสอบรถโดยกองบรรณาธิการในบทความนี้</p>
         <p className="text-base sm:text-lg leading-relaxed text-slate-600">Model 3 แต่ละรุ่นไม่ได้ต่างกันแค่ความแรง บทความนี้รวบรวมราคาและอุปกรณ์ที่ Tesla ประเทศไทยแสดงในวันที่ตรวจสอบ เพื่อช่วยเปรียบเทียบรุ่นขับหลังทั้งสามรุ่นกับ Performance AWD ก่อนเลือกทดลองขับ</p>
       </header>
       <figure className="mb-9">

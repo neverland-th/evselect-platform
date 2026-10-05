@@ -1,5 +1,7 @@
 "use client";
 
+import { siteName } from '@/lib/site-identity';
+
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, ChevronRight, Menu, X } from "lucide-react";
@@ -56,7 +58,7 @@ export default function MobileMenu() {
       >
         <div className={styles.heading}>
           <div>
-            <p className={styles.brand}><Link href="/" onClick={close}>EVSELECT</Link></p>
+            <p className={styles.brand}><Link href="/" onClick={close}>{siteName}</Link></p>
             <p className={styles.menuTitle} id={`${id}-title`}>เมนูหลัก</p>
           </div>
           <button type="button" className={styles.close} aria-label="ปิดเมนูหลัก" onClick={close} autoFocus>

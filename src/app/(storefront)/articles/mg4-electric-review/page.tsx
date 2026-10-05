@@ -1,3 +1,5 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,11 +17,11 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
 }
 
 export const metadata: Metadata = {
-  title: `${mg4Article.title} | EVSELECT`, description: mg4Article.description,
+  title: `${mg4Article.title} | ${siteName}`, description: mg4Article.description,
   alternates: { canonical: mg4Article.path },
   openGraph: {
     title: mg4Article.title, description: mg4Article.description,
-    url: `https://evselects.com${mg4Article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT',
+    url: `https://evselects.com${mg4Article.path}`, type: 'article', locale: 'th_TH', siteName: siteName,
     publishedTime: mg4Article.publishedAt, modifiedTime: mg4Article.updatedAt,
     images: [{ url: mg4Article.image, width: 1280, height: 720, alt: mg4Article.imageAlt }],
   },
@@ -31,8 +33,8 @@ const jsonLd = {
   headline: mg4Article.title, description: mg4Article.description,
   image: `https://evselects.com${mg4Article.image}`,
   datePublished: mg4Article.publishedAt, dateModified: mg4Article.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://evselects.com${mg4Article.path}` },
 };
 
@@ -52,7 +54,7 @@ const trims = [
 export default function MG4ElectricReviewPage() {
   return <article className="mx-auto max-w-4xl bg-white px-4 py-10 text-base leading-8 text-slate-700 sm:px-6 md:py-16 lg:px-8">
       <ImageMetadata pagePath="/articles/mg4-electric-review" />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
     <nav aria-label="Breadcrumb" className="mb-7"><Link href="/articles" className={`${linkStyle} inline-flex items-center gap-2 text-sm`}><ArrowLeft size={16} />บทความรถ EV</Link></nav>
     <header className="space-y-6">
       <p className="text-sm font-bold text-lime-800">คู่มือเลือกซื้อ · อ้างอิงสเปก MG ประเทศไทย</p>

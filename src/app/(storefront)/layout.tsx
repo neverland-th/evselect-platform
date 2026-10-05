@@ -1,3 +1,4 @@
+import { siteName } from '@/lib/site-identity';
 import MobileMenu from "@/components/MobileMenu";
 import CookieConsent, { CookieSettingsButton } from '@/components/CookieConsent';
 import { getAnalyticsMeasurementId } from '@/lib/analytics';
@@ -25,7 +26,7 @@ export default function StorefrontLayout({
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
           </span>
           <span className="text-slate-200 leading-tight">
-            <strong className="text-lime-400 font-semibold"><Link href="/" className="underline underline-offset-4">EVSELECT</Link> กำลังเตรียมเปิดตัวสินค้า</strong>
+            <strong className="text-lime-400 font-semibold"><Link href="/" className="underline underline-offset-4">{siteName}</Link> กำลังเตรียมเปิดตัวสินค้า</strong>
             <span className="hidden sm:inline"> — ตอนนี้ยังไม่มีสินค้าพร้อมจำหน่าย</span>
           </span>
         </div>
@@ -41,7 +42,7 @@ export default function StorefrontLayout({
           {/* Mobile Menu & Logo */}
           <div className="flex items-center gap-1 sm:gap-2">
             <MobileMenu />
-            <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
+            <Link href="/" aria-label={`${siteName} กลับหน้าแรก`} className="flex items-center gap-2 sm:gap-3 shrink-0 group">
             {/* Mobile Logo */}
             <div className="legacy-wordmark xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image
@@ -170,7 +171,7 @@ export default function StorefrontLayout({
 
             {/* Quality Commitment */}
             <div className="space-y-3">
-              <h2 className="text-sm font-semibold text-white tracking-wider uppercase">แนวทาง <Link href="/" className="underline underline-offset-4">EVSELECT</Link></h2>
+              <h2 className="text-sm font-semibold text-white tracking-wider uppercase">แนวทาง <Link href="/" className="underline underline-offset-4">{siteName}</Link></h2>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 เราแยกข้อมูลจากผู้ผลิต หลักการทั่วไป และสิ่งที่ยังต้องตรวจสอบ เพื่อให้ผู้อ่านเห็นข้อจำกัดของข้อมูลก่อนนำไปใช้
               </p>
@@ -187,7 +188,7 @@ export default function StorefrontLayout({
           </div>
 
           <div className="mt-12 pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-            <p>© {new Date().getFullYear()} <Link href="/" className="underline underline-offset-4 hover:text-white">EVSELECT</Link> Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
+            <p>© {new Date().getFullYear()} <Link href="/" className="underline underline-offset-4 hover:text-white">{siteName}</Link> สงวนลิขสิทธิ์ทุกประการ</p>
             <p className="font-mono text-[11px] text-zinc-500">
               DRIVE BETTER. SELECT SMARTER.™
             </p>
@@ -198,4 +199,3 @@ export default function StorefrontLayout({
     </div>
   );
 }
-

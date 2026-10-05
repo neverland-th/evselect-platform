@@ -1,3 +1,4 @@
+import { siteName } from '@/lib/site-identity';
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
@@ -51,7 +52,7 @@ export default function EvUpgradeInfographic() {
           <h3 id="ev-upgrade-map-heading" className="font-bold">เริ่มจากสิ่งที่ใช้จริง</h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-600">สามจุดเริ่มต้น เลือกจากสิ่งที่อยากเปลี่ยน</p>
         </div>
-        <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-slate-500"><span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-lime-500" /><Link href="/" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">EVSELECTS</Link> / QUICK GUIDE</span>
+        <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-slate-500"><span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-lime-500" /><Link href="/" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">{siteName}</Link> / QUICK GUIDE</span>
       </div>
 
       <ol className="grid gap-6 md:grid-cols-3 md:gap-7">
