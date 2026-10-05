@@ -6,6 +6,10 @@ export const publicSiteRoutes = [
   '/',
   '/articles',
   '/image-credits',
+  '/contact',
+  '/editorial-policy',
+  '/privacy',
+  '/downloads/evselect-damper-setup-log.html',
   '/articles/byd-atto-3-review',
   '/articles/byd-seal-review',
   '/articles/deepal-s05-review',
@@ -30,12 +34,9 @@ export const publicSiteRoutes = [
   '/articles/zeekr-x-review',
 ] as const;
 
-// Supporting information routes remain noindex; formal legal policies are still in preparation.
+// Match the current published indexability before shipping performance changes.
 export const pendingPublicRoutes = [
-  '/about', '/contact', '/editorial-policy', '/privacy', '/terms', '/warranty',
+  '/about', '/terms', '/warranty',
 ] as const;
 
-// Linked reader tools are public but deliberately noindex, not editorial sitemap entries.
-export const supportingPublicRoutes = [
-  '/downloads/evselect-damper-setup-log.html',
-] as const;
+export const supportingPublicRoutes = [] as const;

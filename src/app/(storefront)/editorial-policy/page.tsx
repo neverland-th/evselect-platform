@@ -4,7 +4,7 @@ import InformationPage, { informationLinkStyle } from '@/components/InformationP
 
 export const metadata = {
   alternates: { canonical: '/editorial-policy' },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   title: 'นโยบายบรรณาธิการ | EVSELECT',
   description: 'แนวทางจัดทำบทความ EVSELECT: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข',
 };

@@ -6,7 +6,7 @@ import BrandHomeLink from '@/components/BrandHomeLink';
 
 export const metadata = {
   alternates: { canonical: '/privacy' },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   title: 'นโยบายความเป็นส่วนตัว | EVSELECT',
   description: 'การใช้ข้อมูลบนเว็บไซต์ EVSELECT คุกกี้ การวิเคราะห์การใช้งาน และวิธีเปลี่ยนหรือถอนความยินยอม',
 };

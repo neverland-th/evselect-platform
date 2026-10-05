@@ -3,7 +3,7 @@ import InformationPage, { informationLinkStyle } from '@/components/InformationP
 
 export const metadata = {
   alternates: { canonical: '/contact' },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   title: 'ติดต่อเรา | EVSELECT',
   description: 'ติดต่อทีม EVSELECT ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ',
 };
