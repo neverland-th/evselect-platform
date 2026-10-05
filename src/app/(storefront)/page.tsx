@@ -220,6 +220,7 @@ export default function StorefrontPage() {
               </a>
               <Link
                 href="/articles"
+                prefetch={false}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/25 px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
                 ดูบทความทั้งหมด
@@ -229,13 +230,15 @@ export default function StorefrontPage() {
 
           <Link
             href="/articles/tesla-model-3-highland-review"
+            prefetch={false}
             className="group relative min-h-[21rem] overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-900 sm:min-h-[27rem]"
           >
             <Image
               src="/images/reviews/tesla-model-3-hero.jpg"
               alt="Tesla Model 3 Highland สีแดงที่งานแสดงรถในเยอรมนี ปี 2024"
               fill
-              preload
+              loading="eager"
+              fetchPriority="high"
               sizes="(max-width: 1023px) 100vw, 55vw"
               className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
             />

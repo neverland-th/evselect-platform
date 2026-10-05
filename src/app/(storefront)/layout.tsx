@@ -25,7 +25,7 @@ export default function StorefrontLayout({
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
           </span>
           <span className="text-slate-200 leading-tight">
-            <strong className="text-lime-400 font-semibold"><Link href="/" className="underline underline-offset-4">EVSELECT</Link> กำลังเตรียมเปิดตัวสินค้า</strong>
+            <strong className="text-lime-400 font-semibold"><Link href="/" prefetch={false} className="underline underline-offset-4">EVSELECT</Link> กำลังเตรียมเปิดตัวสินค้า</strong>
             <span className="hidden sm:inline"> — ตอนนี้ยังไม่มีสินค้าพร้อมจำหน่าย</span>
           </span>
         </div>
@@ -41,7 +41,7 @@ export default function StorefrontLayout({
           {/* Mobile Menu & Logo */}
           <div className="flex items-center gap-1 sm:gap-2">
             <MobileMenu />
-            <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
+            <Link href="/" prefetch={false} className="flex items-center gap-2 sm:gap-3 shrink-0 group">
             {/* Mobile Logo */}
             <div className="legacy-wordmark xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image
@@ -50,7 +50,9 @@ export default function StorefrontLayout({
                 width={380}
                 height={190}
                 className="object-contain w-full h-full"
-                priority
+                sizes="(max-width: 639px) 86px, 134px"
+                loading="eager"
+                fetchPriority="low"
               />
             </div>
 
@@ -62,7 +64,7 @@ export default function StorefrontLayout({
                 width={380}
                 height={190}
                 className="object-contain w-full h-full"
-                priority
+                sizes="162px"
               />
             </div>
           </Link>
@@ -70,7 +72,7 @@ export default function StorefrontLayout({
 
           {/* Navigation Links */}
           <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-600">
-            <Link href="/#launch" className="hover:text-lime-600 transition-colors">
+            <Link href="/#launch" prefetch={false} className="hover:text-lime-600 transition-colors">
               เตรียมเปิดตัว
             </Link>
             <Link href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
@@ -83,6 +85,7 @@ export default function StorefrontLayout({
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
             <Link
               href="/#launch"
+              prefetch={false}
               className="hidden sm:inline-flex items-center justify-center gap-1.5 min-h-[44px] min-w-[44px] h-11 bg-lime-50 hover:bg-lime-100 text-lime-800 border border-lime-200 text-xs font-semibold px-3.5 py-2 rounded-lg transition-all"
             >
               <Rocket className="w-3.5 h-3.5" />
@@ -122,6 +125,7 @@ export default function StorefrontLayout({
                   alt="EVSELECT"
                   width={380}
                   height={190}
+                  sizes="178px"
                   className="object-contain w-full h-full"
                 />
               </Link>
@@ -198,4 +202,3 @@ export default function StorefrontLayout({
     </div>
   );
 }
-

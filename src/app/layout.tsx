@@ -12,6 +12,8 @@ const promptFont = Prompt({
   weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["thai", "latin"],
   variable: "--font-thai",
+  // Let CSS request the weights in use instead of competing with the LCP image.
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -47,5 +49,4 @@ export default function RootLayout({
     </html>
   );
 }
-
 
