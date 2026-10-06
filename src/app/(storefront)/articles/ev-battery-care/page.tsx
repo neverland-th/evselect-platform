@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -48,8 +49,8 @@ const jsonLd = {
   image: `https://evselects.com${batteryArticle.image}`,
   datePublished: batteryArticle.publishedAt,
   dateModified: batteryArticle.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://evselects.com${batteryArticle.path}` },
 };
 

@@ -214,7 +214,7 @@ try {
   assert.equal(await plain.locator('script, form').count(), 0);
   await plain.locator('input').first().fill('รถตัวอย่างสำหรับตรวจฟอร์ม');
   assert.equal(await plain.locator('input').first().inputValue(), 'รถตัวอย่างสำหรับตรวจฟอร์ม');
-  assert.equal(await plain.locator('meta[name="robots"]').getAttribute('content'), 'noindex, follow');
+  assert.equal(await plain.locator('meta[name="robots"]').getAttribute('content'), 'index, follow');
   assert.equal(await plain.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
   await plain.pdf({ path: path.join(output, 'setup-log-print.pdf'), preferCSSPageSize: true, printBackground: true });
   checks.push({ noJavaScriptFoundationsAndBrief: true, noJavaScriptWheelRateDisclosure: true, noJavaScriptPainPointNavigation: true, noJavaScriptExplorer: true, noJavaScriptExamples: true, downloads: true, workshopChecklistPoints: 12, formEditable: true, formHasNoSubmissionOrScripts: true, printPdfCreated: true });

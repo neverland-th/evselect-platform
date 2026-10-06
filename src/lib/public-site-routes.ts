@@ -1,4 +1,5 @@
-// Published editorial pages only. Product/CMS/API routes are deliberately excluded.
+// Published public information, editorial pages and reader tools only.
+// Product/CMS/API routes are deliberately excluded.
 // Keep this allowlist in step with newly published pages; verify:seo checks coverage.
 export const siteOrigin = 'https://evselects.com';
 
@@ -34,9 +35,10 @@ export const publicSiteRoutes = [
   '/articles/zeekr-x-review',
 ] as const;
 
-// Match the current published indexability before shipping performance changes.
+// Only unfinished background/commerce-policy pages remain noindex.
 export const pendingPublicRoutes = [
   '/about', '/terms', '/warranty',
 ] as const;
 
+// Reserve explicit noindex reader tools here; the published setup log is indexable.
 export const supportingPublicRoutes = [] as const;

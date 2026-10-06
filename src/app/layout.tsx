@@ -1,3 +1,5 @@
+import { siteIdentitySchema } from '@/lib/site-identity';
+import { serializeImageMetadata as serializeJsonLd } from '@/lib/image-credits';
 import type { Metadata, Viewport } from "next";
 import { Prompt } from "next/font/google";
 import "./globals.css";
@@ -43,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="th" className={`${promptFont.variable} antialiased`}>
       <body className="min-h-screen bg-white text-slate-900 font-sans antialiased">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(siteIdentitySchema) }} />
         {children}
       </body>
     </html>

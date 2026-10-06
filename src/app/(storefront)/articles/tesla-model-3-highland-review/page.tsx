@@ -1,3 +1,4 @@
+import { editorialOrganization, siteName } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,8 +24,8 @@ const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title,
   description: article.description, mainEntityOfPage: article.url, image: article.image,
   datePublished: '2026-08-25T08:00:00+07:00', dateModified: article.updatedAt,
-  inLanguage: 'th-TH', author: { '@type': 'Organization', name: 'EVSELECT Editorial Team' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT Thailand', url: 'https://evselects.com' },
+  inLanguage: 'th-TH', author: editorialOrganization,
+  publisher: editorialOrganization,
   citation: Object.values(article.sources),
   about: { '@type': 'Car', name: 'Tesla Model 3', brand: { '@type': 'Brand', name: 'Tesla' } },
 };
@@ -47,6 +48,7 @@ export default function TeslaModel3HighlandReviewPage() {
         <Link href="/articles" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-lime-700"><ArrowLeft className="w-4 h-4" /> กลับไปหน้าบทความและรีวิวรถยนต์ไฟฟ้า</Link>
       </nav>
       <header className="space-y-5 mb-8 max-w-4xl">
+        <p className="text-sm text-slate-500">จัดทำโดย <Link href="/" className="underline underline-offset-4">{siteName}</Link></p>
         <div className="flex flex-wrap gap-3 items-center text-xs font-semibold">
           <span className="inline-flex items-center gap-2 rounded-full border border-lime-200 bg-lime-50 text-lime-800 px-3 py-1.5"><Car className="w-4 h-4" /> วิเคราะห์สเปกประเทศไทย</span>
           <span className="inline-flex items-center gap-2 text-slate-500"><CalendarDays className="w-4 h-4" /> ตรวจสอบ {article.checkedLabel}</span>

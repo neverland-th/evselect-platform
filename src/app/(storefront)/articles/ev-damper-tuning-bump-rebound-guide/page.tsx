@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -139,8 +140,8 @@ export default function EVDamperTuningGuidePage() {
     description: damperArticle.description,
     image: [damperArticle.coverUrl],
     mainEntityOfPage: damperArticle.url,
-    author: { '@type': 'Organization', name: 'EVSELECT' },
-    publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com' },
+    author: editorialOrganization,
+    publisher: editorialOrganization,
     datePublished: damperArticle.publishedAt,
     dateModified: damperArticle.updatedAt,
     inLanguage: 'th-TH',

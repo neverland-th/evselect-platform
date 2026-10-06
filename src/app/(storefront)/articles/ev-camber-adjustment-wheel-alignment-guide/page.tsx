@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: camberArticle.title, description: camberArticle.description,
   image: `https://evselects.com${camberArticle.image}`, datePublished: camberArticle.publishedAt, dateModified: camberArticle.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://evselects.com${camberArticle.path}` },
 };
 

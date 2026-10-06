@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Zeekr009CabinContent from '@/components/Zeekr009CabinContent';
 import photos from '@/data/zeekr-009-images.json';
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
   image: [article.image, ...Object.values(photos).map(photo => photo.src)].map(src => 'https://evselects.com' + src), datePublished: article.publishedAt, dateModified: article.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://evselects.com' + article.path },
 };
 export default function Zeekr009ArticlePage() {

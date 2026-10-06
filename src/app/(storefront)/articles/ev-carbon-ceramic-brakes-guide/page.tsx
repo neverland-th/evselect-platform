@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -51,7 +52,7 @@ const faqs = [
 ];
 
 export default function CarbonCeramicBrakesGuidePage() {
-  const articleSchema = { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: brakeArticle.title, description: brakeArticle.description, datePublished: brakeArticle.publishedAt, dateModified: brakeArticle.updatedAt, mainEntityOfPage: brakeArticle.url, image: new URL(brakeArticle.cover, brakeArticle.url).href, inLanguage: 'th-TH', author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com' }, citation: Object.values(brakeSources).map(source => source.url) };
+  const articleSchema = { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: brakeArticle.title, description: brakeArticle.description, datePublished: brakeArticle.publishedAt, dateModified: brakeArticle.updatedAt, mainEntityOfPage: brakeArticle.url, image: new URL(brakeArticle.cover, brakeArticle.url).href, inLanguage: 'th-TH', author: editorialOrganization, publisher: editorialOrganization, citation: Object.values(brakeSources).map(source => source.url) };
   return <article className={`${styles.article} mx-auto max-w-5xl bg-white px-4 py-10 font-sans text-slate-900 sm:px-6 md:py-16 lg:px-8`}>
       <ImageMetadata pagePath="/articles/ev-carbon-ceramic-brakes-guide" />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />

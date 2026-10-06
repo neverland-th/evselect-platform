@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -46,8 +47,8 @@ export default function EvSuspensionTuningGuidePage() {
       '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
       mainEntityOfPage: `https://evselects.com${path}`, image: `https://evselects.com${hero}`,
       datePublished: '2026-09-03', dateModified: '2026-09-21', inLanguage: 'th-TH',
-      author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com' },
-      publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com' },
+      author: editorialOrganization,
+      publisher: editorialOrganization,
     }) }} />
     <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">

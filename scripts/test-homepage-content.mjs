@@ -105,14 +105,25 @@ test('EV upgrade guide replaces the cartoon with credited photos and keeps reada
   assert.equal(map.querySelectorAll('ol').length, 2);
   assert.match(map.textContent, /ไม่ใช่การยืนยันว่าอุปกรณ์ในภาพใช้ได้กับรถทุกคัน/);
   assert.equal(map.querySelectorAll('img').length, 3);
-  assert.doesNotMatch(map.outerHTML, /ev-upgrade-car\.svg|bg-slate-900/, 'Do not retain the cartoon or oversized navy panel');
+  assert.doesNotMatch(map.outerHTML, /ev-upgrade-car\.svg/, 'Keep the real photos instead of the old cartoon');
+  assert.ok(map.classList.contains('bg-slate-950'), 'Highlight the guide with the requested dark background');
+  assert.ok(map.classList.contains('text-white'), 'Headings remain legible on the dark background');
+  for (const description of map.querySelectorAll('p.text-sm.leading-relaxed')) {
+    assert.ok(description.classList.contains('text-slate-300'), 'Body copy has light text on the dark background');
+  }
+  const checklist = map.querySelector('ol[aria-label="สิ่งที่ต้องเช็กก่อนซื้อของแต่ง"]').parentElement;
+  assert.ok(checklist.classList.contains('bg-lime-50'));
+  assert.ok(checklist.classList.contains('text-slate-900'), 'Light checklist explicitly uses dark text');
   const links = [...map.querySelectorAll('ol a')];
   assert.deepEqual(links.map(link => link.getAttribute('href')), [
     '#tesla-accessories',
     '/articles/ev-tyre-and-coilover-selection-guide',
     '/articles/ev-damper-tuning-bump-rebound-guide#symptoms',
   ]);
-  for (const link of links) assert.equal(link.getAttribute('target'), null, 'Internal links stay in this tab');
+  for (const link of links) {
+    assert.equal(link.getAttribute('target'), null, 'Internal links stay in this tab');
+    assert.ok(link.classList.contains('text-lime-300'), 'Reading links stay visible on the dark background');
+  }
   const metadata = JSON.parse(document.querySelector('script[data-image-metadata]').textContent)['@graph'];
   for (const [index, asset, credit, source] of [
     [0, '/images/editorial/tesla-model-3-performance-2024.png', 'iMoD Official', 'https://commons.wikimedia.org/wiki/File:2024_Tesla_Model_3_Performance_front_view_03.png'],

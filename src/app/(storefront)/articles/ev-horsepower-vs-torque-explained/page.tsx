@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -42,7 +43,7 @@ export default function EVHorsepowerVsTorquePage() {
       '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
       mainEntityOfPage: `https://evselects.com${article.path}`, image: `https://evselects.com${article.image}`,
       datePublished: article.publishedAt, dateModified: article.updatedAt, inLanguage: 'th-TH',
-      author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' }, publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
+      author: editorialOrganization, publisher: editorialOrganization,
     }) }} />
     <nav aria-label="Breadcrumb" className="mb-7 text-sm"><Link href="/articles" className="inline-flex min-h-11 items-center gap-2 text-slate-600 hover:text-lime-800"><ArrowLeft size={16} aria-hidden="true" />บทความและคู่มือ EV</Link></nav>
     <header className="space-y-5">

@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -31,8 +32,8 @@ const jsonLd = {
   headline: mg4Article.title, description: mg4Article.description,
   image: `https://evselects.com${mg4Article.image}`,
   datePublished: mg4Article.publishedAt, dateModified: mg4Article.updatedAt,
-  author: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/' },
-  publisher: { '@type': 'Organization', name: 'EVSELECT', url: 'https://evselects.com/', logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
+  author: editorialOrganization,
+  publisher: { ...editorialOrganization, logo: { '@type': 'ImageObject', url: 'https://evselects.com/logo-desktop.png' } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://evselects.com${mg4Article.path}` },
 };
 

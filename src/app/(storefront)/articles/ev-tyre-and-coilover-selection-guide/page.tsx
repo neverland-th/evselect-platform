@@ -1,3 +1,4 @@
+import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -48,8 +49,8 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
     description: article.description, image: [`https://evselects.com${article.image}`],
     datePublished: article.publishedAt, dateModified: article.updatedAt,
     mainEntityOfPage: `https://evselects.com${article.path}`,
-    author: { '@type': 'Organization', name: 'EVSELECTS.COM', url: 'https://evselects.com/' },
-    publisher: { '@type': 'Organization', name: 'EVSELECTS.COM', url: 'https://evselects.com/' },
+    author: editorialOrganization,
+    publisher: editorialOrganization,
   };
   return <article className="mx-auto max-w-5xl px-4 py-10 text-base leading-[1.9] text-slate-700 sm:px-6 sm:py-14 sm:text-lg lg:px-8">
       <ImageMetadata pagePath="/articles/ev-tyre-and-coilover-selection-guide" />
