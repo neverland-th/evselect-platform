@@ -1,0 +1,30 @@
+{
+  "route": "/articles/byd-seal-review",
+  "method": "Click the focusable overflow wrapper, then ArrowRight; scrollLeft increased within the table while document width remained within viewport.",
+  "items": [
+    {
+      "viewport": 320,
+      "container": 278,
+      "scrollWidth": 660,
+      "scrollLeft": 120
+    },
+    {
+      "viewport": 360,
+      "container": 318,
+      "scrollWidth": 660,
+      "scrollLeft": 14
+    },
+    {
+      "viewport": 390,
+      "container": 348,
+      "scrollWidth": 660,
+      "scrollLeft": 12
+    },
+    {
+      "viewport": 430,
+      "container": 388,
+      "scrollWidth": 660,
+      "scrollLeft": 7
+    }
+  ]
+}

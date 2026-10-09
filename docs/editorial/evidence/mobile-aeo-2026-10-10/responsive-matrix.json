@@ -1,0 +1,4407 @@
+{
+  "previewCommit": "33c946b1d4da1818c3568216a956c40a4a48c338",
+  "previewURL": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app",
+  "method": "Live Chromium same-origin iframe viewports; 844px height; no device/touch emulation",
+  "audit": [
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com",
+      "description": "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 17457,
+      "imageCount": 16,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS",
+      "width": 312,
+      "route": "/",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 14895,
+      "imageCount": 25,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-atto-3-review",
+      "description": "เทียบแบตเตอรี่ ระยะ NEDC และการชาร์จของ BYD Atto 3 Premium กับ Extended สเปกไทย MY2026 พร้อมจุดที่ควรลองและคำถามก่อนรับใบเสนอราคา",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9013,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 282,
+          "parentWidth": 278,
+          "width": 278
+        }
+      ],
+      "title": "BYD Atto 3 สเปกไทย MY2026: Premium หรือ Extended เลือกรุ่นไหนดี? | EVSELECT",
+      "width": 312,
+      "route": "/articles/byd-atto-3-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-seal-review",
+      "description": "เทียบ BYD Seal Dynamic, Premium และ AWD Performance สเปกไทย แบตเตอรี่ ระยะ NEDC การชาร์จและช่วงล่าง พร้อมคำถามก่อนทดลองขับและซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8771,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 660,
+          "parentWidth": 278,
+          "width": 660
+        }
+      ],
+      "title": "BYD Seal สเปกไทย: เลือกระยะทางของ Premium หรือความแรงของ AWD? | EVSELECT",
+      "width": 312,
+      "route": "/articles/byd-seal-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s05-review",
+      "description": "แยก Deepal S05 ไฟฟ้าล้วนกับ REEV เทียบแบตเตอรี่ การชาร์จ อุปกรณ์และล้อแต่ละรุ่นจากโบรชัวร์ไทย พร้อมจุดที่ต้องตรวจรถจริงก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8873,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 278,
+          "width": 760
+        }
+      ],
+      "title": "Deepal S05 สเปกไทย: เลือก BEV หรือ REEV ให้ตรงชีวิตประจำวัน | EVSELECT",
+      "width": 312,
+      "route": "/articles/deepal-s05-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s07-review",
+      "description": "อ่านสเปก Deepal NEW S07 ไทย แบต LFP 68.8 kWh ชาร์จ DC 30–80% ใน 15 นาทีตามผู้ผลิต พร้อมสิ่งที่ควรลองเรื่องจอ ม่านไฟฟ้าและล้อ 20 นิ้ว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7587,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 278,
+          "parentWidth": 278,
+          "width": 278
+        }
+      ],
+      "title": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว | EVSELECT",
+      "width": 312,
+      "route": "/articles/deepal-s07-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-battery-care",
+      "description": "เลือกขีดจำกัดการชาร์จให้ตรงรถ เข้าใจการใช้ AC/DC การจอดนาน และการอ่านระยะวิ่ง พร้อมตัวอย่างจากคู่มือ Tesla Model 3 และลิงก์ตรวจสอบด้วยตัวเอง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8967,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร? | EVSELECT",
+      "width": 312,
+      "route": "/articles/ev-battery-care",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "description": "แยก Camber, Toe และ Caster อ่านค่าก่อน–หลังตั้งศูนย์ และรู้ว่าควรถามร้านเรื่องใดก่อนซื้ออาร์มแต่ง พร้อมตัวอย่างเอกสาร Tesla และคำแนะนำผู้ผลิตยาง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 10300,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "ยางกินใน ต้องแก้แคมเบอร์ไหม? อ่านใบตั้งศูนย์ EV ก่อนเปลี่ยนอะไหล่ | EVSELECT",
+      "width": 312,
+      "route": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-carbon-ceramic-brakes-guide",
+      "description": "Carbon Ceramic คุ้มกับ EV คันโปรดแค่ไหน? ชวนดูทั้งฟีลเบรก ฝุ่น ความสวย และค่าดูแล เทียบกับตัวเลือก Brembo และ ENDLESS พร้อมประสบการณ์จากเจ้าของ Model 3 Performance Highland",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 41257,
+      "imageCount": 9,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 278,
+          "parentWidth": 278,
+          "width": 278
+        },
+        {
+          "parentScroll": 278,
+          "parentWidth": 278,
+          "width": 278
+        },
+        {
+          "parentScroll": 278,
+          "parentWidth": 278,
+          "width": 278
+        }
+      ],
+      "title": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV | EVSELECT",
+      "width": 312,
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide",
+      "description": "ซื้อโช้คหลักแสนทำไมยังไม่จบ? แยกใส่ตรงรุ่นจากเหมาะกับเรา เรียนรู้ Spring rate, Preload, Wheel rate และ 1-Way–3-Way พร้อมภาพผู้ผลิตและเช็กลิสต์ถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 53542,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 278,
+          "parentWidth": 278,
+          "width": 278
+        }
+      ],
+      "title": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!? เข้าใจโช้คสตรัทปรับเกลียว | EVSELECT",
+      "width": 312,
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-horsepower-vs-torque-explained",
+      "description": "เข้าใจแรงม้า แรงบิด อัตราทดเกียร์ และแรงขับที่ล้อ พร้อมตัวอย่างคำนวณและเหตุผลที่อัตราเร่งเปลี่ยนเมื่อความเร็วสูงขึ้น อ่านสเปก EV ให้เทียบกันได้",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 12568,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 440,
+          "parentWidth": 278,
+          "width": 440
+        }
+      ],
+      "title": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า? | EVSELECT",
+      "width": 312,
+      "route": "/articles/ev-horsepower-vs-torque-explained",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-performance-driving-techniques",
+      "description": "ทำความคุ้นเคยกับคันเร่งและ Regen เข้าใจการใช้เบรกกับ ABS และแยกการขับถนนออกจากการฝึกในสนาม พร้อมตัวอย่างจากคู่มือ Model 3",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 5872,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้ | EVSELECT",
+      "width": 312,
+      "route": "/articles/ev-performance-driving-techniques",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-suspension-tuning-guide",
+      "description": "เริ่มจากอาการ ยาง และการใช้งาน ก่อนเลือกช่วงล่าง EV เทียบระบบปรับของ KW V3, Öhlins Road & Track, BC Racing BR และ H-Drive พร้อมคำถามที่ควรถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8730,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค | EVSELECT",
+      "width": 312,
+      "route": "/articles/ev-suspension-tuning-guide",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-tyre-and-coilover-selection-guide",
+      "description": "ดูว่ายาง EV ของ Michelin, Hankook, Continental และ Pirelli ออกแบบมาเพื่ออะไร มีข้อดีและข้อจำกัดยังไง เทียบกับ Michelin Pilot Sport 4 S ก่อนเลือกยางให้รถไฟฟ้า",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 22518,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 780,
+          "parentWidth": 278,
+          "width": 780
+        },
+        {
+          "parentScroll": 660,
+          "parentWidth": 278,
+          "width": 660
+        }
+      ],
+      "title": "ยาง EV ต่างจากยางทั่วไปยังไง? | EVSELECTS.COM",
+      "width": 312,
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/geely-ex2-review",
+      "description": "เทียบ Geely EX2 Pro กับ Max จากโบรชัวร์ไทย แยกอุปกรณ์ช่วยขับ ล้อและการใช้งาน พร้อมสิ่งที่ควรลองก่อนซื้อรถ EV คันแรก",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7054,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 600,
+          "parentWidth": 278,
+          "width": 600
+        }
+      ],
+      "title": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ | EVSELECT",
+      "width": 312,
+      "route": "/articles/geely-ex2-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "description": "เข้าใจสิ่งที่เปลี่ยนเมื่อย้ายจาก HEV หรือ PHEV มาใช้รถไฟฟ้า แยกเรื่องน้ำหนัก การตอบสนอง และ Regen พร้อมสิ่งที่ควรลองก่อนซื้อหรือแต่งช่วงล่าง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9106,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน? | EVSELECT",
+      "width": 312,
+      "route": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/mg4-electric-review",
+      "description": "เทียบ MG4 MY2026 รุ่น D และ X Long Range จากเอกสาร MG ประเทศไทย: แบตเตอรี่ ระยะ NEDC ล้อ อุปกรณ์ และสิ่งที่ควรลองก่อนซื้อ พร้อมแยกจาก XPOWER รุ่นเดิม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 10250,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน | EVSELECT",
+      "width": 312,
+      "route": "/articles/mg4-electric-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/optimizing-ev-suspension-thai-roads",
+      "description": "แยกอาการกระแทก เด้ง และพวงมาลัยสั่น ตรวจยางกับช่วงล่างเดิมก่อนซื้อโช้ค พร้อมตัวอย่าง Model 3 Performance และคำถามที่ควรคุยกับร้านติดตั้ง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 10026,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง | EVSELECT",
+      "width": 312,
+      "route": "/articles/optimizing-ev-suspension-thai-roads",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "description": "แยกโครงสร้างโช้ค ระบบปรับแรงหน่วง และสปริงถุงลม พร้อมตัวอย่าง ZEEKR 7X สเปกไทยและคำถามก่อนเปลี่ยนช่วงล่าง ไม่ตัดสินความนุ่มจากชื่อเทคโนโลยีอย่างเดียว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 10018,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา | EVSELECT",
+      "width": 312,
+      "route": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-3-highland-review",
+      "description": "เปรียบเทียบ Model 3 ขับหลัง, Premium RWD, Premium Long Range RWD และ Performance AWD สเปกประเทศไทย พร้อมราคา ระยะวิ่ง อุปกรณ์ และข้อมูลจาก Tesla ตรวจสอบ 14 กันยายน 2569",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 10448,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 1000,
+          "parentWidth": 278,
+          "width": 1000
+        }
+      ],
+      "title": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด | EVSELECT",
+      "width": 312,
+      "route": "/articles/tesla-model-3-highland-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-y-l-premium-6-seater-review",
+      "description": "อ่านสเปก Tesla Model Y L ไทยให้ตรงรุ่น เช็กเบาะสามแถว พื้นที่กระเป๋าเมื่อเดินทางหกคน และแผนชาร์จก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7633,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 278,
+          "parentWidth": 278,
+          "width": 278
+        }
+      ],
+      "title": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ | EVSELECT",
+      "width": 312,
+      "route": "/articles/tesla-model-y-l-premium-6-seater-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-009-review",
+      "description": "พาชมห้องโดยสาร ZEEKR 009 สเปกไทย เทียบ 6 กับ 7 ที่นั่ง พร้อมภาพเบาะแถวสอง จอเพดาน ตู้เย็น ประตูสไลด์ และพื้นที่ท้ายรถ ก่อนเลือก Standard, Premium หรือ Flagship",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 16315,
+      "imageCount": 15,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 800,
+          "parentWidth": 278,
+          "width": 800
+        }
+      ],
+      "title": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย | EVSELECT",
+      "width": 312,
+      "route": "/articles/zeekr-009-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-7x-2026-review",
+      "description": "เทียบ Standard RWD, Long Range RWD และ Performance AWD จากสเปกไทย พร้อมเรื่องยางสำหรับรถหนัก 2,535 กก. การชาร์จ และสิ่งที่ควรลองก่อนเลือกรุ่น",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 11881,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 278,
+          "width": 760
+        }
+      ],
+      "title": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม? | EVSELECT",
+      "width": 312,
+      "route": "/articles/zeekr-7x-2026-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-x-review",
+      "description": "เทียบ ZEEKR X Standard RWD กับ Flagship AWD จากโบรชัวร์ไทย พร้อมเรื่องล้อ ยาง ห้องโดยสาร และการชาร์จที่ควรลองก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7462,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [
+        {
+          "parentScroll": 620,
+          "parentWidth": 278,
+          "width": 620
+        }
+      ],
+      "title": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ | EVSELECT",
+      "width": 312,
+      "route": "/articles/zeekr-x-review",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/contact",
+      "description": "ติดต่อทีม EVSELECT ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2317,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "ติดต่อเรา | EVSELECT",
+      "width": 312,
+      "route": "/contact",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 305,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/downloads/evselect-damper-setup-log.html",
+      "description": "แบบบันทึกช่วงล่างรถ EV และค่าปรับแดมเปอร์รายมุม สำหรับเก็บข้อมูลก่อนคุยกับผู้ติดตั้ง ไม่ใช่สูตรตั้งค่า ข้อมูลที่กรอกไม่ส่งไปที่เว็บไซต์",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 4148,
+      "imageCount": 0,
+      "jsonLd": [],
+      "missingAlt": 0,
+      "scrollWidth": 305,
+      "tables": [],
+      "title": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM",
+      "width": 305,
+      "route": "/downloads/evselect-damper-setup-log.html",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/editorial-policy",
+      "description": "แนวทางจัดทำบทความ EVSELECT: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2839,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "นโยบายบรรณาธิการ | EVSELECT",
+      "width": 312,
+      "route": "/editorial-policy",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/image-credits",
+      "description": "ชื่อผู้ถ่าย แหล่งภาพต้นฉบับ ใบอนุญาต และบริบทของภาพประกอบบน EVSELECTS.COM",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 32537,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "เครดิตภาพและแหล่งที่มา | EVSELECTS.COM",
+      "width": 312,
+      "route": "/image-credits",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/privacy",
+      "description": "การใช้ข้อมูลบนเว็บไซต์ EVSELECT คุกกี้ การวิเคราะห์การใช้งาน และวิธีเปลี่ยนหรือถอนความยินยอม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 5266,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "นโยบายความเป็นส่วนตัว | EVSELECT",
+      "width": 312,
+      "route": "/privacy",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3559,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles?category=all&segment=city",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3587,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles?category=all&segment=hatchback",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 4141,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles?category=all&segment=sedan",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6613,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles?category=all&segment=suv",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3355,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles?category=guides",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9289,
+      "imageCount": 14,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles?category=reviews",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 312,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7603,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 312,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 312,
+      "route": "/articles?category=suspension",
+      "viewport": 320
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com",
+      "description": "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 16415,
+      "imageCount": 16,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS",
+      "width": 352,
+      "route": "/",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 14452,
+      "imageCount": 25,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-atto-3-review",
+      "description": "เทียบแบตเตอรี่ ระยะ NEDC และการชาร์จของ BYD Atto 3 Premium กับ Extended สเปกไทย MY2026 พร้อมจุดที่ควรลองและคำถามก่อนรับใบเสนอราคา",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8186,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 318,
+          "parentWidth": 318,
+          "width": 318
+        }
+      ],
+      "title": "BYD Atto 3 สเปกไทย MY2026: Premium หรือ Extended เลือกรุ่นไหนดี? | EVSELECT",
+      "width": 352,
+      "route": "/articles/byd-atto-3-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-seal-review",
+      "description": "เทียบ BYD Seal Dynamic, Premium และ AWD Performance สเปกไทย แบตเตอรี่ ระยะ NEDC การชาร์จและช่วงล่าง พร้อมคำถามก่อนทดลองขับและซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8355,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 660,
+          "parentWidth": 318,
+          "width": 660
+        }
+      ],
+      "title": "BYD Seal สเปกไทย: เลือกระยะทางของ Premium หรือความแรงของ AWD? | EVSELECT",
+      "width": 352,
+      "route": "/articles/byd-seal-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s05-review",
+      "description": "แยก Deepal S05 ไฟฟ้าล้วนกับ REEV เทียบแบตเตอรี่ การชาร์จ อุปกรณ์และล้อแต่ละรุ่นจากโบรชัวร์ไทย พร้อมจุดที่ต้องตรวจรถจริงก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8316,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 318,
+          "width": 760
+        }
+      ],
+      "title": "Deepal S05 สเปกไทย: เลือก BEV หรือ REEV ให้ตรงชีวิตประจำวัน | EVSELECT",
+      "width": 352,
+      "route": "/articles/deepal-s05-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s07-review",
+      "description": "อ่านสเปก Deepal NEW S07 ไทย แบต LFP 68.8 kWh ชาร์จ DC 30–80% ใน 15 นาทีตามผู้ผลิต พร้อมสิ่งที่ควรลองเรื่องจอ ม่านไฟฟ้าและล้อ 20 นิ้ว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7234,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 318,
+          "parentWidth": 318,
+          "width": 318
+        }
+      ],
+      "title": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว | EVSELECT",
+      "width": 352,
+      "route": "/articles/deepal-s07-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-battery-care",
+      "description": "เลือกขีดจำกัดการชาร์จให้ตรงรถ เข้าใจการใช้ AC/DC การจอดนาน และการอ่านระยะวิ่ง พร้อมตัวอย่างจากคู่มือ Tesla Model 3 และลิงก์ตรวจสอบด้วยตัวเอง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8307,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร? | EVSELECT",
+      "width": 352,
+      "route": "/articles/ev-battery-care",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "description": "แยก Camber, Toe และ Caster อ่านค่าก่อน–หลังตั้งศูนย์ และรู้ว่าควรถามร้านเรื่องใดก่อนซื้ออาร์มแต่ง พร้อมตัวอย่างเอกสาร Tesla และคำแนะนำผู้ผลิตยาง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9406,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "ยางกินใน ต้องแก้แคมเบอร์ไหม? อ่านใบตั้งศูนย์ EV ก่อนเปลี่ยนอะไหล่ | EVSELECT",
+      "width": 352,
+      "route": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-carbon-ceramic-brakes-guide",
+      "description": "Carbon Ceramic คุ้มกับ EV คันโปรดแค่ไหน? ชวนดูทั้งฟีลเบรก ฝุ่น ความสวย และค่าดูแล เทียบกับตัวเลือก Brembo และ ENDLESS พร้อมประสบการณ์จากเจ้าของ Model 3 Performance Highland",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 38016,
+      "imageCount": 9,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 318,
+          "parentWidth": 318,
+          "width": 318
+        },
+        {
+          "parentScroll": 318,
+          "parentWidth": 318,
+          "width": 318
+        },
+        {
+          "parentScroll": 318,
+          "parentWidth": 318,
+          "width": 318
+        }
+      ],
+      "title": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV | EVSELECT",
+      "width": 352,
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide",
+      "description": "ซื้อโช้คหลักแสนทำไมยังไม่จบ? แยกใส่ตรงรุ่นจากเหมาะกับเรา เรียนรู้ Spring rate, Preload, Wheel rate และ 1-Way–3-Way พร้อมภาพผู้ผลิตและเช็กลิสต์ถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 48522,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 318,
+          "parentWidth": 318,
+          "width": 318
+        }
+      ],
+      "title": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!? เข้าใจโช้คสตรัทปรับเกลียว | EVSELECT",
+      "width": 352,
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-horsepower-vs-torque-explained",
+      "description": "เข้าใจแรงม้า แรงบิด อัตราทดเกียร์ และแรงขับที่ล้อ พร้อมตัวอย่างคำนวณและเหตุผลที่อัตราเร่งเปลี่ยนเมื่อความเร็วสูงขึ้น อ่านสเปก EV ให้เทียบกันได้",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 11657,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 440,
+          "parentWidth": 318,
+          "width": 440
+        }
+      ],
+      "title": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า? | EVSELECT",
+      "width": 352,
+      "route": "/articles/ev-horsepower-vs-torque-explained",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-performance-driving-techniques",
+      "description": "ทำความคุ้นเคยกับคันเร่งและ Regen เข้าใจการใช้เบรกกับ ABS และแยกการขับถนนออกจากการฝึกในสนาม พร้อมตัวอย่างจากคู่มือ Model 3",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 5468,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้ | EVSELECT",
+      "width": 352,
+      "route": "/articles/ev-performance-driving-techniques",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-suspension-tuning-guide",
+      "description": "เริ่มจากอาการ ยาง และการใช้งาน ก่อนเลือกช่วงล่าง EV เทียบระบบปรับของ KW V3, Öhlins Road & Track, BC Racing BR และ H-Drive พร้อมคำถามที่ควรถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8045,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค | EVSELECT",
+      "width": 352,
+      "route": "/articles/ev-suspension-tuning-guide",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-tyre-and-coilover-selection-guide",
+      "description": "ดูว่ายาง EV ของ Michelin, Hankook, Continental และ Pirelli ออกแบบมาเพื่ออะไร มีข้อดีและข้อจำกัดยังไง เทียบกับ Michelin Pilot Sport 4 S ก่อนเลือกยางให้รถไฟฟ้า",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 20955,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 780,
+          "parentWidth": 318,
+          "width": 780
+        },
+        {
+          "parentScroll": 660,
+          "parentWidth": 318,
+          "width": 660
+        }
+      ],
+      "title": "ยาง EV ต่างจากยางทั่วไปยังไง? | EVSELECTS.COM",
+      "width": 352,
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/geely-ex2-review",
+      "description": "เทียบ Geely EX2 Pro กับ Max จากโบรชัวร์ไทย แยกอุปกรณ์ช่วยขับ ล้อและการใช้งาน พร้อมสิ่งที่ควรลองก่อนซื้อรถ EV คันแรก",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6572,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 600,
+          "parentWidth": 318,
+          "width": 600
+        }
+      ],
+      "title": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ | EVSELECT",
+      "width": 352,
+      "route": "/articles/geely-ex2-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "description": "เข้าใจสิ่งที่เปลี่ยนเมื่อย้ายจาก HEV หรือ PHEV มาใช้รถไฟฟ้า แยกเรื่องน้ำหนัก การตอบสนอง และ Regen พร้อมสิ่งที่ควรลองก่อนซื้อหรือแต่งช่วงล่าง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8256,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน? | EVSELECT",
+      "width": 352,
+      "route": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/mg4-electric-review",
+      "description": "เทียบ MG4 MY2026 รุ่น D และ X Long Range จากเอกสาร MG ประเทศไทย: แบตเตอรี่ ระยะ NEDC ล้อ อุปกรณ์ และสิ่งที่ควรลองก่อนซื้อ พร้อมแยกจาก XPOWER รุ่นเดิม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9633,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน | EVSELECT",
+      "width": 352,
+      "route": "/articles/mg4-electric-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/optimizing-ev-suspension-thai-roads",
+      "description": "แยกอาการกระแทก เด้ง และพวงมาลัยสั่น ตรวจยางกับช่วงล่างเดิมก่อนซื้อโช้ค พร้อมตัวอย่าง Model 3 Performance และคำถามที่ควรคุยกับร้านติดตั้ง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9113,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง | EVSELECT",
+      "width": 352,
+      "route": "/articles/optimizing-ev-suspension-thai-roads",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "description": "แยกโครงสร้างโช้ค ระบบปรับแรงหน่วง และสปริงถุงลม พร้อมตัวอย่าง ZEEKR 7X สเปกไทยและคำถามก่อนเปลี่ยนช่วงล่าง ไม่ตัดสินความนุ่มจากชื่อเทคโนโลยีอย่างเดียว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9205,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา | EVSELECT",
+      "width": 352,
+      "route": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-3-highland-review",
+      "description": "เปรียบเทียบ Model 3 ขับหลัง, Premium RWD, Premium Long Range RWD และ Performance AWD สเปกประเทศไทย พร้อมราคา ระยะวิ่ง อุปกรณ์ และข้อมูลจาก Tesla ตรวจสอบ 14 กันยายน 2569",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9775,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 1000,
+          "parentWidth": 318,
+          "width": 1000
+        }
+      ],
+      "title": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด | EVSELECT",
+      "width": 352,
+      "route": "/articles/tesla-model-3-highland-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-y-l-premium-6-seater-review",
+      "description": "อ่านสเปก Tesla Model Y L ไทยให้ตรงรุ่น เช็กเบาะสามแถว พื้นที่กระเป๋าเมื่อเดินทางหกคน และแผนชาร์จก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7081,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 318,
+          "parentWidth": 318,
+          "width": 318
+        }
+      ],
+      "title": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ | EVSELECT",
+      "width": 352,
+      "route": "/articles/tesla-model-y-l-premium-6-seater-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-009-review",
+      "description": "พาชมห้องโดยสาร ZEEKR 009 สเปกไทย เทียบ 6 กับ 7 ที่นั่ง พร้อมภาพเบาะแถวสอง จอเพดาน ตู้เย็น ประตูสไลด์ และพื้นที่ท้ายรถ ก่อนเลือก Standard, Premium หรือ Flagship",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 15434,
+      "imageCount": 15,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 800,
+          "parentWidth": 318,
+          "width": 800
+        }
+      ],
+      "title": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย | EVSELECT",
+      "width": 352,
+      "route": "/articles/zeekr-009-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-7x-2026-review",
+      "description": "เทียบ Standard RWD, Long Range RWD และ Performance AWD จากสเปกไทย พร้อมเรื่องยางสำหรับรถหนัก 2,535 กก. การชาร์จ และสิ่งที่ควรลองก่อนเลือกรุ่น",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 11074,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 318,
+          "width": 760
+        }
+      ],
+      "title": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม? | EVSELECT",
+      "width": 352,
+      "route": "/articles/zeekr-7x-2026-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-x-review",
+      "description": "เทียบ ZEEKR X Standard RWD กับ Flagship AWD จากโบรชัวร์ไทย พร้อมเรื่องล้อ ยาง ห้องโดยสาร และการชาร์จที่ควรลองก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7029,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [
+        {
+          "parentScroll": 620,
+          "parentWidth": 318,
+          "width": 620
+        }
+      ],
+      "title": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ | EVSELECT",
+      "width": 352,
+      "route": "/articles/zeekr-x-review",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/contact",
+      "description": "ติดต่อทีม EVSELECT ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2244,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "ติดต่อเรา | EVSELECT",
+      "width": 352,
+      "route": "/contact",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 345,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/downloads/evselect-damper-setup-log.html",
+      "description": "แบบบันทึกช่วงล่างรถ EV และค่าปรับแดมเปอร์รายมุม สำหรับเก็บข้อมูลก่อนคุยกับผู้ติดตั้ง ไม่ใช่สูตรตั้งค่า ข้อมูลที่กรอกไม่ส่งไปที่เว็บไซต์",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3930,
+      "imageCount": 0,
+      "jsonLd": [],
+      "missingAlt": 0,
+      "scrollWidth": 345,
+      "tables": [],
+      "title": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM",
+      "width": 345,
+      "route": "/downloads/evselect-damper-setup-log.html",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/editorial-policy",
+      "description": "แนวทางจัดทำบทความ EVSELECT: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2667,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "นโยบายบรรณาธิการ | EVSELECT",
+      "width": 352,
+      "route": "/editorial-policy",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/image-credits",
+      "description": "ชื่อผู้ถ่าย แหล่งภาพต้นฉบับ ใบอนุญาต และบริบทของภาพประกอบบน EVSELECTS.COM",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 29841,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "เครดิตภาพและแหล่งที่มา | EVSELECTS.COM",
+      "width": 352,
+      "route": "/image-credits",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/privacy",
+      "description": "การใช้ข้อมูลบนเว็บไซต์ EVSELECT คุกกี้ การวิเคราะห์การใช้งาน และวิธีเปลี่ยนหรือถอนความยินยอม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 4789,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "นโยบายความเป็นส่วนตัว | EVSELECT",
+      "width": 352,
+      "route": "/privacy",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3344,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles?category=all&segment=city",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3419,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles?category=all&segment=hatchback",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3945,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles?category=all&segment=sedan",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6374,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles?category=all&segment=suv",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3196,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles?category=guides",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8983,
+      "imageCount": 14,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles?category=reviews",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 352,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7260,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 352,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 352,
+      "route": "/articles?category=suspension",
+      "viewport": 360
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com",
+      "description": "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 16028,
+      "imageCount": 16,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS",
+      "width": 382,
+      "route": "/",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 14272,
+      "imageCount": 25,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-atto-3-review",
+      "description": "เทียบแบตเตอรี่ ระยะ NEDC และการชาร์จของ BYD Atto 3 Premium กับ Extended สเปกไทย MY2026 พร้อมจุดที่ควรลองและคำถามก่อนรับใบเสนอราคา",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7845,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 348,
+          "parentWidth": 348,
+          "width": 348
+        }
+      ],
+      "title": "BYD Atto 3 สเปกไทย MY2026: Premium หรือ Extended เลือกรุ่นไหนดี? | EVSELECT",
+      "width": 382,
+      "route": "/articles/byd-atto-3-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-seal-review",
+      "description": "เทียบ BYD Seal Dynamic, Premium และ AWD Performance สเปกไทย แบตเตอรี่ ระยะ NEDC การชาร์จและช่วงล่าง พร้อมคำถามก่อนทดลองขับและซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7905,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 660,
+          "parentWidth": 348,
+          "width": 660
+        }
+      ],
+      "title": "BYD Seal สเปกไทย: เลือกระยะทางของ Premium หรือความแรงของ AWD? | EVSELECT",
+      "width": 382,
+      "route": "/articles/byd-seal-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s05-review",
+      "description": "แยก Deepal S05 ไฟฟ้าล้วนกับ REEV เทียบแบตเตอรี่ การชาร์จ อุปกรณ์และล้อแต่ละรุ่นจากโบรชัวร์ไทย พร้อมจุดที่ต้องตรวจรถจริงก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7867,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 348,
+          "width": 760
+        }
+      ],
+      "title": "Deepal S05 สเปกไทย: เลือก BEV หรือ REEV ให้ตรงชีวิตประจำวัน | EVSELECT",
+      "width": 382,
+      "route": "/articles/deepal-s05-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s07-review",
+      "description": "อ่านสเปก Deepal NEW S07 ไทย แบต LFP 68.8 kWh ชาร์จ DC 30–80% ใน 15 นาทีตามผู้ผลิต พร้อมสิ่งที่ควรลองเรื่องจอ ม่านไฟฟ้าและล้อ 20 นิ้ว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6899,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 348,
+          "parentWidth": 348,
+          "width": 348
+        }
+      ],
+      "title": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว | EVSELECT",
+      "width": 382,
+      "route": "/articles/deepal-s07-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-battery-care",
+      "description": "เลือกขีดจำกัดการชาร์จให้ตรงรถ เข้าใจการใช้ AC/DC การจอดนาน และการอ่านระยะวิ่ง พร้อมตัวอย่างจากคู่มือ Tesla Model 3 และลิงก์ตรวจสอบด้วยตัวเอง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7829,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร? | EVSELECT",
+      "width": 382,
+      "route": "/articles/ev-battery-care",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "description": "แยก Camber, Toe และ Caster อ่านค่าก่อน–หลังตั้งศูนย์ และรู้ว่าควรถามร้านเรื่องใดก่อนซื้ออาร์มแต่ง พร้อมตัวอย่างเอกสาร Tesla และคำแนะนำผู้ผลิตยาง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8940,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "ยางกินใน ต้องแก้แคมเบอร์ไหม? อ่านใบตั้งศูนย์ EV ก่อนเปลี่ยนอะไหล่ | EVSELECT",
+      "width": 382,
+      "route": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-carbon-ceramic-brakes-guide",
+      "description": "Carbon Ceramic คุ้มกับ EV คันโปรดแค่ไหน? ชวนดูทั้งฟีลเบรก ฝุ่น ความสวย และค่าดูแล เทียบกับตัวเลือก Brembo และ ENDLESS พร้อมประสบการณ์จากเจ้าของ Model 3 Performance Highland",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 35631,
+      "imageCount": 9,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 348,
+          "parentWidth": 348,
+          "width": 348
+        },
+        {
+          "parentScroll": 348,
+          "parentWidth": 348,
+          "width": 348
+        },
+        {
+          "parentScroll": 348,
+          "parentWidth": 348,
+          "width": 348
+        }
+      ],
+      "title": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV | EVSELECT",
+      "width": 382,
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide",
+      "description": "ซื้อโช้คหลักแสนทำไมยังไม่จบ? แยกใส่ตรงรุ่นจากเหมาะกับเรา เรียนรู้ Spring rate, Preload, Wheel rate และ 1-Way–3-Way พร้อมภาพผู้ผลิตและเช็กลิสต์ถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 45892,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 348,
+          "parentWidth": 348,
+          "width": 348
+        }
+      ],
+      "title": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!? เข้าใจโช้คสตรัทปรับเกลียว | EVSELECT",
+      "width": 382,
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-horsepower-vs-torque-explained",
+      "description": "เข้าใจแรงม้า แรงบิด อัตราทดเกียร์ และแรงขับที่ล้อ พร้อมตัวอย่างคำนวณและเหตุผลที่อัตราเร่งเปลี่ยนเมื่อความเร็วสูงขึ้น อ่านสเปก EV ให้เทียบกันได้",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 11121,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 440,
+          "parentWidth": 348,
+          "width": 440
+        }
+      ],
+      "title": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า? | EVSELECT",
+      "width": 382,
+      "route": "/articles/ev-horsepower-vs-torque-explained",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-performance-driving-techniques",
+      "description": "ทำความคุ้นเคยกับคันเร่งและ Regen เข้าใจการใช้เบรกกับ ABS และแยกการขับถนนออกจากการฝึกในสนาม พร้อมตัวอย่างจากคู่มือ Model 3",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 5163,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้ | EVSELECT",
+      "width": 382,
+      "route": "/articles/ev-performance-driving-techniques",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-suspension-tuning-guide",
+      "description": "เริ่มจากอาการ ยาง และการใช้งาน ก่อนเลือกช่วงล่าง EV เทียบระบบปรับของ KW V3, Öhlins Road & Track, BC Racing BR และ H-Drive พร้อมคำถามที่ควรถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7742,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค | EVSELECT",
+      "width": 382,
+      "route": "/articles/ev-suspension-tuning-guide",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-tyre-and-coilover-selection-guide",
+      "description": "ดูว่ายาง EV ของ Michelin, Hankook, Continental และ Pirelli ออกแบบมาเพื่ออะไร มีข้อดีและข้อจำกัดยังไง เทียบกับ Michelin Pilot Sport 4 S ก่อนเลือกยางให้รถไฟฟ้า",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 19997,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 780,
+          "parentWidth": 348,
+          "width": 780
+        },
+        {
+          "parentScroll": 660,
+          "parentWidth": 348,
+          "width": 660
+        }
+      ],
+      "title": "ยาง EV ต่างจากยางทั่วไปยังไง? | EVSELECTS.COM",
+      "width": 382,
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/geely-ex2-review",
+      "description": "เทียบ Geely EX2 Pro กับ Max จากโบรชัวร์ไทย แยกอุปกรณ์ช่วยขับ ล้อและการใช้งาน พร้อมสิ่งที่ควรลองก่อนซื้อรถ EV คันแรก",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6274,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 600,
+          "parentWidth": 348,
+          "width": 600
+        }
+      ],
+      "title": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ | EVSELECT",
+      "width": 382,
+      "route": "/articles/geely-ex2-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "description": "เข้าใจสิ่งที่เปลี่ยนเมื่อย้ายจาก HEV หรือ PHEV มาใช้รถไฟฟ้า แยกเรื่องน้ำหนัก การตอบสนอง และ Regen พร้อมสิ่งที่ควรลองก่อนซื้อหรือแต่งช่วงล่าง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7791,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน? | EVSELECT",
+      "width": 382,
+      "route": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/mg4-electric-review",
+      "description": "เทียบ MG4 MY2026 รุ่น D และ X Long Range จากเอกสาร MG ประเทศไทย: แบตเตอรี่ ระยะ NEDC ล้อ อุปกรณ์ และสิ่งที่ควรลองก่อนซื้อ พร้อมแยกจาก XPOWER รุ่นเดิม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9150,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน | EVSELECT",
+      "width": 382,
+      "route": "/articles/mg4-electric-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/optimizing-ev-suspension-thai-roads",
+      "description": "แยกอาการกระแทก เด้ง และพวงมาลัยสั่น ตรวจยางกับช่วงล่างเดิมก่อนซื้อโช้ค พร้อมตัวอย่าง Model 3 Performance และคำถามที่ควรคุยกับร้านติดตั้ง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8477,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง | EVSELECT",
+      "width": 382,
+      "route": "/articles/optimizing-ev-suspension-thai-roads",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "description": "แยกโครงสร้างโช้ค ระบบปรับแรงหน่วง และสปริงถุงลม พร้อมตัวอย่าง ZEEKR 7X สเปกไทยและคำถามก่อนเปลี่ยนช่วงล่าง ไม่ตัดสินความนุ่มจากชื่อเทคโนโลยีอย่างเดียว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8960,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา | EVSELECT",
+      "width": 382,
+      "route": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-3-highland-review",
+      "description": "เปรียบเทียบ Model 3 ขับหลัง, Premium RWD, Premium Long Range RWD และ Performance AWD สเปกประเทศไทย พร้อมราคา ระยะวิ่ง อุปกรณ์ และข้อมูลจาก Tesla ตรวจสอบ 14 กันยายน 2569",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9396,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 1000,
+          "parentWidth": 348,
+          "width": 1000
+        }
+      ],
+      "title": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด | EVSELECT",
+      "width": 382,
+      "route": "/articles/tesla-model-3-highland-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-y-l-premium-6-seater-review",
+      "description": "อ่านสเปก Tesla Model Y L ไทยให้ตรงรุ่น เช็กเบาะสามแถว พื้นที่กระเป๋าเมื่อเดินทางหกคน และแผนชาร์จก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6655,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 348,
+          "parentWidth": 348,
+          "width": 348
+        }
+      ],
+      "title": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ | EVSELECT",
+      "width": 382,
+      "route": "/articles/tesla-model-y-l-premium-6-seater-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-009-review",
+      "description": "พาชมห้องโดยสาร ZEEKR 009 สเปกไทย เทียบ 6 กับ 7 ที่นั่ง พร้อมภาพเบาะแถวสอง จอเพดาน ตู้เย็น ประตูสไลด์ และพื้นที่ท้ายรถ ก่อนเลือก Standard, Premium หรือ Flagship",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 15172,
+      "imageCount": 15,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 800,
+          "parentWidth": 348,
+          "width": 800
+        }
+      ],
+      "title": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย | EVSELECT",
+      "width": 382,
+      "route": "/articles/zeekr-009-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-7x-2026-review",
+      "description": "เทียบ Standard RWD, Long Range RWD และ Performance AWD จากสเปกไทย พร้อมเรื่องยางสำหรับรถหนัก 2,535 กก. การชาร์จ และสิ่งที่ควรลองก่อนเลือกรุ่น",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 10538,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 348,
+          "width": 760
+        }
+      ],
+      "title": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม? | EVSELECT",
+      "width": 382,
+      "route": "/articles/zeekr-7x-2026-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-x-review",
+      "description": "เทียบ ZEEKR X Standard RWD กับ Flagship AWD จากโบรชัวร์ไทย พร้อมเรื่องล้อ ยาง ห้องโดยสาร และการชาร์จที่ควรลองก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6727,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [
+        {
+          "parentScroll": 620,
+          "parentWidth": 348,
+          "width": 620
+        }
+      ],
+      "title": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ | EVSELECT",
+      "width": 382,
+      "route": "/articles/zeekr-x-review",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/contact",
+      "description": "ติดต่อทีม EVSELECT ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2214,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "ติดต่อเรา | EVSELECT",
+      "width": 382,
+      "route": "/contact",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 375,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/downloads/evselect-damper-setup-log.html",
+      "description": "แบบบันทึกช่วงล่างรถ EV และค่าปรับแดมเปอร์รายมุม สำหรับเก็บข้อมูลก่อนคุยกับผู้ติดตั้ง ไม่ใช่สูตรตั้งค่า ข้อมูลที่กรอกไม่ส่งไปที่เว็บไซต์",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3823,
+      "imageCount": 0,
+      "jsonLd": [],
+      "missingAlt": 0,
+      "scrollWidth": 375,
+      "tables": [],
+      "title": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM",
+      "width": 375,
+      "route": "/downloads/evselect-damper-setup-log.html",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/editorial-policy",
+      "description": "แนวทางจัดทำบทความ EVSELECT: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2607,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "นโยบายบรรณาธิการ | EVSELECT",
+      "width": 382,
+      "route": "/editorial-policy",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/image-credits",
+      "description": "ชื่อผู้ถ่าย แหล่งภาพต้นฉบับ ใบอนุญาต และบริบทของภาพประกอบบน EVSELECTS.COM",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 28285,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "เครดิตภาพและแหล่งที่มา | EVSELECTS.COM",
+      "width": 382,
+      "route": "/image-credits",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/privacy",
+      "description": "การใช้ข้อมูลบนเว็บไซต์ EVSELECT คุกกี้ การวิเคราะห์การใช้งาน และวิธีเปลี่ยนหรือถอนความยินยอม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 4576,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "นโยบายความเป็นส่วนตัว | EVSELECT",
+      "width": 382,
+      "route": "/privacy",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3299,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles?category=all&segment=city",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3323,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles?category=all&segment=hatchback",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3863,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles?category=all&segment=sedan",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6251,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles?category=all&segment=suv",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3125,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles?category=guides",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8755,
+      "imageCount": 14,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles?category=reviews",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 382,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7229,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 382,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 382,
+      "route": "/articles?category=suspension",
+      "viewport": 390
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com",
+      "description": "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 15935,
+      "imageCount": 16,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS",
+      "width": 422,
+      "route": "/",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 14355,
+      "imageCount": 25,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-atto-3-review",
+      "description": "เทียบแบตเตอรี่ ระยะ NEDC และการชาร์จของ BYD Atto 3 Premium กับ Extended สเปกไทย MY2026 พร้อมจุดที่ควรลองและคำถามก่อนรับใบเสนอราคา",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7311,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 388,
+          "parentWidth": 388,
+          "width": 388
+        }
+      ],
+      "title": "BYD Atto 3 สเปกไทย MY2026: Premium หรือ Extended เลือกรุ่นไหนดี? | EVSELECT",
+      "width": 422,
+      "route": "/articles/byd-atto-3-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/byd-seal-review",
+      "description": "เทียบ BYD Seal Dynamic, Premium และ AWD Performance สเปกไทย แบตเตอรี่ ระยะ NEDC การชาร์จและช่วงล่าง พร้อมคำถามก่อนทดลองขับและซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7595,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 660,
+          "parentWidth": 388,
+          "width": 660
+        }
+      ],
+      "title": "BYD Seal สเปกไทย: เลือกระยะทางของ Premium หรือความแรงของ AWD? | EVSELECT",
+      "width": 422,
+      "route": "/articles/byd-seal-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s05-review",
+      "description": "แยก Deepal S05 ไฟฟ้าล้วนกับ REEV เทียบแบตเตอรี่ การชาร์จ อุปกรณ์และล้อแต่ละรุ่นจากโบรชัวร์ไทย พร้อมจุดที่ต้องตรวจรถจริงก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7573,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 388,
+          "width": 760
+        }
+      ],
+      "title": "Deepal S05 สเปกไทย: เลือก BEV หรือ REEV ให้ตรงชีวิตประจำวัน | EVSELECT",
+      "width": 422,
+      "route": "/articles/deepal-s05-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/deepal-s07-review",
+      "description": "อ่านสเปก Deepal NEW S07 ไทย แบต LFP 68.8 kWh ชาร์จ DC 30–80% ใน 15 นาทีตามผู้ผลิต พร้อมสิ่งที่ควรลองเรื่องจอ ม่านไฟฟ้าและล้อ 20 นิ้ว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6503,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 388,
+          "parentWidth": 388,
+          "width": 388
+        }
+      ],
+      "title": "Deepal NEW S07 สเปกไทย: จุดเด่นที่ควรลองก่อนเลือกเป็นรถครอบครัว | EVSELECT",
+      "width": 422,
+      "route": "/articles/deepal-s07-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-battery-care",
+      "description": "เลือกขีดจำกัดการชาร์จให้ตรงรถ เข้าใจการใช้ AC/DC การจอดนาน และการอ่านระยะวิ่ง พร้อมตัวอย่างจากคู่มือ Tesla Model 3 และลิงก์ตรวจสอบด้วยตัวเอง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7506,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "ดูแลแบตเตอรี่รถ EV: ชาร์จ 80% หรือ 100% และจอดนานต้องทำอย่างไร? | EVSELECT",
+      "width": 422,
+      "route": "/articles/ev-battery-care",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "description": "แยก Camber, Toe และ Caster อ่านค่าก่อน–หลังตั้งศูนย์ และรู้ว่าควรถามร้านเรื่องใดก่อนซื้ออาร์มแต่ง พร้อมตัวอย่างเอกสาร Tesla และคำแนะนำผู้ผลิตยาง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8383,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "ยางกินใน ต้องแก้แคมเบอร์ไหม? อ่านใบตั้งศูนย์ EV ก่อนเปลี่ยนอะไหล่ | EVSELECT",
+      "width": 422,
+      "route": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-carbon-ceramic-brakes-guide",
+      "description": "Carbon Ceramic คุ้มกับ EV คันโปรดแค่ไหน? ชวนดูทั้งฟีลเบรก ฝุ่น ความสวย และค่าดูแล เทียบกับตัวเลือก Brembo และ ENDLESS พร้อมประสบการณ์จากเจ้าของ Model 3 Performance Highland",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 33639,
+      "imageCount": 9,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 388,
+          "parentWidth": 388,
+          "width": 388
+        },
+        {
+          "parentScroll": 388,
+          "parentWidth": 388,
+          "width": 388
+        },
+        {
+          "parentScroll": 388,
+          "parentWidth": 388,
+          "width": 388
+        }
+      ],
+      "title": "Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV | EVSELECT",
+      "width": 422,
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-damper-tuning-bump-rebound-guide",
+      "description": "ซื้อโช้คหลักแสนทำไมยังไม่จบ? แยกใส่ตรงรุ่นจากเหมาะกับเรา เรียนรู้ Spring rate, Preload, Wheel rate และ 1-Way–3-Way พร้อมภาพผู้ผลิตและเช็กลิสต์ถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 42924,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "BlogPosting",
+          "valid": true
+        },
+        {
+          "types": "BreadcrumbList",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 388,
+          "parentWidth": 388,
+          "width": 388
+        }
+      ],
+      "title": "ซื้อโช้คหลักแสน ทำไมยังไม่จบ!? เข้าใจโช้คสตรัทปรับเกลียว | EVSELECT",
+      "width": 422,
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-horsepower-vs-torque-explained",
+      "description": "เข้าใจแรงม้า แรงบิด อัตราทดเกียร์ และแรงขับที่ล้อ พร้อมตัวอย่างคำนวณและเหตุผลที่อัตราเร่งเปลี่ยนเมื่อความเร็วสูงขึ้น อ่านสเปก EV ให้เทียบกันได้",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 10725,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 440,
+          "parentWidth": 388,
+          "width": 440
+        }
+      ],
+      "title": "แรงม้า vs แรงบิด: ดูอะไรถึงรู้ว่า EV คันไหนเร่งดีกว่า? | EVSELECT",
+      "width": 422,
+      "route": "/articles/ev-horsepower-vs-torque-explained",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-performance-driving-techniques",
+      "description": "ทำความคุ้นเคยกับคันเร่งและ Regen เข้าใจการใช้เบรกกับ ABS และแยกการขับถนนออกจากการฝึกในสนาม พร้อมตัวอย่างจากคู่มือ Model 3",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 4929,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "ขับ EV แรงอย่างเข้าใจรถ: คันเร่ง Regen และเบรกที่ควรรู้ | EVSELECT",
+      "width": 422,
+      "route": "/articles/ev-performance-driving-techniques",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-suspension-tuning-guide",
+      "description": "เริ่มจากอาการ ยาง และการใช้งาน ก่อนเลือกช่วงล่าง EV เทียบระบบปรับของ KW V3, Öhlins Road & Track, BC Racing BR และ H-Drive พร้อมคำถามที่ควรถามร้าน",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7239,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "ช่วงล่าง EV ย้วยหรือกระด้าง? เริ่มเช็กตรงไหน ก่อนเปลี่ยนโช้ค | EVSELECT",
+      "width": 422,
+      "route": "/articles/ev-suspension-tuning-guide",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/ev-tyre-and-coilover-selection-guide",
+      "description": "ดูว่ายาง EV ของ Michelin, Hankook, Continental และ Pirelli ออกแบบมาเพื่ออะไร มีข้อดีและข้อจำกัดยังไง เทียบกับ Michelin Pilot Sport 4 S ก่อนเลือกยางให้รถไฟฟ้า",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 19228,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 780,
+          "parentWidth": 388,
+          "width": 780
+        },
+        {
+          "parentScroll": 660,
+          "parentWidth": 388,
+          "width": 660
+        }
+      ],
+      "title": "ยาง EV ต่างจากยางทั่วไปยังไง? | EVSELECTS.COM",
+      "width": 422,
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/geely-ex2-review",
+      "description": "เทียบ Geely EX2 Pro กับ Max จากโบรชัวร์ไทย แยกอุปกรณ์ช่วยขับ ล้อและการใช้งาน พร้อมสิ่งที่ควรลองก่อนซื้อรถ EV คันแรก",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 5991,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 600,
+          "parentWidth": 388,
+          "width": 600
+        }
+      ],
+      "title": "Geely EX2 Pro หรือ Max? สเปกไทยและจุดที่ควรลองก่อนซื้อ | EVSELECT",
+      "width": 422,
+      "route": "/articles/geely-ex2-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "description": "เข้าใจสิ่งที่เปลี่ยนเมื่อย้ายจาก HEV หรือ PHEV มาใช้รถไฟฟ้า แยกเรื่องน้ำหนัก การตอบสนอง และ Regen พร้อมสิ่งที่ควรลองก่อนซื้อหรือแต่งช่วงล่าง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7303,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "เปลี่ยนจาก Hybrid เป็น EV: ทำไมคันเร่ง เบรก และช่วงล่างรู้สึกต่างกัน? | EVSELECT",
+      "width": 422,
+      "route": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/mg4-electric-review",
+      "description": "เทียบ MG4 MY2026 รุ่น D และ X Long Range จากเอกสาร MG ประเทศไทย: แบตเตอรี่ ระยะ NEDC ล้อ อุปกรณ์ และสิ่งที่ควรลองก่อนซื้อ พร้อมแยกจาก XPOWER รุ่นเดิม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8710,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "MG4 MY2026 สเปกไทย: เลือก D หรือ X Long Range ให้ตรงการใช้งาน | EVSELECT",
+      "width": 422,
+      "route": "/articles/mg4-electric-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/optimizing-ev-suspension-thai-roads",
+      "description": "แยกอาการกระแทก เด้ง และพวงมาลัยสั่น ตรวจยางกับช่วงล่างเดิมก่อนซื้อโช้ค พร้อมตัวอย่าง Model 3 Performance และคำถามที่ควรคุยกับร้านติดตั้ง",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7990,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "EV กระแทกคอสะพานหรือย้วยบนทางด่วน? เช็กก่อนเปลี่ยนช่วงล่าง | EVSELECT",
+      "width": 422,
+      "route": "/articles/optimizing-ev-suspension-thai-roads",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "description": "แยกโครงสร้างโช้ค ระบบปรับแรงหน่วง และสปริงถุงลม พร้อมตัวอย่าง ZEEKR 7X สเปกไทยและคำถามก่อนเปลี่ยนช่วงล่าง ไม่ตัดสินความนุ่มจากชื่อเทคโนโลยีอย่างเดียว",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8585,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "Monotube, Twin-tube หรือถุงลม? เลือกโช้ค EV ให้ตรงปัญหา | EVSELECT",
+      "width": 422,
+      "route": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-3-highland-review",
+      "description": "เปรียบเทียบ Model 3 ขับหลัง, Premium RWD, Premium Long Range RWD และ Performance AWD สเปกประเทศไทย พร้อมราคา ระยะวิ่ง อุปกรณ์ และข้อมูลจาก Tesla ตรวจสอบ 14 กันยายน 2569",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8984,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 1000,
+          "parentWidth": 388,
+          "width": 1000
+        }
+      ],
+      "title": "Tesla Model 3 Highland สเปกไทย: เทียบ 4 รุ่น ราคาและอุปกรณ์ล่าสุด | EVSELECT",
+      "width": 422,
+      "route": "/articles/tesla-model-3-highland-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/tesla-model-y-l-premium-6-seater-review",
+      "description": "อ่านสเปก Tesla Model Y L ไทยให้ตรงรุ่น เช็กเบาะสามแถว พื้นที่กระเป๋าเมื่อเดินทางหกคน และแผนชาร์จก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6557,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 388,
+          "parentWidth": 388,
+          "width": 388
+        }
+      ],
+      "title": "Tesla Model Y L 6 ที่นั่ง: สเปกไทยและสิ่งที่ครอบครัวควรลองก่อนซื้อ | EVSELECT",
+      "width": 422,
+      "route": "/articles/tesla-model-y-l-premium-6-seater-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-009-review",
+      "description": "พาชมห้องโดยสาร ZEEKR 009 สเปกไทย เทียบ 6 กับ 7 ที่นั่ง พร้อมภาพเบาะแถวสอง จอเพดาน ตู้เย็น ประตูสไลด์ และพื้นที่ท้ายรถ ก่อนเลือก Standard, Premium หรือ Flagship",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 14590,
+      "imageCount": 15,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 800,
+          "parentWidth": 388,
+          "width": 800
+        }
+      ],
+      "title": "ZEEKR 009 สเปกไทย: เลือก 6 หรือ 7 ที่นั่งให้เหมาะกับคนที่ไปด้วย | EVSELECT",
+      "width": 422,
+      "route": "/articles/zeekr-009-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-7x-2026-review",
+      "description": "เทียบ Standard RWD, Long Range RWD และ Performance AWD จากสเปกไทย พร้อมเรื่องยางสำหรับรถหนัก 2,535 กก. การชาร์จ และสิ่งที่ควรลองก่อนเลือกรุ่น",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 9969,
+      "imageCount": 6,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 760,
+          "parentWidth": 388,
+          "width": 760
+        }
+      ],
+      "title": "ZEEKR 7X สเปกไทย: เลือกวิ่งไกล หรือ 637 hp พร้อมช่วงล่างถุงลม? | EVSELECT",
+      "width": 422,
+      "route": "/articles/zeekr-7x-2026-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles/zeekr-x-review",
+      "description": "เทียบ ZEEKR X Standard RWD กับ Flagship AWD จากโบรชัวร์ไทย พร้อมเรื่องล้อ ยาง ห้องโดยสาร และการชาร์จที่ควรลองก่อนซื้อ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6421,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        },
+        {
+          "types": "Article",
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [
+        {
+          "parentScroll": 620,
+          "parentWidth": 388,
+          "width": 620
+        }
+      ],
+      "title": "ZEEKR X สเปกไทย: Standard หรือ Flagship ต่างกันตรงไหนก่อนเลือกซื้อ | EVSELECT",
+      "width": 422,
+      "route": "/articles/zeekr-x-review",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/contact",
+      "description": "ติดต่อทีม EVSELECT ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2123,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "ติดต่อเรา | EVSELECT",
+      "width": 422,
+      "route": "/contact",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 415,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/downloads/evselect-damper-setup-log.html",
+      "description": "แบบบันทึกช่วงล่างรถ EV และค่าปรับแดมเปอร์รายมุม สำหรับเก็บข้อมูลก่อนคุยกับผู้ติดตั้ง ไม่ใช่สูตรตั้งค่า ข้อมูลที่กรอกไม่ส่งไปที่เว็บไซต์",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3774,
+      "imageCount": 0,
+      "jsonLd": [],
+      "missingAlt": 0,
+      "scrollWidth": 415,
+      "tables": [],
+      "title": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM",
+      "width": 415,
+      "route": "/downloads/evselect-damper-setup-log.html",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/editorial-policy",
+      "description": "แนวทางจัดทำบทความ EVSELECT: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 2485,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "นโยบายบรรณาธิการ | EVSELECT",
+      "width": 422,
+      "route": "/editorial-policy",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/image-credits",
+      "description": "ชื่อผู้ถ่าย แหล่งภาพต้นฉบับ ใบอนุญาต และบริบทของภาพประกอบบน EVSELECTS.COM",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 27541,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "เครดิตภาพและแหล่งที่มา | EVSELECTS.COM",
+      "width": 422,
+      "route": "/image-credits",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/privacy",
+      "description": "การใช้ข้อมูลบนเว็บไซต์ EVSELECT คุกกี้ การวิเคราะห์การใช้งาน และวิธีเปลี่ยนหรือถอนความยินยอม",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 4242,
+      "imageCount": 3,
+      "jsonLd": [
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "นโยบายความเป็นส่วนตัว | EVSELECT",
+      "width": 422,
+      "route": "/privacy",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3188,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles?category=all&segment=city",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3237,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles?category=all&segment=hatchback",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3750,
+      "imageCount": 5,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles?category=all&segment=sedan",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 6243,
+      "imageCount": 10,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles?category=all&segment=suv",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 3012,
+      "imageCount": 4,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles?category=guides",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 8661,
+      "imageCount": 14,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles?category=reviews",
+      "viewport": 430
+    },
+    {
+      "bodyWidth": 422,
+      "brokenLocalAnchors": [],
+      "canonical": "https://evselects.com/articles",
+      "description": "รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ",
+      "h1": 1,
+      "headingSkips": [],
+      "height": 7169,
+      "imageCount": 12,
+      "jsonLd": [
+        {
+          "valid": true
+        },
+        {
+          "valid": true
+        }
+      ],
+      "missingAlt": 0,
+      "scrollWidth": 422,
+      "tables": [],
+      "title": "บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT",
+      "width": 422,
+      "route": "/articles?category=suspension",
+      "viewport": 430
+    }
+  ],
+  "interactions": [
+    {
+      "width": 360,
+      "drawer": {
+        "left": 0,
+        "minLinkHeight": 52,
+        "right": 328,
+        "width": 328
+      },
+      "escape": true,
+      "focusReturned": true,
+      "navigation": true
+    },
+    {
+      "width": 390,
+      "drawer": {
+        "left": 0,
+        "minLinkHeight": 52,
+        "right": 358,
+        "width": 358
+      },
+      "escape": true,
+      "focusReturned": true,
+      "navigation": true
+    },
+    {
+      "width": 430,
+      "drawer": {
+        "left": 0,
+        "minLinkHeight": 52,
+        "right": 384,
+        "width": 384
+      },
+      "escape": true,
+      "focusReturned": true,
+      "navigation": true
+    }
+  ],
+  "cookies": [
+    {
+      "width": 320,
+      "bounds": {
+        "checkbox": false,
+        "clientHeight": 715,
+        "left": 16,
+        "right": 296,
+        "scrollHeight": 829,
+        "width": 280
+      },
+      "savedChoice": true,
+      "rejected": true,
+      "gaTagCount": 0
+    },
+    {
+      "width": 360,
+      "bounds": {
+        "checkbox": false,
+        "clientHeight": 715,
+        "left": 16,
+        "right": 336,
+        "scrollHeight": 805,
+        "width": 320
+      },
+      "savedChoice": true,
+      "rejected": true,
+      "gaTagCount": 0
+    },
+    {
+      "width": 390,
+      "bounds": {
+        "checkbox": false,
+        "clientHeight": 715,
+        "left": 16,
+        "right": 366,
+        "scrollHeight": 780,
+        "width": 350
+      },
+      "savedChoice": true,
+      "rejected": true,
+      "gaTagCount": 0
+    },
+    {
+      "width": 430,
+      "bounds": {
+        "checkbox": false,
+        "clientHeight": 707,
+        "left": 16,
+        "right": 406,
+        "scrollHeight": 707,
+        "width": 390
+      },
+      "savedChoice": true,
+      "rejected": true,
+      "gaTagCount": 0
+    }
+  ]
+}

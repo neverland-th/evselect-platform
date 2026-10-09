@@ -1,0 +1,960 @@
+{
+  "method": "Each main image scrolled into view through review controls; completed load verified after render. Final confirmations supersede initial lazy-load timing observations.",
+  "width": 430,
+  "items": [
+    {
+      "route": "/",
+      "index": 2,
+      "alt": "Tesla Model 3 Highland สีแดงที่งานแสดงรถในเยอรมนี ปี 2024",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-3-hero.jpg&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 3,
+      "alt": "Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ",
+      "loaded": true,
+      "naturalHeight": 48,
+      "naturalWidth": 96,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-3-performance-2024.png&w=256&q=75"
+    },
+    {
+      "route": "/",
+      "index": 4,
+      "alt": "แก้มยาง Michelin Pilot Sport All Season 4 บนล้อ Audi เห็นชื่อรุ่นและรหัสขนาดยาง",
+      "loaded": true,
+      "naturalHeight": 96,
+      "naturalWidth": 96,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-tyre-michelin-audi.jpg&w=256&q=75"
+    },
+    {
+      "route": "/",
+      "index": 5,
+      "alt": "โช้ค BC Racing ZR พร้อมซับแทงก์และสายเชื่อมแยกจากกระบอก",
+      "loaded": true,
+      "naturalHeight": 54,
+      "naturalWidth": 96,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fbc-zr.1eg_m9gophz_9.webp&w=256&q=75"
+    },
+    {
+      "route": "/",
+      "index": 6,
+      "alt": "ผลิตภัณฑ์ KW Coilovers หลายรูปแบบ พร้อมสปริงสีเหลืองและแหวนปรับสีม่วงบนพื้นหลังสว่าง",
+      "loaded": true,
+      "naturalHeight": 814,
+      "naturalWidth": 1451,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fkw-coilover-adjustable.avif&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 7,
+      "alt": "ล้อ Audi พร้อมยาง Michelin Pilot Sport All Season 4 ใช้เป็นตัวอย่างการอ่านแก้มยาง",
+      "loaded": true,
+      "naturalHeight": 430,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-tyre-michelin-audi.jpg&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 8,
+      "alt": "Tesla Model Y L สีเงินมุมด้านข้าง ภาพต่างประเทศเดือนธันวาคม 2025",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-y-l-photo.jpg&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 9,
+      "alt": "ZEEKR X Flagship AWD สีขาว จัดแสดงที่เซ็นทรัล อีสต์วิลล์ กรุงเทพฯ เดือนกรกฎาคม 2024",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-x-flagship-thailand-2024.jpg&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 10,
+      "alt": "Tesla Model 3 Highland สีแดงที่งานแสดงรถในเยอรมนี ปี 2024",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-3-hero.jpg&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 11,
+      "alt": "ผลิตภัณฑ์ KW Coilovers หลายรูปแบบ พร้อมสปริงสีเหลืองและแหวนปรับสีม่วงบนพื้นหลังสว่าง",
+      "loaded": true,
+      "naturalHeight": 814,
+      "naturalWidth": 1451,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fkw-coilover-adjustable.avif&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 12,
+      "alt": "แชสซีจัดแสดง Volkswagen ID.3 เห็นชุดแบตเตอรี่ใต้พื้นรถและสายไฟแรงดันสูงสีส้ม",
+      "loaded": true,
+      "naturalHeight": 268,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-chassis-volkswagen-id3.jpg&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 13,
+      "alt": "ภาพคอนเซ็ปต์รถใต้ผ้าคลุมสำหรับแคมเปญเตรียมเปิดตัวอุปกรณ์เสริม EVSELECTS",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Flaunch%2Fevselect-coming-soon.webp&w=640&q=75"
+    },
+    {
+      "route": "/",
+      "index": 14,
+      "alt": "แก้มยาง Michelin Pilot Sport All Season 4 บนล้อ Audi เห็นชื่อรุ่นและรหัสขนาดยาง",
+      "loaded": true,
+      "naturalHeight": 430,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-tyre-michelin-audi.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 2,
+      "alt": "ภาพคอนเซปต์รถและยางจากตัวอย่างที่เจ้าของเว็บไซต์ส่งให้ ไม่ใช่ภาพทดสอบสินค้า",
+      "loaded": true,
+      "naturalHeight": 1531,
+      "naturalWidth": 861,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres-user-concept.png&w=1080&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 3,
+      "alt": "ZEEKR 7X สีเทา มุมด้านหน้า ภาพประกอบรุ่นรถจากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fzeekr-7x-photo.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 4,
+      "alt": "ZEEKR 009 Flagship AWD สีดำ จัดแสดงที่ขอนแก่น ประเทศไทย เดือนกันยายน 2024",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009-flagship-thailand-2024.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 5,
+      "alt": "Tesla Model Y L สีเงินมุมด้านข้าง ภาพต่างประเทศเดือนธันวาคม 2025",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-y-l-photo.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 6,
+      "alt": "Tesla Model 3 Highland สีแดงในเยอรมนี ปี 2024 ภาพประกอบรุ่นรถ",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-3-hero.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 7,
+      "alt": "BYD Seal Premium สีขาวจัดแสดงในโชว์รูมที่ขอนแก่น ประเทศไทย ปี 2023",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fbyd-seal-premium-thailand-2023.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 8,
+      "alt": "ZEEKR X Flagship AWD สีขาว จัดแสดงที่เซ็นทรัล อีสต์วิลล์ กรุงเทพฯ เดือนกรกฎาคม 2024",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-x-flagship-thailand-2024.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 9,
+      "alt": "MG4 Electric X รุ่นปี 2026 สีฟ้าเขียวจัดแสดงในงาน Bangkok International Motor Show ที่เมืองทองธานี",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fmg4-my2026-x-thailand-chanokchon.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 10,
+      "alt": "Deepal NEW S07 สีเทาจัดแสดงที่เมืองทองธานี ประเทศไทย เดือนพฤศจิกายน 2025",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fdeepal-s07-thailand-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 11,
+      "alt": "BYD Atto 3 Extended สีดำจัดแสดงในประเทศไทย ปี 2024 มุมเฉียงด้านหน้า",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fbyd-atto3-thailand-2024-chanokchon.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 12,
+      "alt": "Deepal S05 Max สีขาวจัดแสดงที่เมืองทองธานี ประเทศไทย เดือนมีนาคม 2025",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fdeepal-s05-max-thailand-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 13,
+      "alt": "Geely EX2 Max สีเบจหลังคาดำ จัดแสดงที่เมืองทองธานี ประเทศไทย เดือนพฤศจิกายน 2025",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fgeely-ex2-max-thailand-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 14,
+      "alt": "จาน Carbon Ceramic PCCB และคาลิเปอร์สีเหลืองบน Porsche Carrera S รุ่น 997 ขณะถอดล้อ",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fpccb-carrera-s-dan-lindsay.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 15,
+      "alt": "Tesla Model 3 Performance ปี 2024 สีเทา มุมด้านหน้า ภาพประกอบรุ่นรถ ไม่ใช่ภาพทดสอบช่วงล่างในไทย",
+      "loaded": true,
+      "naturalHeight": 215,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-3-performance-2024.png&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 16,
+      "alt": "แชสซี Volkswagen ID.3 จัดแสดง เห็นชุดแบตเตอรี่ระหว่างล้อและส่วนประกอบช่วงล่าง",
+      "loaded": true,
+      "naturalHeight": 268,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-chassis-volkswagen-id3.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 17,
+      "alt": "อินเวอร์เตอร์ในห้องด้านหน้าของ Toyota bZ4X ที่จัดแสดงในคอสตาริกา ปี 2022",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-power-inverter-toyota-bz4x.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 18,
+      "alt": "LADA Vesta Sport บนแท่นตั้งศูนย์ มีเป้าวัดติดที่ล้อ ใช้อธิบายขั้นตอนวัด ไม่ใช่รถ EV หรือศูนย์บริการของเรา",
+      "loaded": true,
+      "naturalHeight": 231,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fwheel-alignment-lada.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 19,
+      "alt": "ผลิตภัณฑ์ KW Coilovers หลายรูปแบบ พร้อมสปริงสีเหลืองและแหวนปรับสีม่วงบนพื้นหลังสว่าง",
+      "loaded": true,
+      "naturalHeight": 814,
+      "naturalWidth": 1451,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fkw-coilover-adjustable.avif&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 20,
+      "alt": "ภาพรวมชุดคอยล์โอเวอร์ KW จากเจ้าของเว็บไซต์ ไม่ยืนยันการติดตั้งตรงรุ่น",
+      "loaded": true,
+      "naturalHeight": 120,
+      "naturalWidth": 215,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fkw-coilover-adjustable-social.jpg&w=256&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 21,
+      "alt": "ภาพอธิบายส่วนประกอบช่วงล่าง MacPherson ไม่ใช่แบบติดตั้งเฉพาะรุ่น",
+      "loaded": true,
+      "naturalHeight": 94,
+      "naturalWidth": 215,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fsingle-wishbone-suspension.jpg&w=256&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 22,
+      "alt": "ภาพปก EVSELECT ยางรถ EV ต่างจากยางทั่วไปยังไง พร้อมภาพประกอบรถไฟฟ้าและยาง",
+      "loaded": true,
+      "naturalHeight": 763,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fev-tyre-cover.png&w=640&q=75"
+    },
+    {
+      "route": "/articles",
+      "index": 23,
+      "alt": "แชสซีจัดแสดง Volkswagen ID.3 เห็นชุดแบตเตอรี่ใต้พื้นรถและสายไฟแรงดันสูงสีส้ม",
+      "loaded": true,
+      "naturalHeight": 268,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-chassis-volkswagen-id3.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/byd-atto-3-review",
+      "index": 2,
+      "alt": "BYD Atto 3 Extended สีดำจัดแสดงในประเทศไทย ปี 2024 มุมเฉียงด้านหน้า",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fbyd-atto3-thailand-2024-chanokchon.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/byd-atto-3-review",
+      "index": 3,
+      "alt": "ห้องโดยสาร BYD Atto 3 รุ่นพวงมาลัยซ้าย เห็นจอกลาง พวงมาลัย และคอนโซล",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fbyd-atto3-interior-llamas.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/byd-seal-review",
+      "index": 2,
+      "alt": "BYD Seal Premium สีขาวจัดแสดงในโชว์รูมที่ขอนแก่น ประเทศไทย ปี 2023",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fbyd-seal-premium-thailand-2023.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/byd-seal-review",
+      "index": 3,
+      "alt": "BYD Seal AWD Performance สีดำในโชว์รูมขอนแก่น ปี 2023 เห็นด้านหน้าและล้อ",
+      "loaded": true,
+      "naturalHeight": 0,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fbyd-seal-awd-thailand-2023.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/byd-seal-review",
+      "index": 4,
+      "alt": "เบาะหน้า จอกลางและคอนโซล BYD Seal ไฟฟ้าล้วนพวงมาลัยซ้าย ในภาพถ่ายที่ญี่ปุ่น ปี 2022",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fbyd-seal-front-seats-and-console.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/deepal-s05-review",
+      "index": 2,
+      "alt": "Deepal S05 Max สีขาวจัดแสดงที่เมืองทองธานี ประเทศไทย เดือนมีนาคม 2025",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fdeepal-s05-max-thailand-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/deepal-s05-review",
+      "index": 3,
+      "alt": "Deepal S05 Max REEV สีขาวในงานแสดงรถที่เมืองทองธานี ปี 2025 เห็นป้าย REEV บนกระจกหน้า",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fdeepal-s05-max-reev-thailand-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/deepal-s05-review",
+      "index": 4,
+      "alt": "ห้องโดยสาร Deepal S05 พวงมาลัยซ้ายที่งาน IAA ปี 2025 เห็นจอกลางและคอนโซล",
+      "loaded": true,
+      "naturalHeight": 287,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fdeepal-s05-cockpit-iaa-2025.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/deepal-s07-review",
+      "index": 2,
+      "alt": "Deepal NEW S07 สีเทาจัดแสดงที่เมืองทองธานี ประเทศไทย เดือนพฤศจิกายน 2025",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fdeepal-s07-thailand-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/deepal-s07-review",
+      "index": 3,
+      "alt": "ห้องโดยสาร Deepal S07 พวงมาลัยซ้าย จอกลางและคอนโซล ในงาน IAA 2025 ประเทศเยอรมนี",
+      "loaded": true,
+      "naturalHeight": 287,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fdeepal-s07-interior-iaa-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-battery-care",
+      "index": 2,
+      "alt": "แชสซีจัดแสดง Volkswagen ID.3 เห็นชุดแบตเตอรี่ใต้พื้นรถและสายไฟแรงดันสูงสีส้ม",
+      "loaded": true,
+      "naturalHeight": 268,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-chassis-volkswagen-id3.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-battery-care",
+      "index": 3,
+      "alt": "Tesla Model 3 Highland สีแดงจัดแสดงที่เมือง Ulm ประเทศเยอรมนี",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-3-hero.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-camber-adjustment-wheel-alignment-guide",
+      "index": 2,
+      "alt": "LADA Vesta Sport บนแท่นตั้งศูนย์ มีเป้าวัดติดที่ล้อ ใช้อธิบายขั้นตอนวัด ไม่ใช่รถ EV หรือศูนย์บริการของเรา",
+      "loaded": true,
+      "naturalHeight": 231,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fwheel-alignment-lada.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "index": 2,
+      "alt": "จาน Carbon Ceramic PCCB และคาลิเปอร์สีเหลืองบน Porsche Carrera S รุ่น 997 ขณะถอดล้อ",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fpccb-carrera-s-dan-lindsay.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "index": 3,
+      "alt": "ภาพถ่ายจานเบรกเซาะร่อง เห็นร่องโค้งบนผิวเสียดทาน",
+      "loaded": true,
+      "naturalHeight": 222,
+      "naturalWidth": 395,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fslotted-disc-numobeer.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "index": 4,
+      "alt": "จาน Carbon Ceramic ผิวเจาะรูกับคาลิเปอร์ AMG สีทองในงาน Geneva Auto Show 2011",
+      "loaded": true,
+      "naturalHeight": 263,
+      "naturalWidth": 395,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Famg-carbon-ceramic-brake-gold.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "index": 5,
+      "alt": "ภาพที่เจ้าของส่งของคาลิเปอร์ ENDLESS สีน้ำเงินและจาน 375 mm ติดตั้งบน Model 3 Performance Highland",
+      "loaded": true,
+      "naturalHeight": 351,
+      "naturalWidth": 395,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fendless-m6-owner-model3-installed.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "index": 6,
+      "alt": "คาลิเปอร์ ENDLESS สีน้ำเงินสองตัวและจานเบรกหน้าสองใบพร้อมกล่อง จากภาพเจ้าของรถ",
+      "loaded": true,
+      "naturalHeight": 301,
+      "naturalWidth": 395,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fendless-m6-owner-front-kit.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-carbon-ceramic-brakes-guide",
+      "index": 7,
+      "alt": "แนวถนนริมไหล่เขาดอยอินทนนท์และพืชพรรณในภาพปี 2013",
+      "loaded": true,
+      "naturalHeight": 0,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fdoi-inthanon-road-2013.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 2,
+      "alt": "ผลิตภัณฑ์ KW Coilovers หลายรูปแบบ พร้อมสปริงสีเหลืองและแหวนปรับสีม่วงบนพื้นหลังสว่าง",
+      "loaded": true,
+      "naturalHeight": 814,
+      "naturalWidth": 1451,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fkw-coilover-adjustable.avif&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 3,
+      "alt": "ชุดโช้ค TEIN FLEX Z จากหน้าผลิตภัณฑ์ TEIN",
+      "loaded": true,
+      "naturalHeight": 178,
+      "naturalWidth": 268,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Ftein-flex-z.0r5wny42trofs.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 4,
+      "alt": "โช้ค BILSTEIN B16 สปริงสีฟ้า พร้อมปุ่มปรับด้านล่าง",
+      "loaded": true,
+      "naturalHeight": 671,
+      "naturalWidth": 251,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fbilstein-b16.3tk7cjt255x9o.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 5,
+      "alt": "ชุด Öhlins Road & Track มี coilover หน้าสปริงเหลือง พร้อม damper หลังและสปริงหลังแยกกัน",
+      "loaded": true,
+      "naturalHeight": 405,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fohlins-road-track-tesla.1m36t3jk0mkn6.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 6,
+      "alt": "โช้ค BC Racing ZR พร้อมซับแทงก์และสายเชื่อมแยกจากกระบอก",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fbc-zr.1eg_m9gophz_9.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 7,
+      "alt": "ภาพผลิตภัณฑ์ HKS HIPERMAX S รุ่นปัจจุบัน สปริงสีขาว",
+      "loaded": true,
+      "naturalHeight": 616,
+      "naturalWidth": 201,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fhks-hipermax-s.1670689s3r0bz.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 8,
+      "alt": "ภาพผลิตภัณฑ์ HKS HIPERMAX R สปริงสีขาวและแหวนสีแดง",
+      "loaded": true,
+      "naturalHeight": 638,
+      "naturalWidth": 248,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fhks-hipermax-r.3usv_r6298axr.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 9,
+      "alt": "รถยนต์บนถนนราชดำริ กรุงเทพฯ ถ่ายเดือนธันวาคม 2019",
+      "loaded": true,
+      "naturalHeight": 296,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fbangkok-ratchadamri.2ee_r-ihjgexg.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-damper-tuning-bump-rebound-guide",
+      "index": 10,
+      "alt": "BMW M4 GT3 หมายเลข 46 ของ Team WRT ในการแข่งขัน 24 Hours of Spa ปี 2023",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimmutable%2Fmedia%2Fbmw-m4-gt3-spa.1dp7icuven7n6.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-horsepower-vs-torque-explained",
+      "index": 2,
+      "alt": "อินเวอร์เตอร์ในห้องด้านหน้าของ Toyota bZ4X ที่จัดแสดงในคอสตาริกา ปี 2022",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-power-inverter-toyota-bz4x.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-horsepower-vs-torque-explained",
+      "index": 3,
+      "alt": "Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ",
+      "loaded": true,
+      "naturalHeight": 215,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-3-performance-2024.png&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-performance-driving-techniques",
+      "index": 2,
+      "alt": "Tesla Model 3 Performance ปี 2024 สีเทา มุมด้านหน้า ภาพประกอบรุ่นรถ ไม่ใช่ภาพทดสอบช่วงล่างในไทย",
+      "loaded": true,
+      "naturalHeight": 215,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-3-performance-2024.png&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-suspension-tuning-guide",
+      "index": 2,
+      "alt": "Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ",
+      "loaded": true,
+      "naturalHeight": 215,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-3-performance-2024.png&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-suspension-tuning-guide",
+      "index": 3,
+      "alt": "ผลิตภัณฑ์ KW Coilovers หลายรูปแบบ พร้อมสปริงสีเหลืองและแหวนปรับสีม่วงบนพื้นหลังสว่าง",
+      "loaded": true,
+      "naturalHeight": 814,
+      "naturalWidth": 1451,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fkw-coilover-adjustable.avif&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "index": 2,
+      "alt": "ภาพปก EVSELECT ยางรถ EV ต่างจากยางทั่วไปยังไง พร้อมภาพประกอบรถไฟฟ้าและยาง",
+      "loaded": true,
+      "naturalHeight": 763,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fev-tyre-cover.png&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "index": 3,
+      "alt": "ภาพถ่าย Michelin e.Primacy ขนาด 225/45 R21 บนล้อ Toyota Crown Crossover",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fmichelin-eprimacy-real.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "index": 4,
+      "alt": "ภาพถ่าย Michelin Pilot Sport EV บนล้อ Mercedes-AMG EQS 53 4MATIC+ เห็นชื่อรุ่นที่แก้มยาง",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fmichelin-ev-real.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "index": 5,
+      "alt": "ภาพผลิตภัณฑ์ Hankook iON evo พร้อมล้อ เห็นชื่อรุ่นบนแก้มยาง",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fhankook-ion-evo.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "index": 6,
+      "alt": "ภาพผลิตภัณฑ์ Continental EcoContact 7 และ EcoContact 7 S วางคู่กัน",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fcontinental-ecocontact-7.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "index": 7,
+      "alt": "ภาพผลิตภัณฑ์ Pirelli P Zero E เห็นชื่อรุ่นและเครื่องหมาย Elect",
+      "loaded": true,
+      "naturalHeight": 430,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fpirelli-p-zero-e.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/ev-tyre-and-coilover-selection-guide",
+      "index": 8,
+      "alt": "ภาพถ่าย Michelin Pilot Sport 4 S บนล้อ Cadillac เห็นชื่อรุ่นและขนาด 295/30 ZR19 บนแก้มยาง",
+      "loaded": true,
+      "naturalHeight": 430,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fev-tyres%2Fmichelin-ps4s-real.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/geely-ex2-review",
+      "index": 2,
+      "alt": "Geely EX2 Max สีเบจหลังคาดำ จัดแสดงที่เมืองทองธานี ประเทศไทย เดือนพฤศจิกายน 2025",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fgeely-ex2-max-thailand-2025.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "index": 2,
+      "alt": "แชสซี Volkswagen ID.3 จัดแสดง เห็นชุดแบตเตอรี่ระหว่างล้อและส่วนประกอบช่วงล่าง",
+      "loaded": true,
+      "naturalHeight": 268,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-chassis-volkswagen-id3.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+      "index": 3,
+      "alt": "ห้องอุปกรณ์ใต้ฝากระโปรง Toyota bZ4X เห็นอินเวอร์เตอร์ สายสีส้ม และแบตเตอรี่แรงดันต่ำ",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fev-power-inverter-toyota-bz4x.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/mg4-electric-review",
+      "index": 2,
+      "alt": "MG4 Electric X รุ่นปี 2026 สีฟ้าเขียวจัดแสดงในงาน Bangkok International Motor Show ที่เมืองทองธานี",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fmg4-my2026-x-thailand-chanokchon.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/mg4-electric-review",
+      "index": 3,
+      "alt": "จอกลางและคอนโซล MG4 รุ่นปรับปรุงปี 2026 พวงมาลัยซ้าย ภาพจาก MG Motor Europe",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fmg4-my2026-europe-cockpit.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/optimizing-ev-suspension-thai-roads",
+      "index": 2,
+      "alt": "Tesla Model 3 Performance ปี 2024 สีเทา มุมด้านหน้า ภาพประกอบรุ่นรถ ไม่ใช่ภาพทดสอบช่วงล่างในไทย",
+      "loaded": true,
+      "naturalHeight": 215,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-3-performance-2024.png&w=640&q=75"
+    },
+    {
+      "route": "/articles/optimizing-ev-suspension-thai-roads",
+      "index": 3,
+      "alt": "แบบจำลอง MacPherson strut พร้อมลูกศรชี้ชุดสตรัท คอม้า ดุมและสตัดล้อ ปีกนกล่าง และชุดเบรก",
+      "loaded": true,
+      "naturalHeight": 0,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fsingle-wishbone-suspension.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "index": 2,
+      "alt": "โช้ค Pro Comp ES9000 สีขาว ก้านโลหะยืดออก บนพื้นหลังสีฟ้า",
+      "loaded": true,
+      "naturalHeight": 262,
+      "naturalWidth": 200,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Farticles%2Fgas-damper-photo.jpg&w=256&q=75"
+    },
+    {
+      "route": "/articles/shock-absorber-types-monotube-twintube-air-ev",
+      "index": 3,
+      "alt": "ZEEKR 7X สีเทา ภาพประกอบรุ่นรถ ไม่ใช้ยืนยันรุ่นย่อยหรืออุปกรณ์ของรถสเปกไทย",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fzeekr-7x-photo.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/tesla-model-3-highland-review",
+      "index": 2,
+      "alt": "Tesla Model 3 Highland สีแดงที่งาน Autofrühling Ulm ประเทศเยอรมนี ปี 2024",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-3-hero.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/tesla-model-3-highland-review",
+      "index": 3,
+      "alt": "ห้องโดยสาร Tesla Model 3 Highland สเปกญี่ปุ่น พวงมาลัยขวา เห็นจอกลางและคอนโซล ปี 2025",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-3-highland-rhd-cockpit-japan.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/tesla-model-3-highland-review",
+      "index": 4,
+      "alt": "เบาะแถวหลังและจอผู้โดยสารหลัง Tesla Model 3 Highland สเปกญี่ปุ่น ปี 2025",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-3-highland-rear-seats-japan.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/tesla-model-y-l-premium-6-seater-review",
+      "index": 2,
+      "alt": "Tesla Model Y L สีเงินมุมด้านข้าง ภาพต่างประเทศเดือนธันวาคม 2025",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Ftesla-model-y-l-photo.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/tesla-model-y-l-premium-6-seater-review",
+      "index": 3,
+      "alt": "จอกลางและคอนโซล Model Y L พวงมาลัยซ้ายในฟิลิปปินส์ เดือนเมษายน 2026",
+      "loaded": true,
+      "naturalHeight": 0,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Ftesla-model-y-l-interior-ph-2026.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 2,
+      "alt": "ZEEKR 009 Flagship AWD สีดำ จัดแสดงที่ขอนแก่น ประเทศไทย เดือนกันยายน 2024",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009-flagship-thailand-2024.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 3,
+      "alt": "ห้องโดยสาร ZEEKR 009 แบบ 7 ที่นั่ง จากเว็บไซต์ ZEEKR ประเทศไทย",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fseven-seats.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 4,
+      "alt": "ห้องโดยสาร ZEEKR 009 แบบ 6 ที่นั่ง จากเว็บไซต์ ZEEKR ประเทศไทย",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fsix-seats.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 5,
+      "alt": "เบาะแถวสองสีอ่อนและหลังคากระจกของ ZEEKR 009 รุ่น 7 ที่นั่งในไทย ปี 2025",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fthai-premium-seats.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 6,
+      "alt": "โต๊ะพับบริเวณเบาะแถวสองของ ZEEKR 009 แบบ 6 ที่นั่ง",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Ffolding-tables.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 7,
+      "alt": "ห้องขับ ZEEKR 009 พวงมาลัยขวาในภาพข่าวเปิดตัวรุ่น 7 ที่นั่งประเทศไทย ปี 2025",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fthai-cockpit.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 8,
+      "alt": "จอเพดานสำหรับผู้โดยสารหลังในห้องโดยสาร ZEEKR 009 พวงมาลัยขวา",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Froof-screen.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 9,
+      "alt": "ตู้เย็นแบบลิ้นชักด้านหลังคอนโซลกลางของ ZEEKR 009",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Frefrigerator.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 10,
+      "alt": "ZEEKR 009 สีขาวเปิดประตูสไลด์ในชุดภาพรถไทยของ HeadLight Magazine ปี 2024",
+      "loaded": true,
+      "naturalHeight": 266,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fthai-sliding-door.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 11,
+      "alt": "เบาะแถวสามสองตำแหน่งของ ZEEKR 009 แบบ 6 ที่นั่งในชุดภาพรถไทย ปี 2024",
+      "loaded": true,
+      "naturalHeight": 530,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fthai-third-row.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 12,
+      "alt": "พื้นที่ท้าย ZEEKR 009 แบบ 6 ที่นั่งเมื่อยกพนักพิงแถวสามขึ้น ในภาพรถไทย ปี 2024",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fthai-luggage.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-009-review",
+      "index": 13,
+      "alt": "เปรียบเทียบระดับสูงและระดับมาตรฐานของช่วงล่าง ZEEKR 009 ในชุดภาพรถไทย ปี 2024",
+      "loaded": true,
+      "naturalHeight": 254,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-009%2Fthai-air-suspension.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-7x-2026-review",
+      "index": 2,
+      "alt": "ZEEKR 7X สีเทา มุมด้านหน้า ภาพประกอบรุ่นรถจากต่างประเทศ ไม่ยืนยันรุ่นย่อยไทย",
+      "loaded": true,
+      "naturalHeight": 322,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Feditorial%2Fzeekr-7x-photo.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-7x-2026-review",
+      "index": 3,
+      "alt": "ZEEKR 7X Performance AWD สีเทาในโชว์รูมขอนแก่น ปี 2025 เห็นล้อและคาลิปเปอร์สีส้ม",
+      "loaded": true,
+      "naturalHeight": 0,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-7x-performance-thailand-wheels.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-7x-2026-review",
+      "index": 4,
+      "alt": "ห้องโดยสาร ZEEKR 7X พวงมาลัยซ้ายที่งาน Auto Zürich ปี 2025 เห็นจอกลาง คอนโซลและเบาะหน้า",
+      "loaded": true,
+      "naturalHeight": 287,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-7x-cockpit-zurich-2025.webp&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-x-review",
+      "index": 2,
+      "alt": "ZEEKR X Flagship AWD สีขาว จัดแสดงที่เซ็นทรัล อีสต์วิลล์ กรุงเทพฯ เดือนกรกฎาคม 2024",
+      "loaded": true,
+      "naturalHeight": 241,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-x-flagship-thailand-2024.jpg&w=640&q=75"
+    },
+    {
+      "route": "/articles/zeekr-x-review",
+      "index": 3,
+      "alt": "จอกลางและคอนโซล ZEEKR X พวงมาลัยซ้าย รุ่นปี 2025 ในภาพของ Ethan Llamas",
+      "loaded": true,
+      "naturalHeight": 286,
+      "naturalWidth": 430,
+      "src": "https://evselect-platform-b4q9o0my8-evselects-com.vercel.app/_next/image?url=%2Fimages%2Freviews%2Fzeekr-x-cockpit-2025.webp&w=640&q=75"
+    }
+  ]
+}

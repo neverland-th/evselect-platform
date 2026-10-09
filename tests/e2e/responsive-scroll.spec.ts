@@ -1,42 +1,17 @@
 import { test, expect } from 'playwright/test';
 import { assertZeroHorizontalScroll } from './utils/scroll-diagnostics';
+import { publicSiteRoutes, pendingPublicRoutes } from '../../src/lib/public-site-routes';
 
 const STOREFRONT_ROUTES = [
-  // Primary storefront entry points
-  '/',
-  '/articles',
-
-  // Information & Legal pages
-  '/about',
-  '/contact',
-  '/editorial-policy',
-  '/privacy',
-  '/terms',
-  '/warranty',
-
-  // All 22 Vehicle Review & Technical Editorial Articles
-  '/articles/byd-atto-3-review',
-  '/articles/byd-seal-review',
-  '/articles/deepal-s05-review',
-  '/articles/deepal-s07-review',
-  '/articles/ev-battery-care',
-  '/articles/ev-camber-adjustment-wheel-alignment-guide',
-  '/articles/ev-carbon-ceramic-brakes-guide',
-  '/articles/ev-damper-tuning-bump-rebound-guide',
-  '/articles/ev-horsepower-vs-torque-explained',
-  '/articles/ev-performance-driving-techniques',
-  '/articles/ev-suspension-tuning-guide',
-  '/articles/ev-tyre-and-coilover-selection-guide',
-  '/articles/geely-ex2-review',
-  '/articles/hybrid-to-ev-chassis-dynamics-transition',
-  '/articles/mg4-electric-review',
-  '/articles/optimizing-ev-suspension-thai-roads',
-  '/articles/shock-absorber-types-monotube-twintube-air-ev',
-  '/articles/tesla-model-3-highland-review',
-  '/articles/tesla-model-y-l-premium-6-seater-review',
-  '/articles/zeekr-009-review',
-  '/articles/zeekr-7x-2026-review',
-  '/articles/zeekr-x-review',
+  ...publicSiteRoutes,
+  ...pendingPublicRoutes,
+  '/articles?category=all&segment=city',
+  '/articles?category=all&segment=hatchback',
+  '/articles?category=all&segment=sedan',
+  '/articles?category=all&segment=suv',
+  '/articles?category=guides',
+  '/articles?category=reviews',
+  '/articles?category=suspension',
 ];
 
 test.describe('Zero Horizontal Scroll & Responsive Layout Integrity', () => {

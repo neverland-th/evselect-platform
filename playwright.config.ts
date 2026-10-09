@@ -1,5 +1,7 @@
 import { defineConfig } from 'playwright/test';
 
+const baseURL = process.env.BASE_URL || 'http://localhost:3000';
+
 export default defineConfig({
   // Exclusively target E2E test directory to avoid running CLI unit tests in tests/*.ts
   testDir: './tests/e2e',
@@ -16,7 +18,7 @@ export default defineConfig({
     ['html', { open: 'never', outputFolder: 'playwright-report' }],
   ],
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
@@ -33,10 +35,30 @@ export default defineConfig({
       },
     },
     {
+      name: 'android-mobile-360',
+      use: {
+        browserName: 'chromium',
+        viewport: { width: 360, height: 800 },
+        deviceScaleFactor: 2,
+        isMobile: true,
+        hasTouch: true,
+      },
+    },
+    {
       name: 'ios-mobile-390',
       use: {
         browserName: 'chromium',
         viewport: { width: 390, height: 844 },
+        deviceScaleFactor: 3,
+        isMobile: true,
+        hasTouch: true,
+      },
+    },
+    {
+      name: 'large-mobile-430',
+      use: {
+        browserName: 'chromium',
+        viewport: { width: 430, height: 932 },
         deviceScaleFactor: 3,
         isMobile: true,
         hasTouch: true,
@@ -84,7 +106,7 @@ export default defineConfig({
     },
   ],
 
-  webServer: {
+  webServer: process.env.BASE_URL ? undefined : {
     command: 'npm run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: true,
