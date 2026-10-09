@@ -1,12 +1,14 @@
-# EVSELECTS Mobile Release Readiness — v1.2
+# EVSELECTS Mobile Release Readiness — v1.3
 
-ตรวจต่อจากรายงาน 9 ต.ค. 2026 · บันทึก 10 ต.ค. 2026 (Asia/Bangkok) · **สถานะ: rendered Preview checks ผ่าน; แก้ Preview build environment แล้ว; รอ build ซ้ำและ Production cutover**
+ตรวจต่อจากรายงาน 9 ต.ค. 2026 · บันทึก 10 ต.ค. 2026 (Asia/Bangkok) · **สถานะ: RELEASED · candidate/production builds ผ่าน · ตรวจ Production หลังเผยแพร่แล้ว**
 
-## สิ่งที่เปลี่ยนจาก v1.0 / v1.1
+## สิ่งที่เปลี่ยนจาก v1.0 / v1.1 / v1.2
 
 เปิด browser ได้แล้วและปิดช่องว่างการตรวจ responsive 320/360/390/430px จาก v1.0 เพิ่มผลการทำงานของเมนู, cookie consent, ภาพ, ตาราง และ reader review แบบบันทึก Damper ทั้งหน้า แก้ regression tests ที่ยังใช้ชื่อปุ่มและรายการเมนูเก่า เพิ่ม 360/430px และรองรับ BASE_URL ภายนอก เพิ่ม HTTP release verifier ที่ไม่ต้องเปิด browser โดยไม่ได้แก้ application body หรือภาพในรอบนี้
 
 เพิ่มใน v1.2: candidate `226c25905b239a302fb0cdf9f615b21e12d146e8` build ครั้งแรกที่ `dpl_B2uUimTYndJYN3MgQWgq8hvb3JxN` compile/TypeScript ผ่าน แต่ ERROR ระหว่าง collect page data เพราะ Preview ไม่มี DATABASE_URL สำหรับ module ของ `/api/export/shopee` แก้เฉพาะคำสั่ง frontend build: `scripts/build-frontend.mjs` ให้ placeholder แบบ loopback เฉพาะ VERCEL_ENV=preview เมื่อไม่มีค่าเดิม ค่านี้อยู่เฉพาะ child build process ไม่แก้ project secrets/runtime/backend Production และ local/custom environment ไม่มี fallback; unit checks ของเงื่อนไขนี้ผ่าน 4/4 Candidate ยังไม่รวม review harness และไม่ได้ merge main
+
+เพิ่มใน v1.3: candidate build ผ่านและเผยแพร่ commit `445563cdecc384dbf3922cd7517e24194ca15e3e` ด้วย Production environment แล้ว เก็บ HTTP audit หลังเผยแพร่และ browser smoke ของ Production แก้ regression test ให้ตรงกับพฤติกรรมจริงที่ hamburger ใช้งานบน desktop ได้ด้วย (desktop links เพิ่มเมื่อ >=1280px) ตรวจ tsc/scoped lint และ discovery ซ้ำหลังแก้ ส่วนแก้ test/evidence/report หลัง cutover ไม่มีผลต่อ application ที่ serve อยู่ และไม่อ้างว่า E2E suite 328 cases ถูก execute
 
 ## เวอร์ชันที่ตรวจและความแตกต่าง
 
@@ -15,10 +17,14 @@
 | Preview ต้นทาง | `dpl_9TPJ9KPZnhHJAVD2CAJRXZ3kbUqP`; READY; commit `33c946b1d4da1818c3568216a956c40a4a48c338` | Vercel get_deployment + live Preview | VERIFIED |
 | Preview URL | https://evselect-platform-b4q9o0my8-evselects-com.vercel.app | Vercel + browser | VERIFIED |
 | Candidate เริ่มรอบ | `codex/mobile-aeo-candidate-2026-10-09`; `793baf52a6b4e8f192f007b047d1e69549de2d81` | git checkout/diff | VERIFIED |
-| Preview → candidate | application content และ metadata เหมือนกัน; candidate ตัด `public/__review__/responsive.html`, `scripts/build-preview-review.mjs` และคืน `vercel.json` buildCommand เป็น `npm run build`; เพิ่มรายงาน v1.0 | git diff Preview..candidate | VERIFIED |
-| Production → candidate | application diff มีเฉพาะ title/description/og:title/og:description ของแบบบันทึก Damper | git diff `e4542cc0`..candidate | VERIFIED |
-| Damper body | body ไม่เปลี่ยน; SHA-256 `ed3dd8b79125130706f204336d37690b4e0a4779f88cf97fd202470133f1ebbe` | source comparison | VERIFIED |
-| Production ก่อน cutover | `dpl_6rzKnEDYCWm59ZEWFNU65djqsBTG`; commit `e4542cc0c6bf8ca383aab406438e8f6bbd717a82` | Vercel deployment API | VERIFIED · ยังไม่ใช่ candidate |
+| Preview → candidate เริ่มรอบ | rendered content/metadata เหมือนกัน; candidate เริ่มรอบตัด harness/helper และคืน npm run build; รอบนี้เพิ่ม frontend build wrapper ใหม่หลังพบ Preview environment error; ไม่คืน review harness | git diff + candidate build logs | VERIFIED |
+| Production → release | rendered application diff มีเฉพาะ title/description/og:title/og:description ของแบบบันทึก Damper; เพิ่ม QA tests/verifier และ frontend build wrapper | git diff `e4542cc0`..`445563c` | VERIFIED |
+| Damper body | outer body เทียบ baseline, candidate source และ Production ตรงกัน; SHA-256 ที่คำนวณใหม่ `35ca3b8ea321f165bfc01317b353d7b2aa6af000606aa0b14ea47d15185f3e08` | `production-extra-checks.json`; source byte comparison | VERIFIED |
+| Production ก่อน cutover | `dpl_6rzKnEDYCWm59ZEWFNU65djqsBTG`; commit `e4542cc0c6bf8ca383aab406438e8f6bbd717a82` | Vercel deployment API | VERIFIED · baseline |
+| Candidate ที่ผ่าน | `dpl_5hrmB7bQufc2UHkAmb5dHtJn7CSV`; commit `445563cdecc384dbf3922cd7517e24194ca15e3e`; READY | `candidate-build.json` + `candidate-http.json` | VERIFIED |
+| Production ใหม่ | `dpl_8p1kUidNQ422hidTni69LNyw2beS`; commitเดียวกับ candidate; READY; target=production; apex/www ชี้ deployment นี้ทั้งคู่ | `production-build.json`; Vercel deployment/alias APIs | VERIFIED · released |
+
+หมายเหตุการแก้หลักฐาน: ค่า hash `ed3dd8b...` ที่อ้างใน v1.0 ไม่ตรงกับวิธีคำนวณที่ระบุชัดเจนในรอบนี้ จึงไม่ใช้ค่านั้นยืนยัน Production ใช้ outer body ตั้งแต่ opening `<body>` ถึง closing `</body>` รวม tags และเทียบข้อความจริงก่อนคำนวณ hash; baseline/source/Production ตรงกัน ไม่มี body change
 
 ## ผลตรวจ rendered mobile
 
@@ -46,15 +52,25 @@ Scrollbar ของ iframe ใช้พื้นที่ 8px ใน mobile จ�
 | Sitemap/robots | sitemap มี public canonical 29 URL ตรง allowlist; robots อ้าง sitemap apex | HTTP verifier | VERIFIED |
 | Unit/policy | analytics/link-policy/image-metadata 17/17; content-link parser 9/9; public image verifier 96 references | local Node tests | VERIFIED |
 | TypeScript/scoped lint | tsc --noEmit และ eslint ของไฟล์ที่แก้ผ่าน | local checks | VERIFIED |
-| Full repo lint | 52 errors / 31 warnings เดิมใน scripts/tests อื่น; ไม่ผ่านทั้ง repository; รอบนี้ไม่เปลี่ยน application files ที่เกี่ยวข้อง | local lint log + git diff | VERIFIED · inherited debt, not a clean full-lint claim |
+| Full repo lint | 52 errors / 31 warnings ในไฟล์เดิมนอก diff รวม utilities/tests, admin, content-generator และ proxy; ไม่ผ่านทั้ง repository; ไม่แก้ส่วน backend/admin นอกขอบเขตรอบนี้ | `code-checks.json` + local lint log + git diff | VERIFIED · inherited debt, not a clean full-lint claim |
 | E2E runner | discovery ผ่าน 328 cases / 8 projects; เพิ่ม 360/430 และขยาย route coverage; ไม่ได้ execute Playwright suite ในเครื่องนี้ | Playwright --list | VERIFIED · discovery only; 328 cases NOT RUN |
 | Local npm build | image/content-parser checks ผ่านก่อนหยุดที่ tsx IPC `listen EPERM`; ไม่ใช่ successful local build | local npm build output | VERIFIED · environment restriction |
-| Candidate remote build | ครั้งแรก ERROR เพราะ Preview environment; compile/TypeScript ผ่าน; รอ build ซ้ำหลังแก้ frontend build wrapper และตรวจ fallback tests 4/4 | Vercel candidate deployment / logs ที่ต้องเก็บ | [UNAVAILABLE] · pending |
-| Production รอบนี้ | ยังไม่ cutover ณ v1.1 | Vercel mutations ณ เวอร์ชันนี้ | VERIFIED · not deployed yet |
+| Candidate remote build | หลังแก้ wrapper ผ่าน; Build Completed [25s]; content audit 32 pages strict ผ่าน; attribution 28 page/filter variants, 125 ImageObjects, 66 credit records ผ่าน; wrapper environment checks ผ่าน 4/4 ในเครื่อง | `candidate-build.json`; local unit output | VERIFIED |
+| Production build | build ใหม่ด้วย target production ผ่าน; Build Completed [49s]; strict content/attribution checks ผ่าน | `production-build.json` | VERIFIED · rebuilt in production environment |
+| Production HTTP/SEO | 38 URL และปลายทางภายในเพิ่ม 66 รายการผ่าน 200; H1/canonical/description/schema checks ผ่าน; ไม่พบ noindex header ใน public pages; sitemap 29 canonical routes | `production-http.json` | VERIFIED · after cutover |
+| Production browser | หน้าแรกอ่านได้/ภาพ hero โหลด; drawer ปิดและคืน focus หลัง Escape/ปุ่มปิด; ไป /articles ได้; cookie choice เป็น false หลังปฏิเสธ และ GA tag count=0; ลิงก์ toolkit เปิดแบบบันทึกได้และ metadata ใหม่แสดงจริง | `production-browser-smoke.json`; `production-home-desktop.jpg`; `production-damper-desktop.jpg` | VERIFIED · desktop smoke; ไม่ใช่ mobile matrix ซ้ำ |
+| Production extras | www หน้าแรก/แบบบันทึก 200 และ canonical apex; review harness ได้ 404; body baseline/source/Production ตรงกัน | `production-extra-checks.json` | VERIFIED |
 
 ไม่เปลี่ยน backend, database schema, CMS, stock, payment, route/slug หรือโลโก้ และไม่ merge main การตรวจนี้ไม่ยืนยัน external editorial source links ทุกเว็บไซต์, Safari/physical-device behavior, Google indexing, Rich Results eligibility หรือผล AI citation ซึ่งไม่ใช่ผลที่จะอนุมานได้จาก HTTP/JSON-LD parse
 
 ## OPEN ITEMS
 
-1. Data: successful exact candidate remote build and build audit logs. Source: Vercel deployment on `evselects-com/evselect-platform`. Blocks: production cutover.
-2. Data: candidate production deployment ID/commit, apex+www mapping, production HTTP and rendered smoke checks. Source: Vercel API + live https://evselects.com. Blocks: marking release complete.
+ไม่มี release-blocking item ค้างจากการตรวจรอบนี้ ข้อจำกัดและงานต่อเนื่องที่ไม่ได้อ้างว่าผ่าน:
+
+| Data / work remaining | Exact source / next check | Decision affected |
+| --- | --- | --- |
+| Physical iOS/Android, Safari และ touch/device emulation | ทดสอบ production https://evselects.com บนอุปกรณ์/engine เหล่านั้น | การรับรอง cross-device behavior; ไม่ได้วัดใน Chromium CSS viewport matrix นี้ |
+| Execute E2E 328 cases | `playwright.config.ts` + `tests/e2e/mobile-navigation.spec.ts` + `responsive-scroll.spec.ts` ใน CI/runner ที่เปิด browser ได้; รอบนี้รันเฉพาะ discovery และตรวจ UI ผ่าน browser โดยตรง | การกล่าวว่า full E2E suite ผ่าน; ห้ามอนุมานจาก --list |
+| Full repository lint debt (52 errors/31 warnings) | utilities/tests, admin/content-generator/proxy เดิมนอก diff; scoped lint ไฟล์ที่แก้ผ่าน | การกล่าวว่า full-repo lint clean |
+| ภาพโปสเตอร์ยางมี fine print เล็กบนมือถือ | `/articles/ev-tyre-and-coilover-selection-guide`; ปรับภาพ/HTML ในงาน editorial ภายหลัง และทำ reader review ใหม่ | optional readability improvement |
+| GA4 event delivery / Google indexing / Rich Results / AI citations | GA4 property และ Search Console/validation tool ที่เกี่ยวข้อง | การยืนยันผล tracking/search visibility; JSON-LD parse และ HTTP ไม่ยืนยันผลเหล่านี้ |

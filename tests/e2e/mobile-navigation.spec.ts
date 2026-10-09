@@ -1,15 +1,13 @@
 import { test, expect } from 'playwright/test';
 
 test.describe('Responsive navigation and drawer interactions', () => {
-  test('Navigation adapts at 1280px; drawer closes and restores focus', async ({ page }) => {
+  test('Desktop links adapt at 1280px; the shared drawer closes and restores focus', async ({ page }) => {
     await page.goto('/');
     const width = page.viewportSize()?.width ?? 1280;
     const trigger = page.getByRole('button', { name: 'เปิดเมนูหลัก', exact: true });
-    if (width >= 1280) {
-      await expect(trigger).toBeHidden();
-      await expect(page.locator('header').getByRole('link', { name: 'บทความ EV', exact: true })).toBeVisible();
-      return;
-    }
+    const desktopArticles = page.locator('header').getByRole('link', { name: 'บทความ EV', exact: true });
+    if (width >= 1280) await expect(desktopArticles).toBeVisible();
+    else await expect(desktopArticles).toBeHidden();
     await expect(trigger).toBeVisible();
     await expect(trigger).toHaveAttribute('aria-expanded', 'false');
     await trigger.click();
@@ -31,7 +29,6 @@ test.describe('Responsive navigation and drawer interactions', () => {
   });
 
   test('Following a drawer link loads the article index and closes the drawer', async ({ page }) => {
-    test.skip((page.viewportSize()?.width ?? 1280) >= 1280, 'Mobile drawer only');
     await page.goto('/');
     const trigger = page.getByRole('button', { name: 'เปิดเมนูหลัก', exact: true });
     await trigger.click();

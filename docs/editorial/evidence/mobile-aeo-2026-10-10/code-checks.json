@@ -1,0 +1,60 @@
+{
+  "scope": "Actual commands executed in this session; E2E discovery is separate from rendered browser checks.",
+  "checks": [
+    {
+      "command": "node --import tsx --test scripts/test-analytics.ts scripts/test-link-policy.ts scripts/test-image-metadata.ts",
+      "exitCode": 0,
+      "passed": 17
+    },
+    {
+      "command": "node --test scripts/test-content-links.mjs",
+      "exitCode": 0,
+      "passed": 9
+    },
+    {
+      "command": "node --test scripts/test-frontend-build.mjs",
+      "exitCode": 0,
+      "passed": 4,
+      "scope": "Preview-only fallback; preserves existing values; no production/local/custom fallback"
+    },
+    {
+      "command": "node scripts/verify-public-images.mjs",
+      "exitCode": 0,
+      "referencesVerified": 96
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit",
+      "exitCode": 0,
+      "scope": "After final regression-test correction"
+    },
+    {
+      "command": "node node_modules/eslint/bin/eslint.js playwright.config.ts tests/e2e/mobile-navigation.spec.ts tests/e2e/responsive-scroll.spec.ts scripts/verify-release-http.mts scripts/build-frontend.mjs scripts/test-frontend-build.mjs",
+      "exitCode": 0,
+      "note": "All these changed files passed scoped checks; mobile-navigation was checked again after desktop expectation correction."
+    },
+    {
+      "command": "node node_modules/playwright/cli.js test --list tests/e2e/mobile-navigation.spec.ts tests/e2e/responsive-scroll.spec.ts",
+      "exitCode": 0,
+      "discoveredCases": 328,
+      "projects": 8,
+      "executedCases": 0
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 1,
+      "errors": 52,
+      "warnings": 31,
+      "scope": "Existing files outside change set, including legacy utilities/tests and admin/content-generator/proxy."
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 1,
+      "scope": "Local runtime only",
+      "reason": "tsx IPC listen EPERM; successful exact source builds verified separately on Vercel."
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ]
+}

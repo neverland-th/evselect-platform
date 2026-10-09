@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-09T18:06:57.934Z",
+  "checks": [
+    {
+      "url": "https://www.evselects.com/",
+      "status": 200,
+      "robotsHeader": null,
+      "title": "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS",
+      "canonical": "https://evselects.com"
+    },
+    {
+      "url": "https://www.evselects.com/downloads/evselect-damper-setup-log.html",
+      "status": 200,
+      "robotsHeader": null,
+      "title": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM",
+      "canonical": "https://evselects.com/downloads/evselect-damper-setup-log.html"
+    },
+    {
+      "url": "https://evselects.com/__review__/responsive.html",
+      "status": 404,
+      "robotsHeader": null
+    },
+    {
+      "url": "https://evselects.com/downloads/evselect-damper-setup-log.html",
+      "status": 200,
+      "robotsHeader": null,
+      "title": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM",
+      "canonical": "https://evselects.com/downloads/evselect-damper-setup-log.html",
+      "bodyComparison": {
+        "scope": "outer body, from opening body tag through closing body tag inclusive",
+        "sourceEqualsBaseline": true,
+        "productionEqualsSource": true,
+        "sha256": "35ca3b8ea321f165bfc01317b353d7b2aa6af000606aa0b14ea47d15185f3e08"
+      },
+      "openGraph": [
+        {
+          "property": "og:title",
+          "content": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM"
+        },
+        {
+          "property": "og:description",
+          "content": "แบบบันทึกช่วงล่างรถ EV และค่าปรับแดมเปอร์รายมุม สำหรับเก็บข้อมูลก่อนคุยกับผู้ติดตั้ง ไม่ใช่สูตรตั้งค่า ข้อมูลที่กรอกไม่ส่งไปที่เว็บไซต์"
+        }
+      ]
+    }
+  ]
+}

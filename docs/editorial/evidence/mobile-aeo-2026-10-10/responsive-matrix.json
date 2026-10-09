@@ -4310,6 +4310,19 @@
   ],
   "interactions": [
     {
+      "width": 320,
+      "drawer": {
+        "left": 0,
+        "minLinkHeight": 52,
+        "right": 288,
+        "width": 288
+      },
+      "closeButton": true,
+      "escape": true,
+      "focusReturned": true,
+      "navigation": true
+    },
+    {
       "width": 360,
       "drawer": {
         "left": 0,

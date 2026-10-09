@@ -1,0 +1,510 @@
+{
+  "deployment": "dpl_5hrmB7bQufc2UHkAmb5dHtJn7CSV",
+  "commit": "445563cdecc384dbf3922cd7517e24194ca15e3e",
+  "url": "https://evselect-platform-p55tra30a-evselects-com.vercel.app",
+  "state": "READY",
+  "target": "preview",
+  "source": "Vercel get_deployment + last 100 build events",
+  "events": [
+    {
+      "date": 1791568333547,
+      "type": "stdout",
+      "text": "✓ Generating static pages using 1 worker (44/44) in 1407ms"
+    },
+    {
+      "date": 1791568333556,
+      "type": "stdout",
+      "text": "  Finalizing page optimization ..."
+    },
+    {
+      "date": 1791568333653,
+      "type": "stdout",
+      "text": "  Running onBuildComplete from Vercel"
+    },
+    {
+      "date": 1791568333901,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "Route (app)"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "┌ ○ /"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /_not-found"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /about"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ƒ /api/export/shopee"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ƒ /api/export/woo"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ƒ /api/health/database"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ƒ /api/revalidate"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ƒ /articles"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/byd-atto-3-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/byd-seal-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/deepal-s05-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/deepal-s07-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-battery-care"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-camber-adjustment-wheel-alignment-guide"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-carbon-ceramic-brakes-guide"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-damper-tuning-bump-rebound-guide"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-horsepower-vs-torque-explained"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-performance-driving-techniques"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-suspension-tuning-guide"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/ev-tyre-and-coilover-selection-guide"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/geely-ex2-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/hybrid-to-ev-chassis-dynamics-transition"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/mg4-electric-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/optimizing-ev-suspension-thai-roads"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/shock-absorber-types-monotube-twintube-air-ev"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/tesla-model-3-highland-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/tesla-model-y-l-premium-6-seater-review"
+    },
+    {
+      "date": 1791568333902,
+      "type": "stdout",
+      "text": "├ ○ /articles/zeekr-009-review"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /articles/zeekr-7x-2026-review"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /articles/zeekr-x-review"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /categories"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /contact"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /editorial-policy"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /export"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /fitment"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /image-credits"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /privacy"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ƒ /product/[id]"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /products"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ƒ /products/[id]"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /robots.txt"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /sitemap.xml"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /terms"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "├ ○ /vehicles"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "└ ○ /warranty"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "ƒ Proxy (Middleware)"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "○  (Static)   prerendered as static content"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": "ƒ  (Dynamic)  server-rendered on demand"
+    },
+    {
+      "date": 1791568333903,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568334169,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568334170,
+      "type": "stdout",
+      "text": "> evselect-platform@0.1.0 audit:content"
+    },
+    {
+      "date": 1791568334170,
+      "type": "stdout",
+      "text": "> tsx scripts/audit-content-links.ts --strict --build --strict"
+    },
+    {
+      "date": 1791568334170,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "{"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"pages\": 32,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"published\": 29,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"pendingNoindex\": 3,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"supportingNoindex\": 0,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"links\": 2157,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"internalLinks\": 1575,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"contextualCandidates\": 94,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"issueCounts\": {},"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"blockerRoutes\": [],"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"baselinePolicy\": \"Strict: every finding blocks publication. No legacy exceptions.\","
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"output\": \"scratch/content-link-audit.json\","
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  \"sitemapChecks\": {"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "    \"/sitemap_index.xml\": {"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "      \"status\": 200,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "      \"entries\": 1"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "    },"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "    \"/sitemap_indexl.xml\": {"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "      \"status\": 200,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "      \"entries\": 1"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "    },"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "    \"/sitemap.xml\": {"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "      \"status\": 200,"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "      \"entries\": 29"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "    }"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "  }"
+    },
+    {
+      "date": 1791568337390,
+      "type": "stdout",
+      "text": "}"
+    },
+    {
+      "date": 1791568340561,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568340561,
+      "type": "stdout",
+      "text": "> evselect-platform@0.1.0 verify:attribution"
+    },
+    {
+      "date": 1791568340562,
+      "type": "stdout",
+      "text": "> node scripts/verify-image-attribution.mjs --build"
+    },
+    {
+      "date": 1791568340562,
+      "type": "stdout",
+      "text": ""
+    },
+    {
+      "date": 1791568342707,
+      "type": "stdout",
+      "text": "Verified 28 page/filter variants, 125 rendered ImageObjects and 66 accessible credit records."
+    },
+    {
+      "date": 1791568343223,
+      "type": "stderr",
+      "text": "Build Completed in /vercel/output [25s]"
+    },
+    {
+      "date": 1791568343248,
+      "type": "stdout",
+      "text": "Deploying outputs..."
+    },
+    {
+      "date": 1791568350540,
+      "type": "stdout",
+      "text": "Deployment completed"
+    },
+    {
+      "date": 1791568350544,
+      "type": "stdout",
+      "text": "Creating build cache..."
+    },
+    {
+      "date": 1791568364070,
+      "type": "stdout",
+      "text": "Created build cache: 14s"
+    },
+    {
+      "date": 1791568364070,
+      "type": "stdout",
+      "text": "Uploading build cache [247.98 MB]"
+    },
+    {
+      "date": 1791568368571,
+      "type": "stdout",
+      "text": "Build cache uploaded: 4.501s"
+    }
+  ]
+}

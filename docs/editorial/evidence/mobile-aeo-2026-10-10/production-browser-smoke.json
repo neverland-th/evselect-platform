@@ -1,0 +1,31 @@
+{
+  "deployment": "dpl_8p1kUidNQ422hidTni69LNyw2beS",
+  "commit": "445563cdecc384dbf3922cd7517e24194ca15e3e",
+  "method": "Live Chromium desktop browser after apex/www alias mapping; not a repeated 4-width mobile matrix",
+  "homepageURL": "https://evselects.com/",
+  "menu": {
+    "closeFocus": true,
+    "escapeFocus": true,
+    "articleNavigation": true
+  },
+  "cookie": {
+    "choice": false,
+    "left": 421.5,
+    "right": 933.5,
+    "analyticsTagsAfterReject": 0
+  },
+  "damper": {
+    "canonical": "https://evselects.com/downloads/evselect-damper-setup-log.html",
+    "description": "แบบบันทึกช่วงล่างรถ EV และค่าปรับแดมเปอร์รายมุม สำหรับเก็บข้อมูลก่อนคุยกับผู้ติดตั้ง ไม่ใช่สูตรตั้งค่า ข้อมูลที่กรอกไม่ส่งไปที่เว็บไซต์",
+    "h1": 1,
+    "scrollWidth": 1348,
+    "title": "แบบบันทึกช่วงล่างและ Damper Baseline | EVSELECTS.COM",
+    "width": 1348
+  },
+  "toolkitDownloadLink": true,
+  "consoleErrorCheck": {
+    "urlFilter": "https://evselects.com/",
+    "matchedErrors": 0,
+    "scope": "observed desktop smoke pages only"
+  }
+}
