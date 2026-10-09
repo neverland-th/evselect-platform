@@ -1,0 +1,36 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>ตรวจ responsive — Preview</title><style>*{box-sizing:border-box}body{margin:0;background:#e2e8f0;font:14px/1.4 Arial,sans-serif;color:#172033}.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px;background:#fff;border-bottom:1px solid #64748b}select,button{font:inherit;padding:6px}#page{max-width:540px}#stage{margin:8px 20px;width:max-content;border:1px solid #64748b;background:white}iframe{display:block;border:0;width:390px;height:844px}#status{padding:4px 8px;font-size:12px}</style></head><body><div class="bar"><label>หน้า <select id="page"><option value="/">/</option>
+<option value="/articles">/articles</option>
+<option value="/articles/byd-atto-3-review">/articles/byd-atto-3-review</option>
+<option value="/articles/byd-seal-review">/articles/byd-seal-review</option>
+<option value="/articles/deepal-s05-review">/articles/deepal-s05-review</option>
+<option value="/articles/deepal-s07-review">/articles/deepal-s07-review</option>
+<option value="/articles/ev-battery-care">/articles/ev-battery-care</option>
+<option value="/articles/ev-camber-adjustment-wheel-alignment-guide">/articles/ev-camber-adjustment-wheel-alignment-guide</option>
+<option value="/articles/ev-carbon-ceramic-brakes-guide">/articles/ev-carbon-ceramic-brakes-guide</option>
+<option value="/articles/ev-damper-tuning-bump-rebound-guide">/articles/ev-damper-tuning-bump-rebound-guide</option>
+<option value="/articles/ev-horsepower-vs-torque-explained">/articles/ev-horsepower-vs-torque-explained</option>
+<option value="/articles/ev-performance-driving-techniques">/articles/ev-performance-driving-techniques</option>
+<option value="/articles/ev-suspension-tuning-guide">/articles/ev-suspension-tuning-guide</option>
+<option value="/articles/ev-tyre-and-coilover-selection-guide">/articles/ev-tyre-and-coilover-selection-guide</option>
+<option value="/articles/geely-ex2-review">/articles/geely-ex2-review</option>
+<option value="/articles/hybrid-to-ev-chassis-dynamics-transition">/articles/hybrid-to-ev-chassis-dynamics-transition</option>
+<option value="/articles/mg4-electric-review">/articles/mg4-electric-review</option>
+<option value="/articles/optimizing-ev-suspension-thai-roads">/articles/optimizing-ev-suspension-thai-roads</option>
+<option value="/articles/shock-absorber-types-monotube-twintube-air-ev">/articles/shock-absorber-types-monotube-twintube-air-ev</option>
+<option value="/articles/tesla-model-3-highland-review">/articles/tesla-model-3-highland-review</option>
+<option value="/articles/tesla-model-y-l-premium-6-seater-review">/articles/tesla-model-y-l-premium-6-seater-review</option>
+<option value="/articles/zeekr-009-review">/articles/zeekr-009-review</option>
+<option value="/articles/zeekr-7x-2026-review">/articles/zeekr-7x-2026-review</option>
+<option value="/articles/zeekr-x-review">/articles/zeekr-x-review</option>
+<option value="/contact">/contact</option>
+<option value="/downloads/evselect-damper-setup-log.html">/downloads/evselect-damper-setup-log.html</option>
+<option value="/editorial-policy">/editorial-policy</option>
+<option value="/image-credits">/image-credits</option>
+<option value="/privacy">/privacy</option>
+<option value="/articles?category=all&amp;segment=city">/articles?category=all&amp;segment=city</option>
+<option value="/articles?category=all&amp;segment=hatchback">/articles?category=all&amp;segment=hatchback</option>
+<option value="/articles?category=all&amp;segment=sedan">/articles?category=all&amp;segment=sedan</option>
+<option value="/articles?category=all&amp;segment=suv">/articles?category=all&amp;segment=suv</option>
+<option value="/articles?category=guides">/articles?category=guides</option>
+<option value="/articles?category=reviews">/articles?category=reviews</option>
+<option value="/articles?category=suspension">/articles?category=suspension</option></select></label><label>ความกว้าง <select id="width"><option>320</option><option>360</option><option selected>390</option><option>430</option><option>1363</option></select></label><button id="down">เลื่อนหน้าลง</button><button id="up">กลับขึ้นบน</button><label>ดูภาพ <select id="image"><option value="">เลือกภาพ</option></select></label></div><div id="status" aria-live="polite">กำลังเปิดหน้า</div><div id="stage"><iframe id="screen" title="หน้าที่กำลังตรวจ" src="/"></iframe></div><script>const page=document.querySelector('#page'),width=document.querySelector('#width'),screen=document.querySelector('#screen'),image=document.querySelector('#image'),status=document.querySelector('#status');function load(){screen.style.width=width.value+'px';screen.src=page.value;status.textContent='กำลังเปิด '+page.value+' ที่ '+width.value+'px';}page.addEventListener('change',load);width.addEventListener('change',load);screen.addEventListener('load',()=>{const d=screen.contentDocument;status.textContent=screen.contentWindow.location.pathname+screen.contentWindow.location.search+' | '+screen.contentWindow.innerWidth+' × '+screen.contentWindow.innerHeight+' | ความสูง '+d.documentElement.scrollHeight;image.replaceChildren(new Option('เลือกภาพ',''));Array.from(d.images).forEach((img,i)=>image.add(new Option((i+1)+'. '+(img.alt||'ไม่มี alt'),String(i))));});document.querySelector('#down').addEventListener('click',()=>screen.contentWindow.scrollBy({top:650,behavior:'instant'}));document.querySelector('#up').addEventListener('click',()=>screen.contentWindow.scrollTo({top:0,behavior:'instant'}));image.addEventListener('change',()=>{if(image.value==='')return;screen.contentDocument.images[Number(image.value)].scrollIntoView({block:'center',behavior:'instant'});});</script></body></html>
