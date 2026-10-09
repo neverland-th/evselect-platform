@@ -1,10 +1,12 @@
-# EVSELECTS Mobile Release Readiness — v1.1
+# EVSELECTS Mobile Release Readiness — v1.2
 
-ตรวจต่อจากรายงาน 9 ต.ค. 2026 · บันทึก 10 ต.ค. 2026 (Asia/Bangkok) · **สถานะ: rendered Preview checks ผ่าน; รอ candidate build และ Production cutover**
+ตรวจต่อจากรายงาน 9 ต.ค. 2026 · บันทึก 10 ต.ค. 2026 (Asia/Bangkok) · **สถานะ: rendered Preview checks ผ่าน; แก้ Preview build environment แล้ว; รอ build ซ้ำและ Production cutover**
 
-## สิ่งที่เปลี่ยนจาก v1.0
+## สิ่งที่เปลี่ยนจาก v1.0 / v1.1
 
 เปิด browser ได้แล้วและปิดช่องว่างการตรวจ responsive 320/360/390/430px จาก v1.0 เพิ่มผลการทำงานของเมนู, cookie consent, ภาพ, ตาราง และ reader review แบบบันทึก Damper ทั้งหน้า แก้ regression tests ที่ยังใช้ชื่อปุ่มและรายการเมนูเก่า เพิ่ม 360/430px และรองรับ BASE_URL ภายนอก เพิ่ม HTTP release verifier ที่ไม่ต้องเปิด browser โดยไม่ได้แก้ application body หรือภาพในรอบนี้
+
+เพิ่มใน v1.2: candidate `226c25905b239a302fb0cdf9f615b21e12d146e8` build ครั้งแรกที่ `dpl_B2uUimTYndJYN3MgQWgq8hvb3JxN` compile/TypeScript ผ่าน แต่ ERROR ระหว่าง collect page data เพราะ Preview ไม่มี DATABASE_URL สำหรับ module ของ `/api/export/shopee` แก้เฉพาะคำสั่ง frontend build: `scripts/build-frontend.mjs` ให้ placeholder แบบ loopback เฉพาะ VERCEL_ENV=preview เมื่อไม่มีค่าเดิม ค่านี้อยู่เฉพาะ child build process ไม่แก้ project secrets/runtime/backend Production และ local/custom environment ไม่มี fallback; unit checks ของเงื่อนไขนี้ผ่าน 4/4 Candidate ยังไม่รวม review harness และไม่ได้ merge main
 
 ## เวอร์ชันที่ตรวจและความแตกต่าง
 
@@ -47,7 +49,7 @@ Scrollbar ของ iframe ใช้พื้นที่ 8px ใน mobile จ�
 | Full repo lint | 52 errors / 31 warnings เดิมใน scripts/tests อื่น; ไม่ผ่านทั้ง repository; รอบนี้ไม่เปลี่ยน application files ที่เกี่ยวข้อง | local lint log + git diff | VERIFIED · inherited debt, not a clean full-lint claim |
 | E2E runner | discovery ผ่าน 328 cases / 8 projects; เพิ่ม 360/430 และขยาย route coverage; ไม่ได้ execute Playwright suite ในเครื่องนี้ | Playwright --list | VERIFIED · discovery only; 328 cases NOT RUN |
 | Local npm build | image/content-parser checks ผ่านก่อนหยุดที่ tsx IPC `listen EPERM`; ไม่ใช่ successful local build | local npm build output | VERIFIED · environment restriction |
-| Candidate remote build | รอยืนยัน Vercel build ของ source หลังแก้ tests/verifier | Vercel candidate deployment / logs ที่ต้องเก็บ | [UNAVAILABLE] · pending |
+| Candidate remote build | ครั้งแรก ERROR เพราะ Preview environment; compile/TypeScript ผ่าน; รอ build ซ้ำหลังแก้ frontend build wrapper และตรวจ fallback tests 4/4 | Vercel candidate deployment / logs ที่ต้องเก็บ | [UNAVAILABLE] · pending |
 | Production รอบนี้ | ยังไม่ cutover ณ v1.1 | Vercel mutations ณ เวอร์ชันนี้ | VERIFIED · not deployed yet |
 
 ไม่เปลี่ยน backend, database schema, CMS, stock, payment, route/slug หรือโลโก้ และไม่ merge main การตรวจนี้ไม่ยืนยัน external editorial source links ทุกเว็บไซต์, Safari/physical-device behavior, Google indexing, Rich Results eligibility หรือผล AI citation ซึ่งไม่ใช่ผลที่จะอนุมานได้จาก HTTP/JSON-LD parse
