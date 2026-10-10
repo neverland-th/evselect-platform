@@ -1,0 +1,57 @@
+# Base44 sandbox / development environment for evselect-platform.
+#
+# The app (Next.js 16 App Router + Prisma 7 on SQLite) runs straight from the
+# bind-mounted working tree with `next dev`, so every edit is picked up live.
+# Dependencies are installed from the committed lockfile on startup; the SQLite
+# database lives on its own named volume, never inside the repo.
+#
+# Start:  docker compose -f docker-compose.base44.yml up -d --build
+# Logs:   docker compose -f docker-compose.base44.yml logs -f web
+name: evselect-platform
+
+services:
+  web:
+    # Plain runtime image (the repo's own Dockerfile does not exist) — source is
+    # bind-mounted, never baked into an image.
+    image: node:22
+    working_dir: /app
+    command:
+      - sh
+      - -ec
+      - |
+        npm ci --no-audit --no-fund
+        npx prisma generate
+        npx prisma db push
+        exec npm run dev -- --hostname 0.0.0.0 --port 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      # Keep container-installed node_modules out of the host working tree.
+      - app-node-modules:/app/node_modules
+      # SQLite database (DATABASE_URL) lives outside the repo.
+      - db-data:/data
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=file:/data/dev.db
+      # Bind mounts need polling for reliable hot reload.
+      - WATCHPACK_POLLING=true
+      - NEXT_TELEMETRY_DISABLED=1
+      # Sandbox flags (values supplied by the platform; see AGENTS.md).
+      - BASE44_PREVIEW_MODE
+      - BASE44_PUBLIC_HOST_SUFFIX
+      - BASE44_SANDBOX_HOST_DOMAIN
+    env_file:
+      # Platform-managed secrets. Last entry so user-supplied values always win.
+      - /run/base44/app.env
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:3000/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 300s
+
+volumes:
+  app-node-modules:
+  db-data:

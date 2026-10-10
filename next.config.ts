@@ -14,6 +14,13 @@ const cspHeader = `
 `
 
 const nextConfig: NextConfig = {
+  // Sandbox preview only: Next 16 blocks dev assets/HMR when the request Origin
+  // is not allowlisted. The preview is served from the public host, so allow it
+  // while BASE44_PREVIEW_MODE=1; unset/normal runs keep the default behavior.
+  allowedDevOrigins:
+    process.env.BASE44_PREVIEW_MODE === '1' && process.env.BASE44_PUBLIC_HOST_SUFFIX
+      ? [`3000-${process.env.BASE44_PUBLIC_HOST_SUFFIX}`]
+      : [],
   images: {
     remotePatterns: [
       {
