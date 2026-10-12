@@ -2,9 +2,10 @@
 
 import Link from 'next/link';
 import Script from 'next/script';
+import { usePathname } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import {
-  CONSENT_SETTINGS_EVENT, disableAnalytics, initializeAnalytics, isProductionHostname,
+  CONSENT_SETTINGS_EVENT, disableAnalytics, guardAnalyticsNavigation, initializeAnalytics, isProductionHostname,
   isPrivateAnalyticsPath, parseConsent, pauseAnalytics, readConsentValue, saveConsent, subscribeConsent, trackIntent,
 } from '@/lib/analytics';
 
@@ -16,13 +17,14 @@ export function CookieSettingsButton({ className = '' }: { className?: string })
 }
 
 export default function CookieConsent({ measurementId }: { measurementId: string | null }) {
+  const pathname = usePathname();
   const stored = useSyncExternalStore(subscribeConsent, readConsentValue, () => null);
   const consent = useMemo(() => parseConsent(stored), [stored]);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [analyticsChoice, setAnalyticsChoice] = useState(false);
   const [error, setError] = useState('');
   const dialog = useRef<HTMLDialogElement>(null);
-  const canTrack = Boolean(measurementId && consent?.analytics && typeof window !== 'undefined' && isProductionHostname(window.location.hostname));
+  const canTrack = Boolean(measurementId && consent?.analytics && pathname && !isPrivateAnalyticsPath(pathname) && typeof window !== 'undefined' && isProductionHostname(window.location.hostname));
 
   useEffect(() => {
     const open = () => {
@@ -41,7 +43,7 @@ export default function CookieConsent({ measurementId }: { measurementId: string
   useEffect(() => {
     if (!canTrack) {
       // Hydration initially uses the server snapshot; do not erase a returning visitor's cookies.
-      if (measurementId && isProductionHostname(window.location.hostname) && parseConsent(readConsentValue())?.analytics) return;
+      if (measurementId && isProductionHostname(window.location.hostname) && !isPrivateAnalyticsPath(window.location.pathname) && parseConsent(readConsentValue())?.analytics) return;
       if (disableAnalytics()) window.location.reload();
       return;
     }
@@ -50,26 +52,16 @@ export default function CookieConsent({ measurementId }: { measurementId: string
       window.location.reload();
       return;
     }
-    const guardNavigation = (event: MouseEvent) => {
-      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !(event.target instanceof Element)) return;
-      const anchor = event.target.closest('a[href]');
-      if (anchor instanceof HTMLAnchorElement && (!anchor.target || anchor.target === '_self') && !anchor.hasAttribute('download') && anchor.origin === window.location.origin && isPrivateAnalyticsPath(anchor.pathname)) pauseAnalytics();
-    };
-    const guardHistory = () => {
-      if (isPrivateAnalyticsPath(window.location.pathname)) pauseAnalytics();
-    };
+    const stopGuarding = guardAnalyticsNavigation();
     const onClick = (event: MouseEvent) => {
       if (event.defaultPrevented || event.button !== 0 || !(event.target instanceof Element)) return;
       const anchor = event.target.closest('a[href]');
       if (anchor instanceof HTMLAnchorElement) trackIntent(anchor.href);
     };
     document.addEventListener('click', onClick);
-    document.addEventListener('click', guardNavigation, true);
-    window.addEventListener('popstate', guardHistory, true);
     return () => {
       document.removeEventListener('click', onClick);
-      document.removeEventListener('click', guardNavigation, true);
-      window.removeEventListener('popstate', guardHistory, true);
+      stopGuarding();
       pauseAnalytics();
     };
   }, [canTrack, measurementId]);
