@@ -49,3 +49,21 @@ test('Home accessory CTA delivers actual interior selection advice, not just veh
   assert.equal(document.querySelectorAll('link[rel="stylesheet"]').length, 0, 'Built Home receives styles inline');
   assert.ok(document.querySelector('img[alt="EVSELECTS"]')?.getAttribute('src').includes('logo-evselects'));
 });
+
+test('Home prioritizes the hero without removing off-screen content or weakening CSP', async () => {
+  const response = await fetch(base);
+  const { document } = parseHTML(await response.text());
+  const hero = document.querySelector('main img');
+  const preload = [...document.querySelectorAll('link[rel="preload"][as="image"]')]
+    .find(link => (link.getAttribute('imagesrcset') || link.getAttribute('imageSrcSet') || '').includes('tesla-model-3-white-user'));
+  assert.ok(preload, 'Responsive hero preload is in server HTML');
+  assert.equal(hero.getAttribute('loading'), 'eager');
+  for (const id of ['ev-accessories', 'tesla-accessories', 'home-faq', 'launch']) {
+    assert.ok(document.getElementById(id)?.textContent.trim().length > 150, `${id} stays readable in HTML`);
+  }
+  assert.ok(document.querySelector('.home-content'));
+  assert.equal(response.headers.get('content-security-policy'), 'upgrade-insecure-requests');
+  const report = response.headers.get('content-security-policy-report-only');
+  assert.ok(report?.includes("object-src 'none'"));
+  assert.ok(!report.includes('upgrade-insecure-requests'), 'Do not send the ignored report-only directive');
+});

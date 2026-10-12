@@ -73,3 +73,27 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* All Home copy stays in SSR/accessibility/search. Skip off-screen paint only,
+   using measured section estimates and remembered sizes after first rendering. */
+@supports (content-visibility: auto) {
+  @media screen {
+    .home-content > section:nth-of-type(n + 3) {
+      content-visibility: auto;
+      contain-intrinsic-height: auto 1000px;
+    }
+    .home-content > #ev-accessories { contain-intrinsic-height: auto 2280px; }
+    .home-content > #tesla-accessories { contain-intrinsic-height: auto 2390px; }
+    .home-content > #compare-ev-tyre-prices { contain-intrinsic-height: auto 1540px; }
+    .home-content > #before-you-buy { contain-intrinsic-height: auto 1320px; }
+    .home-content > #home-faq { contain-intrinsic-height: auto 760px; }
+    @media (min-width: 1024px) {
+      .home-content > section:nth-of-type(n + 3) { contain-intrinsic-height: auto 650px; }
+      .home-content > #ev-accessories { contain-intrinsic-height: auto 1630px; }
+      .home-content > #tesla-accessories { contain-intrinsic-height: auto 1460px; }
+      .home-content > #compare-ev-tyre-prices { contain-intrinsic-height: auto 900px; }
+      .home-content > #before-you-buy { contain-intrinsic-height: auto 715px; }
+      .home-content > #home-faq { contain-intrinsic-height: auto 750px; }
+    }
+  }
+}
+

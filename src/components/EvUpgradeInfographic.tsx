@@ -60,7 +60,7 @@ export default function EvUpgradeInfographic() {
           return (
           <li key={number} className="grid min-w-0 grid-cols-[6rem_minmax(0,1fr)] items-start gap-4 sm:grid-cols-[8rem_minmax(0,1fr)] md:flex md:flex-col md:gap-0">
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl sm:aspect-square md:aspect-[16/10]">
-              <Image src={image} alt={imageAlt} fill sizes="(max-width: 639px) 96px, (max-width: 767px) 128px, (max-width: 1279px) 30vw, 384px" className={imageClass} />
+              <Image src={image} alt={imageAlt} fill quality={number === "02" ? 60 : 75} sizes="(max-width: 639px) 96px, (max-width: 767px) 128px, (max-width: 1279px) 30vw, 384px" className={imageClass} />
             </div>
             <div className="flex min-w-0 flex-1 flex-col md:pt-5">
               <p className="flex items-center gap-2 text-xs font-semibold text-slate-300"><span aria-hidden="true" className="text-lime-300">{number}</span><span aria-hidden="true" className="h-px w-4 bg-white/20" />{category}</p>

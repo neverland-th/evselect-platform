@@ -192,7 +192,7 @@ const homeFaqs = [
 
 export default function StorefrontPage() {
   return (
-    <div className="bg-white text-slate-950">
+    <div className="home-content bg-white text-slate-950">
       <ImageMetadata pagePath="/" />
       <section className="border-b border-slate-200 bg-slate-950 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 md:py-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
@@ -239,6 +239,7 @@ export default function StorefrontPage() {
               src="/images/home/tesla-model-3-white-user.png"
               alt="Tesla Model 3 สีขาว มุมเฉียงด้านหน้า พร้อมล้อสีดำ"
               fill
+              preload
               loading="eager"
               fetchPriority="high"
               sizes="(max-width: 1023px) 100vw, 55vw"
@@ -308,7 +309,7 @@ export default function StorefrontPage() {
           {upgradeIdeas.map((idea) => (
             <Link prefetch={false} key={idea.href} href={idea.href} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-colors hover:border-lime-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
               <div className="relative aspect-[16/10] bg-slate-50">
-                <Image src={idea.image} alt={idea.imageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" className={idea.imageFit === "contain" ? "object-contain p-5" : "object-cover"} />
+                <Image src={idea.image} alt={idea.imageAlt} fill quality={idea.imageFit === "cover" ? 60 : 75} sizes="(max-width: 767px) 100vw, 50vw" className={idea.imageFit === "contain" ? "object-contain p-5" : "object-cover"} />
               </div>
               <div className="p-5 sm:p-6">
                 <h3 className="font-bold">{idea.title}</h3>
@@ -441,7 +442,7 @@ export default function StorefrontPage() {
           </div>
           <div className="grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
-              <Image src="/images/articles/ev-tyre-michelin-audi.jpg" alt="แก้มยาง Michelin Pilot Sport All Season 4 บนล้อ Audi เห็นชื่อรุ่นและรหัสขนาดยาง" width={1920} height={1920} sizes="(max-width: 1023px) 100vw, 40vw" className="h-auto w-full" />
+              <Image src="/images/articles/ev-tyre-michelin-audi.jpg" alt="แก้มยาง Michelin Pilot Sport All Season 4 บนล้อ Audi เห็นชื่อรุ่นและรหัสขนาดยาง" width={1920} height={1920} quality={60} sizes="(max-width: 1023px) 100vw, 40vw" className="h-auto w-full" />
 
             </figure>
             <div>

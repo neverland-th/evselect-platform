@@ -11,7 +11,6 @@ const cspHeader = `
   base-uri 'self';
   form-action 'self';
   frame-ancestors 'none';
-  upgrade-insecure-requests;
 `
 
 const nextConfig: NextConfig = {
@@ -19,6 +18,7 @@ const nextConfig: NextConfig = {
   // stylesheet waterfall, without changing the visual design.
   experimental: { inlineCss: true },
   images: {
+    qualities: [60, 75],
     remotePatterns: [
       {
         protocol: 'https',
@@ -31,6 +31,9 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: [
+          // HTTPS upgrade is ignored in report-only mode. Enforce just this
+          // directive; the remaining policy continues to report as before.
+          { key: 'Content-Security-Policy', value: 'upgrade-insecure-requests' },
           {
             key: 'Content-Security-Policy-Report-Only',
             value: cspHeader.replace(/\n/g, ''),
