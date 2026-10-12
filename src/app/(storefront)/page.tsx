@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -24,7 +25,7 @@ import { batteryArticle } from "@/lib/battery-article";
 const title = "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS";
 const description = "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata("/", {
   title,
   description,
   alternates: { canonical: "/" },
@@ -35,9 +36,10 @@ export const metadata: Metadata = {
     siteName: "EVSELECTS",
     locale: "th_TH",
     type: "website",
+    images: [{ url: "/images/home/tesla-model-3-white-user.png", width: 1176, height: 733, alt: "Tesla Model 3 สีขาว มุมเฉียงด้านหน้า พร้อมล้อสีดำ" }],
   },
-  twitter: { card: "summary", title, description },
-};
+  twitter: { card: "summary_large_image", title, description, images: ["/images/home/tesla-model-3-white-user.png"] },
+});
 
 const journeys = [
   {
@@ -161,16 +163,16 @@ const textLink = "font-medium text-lime-800 underline decoration-lime-500/50 und
 const homeFaqs = [
   {
     question: "ของแต่ง Tesla Model 3 กับ Model Y ใช้ด้วยกันได้ไหม?",
-    answer: <p>ต้องเช็กเป็นชิ้น ๆ ครับ อย่าใช้แค่ชื่อ Tesla เป็นคำยืนยัน ให้เทียบรุ่น ปี โฉม รหัสสินค้า และรถพวงมาลัยขวา พรมหรือถาดคอนโซลที่ระบุสำหรับ Model 3 ไม่ได้ยืนยันว่าใช้กับ Model Y หรือ Model Y L ได้ด้วย ดู <a className={textLink} href="#tesla-accessories">แนวทางเลือกของแต่ง Tesla ให้ตรงรุ่น</a> ก่อนเลือกซื้อ</p>,
+    answer: <p>ต้องเช็กเป็นชิ้น ๆ ครับ อย่าใช้แค่ชื่อ Tesla เป็นคำยืนยัน ให้เทียบรุ่น ปี โฉม รหัสสินค้า และรถพวงมาลัยขวา พรมหรือถาดคอนโซลที่ระบุสำหรับ Model 3 ไม่ได้ยืนยันว่าใช้กับ Model Y หรือ Model Y L ได้ด้วย ดู <a className={textLink} href="#tesla-interior-guide">วิธีเลือกพรมและถาดคอนโซลให้ตรงรุ่น</a> ก่อนเลือกซื้อ</p>,
   },
   {
     question: "ใส่โช้คแต่งแล้ว รถจะนุ่มขึ้นไหม?",
-    answer: <p>ไม่เสมอไปครับ ขึ้นอยู่กับสปริง ระยะยุบ การปรับโช้ค ยาง และถนนที่ขับ โช้คที่เหมาะกับลงสนามอาจไม่ถูกใจเวลาขับไปทำงาน เริ่มจากแยกว่ารถเด้ง กระแทก หรือโยน แล้วอ่าน <Link className={textLink} href="/articles/ev-damper-tuning-bump-rebound-guide#symptoms">วิธีสังเกตอาการก่อนปรับโช้ค</Link> แทนการหมุนตามจำนวนคลิกของรถคนอื่น</p>,
+    answer: <p>ไม่เสมอไปครับ ขึ้นอยู่กับสปริง ระยะยุบ การปรับโช้ค ยาง และถนนที่ขับ โช้คที่เหมาะกับลงสนามอาจไม่ถูกใจเวลาขับไปทำงาน เริ่มจากแยกว่ารถเด้ง กระแทก หรือโยน แล้วอ่าน <Link prefetch={false} className={textLink} href="/articles/ev-damper-tuning-bump-rebound-guide#symptoms">วิธีสังเกตอาการก่อนปรับโช้ค</Link> แทนการหมุนตามจำนวนคลิกของรถคนอื่น</p>,
   },
   {
     question: "รถไฟฟ้าต้องใช้ยางที่มีคำว่า EV เท่านั้นไหม?",
     answer: <>
-      <p>ไม่จำเป็นต้องดูแค่ชื่อรุ่นยาง ให้ตรวจว่าผู้ผลิตรองรับการใช้งานกับรถของคุณ และเลือกขนาด พิกัดรับน้ำหนัก กับพิกัดความเร็วให้ตรงข้อกำหนดของรถ จากนั้นค่อยเทียบความเงียบ การยึดเกาะ และแรงต้านการหมุนใน <Link className={textLink} href="/articles/ev-tyre-and-coilover-selection-guide">คู่มือเลือกยางรถไฟฟ้า</Link></p>
+      <p>ไม่จำเป็นต้องดูแค่ชื่อรุ่นยาง ให้ตรวจว่าผู้ผลิตรองรับการใช้งานกับรถของคุณ และเลือกขนาด พิกัดรับน้ำหนัก กับพิกัดความเร็วให้ตรงข้อกำหนดของรถ จากนั้นค่อยเทียบความเงียบ การยึดเกาะ และแรงต้านการหมุนใน <Link prefetch={false} className={textLink} href="/articles/ev-tyre-and-coilover-selection-guide">คู่มือเลือกยางรถไฟฟ้า</Link></p>
       <p className="mt-3 text-sm">อ่านคำอธิบายจากผู้ผลิตเพิ่มเติม: <a className={textLink} href="https://www.michelin.co.th/auto/advice/ev-guide/tyres-for-electric-cars" target="_blank" rel="noopener noreferrer">Michelin: รถ EV จำเป็นต้องใช้ยางเฉพาะหรือไม่<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>
     </>,
   },
@@ -184,7 +186,7 @@ const homeFaqs = [
   },
   {
     question: "ตอนนี้สั่งซื้ออุปกรณ์เสริมได้หรือยัง?",
-    answer: <p>ตอนนี้ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงินครับ อ่านบทความได้ตามปกติ ส่วนสินค้ายังอยู่ระหว่างคัดเลือกและตรวจข้อมูลรุ่นรถ หากมีของแต่งที่กำลังหา <Link className={textLink} href="/contact">บอกรุ่นรถและสิ่งที่อยากได้กับทีมงาน</Link> หรือดู <a className={textLink} href="#launch">สถานะการเปิดตัวสินค้า</a> ได้ที่นี่</p>,
+    answer: <p>ตอนนี้ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงินครับ อ่านบทความได้ตามปกติ ส่วนสินค้ายังอยู่ระหว่างคัดเลือกและตรวจข้อมูลรุ่นรถ หากมีของแต่งที่กำลังหา <Link prefetch={false} className={textLink} href="/contact">บอกรุ่นรถและสิ่งที่อยากได้กับทีมงาน</Link> หรือดู <a className={textLink} href="#launch">สถานะการเปิดตัวสินค้า</a> ได้ที่นี่</p>,
   },
 ];
 
@@ -304,7 +306,7 @@ export default function StorefrontPage() {
         <EvUpgradeInfographic />
         <div className="grid gap-6 md:grid-cols-2">
           {upgradeIdeas.map((idea) => (
-            <Link key={idea.href} href={idea.href} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-colors hover:border-lime-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
+            <Link prefetch={false} key={idea.href} href={idea.href} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-colors hover:border-lime-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
               <div className="relative aspect-[16/10] bg-slate-50">
                 <Image src={idea.image} alt={idea.imageAlt} fill sizes="(max-width: 767px) 100vw, 50vw" className={idea.imageFit === "contain" ? "object-contain p-5" : "object-cover"} />
               </div>
@@ -329,6 +331,16 @@ export default function StorefrontPage() {
               ภาพรถด้านล่างใช้ประกอบการเลือกรุ่น ไม่ใช่รายการสินค้าของเรา
             </p>
           </div>
+          <div id="tesla-interior-guide" className="mb-6 scroll-mt-28 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+            <h3 className="font-bold">ของแต่งภายใน Tesla เริ่มจากชิ้นที่ใช้ทุกวัน</h3>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">พรม ถาดคอนโซล และที่เก็บของช่วยแก้คนละเรื่อง เลือกจากสิ่งที่อยากใช้สะดวกขึ้น แล้วเช็กข้อมูลของชิ้นนั้นให้ตรงรถเรา ตัวอย่างด้านล่างเป็นข้อมูลจากผู้ผลิต ไม่ใช่สินค้าที่เราเปิดขาย</p>
+            <ul className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
+              <li><strong className="text-slate-950">พรมปูพื้น:</strong> อย่าเลือกจากคำว่า Model 3 อย่างเดียว ตัวอย่าง <a className={textLink} href="https://shop.tesla.com/th_th/product/upgraded-model-3--all-weather-liner-" target="_blank" rel="noopener noreferrer">พรมสำหรับ Model 3 รุ่นอัปเกรดจาก Tesla<span className="sr-only"> (เปิดแท็บใหม่)</span></a> ระบุว่าใช้กับรุ่นอัปเกรดเท่านั้น ก่อนซื้อให้ผู้ขายยืนยันปีรถและฝั่งพวงมาลัยขวาอีกครั้ง</li>
+              <li><strong className="text-slate-950">ถาดคอนโซล:</strong> เช็กโฉมคอนโซลก่อนเลือก <a className={textLink} href="https://shop.tesla.com/th_th/product/upgraded-center-console-trays" target="_blank" rel="noopener noreferrer">ถาดของ Model 3 รุ่นอัปเกรด<span className="sr-only"> (เปิดแท็บใหม่)</span></a> กับ <a className={textLink} href="https://shop.tesla.com/th_th/product/model-3_y-center-console-trays" target="_blank" rel="noopener noreferrer">ถาด Model 3 ปี 2017–2023 / Model Y ปี 2020–2024<span className="sr-only"> (เปิดแท็บใหม่)</span></a> เป็นคนละรายการ ไม่ควรเหมารวมว่าใช้แทนกันได้</li>
+              <li><strong className="text-slate-950">ที่เก็บของ:</strong> เลือกตำแหน่งที่จะใช้ก่อน เช่น คอนโซลหรือท้ายรถ แล้วขอขนาด จุดยึด และรายการรุ่นที่รองรับจากผู้ผลิต ดู <a className={textLink} href="https://shop.tesla.com/th_th/category/vehicle-accessories/model-3" target="_blank" rel="noopener noreferrer">ตัวอย่างอุปกรณ์แยกตามรุ่นใน Tesla Shop<span className="sr-only"> (เปิดแท็บใหม่)</span></a> ประกอบได้ แต่ยังต้องเช็กความเข้ากันได้ของสินค้ารหัสนั้นกับรถเรา</li>
+            </ul>
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">ถ้ายังไม่แน่ใจว่ารถเป็นรุ่นไหน เริ่มจาก <Link prefetch={false} className={textLink} href="/articles/tesla-model-3-highland-review">ข้อมูล Model 3 สเปกไทย</Link> และ <a className={textLink} href="#before-you-buy">เช็กลิสต์ก่อนซื้อของแต่ง EV</a> เราไม่ได้ยืนยันว่าอุปกรณ์เหล่านี้ใช้กับ Model Y L หรือ ZEEKR X ได้</p>
+          </div>
           <div className="grid gap-6 md:grid-cols-2">
             {vehicleAccessoryExamples.map((accessory) => (
               <article key={accessory.image} className="flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white">
@@ -338,7 +350,7 @@ export default function StorefrontPage() {
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
                   <h3 className="font-bold">{accessory.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">{accessory.description}</p>
-                  <Link href={accessory.href} className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-sm font-semibold text-lime-800 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
+                  <Link prefetch={false} href={accessory.href} className="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 text-sm font-semibold text-lime-800 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-700">
                     {accessory.linkLabel} <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
                   </Link>
                 </div>
@@ -346,8 +358,8 @@ export default function StorefrontPage() {
             ))}
           </div>
           <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600">
-            <p>ยังไม่แน่ใจว่ารถเป็นโฉมไหน? เริ่มจาก <Link className={textLink} href="/articles/tesla-model-3-highland-review">ข้อมูล Tesla Model 3 Highland ตลาดไทย</Link> แล้วเช็กรหัสอุปกรณ์กับผู้ผลิตอีกครั้ง ถ้าใช้ Model Y ให้ดู <a className={textLink} href="https://shop.tesla.com/th_th/category/vehicle-accessories" target="_blank" rel="noopener noreferrer">อุปกรณ์แยกตามรุ่นจาก Tesla Shop<span className="sr-only"> (เปิดแท็บใหม่)</span></a> อย่าเลือกจากรูปอย่างเดียว</p>
-            <p className="mt-3">ภาพ Model Y L เป็นรถต่างประเทศ ส่วน ZEEKR X เป็น Flagship AWD ปี 2024 ที่จัดแสดงในไทย ภาพไม่ใช่หลักฐานว่าอุปกรณ์ใส่กับรถเราได้ ดู <Link className={textLink} href="/image-credits#image-42">เครดิตภาพ Model Y L</Link> และ <Link className={textLink} href="/image-credits#image-45">เครดิตภาพ ZEEKR X</Link> <Link className={textLink} href="/">EVSELECTS</Link> ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน และไม่ได้ยืนยันว่าเป็นตัวแทนจำหน่ายของทั้งสองแบรนด์</p>
+            <p>ยังไม่แน่ใจว่ารถเป็นโฉมไหน? เริ่มจาก <Link prefetch={false} className={textLink} href="/articles/tesla-model-3-highland-review">ข้อมูล Tesla Model 3 Highland ตลาดไทย</Link> แล้วเช็กรหัสอุปกรณ์กับผู้ผลิตอีกครั้ง ถ้าใช้ Model Y ให้ดู <a className={textLink} href="https://shop.tesla.com/th_th/category/vehicle-accessories" target="_blank" rel="noopener noreferrer">อุปกรณ์แยกตามรุ่นจาก Tesla Shop<span className="sr-only"> (เปิดแท็บใหม่)</span></a> อย่าเลือกจากรูปอย่างเดียว</p>
+            <p className="mt-3">ภาพ Model Y L เป็นรถต่างประเทศ ส่วน ZEEKR X เป็น Flagship AWD ปี 2024 ที่จัดแสดงในไทย ภาพไม่ใช่หลักฐานว่าอุปกรณ์ใส่กับรถเราได้ ดู <Link prefetch={false} className={textLink} href="/image-credits#image-42">เครดิตภาพ Model Y L</Link> และ <Link prefetch={false} className={textLink} href="/image-credits#image-45">เครดิตภาพ ZEEKR X</Link> <Link prefetch={false} className={textLink} href="/">EVSELECTS</Link> ยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน และไม่ได้ยืนยันว่าเป็นตัวแทนจำหน่ายของทั้งสองแบรนด์</p>
           </div>
         </div>
       </section>
@@ -358,13 +370,13 @@ export default function StorefrontPage() {
             <p className="mb-2 text-xs font-semibold text-lime-800">เรื่องที่อยากชวนอ่าน</p>
             <h2 className="font-bold">รีวิวรถ EV และเรื่องแต่งรถที่ควรรู้</h2>
           </div>
-          <Link href="/articles" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold">
+          <Link prefetch={false} href="/articles" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold">
             บทความทั้งหมด <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {featuredArticles.map((article) => (
-            <Link
+            <Link prefetch={false}
               key={article.href}
               href={article.href}
               className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition hover:border-lime-500"
@@ -404,7 +416,7 @@ export default function StorefrontPage() {
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {topicLinks.map(({ title, description, href, icon: Icon }) => (
-            <Link
+            <Link prefetch={false}
               key={title}
               href={href}
               className="group rounded-3xl border border-slate-200 p-6 transition-colors hover:border-lime-500"
@@ -436,12 +448,12 @@ export default function StorefrontPage() {
               <ol className="space-y-4">
                 <li className="rounded-3xl border border-slate-200 bg-white p-6">
                   <h3 className="font-bold">1. เทียบให้ตรงรุ่น ตรงขนาด</h3>
-                  <p className="mt-3 leading-relaxed text-slate-600">ขอชื่อรุ่นยาง ขนาด พิกัดรับน้ำหนัก และพิกัดความเร็วให้ครบ แล้วตรวจตามคู่มือรถ อย่าดูแค่ยี่ห้อหรือขอบล้อ ถ้ายังไม่แน่ใจว่าจะเลือกยางแนวไหน อ่าน <Link className={textLink} href="/articles/ev-tyre-and-coilover-selection-guide">ความต่างของยาง EV กับยาง Performance</Link> ก่อนขอราคา</p>
+                  <p className="mt-3 leading-relaxed text-slate-600">ขอชื่อรุ่นยาง ขนาด พิกัดรับน้ำหนัก และพิกัดความเร็วให้ครบ แล้วตรวจตามคู่มือรถ อย่าดูแค่ยี่ห้อหรือขอบล้อ ถ้ายังไม่แน่ใจว่าจะเลือกยางแนวไหน อ่าน <Link prefetch={false} className={textLink} href="/articles/ev-tyre-and-coilover-selection-guide">ความต่างของยาง EV กับยาง Performance</Link> ก่อนขอราคา</p>
                   <p className="mt-3 text-sm leading-relaxed"><a className={textLink} href="https://www.michelin.co.th/auto/advice/tyre-basics/tyre-markings-explained" target="_blank" rel="noopener noreferrer">วิธีอ่านขนาดและรหัสบนแก้มยางจาก Michelin<span className="sr-only"> (เปิดแท็บใหม่)</span></a></p>
                 </li>
                 <li className="rounded-3xl border border-slate-200 bg-white p-6">
                   <h3 className="font-bold">2. ราคานี้ต่อเส้น หรือรวมทั้งชุด?</h3>
-                  <p className="mt-3 leading-relaxed text-slate-600">ให้ร้านระบุจำนวนเส้น ภาษี ค่าใส่ ถ่วงล้อ และค่าอุปกรณ์เพิ่มเติม ถามว่ารวมตั้งศูนย์หรือคิดแยก หากยางสึกไม่เท่ากัน ลองอ่านเรื่อง <Link className={textLink} href="/articles/ev-camber-adjustment-wheel-alignment-guide">ยางกินในกับการตั้งศูนย์ล้อ</Link> และให้ร้านตรวจหาสาเหตุก่อนใส่ชุดใหม่</p>
+                  <p className="mt-3 leading-relaxed text-slate-600">ให้ร้านระบุจำนวนเส้น ภาษี ค่าใส่ ถ่วงล้อ และค่าอุปกรณ์เพิ่มเติม ถามว่ารวมตั้งศูนย์หรือคิดแยก หากยางสึกไม่เท่ากัน ลองอ่านเรื่อง <Link prefetch={false} className={textLink} href="/articles/ev-camber-adjustment-wheel-alignment-guide">ยางกินในกับการตั้งศูนย์ล้อ</Link> และให้ร้านตรวจหาสาเหตุก่อนใส่ชุดใหม่</p>
                 </li>
                 <li className="rounded-3xl border border-slate-200 bg-white p-6">
                   <h3 className="font-bold">3. เช็กเงื่อนไขหลังจ่ายด้วย</h3>
@@ -473,17 +485,17 @@ export default function StorefrontPage() {
             <li className="rounded-3xl border border-slate-200 bg-white p-6">
               <span className="font-mono text-xs font-semibold text-lime-800">02 / อยากเปลี่ยนอะไร</span>
               <h3 className="mt-3 font-bold">อยากนุ่มขึ้น เงียบขึ้น หรือขับกระชับขึ้น?</h3>
-              <p className="mt-3 leading-relaxed text-slate-600">เล่าอาการให้ร้านฟังพร้อมบอกว่าเกิดตอนไหน ถ้ายังแยกไม่ออกว่าเด้งหรือกระแทก ลองอ่าน <Link className={textLink} href="/articles/ev-damper-tuning-bump-rebound-guide#symptoms">วิธีเช็กอาการก่อนเปลี่ยนโช้ค</Link> จะช่วยให้คุยกันรู้เรื่องขึ้น</p>
+              <p className="mt-3 leading-relaxed text-slate-600">เล่าอาการให้ร้านฟังพร้อมบอกว่าเกิดตอนไหน ถ้ายังแยกไม่ออกว่าเด้งหรือกระแทก ลองอ่าน <Link prefetch={false} className={textLink} href="/articles/ev-damper-tuning-bump-rebound-guide#symptoms">วิธีเช็กอาการก่อนเปลี่ยนโช้ค</Link> จะช่วยให้คุยกันรู้เรื่องขึ้น</p>
             </li>
             <li className="rounded-3xl border border-slate-200 bg-white p-6">
               <span className="font-mono text-xs font-semibold text-lime-800">03 / ขับที่ไหน</span>
               <h3 className="mt-3 font-bold">ถนนที่ขับทุกวันสำคัญกว่ารถในรีวิว</h3>
-              <p className="mt-3 leading-relaxed text-slate-600">ในเมืองมีรอยต่อสะพาน ขึ้นลงลานจอดบ่อย หรือพาครอบครัวเดินทางไกล? บอกทั้งเส้นทางและน้ำหนักบรรทุกที่ใช้จริง อ่านเรื่อง <Link className={textLink} href="/articles/optimizing-ev-suspension-thai-roads">เลือกช่วงล่างให้เหมาะกับถนนไทย</Link> ก่อนตัดสินใจตามเซ็ตอัปของรถลงสนาม</p>
+              <p className="mt-3 leading-relaxed text-slate-600">ในเมืองมีรอยต่อสะพาน ขึ้นลงลานจอดบ่อย หรือพาครอบครัวเดินทางไกล? บอกทั้งเส้นทางและน้ำหนักบรรทุกที่ใช้จริง อ่านเรื่อง <Link prefetch={false} className={textLink} href="/articles/optimizing-ev-suspension-thai-roads">เลือกช่วงล่างให้เหมาะกับถนนไทย</Link> ก่อนตัดสินใจตามเซ็ตอัปของรถลงสนาม</p>
             </li>
             <li className="rounded-3xl border border-slate-200 bg-white p-6">
               <span className="font-mono text-xs font-semibold text-lime-800">04 / จ่ายแล้วได้อะไร</span>
               <h3 className="mt-3 font-bold">ถามราคารวม ไม่ใช่แค่ค่าของ</h3>
-              <p className="mt-3 leading-relaxed text-slate-600">ขอรายละเอียดค่าแรง อุปกรณ์ที่ต้องใช้เพิ่ม การรับประกัน และงานตรวจหลังติดตั้ง ถ้าเปลี่ยนความสูงรถหรือชิ้นส่วนช่วงล่าง คุยเรื่อง <Link className={textLink} href="/articles/ev-camber-adjustment-wheel-alignment-guide">ค่าตั้งศูนย์ก่อน–หลังติดตั้ง</Link> ให้ชัดด้วย</p>
+              <p className="mt-3 leading-relaxed text-slate-600">ขอรายละเอียดค่าแรง อุปกรณ์ที่ต้องใช้เพิ่ม การรับประกัน และงานตรวจหลังติดตั้ง ถ้าเปลี่ยนความสูงรถหรือชิ้นส่วนช่วงล่าง คุยเรื่อง <Link prefetch={false} className={textLink} href="/articles/ev-camber-adjustment-wheel-alignment-guide">ค่าตั้งศูนย์ก่อน–หลังติดตั้ง</Link> ให้ชัดด้วย</p>
             </li>
           </ol>
         </div>
@@ -515,10 +527,10 @@ export default function StorefrontPage() {
             <ShieldCheck className="mb-5 h-7 w-7 text-lime-800" />
             <h2 className="font-bold">อ่านแล้วรู้ว่าข้อมูลมาจากไหน</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              บทความของ <Link href="/" className={textLink}>EVSELECTS</Link> มีทั้งข้อมูลจากผู้ผลิตและคำอธิบายหลักการทำงาน
+              บทความของ <Link prefetch={false} href="/" className={textLink}>EVSELECTS</Link> มีทั้งข้อมูลจากผู้ผลิตและคำอธิบายหลักการทำงาน
               อ่านแหล่งอ้างอิงและข้อจำกัดประกอบด้วย โดยเฉพาะสเปกรถและการใส่อุปกรณ์ให้ตรงรุ่น
             </p>
-            <Link href="/editorial-policy" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">
+            <Link prefetch={false} href="/editorial-policy" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">
               อ่านนโยบายบทความ <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -529,7 +541,7 @@ export default function StorefrontPage() {
               บอกรุ่นรถและสิ่งที่อยากปรับให้ดีขึ้น เราจะใช้คำถามจากผู้ใช้รถจริง
               เป็นแนวทางเลือกหัวข้อที่มีประโยชน์ต่อไป
             </p>
-            <Link href="/contact" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">
+            <Link prefetch={false} href="/contact" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-lime-800">
               ติดต่อทีมงาน <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

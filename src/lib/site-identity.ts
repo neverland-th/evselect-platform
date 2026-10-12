@@ -1,12 +1,12 @@
 import { siteOrigin } from '@/lib/public-site-routes';
 
 // Public editorial identity; this is not a legal name or a storefront claim.
-export const siteName = 'EVSELECTS.COM';
+export const siteName = 'EVSELECTS';
 export const editorialOrganization = {
   '@type': 'Organization',
   '@id': `${siteOrigin}/#organization`,
   name: siteName,
-  alternateName: ['EVSELECT', 'EVSELECTS'],
+  alternateName: ['EVSELECTS.COM'],
   url: `${siteOrigin}/`,
 } as const;
 
@@ -21,6 +21,7 @@ export const siteIdentitySchema = {
       '@type': 'WebSite',
       '@id': `${siteOrigin}/#website`,
       name: siteName,
+      alternateName: 'EVSELECTS.COM',
       url: `${siteOrigin}/`,
       inLanguage: 'th-TH',
       publisher: { '@id': editorialOrganization['@id'] },

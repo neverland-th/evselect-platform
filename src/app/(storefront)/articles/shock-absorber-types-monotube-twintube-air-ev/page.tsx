@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
@@ -14,12 +15,12 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
 
-export const metadata: Metadata = {
-  title: `${article.title} | EVSELECT`, description: article.description,
+export const metadata: Metadata = withPublicMetadata("/articles/shock-absorber-types-monotube-twintube-air-ev", {
+  title: `${article.title} | EVSELECTS`, description: article.description,
   alternates: { canonical: article.path },
-  openGraph: { title: article.title, description: article.description, url: `https://evselects.com${article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1920, height: 1440, alt: article.imageAlt }] },
+  openGraph: { title: article.title, description: article.description, url: `https://evselects.com${article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1920, height: 1440, alt: article.imageAlt }] },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
-};
+});
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
   image: `https://evselects.com${article.image}`, datePublished: article.publishedAt, dateModified: article.updatedAt,
@@ -149,7 +150,7 @@ export default function ShockAbsorberTypesGuidePage() {
         </ul>
       </section>
       <aside className="space-y-3 rounded-2xl bg-slate-900 p-5 text-white sm:p-7">
-        <p className="font-bold"><Link href="/" className="text-lime-300 underline underline-offset-4 hover:text-lime-100">EVSELECT</Link> · เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม</p>
+        <p className="font-bold"><Link href="/" className="text-lime-300 underline underline-offset-4 hover:text-lime-100">EVSELECTS</Link> · เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม</p>
         <p className="text-sm leading-6 text-slate-200">ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน</p>
         <Link href="/articles?category=suspension" className="inline-flex items-center gap-2 font-semibold text-lime-300 underline underline-offset-4">เลือกอ่านคู่มือช่วงล่างต่อ<ArrowRight size={18} /></Link>
       </aside>

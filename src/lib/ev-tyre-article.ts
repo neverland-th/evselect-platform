@@ -6,7 +6,7 @@ export const evTyreArticle = {
   updatedAt: '2026-09-29T08:00:00+07:00',
   readTime: '12 นาที',
   image: '/images/editorial/ev-tyres/ev-tyre-cover-desktop.png',
-  imageAlt: 'ภาพปก EVSELECT ยางรถ EV ต่างจากยางทั่วไปยังไง พร้อมภาพประกอบรถไฟฟ้าและยาง',
+  imageAlt: 'ภาพปก EVSELECTS ยางรถ EV ต่างจากยางทั่วไปยังไง พร้อมภาพประกอบรถไฟฟ้าและยาง',
   imageWidth: 1731,
   imageHeight: 909,
   mobileImage: '/images/editorial/ev-tyres/ev-tyre-cover.png',

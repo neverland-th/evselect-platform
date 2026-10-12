@@ -1,12 +1,13 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import Link from 'next/link';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
-export const metadata = {
+export const metadata = withPublicMetadata("/terms", {
   alternates: { canonical: '/terms' },
   robots: { index: false, follow: true },
-  title: 'ข้อตกลงและเงื่อนไข | EVSELECT',
-  description: 'สถานะการจัดทำข้อตกลงและเงื่อนไข EVSELECT และข้อมูลช่วงเตรียมเปิดตัวสินค้า',
-};
+  title: 'ข้อตกลงและเงื่อนไข | EVSELECTS',
+  description: 'สถานะการจัดทำข้อตกลงและเงื่อนไข EVSELECTS และข้อมูลช่วงเตรียมเปิดตัวสินค้า',
+});
 
 export default function TermsPage() {
   return <InformationPage title="ข้อตกลงและเงื่อนไข" intro="รายละเอียดข้อตกลงและเงื่อนไขฉบับเต็มอยู่ระหว่างจัดทำและตรวจสอบ หน้านี้ยังไม่ใช่เงื่อนไขการซื้อขาย">

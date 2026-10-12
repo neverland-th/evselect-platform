@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization, siteName } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
@@ -8,17 +9,17 @@ import ShareButton from '@/components/ShareButton';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import { teslaModel3 as article, teslaModel3Trims as trims } from '@/lib/tesla-model-3';
 
-export const metadata: Metadata = {
-  title: `${article.title} | EVSELECT`, description: article.description,
+export const metadata: Metadata = withPublicMetadata("/articles/tesla-model-3-highland-review", {
+  title: `${article.title} | EVSELECTS`, description: article.description,
   alternates: { canonical: article.url },
   openGraph: {
     title: article.title, description: article.description, url: article.url,
-    siteName: 'EVSELECT Thailand', locale: 'th_TH', type: 'article',
+    siteName: 'EVSELECTS Thailand', locale: 'th_TH', type: 'article',
     publishedTime: '2026-08-25T08:00:00+07:00', modifiedTime: article.updatedAt,
     images: [{ url: article.image, width: 1200, height: 675, alt: 'ภาพประกอบ Tesla Model 3 Highland' }],
   },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
-};
+});
 
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title,

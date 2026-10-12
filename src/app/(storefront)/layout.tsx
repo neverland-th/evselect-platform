@@ -25,7 +25,7 @@ export default function StorefrontLayout({
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
           </span>
           <span className="text-slate-200 leading-tight">
-            <strong className="text-lime-400 font-semibold"><Link href="/" prefetch={false} className="underline underline-offset-4">EVSELECT</Link> กำลังเตรียมเปิดตัวสินค้า</strong>
+            <strong className="text-lime-400 font-semibold"><Link href="/" prefetch={false} className="underline underline-offset-4">EVSELECTS</Link> กำลังเตรียมเปิดตัวสินค้า</strong>
             <span className="hidden sm:inline"> — ตอนนี้ยังไม่มีสินค้าพร้อมจำหน่าย</span>
           </span>
         </div>
@@ -45,8 +45,8 @@ export default function StorefrontLayout({
             {/* Mobile Logo */}
             <div className="legacy-wordmark xl:hidden relative w-24 sm:w-36 h-9 sm:h-10 overflow-hidden rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500">
               <Image
-                src="/logo-brand.png"
-                alt="EVSELECT"
+                src="/logo-evselects.webp"
+                alt="EVSELECTS"
                 width={380}
                 height={190}
                 className="object-contain w-full h-full"
@@ -59,8 +59,8 @@ export default function StorefrontLayout({
             {/* Desktop / PC Logo */}
             <div className="legacy-wordmark hidden xl:flex relative w-40 lg:w-44 h-12 lg:h-14 overflow-hidden rounded-xl bg-white p-1.5 items-center justify-center border border-slate-200 shadow-xs transition-all duration-300 group-hover:border-lime-500 group-hover:shadow-md group-hover:scale-[1.02]">
               <Image
-                src="/logo-brand.png"
-                alt="EVSELECT - DRIVE BETTER. SELECT SMARTER."
+                src="/logo-evselects.webp"
+                alt="EVSELECTS - DRIVE BETTER. SELECT SMARTER."
                 width={380}
                 height={190}
                 className="object-contain w-full h-full"
@@ -75,7 +75,7 @@ export default function StorefrontLayout({
             <Link href="/#launch" prefetch={false} className="hover:text-lime-600 transition-colors">
               เตรียมเปิดตัว
             </Link>
-            <Link href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
+            <Link prefetch={false} href="/articles" className="hover:text-lime-600 transition-colors flex items-center gap-1.5 font-semibold text-slate-800">
               <Sparkles className="w-4 h-4 text-lime-600" />
               บทความ EV
             </Link>
@@ -119,10 +119,10 @@ export default function StorefrontLayout({
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {/* Brand column */}
             <div className="md:col-span-1 space-y-4">
-              <Link href="/" className="relative w-48 h-14 overflow-hidden rounded-xl bg-white p-1.5 flex items-center justify-center border border-zinc-800 shadow-sm">
+              <Link prefetch={false} href="/" className="relative w-48 h-14 overflow-hidden rounded-xl bg-white p-1.5 flex items-center justify-center border border-zinc-800 shadow-sm">
                 <Image
-                  src="/logo-brand.png"
-                  alt="EVSELECT"
+                  src="/logo-evselects.webp"
+                  alt="EVSELECTS"
                   width={380}
                   height={190}
                   sizes="178px"
@@ -142,11 +142,11 @@ export default function StorefrontLayout({
             <div className="space-y-3">
               <h2 className="text-sm font-semibold text-white tracking-wider uppercase">รุ่นรถที่มีบทความ</h2>
               <ul className="text-xs space-y-2 text-zinc-400">
-                <li><Link href="/articles/byd-atto-3-review" className="underline underline-offset-4 hover:text-lime-400">BYD Atto 3</Link> / <Link href="/articles/byd-seal-review" className="underline underline-offset-4 hover:text-lime-400">Seal</Link></li>
-                <li><Link href="/articles/tesla-model-3-highland-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model 3 Highland</Link></li>
-                <li><Link href="/articles/tesla-model-y-l-premium-6-seater-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model Y L</Link></li>
-                <li><Link href="/articles/zeekr-x-review" className="underline underline-offset-4 hover:text-lime-400">ZEEKR X</Link> / <Link href="/articles/zeekr-009-review" className="underline underline-offset-4 hover:text-lime-400">009</Link> / <Link href="/articles/zeekr-7x-2026-review" className="underline underline-offset-4 hover:text-lime-400">7X</Link></li>
-                <li><Link href="/articles/deepal-s05-review" className="underline underline-offset-4 hover:text-lime-400">Deepal S05</Link> / <Link href="/articles/deepal-s07-review" className="underline underline-offset-4 hover:text-lime-400">S07</Link> / <Link href="/articles/geely-ex2-review" className="underline underline-offset-4 hover:text-lime-400">Geely EX2</Link></li>
+                <li><Link prefetch={false} href="/articles/byd-atto-3-review" className="underline underline-offset-4 hover:text-lime-400">BYD Atto 3</Link> / <Link prefetch={false} href="/articles/byd-seal-review" className="underline underline-offset-4 hover:text-lime-400">Seal</Link></li>
+                <li><Link prefetch={false} href="/articles/tesla-model-3-highland-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model 3 Highland</Link></li>
+                <li><Link prefetch={false} href="/articles/tesla-model-y-l-premium-6-seater-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model Y L</Link></li>
+                <li><Link prefetch={false} href="/articles/zeekr-x-review" className="underline underline-offset-4 hover:text-lime-400">ZEEKR X</Link> / <Link prefetch={false} href="/articles/zeekr-009-review" className="underline underline-offset-4 hover:text-lime-400">009</Link> / <Link prefetch={false} href="/articles/zeekr-7x-2026-review" className="underline underline-offset-4 hover:text-lime-400">7X</Link></li>
+                <li><Link prefetch={false} href="/articles/deepal-s05-review" className="underline underline-offset-4 hover:text-lime-400">Deepal S05</Link> / <Link prefetch={false} href="/articles/deepal-s07-review" className="underline underline-offset-4 hover:text-lime-400">S07</Link> / <Link prefetch={false} href="/articles/geely-ex2-review" className="underline underline-offset-4 hover:text-lime-400">Geely EX2</Link></li>
               </ul>
             </div>
 
@@ -155,7 +155,7 @@ export default function StorefrontLayout({
               <h2 className="text-sm font-semibold text-white tracking-wider uppercase">ติดตามการเปิดตัวและติดต่อ</h2>
               <ul className="text-xs space-y-1 text-zinc-400">
                 <li>
-                  <Link href="/#launch" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">
+                  <Link prefetch={false} href="/#launch" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">
                     <Rocket className="w-3.5 h-3.5 text-lime-400 shrink-0" />
                     <span>สถานะการเปิดตัวสินค้า</span>
                   </Link>
@@ -166,32 +166,32 @@ export default function StorefrontLayout({
                     <span>แชทผ่าน Facebook</span>
                   </a>
                 </li>
-                <li><Link href="/contact" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">ติดต่อทีมงาน</Link></li>
-                <li><Link href="/privacy" className="min-h-[44px] py-2.5 flex items-center hover:text-lime-400 transition-colors">นโยบายความเป็นส่วนตัว</Link></li>
+                <li><Link prefetch={false} href="/contact" className="min-h-[44px] py-2.5 flex items-center gap-2 hover:text-lime-400 transition-colors">ติดต่อทีมงาน</Link></li>
+                <li><Link prefetch={false} href="/privacy" className="min-h-[44px] py-2.5 flex items-center hover:text-lime-400 transition-colors">นโยบายความเป็นส่วนตัว</Link></li>
                 <li><CookieSettingsButton className="min-h-[44px] py-2.5 text-left hover:text-lime-400 transition-colors" /></li>
               </ul>
             </div>
 
             {/* Quality Commitment */}
             <div className="space-y-3">
-              <h2 className="text-sm font-semibold text-white tracking-wider uppercase">แนวทาง <Link href="/" className="underline underline-offset-4">EVSELECT</Link></h2>
+              <h2 className="text-sm font-semibold text-white tracking-wider uppercase">แนวทาง <Link prefetch={false} href="/" className="underline underline-offset-4">EVSELECTS</Link></h2>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 เราแยกข้อมูลจากผู้ผลิต หลักการทั่วไป และสิ่งที่ยังต้องตรวจสอบ เพื่อให้ผู้อ่านเห็นข้อจำกัดของข้อมูลก่อนนำไปใช้
               </p>
               <div className="pt-2">
-                <Link
+                <Link prefetch={false}
                   href="/editorial-policy"
                   className="min-h-[44px] inline-flex items-center justify-center gap-1.5 text-xs text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 px-3 py-2 rounded"
                 >
                   <span>อ่านนโยบายบทความ</span>
                 </Link>
-                <Link href="/image-credits" className="ml-3 min-h-[44px] inline-flex items-center text-xs text-zinc-400 underline underline-offset-4 hover:text-white">เครดิตภาพ</Link>
+                <Link prefetch={false} href="/image-credits" className="ml-3 min-h-[44px] inline-flex items-center text-xs text-zinc-400 underline underline-offset-4 hover:text-white">เครดิตภาพ</Link>
               </div>
             </div>
           </div>
 
           <div className="mt-12 pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-            <p>© {new Date().getFullYear()} <Link href="/" className="underline underline-offset-4 hover:text-white">EVSELECT</Link> Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
+            <p>© {new Date().getFullYear()} <Link prefetch={false} href="/" className="underline underline-offset-4 hover:text-white">EVSELECTS</Link> Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
             <p className="font-mono text-[11px] text-zinc-500">
               DRIVE BETTER. SELECT SMARTER.™
             </p>

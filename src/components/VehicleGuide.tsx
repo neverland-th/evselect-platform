@@ -132,7 +132,7 @@ export default function VehicleGuide() {
             <article key={slide.slug} className={styles.slide} role="group" aria-roledescription="สไลด์" aria-label={`${index + 1} จาก ${slides.length}: ${slide.brand} ${slide.model}`}>
               <div className={styles.visual}>
                 <Image src={slide.image} alt={slide.alt} fill sizes="(max-width: 959px) 92vw, (max-width: 1279px) 60vw, 760px" className={styles.image} />
-                <span className={styles.imageLabel}>จากคลังบทความ EVSELECT</span>
+                <span className={styles.imageLabel}>จากคลังบทความ EVSELECTS</span>
               </div>
               <div className={styles.copy}>
                 <div>

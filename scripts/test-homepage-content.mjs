@@ -143,7 +143,7 @@ test('EV upgrade guide replaces the cartoon with credited photos and keeps reada
   assert.ok(checklist.classList.contains('text-slate-900'), 'Light checklist explicitly uses dark text');
   const links = [...map.querySelectorAll('ol a')];
   assert.deepEqual(links.map(link => link.getAttribute('href')), [
-    '#tesla-accessories',
+    '#tesla-interior-guide',
     '/articles/ev-tyre-and-coilover-selection-guide',
     '/articles/ev-damper-tuning-bump-rebound-guide#symptoms',
   ]);

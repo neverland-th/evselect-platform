@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
@@ -11,15 +12,15 @@ import DamperExplorer, { DamperScenarios } from '@/components/articles/DamperExp
 import DamperPhoto from '@/components/articles/DamperPhoto';
 import styles from '@/components/articles/DamperGuide.module.css';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPublicMetadata("/articles/ev-damper-tuning-bump-rebound-guide", {
   alternates: { canonical: damperArticle.path },
-  title: `${damperArticle.title} เข้าใจโช้คสตรัทปรับเกลียว | EVSELECT`,
+  title: `${damperArticle.title} เข้าใจโช้คสตรัทปรับเกลียว | EVSELECTS`,
   description: damperArticle.description,
   openGraph: {
     title: damperArticle.title,
     description: damperArticle.description,
     url: damperArticle.url,
-    siteName: 'EVSELECT Thailand',
+    siteName: 'EVSELECTS Thailand',
     locale: 'th_TH',
     type: 'article',
     publishedTime: damperArticle.publishedAt,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     description: damperArticle.description,
     images: [damperArticle.coverUrl],
   },
-};
+});
 
 const sources = {
   kwComfort: { title: 'KW — Street Comfort: จุดประสงค์ของกลุ่มผลิตภัณฑ์', url: 'https://www.kwsuspensions.com/uk/products/street-comfort' },
@@ -152,7 +153,7 @@ export default function EVDamperTuningGuidePage() {
     <article className="mx-auto max-w-5xl bg-white px-4 py-10 text-slate-900 sm:px-6 md:py-16 lg:px-8">
       <ImageMetadata pagePath="/articles/ev-damper-tuning-bump-rebound-guide" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ EVSELECT', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: damperArticle.title, item: damperArticle.url }] }).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'บทความ EVSELECTS', item: 'https://evselects.com/articles' }, { '@type': 'ListItem', position: 2, name: damperArticle.title, item: damperArticle.url }] }).replace(/</g, '\\u003c') }} />
       <nav aria-label="เส้นทางบทความ" className="mb-8">
         <Link href="/articles" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium text-slate-600 hover:text-lime-800">
           <ArrowLeft className="h-4 w-4" aria-hidden="true" /> กลับไปหน้ารวมบทความ

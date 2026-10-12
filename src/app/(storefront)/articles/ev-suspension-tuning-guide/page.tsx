@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
@@ -23,12 +24,12 @@ const sources = {
   tesla: 'https://www.tesla.com/ownersmanual/model3/th_th/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html',
 };
 
-export const metadata: Metadata = {
-  title: `${title} | EVSELECT`, description,
+export const metadata: Metadata = withPublicMetadata("/articles/ev-suspension-tuning-guide", {
+  title: `${title} | EVSELECTS`, description,
   alternates: { canonical: path },
-  openGraph: { title, description, url: `https://evselects.com${path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', images: [{ url: hero, width: 1280, height: 640, alt: 'Tesla Model 3 Performance ปี 2024 สีเทา' }] },
+  openGraph: { title, description, url: `https://evselects.com${path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS', images: [{ url: hero, width: 1280, height: 640, alt: 'Tesla Model 3 Performance ปี 2024 สีเทา' }] },
   twitter: { card: 'summary_large_image', title, description, images: [hero] },
-};
+});
 
 function Section({ id, title: heading, children }: { id: string; title: string; children: ReactNode }) {
   return <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-28 space-y-5">

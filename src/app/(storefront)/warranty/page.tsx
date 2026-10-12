@@ -1,12 +1,13 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import Link from 'next/link';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
-export const metadata = {
+export const metadata = withPublicMetadata("/warranty", {
   alternates: { canonical: '/warranty' },
   robots: { index: false, follow: true },
-  title: 'นโยบายการรับประกัน | EVSELECT',
-  description: 'สถานะข้อมูลการรับประกันในช่วงที่ EVSELECT ยังไม่เปิดจำหน่ายสินค้า',
-};
+  title: 'นโยบายการรับประกัน | EVSELECTS',
+  description: 'สถานะข้อมูลการรับประกันในช่วงที่ EVSELECTS ยังไม่เปิดจำหน่ายสินค้า',
+});
 
 export default function WarrantyPage() {
   return <InformationPage title="ข้อมูลการรับประกัน" intro="ขณะนี้ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน จึงยังไม่มีเงื่อนไขรับประกันสินค้าที่เปิดขายบนเว็บไซต์นี้">

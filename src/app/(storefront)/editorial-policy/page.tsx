@@ -1,13 +1,14 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import Link from 'next/link';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
-export const metadata = {
+export const metadata = withPublicMetadata("/editorial-policy", {
   alternates: { canonical: '/editorial-policy' },
   robots: { index: true, follow: true },
-  title: 'นโยบายบรรณาธิการ | EVSELECT',
-  description: 'แนวทางจัดทำบทความ EVSELECT: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข',
-};
+  title: 'นโยบายบรรณาธิการ | EVSELECTS',
+  description: 'แนวทางจัดทำบทความ EVSELECTS: ระบุแหล่งข้อมูล แยกสเปกจากประสบการณ์ เปิดเผยข้อจำกัดของภาพและการทดสอบ พร้อมช่องทางแจ้งแก้ไข',
+});
 
 export default function EditorialPolicyPage() {
   return <InformationPage title="แนวทางจัดทำบทความ" intro={<>หลักการของ <BrandHomeLink /> คือให้ผู้อ่านเห็นทั้งข้อมูลที่นำไปใช้ตัดสินใจได้ และสิ่งที่ยังต้องตรวจสอบ ข้อต่อไปนี้เป็นมาตรฐานที่ใช้ในการจัดทำและทบทวนเนื้อหา</>}>

@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
@@ -12,13 +13,13 @@ import BrakeBrandCompare from '@/components/articles/BrakeBrandCompare';
 import BrakeKitReferences from '@/components/articles/BrakeKitReferences';
 import styles from '@/components/articles/BrakeGuide.module.css';
 
-export const metadata: Metadata = {
-  title: `${brakeArticle.title} | EVSELECT`,
+export const metadata: Metadata = withPublicMetadata("/articles/ev-carbon-ceramic-brakes-guide", {
+  title: `${brakeArticle.title} | EVSELECTS`,
   description: brakeArticle.description,
   alternates: { canonical: brakeArticle.path },
-  openGraph: { title: brakeArticle.title, description: brakeArticle.description, url: brakeArticle.url, siteName: 'EVSELECT Thailand', locale: 'th_TH', type: 'article', publishedTime: brakeArticle.publishedAt, modifiedTime: brakeArticle.updatedAt, images: [{ url: brakeArticle.cover, width: brakeArticle.coverWidth, height: brakeArticle.coverHeight, alt: brakeArticle.coverAlt }] },
+  openGraph: { title: brakeArticle.title, description: brakeArticle.description, url: brakeArticle.url, siteName: 'EVSELECTS Thailand', locale: 'th_TH', type: 'article', publishedTime: brakeArticle.publishedAt, modifiedTime: brakeArticle.updatedAt, images: [{ url: brakeArticle.cover, width: brakeArticle.coverWidth, height: brakeArticle.coverHeight, alt: brakeArticle.coverAlt }] },
   twitter: { card: 'summary_large_image', title: brakeArticle.title, description: brakeArticle.description, images: [brakeArticle.cover] },
-};
+});
 
 function Ref({ to, children }: { to: keyof typeof brakeSources; children: ReactNode }) {
   return <a href={brakeSources[to].url} target="_blank" rel="noopener noreferrer" className="font-medium text-lime-800 underline decoration-lime-300 underline-offset-4 hover:text-lime-950">{children}</a>;

@@ -19,10 +19,10 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   const { id } = await params;
   const product = await prisma.product.findUnique({ where: { id } });
 
-  if (!product) return { title: 'ไม่พบสินค้า | EVSELECT' };
+  if (!product) return { title: 'ไม่พบสินค้า | EVSELECTS' };
 
   return {
-    title: `${product.title} | EVSELECT`,
+    title: `${product.title} | EVSELECTS`,
     description: product.description || `ดูรายละเอียดและข้อมูลรุ่นรถสำหรับ ${product.title}`,
   };
 }
@@ -89,7 +89,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="mt-8 rounded-2xl border border-lime-200 bg-lime-50 p-5">
               <p className="inline-flex items-center gap-2 text-sm font-semibold text-lime-800"><Rocket className="h-4 w-4" /> สถานะ Pre-launch</p>
               <p className="mt-2 text-lg font-bold text-slate-950">สินค้านี้ยังไม่เปิดจำหน่าย</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">EVSELECT จะเปิดรายละเอียดราคา รุ่นรถที่รองรับ และข้อจำกัด เมื่อข้อมูลพร้อมให้คุณตัดสินใจ</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">EVSELECTS จะเปิดรายละเอียดราคา รุ่นรถที่รองรับ และข้อจำกัด เมื่อข้อมูลพร้อมให้คุณตัดสินใจ</p>
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -126,7 +126,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
               {verifiedFitments.length === 0 && (
                 <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
-                  ยังไม่มีข้อมูลรุ่นรถที่พร้อมแสดงในหน้านี้ คุณส่งรุ่น ปี และรุ่นย่อยให้ทีม EVSELECT ใช้ประกอบการเตรียมเปิดตัวได้
+                  ยังไม่มีข้อมูลรุ่นรถที่พร้อมแสดงในหน้านี้ คุณส่งรุ่น ปี และรุ่นย่อยให้ทีม EVSELECTS ใช้ประกอบการเตรียมเปิดตัวได้
                 </div>
               )}
             </section>

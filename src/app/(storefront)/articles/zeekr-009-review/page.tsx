@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Zeekr009CabinContent from '@/components/Zeekr009CabinContent';
@@ -15,12 +16,12 @@ const headingStyle = 'scroll-mt-28 text-xl font-bold leading-snug text-slate-950
 function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle + ' relative'}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
-export const metadata: Metadata = {
-  title: article.title + ' | EVSELECT', description: article.description,
+export const metadata: Metadata = withPublicMetadata("/articles/zeekr-009-review", {
+  title: article.title + ' | EVSELECTS', description: article.description,
   alternates: { canonical: article.path },
-  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1280, height: 960, alt: article.imageAlt }] },
+  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1280, height: 960, alt: article.imageAlt }] },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
-};
+});
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
   image: [article.image, ...Object.values(photos).map(photo => photo.src)].map(src => 'https://evselects.com' + src), datePublished: article.publishedAt, dateModified: article.updatedAt,

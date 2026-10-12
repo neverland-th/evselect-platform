@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
@@ -23,8 +24,8 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
 
-export const metadata: Metadata = {
-  title: `${batteryArticle.title} | EVSELECT`,
+export const metadata: Metadata = withPublicMetadata("/articles/ev-battery-care", {
+  title: `${batteryArticle.title} | EVSELECTS`,
   description: batteryArticle.description,
   alternates: { canonical: batteryArticle.path },
   openGraph: {
@@ -33,13 +34,13 @@ export const metadata: Metadata = {
     url: `https://evselects.com${batteryArticle.path}`,
     type: 'article',
     locale: 'th_TH',
-    siteName: 'EVSELECT',
+    siteName: 'EVSELECTS',
     publishedTime: batteryArticle.publishedAt,
     modifiedTime: batteryArticle.updatedAt,
     images: [{ url: batteryArticle.image, width: 1920, height: 1198, alt: batteryArticle.imageAlt }],
   },
   twitter: { card: 'summary_large_image', title: batteryArticle.title, description: batteryArticle.description, images: [batteryArticle.image] },
-};
+});
 
 const jsonLd = {
   '@context': 'https://schema.org',

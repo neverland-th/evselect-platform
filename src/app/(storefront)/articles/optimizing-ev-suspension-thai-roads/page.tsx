@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
@@ -14,12 +15,12 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
 
-export const metadata: Metadata = {
-  title: article.title + ' | EVSELECT', description: article.description,
+export const metadata: Metadata = withPublicMetadata("/articles/optimizing-ev-suspension-thai-roads", {
+  title: article.title + ' | EVSELECTS', description: article.description,
   alternates: { canonical: article.path },
-  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1280, height: 640, alt: article.imageAlt }] },
+  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1280, height: 640, alt: article.imageAlt }] },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
-};
+});
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
   image: 'https://evselects.com' + article.image, datePublished: article.publishedAt, dateModified: article.updatedAt,
@@ -133,7 +134,7 @@ export default function ThaiRoadSuspensionGuidePage() {
       </section>
       <aside className="rounded-2xl bg-slate-950 p-6 text-slate-200">
         <p className="font-bold text-white">เปิดความรู้ก่อน เปิดขายเมื่อข้อมูลพร้อม</p>
-        <p className="mt-2 text-sm leading-7"><Link href="/" className="font-semibold text-lime-300 underline underline-offset-4">EVSELECT</Link> ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน อ่าน <Link href="/articles" className="font-semibold text-lime-300 underline underline-offset-4">บทความและคู่มือรถ EV</Link> เพื่อเตรียมข้อมูลก่อนเลือกอุปกรณ์ได้ครับ</p>
+        <p className="mt-2 text-sm leading-7"><Link href="/" className="font-semibold text-lime-300 underline underline-offset-4">EVSELECTS</Link> ยังไม่มีสินค้าพร้อมจำหน่าย และยังไม่เปิดรับคำสั่งซื้อหรือชำระเงิน อ่าน <Link href="/articles" className="font-semibold text-lime-300 underline underline-offset-4">บทความและคู่มือรถ EV</Link> เพื่อเตรียมข้อมูลก่อนเลือกอุปกรณ์ได้ครับ</p>
       </aside>
     </div>
   </article>;

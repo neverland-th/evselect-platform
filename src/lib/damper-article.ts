@@ -1,17 +1,13 @@
-import socialCover from '../../public/images/articles/kw-coilover-adjustable-social.jpg';
+import responsiveCover from '../../public/images/articles/kw-coilover-adjustable.webp';
 
 // Preview media must be reachable before the new asset exists on production.
 const mediaOrigin = process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : 'https://evselects.com';
 
-// Keep the supplied AVIF unchanged; this bundler cannot read AVIF metadata.
-// The same-size JPEG supplies dimensions and a broadly compatible social image.
-const cover = {
-  src: '/images/articles/kw-coilover-adjustable.avif',
-  width: socialCover.width,
-  height: socialCover.height,
-};
+// Keep the original AVIF for provenance; serve its WebP derivative through
+// Next's responsive optimizer. The existing JPEG remains the social preview.
+const cover = responsiveCover;
 
 export const damperArticle = {
   path: '/articles/ev-damper-tuning-bump-rebound-guide',

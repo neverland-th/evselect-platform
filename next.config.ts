@@ -15,6 +15,9 @@ const cspHeader = `
 `
 
 const nextConfig: NextConfig = {
+  // Send the existing Tailwind styles with SSR to remove the first-visit
+  // stylesheet waterfall, without changing the visual design.
+  experimental: { inlineCss: true },
   images: {
     remotePatterns: [
       {

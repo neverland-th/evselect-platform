@@ -1,13 +1,14 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import Link from 'next/link';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
-export const metadata = {
+export const metadata = withPublicMetadata("/about", {
   alternates: { canonical: '/about' },
   robots: { index: false, follow: true },
-  title: 'เกี่ยวกับเรา | EVSELECT',
-  description: 'รู้จัก EVSELECT: บทความรถ EV และแนวทางเลือกอุปกรณ์เสริมสำหรับผู้ใช้รถในไทย พร้อมสถานะการเตรียมเปิดตัวสินค้า',
-};
+  title: 'เกี่ยวกับเรา | EVSELECTS',
+  description: 'รู้จัก EVSELECTS: บทความรถ EV และแนวทางเลือกอุปกรณ์เสริมสำหรับผู้ใช้รถในไทย พร้อมสถานะการเตรียมเปิดตัวสินค้า',
+});
 
 export default function AboutPage() {
   return <InformationPage title="เกี่ยวกับเรา" intro={<><BrandHomeLink /> รวบรวมบทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวทางเลือกอุปกรณ์เสริมสำหรับผู้ใช้รถ EV ในไทย เพื่อช่วยให้คุณตั้งคำถามและตรวจข้อมูลได้ก่อนตัดสินใจ</>}>

@@ -19,8 +19,8 @@ const promptFont = Prompt({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://evselects.com'),
-  title: 'EVSELECT | รีวิวรถ EV และอุปกรณ์เสริมสำหรับคนรักรถ',
-  description: 'บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับคนรักรถ EV ในไทย ติดตามข่าวการเปิดตัวสินค้าจาก EVSELECT',
+  title: 'EVSELECTS | รีวิวรถ EV และอุปกรณ์เสริมสำหรับคนรักรถ',
+  description: 'บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับคนรักรถ EV ในไทย ติดตามข่าวการเปิดตัวสินค้าจาก EVSELECTS',
   icons: {
     icon: '/logo.png',
   },
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'EVSELECT | เข้าใจรถให้ลึก เลือกให้ตรงใจ',
+    title: 'EVSELECTS | เข้าใจรถให้ลึก เลือกให้ตรงใจ',
     description: 'อ่านรีวิวรถ EV ความรู้เรื่องช่วงล่าง และติดตามอุปกรณ์เสริมที่กำลังเตรียมเปิดตัว',
     url: 'https://evselects.com',
-    siteName: 'EVSELECT Thailand',
+    siteName: 'EVSELECTS Thailand',
     locale: 'th_TH',
     type: 'website',
   },

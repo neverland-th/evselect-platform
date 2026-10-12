@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Link from 'next/link';
@@ -10,17 +11,17 @@ import EvTyreCover from '@/components/EvTyreCover';
 import { evTyreArticle as article, tyreModels, tyreSources as sources } from '@/lib/ev-tyre-article';
 
 const linkStyle = 'font-semibold text-lime-800 underline decoration-lime-500 underline-offset-4 hover:text-lime-950 focus-visible:outline-2 focus-visible:outline-offset-4';
-export const metadata: Metadata = {
-  title: `${article.title} | EVSELECTS.COM`, description: article.description,
+export const metadata: Metadata = withPublicMetadata("/articles/ev-tyre-and-coilover-selection-guide", {
+  title: `${article.title} | EVSELECTS`, description: article.description,
   alternates: { canonical: article.path },
   openGraph: {
     title: article.title, description: article.description, url: `https://evselects.com${article.path}`,
-    type: 'article', locale: 'th_TH', siteName: 'EVSELECTS.COM',
+    type: 'article', locale: 'th_TH', siteName: 'EVSELECTS',
     publishedTime: article.publishedAt, modifiedTime: article.updatedAt,
     images: [{ url: article.image, width: article.imageWidth, height: article.imageHeight, alt: article.imageAlt }],
   },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
-};
+});
 function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-28 space-y-5">
     <h2 id={`${id}-title`} className="border-b border-slate-200 pb-3 text-2xl font-bold leading-snug text-slate-900">{title}</h2>{children}
@@ -62,7 +63,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       <p className="max-w-3xl text-lg leading-[1.9] sm:text-xl">พอถึงเวลาเปลี่ยนยางรถไฟฟ้า คำถามมักไม่จบแค่เลือกยี่ห้อไหนดี แต่กลายเป็นว่า “ต้องซื้อยาง EV ไหม แล้วถ้าใส่ Pilot Sport 4 S จะได้อะไรและเสียอะไรไป?”</p>
       <p><strong>ความต่างอยู่ที่โจทย์ออกแบบของยางแต่ละรุ่น</strong> บางรุ่นเน้นใช้พลังงานน้อย บางรุ่นพยายามเก็บทั้งความเงียบและการควบคุม ส่วนยาง Performance ก็ใช้กับ EV ได้เมื่อสเปกตรงรถ อย่าง <Source href={sources.ps4s}>Michelin Pilot Sport 4 S</Source> ซึ่งหน้าไทยระบุว่ารองรับรถไฟฟ้า</p>
       <p>เราจะดูตัวอย่างจาก Michelin, Hankook, Continental และ Pirelli ว่าแต่ละรุ่นปรับอะไรเพื่อแก้โจทย์เหล่านี้ แล้วค่อยกลับมาตอบว่าแบบไหนตรงกับการขับของเรามากกว่า</p>
-      <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>29 กันยายน 2569</time> · อ่านประมาณ {article.readTime} · เรียบเรียงโดย <Link href="/" className={linkStyle}>EVSELECTS.COM</Link></p>
+      <p className="text-sm text-slate-500">อัปเดต <time dateTime={article.updatedAt}>29 กันยายน 2569</time> · อ่านประมาณ {article.readTime} · เรียบเรียงโดย <Link href="/" className={linkStyle}>EVSELECTS</Link></p>
       <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
         <EvTyreCover eager />
 
@@ -172,7 +173,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       </Section>
 
       <Section id="sources" title="แหล่งข้อมูลและขอบเขตที่ยังต้องตรวจต่อ">
-        <p>ตรวจแหล่งอ้างอิงวันที่ 29 กันยายน 2569 ข้อมูลการออกแบบมาจากผู้ผลิต ส่วนผลทดสอบที่ยกมาเป็นของ ADAC และ Tire Rack ซึ่งเป็นผู้จำหน่ายยางที่มีโครงการทดสอบเอง ไม่ใช่การทดลองของ <Link href="/" className={linkStyle}>EVSELECTS.COM</Link> แหล่งภาพและข้อมูลสเปกแสดงอยู่ข้างรุ่นที่เกี่ยวข้อง</p>
+        <p>ตรวจแหล่งอ้างอิงวันที่ 29 กันยายน 2569 ข้อมูลการออกแบบมาจากผู้ผลิต ส่วนผลทดสอบที่ยกมาเป็นของ ADAC และ Tire Rack ซึ่งเป็นผู้จำหน่ายยางที่มีโครงการทดสอบเอง ไม่ใช่การทดลองของ <Link href="/" className={linkStyle}>EVSELECTS</Link> แหล่งภาพและข้อมูลสเปกแสดงอยู่ข้างรุ่นที่เกี่ยวข้อง</p>
         <ul className="list-disc space-y-3 pl-6">
           <li>Michelin ประเทศไทย: <Source href={sources.eprimacy}>e.Primacy</Source>, <Source href={sources.pilotEv}>Pilot Sport EV พร้อมเชิงอรรถการทดสอบ</Source> และ <Source href={sources.ps4s}>Pilot Sport 4 S</Source></li>
           <li><Source href={sources.hankook}>Hankook iON evo · สเปกและเทคโนโลยีตลาดสหรัฐฯ</Source>; <Source href={sources.continentalPress}>Continental EcoContact 7 / 7 S · ข่าวเปิดตัว 5 ก.พ. 2025</Source></li>

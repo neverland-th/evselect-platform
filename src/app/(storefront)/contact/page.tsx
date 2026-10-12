@@ -1,12 +1,13 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import BrandHomeLink from '@/components/BrandHomeLink';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 
-export const metadata = {
+export const metadata = withPublicMetadata("/contact", {
   alternates: { canonical: '/contact' },
   robots: { index: true, follow: true },
-  title: 'ติดต่อเรา | EVSELECT',
-  description: 'ติดต่อทีม EVSELECT ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ',
-};
+  title: 'ติดต่อเรา | EVSELECTS',
+  description: 'ติดต่อทีม EVSELECTS ผ่าน Facebook เพื่อถามเกี่ยวกับบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่สนใจ',
+});
 
 export default function ContactPage() {
   return <InformationPage title="ติดต่อทีมงาน" intro={<>ถามเรื่องบทความ แจ้งข้อมูลที่ควรแก้ไข หรือบอกรุ่นรถและอุปกรณ์ที่คุณสนใจกับทีม <BrandHomeLink /> ได้ผ่าน Facebook</>}>

@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
@@ -15,17 +16,17 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
 
-export const metadata: Metadata = {
-  title: `${mg4Article.title} | EVSELECT`, description: mg4Article.description,
+export const metadata: Metadata = withPublicMetadata("/articles/mg4-electric-review", {
+  title: `${mg4Article.title} | EVSELECTS`, description: mg4Article.description,
   alternates: { canonical: mg4Article.path },
   openGraph: {
     title: mg4Article.title, description: mg4Article.description,
-    url: `https://evselects.com${mg4Article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT',
+    url: `https://evselects.com${mg4Article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS',
     publishedTime: mg4Article.publishedAt, modifiedTime: mg4Article.updatedAt,
     images: [{ url: mg4Article.image, width: 1280, height: 720, alt: mg4Article.imageAlt }],
   },
   twitter: { card: 'summary_large_image', title: mg4Article.title, description: mg4Article.description, images: [mg4Article.image] },
-};
+});
 
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article',

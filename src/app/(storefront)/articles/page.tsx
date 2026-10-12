@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import ImageMetadata from '@/components/ImageMetadata';
 import EditorialCover, { editorialCovers, hasEditorialCover } from '@/components/EditorialCover';
 import EvTyreCover from '@/components/EvTyreCover';
@@ -41,11 +42,11 @@ import {
   SlidersHorizontal
 } from 'lucide-react';
 
-export const metadata = {
+export const metadata = withPublicMetadata("/articles", {
   alternates: { canonical: '/articles' },
-  title: 'บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECT',
+  title: 'บทความและรีวิวรถยนต์ไฟฟ้า EV สเปกไทยฉบับเจาะลึก | EVSELECTS',
   description: 'รวมบทความรถยนต์ไฟฟ้า EV สเปกไทย แบตเตอรี่ ยาง เบรก และช่วงล่าง เลือกอ่านตามรุ่นรถหรือคำถามที่สงสัย พร้อมแหล่งข้อมูลและสิ่งที่ควรตรวจสอบก่อนตัดสินใจ',
-};
+});
 
 export interface ArticleItem {
   slug: string;
@@ -442,7 +443,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: hybridEvArticle.updatedAt,
     dateDisplay: '23 ก.ย. 2569',
     publishedAt: hybridEvArticle.publishedAt,
-    author: 'EVSELECT',
+    author: 'EVSELECTS',
     readTime: hybridEvArticle.readTime,
     rating: null,
     priceRange: 'คู่มือก่อนเลือกและปรับรถ',
@@ -452,7 +453,7 @@ const ALL_ARTICLES: ArticleItem[] = [
       'ลองรถให้ตรงกับผู้โดยสารและถนนที่ใช้'
     ],
     featured: false,
-    brand: 'EVSELECT',
+    brand: 'EVSELECTS',
     badge: 'เข้าใจก่อนตัดสินใจแต่ง',
     tags: ['Hybrid', 'Regen', 'ช่วงล่าง'],
     fitmentGate: 'ตรวจรุ่นย่อย ล้อ ยาง และคู่มือของรถคันจริง',
@@ -473,7 +474,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: powertrainArticle.updatedAt,
     dateDisplay: '21 ก.ย. 2569',
     publishedAt: powertrainArticle.publishedAt,
-    author: 'EVSELECT',
+    author: 'EVSELECTS',
     readTime: 'คู่มือฉบับเต็ม',
     rating: null,
     priceRange: 'คู่มือเชิงลึก',
@@ -507,7 +508,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: camberArticle.updatedAt,
     dateDisplay: '22 ก.ย. 2569',
     publishedAt: camberArticle.publishedAt,
-    author: 'EVSELECT',
+    author: 'EVSELECTS',
     readTime: camberArticle.readTime,
     rating: null,
     priceRange: 'คู่มือเชิงลึก',
@@ -518,7 +519,7 @@ const ALL_ARTICLES: ArticleItem[] = [
       'ตรวจสเปกตรงรุ่นก่อนซื้ออาร์มแต่ง'
     ],
     featured: false,
-    brand: 'EVSELECT',
+    brand: 'EVSELECTS',
     badge: 'Kinematics & Alignment',
     tags: ['Camber', 'Wheel Alignment', 'Toe', 'Caster', 'ใบตั้งศูนย์'],
     fitmentGate: 'ให้ร้านยืนยันรุ่น ปี รุ่นย่อย และเงื่อนไขที่ใช้วัด',
@@ -540,7 +541,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: damperArticle.updatedAt,
     dateDisplay: '19 ก.ย. 2569',
     publishedAt: damperArticle.publishedAt,
-    author: 'EVSELECT',
+    author: 'EVSELECTS',
     readTime: 'คู่มือฉบับเต็ม',
     rating: null,
     priceRange: 'คู่มือเชิงลึก',
@@ -575,7 +576,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: '2026-09-23',
     dateDisplay: '23 ก.ย. 2569',
     publishedAt: shockTypesArticle.publishedAt,
-    author: 'EVSELECT',
+    author: 'EVSELECTS',
     readTime: shockTypesArticle.readTime,
     rating: null,
     priceRange: 'คู่มือก่อนเลือกชุด',
@@ -610,7 +611,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: '2026-09-23',
     dateDisplay: '23 ก.ย. 2569',
     publishedAt: thaiRoadsArticle.publishedAt,
-    author: 'EVSELECT',
+    author: 'EVSELECTS',
     readTime: thaiRoadsArticle.readTime,
     rating: null,
     priceRange: 'คู่มือก่อนเปลี่ยนช่วงล่าง',
@@ -622,7 +623,7 @@ const ALL_ARTICLES: ArticleItem[] = [
       'ห้าคำถามที่ควรถามร้านติดตั้ง'
     ],
     featured: false,
-    brand: 'EVSELECT',
+    brand: 'EVSELECTS',
     badge: 'รู้ก่อนเปลี่ยนช่วงล่าง',
     tags: ['ช่วงล่างถนนไทย', 'รอยต่อสะพาน', 'ยาง', 'แดมเปอร์', 'Model 3 Performance'],
     accessoryOpportunity: 'ตรวจหาสาเหตุและกำหนดเป้าหมายก่อนเลือกชุดช่วงล่าง',
@@ -645,7 +646,7 @@ const ALL_ARTICLES: ArticleItem[] = [
     date: '2026-09-29',
     dateDisplay: '29 ก.ย. 2569',
     publishedAt: '2026-08-27',
-    author: 'EVSELECT',
+    author: 'EVSELECTS',
     readTime: evTyreArticle.readTime,
     rating: null,
     priceRange: 'คู่มือเชิงลึก',
@@ -657,7 +658,7 @@ const ALL_ARTICLES: ArticleItem[] = [
       'อ่านฉลากและเลือกสเปกให้ตรงรถไทย'
     ],
     featured: false,
-    brand: 'EVSELECT BUYER GUIDE',
+    brand: 'EVSELECTS BUYER GUIDE',
     badge: 'EV Tyre Guide',
     tags: ['EV Tyres', 'Pilot Sport 4 S', 'Rolling Resistance', 'Wet Grip', 'Acoustic Foam'],
     accessoryOpportunity: 'ยางตรงขนาดและพิกัดรถ โดยตรวจเทคโนโลยีและรหัสสินค้าจริง',
@@ -1090,7 +1091,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
               <div className="flex-1 p-5 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
-                    <span className="text-slate-900">{article.brand === 'EVSELECT' ? <BrandHomeLink /> : article.brand === 'EVSELECT BUYER GUIDE' ? <><BrandHomeLink /> BUYER GUIDE</> : article.brand || article.category}</span>
+                    <span className="text-slate-900">{article.brand === 'EVSELECTS' ? <BrandHomeLink /> : article.brand === 'EVSELECTS BUYER GUIDE' ? <><BrandHomeLink /> BUYER GUIDE</> : article.brand || article.category}</span>
                     <span aria-hidden="true">•</span>
                     <span className="text-lime-700">{article.segmentName}</span>
                   </div>
@@ -1119,7 +1120,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
         </div>
       )}
 
-      {/* 6. Bottom Banner: EVSELECT Fitment Storefront Integration */}
+      {/* 6. Bottom Banner: EVSELECTS Fitment Storefront Integration */}
       <section className="mt-16 sm:mt-20 bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
         <div className="absolute -top-24 -right-24 w-72 h-72 bg-lime-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">

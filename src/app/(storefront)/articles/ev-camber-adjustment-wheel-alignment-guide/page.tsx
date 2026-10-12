@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
@@ -14,12 +15,12 @@ function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
 
-export const metadata: Metadata = {
-  title: `${camberArticle.title} | EVSELECT`, description: camberArticle.description,
+export const metadata: Metadata = withPublicMetadata("/articles/ev-camber-adjustment-wheel-alignment-guide", {
+  title: `${camberArticle.title} | EVSELECTS`, description: camberArticle.description,
   alternates: { canonical: camberArticle.path },
-  openGraph: { title: camberArticle.title, description: camberArticle.description, url: `https://evselects.com${camberArticle.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', publishedTime: camberArticle.publishedAt, modifiedTime: camberArticle.updatedAt, images: [{ url: camberArticle.image, width: 1624, height: 875, alt: camberArticle.imageAlt }] },
+  openGraph: { title: camberArticle.title, description: camberArticle.description, url: `https://evselects.com${camberArticle.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS', publishedTime: camberArticle.publishedAt, modifiedTime: camberArticle.updatedAt, images: [{ url: camberArticle.image, width: 1624, height: 875, alt: camberArticle.imageAlt }] },
   twitter: { card: 'summary_large_image', title: camberArticle.title, description: camberArticle.description, images: [camberArticle.image] },
-};
+});
 
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: camberArticle.title, description: camberArticle.description,

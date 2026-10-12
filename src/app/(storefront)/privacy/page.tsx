@@ -1,15 +1,16 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import Link from 'next/link';
 import InformationPage, { informationLinkStyle } from '@/components/InformationPage';
 import { CookieSettingsButton } from '@/components/CookieConsent';
 import { getAnalyticsMeasurementId } from '@/lib/analytics';
 import BrandHomeLink from '@/components/BrandHomeLink';
 
-export const metadata = {
+export const metadata = withPublicMetadata("/privacy", {
   alternates: { canonical: '/privacy' },
   robots: { index: true, follow: true },
-  title: 'นโยบายความเป็นส่วนตัว | EVSELECT',
-  description: 'การใช้ข้อมูลบนเว็บไซต์ EVSELECT คุกกี้ การวิเคราะห์การใช้งาน และวิธีเปลี่ยนหรือถอนความยินยอม',
-};
+  title: 'นโยบายความเป็นส่วนตัว | EVSELECTS',
+  description: 'การใช้ข้อมูลบนเว็บไซต์ EVSELECTS คุกกี้ การวิเคราะห์การใช้งาน และวิธีเปลี่ยนหรือถอนความยินยอม',
+});
 
 export default function PrivacyPage() {
   const analyticsConfigured = Boolean(getAnalyticsMeasurementId({ NODE_ENV: process.env.NODE_ENV, VERCEL_ENV: process.env.VERCEL_ENV, GA4_MEASUREMENT_ID: process.env.GA4_MEASUREMENT_ID }));

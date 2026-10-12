@@ -56,7 +56,7 @@ export default function MobileMenu() {
       >
         <div className={styles.heading}>
           <div>
-            <p className={styles.brand}><Link href="/" onClick={close}>EVSELECT</Link></p>
+            <p className={styles.brand}><Link href="/" onClick={close}>EVSELECTS</Link></p>
             <p className={styles.menuTitle} id={`${id}-title`}>เมนูหลัก</p>
           </div>
           <button type="button" className={styles.close} aria-label="ปิดเมนูหลัก" onClick={close} autoFocus>

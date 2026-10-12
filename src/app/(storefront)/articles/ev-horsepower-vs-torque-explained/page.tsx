@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import Image from 'next/image';
@@ -24,11 +25,11 @@ const contents = [
   ['two-speed', 'ทำไม Taycan ใช้เกียร์สองสปีด'], ['compare-cars', 'อ่านสเปกและผลทดสอบให้เทียบกันได้'], ['questions', 'คำถามที่เจอบ่อย'],
 ] as const;
 
-export const metadata: Metadata = {
-  title: `${article.title} | EVSELECT`, description: article.description, alternates: { canonical: article.path },
-  openGraph: { title: article.title, description: article.description, url: `https://evselects.com${article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', images: [{ url: article.image, width: 1920, height: 1280, alt: article.imageAlt }] },
+export const metadata: Metadata = withPublicMetadata("/articles/ev-horsepower-vs-torque-explained", {
+  title: `${article.title} | EVSELECTS`, description: article.description, alternates: { canonical: article.path },
+  openGraph: { title: article.title, description: article.description, url: `https://evselects.com${article.path}`, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS', images: [{ url: article.image, width: 1920, height: 1280, alt: article.imageAlt }] },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
-};
+});
 function Source({ to, children }: { to: keyof typeof sources; children: ReactNode }) {
   return <a href={sources[to].url} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }

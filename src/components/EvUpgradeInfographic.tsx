@@ -9,8 +9,8 @@ const startingPoints = [
     category: "ของใช้ในรถ",
     title: "ใช้รถสะดวกขึ้น",
     description: "พรม ถาดคอนโซล ที่เก็บของ เลือกชิ้นที่ใช้จริง และเช็กรุ่นรถให้ตรงก่อนซื้อ",
-    href: "#tesla-accessories",
-    linkLabel: "ดูของแต่งภายใน Tesla",
+    href: "#tesla-interior-guide",
+    linkLabel: "ดูวิธีเลือกของแต่งภายใน Tesla",
     image: "/images/editorial/tesla-model-3-performance-2024.png",
     imageAlt: "Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย เห็นตัวรถและล้อครบ",
     imageClass: "bg-[#f7f7f7] object-contain",
@@ -51,7 +51,7 @@ export default function EvUpgradeInfographic() {
           <h3 id="ev-upgrade-map-heading" className="font-bold">เริ่มจากสิ่งที่ใช้จริง</h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-300">สามจุดเริ่มต้น เลือกจากสิ่งที่อยากเปลี่ยน</p>
         </div>
-        <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-slate-300"><span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-lime-300" /><Link href="/" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300">EVSELECTS</Link> / QUICK GUIDE</span>
+        <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-slate-300"><span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-lime-300" /><Link prefetch={false} href="/" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300">EVSELECTS</Link> / QUICK GUIDE</span>
       </div>
 
       <ol className="grid gap-6 md:grid-cols-3 md:gap-7">

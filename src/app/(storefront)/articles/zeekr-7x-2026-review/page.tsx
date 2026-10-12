@@ -1,3 +1,4 @@
+import { withPublicMetadata } from '@/lib/public-metadata';
 import { editorialOrganization } from '@/lib/site-identity';
 import ImageMetadata from '@/components/ImageMetadata';
 import type { Metadata } from 'next';
@@ -13,12 +14,12 @@ const headingStyle = 'text-xl font-bold leading-snug text-slate-950 sm:text-2xl'
 function Source({ href, children }: { href: string; children: ReactNode }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{children}<span className="sr-only"> (เปิดแท็บใหม่)</span></a>;
 }
-export const metadata: Metadata = {
-  title: article.title + ' | EVSELECT', description: article.description,
+export const metadata: Metadata = withPublicMetadata("/articles/zeekr-7x-2026-review", {
+  title: article.title + ' | EVSELECTS', description: article.description,
   alternates: { canonical: article.path },
-  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: 'EVSELECT', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1920, height: 1440, alt: article.imageAlt }] },
+  openGraph: { title: article.title, description: article.description, url: 'https://evselects.com' + article.path, type: 'article', locale: 'th_TH', siteName: 'EVSELECTS', publishedTime: article.publishedAt, modifiedTime: article.updatedAt, images: [{ url: article.image, width: 1920, height: 1440, alt: article.imageAlt }] },
   twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [article.image] },
-};
+});
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
   image: 'https://evselects.com' + article.image, datePublished: article.publishedAt, dateModified: article.updatedAt,
