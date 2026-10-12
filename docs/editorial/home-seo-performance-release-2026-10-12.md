@@ -118,6 +118,25 @@ remains 2.13s. A narrow follow-up gives only the preloaded hero a synchronous
 decode hint; other images remain async/lazy. This is a measured experiment,
 not a claim that image decoding is the proven sole cause.
 
+Fourth release: local 285d0aba0ab8e2f14ecdc62358b593a090a5a959,
+remote ab883948d4c81b21256c9df39b93bcd347f9a5e3,
+matching tree fd97d395655715283b9ce5146445cc03867bcf1c;
+production dpl_A2RNCChspSsCJwt3D1QReBnxmC3b verified on the apex alias.
+Live tests/audits PASS. Supermetrics at 12:57:35: 96 / 96 / 100 / 100;
+Google UI at 12:57:22 remains 92 / 96 / 100 / 100, LCP 3.1s, TBT 50ms,
+CLS 0 and Speed Index 4s. The decode hint alone did not improve the direct
+Google score; no causal success is claimed.
+https://pagespeed.web.dev/analysis/https-evselects-com/eu2aafwzi4?form_factor=mobile
+
+Next narrow iteration: the static hero uses the documented getImageProps()
+server path, retaining Next optimization, responsive srcset and React DOM
+responsive preload but avoiding the Image client state/callbacks for this
+one image. It never had a blur placeholder or custom load callback. Alt/error
+text stays visible. Source, layout, hover styling and all other images unchanged.
+https://nextjs.org/docs/app/api-reference/components/image#getimageprops
+Local build/lint and 18 tests PASS; mobile and desktop rendering rechecked.
+Production measurement of this iteration is pending.
+
 Logo correction asset: public/logo-evselects.webp. Original retained.
 Image edit prompt: Change only EVSELECT to EVSELECTS, adding a final S with
 identical typography, weight, spacing and black color. Preserve the upper
