@@ -62,6 +62,15 @@ test('Home prioritizes the hero without removing off-screen content or weakening
     assert.ok(document.getElementById(id)?.textContent.trim().length > 150, `${id} stays readable in HTML`);
   }
   assert.ok(document.querySelector('.home-content'));
+  const css = [...document.querySelectorAll('style')].map(style => style.textContent).join('\n');
+  const preloadUrls = new Set([...document.querySelectorAll('link[rel="preload"][as="font"]')].map(link => link.getAttribute('href')));
+  const heroFaces = [...css.matchAll(/@font-face\{([^}]+)\}/g)].map(match => match[1])
+    .filter(face => face.includes('font-family:Prompt;') && face.includes('font-weight:800;'));
+  for (const subset of ['U+E01-E5B', 'U+??']) {
+    const face = heroFaces.find(face => face.includes(subset));
+    assert.ok(face, `Keep the original Prompt 800 ${subset} font`);
+    assert.ok(preloadUrls.has(face.match(/url\(([^)]+)\)/)?.[1]), `Preload ${subset} instead of a delayed font request`);
+  }
   assert.equal(response.headers.get('content-security-policy'), 'upgrade-insecure-requests');
   const report = response.headers.get('content-security-policy-report-only');
   assert.ok(report?.includes("object-src 'none'"));

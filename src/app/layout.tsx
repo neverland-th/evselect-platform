@@ -12,8 +12,9 @@ export const viewport: Viewport = {
 
 const promptFont = Prompt({
   weight: ["300", "400", "500", "600", "700", "800"],
-  // Preload Thai glyphs to keep the consent banner stable; Latin loads on demand.
-  subsets: ["thai"],
+  // Thai copy mixes EV/Tesla/model names with Thai glyphs. Preload both to avoid
+  // a late Latin-font request/repaint after the hero has already downloaded.
+  subsets: ["thai", "latin"],
   variable: "--font-thai",
 });
 

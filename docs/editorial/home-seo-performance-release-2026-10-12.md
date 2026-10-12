@@ -87,6 +87,23 @@ tyre photo, all six opened FAQs, native fragment scroll, menu Escape/focus
 and cookie settings. No horizontal overflow. Production follow-up and fresh
 measurement are pending; do not mark the goal complete yet.
 
+Second release: local f62701a99c169a171c9704faaf87136f4d6b3e13,
+remote 4522b78c51925eeb03d4eff9187e3e34020829fc,
+matching tree d743e117ae98d75934ee4b249ec2539b9fe013c3;
+production dpl_FJZeUpsY7TA3bvXWnxiyMyPqZ52M verified on the apex alias.
+Live tests 18/18, 32-page link audit and attribution PASS. No error/fatal
+runtime groups returned for this deployment in the last 15-minute query.
+Supermetrics at 12:42:21: 97 / 96 / 100 / 100, LCP 1.4s, CLS 0.098, TBT 20ms.
+Google UI at 12:42:11: 91 / 96 / 100 / 100, LCP 3.2s, CLS 0, TBT 50ms.
+https://pagespeed.web.dev/analysis/https-evselects-com/a9e0v9hwnl?form_factor=mobile
+The goal remains open because the direct Google UI run is below 95.
+
+Google's dependency detail lists five delayed Latin Prompt faces; live CSS
+confirms their glyph ranges, while only Thai faces were preloaded. Follow-up
+preloads both Thai and Latin without changing the family, weights or glyphs.
+Local build/lint and 18 built-response tests PASS; hero font/typography and
+layout rechecked at 1365x900 and 390x844. Final production score pending.
+
 Logo correction asset: public/logo-evselects.webp. Original retained.
 Image edit prompt: Change only EVSELECT to EVSELECTS, adding a final S with
 identical typography, weight, spacing and black color. Preserve the upper
