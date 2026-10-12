@@ -104,6 +104,20 @@ preloads both Thai and Latin without changing the family, weights or glyphs.
 Local build/lint and 18 built-response tests PASS; hero font/typography and
 layout rechecked at 1365x900 and 390x844. Final production score pending.
 
+Third release: local 0dd56ee95a22eb0c6c3117ea36ef4130762b89d4,
+remote da8c2672a753230c2f144327932e1574c1871804,
+matching tree b3e0394b9d0cc1368f041c613f422a2e9aea92ab;
+production dpl_D45CAEQf82GrZvJmqrHC3Uj4NV8C verified on the apex alias.
+Live tests 18/18, contextual/attribution audits PASS; no error/fatal runtime
+groups returned. Supermetrics at 12:49:14: 96 / 96 / 100 / 100, LCP 2s,
+CLS 0.098, TBT 80ms. Google UI at 12:48:57: 92 / 96 / 100 / 100,
+LCP 3.1s, CLS 0, TBT 40ms.
+https://pagespeed.web.dev/analysis/https-evselects-com/vsdwhu8b58?form_factor=mobile
+Delayed Latin fonts disappeared from the insight, but image render delay
+remains 2.13s. A narrow follow-up gives only the preloaded hero a synchronous
+decode hint; other images remain async/lazy. This is a measured experiment,
+not a claim that image decoding is the proven sole cause.
+
 Logo correction asset: public/logo-evselects.webp. Original retained.
 Image edit prompt: Change only EVSELECT to EVSELECTS, adding a final S with
 identical typography, weight, spacing and black color. Preserve the upper

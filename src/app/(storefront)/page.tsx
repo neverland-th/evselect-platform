@@ -242,6 +242,7 @@ export default function StorefrontPage() {
               preload
               loading="eager"
               fetchPriority="high"
+              decoding="sync"
               sizes="(max-width: 1023px) 100vw, 55vw"
               className="object-contain object-top transition-transform duration-700 group-hover:scale-[1.025] lg:object-cover lg:object-center"
             />
