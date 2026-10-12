@@ -234,13 +234,13 @@ export default function StorefrontPage() {
             className="group relative min-h-[21rem] overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-900 sm:min-h-[27rem]"
           >
             <Image
-              src="/images/reviews/tesla-model-3-hero.jpg"
-              alt="Tesla Model 3 Highland สีแดงที่งานแสดงรถในเยอรมนี ปี 2024"
+              src="/images/home/tesla-model-3-white-user.png"
+              alt="Tesla Model 3 สีขาว มุมเฉียงด้านหน้า พร้อมล้อสีดำ"
               fill
               loading="eager"
               fetchPriority="high"
               sizes="(max-width: 1023px) 100vw, 55vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+              className="object-contain object-top transition-transform duration-700 group-hover:scale-[1.025] lg:object-cover lg:object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/15 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 sm:p-7">
