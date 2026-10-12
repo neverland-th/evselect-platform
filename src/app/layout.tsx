@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: 'EVSELECTS | รีวิวรถ EV และอุปกรณ์เสริมสำหรับคนรักรถ',
   description: 'บทความรถยนต์ไฟฟ้า ความรู้เรื่องช่วงล่าง และแนวคิดเลือกอุปกรณ์เสริมสำหรับคนรักรถ EV ในไทย ติดตามข่าวการเปิดตัวสินค้าจาก EVSELECTS',
   icons: {
-    icon: '/logo.png',
+    icon: '/logo-evselects.png',
   },
   alternates: {
     canonical: '/',

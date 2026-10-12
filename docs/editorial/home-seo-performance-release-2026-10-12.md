@@ -137,6 +137,23 @@ https://nextjs.org/docs/app/api-reference/components/image#getimageprops
 Local build/lint and 18 tests PASS; mobile and desktop rendering rechecked.
 Production measurement of this iteration is pending.
 
+Fifth release: local a631ce8e1fd88fadaa628911f05ba94b15721a2a,
+remote bf4099e3658dd917f5144e30b3ea7cbb3ae5c213,
+matching tree 4f83c72569bed747ce3ed94a88806cbac9b5a231;
+production dpl_DajC5nzZk7EW6BjrUW1N6JYj3sEB verified on the apex alias.
+Supermetrics at 13:08:12: 96 / 96 / 100 / 100; Google UI at 13:08:02:
+92 / 96 / 100 / 100, LCP 3.1s, TBT 70ms, CLS 0, Speed Index 3.7s.
+https://pagespeed.web.dev/analysis/https-evselects-com/18op331h94?form_factor=mobile
+
+The old favicon still pointed at the original EVSELECT PNG. Added PNG/ICO
+delivery derivatives of the corrected EVSELECTS artwork, retaining originals.
+The ICO pipeline now explicitly emits RGBA PNG entries; build verified.
+Hero now declares its known 1176x733 source dimensions. Under 640px, its box
+follows the actual photo height rather than the larger card's empty area;
+tablet/desktop framing, card height, caption and source remain unchanged.
+Rendered checks at 390x844, 768x900 and 1365x900 show the same visual framing.
+Local build/lint and 18 tests PASS. Final production result remains pending.
+
 Logo correction asset: public/logo-evselects.webp. Original retained.
 Image edit prompt: Change only EVSELECT to EVSELECTS, adding a final S with
 identical typography, weight, spacing and black color. Preserve the upper

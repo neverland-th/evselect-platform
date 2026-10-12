@@ -197,12 +197,13 @@ export default function StorefrontPage() {
   const { props: heroImageProps } = getImageProps({
     src: "/images/home/tesla-model-3-white-user.png",
     alt: "Tesla Model 3 สีขาว มุมเฉียงด้านหน้า พร้อมล้อสีดำ",
-    fill: true,
+    width: 1176,
+    height: 733,
     loading: "eager",
     fetchPriority: "high",
     decoding: "sync",
     sizes: "(max-width: 1023px) 100vw, 55vw",
-    className: "object-contain object-top transition-transform duration-700 group-hover:scale-[1.025] lg:object-cover lg:object-center",
+    className: "absolute inset-0 h-auto w-full object-contain object-top transition-transform duration-700 group-hover:scale-[1.025] sm:h-full lg:object-cover lg:object-center",
   });
   preload(heroImageProps.src, {
     as: "image", imageSrcSet: heroImageProps.srcSet,

@@ -59,10 +59,13 @@ test('Home prioritizes the hero without removing off-screen content or weakening
   assert.ok(preload, 'Responsive hero preload is in server HTML');
   assert.equal(hero.getAttribute('loading'), 'eager');
   assert.equal(hero.getAttribute('decoding'), 'sync', 'Present the primary image with the initial paint');
+  assert.equal(hero.getAttribute('width'), '1176');
+  assert.equal(hero.getAttribute('height'), '733');
   for (const id of ['ev-accessories', 'tesla-accessories', 'home-faq', 'launch']) {
     assert.ok(document.getElementById(id)?.textContent.trim().length > 150, `${id} stays readable in HTML`);
   }
   assert.ok(document.querySelector('.home-content'));
+  assert.ok(document.querySelector('link[rel="icon"][href="/logo-evselects.png"]'), 'Corrected EVSELECTS favicon metadata');
   const css = [...document.querySelectorAll('style')].map(style => style.textContent).join('\n');
   const preloadUrls = new Set([...document.querySelectorAll('link[rel="preload"][as="font"]')].map(link => link.getAttribute('href')));
   const heroFaces = [...css.matchAll(/@font-face\{([^}]+)\}/g)].map(match => match[1])
