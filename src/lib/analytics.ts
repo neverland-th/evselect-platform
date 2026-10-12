@@ -38,12 +38,15 @@ export function isProductionHostname(hostname: string): boolean {
 }
 
 export function isPrivateAnalyticsPath(pathname: string): boolean {
-  return ['/categories', '/vehicles', '/export', '/products', '/product'].some(path => pathname === path || pathname.startsWith(`${path}/`));
+  return ['/categories', '/vehicles', '/export', '/products', '/product', '/fitment'].some(path => pathname === path || pathname.startsWith(`${path}/`));
 }
 
 export function readConsentValue(): string | null {
   if (typeof window === 'undefined') return null;
-  try { return window.localStorage.getItem(CONSENT_STORAGE_KEY); } catch { return null; }
+  try {
+    const value = window.localStorage.getItem(CONSENT_STORAGE_KEY);
+    return parseConsent(value) ? value : null;
+  } catch { return null; }
 }
 
 export function saveConsent(analytics: boolean): boolean {
@@ -55,14 +58,32 @@ export function saveConsent(analytics: boolean): boolean {
 }
 
 export function subscribeConsent(callback: () => void): () => void {
-  const onStorage = (event: StorageEvent) => {
-    if (event.key === CONSENT_STORAGE_KEY || event.key === null) callback();
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const recheck = () => {
+    clearTimeout(timer);
+    const consent = parseConsent(readConsentValue());
+    // Stop collection before notifying React, including when the tab wakes after expiry.
+    if (!consent?.analytics) disableAnalytics();
+    callback();
+    if (consent) {
+      // Browsers clamp delays above ~24.8 days; re-arm until the 180-day boundary.
+      timer = setTimeout(recheck, Math.min(consent.updatedAt + CONSENT_MAX_AGE_MS - Date.now(), 2_147_483_647));
+    }
   };
-  window.addEventListener(CONSENT_CHANGED_EVENT, callback);
+  const onStorage = (event: StorageEvent) => {
+    if (event.key === CONSENT_STORAGE_KEY || event.key === null) recheck();
+  };
+  window.addEventListener(CONSENT_CHANGED_EVENT, recheck);
   window.addEventListener('storage', onStorage);
+  window.addEventListener('focus', recheck);
+  document.addEventListener('visibilitychange', recheck);
+  recheck();
   return () => {
-    window.removeEventListener(CONSENT_CHANGED_EVENT, callback);
+    clearTimeout(timer);
+    window.removeEventListener(CONSENT_CHANGED_EVENT, recheck);
     window.removeEventListener('storage', onStorage);
+    window.removeEventListener('focus', recheck);
+    document.removeEventListener('visibilitychange', recheck);
   };
 }
 
@@ -70,12 +91,13 @@ function safeIdentifier(value: string): boolean {
   return /^[a-z0-9_-]{1,100}$/i.test(value) && !/\d{7,}/.test(value);
 }
 
-// Only fixed public paths and controlled campaign identifiers enter custom payloads.
-// GA4 stream-level redaction also protects Google's automatic history events.
+// Custom payloads retain identifier-shaped campaign values, not a campaign allowlist.
+// Automatic Google events need separate stream-level review; this is not a PII guarantee.
 export function analyticsUrl(raw: string): string {
   try {
     const url = new URL(raw);
     if (!['https:', 'http:'].includes(url.protocol)) return '';
+    if (isProductionHostname(url.hostname) && isPrivateAnalyticsPath(url.pathname)) return `${url.origin}/`;
     if (!url.pathname.split('/').filter(Boolean).every(safeIdentifier)) return `${url.origin}/`;
     const clean = new URL(url.origin + url.pathname);
     for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']) {
@@ -98,6 +120,7 @@ export function intentDestination(raw: string): 'messenger' | 'shopee' | null {
 
 export function initializeAnalytics(id: string): boolean {
   if (!/^G-[A-Z0-9]{6,}$/.test(id) || !isProductionHostname(window.location.hostname) ||
+    isPrivateAnalyticsPath(window.location.pathname) ||
     !parseConsent(readConsentValue())?.analytics || window.evselectAnalyticsId) return false;
   window[`ga-disable-${id}`] = false;
   window.dataLayer = window.dataLayer || [];
@@ -127,8 +150,11 @@ export function initializeAnalytics(id: string): boolean {
 export function trackIntent(raw: string): void {
   const id = window.evselectAnalyticsId;
   const destination = intentDestination(raw);
-  if (!id || !destination || window[`ga-disable-${id}`] || !parseConsent(readConsentValue())?.analytics) return;
-  const page = new URL(analyticsUrl(window.location.href));
+  if (!id || !destination || window[`ga-disable-${id}`] || !parseConsent(readConsentValue())?.analytics ||
+    !isProductionHostname(window.location.hostname) || isPrivateAnalyticsPath(window.location.pathname)) return;
+  const location = analyticsUrl(window.location.href);
+  if (!location) return;
+  const page = new URL(location);
   const articleSlug = page.pathname.startsWith('/articles/') ? page.pathname.split('/')[2] : undefined;
   window.gtag?.('event', `${destination}_click`, {
     send_to: id, destination, page_path: page.pathname,
@@ -141,6 +167,42 @@ export function pauseAnalytics(): boolean {
   const id = window.evselectAnalyticsId;
   if (id) window[`ga-disable-${id}`] = true;
   return Boolean(id);
+}
+
+export function guardAnalyticsNavigation(): () => void {
+  const guardPath = (raw: string | URL | null | undefined) => {
+    if (raw == null) return;
+    const url = new URL(raw, window.location.href);
+    if (url.origin === window.location.origin && isPrivateAnalyticsPath(url.pathname)) pauseAnalytics();
+  };
+  const onClick = (event: MouseEvent) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !(event.target instanceof Element)) return;
+    const anchor = event.target.closest('a[href]');
+    if (anchor instanceof HTMLAnchorElement && (!anchor.target || anchor.target === '_self') && !anchor.hasAttribute('download')) guardPath(anchor.href);
+  };
+  const onPopstate = () => guardPath(window.location.href);
+  const history = window.history;
+  const pushState = history.pushState;
+  const replaceState = history.replaceState;
+  const guardedPush: History['pushState'] = function (this: History, data, unused, url) {
+    guardPath(url);
+    return pushState.call(this, data, unused, url);
+  };
+  const guardedReplace: History['replaceState'] = function (this: History, data, unused, url) {
+    guardPath(url);
+    return replaceState.call(this, data, unused, url);
+  };
+  history.pushState = guardedPush;
+  history.replaceState = guardedReplace;
+  document.addEventListener('click', onClick, true);
+  window.addEventListener('popstate', onPopstate, true);
+  return () => {
+    document.removeEventListener('click', onClick, true);
+    window.removeEventListener('popstate', onPopstate, true);
+    // Avoid overwriting another listener's wrapper installed after ours.
+    if (history.pushState === guardedPush) history.pushState = pushState;
+    if (history.replaceState === guardedReplace) history.replaceState = replaceState;
+  };
 }
 
 export function disableAnalytics(): boolean {

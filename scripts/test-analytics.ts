@@ -3,7 +3,7 @@ import { afterEach, test } from 'node:test';
 import {
   analyticsUrl, CONSENT_MAX_AGE_MS, CONSENT_STORAGE_KEY, disableAnalytics,
   getAnalyticsMeasurementId, initializeAnalytics, intentDestination, isPrivateAnalyticsPath, parseConsent, pauseAnalytics,
-  saveConsent, trackIntent,
+  saveConsent, subscribeConsent, trackIntent,
 } from '../src/lib/analytics';
 
 const originalWindow = Object.getOwnPropertyDescriptor(globalThis, 'window');
@@ -14,17 +14,24 @@ function browserHarness(analytics: boolean | null = null, hostname = 'evselects.
   if (analytics !== null) storage.set(CONSENT_STORAGE_KEY, JSON.stringify({ version: 1, analytics, updatedAt: Date.now() }));
   const events: string[] = [];
   const cookies: string[] = [];
+  const windowEvents = new EventTarget();
+  const documentEvents = new EventTarget();
   const browser = {
-    location: { hostname, href: `https://${hostname}/articles/ev-tyre-and-coilover-selection-guide?utm_source=facebook&utm_medium=social&utm_campaign=ev_tyres&email=private%40example.com#phone` },
+    location: { hostname, pathname: '/articles/ev-tyre-and-coilover-selection-guide', href: `https://${hostname}/articles/ev-tyre-and-coilover-selection-guide?utm_source=facebook&utm_medium=social&utm_campaign=ev_tyres&email=private%40example.com#phone` },
     localStorage: {
       getItem: (key: string) => storage.get(key) ?? null,
       setItem: (key: string, value: string) => storage.set(key, value),
     },
-    dispatchEvent: (event: Event) => { events.push(event.type); return true; },
+    addEventListener: windowEvents.addEventListener.bind(windowEvents),
+    removeEventListener: windowEvents.removeEventListener.bind(windowEvents),
+    dispatchEvent: (event: Event) => { events.push(event.type); return windowEvents.dispatchEvent(event); },
   } as unknown as Window;
   Object.defineProperty(globalThis, 'window', { configurable: true, value: browser });
   Object.defineProperty(globalThis, 'document', { configurable: true, value: {
     referrer: 'https://www.facebook.com/?email=private@example.com',
+    addEventListener: documentEvents.addEventListener.bind(documentEvents),
+    removeEventListener: documentEvents.removeEventListener.bind(documentEvents),
+    dispatchEvent: documentEvents.dispatchEvent.bind(documentEvents),
     get cookie() { return 'evselect_ga=abc; evselect_ga_ABC123=test; unrelated=keep'; },
     set cookie(value: string) { cookies.push(value); },
   } });
@@ -92,7 +99,7 @@ test('preview and local hosts cannot start tracking even with consent', () => {
 });
 
 test('internal routes are scoped out and pausing suppresses subsequent intent events', () => {
-  for (const path of ['/vehicles', '/products', '/product/private-id', '/export', '/categories/edit']) assert.equal(isPrivateAnalyticsPath(path), true);
+  for (const path of ['/vehicles', '/products', '/product/private-id', '/export', '/categories/edit', '/fitment', '/fitment/edit']) assert.equal(isPrivateAnalyticsPath(path), true);
   for (const path of ['/', '/articles/zeekr-x-review', '/privacy', '/contact']) assert.equal(isPrivateAnalyticsPath(path), false);
   const { commands, cookies } = browserHarness(true);
   initializeAnalytics('G-ABC1234567');
@@ -101,6 +108,80 @@ test('internal routes are scoped out and pausing suppresses subsequent intent ev
   assert.equal(commands().length, 4);
   assert.equal(cookies.length, 0);
 });
+
+test('direct private entry cannot initialize, and private pages cannot send intent even with an active tag', () => {
+  for (const pathname of ['/product/private-id', '/fitment', '/fitment/edit', '/vehicles', '/products', '/export', '/categories']) {
+    const { browser, commands } = browserHarness(true);
+    browser.location.pathname = pathname;
+    browser.location.href = `https://evselects.com${pathname}`;
+    assert.equal(initializeAnalytics('G-ABC1234567'), false);
+    assert.equal(commands().length, 0);
+    browser.evselectAnalyticsId = 'G-ABC1234567';
+    browser.gtag = () => { assert.fail('private intent must never queue'); };
+    trackIntent('https://m.me/evselects');
+  }
+});
+
+test('private referrers, duplicate UTMs, credentials and encoded free text stay out of custom URLs', () => {
+  assert.equal(analyticsUrl('https://evselects.com/product/customer-id?utm_source=facebook'), 'https://evselects.com/');
+  assert.equal(analyticsUrl('https://user:secret@evselects.com/articles/ev-tyres?utm_content=page_post&utm_content=private%40example.com'), 'https://evselects.com/articles/ev-tyres?utm_content=page_post');
+  assert.equal(analyticsUrl('https://evselects.com/?utm_term=hello%20world&utm_campaign=0812345678&utm_medium=paid_social'), 'https://evselects.com/?utm_medium=paid_social');
+  // Existing identifier-shaped campaign values are preserved without a new allowlist.
+  assert.equal(analyticsUrl('https://evselects.com/?utm_campaign=next_launch_2026'), 'https://evselects.com/?utm_campaign=next_launch_2026');
+});
+
+test('open-tab consent expires at the exact boundary and disables before subscribers run', t => {
+  const now = 1_800_000_000_000;
+  t.mock.timers.enable({ apis: ['Date', 'setTimeout'], now });
+  const { browser, storage, commands } = browserHarness(true);
+  storage.set(CONSENT_STORAGE_KEY, JSON.stringify({ version: 1, analytics: true, updatedAt: now - CONSENT_MAX_AGE_MS + 10 }));
+  initializeAnalytics('G-ABC1234567');
+  let expired = false;
+  const stop = subscribeConsent(() => {
+    if (!parseConsent(storage.get(CONSENT_STORAGE_KEY)!)) {
+      expired = true;
+      assert.equal(browser['ga-disable-G-ABC1234567'], true);
+    }
+  });
+  t.mock.timers.tick(9);
+  assert.equal(expired, false);
+  t.mock.timers.tick(1);
+  assert.equal(expired, true);
+  trackIntent('https://m.me/evselects');
+  assert.equal(commands().length, 4);
+  stop();
+});
+
+test('180-day timer re-arms below the browser limit and is removed on unsubscribe', t => {
+  t.mock.timers.enable({ apis: ['Date', 'setTimeout'], now: 1_800_000_000_000 });
+  const { browser } = browserHarness(true);
+  initializeAnalytics('G-ABC1234567');
+  let calls = 0;
+  const stop = subscribeConsent(() => { calls++; });
+  for (let i = 0; i < 7; i++) t.mock.timers.tick(2_147_483_647);
+  assert.equal(browser['ga-disable-G-ABC1234567'], false);
+  assert.equal(calls, 8);
+  t.mock.timers.tick(CONSENT_MAX_AGE_MS - 7 * 2_147_483_647);
+  assert.equal(browser['ga-disable-G-ABC1234567'], true);
+  stop();
+  browser.dispatchEvent(new Event('focus'));
+  document.dispatchEvent(new Event('visibilitychange'));
+  assert.equal(calls, 9);
+});
+
+for (const event of ['focus', 'visibilitychange']) {
+  test(`suspended-tab ${event} rechecks expiry without waiting for its timer`, t => {
+    const now = 1_800_000_000_000;
+    t.mock.timers.enable({ apis: ['Date', 'setTimeout'], now });
+    const { browser } = browserHarness(true);
+    initializeAnalytics('G-ABC1234567');
+    const stop = subscribeConsent(() => {});
+    t.mock.timers.setTime(now + CONSENT_MAX_AGE_MS);
+    (event === 'focus' ? browser : document).dispatchEvent(new Event(event));
+    assert.equal(browser['ga-disable-G-ABC1234567'], true);
+    stop();
+  });
+}
 
 test('consent initializes once, leaves ads denied and relies on automatic page views', () => {
   const { commands } = browserHarness(true);
