@@ -33,7 +33,7 @@ export async function reserveQuota(day: string, visitor: string) {
     WHERE "VehicleStyleQuota"."used" < ${DAILY_LIMIT} AND NOT (${visitor} = ANY("VehicleStyleQuota"."visitors"))
     RETURNING "used"`;
   if (!rows.length) return { reserved: false, ...await readQuota(day, visitor) };
-  const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  const cutoff = new Date(Date.now() + 7 * 60 * 60 * 1000 - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
   await prisma.$executeRaw`DELETE FROM "VehicleStyleQuota" WHERE "day" < ${cutoff}`;
   return { reserved: true, remaining: DAILY_LIMIT - rows[0].used, error: '' };
 }
