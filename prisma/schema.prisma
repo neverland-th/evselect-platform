@@ -12,6 +12,13 @@ datasource db {
   provider = "postgresql"
 }
 
+// Short-lived, day-scoped trial counters. Visitor hashes rotate daily.
+model VehicleStyleQuota {
+  day      String   @id
+  used     Int
+  visitors String[]
+}
+
 model Category {
   id        String    @id @default(cuid())
   name      String    @unique

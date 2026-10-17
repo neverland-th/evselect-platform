@@ -1,7 +1,16 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Palette, SlidersHorizontal } from 'lucide-react';
+import VehicleStyleEditor from './VehicleStyleEditor';
 
 export default function VehicleStyleFeature() {
+  const [open, setOpen] = useState(false);
+  const editor = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (open) editor.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [open]);
   return (
     <section id="vehicle-style" aria-labelledby="home-vehicle-style-title" className="scroll-mt-28 border-b border-slate-700 bg-[#0b0d10] text-slate-100">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-5 py-8 lg:grid-cols-[1.1fr_1fr] lg:gap-14 lg:px-8 lg:py-12">
@@ -10,10 +19,10 @@ export default function VehicleStyleFeature() {
           <h2 id="home-vehicle-style-title" className="text-2xl font-bold leading-snug lg:text-3xl">ลองสีรถและล้อ<br /><span className="text-lime-300">จากรูปคันเดิมของคุณ</span></h2>
           <p className="mt-3 max-w-lg text-sm leading-7 text-slate-300 lg:mt-4 lg:text-base lg:leading-8"><span className="lg:hidden">เลือกลุคที่ชอบ แล้วลากเทียบก่อน–หลังในภาพเดียว</span><span className="hidden lg:inline">อยากเปลี่ยนลุค แต่ยังนึกภาพไม่ออก? ลองสีตัวรถ สีล้อ หรือดีไซน์ล้อที่ชอบ แล้วลากเทียบก่อน–หลังในภาพเดียว</span></p>
           <div className="mt-5 flex flex-col gap-1 lg:mt-6 lg:flex-row lg:flex-wrap lg:items-center lg:gap-4">
-            <a href="/vehicle-style/studio" className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 hover:bg-lime-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300 lg:min-h-12 lg:w-auto"><span className="lg:hidden">ลองสีรถและล้อ</span><span className="hidden lg:inline">เริ่มลองลุคใหม่</span><ArrowRight size={18} aria-hidden="true" /></a>
+            <button type="button" aria-expanded={open} aria-controls="home-vehicle-style-editor" onClick={() => { setOpen(true); if (open) editor.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} className="inline-flex min-h-14 w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 hover:bg-lime-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300 lg:min-h-12 lg:w-auto"><span className="lg:hidden">ลองสีรถและล้อ</span><span className="hidden lg:inline">เริ่มลองลุคใหม่</span><ArrowRight size={18} aria-hidden="true" /></button>
             <Link href="/vehicle-style" prefetch={false} className="inline-flex min-h-12 items-center justify-center text-sm text-slate-200 underline underline-offset-4 hover:text-lime-300 lg:justify-start">ดูวิธีใช้งานและข้อควรรู้</Link>
           </div>
-          <p className="mt-2 text-xs leading-6 text-slate-400 lg:mt-4 lg:text-sm lg:leading-7">ต้องใช้รหัสสตูดิโอ · ภาพแนวคิดไม่ยืนยันการติดตั้งหรือ fitment</p>
+          <p className="mt-2 text-xs leading-6 text-slate-400 lg:mt-4 lg:text-sm lg:leading-7">ลองได้ในหน้านี้ ไม่ต้องใส่ API key หรือรหัส · ภาพแนวคิดไม่ยืนยัน fitment</p>
         </div>
         <div className="hidden rounded-2xl border border-slate-600 bg-[#14181d] p-6 lg:block" aria-label="ตัวอย่างตัวเลือกที่ปรับได้ในสตูดิโอ">
           <p className="mb-6 flex items-center gap-2 border-b border-slate-600 pb-4 text-sm font-medium text-slate-200"><SlidersHorizontal size={18} className="text-lime-300" aria-hidden="true" /> ตัวอย่างสิ่งที่คุณปรับได้</p>
@@ -22,6 +31,9 @@ export default function VehicleStyleFeature() {
           <div className="mt-3 rounded-lg border border-slate-500 bg-[#1e252d] p-3"><p className="text-xs text-slate-300">รุ่นหรือดีไซน์ล้อ</p><p className="mt-1 text-sm">พิมพ์ลายที่ชอบ เช่น ล้อ 6 ก้านเรียบ</p></div>
           <p className="mt-4 text-xs leading-6 text-slate-400">ตัวเลขเป็นตัวอย่างการเลือกเพื่อทำภาพแนวคิด ไม่ใช่ขนาดแนะนำสำหรับรถคันใด</p>
         </div>
+      </div>
+      <div id="home-vehicle-style-editor" ref={editor} className="scroll-mt-24" hidden={!open}>
+        {open && <div className="mx-auto max-w-7xl px-4 pb-10 lg:px-8"><VehicleStyleEditor /></div>}
       </div>
     </section>
   );

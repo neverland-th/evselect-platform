@@ -42,7 +42,4 @@ export const pendingPublicRoutes = [
 ] as const;
 
 // Reserve explicit noindex reader tools here; the published setup log is indexable.
-export const supportingPublicRoutes = [] as const;
-
-// Authentication is intentional; never publish the studio in a sitemap.
-export const protectedToolRoutes = ['/vehicle-style/studio'] as const;
+export const supportingPublicRoutes = ['/vehicle-style/studio'] as const;

@@ -6,7 +6,7 @@ import { once } from 'node:events';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { inspectPage, parseSitemap, blockingPages } from './lib/content-links.mjs';
-import { publicSiteRoutes, pendingPublicRoutes, supportingPublicRoutes, protectedToolRoutes, siteOrigin } from '../src/lib/public-site-routes';
+import { publicSiteRoutes, pendingPublicRoutes, supportingPublicRoutes, siteOrigin } from '../src/lib/public-site-routes';
 
 const args = new Set(process.argv.slice(2));
 let base = (process.env.BASE_URL || 'http://127.0.0.1:4327').replace(/\/$/, '');
@@ -79,9 +79,6 @@ async function main() {
         if (!extraTargets.has(requestPath)) {
           const response = await get(requestPath);
           extraTargets.set(requestPath, response.status);
-          if ((protectedToolRoutes as readonly string[]).includes(target) && response.status === 401) {
-            assert.match(response.headers.get('www-authenticate') || '', /^Basic /, `Protected tool challenge ${target}`);
-          }
           if (!destination && response.status === 200 && response.headers.get('content-type')?.includes('text/html')) {
             destination = inspectPage(await response.text(), target);
             byRoute.set(target, destination);
@@ -89,8 +86,7 @@ async function main() {
             pages.push(destination);
           }
         }
-        const expectedStatus = (protectedToolRoutes as readonly string[]).includes(target) ? 401 : 200;
-        if (extraTargets.get(requestPath) !== expectedStatus) page.issues.push({ code: 'broken-target', detail: `${link.text} → ${link.href} (${extraTargets.get(requestPath)})` });
+        if (extraTargets.get(requestPath) !== 200) page.issues.push({ code: 'broken-target', detail: `${link.text} → ${link.href} (${extraTargets.get(requestPath)})` });
       }
       if (hash && destination && !destination.ids.includes(hash)) page.issues.push({ code: 'missing-hash', detail: `${link.text} → ${link.href}` });
       if (destination) link.destinationTitle = destination.title;

@@ -12,12 +12,11 @@ The linked article URLs are the real HTML originals, not invented `.md` routes.
 Markdown link/tab behavior belongs to the consuming renderer; HTML link rules
 on the site remain unchanged.
 
-The owner confirmed free end-user access to Vehicle Style on 2026-10-18. The
-index also discloses the actual studio-code requirement, no personal API-key
-entry, and the Concept preview / no-fitment-guarantee boundary. This does not
-claim that provider API calls are free, that access is unlimited, or that a
-logged-out visitor can generate an image without a studio code. No billing or
-authentication behavior was changed or tested by making paid image calls.
+The owner confirmed public access without personal API keys or studio codes on
+2026-10-18. The index describes the Home editor, one attempt per network/day,
+the shared five-attempt daily limit, and the Concept preview / no-fitment-guarantee
+boundary. Provider API calls are billed to the operator; this is a limited public
+trial, not unlimited access or a claim that the provider API is free.
 
 ## Purpose and limits
 
