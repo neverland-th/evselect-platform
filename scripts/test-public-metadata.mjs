@@ -80,3 +80,24 @@ test('Home prioritizes the hero without removing off-screen content or weakening
   assert.ok(report?.includes("object-src 'none'"));
   assert.ok(!report.includes('upgrade-insecure-requests'), 'Do not send the ignored report-only directive');
 });
+
+test('Toolbar images stay scoped to the site; the public tool keeps the private service protected', async () => {
+  const home = await fetch(base);
+  const report = home.headers.get('content-security-policy-report-only');
+  const images = report?.split(';').map(value => value.trim()).find(value => value.startsWith('img-src '));
+  assert.ok(images?.includes('https://vercel.live'));
+  assert.ok(images?.includes('https://vercel.com'));
+  assert.equal(home.headers.get('content-security-policy'), 'upgrade-insecure-requests');
+  const studio = await fetch(new URL('/vehicle-style/studio', base));
+  assert.equal(studio.status, 200, 'Owner-approved public editor has no login challenge');
+  assert.equal(studio.headers.get('www-authenticate'), null);
+  const privateService = await fetch('https://evselects-vehicle-style-evselects-com.vercel.app/api/status');
+  assert.equal(privateService.status, 401, 'The underlying image service remains private');
+  assert.match(privateService.headers.get('www-authenticate') ?? '', /^Basic /);
+  const policy = privateService.headers.get('content-security-policy');
+  for (const directive of ["script-src 'self'", "img-src 'self' data: blob:", "connect-src 'self'", "frame-ancestors 'none'"]) {
+    assert.ok(policy?.includes(directive), `Preserve studio ${directive}`);
+  }
+  assert.doesNotMatch(policy, /vercel\.live|vercel\.com|unsafe-inline|unsafe-eval/);
+  assert.equal(studio.headers.get('x-frame-options'), 'SAMEORIGIN');
+});

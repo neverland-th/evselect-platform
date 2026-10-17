@@ -205,3 +205,15 @@ test('Home and the shared footer retain the reviewed accessible text and target 
     assert.ok(models.classList.contains(utility), `Model links retain ${utility}`);
   }
 });
+
+test('The home brand link beside photo credits has its own minimum touch target', () => {
+  const brand = document.querySelector('#tesla-accessories .mt-3 > a[href="/"]');
+  assert.equal(brand?.textContent, 'EVSELECTS');
+  assert.equal(brand.getAttribute('target'), null, 'Home navigation stays in this tab');
+  for (const utility of ['inline-flex', 'min-h-6', 'min-w-6', 'items-center', 'mx-1']) {
+    assert.ok(brand.classList.contains(utility), `Keep the scoped touch target utility ${utility}`);
+  }
+  assert.ok(brand.classList.contains('focus-visible:outline-2'));
+  assert.equal(brand.previousElementSibling?.getAttribute('href'), '/image-credits#image-45');
+  // This SSR guard is not a geometry test: verify dimensions and wrapping in a browser too.
+});
