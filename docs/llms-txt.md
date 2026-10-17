@@ -1,7 +1,7 @@
 # Optional agent index
 
 `public/llms.txt` is served at https://evselects.com/llms.txt as UTF-8 plain text
-containing Markdown. It is a small, curated Thai index of 21 public resources,
+containing Markdown. It is a small, curated Thai index of 22 public resources,
 not a copy of every article. The H1 is a plain machine-resource site name; it is
 not a new HTML heading or a change to visible brand-link components.
 
@@ -11,6 +11,13 @@ structured data, crawler permissions or sitemap entries were changed.
 The linked article URLs are the real HTML originals, not invented `.md` routes.
 Markdown link/tab behavior belongs to the consuming renderer; HTML link rules
 on the site remain unchanged.
+
+The owner confirmed free end-user access to Vehicle Style on 2026-10-18. The
+index also discloses the actual studio-code requirement, no personal API-key
+entry, and the Concept preview / no-fitment-guarantee boundary. This does not
+claim that provider API calls are free, that access is unlimited, or that a
+logged-out visitor can generate an image without a studio code. No billing or
+authentication behavior was changed or tested by making paid image calls.
 
 ## Purpose and limits
 

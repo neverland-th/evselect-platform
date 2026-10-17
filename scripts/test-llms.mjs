@@ -86,3 +86,19 @@ test('The summary preserves current pre-launch status and does not replace crawl
   const sitemap = await (await get('/sitemap.xml')).text();
   assert.ok(!sitemap.includes('/llms.txt'), 'The human-page sitemap stays focused on canonical pages');
 });
+
+test('Vehicle Style is described as a free preview with the actual access requirements', async () => {
+  // Free end-user access was explicitly confirmed by the site owner. This is
+  // not a claim that image-provider API calls are free or access is unlimited.
+  assert.match(content, /แอป Vehicle Style ให้ลองแต่งรถฟรีผ่านเว็บ/);
+  assert.match(content, /ต้องขอรหัสสตูดิโอจากทีมงานก่อนเข้าใช้งาน/);
+  assert.match(content, /Concept preview ไม่ใช่ภาพสินค้าหรือหลักฐานว่าอุปกรณ์ใช้กับรถจริงได้/);
+  assert.equal(entries.filter(([, , href]) => href === `${canonicalOrigin}/vehicle-style`).length, 1);
+  assert.doesNotMatch(content, /ฟรีไม่จำกัด|API ฟรี|ไม่ต้องใช้รหัส/);
+  const { document } = parseHTML(await (await get('/vehicle-style')).text());
+  const text = document.querySelector('main')?.textContent || '';
+  assert.match(text, /ใช้รหัสสตูดิโอเพื่อเข้าใช้งาน/);
+  assert.match(text, /ไม่ต้องกรอก API key ส่วนตัว/);
+  assert.match(text, /Concept preview/);
+  assert.ok(document.querySelector('main a[href="/vehicle-style/studio"]'));
+});
