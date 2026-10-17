@@ -28,6 +28,11 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      // Optional agent discovery, not a crawler permission or ranking directive.
+      ...['/', '/articles/:path*'].map(source => ({
+        source,
+        headers: [{ key: 'Link', value: '</llms.txt>; rel="describedby"' }],
+      })),
       {
         source: '/(.*)',
         headers: [
