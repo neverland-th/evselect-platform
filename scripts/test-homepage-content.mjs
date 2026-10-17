@@ -188,3 +188,20 @@ test('Home retains existing anchors, adds contextual links and obeys tab policy'
   assert.equal(source?.getAttribute('target'), '_blank');
   assert.equal(source?.getAttribute('rel'), 'noopener noreferrer');
 });
+
+test('Home and the shared footer retain the reviewed accessible text and target styles', () => {
+  // Guard the six contrast failures reported by Vercel. Actual contrast and
+  // target dimensions must also be checked in the rendered browser with axe.
+  const numbers = [...document.querySelectorAll('#choose-your-path a > div > span.font-mono')];
+  assert.equal(numbers.length, 3);
+  for (const number of numbers) assert.ok(number.classList.contains('text-slate-600'));
+  const footer = document.querySelector('footer');
+  const copyright = footer.querySelector('div.mt-12');
+  assert.ok(copyright.classList.contains('text-zinc-400'));
+  assert.ok(copyright.querySelector('p.font-mono').classList.contains('text-zinc-400'));
+  const models = footer.querySelector('a[href="/articles/byd-atto-3-review"]').closest('ul');
+  assert.equal(models.querySelectorAll('a').length, 10);
+  for (const utility of ['[&_a]:inline-flex', '[&_a]:min-h-6', '[&_a]:min-w-6', '[&_a]:items-center', '[&_a:focus-visible]:outline-2', '[&_a:focus-visible]:outline-offset-4', '[&_a:focus-visible]:outline-lime-300']) {
+    assert.ok(models.classList.contains(utility), `Model links retain ${utility}`);
+  }
+});

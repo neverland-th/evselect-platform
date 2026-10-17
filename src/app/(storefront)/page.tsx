@@ -287,7 +287,7 @@ export default function StorefrontPage() {
                 className="group flex min-h-64 flex-col rounded-3xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-lime-500 hover:shadow-xl hover:shadow-slate-200/70"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-semibold text-slate-400">{eyebrow}</span>
+                  <span className="font-mono text-xs font-semibold text-slate-600">{eyebrow}</span>
                   <span className="grid h-11 w-11 place-items-center rounded-2xl bg-lime-100 text-lime-800">
                     <Icon className="h-5 w-5" />
                   </span>

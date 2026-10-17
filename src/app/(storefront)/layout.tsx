@@ -141,7 +141,7 @@ export default function StorefrontLayout({
             {/* Supported Models */}
             <div className="space-y-3">
               <h2 className="text-sm font-semibold text-white tracking-wider uppercase">รุ่นรถที่มีบทความ</h2>
-              <ul className="text-xs space-y-2 text-zinc-400">
+              <ul className="text-xs space-y-2 text-zinc-400 [&_a]:inline-flex [&_a]:min-h-6 [&_a]:min-w-6 [&_a]:items-center [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-4 [&_a:focus-visible]:outline-lime-300">
                 <li><Link prefetch={false} href="/articles/byd-atto-3-review" className="underline underline-offset-4 hover:text-lime-400">BYD Atto 3</Link> / <Link prefetch={false} href="/articles/byd-seal-review" className="underline underline-offset-4 hover:text-lime-400">Seal</Link></li>
                 <li><Link prefetch={false} href="/articles/tesla-model-3-highland-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model 3 Highland</Link></li>
                 <li><Link prefetch={false} href="/articles/tesla-model-y-l-premium-6-seater-review" className="underline underline-offset-4 hover:text-lime-400">Tesla Model Y L</Link></li>
@@ -190,9 +190,9 @@ export default function StorefrontLayout({
             </div>
           </div>
 
-          <div className="mt-12 pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+          <div className="mt-12 pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
             <p>© {new Date().getFullYear()} <Link prefetch={false} href="/" className="underline underline-offset-4 hover:text-white">EVSELECTS</Link> Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
-            <p className="font-mono text-[11px] text-zinc-500">
+            <p className="font-mono text-[11px] text-zinc-400">
               DRIVE BETTER. SELECT SMARTER.™
             </p>
           </div>
