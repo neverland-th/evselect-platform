@@ -60,6 +60,18 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // External rewrites inherit this site's headers. Preserve the
+        // standalone studio's enforced policy on its mounted routes.
+        source: '/vehicle-style/studio/:path*',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+          },
+          { key: 'X-Frame-Options', value: 'DENY' },
+        ],
+      },
     ]
   },
   async redirects() {
