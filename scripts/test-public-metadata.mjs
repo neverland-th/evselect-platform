@@ -80,3 +80,24 @@ test('Home prioritizes the hero without removing off-screen content or weakening
   assert.ok(report?.includes("object-src 'none'"));
   assert.ok(!report.includes('upgrade-insecure-requests'), 'Do not send the ignored report-only directive');
 });
+
+test('Toolbar images have scoped report-only permissions without relaxing the studio policy', async () => {
+  const home = await fetch(base);
+  const report = home.headers.get('content-security-policy-report-only');
+  const images = report?.split(';').map(value => value.trim()).find(value => value.startsWith('img-src '));
+  assert.ok(images?.includes('https://vercel.live'));
+  assert.ok(images?.includes('https://vercel.com'));
+  assert.equal(home.headers.get('content-security-policy'), 'upgrade-insecure-requests');
+  const studio = await fetch(new URL('/vehicle-style/studio', base));
+  assert.equal(studio.status, 401, 'Unauthenticated studio still requires its access code');
+  const policy = studio.headers.get('content-security-policy');
+  for (const directive of ["script-src 'self'", "img-src 'self' data: blob:", "connect-src 'self'", "frame-ancestors 'none'"]) {
+    assert.ok(policy?.includes(directive), `Preserve studio ${directive}`);
+  }
+  assert.doesNotMatch(policy, /vercel\.live|vercel\.com|unsafe-inline|unsafe-eval/);
+  // next start proxies the upstream response headers differently from Vercel.
+  // frame-ancestors is checked above on both; require the edge override live.
+  if (!['127.0.0.1', 'localhost', '[::1]'].includes(new URL(base).hostname)) {
+    assert.equal(studio.headers.get('x-frame-options'), 'DENY');
+  }
+});
