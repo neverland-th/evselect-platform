@@ -1,5 +1,35 @@
 # Home SEO, brand and performance release — 2026-10-12
 
+## Final verified outcome
+
+IMPLEMENTED, VERIFIED, DEPLOYED. Live production commit:
+c0666b3e9a1eb183354058f30cbc7fe7cf29b3f8;
+local source commit 2572839ff68864d1aecd629983dcf28d21326e58;
+matching tree 86583588d1f1deba413ea967d937e594c1cd3a83.
+Deployment dpl_DVgvR6tBPW1hL4nV9GDLpJQrRxns verified READY with evselects.com
+and www aliases; production content/metadata/assets were checked separately.
+
+Google PageSpeed Mobile at 2026-10-12 13:17:54 Asia/Bangkok:
+Performance 96, Accessibility 96, Best Practices 100, SEO 100;
+FCP 1.1s, LCP 2.1s, TBT 60ms, CLS 0.098, Speed Index 1.8s.
+https://pagespeed.web.dev/analysis/https-evselects-com/s6lzsjhqbw?form_factor=mobile
+Independent fresh API utility at 13:18:06 also returned Performance 96.
+These are lab runs, not a promise of the same score on every run; no CrUX data
+was available. CLS is below 0.1 but close to the threshold. Thai ranking,
+Google index inclusion, real traffic and AI-answer citations were not verified.
+
+Final live verification: 18/18 Home/indexability/metadata tests PASS;
+29 published page titles/descriptions/identity consistent; 32-page contextual
+audit with 2,164 links, 1,578 internal and zero findings; attribution PASS for
+28 variants, 126 ImageObjects and 67 credits. Both sitemap indexes and the
+29-URL sitemap return 200. No error/fatal runtime groups returned in the
+deployment-scoped last-15-minute query. Native Tesla CTA lands at 112px on
+mobile. Deployed desktop/mobile screenshots saved under
+scratch/home-seo-performance-2026-10-12/, including pagespeed-mobile-96.jpg.
+
+The sections below retain iteration history, including earlier pending gates
+and differing API/UI scores; the final result above supersedes those gates.
+
 ## Requested result
 
 Preserve the existing Thai UI and routes. Reach PageSpeed Mobile 95+ on the live
