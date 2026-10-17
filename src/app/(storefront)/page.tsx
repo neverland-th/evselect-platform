@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import ComingSoonBanner from "@/components/ComingSoonBanner";
 import PrelaunchPanel from "@/components/PrelaunchPanel";
+import VehicleStyleFeature from "@/components/VehicleStyleFeature";
 import EvUpgradeInfographic from "@/components/EvUpgradeInfographic";
 import { damperArticle } from "@/lib/damper-article";
 import { batteryArticle } from "@/lib/battery-article";
@@ -270,6 +271,8 @@ export default function StorefrontPage() {
           </Link>
         </div>
       </section>
+
+      <VehicleStyleFeature />
 
       <section id="choose-your-path" className="scroll-mt-28 border-b border-slate-200 bg-slate-50">
         <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 md:py-16">

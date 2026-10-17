@@ -72,6 +72,9 @@ export default function StorefrontLayout({
 
           {/* Navigation Links */}
           <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <Link href="/vehicle-style" prefetch={false} className="inline-flex min-h-[44px] items-center hover:text-lime-600 transition-colors">
+              ลองสีรถและล้อ
+            </Link>
             <Link href="/#launch" prefetch={false} className="hover:text-lime-600 transition-colors">
               เตรียมเปิดตัว
             </Link>

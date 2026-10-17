@@ -73,6 +73,12 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [{
+      source: '/vehicle-style/studio/:path*',
+      destination: 'https://evselects-vehicle-style-evselects-com.vercel.app/vehicle-style/studio/:path*',
+    }];
+  },
 };
 
 export default nextConfig;
