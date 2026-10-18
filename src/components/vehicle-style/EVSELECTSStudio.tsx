@@ -4,10 +4,14 @@
 // Adapted from the owner-supplied MagicPath crisp-wave-3071 revision 462367477918224384.
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import NextImage from 'next/image';
+import NextImage, { getImageProps } from 'next/image';
 import './EVSELECTSStudio.css';
 import { WHEEL_DIAMETERS, WHEEL_WIDTHS } from '@/lib/vehicle-style/options.js';
-const carbonAfter = '/vehicle-style/demo-concept.webp';
+const carbonAfter = '/vehicle-style/demo-red-user.webp';
+const demoBefore = getImageProps({
+  src: '/images/home/tesla-model-3-white-user.png',
+  width: 1176, height: 733, alt: 'ภาพตัวอย่าง Tesla Model 3 สีขาว',
+}).props.src;
 type Wheel = {
   x: number;
   y: number;
@@ -77,10 +81,6 @@ const DEMO_WHEELS: Wheel[] = [{
   ry: .117,
   angle: -.19
 }];
-const DEMO_MASK = [[.148, .434], [.158, .399], [.19, .384], [.219, .355], [.228, .331], [.251, .29], [.304, .248], [.342, .236], [.43, .237], [.495, .253], [.585, .29], [.687, .402], [.74, .41], [.815, .45], [.852, .487], [.877, .54], [.888, .625], [.89, .69], [.886, .731], [.83, .754], [.592, .744], [.55, .755], [.547, .655], [.53, .57], [.505, .522], [.478, .504], [.452, .521], [.437, .558], [.43, .634], [.437, .716], [.402, .707], [.251, .674], [.231, .653], [.215, .55], [.198, .5], [.18, .489], [.159, .51], [.149, .56]].map(([x, y]) => ({
-  x,
-  y
-}));
 const COLORS = [{
   name: 'Satin Bronze',
   hex: '#aa8354'
@@ -247,16 +247,16 @@ export const EVSELECTSStudio = () => {
     [tab, setTab] = useState('style'),
     [mode, setMode] = useState('compare'),
     [split, setSplit] = useState(44);
-  const [source, setSource] = useState('/vehicle-style/demo-original.jpg'),
+  const [source, setSource] = useState(demoBefore),
     [isDemo, setIsDemo] = useState(true),
-    [demoMask, setDemoMask] = useState(true),
+    [demoMask, setDemoMask] = useState(false),
     [filename, setFilename] = useState('Model 3 · ตัวอย่าง'),
     [base, setBase] = useState<HTMLCanvasElement | null>(null),
     [carbonDemo, setCarbonDemo] = useState(true),
     [afterBase, setAfterBase] = useState<HTMLCanvasElement | null>(null),
     [afterLoading, setAfterLoading] = useState(true);
   const [wheels, setWheels] = useState<Wheel[]>(DEMO_WHEELS),
-    [mask, setMask] = useState<Point[]>(DEMO_MASK),
+    [mask, setMask] = useState<Point[]>([]),
     [placing, setPlacing] = useState<number | null>(null),
     [masking, setMasking] = useState(false),
     [, setActiveWheel] = useState(1);
@@ -347,7 +347,7 @@ export const EVSELECTSStudio = () => {
       const x = c.getContext('2d')!;
       x.fillStyle = '#252626';
       x.fillRect(0, 0, W, H);
-      if (isDemo) x.drawImage(img, 500, 460, 1200, 700, 0, 0, W, H);else {
+      {
         const r = Math.min(W / img.width, H / img.height);
         x.drawImage(img, (W - img.width * r) / 2, (H - img.height * r) / 2, img.width * r, img.height * r);
       }
@@ -380,7 +380,9 @@ export const EVSELECTSStudio = () => {
       const c = document.createElement('canvas');
       c.width = W;
       c.height = H;
-      c.getContext('2d')!.drawImage(img, 0, 0, W, H);
+      // The supplied After file is a 2304x1344 image plus a 64px export footer.
+      // Display its image area in the same frame as Before; add one footer on export.
+      c.getContext('2d')!.drawImage(img, 0, 0, W, H, 0, 0, W, H);
       setAfterBase(c);
       setAfterLoading(false);
     };
@@ -438,7 +440,7 @@ export const EVSELECTSStudio = () => {
       c.fillRect(0, 0, W, H);
       c.restore();
     }
-    if (!carbonDemo || settings.wheelEdited) wheels.forEach(w => drawRim(c, w, settings));
+    if (!carbonDemo) wheels.forEach(w => drawRim(c, w, settings));
   }, [base, afterBase, carbonDemo, generated, settings, wheels, mask, demoMask]);
   const update = (patch: Partial<Settings>) => {
     setHistory(h => [...h.slice(-19), settings]);
@@ -683,8 +685,8 @@ export const EVSELECTSStudio = () => {
     setMasking(false);
     if (isDemo) {
       setWheels(DEMO_WHEELS);
-      setMask(DEMO_MASK);
-      setDemoMask(true);
+      setMask([]);
+      setDemoMask(false);
     }
     setToast('คืนค่าการแต่งเริ่มต้นแล้ว');
   };
@@ -729,9 +731,9 @@ export const EVSELECTSStudio = () => {
                 left: w.x * 100 + '%',
                 top: w.y * 100 + '%'
               }}><Icon name="plus" size={26} /><b>{i === 0 ? 'ล้อหลัง' : 'ล้อหน้า'}</b></span>)}{(placing !== null || masking) && <div className="lt-edit-banner">{masking ? 'แตะรอบขอบตัวถัง แล้วกด “ใช้พื้นที่นี้”' : `แตะกึ่งกลาง${placing === 0 ? 'ล้อหลัง' : 'ล้อหน้า'}บนรูป`}</div>}
- <div className="lt-scene-caption"><span><i />CONCEPT PREVIEW</span><p>{generated ? 'AI generated design · Concept preview' : <>{carbonDemo && !settings.wheelEdited ? 'White Carbon' : wheelName(settings)}<b>/</b>{colorLabel}<b>/</b>{settings.finish}</>}</p></div>{drag && <div className="lt-drop-overlay"><Icon name="upload" size={35} />วางรูปเพื่อเริ่มแต่ง</div>}</div>
+ <div className="lt-scene-caption"><span><i />CONCEPT PREVIEW</span><p>{generated ? 'AI generated design · Concept preview' : <>{carbonDemo && !settings.wheelEdited ? 'Red Carbon' : wheelName(settings)}<b>/</b>{colorLabel}<b>/</b>{settings.finish}</>}</p></div>{drag && <div className="lt-drop-overlay"><Icon name="upload" size={35} />วางรูปเพื่อเริ่มแต่ง</div>}</div>
  <div className="lt-viewer-bottom"><span><Icon name="compare" size={16} />{mode === 'compare' ? 'เลื่อนเพื่อดูความแตกต่าง' : 'ลองไอเดียให้เป็นภาพ'}</span><div className="lt-segment">{[['original', 'ภาพเดิม'], ['compare', 'เปรียบเทียบ'], ['concept', 'คอนเซ็ปต์']].map(([id, label]) => <button key={id} className={mode === id ? 'selected' : ''} onClick={() => setMode(id)}>{label}</button>)}</div><button className="lt-reset" disabled={generating} onClick={reset}>รีเซ็ต</button></div></div>
- {carbonDemo && <div className="lt-after-note"><Icon name="spark" size={15} /><span><strong>ภาพตัวอย่าง · WHITE CARBON</strong> สีขาว โหลดเตี้ย ฝากระโปรงและชุดแต่งคาร์บอน · Concept preview</span></div>}
+ {carbonDemo && <div className="lt-after-note"><Icon name="spark" size={15} /><span><strong>ภาพตัวอย่าง · RED CARBON</strong> สีแดง ล้อบรอนซ์ ฝากระโปรงและชุดแต่งคาร์บอน · Concept preview</span></div>}
  <div className="lt-upload-card" onDragOver={e => e.preventDefault()} onDrop={e => {
             e.preventDefault();
             loadFile(e.dataTransfer.files[0]);

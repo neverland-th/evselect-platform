@@ -27,11 +27,16 @@ supplied app's high-resolution generation path (2304x1344/high/JPEG). Colour/whe
 requests continue using the established medium-quality options path. Explicit consent and quota readiness are
 required before submission; no requests retry automatically. The single image
 comparison, custom colours, local upload and labelled PNG export remain available.
-The two demo images supplied with that revision are hosted as
-`public/vehicle-style/demo-original.jpg` and `demo-concept.webp`. Google Storage
-did not provide canvas CORS access from the website; same-origin copies permit
-both the comparison and local PNG export without a proxy or credentials. They
-are labelled example/concept images, not a newly paid result or fitment evidence.
+The owner subsequently replaced the demo pair with `tesla model3.png` (Before)
+and `red tesla.png` (After). Before exactly matches the existing Home white-car
+asset, reused through Next's same-origin image optimizer. After is delivered as
+`public/vehicle-style/demo-red-user.webp` (253,106 bytes, encoded from the supplied
+PNG without generating new artwork). Its original 64px export footer is excluded
+when drawing the 2304x1344 comparison area, so the app adds only one footer on
+download. Both canvases keep the same frame; the old car-specific crop/mask and
+automatic wheel overlay on the supplied example are disabled. Uploaded-photo and
+AI generation paths remain available. The images are labelled examples/concepts,
+not a newly paid result or fitment evidence. Earlier demo assets are unused.
 The previous vanilla client/template remain for reference and compatibility; they
 are no longer mounted on Home. Keep option IDs and validation compatible with the
 image service. Test fixtures and credentials must never enter public assets.
@@ -78,3 +83,8 @@ Physical Android device testing remains outstanding.
 Production read checks detected the separately authorized public service change;
 the old 401 expectation was updated to the owner's explicit public-access intent.
 Missing consent is still checked live with a rejected request and no provider call.
+
+The replacement white/red example pair was reviewed at 1440px and 390px, including
+each endpoint of the comparison. The original export footer is absent from the
+viewer; PNG export remains 2304x1408 with one application footer. Mobile has no
+horizontal overflow, and no paid generation was needed for the replacement.
