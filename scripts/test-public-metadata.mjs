@@ -46,7 +46,16 @@ test('Home accessory CTA delivers actual interior selection advice, not just veh
     assert.equal(a.getAttribute('rel'), 'noopener noreferrer');
   }
   assert.equal(document.querySelectorAll('#tesla-accessories article').length, 2, 'Preserve the existing photo card layout');
-  assert.equal(document.querySelectorAll('link[rel="stylesheet"]').length, 0, 'Built Home receives styles inline');
+  const stylesheets = [...document.querySelectorAll('link[rel="stylesheet"]')];
+  assert.ok(stylesheets.length <= 1, 'Only the dynamically imported studio may have a stylesheet chunk');
+  for (const stylesheet of stylesheets) {
+    const url = new URL(stylesheet.getAttribute('href'), base);
+    assert.equal(url.origin, new URL(base).origin);
+    assert.match(url.pathname, /^\/_next\/static\/(?:immutable\/)?chunks\/[^/]+\.css$/);
+    const css = await (await fetch(url)).text();
+    assert.match(css, /\.lt-app/);
+    assert.doesNotMatch(css, /@font-face|(?:^|\})\s*(?:html|body)\s*\{/);
+  }
   assert.ok(document.querySelector('img[alt="EVSELECTS"]')?.getAttribute('src').includes('logo-evselects'));
 });
 
@@ -81,7 +90,7 @@ test('Home prioritizes the hero without removing off-screen content or weakening
   assert.ok(!report.includes('upgrade-insecure-requests'), 'Do not send the ignored report-only directive');
 });
 
-test('Toolbar images stay scoped to the site; the public tool keeps the private service protected', async () => {
+test('Toolbar scope and owner-approved public studio access remain intact', async () => {
   const home = await fetch(base);
   const report = home.headers.get('content-security-policy-report-only');
   const images = report?.split(';').map(value => value.trim()).find(value => value.startsWith('img-src '));
@@ -91,10 +100,19 @@ test('Toolbar images stay scoped to the site; the public tool keeps the private 
   const studio = await fetch(new URL('/vehicle-style/studio', base));
   assert.equal(studio.status, 200, 'Owner-approved public editor has no login challenge');
   assert.equal(studio.headers.get('www-authenticate'), null);
-  const privateService = await fetch('https://evselects-vehicle-style-evselects-com.vercel.app/api/status');
-  assert.equal(privateService.status, 401, 'The underlying image service remains private');
-  assert.match(privateService.headers.get('www-authenticate') ?? '', /^Basic /);
-  const policy = privateService.headers.get('content-security-policy');
+  // The owner separately opened the MagicPath service publicly on 2026-10-18.
+  // Its public access is independent of Home's database-enforced trial quota.
+  const serviceOrigin = 'https://evselects-vehicle-style-evselects-com.vercel.app';
+  const service = await fetch(serviceOrigin + '/api/status');
+  assert.equal(service.status, 200);
+  assert.equal(service.headers.get('www-authenticate'), null);
+  assert.equal(typeof (await service.json()).ready, 'boolean');
+  const invalid = await fetch(serviceOrigin + '/api/preview', {
+    method: 'POST', headers: { Origin: serviceOrigin, 'Content-Type': 'application/json', 'X-Studio-Request': '1' },
+    body: JSON.stringify({ consent: false }),
+  });
+  assert.equal(invalid.status, 400, 'Missing consent is rejected before any provider call');
+  const policy = service.headers.get('content-security-policy');
   for (const directive of ["script-src 'self'", "img-src 'self' data: blob:", "connect-src 'self'", "frame-ancestors 'none'"]) {
     assert.ok(policy?.includes(directive), `Preserve studio ${directive}`);
   }

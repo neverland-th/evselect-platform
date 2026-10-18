@@ -71,3 +71,22 @@ test('Public status exposes quota and readiness only', async () => {
   const body = await response.json(); assert.equal(body.ready, true); assert.equal(body.remaining, 5);
   assert.ok(!JSON.stringify(body).includes('test-only-service-code'));
 });
+
+test('MagicPath freeform descriptions preserve the high-resolution service path', async () => {
+  const prompt = 'สีขาว โหลดเตี้ย ฝากระโปรง carbon fiber ล้อบรอนซ์';
+  const response = await studioPreview(request({ consent: true, image: input.image, stylePrompt: prompt }), {
+    config, reserve: unused, fetch: async (_url, init) => {
+      const body = JSON.parse(String(init?.body));
+      assert.equal(body.stylePrompt, prompt);
+      assert.equal(body.notes, undefined);
+      return Response.json({ image: input.image });
+    },
+  });
+  assert.equal(response.status, 200);
+  for (const stylePrompt of ['', ' ', 123, 'x'.repeat(2001)]) {
+    const invalid = await studioPreview(request({ ...input, stylePrompt }), {
+      config, reserve: async () => { throw Error('must not reserve'); },
+    });
+    assert.equal(invalid.status, 400);
+  }
+});

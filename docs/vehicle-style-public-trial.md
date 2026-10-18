@@ -6,11 +6,12 @@ Home directly renders the Thai MagicPath editor, without an extra launch button;
 The noindex tool is excluded from the sitemap; `/vehicle-style` remains the
 public guide. The main site keeps its established layout and security headers.
 
-## Private image service
+## Image service
 
-The existing `evselects-vehicle-style` backend and Android APK retain their
-authentication. Only Next.js server routes use `VEHICLE_STYLE_SERVICE_CODE`, a
-production Secret, to call that service. OpenAI credentials remain in that
+The separate `evselects-vehicle-style` service was deliberately made public for
+MagicPath in the owner's other task on 2026-10-18. This Home release does not
+change that deployment or its access settings. Next.js server routes continue
+using `VEHICLE_STYLE_SERVICE_CODE`, a production Secret. OpenAI credentials remain in that
 backend. No credential is sent to the visitor, saved in the frontend, or checked
 into source. Responses are streamed and never cached. No image is stored by the
 Home editor or quota database; users must save results before leaving.
@@ -21,8 +22,9 @@ revision `462367477918224384` was imported as the namespaced React component
 Vite scaffold, external fonts, global reset or unused package dependencies.
 Wheel controls retain the existing diameter/width choices and free text design.
 The imported component calls only the same-origin public facade. Its styling text
-maps to the existing `notes` field (600 characters), preserving the established
-image-service request and cost settings. Explicit consent and quota readiness are
+uses the service's existing `stylePrompt` field (2,000 characters), preserving the
+supplied app's high-resolution generation path (2304x1344/high/JPEG). Colour/wheel-only
+requests continue using the established medium-quality options path. Explicit consent and quota readiness are
 required before submission; no requests retry automatically. The single image
 comparison, custom colours, local upload and labelled PNG export remain available.
 The two demo images supplied with that revision are hosted as
@@ -32,14 +34,17 @@ both the comparison and local PNG export without a proxy or credentials. They
 are labelled example/concept images, not a newly paid result or fitment evidence.
 The previous vanilla client/template remain for reference and compatibility; they
 are no longer mounted on Home. Keep option IDs and validation compatible with the
-private service. Test fixtures and credentials must never enter public assets.
+image service. Test fixtures and credentials must never enter public assets.
 
 ## Shared quota
 
 The additive Prisma migration creates only `VehicleStyleQuota`, separate from
 commerce tables. An atomic PostgreSQL upsert reserves one attempt per network
 per Bangkok calendar day, with a shared hard limit of five attempts/day across
-instances and deployments. The Vercel-overwritten client-IP header is HMACed with
+the main website's instances and deployments. This quota covers requests through
+`/api/vehicle-style/preview` only; direct use of the separately public MagicPath
+service is not covered and must not be described as subject to this global cap.
+The Vercel-overwritten client-IP header is HMACed with
 the day and the server credential; raw IPs, prompts and images are not stored.
 Old quota rows are cleaned on the next successful reservation after seven days.
 
@@ -54,6 +59,8 @@ public copy, llms index, and tests together.
 - `tsx --test scripts/test-vehicle-style-api.ts`: origin, validation, quota, private
   credentials, streaming and failure paths without paid provider calls.
 - Existing build, strict content-link and attribution audits remain required.
+- Main site styles remain inline. The dynamically imported app has one same-origin
+  namespaced CSS chunk; metadata checks validate that chunk instead of forbidding it.
 - `BASE_URL=... node --test scripts/test-homepage-content.mjs scripts/test-llms.mjs`.
 - Review the actual Home editor at Android widths and desktop; distinguish local
   fixtures, real image calls, and physical Android picker/export evidence.
@@ -67,3 +74,7 @@ download (2304x1408), keyboard comparison and touch comparison. Widths
 320/360/390/412/768/1440 had no horizontal overflow. No new paid generation was
 submitted for this UI change; the previously verified public service is reused.
 Physical Android device testing remains outstanding.
+
+Production read checks detected the separately authorized public service change;
+the old 401 expectation was updated to the owner's explicit public-access intent.
+Missing consent is still checked live with a rejected request and no provider call.

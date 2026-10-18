@@ -52,9 +52,13 @@ export function validateInput(input) {
   }
   const notes = (input.notes ?? '').trim();
   if (notes.length > 600) throw new RequestError(400, 'NOTES_TOO_LONG', 'รายละเอียดเพิ่มเติมต้องไม่เกิน 600 ตัวอักษร');
-  if (Object.keys(DEFAULTS).filter(group => group !== 'mode').every(group => selected[group].id === 'keep') && details.wheelDiameter === 'keep' && details.wheelWidth === 'keep' && !details.wheelDesign && !notes) {
+  const stylePrompt = input.stylePrompt ?? '';
+  if (typeof stylePrompt !== 'string' || stylePrompt.trim().length > 2000 || (input.stylePrompt != null && !stylePrompt.trim())) {
+    throw new RequestError(400, 'INVALID_STYLE_PROMPT', 'กรุณาระบุแนวแต่งไม่เกิน 2,000 ตัวอักษร');
+  }
+  if (Object.keys(DEFAULTS).filter(group => group !== 'mode').every(group => selected[group].id === 'keep') && details.wheelDiameter === 'keep' && details.wheelWidth === 'keep' && !details.wheelDesign && !notes && !stylePrompt.trim()) {
     throw new RequestError(400, 'NO_CHANGES', 'เลือกสิ่งที่อยากเปลี่ยนอย่างน้อยหนึ่งรายการ');
   }
-  return { selected, notes, details, image: input.image };
+  return { selected, notes, details, stylePrompt: stylePrompt.trim(), image: input.image };
 }
 
