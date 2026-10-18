@@ -64,12 +64,12 @@ test('Home prioritizes the hero without removing off-screen content or weakening
   const { document } = parseHTML(await response.text());
   const hero = document.querySelector('main img');
   const preload = [...document.querySelectorAll('link[rel="preload"][as="image"]')]
-    .find(link => (link.getAttribute('imagesrcset') || link.getAttribute('imageSrcSet') || '').includes('tesla-model-3-white-user'));
+    .find(link => (link.getAttribute('imagesrcset') || link.getAttribute('imageSrcSet') || '').includes('tesla-model-3-performance-2024'));
   assert.ok(preload, 'Responsive hero preload is in server HTML');
   assert.equal(hero.getAttribute('loading'), 'eager');
   assert.equal(hero.getAttribute('decoding'), 'sync', 'Present the primary image with the initial paint');
-  assert.equal(hero.getAttribute('width'), '1176');
-  assert.equal(hero.getAttribute('height'), '733');
+  assert.equal(hero.getAttribute('width'), '1280');
+  assert.equal(hero.getAttribute('height'), '640');
   for (const id of ['ev-accessories', 'tesla-accessories', 'home-faq', 'launch']) {
     assert.ok(document.getElementById(id)?.textContent.trim().length > 150, `${id} stays readable in HTML`);
   }

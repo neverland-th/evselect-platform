@@ -11,11 +11,20 @@ export const viewport: Viewport = {
 };
 
 const promptFont = Prompt({
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
   // Thai copy mixes EV/Tesla/model names with Thai glyphs. Preload both to avoid
   // a late Latin-font request/repaint after the hero has already downloaded.
   subsets: ["thai", "latin"],
   variable: "--font-thai",
+});
+
+// Preserve the same Prompt faces, but do not preload the light/medium weights
+// used further down the page ahead of the hero image and first-screen text.
+const promptSecondaryFont = Prompt({
+  weight: ["300", "500"],
+  subsets: ["thai", "latin"],
+  variable: "--font-thai-secondary",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -44,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th" className={`${promptFont.variable} antialiased`}>
+    <html lang="th" className={`${promptFont.variable} ${promptSecondaryFont.variable} antialiased`}>
       <body className="min-h-screen bg-white text-slate-900 font-sans antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(siteIdentitySchema) }} />
         {children}

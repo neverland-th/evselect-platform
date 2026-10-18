@@ -37,3 +37,19 @@ test('Off-screen canvas/image and status work is visibility gated with interacti
   assert.equal((source.match(/if \(!active\) return;/g) || []).length, 3);
   assert.match(source, /return \(\) => observer\.disconnect\(\)/);
 });
+
+test('Keep all original Prompt weights while preloading only first-screen font faces', async () => {
+  const { document } = parseHTML(await (await fetch(base)).text());
+  const css = [...document.querySelectorAll('style')].map(style => style.textContent).join('\n');
+  const preloaded = new Set([...document.querySelectorAll('link[rel="preload"][as="font"]')].map(link => link.getAttribute('href')));
+  const faces = [...css.matchAll(/@font-face\{([^}]+)\}/g)].map(match => match[1]).filter(face => face.includes('font-family:Prompt;'));
+  assert.equal(preloaded.size, 8, 'Four first-screen weights, each in Thai and Latin');
+  for (const weight of ['300', '400', '500', '600', '700', '800']) {
+    for (const subset of ['U+E01-E5B', 'U+??']) {
+      const face = faces.find(face => face.includes(`font-weight:${weight};`) && face.includes(subset));
+      assert.ok(face, `Original Prompt ${weight} ${subset} remains available`);
+      const href = face.match(/url\(([^)]+)\)/)?.[1];
+      assert.equal(preloaded.has(href), !['300', '500'].includes(weight), `Preload policy for ${weight} ${subset}`);
+    }
+  }
+});

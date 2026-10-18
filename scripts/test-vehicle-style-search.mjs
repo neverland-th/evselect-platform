@@ -46,7 +46,7 @@ test('Hero makes the free trial clear while retaining the accessory path, layout
   assert.equal(hero.querySelector('a[href="#ev-accessories"]')?.textContent.trim(), 'ดูไอเดียของแต่ง');
   assert.match(hero.textContent, /1 ครั้งต่อเครือข่ายต่อวัน.*โควตารวม 5 ครั้งต่อวัน/);
   assert.match(hero.textContent, /ภาพแนวคิดจาก AI ไม่ยืนยันการติดตั้งจริง/);
-  assert.ok(hero.querySelector('img')?.getAttribute('src').includes('tesla-model-3-white-user'));
+  assert.ok(hero.querySelector('img')?.getAttribute('src').includes('tesla-model-3-performance-2024'));
   assert.ok(hero.querySelector('a[href="/articles/tesla-model-3-highland-review"] img'));
   assert.ok(hero.nextElementSibling.id === 'vehicle-style', 'The app stays after the existing hero');
   const description = document.querySelector('meta[name="description"]').getAttribute('content');

@@ -21,6 +21,7 @@ import ComingSoonBanner from "@/components/ComingSoonBanner";
 import PrelaunchPanel from "@/components/PrelaunchPanel";
 import VehicleStyleFeature from "@/components/VehicleStyleFeature";
 import { vehicleStylePublicInfo } from '@/lib/vehicle-style/public-info';
+import { imageCredits } from '@/lib/image-credits';
 import EvUpgradeInfographic from "@/components/EvUpgradeInfographic";
 import { damperArticle } from "@/lib/damper-article";
 import { batteryArticle } from "@/lib/battery-article";
@@ -39,9 +40,9 @@ export const metadata: Metadata = withPublicMetadata("/", {
     siteName: "EVSELECTS",
     locale: "th_TH",
     type: "website",
-    images: [{ url: "/images/home/tesla-model-3-white-user.png", width: 1176, height: 733, alt: "Tesla Model 3 สีขาว มุมเฉียงด้านหน้า พร้อมล้อสีดำ" }],
+    images: [{ url: "/images/editorial/tesla-model-3-performance-2024.png", width: 1280, height: 640, alt: "Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย" }],
   },
-  twitter: { card: "summary_large_image", title, description, images: ["/images/home/tesla-model-3-white-user.png"] },
+  twitter: { card: "summary_large_image", title, description, images: ["/images/editorial/tesla-model-3-performance-2024.png"] },
 });
 
 const journeys = [
@@ -197,15 +198,15 @@ export default function StorefrontPage() {
   // This static hero has no blur placeholder or load callbacks. Keep Next's
   // optimizer/srcset, but render it on the server without Image client state.
   const { props: heroImageProps } = getImageProps({
-    src: "/images/home/tesla-model-3-white-user.png",
-    alt: "Tesla Model 3 สีขาว มุมเฉียงด้านหน้า พร้อมล้อสีดำ",
-    width: 1176,
-    height: 733,
+    src: "/images/editorial/tesla-model-3-performance-2024.png",
+    alt: "Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย",
+    width: 1280,
+    height: 640,
     loading: "eager",
     fetchPriority: "high",
     decoding: "sync",
-    sizes: "(max-width: 1023px) 100vw, 55vw",
-    className: "absolute inset-0 h-auto w-full object-contain object-top transition-transform duration-700 group-hover:scale-[1.025] sm:h-full lg:object-cover lg:object-center",
+    sizes: "(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) calc(54vw - 52px), 640px",
+    className: "absolute inset-0 h-auto w-full object-contain object-top transition-transform duration-700 group-hover:scale-[1.025] sm:h-full",
   });
   preload(heroImageProps.src, {
     as: "image", imageSrcSet: heroImageProps.srcSet,
@@ -213,7 +214,11 @@ export default function StorefrontPage() {
   });
   return (
     <div className="home-content bg-white text-slate-950">
-      <ImageMetadata pagePath="/" />
+      <ImageMetadata pagePath="/" assets={imageCredits
+        // The white owner photo now belongs to the app's canvas demo only;
+        // do not describe it as an editorial img in Home's image metadata.
+        .filter(image => image.pages.includes('/') && image.asset !== '/images/home/tesla-model-3-white-user.png')
+        .map(image => image.asset)} />
       <section data-home-hero className="border-b border-slate-200 bg-slate-950 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 md:py-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
           <div className="flex flex-col justify-between gap-8 lg:py-4">

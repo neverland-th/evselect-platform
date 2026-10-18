@@ -14,15 +14,15 @@ const { document } = parseHTML(html);
 const visibleMain = document.querySelector('main').cloneNode(true);
 for (const script of visibleMain.querySelectorAll('script')) script.remove();
 
-test('Home hero uses the owner-supplied white Model 3 without replacing article photos', async () => {
-  const asset = '/images/home/tesla-model-3-white-user.png';
+test('Home hero uses a credited grey Model 3 Performance, distinct from the white app demo', async () => {
+  const asset = '/images/editorial/tesla-model-3-performance-2024.png';
   const hero = document.querySelector('main img');
   assert.ok(hero, 'The first main-content image is the Home hero');
   const src = hero.getAttribute('src') || '';
   assert.ok(src.includes(asset) || src.includes(encodeURIComponent(asset)));
-  assert.equal(hero.getAttribute('alt'), 'Tesla Model 3 สีขาว มุมเฉียงด้านหน้า พร้อมล้อสีดำ');
-  assert.ok(hero.classList.contains('object-contain'), 'Show the complete supplied car on mobile');
-  assert.ok(hero.classList.contains('lg:object-cover'), 'Preserve the existing desktop hero framing');
+  assert.equal(hero.getAttribute('alt'), 'Tesla Model 3 Performance ปี 2024 สีเทา มองจากด้านหน้าซ้าย');
+  assert.ok(hero.classList.contains('object-contain'), 'Show the complete car on mobile');
+  assert.ok(!hero.classList.contains('lg:object-cover'), 'Keep the wider replacement photo uncropped on desktop too');
   assert.equal(hero.closest('a').getAttribute('href'), '/articles/tesla-model-3-highland-review');
   assert.equal(hero.closest('a').getAttribute('target'), null);
   assert.ok(hero.getAttribute('sizes'), 'Keep responsive delivery');
@@ -30,10 +30,12 @@ test('Home hero uses the owner-supplied white Model 3 without replacing article 
   assert.equal(hero.getAttribute('fetchPriority') ?? hero.getAttribute('fetchpriority'), 'high');
   const images = JSON.parse(document.querySelector('script[data-image-metadata]').textContent)['@graph'];
   const credit = images.find(image => image.contentUrl.endsWith(asset));
-  assert.equal(credit?.creditText, 'ภาพที่เจ้าของเว็บไซต์จัดส่งให้');
-  assert.equal(credit.creator, undefined, 'Do not invent the supplied image photographer');
-  assert.equal(credit.license, undefined, 'Do not copy the old image licence');
-  assert.equal(credit.isBasedOn, undefined, 'Do not invent a manufacturer source');
+  assert.equal(credit?.creditText, 'iMoD Official');
+  assert.equal(credit.creator?.name, 'iMoD Official');
+  assert.equal(credit.license, 'https://creativecommons.org/licenses/by/3.0/');
+  assert.ok(credit.isBasedOn.includes('2024_Tesla_Model_3_Performance_front_view_03.png'));
+  assert.doesNotMatch(src, /tesla-model-3-white-user/);
+  assert.ok(document.querySelector('meta[property="og:image"]')?.getAttribute('content').endsWith(asset));
   assert.ok(document.querySelector('a[href="/articles/tesla-model-3-highland-review"] img[src*="tesla-model-3-hero"]'),
     'The existing red Model 3 article thumbnail remains unchanged');
   const assetResponse = await fetch(new URL(src, base), { signal: AbortSignal.timeout(20000) });
