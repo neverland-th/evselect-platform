@@ -5,7 +5,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import NextImage, { getImageProps } from 'next/image';
-import './EVSELECTSStudio.css';
 import { WHEEL_DIAMETERS, WHEEL_WIDTHS } from '@/lib/vehicle-style/options.js';
 import { VEHICLE_STYLE_MAX_UPLOAD_MB } from '@/lib/vehicle-style/public-info';
 const carbonAfter = '/vehicle-style/demo-red-user.webp';
@@ -244,6 +243,26 @@ function drawRim(c: CanvasRenderingContext2D, w: Wheel, s: Settings) {
   c.restore();
 }
 export const EVSELECTSStudio = () => {
+  const app = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(false);
+  // SSR keeps the complete, correctly sized interface. Off-screen demo image
+  // decoding/canvas work must not compete with the Home hero on mobile.
+  useEffect(() => {
+    const element = app.current;
+    if (!element) return;
+    if (!('IntersectionObserver' in window)) {
+      setActive(true);
+      return;
+    }
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        setActive(true);
+        observer.disconnect();
+      }
+    }, { rootMargin: '0px' });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
   const [settings, setSettings] = useState<Settings>(DEFAULT),
     [tab, setTab] = useState('style'),
     [mode, setMode] = useState('compare'),
@@ -278,7 +297,7 @@ export const EVSELECTSStudio = () => {
       setService({ ready: response.ok && result.ready === true, message: result.message || '', error: result.error || '' });
     } catch { setService({ ready: false, message: '', error: 'ตรวจโควตาไม่ได้ กรุณารีเฟรชหน้าแล้วลองใหม่' }); }
   };
-  useEffect(() => { void refreshStatus(); }, []);
+  useEffect(() => { if (active) void refreshStatus(); }, [active]);
   const [generating, setGenerating] = useState(false);
   const [generated, setGenerated] = useState<HTMLCanvasElement | null>(null);
   const [generationError, setGenerationError] = useState('');
@@ -306,11 +325,12 @@ export const EVSELECTSStudio = () => {
     input = useRef<HTMLInputElement>(null),
     stage = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    if (!active) return;
     try {
       const v = JSON.parse(localStorage.getItem('longtang-concepts-v1') || '[]');
       if (Array.isArray(v)) setSaved(v.slice(0, 6));
     } catch {}
-  }, []);
+  }, [active]);
   useEffect(() => {
     if (!toast) return;
     const t = setTimeout(() => setToast(''), 3500);
@@ -334,6 +354,7 @@ export const EVSELECTSStudio = () => {
     return () => { document.removeEventListener('keydown', fn); previous?.focus(); };
   }, [modal]);
   useEffect(() => {
+    if (!active) return;
     let stale = false;
     setBase(null);
     setLoading(true);
@@ -365,8 +386,9 @@ export const EVSELECTSStudio = () => {
     return () => {
       stale = true;
     };
-  }, [source, isDemo]);
+  }, [source, isDemo, active]);
   useEffect(() => {
+    if (!active) return;
     if (!carbonDemo) {
       setAfterBase(null);
       setAfterLoading(false);
@@ -397,7 +419,7 @@ export const EVSELECTSStudio = () => {
     return () => {
       stale = true;
     };
-  }, [carbonDemo]);
+  }, [carbonDemo, active]);
   useEffect(() => {
     if (!base || !original.current || !concept.current) return;
     const o = original.current.getContext('2d')!,
@@ -693,7 +715,7 @@ export const EVSELECTSStudio = () => {
   };
   const colorLabel = settings.customColor ? `Custom ${settings.color.toUpperCase()}` : COLORS.find(c => c.hex === settings.color)?.name || settings.color.toUpperCase();
   const busy = loading || afterLoading || generating;
-  return <div className="lt-app">
+  return <div ref={app} className="lt-app" onPointerDownCapture={() => setActive(true)} onFocusCapture={() => setActive(true)}>
  <header className="lt-header"><Link href="/" prefetch={false} className="lt-brand"><span className="lt-brandmark"><Icon name="wheel" size={23} /></span><strong>ลองแต่งรถ<span>BY EVSELECTS</span></strong><span className="lt-beta">STUDIO</span></Link><nav><button className="lt-nav-active" onClick={() => setModal('')}>สตูดิโอแต่งรถ</button></nav><div className="lt-header-right"><button className="lt-help" aria-label="วิธีใช้งาน" onClick={() => setModal('help')}><Icon name="help" /> วิธีใช้งาน</button></div></header>
  <div className="lt-main"><div className="lt-intro"><div><div className="lt-eyebrow"><span />YOUR CAR. YOUR VISION.</div><h2 id="home-vehicle-style-title" className="lt-intro-title">คันเดิม <em>มุมมองใหม่.</em></h2><p>ลองสี ล้อ และแนวแต่งบนหน้านี้ · ไม่ต้องใส่ API key หรือรหัสสตูดิโอ</p></div><div className="lt-steps"><span className="done"><b><Icon name="check" size={13} /></b>อัปโหลดรูป</span><i /><span className="active"><b>2</b>ลองแต่ง</span><i /><span><b>3</b>เปรียบเทียบ</span></div></div>
  <div className="lt-workspace"><section className="lt-left"><div className="lt-viewer"><div className="lt-viewer-top"><span className="lt-file"><Icon name="image" size={16} />{filename}<span className="lt-file-badge">{isDemo ? 'DEMO' : 'YOUR PHOTO'}</span></span><div><button aria-label="ย้อนการปรับล่าสุด" disabled={!history.length} onClick={() => {
