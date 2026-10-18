@@ -1,23 +1,18 @@
-import { isIP } from 'node:net';
 import { RequestError, validateInput } from './input.mjs';
-import { quotaIdentity, readQuota, reserveQuota } from './quota';
+import { vehicleStylePublicInfo } from './public-info';
 
 const BACKEND = 'https://evselects-vehicle-style-evselects-com.vercel.app';
 const NO_STORE = { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' };
 const MAX_REQUEST_BYTES = 4_000_000;
-type ServiceConfig = { code: string; ip: string };
+type ServiceConfig = { code: string };
 type Dependencies = {
   config?: (request: Request) => ServiceConfig | null;
   fetch?: typeof fetch;
-  read?: typeof readQuota;
-  reserve?: typeof reserveQuota;
 };
 
-function serviceConfig(request: Request): ServiceConfig | null {
+function serviceConfig(): ServiceConfig | null {
   const code = process.env.VEHICLE_STYLE_SERVICE_CODE;
-  // Vercel overwrites X-Forwarded-For at its edge; do not trust a caller-selected cookie ID.
-  const ip = request.headers.get('x-forwarded-for')?.trim() ?? '';
-  return code && isIP(ip) && process.env.VERCEL_ENV === 'production' ? { code, ip } : null;
+  return code && process.env.VERCEL_ENV === 'production' ? { code } : null;
 }
 const reply = (status: number, body: object) => Response.json(body, { status, headers: NO_STORE });
 const privateHeaders = (code: string) => ({ Authorization: 'Basic ' + Buffer.from('studio:' + code).toString('base64') });
@@ -47,11 +42,9 @@ export async function studioStatus(request: Request, dependencies: Dependencies 
   const config = (dependencies.config ?? serviceConfig)(request);
   if (!config) return reply(503, { ready: false, error: 'กำลังเตรียมเปิดทดลอง อัปโหลดรูปและเลือกสไตล์ไว้ก่อนได้' });
   try {
-    const { day, visitor } = quotaIdentity(config.ip, config.code);
-    const quota = await (dependencies.read ?? readQuota)(day, visitor);
     const upstream = await (dependencies.fetch ?? fetch)(BACKEND + '/api/status', { headers: privateHeaders(config.code), cache: 'no-store', signal: AbortSignal.timeout(10_000) });
     const ready = upstream.ok && (await upstream.json()).ready === true;
-    return reply(200, { ready: ready && quota.allowed, ...quota, error: quota.error || (ready ? '' : 'บริการสร้างภาพยังไม่พร้อมชั่วคราว') });
+    return reply(200, { ready, allowed: ready, unlimited: true, remaining: null, message: vehicleStylePublicInfo.usage, error: ready ? '' : 'บริการสร้างภาพยังไม่พร้อมชั่วคราว' });
   } catch {
     return reply(503, { ready: false, error: 'บริการทดลองยังไม่พร้อมชั่วคราว กรุณาลองใหม่ภายหลัง' });
   }
@@ -66,9 +59,6 @@ export async function studioPreview(request: Request, dependencies: Dependencies
     const input = await parseInput(request);
     const config = (dependencies.config ?? serviceConfig)(request);
     if (!config) return reply(503, { code: 'UNAVAILABLE', error: 'บริการทดลองยังไม่พร้อมชั่วคราว' });
-    const { day, visitor } = quotaIdentity(config.ip, config.code);
-    const quota = await (dependencies.reserve ?? reserveQuota)(day, visitor);
-    if (!quota.reserved) return reply(429, { code: 'DAILY_LIMIT', error: quota.error });
     const upstream = await (dependencies.fetch ?? fetch)(BACKEND + '/api/preview', {
       method: 'POST', cache: 'no-store',
       headers: { ...privateHeaders(config.code), Origin: BACKEND, 'Content-Type': 'application/json', 'X-Studio-Request': '1' },

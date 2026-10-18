@@ -1,54 +1,44 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { studioPreview, studioStatus } from '../src/lib/vehicle-style/api';
-import { quotaIdentity, quotaResult } from '../src/lib/vehicle-style/quota';
 
 const input = { consent: true, image: 'data:image/png;base64,iVBORw0KGgo=', body: 'custom', bodyCustom: 'olive green' };
 const request = (body: unknown = input, origin = 'https://evselects.com') => new Request('https://evselects.com/api/vehicle-style/preview', {
   method: 'POST', headers: { origin, 'Content-Type': 'application/json', 'X-Studio-Request': '1' }, body: JSON.stringify(body),
 });
-const config = () => ({ code: 'test-only-service-code', ip: '192.0.2.1' });
-const unused = async () => ({ reserved: true, remaining: 4, error: '' });
+const config = () => ({ code: 'test-only-service-code' });
 
-test('Daily identities rotate at Bangkok midnight and do not retain raw IPs', () => {
-  const first = quotaIdentity('192.0.2.1', 'test-key', Date.parse('2026-10-18T16:59:59Z'));
-  const next = quotaIdentity('192.0.2.1', 'test-key', Date.parse('2026-10-18T17:00:00Z'));
-  assert.equal(first.day, '2026-10-18'); assert.equal(next.day, '2026-10-19');
-  assert.notEqual(first.visitor, next.visitor); assert.match(first.visitor, /^[a-f0-9]{64}$/);
-});
-
-test('Both the global daily cap and one attempt per network are enforced', () => {
-  assert.equal(quotaResult({ used: 5, visitors: [] }, 'new').allowed, false);
-  assert.equal(quotaResult({ used: 1, visitors: ['same'] }, 'same').allowed, false);
-  assert.equal(quotaResult({ used: 1, visitors: ['other'] }, 'new').allowed, true);
-});
-
-test('Cross-site requests never reach quota storage or the private service', async () => {
-  const response = await studioPreview(request(input, 'https://attacker.test'), { config, reserve: async () => { throw Error('must not reserve'); } });
+test('Cross-site requests never reach the image service', async () => {
+  const response = await studioPreview(request(input, 'https://attacker.test'), { config, fetch: async () => { throw Error('must not fetch'); } });
   assert.equal(response.status, 403);
 });
 
-test('Invalid custom colours and missing consent do not reserve paid attempts', async () => {
+test('Invalid custom colours and missing consent never reach the image service', async () => {
   for (const body of [{ ...input, bodyCustom: '' }, { ...input, consent: false }, { ...input, wheelDiameter: '99' }]) {
-    const response = await studioPreview(request(body), { config, reserve: async () => { throw Error('must not reserve'); } });
+    const response = await studioPreview(request(body), { config, fetch: async () => { throw Error('must not fetch'); } });
     assert.equal(response.status, 400);
   }
 });
 
-test('An exhausted quota never calls the image service', async () => {
-  const response = await studioPreview(request(), { config, reserve: async () => ({ reserved: false, remaining: 0, error: 'quota reached' }), fetch: async () => { throw Error('must not fetch'); } });
-  assert.equal(response.status, 429); assert.equal((await response.json()).code, 'DAILY_LIMIT');
+test('The same visitor can create more than five images without a daily or network cap', async () => {
+  let calls = 0;
+  for (let i = 0; i < 8; i++) {
+    const response = await studioPreview(request(), { config, fetch: async () => {
+      calls++;
+      return Response.json({ image: input.image });
+    } });
+    assert.equal(response.status, 200);
+    assert.equal((await response.json()).image, input.image);
+  }
+  assert.equal(calls, 8);
 });
 
-test('Missing configuration and failed storage stop before a provider call', async () => {
+test('Missing configuration stops before a provider call', async () => {
   assert.equal((await studioPreview(request(), { config: () => null })).status, 503);
-  assert.equal((await studioPreview(request(), { config, reserve: async () => { throw Error('database offline'); }, fetch: async () => { throw Error('must not fetch'); } })).status, 503);
 });
 
-test('A reserved request streams the result and keeps its service credential private', async () => {
-  let reserved = false;
-  const response = await studioPreview(request(), { config, reserve: async () => { reserved = true; return unused(); }, fetch: async (url, init) => {
-    assert.equal(reserved, true);
+test('A request streams the result and keeps its service credential private', async () => {
+  const response = await studioPreview(request(), { config, fetch: async (url, init) => {
     assert.equal(url, 'https://evselects-vehicle-style-evselects-com.vercel.app/api/preview');
     assert.match(new Headers(init?.headers).get('authorization') ?? '', /^Basic /);
     assert.equal(JSON.parse(String(init?.body)).bodyCustom, 'olive green');
@@ -60,22 +50,24 @@ test('A reserved request streams the result and keeps its service credential pri
 });
 
 test('Service authentication errors do not prompt public visitors for credentials', async () => {
-  const response = await studioPreview(request(), { config, reserve: unused, fetch: async () => new Response('', { status: 401, headers: { 'WWW-Authenticate': 'Basic' } }) });
+  const response = await studioPreview(request(), { config, fetch: async () => new Response('', { status: 401, headers: { 'WWW-Authenticate': 'Basic' } }) });
   assert.equal(response.status, 503); assert.equal(response.headers.get('www-authenticate'), null);
   assert.ok(!(await response.text()).includes('test-only-service-code'));
 });
 
-test('Public status exposes quota and readiness only', async () => {
-  const response = await studioStatus(new Request('https://evselects.com/api/vehicle-style/status'), { config, read: async () => quotaResult(undefined, 'test'), fetch: async () => Response.json({ ready: true }) });
+test('Public status exposes unlimited application attempts and service readiness', async () => {
+  const response = await studioStatus(new Request('https://evselects.com/api/vehicle-style/status'), { config, fetch: async () => Response.json({ ready: true }) });
   assert.equal(response.status, 200);
-  const body = await response.json(); assert.equal(body.ready, true); assert.equal(body.remaining, 5);
+  const body = await response.json(); assert.equal(body.ready, true); assert.equal(body.remaining, null);
+  assert.equal(body.unlimited, true); assert.equal(body.allowed, true);
+  assert.match(body.message, /ไม่จำกัดจำนวนครั้ง/);
   assert.ok(!JSON.stringify(body).includes('test-only-service-code'));
 });
 
 test('MagicPath freeform descriptions preserve the high-resolution service path', async () => {
   const prompt = 'สีขาว โหลดเตี้ย ฝากระโปรง carbon fiber ล้อบรอนซ์';
   const response = await studioPreview(request({ consent: true, image: input.image, stylePrompt: prompt }), {
-    config, reserve: unused, fetch: async (_url, init) => {
+    config, fetch: async (_url, init) => {
       const body = JSON.parse(String(init?.body));
       assert.equal(body.stylePrompt, prompt);
       assert.equal(body.notes, undefined);
@@ -85,7 +77,7 @@ test('MagicPath freeform descriptions preserve the high-resolution service path'
   assert.equal(response.status, 200);
   for (const stylePrompt of ['', ' ', 123, 'x'.repeat(2001)]) {
     const invalid = await studioPreview(request({ ...input, stylePrompt }), {
-      config, reserve: async () => { throw Error('must not reserve'); },
+      config, fetch: async () => { throw Error('must not fetch'); },
     });
     assert.equal(invalid.status, 400);
   }

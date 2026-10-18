@@ -289,13 +289,13 @@ export const EVSELECTSStudio = () => {
     [history, setHistory] = useState<Settings[]>([]);
   const [stylePrompt, setStylePrompt] = useState('');
   const [consent, setConsent] = useState(false);
-  const [service, setService] = useState({ ready: false, message: 'กำลังตรวจโควตาทดลอง…', error: '' });
+  const [service, setService] = useState({ ready: false, message: 'กำลังตรวจความพร้อมบริการ…', error: '' });
   const refreshStatus = async () => {
     try {
       const response = await fetch('/api/vehicle-style/status', { cache: 'no-store' });
       const result = await response.json();
       setService({ ready: response.ok && result.ready === true, message: result.message || '', error: result.error || '' });
-    } catch { setService({ ready: false, message: '', error: 'ตรวจโควตาไม่ได้ กรุณารีเฟรชหน้าแล้วลองใหม่' }); }
+    } catch { setService({ ready: false, message: '', error: 'ตรวจความพร้อมบริการไม่ได้ กรุณารีเฟรชหน้าแล้วลองใหม่' }); }
   };
   useEffect(() => { if (active) void refreshStatus(); }, [active]);
   const [generating, setGenerating] = useState(false);

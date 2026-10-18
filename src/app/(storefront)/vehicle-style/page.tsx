@@ -5,7 +5,7 @@ import VehicleStyleStructuredData from '@/components/VehicleStyleStructuredData'
 import { VEHICLE_STYLE_MAX_UPLOAD_MB, vehicleStylePublicInfo as info } from '@/lib/vehicle-style/public-info';
 
 const title = 'แอปลองแต่งรถด้วย AI ทดลองใช้ฟรี | EVSELECTS Vehicle Style';
-const description = 'ลองแต่งรถด้วย AI จากรูปของคุณ เปลี่ยนสีรถ สีล้อ และดีไซน์ล้อ เทียบก่อน–หลังได้ผ่านเว็บ ทดลองใช้ฟรีตามโควตารายวัน ไม่ต้องใส่รหัสสตูดิโอ';
+const description = 'ลองแต่งรถด้วย AI จากรูปของคุณ เปลี่ยนสีรถ สีล้อ และดีไซน์ล้อ เทียบก่อน–หลังได้ผ่านเว็บ ทดลองใช้ฟรีไม่จำกัดจำนวนครั้ง ไม่ต้องใส่รหัสสตูดิโอ';
 const studioPath = '/vehicle-style/studio';
 
 export const metadata = withPublicMetadata('/vehicle-style', {
@@ -37,7 +37,7 @@ export default function VehicleStylePage() {
             <h1 id="vehicle-style-title" className="text-3xl font-bold leading-snug tracking-tight sm:text-5xl">ลองสีรถและล้อ<br /><span className="text-lime-300">ให้เห็นภาพก่อนแต่งจริง</span></h1>
             <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">{info.description}</p>
             <a href={studioPath} className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-lime-300 px-6 py-3 font-semibold text-slate-950 hover:bg-lime-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300 sm:w-auto">เข้าสู่ Vehicle Style <ArrowRight size={20} aria-hidden="true" /></a>
-            <p className="mt-3 text-sm leading-7 text-slate-300">{info.trial} · {info.quota}</p>
+            <p className="mt-3 text-sm leading-7 text-slate-300">{info.trial} · {info.usage}</p>
             <Link href="/#vehicle-style" prefetch={false} className="mt-2 inline-flex min-h-11 items-center text-sm text-lime-300 underline underline-offset-4 hover:text-lime-200">เปิดเครื่องมือจากหน้าแรก</Link>
           </div>
           <div className="rounded-2xl border border-slate-600 bg-[#14181d] p-6 sm:p-8">
@@ -66,7 +66,7 @@ export default function VehicleStylePage() {
             <h2 id="vehicle-style-before-start" className="text-2xl font-semibold">ก่อนกดสร้างภาพ</h2>
             <ul className="mt-5 list-disc space-y-3 pl-5 text-sm leading-7 text-slate-300">
               <li>ใช้รูปที่คุณมีสิทธิ์ใช้งาน และยืนยันก่อนส่งภาพกับรายละเอียดให้ OpenAI ประมวลผล</li>
-              <li>ทดลองสร้างครั้งละ 1 ภาพ ภายใต้โควตารายวัน รีเซ็ตตามวันในประเทศไทย โดยเริ่มนับเมื่อส่งคำขอสร้าง แม้คำขออาจไม่สำเร็จ</li>
+              <li>สร้างภาพได้ครั้งละ 1 ภาพ ไม่จำกัดจำนวนครั้งในการลองแต่งรถ โดยรอให้คำขอปัจจุบันเสร็จก่อนเริ่มครั้งถัดไป</li>
               <li>รูปและผลลัพธ์ไม่ถูกเก็บเป็นประวัติในสตูดิโอ บันทึกภาพที่ต้องการก่อนรีเฟรชหรือปิดหน้า ดูเพิ่มเติมที่ <Link href="/privacy" prefetch={false} className="text-lime-300 underline underline-offset-4">นโยบายความเป็นส่วนตัว</Link></li>
             </ul>
           </div>

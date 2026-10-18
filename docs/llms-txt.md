@@ -13,10 +13,10 @@ Markdown link/tab behavior belongs to the consuming renderer; HTML link rules
 on the site remain unchanged.
 
 The owner confirmed public access without personal API keys or studio codes on
-2026-10-18. The index describes the Home editor, one attempt per network/day,
-the shared five-attempt daily limit, and the Concept preview / no-fitment-guarantee
-boundary. Provider API calls are billed to the operator; this is a limited public
-trial, not unlimited access or a claim that the provider API is free.
+2026-10-18, and subsequently removed the per-network and global daily attempt caps.
+The index describes the Home editor without an application attempt limit, and the
+Concept preview / no-fitment-guarantee boundary. Provider API calls remain billed
+to the operator; provider capacity, billing and rate limits are separate.
 
 ## Purpose and limits
 

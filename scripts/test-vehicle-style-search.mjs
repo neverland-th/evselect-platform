@@ -21,7 +21,7 @@ test('Home describes the real application in visible server HTML without executi
   const summary = main.querySelector('[data-vehicle-style-summary]');
   assert.ok(summary, 'Do not depend on the lazy editor or React payload for app information');
   assert.match(summary.querySelector('h2')?.textContent, /EVSELECTS Vehicle Style.*แอปลองแต่งรถด้วย AI/);
-  for (const phrase of ['อัปโหลดรูปรถ', 'สีรถ', 'สีล้อ', 'ดีไซน์ล้อ', 'ก่อน–หลัง', 'ทดลองใช้ฟรี', 'ไม่ต้องกรอก API key หรือรหัสสตูดิโอ', '1 ครั้งต่อเครือข่ายต่อวัน', 'โควตารวม 5 ครั้งต่อวัน', 'Concept preview', '15 MB']) {
+  for (const phrase of ['อัปโหลดรูปรถ', 'สีรถ', 'สีล้อ', 'ดีไซน์ล้อ', 'ก่อน–หลัง', 'ทดลองใช้ฟรี', 'ไม่ต้องกรอก API key หรือรหัสสตูดิโอ', 'ไม่จำกัดจำนวนครั้งในการลองแต่งรถ', 'Concept preview', '15 MB']) {
     assert.ok(summary.textContent.includes(phrase), phrase);
   }
   for (const element of [summary, ...summary.querySelectorAll('*')]) {
@@ -44,13 +44,13 @@ test('Hero makes the free trial clear while retaining the accessory path, layout
   assert.equal(primary?.textContent.trim(), 'ลองแต่งรถฟรี');
   assert.equal(primary.getAttribute('target'), null);
   assert.equal(hero.querySelector('a[href="#ev-accessories"]')?.textContent.trim(), 'ดูไอเดียของแต่ง');
-  assert.match(hero.textContent, /1 ครั้งต่อเครือข่ายต่อวัน.*โควตารวม 5 ครั้งต่อวัน/);
+  assert.match(hero.textContent, /ไม่จำกัดจำนวนครั้งในการลองแต่งรถ/);
   assert.match(hero.textContent, /ภาพแนวคิดจาก AI ไม่ยืนยันการติดตั้งจริง/);
   assert.ok(hero.querySelector('img')?.getAttribute('src').includes('tesla-model-3-performance-2024'));
   assert.ok(hero.querySelector('a[href="/articles/tesla-model-3-highland-review"] img'));
   assert.ok(hero.nextElementSibling.id === 'vehicle-style', 'The app stays after the existing hero');
   const description = document.querySelector('meta[name="description"]').getAttribute('content');
-  for (const topic of ['แต่งรถ EV', 'AI', 'ของแต่ง Tesla', 'ของแต่งรถไฟฟ้า', 'โควตา']) assert.ok(description.includes(topic));
+  for (const topic of ['แต่งรถ EV', 'AI', 'ของแต่ง Tesla', 'ของแต่งรถไฟฟ้า', 'ไม่จำกัดจำนวนครั้ง']) assert.ok(description.includes(topic));
 });
 
 test('Both public pages describe one consistently identified WebApplication, without made-up reviews', () => {
@@ -71,7 +71,7 @@ test('Both public pages describe one consistently identified WebApplication, wit
     assert.equal(app.isAccessibleForFree, true);
     assert.equal(app.offers.price, 0);
     assert.equal(app.offers.priceCurrency, 'THB');
-    assert.match(app.offers.description, /1 ครั้งต่อเครือข่ายต่อวัน.*โควตารวม 5 ครั้งต่อวัน/);
+    assert.match(app.offers.description, /ไม่จำกัดจำนวนครั้งในการลองแต่งรถ/);
     assert.match(app.description, /Concept preview.*ไม่ยืนยัน/);
     assert.ok(app.featureList.length >= 4);
     assert.equal(app.aggregateRating, undefined);
@@ -85,12 +85,12 @@ test('Both public pages describe one consistently identified WebApplication, wit
   assert.deepEqual(applications[0], applications[1]);
 });
 
-test('Public guide agrees with original-upload limits, app capabilities and daily trial terms', () => {
+test('Public guide agrees with original-upload limits, app capabilities and unlimited trial terms', () => {
   const { document, main } = pages.get('/vehicle-style');
   assert.match(document.title, /แอปลองแต่งรถด้วย AI.*ทดลองใช้ฟรี/);
   assert.match(main.textContent, /JPG, PNG และ WebP สูงสุด 15 MB ระบบย่อภาพก่อนส่งให้ AI/);
   assert.doesNotMatch(main.textContent, /10 MB|ฟรีไม่จำกัด|ต้องขอรหัสสตูดิโอจากทีมงาน/);
-  for (const phrase of ['1 ครั้งต่อเครือข่ายต่อวัน', 'โควตารวม 5 ครั้งต่อวัน', 'รีเซ็ตตามวันในประเทศไทย']) assert.ok(main.textContent.includes(phrase));
+  for (const phrase of ['ไม่จำกัดจำนวนครั้งในการลองแต่งรถ']) assert.ok(main.textContent.includes(phrase));
   const app = JSON.parse(document.querySelector('script[data-vehicle-style-schema]').textContent)['@graph'].find(node => node['@type'] === 'WebApplication');
   for (const feature of app.featureList) assert.ok(main.textContent.includes(feature));
   assert.equal(main.querySelector('a[href="/vehicle-style/studio"]').getAttribute('target'), null);

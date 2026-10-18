@@ -92,7 +92,7 @@ test('Vehicle Style is described as a free preview with the actual access requir
   // not a claim that image-provider API calls are free or access is unlimited.
   assert.match(content, /แอป Vehicle Style ให้ลองแต่งรถฟรีผ่านเว็บ/);
   assert.match(content, /ไม่ต้องกรอก API key หรือรหัสสตูดิโอ/);
-  assert.match(content, /1 ครั้งต่อเครือข่ายต่อวัน และรวม 5 ครั้งต่อวัน/);
+  assert.match(content, /ไม่จำกัดจำนวนครั้งในการลองแต่งรถ/);
   assert.match(content, /Concept preview ไม่ใช่ภาพสินค้าหรือหลักฐานว่าอุปกรณ์ใช้กับรถจริงได้/);
   assert.equal(entries.filter(([, , href]) => href === `${canonicalOrigin}/vehicle-style`).length, 1);
   assert.doesNotMatch(content, /ฟรีไม่จำกัด|API ฟรี|ต้องขอรหัสสตูดิโอจากทีมงาน/);

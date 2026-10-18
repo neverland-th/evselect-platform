@@ -101,7 +101,7 @@ test('Toolbar scope and owner-approved public studio access remain intact', asyn
   assert.equal(studio.status, 200, 'Owner-approved public editor has no login challenge');
   assert.equal(studio.headers.get('www-authenticate'), null);
   // The owner separately opened the MagicPath service publicly on 2026-10-18.
-  // Its public access is independent of Home's database-enforced trial quota.
+  // Home and the separate public service both retain the owner's public-access intent.
   const serviceOrigin = 'https://evselects-vehicle-style-evselects-com.vercel.app';
   const service = await fetch(serviceOrigin + '/api/status');
   assert.equal(service.status, 200);

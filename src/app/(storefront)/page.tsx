@@ -27,7 +27,7 @@ import { damperArticle } from "@/lib/damper-article";
 import { batteryArticle } from "@/lib/battery-article";
 
 const title = "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS";
-const description = "ลองแต่งรถ EV ด้วย AI ฟรีตามโควตา เปลี่ยนสีรถและล้อจากรูปของคุณ พร้อมไอเดียของแต่ง Tesla และคู่มือเลือกของแต่งรถไฟฟ้า ยาง และช่วงล่าง";
+const description = "ลองแต่งรถ EV ด้วย AI ฟรีไม่จำกัดจำนวนครั้ง เปลี่ยนสีรถและล้อจากรูปของคุณ พร้อมไอเดียของแต่ง Tesla และคู่มือเลือกของแต่งรถไฟฟ้า ยาง และช่วงล่าง";
 
 export const metadata: Metadata = withPublicMetadata("/", {
   title,
@@ -253,7 +253,7 @@ export default function StorefrontPage() {
                 ดูไอเดียของแต่ง
               </Link>
               </div>
-              <p className="mt-3 text-xs leading-6 text-slate-300">{vehicleStylePublicInfo.quota} · ภาพแนวคิดจาก AI ไม่ยืนยันการติดตั้งจริง</p>
+              <p className="mt-3 text-xs leading-6 text-slate-300">{vehicleStylePublicInfo.usage} · ภาพแนวคิดจาก AI ไม่ยืนยันการติดตั้งจริง</p>
             </div>
           </div>
 

@@ -4,7 +4,7 @@ import { withPublicMetadata } from '@/lib/public-metadata';
 
 export const metadata = withPublicMetadata('/vehicle-style/studio', {
   title: 'ลองสีรถและล้อใน Vehicle Style | EVSELECTS',
-  description: 'เลือกรูปรถและลองสีหรือล้อด้วย AI ไม่ต้องกรอก API key หรือรหัสสตูดิโอ ภายใต้โควตาทดลองรายวัน',
+  description: 'เลือกรูปรถและลองสีหรือล้อด้วย AI ไม่ต้องกรอก API key หรือรหัสสตูดิโอ ไม่จำกัดจำนวนครั้งในการลองแต่งรถ',
   alternates: { canonical: '/vehicle-style/studio' },
   robots: { index: false, follow: true },
 });

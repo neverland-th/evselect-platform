@@ -7,13 +7,15 @@ The visible description, free-trial terms and app entity are shared through
 position; its explanatory footer is server-rendered, not hidden SEO text.
 The public guide and original-file upload label both use the 15 MB limit.
 That is not the separate server request limit: the editor resizes/re-encodes
-before submission. No API, authentication, provider or quota behavior changes.
+before submission. That presentation-only release did not change API,
+authentication, provider or quota behavior; the later attempt-limit change is below.
 
 Home and `/vehicle-style` emit the same `WebApplication` entity ID. The guide's
 WebPage identifies the app as its main entity; Home mentions that app alongside
 its existing editorial content. `/vehicle-style/studio` remains noindex and out
 of the sitemap. No fabricated reviews, ratings, screenshot, operating-system
-support or unlimited-use claims are added. Schema.org validity does not establish
+support claims are added. Unlimited application attempts reflect the later owner-approved
+change below. Schema.org validity does not establish
 Google Software App rich-result eligibility, indexing, ranking or AI citations.
 
 Validate with `tsx --test scripts/test-vehicle-style-public-info.ts` and, against
@@ -33,7 +35,7 @@ change that deployment or its access settings. Next.js server routes continue
 using `VEHICLE_STYLE_SERVICE_CODE`, a production Secret. OpenAI credentials remain in that
 backend. No credential is sent to the visitor, saved in the frontend, or checked
 into source. Responses are streamed and never cached. No image is stored by the
-Home editor or quota database; users must save results before leaving.
+Home editor; users must save results before leaving.
 
 The owner supplied `https://designs.magicpath.ai/v1/crisp-wave-3071`. Its exact
 revision `462367477918224384` was imported as the namespaced React component
@@ -43,7 +45,7 @@ Wheel controls retain the existing diameter/width choices and free text design.
 The imported component calls only the same-origin public facade. Its styling text
 uses the service's existing `stylePrompt` field (2,000 characters), preserving the
 supplied app's high-resolution generation path (2304x1344/high/JPEG). Colour/wheel-only
-requests continue using the established medium-quality options path. Explicit consent and quota readiness are
+requests continue using the established medium-quality options path. Explicit consent and service readiness are
 required before submission; no requests retry automatically. The single image
 comparison, custom colours, local upload and labelled PNG export remain available.
 The owner subsequently replaced the demo pair with `tesla model3.png` (Before)
@@ -60,27 +62,24 @@ The previous vanilla client/template remain for reference and compatibility; the
 are no longer mounted on Home. Keep option IDs and validation compatible with the
 image service. Test fixtures and credentials must never enter public assets.
 
-## Shared quota
+## Attempt limits removed — 2026-10-18
 
-The additive Prisma migration creates only `VehicleStyleQuota`, separate from
-commerce tables. An atomic PostgreSQL upsert reserves one attempt per network
-per Bangkok calendar day, with a shared hard limit of five attempts/day across
-the main website's instances and deployments. This quota covers requests through
-`/api/vehicle-style/preview` only; direct use of the separately public MagicPath
-service is not covered and must not be described as subject to this global cap.
-The Vercel-overwritten client-IP header is HMACed with
-the day and the server credential; raw IPs, prompts and images are not stored.
-Old quota rows are cleaned on the next successful reservation after seven days.
+The owner explicitly removed both the one-attempt-per-network/day limit and the
+five-attempt global/day cap. The Home facade no longer reads or reserves quota,
+does not require a visitor IP, and does not write daily counters or network hashes.
+Status reports unlimited application attempts and the upstream service's readiness.
+Existing quota schema, migrations and historical rows are retained without a
+destructive database change; none are used to block generation.
 
-Missing credentials, unknown client IPs, database errors and exhausted quotas
-stop before a paid service call. Failed/ambiguous provider attempts remain counted
-and are never retried automatically. Preview environments fail closed without
-production credentials. A change to quota limits must update the SQL check,
-public copy, llms index, and tests together.
+Server-only credentials, production configuration checks, same-origin submission,
+consent/input/upload validation, streaming and provider errors remain enforced.
+The client still permits one active generation at a time and never retries
+automatically. Provider billing, capacity and rate limits are independent of the
+removed application caps.
 
 ## Validation
 
-- `tsx --test scripts/test-vehicle-style-api.ts`: origin, validation, quota, private
+- `tsx --test scripts/test-vehicle-style-api.ts`: origin, validation, repeat requests without quota, private
   credentials, streaming and failure paths without paid provider calls.
 - Existing build, strict content-link and attribution audits remain required.
 - Main site styles remain inline. The dynamically imported app has one same-origin
@@ -107,3 +106,15 @@ The replacement white/red example pair was reviewed at 1440px and 390px, includi
 each endpoint of the comparison. The original export footer is absent from the
 viewer; PNG export remains 2304x1408 with one application footer. Mobile has no
 horizontal overflow, and no paid generation was needed for the replacement.
+
+2026-10-18 unlimited-attempt review: built Home, guide and privacy pages opened
+at desktop 1440px and mobile 390px. Reviewed the rendered Thai unlimited-use terms,
+service status, consent, both supplied demo images and Concept preview wording.
+No daily/network allowance remains in Home copy, guide, metadata, schema or llms.txt.
+Repeated generation fixtures passed eight times in each viewport without disabling
+the next request, horizontal overflow or page errors. All image responses in these
+checks were local fixtures: zero paid provider calls. API tests separately exercise
+eight repeated calls without quota storage while keeping consent/origin validation.
+Full build, content-link/attribution audits, targeted lint and 26 built-page checks
+passed. Browser evidence is local-only in ignored `scratch/unlimited-review/`.
+Physical Android-device testing was not performed for this server/copy change.

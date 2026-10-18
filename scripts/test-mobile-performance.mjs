@@ -18,7 +18,7 @@ test('Home includes the studio geometry without a render-blocking CSS waterfall'
   // until React places it; the complete interface must still be in raw HTML.
   assert.ok(document.querySelector('.lt-app'), 'The real interface is server rendered, not removed for a score');
   assert.equal(document.querySelectorAll('canvas[width="2304"][height="1344"]').length, 2);
-  assert.ok(document.querySelector('[data-vehicle-style-summary]')?.textContent.includes('โควตารวม 5 ครั้งต่อวัน'));
+  assert.ok(document.querySelector('[data-vehicle-style-summary]')?.textContent.includes('ไม่จำกัดจำนวนครั้งในการลองแต่งรถ'));
   assert.ok(document.querySelector('script[data-vehicle-style-schema]'));
   assert.equal(document.querySelector('[data-home-hero] a[href="#vehicle-style"]')?.textContent.trim(), 'ลองแต่งรถฟรี');
 });
