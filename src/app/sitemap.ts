@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { brakeArticle } from '@/lib/brake-article';
 import { batteryArticle } from '@/lib/battery-article';
+import { mgIm5Article } from '@/lib/mg-im5-article';
 import { mg4Article } from '@/lib/mg4-article';
 import { camberArticle } from '@/lib/camber-article';
 import { shockTypesArticle } from '@/lib/shock-types-article';
@@ -26,6 +27,7 @@ import { publicSiteRoutes, siteOrigin } from '@/lib/public-site-routes';
 export default function sitemap(): MetadataRoute.Sitemap {
   return publicSiteRoutes.map(path => ({
     url: `${siteOrigin}${path}`,
+    ...(path === mgIm5Article.path ? { lastModified: mgIm5Article.updatedAt } : {}),
     // Only publish a modification date when it is maintained with the content.
     ...(path === damperArticle.path ? { lastModified: damperArticle.updatedAt } : {}),
     ...(path === powertrainArticle.path ? { lastModified: powertrainArticle.updatedAt } : {}),

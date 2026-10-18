@@ -27,6 +27,7 @@ export const publicSiteRoutes = [
   '/articles/geely-ex2-review',
   '/articles/hybrid-to-ev-chassis-dynamics-transition',
   '/articles/mg4-electric-review',
+  '/articles/mg-im5-review',
   '/articles/optimizing-ev-suspension-thai-roads',
   '/articles/shock-absorber-types-monotube-twintube-air-ev',
   '/articles/tesla-model-3-highland-review',

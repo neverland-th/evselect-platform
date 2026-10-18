@@ -13,6 +13,7 @@ import { evTyreArticle } from '@/lib/ev-tyre-article';
 import { brakeArticle } from '@/lib/brake-article';
 import { powertrainArticle } from '@/lib/powertrain-article';
 import { batteryArticle } from '@/lib/battery-article';
+import { mgIm5Article } from '@/lib/mg-im5-article';
 import { mg4Article } from '@/lib/mg4-article';
 import { camberArticle } from '@/lib/camber-article';
 import { shockTypesArticle } from '@/lib/shock-types-article';
@@ -81,6 +82,15 @@ export interface ArticleItem {
 }
 
 const ALL_ARTICLES: ArticleItem[] = [
+  {
+    slug: 'mg-im5-review', title: mgIm5Article.title, shortTitle: 'รีวิว MG IM5 สเปกไทย',
+    excerpt: mgIm5Article.description, category: 'รีวิวรถ EV', categorySlug: 'reviews',
+    segment: 'sedan', segmentName: 'ซีดานไฟฟ้า', image: mgIm5Article.image, imageAlt: mgIm5Article.imageAlt,
+    imageFit: 'contain', date: mgIm5Article.updatedAt, dateDisplay: '18 ตุลาคม 2569', publishedAt: mgIm5Article.publishedAt,
+    readTime: mgIm5Article.readTime, rating: null, priceRange: 'ตรวจราคาตามวันที่ในบทความ',
+    highlights: ['แบตเตอรี่ 100 kWh', '860 กม. NEDC ตามผู้ผลิต', 'ระบบบังคับเลี้ยว 4 ล้อ'],
+    brand: 'MG', badge: 'สเปกไทย', featured: false,
+  },
   {
     slug: 'ev-carbon-ceramic-brakes-guide',
     title: brakeArticle.title,
