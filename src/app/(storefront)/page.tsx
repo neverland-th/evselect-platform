@@ -20,12 +20,13 @@ import {
 import ComingSoonBanner from "@/components/ComingSoonBanner";
 import PrelaunchPanel from "@/components/PrelaunchPanel";
 import VehicleStyleFeature from "@/components/VehicleStyleFeature";
+import { vehicleStylePublicInfo } from '@/lib/vehicle-style/public-info';
 import EvUpgradeInfographic from "@/components/EvUpgradeInfographic";
 import { damperArticle } from "@/lib/damper-article";
 import { batteryArticle } from "@/lib/battery-article";
 
 const title = "แต่งรถ EV และของแต่งรถไฟฟ้า | EVSELECTS";
-const description = "ไอเดียแต่งรถ EV และคู่มือเลือกของแต่งรถไฟฟ้า ดูตัวอย่างของแต่ง Tesla พรม ถาดคอนโซล ยาง และโช้คสตรัทปรับเกลียว พร้อมรีวิวรถ EV สเปกไทย";
+const description = "ลองแต่งรถ EV ด้วย AI ฟรีตามโควตา เปลี่ยนสีรถและล้อจากรูปของคุณ พร้อมไอเดียของแต่ง Tesla และคู่มือเลือกของแต่งรถไฟฟ้า ยาง และช่วงล่าง";
 
 export const metadata: Metadata = withPublicMetadata("/", {
   title,
@@ -213,7 +214,7 @@ export default function StorefrontPage() {
   return (
     <div className="home-content bg-white text-slate-950">
       <ImageMetadata pagePath="/" />
-      <section className="border-b border-slate-200 bg-slate-950 text-white">
+      <section data-home-hero className="border-b border-slate-200 bg-slate-950 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 md:py-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
           <div className="flex flex-col justify-between gap-8 lg:py-4">
             <div>
@@ -223,29 +224,31 @@ export default function StorefrontPage() {
               </p>
               <h1 className="max-w-2xl font-extrabold tracking-tight">
                 แต่งรถ EV
-                <span className="block text-lime-300">แต่งให้ถูกจุด ขับให้ถูกใจ</span>
+                <span className="block text-lime-300">เห็นภาพก่อนแต่งจริง</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-                เลือกของแต่งรถไฟฟ้าจากสิ่งที่อยากเปลี่ยน ทั้งของใช้ในรถ ยาง และช่วงล่าง
-                ดูตัวอย่างของแต่ง Tesla หรือเริ่มจากคู่มือที่ช่วยตอบคำถามก่อนซื้อ
-                พร้อมรีวิวรถ EV ที่ขายในไทย
+                ลองเปลี่ยนสีรถ สีล้อ หรือแนวแต่งจากรูปของคุณด้วย AI แล้วเทียบภาพก่อน–หลังได้ในหน้าเดียว
+                พร้อมคู่มือเลือกของแต่งรถไฟฟ้า ยาง และช่วงล่างให้ตรงกับรถที่ใช้
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div>
+              <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="#ev-accessories"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 transition-colors hover:bg-lime-200"
+                href="#vehicle-style"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-lime-300 px-5 py-3 font-semibold text-slate-950 transition-colors hover:bg-lime-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300"
               >
-                ดูไอเดียของแต่ง <ArrowRight className="h-4 w-4" />
+                ลองแต่งรถฟรี <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <Link
-                href="/articles"
+                href="#ev-accessories"
                 prefetch={false}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/25 px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
-                ดูบทความทั้งหมด
+                ดูไอเดียของแต่ง
               </Link>
+              </div>
+              <p className="mt-3 text-xs leading-6 text-slate-300">{vehicleStylePublicInfo.quota} · ภาพแนวคิดจาก AI ไม่ยืนยันการติดตั้งจริง</p>
             </div>
           </div>
 

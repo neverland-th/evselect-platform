@@ -1,5 +1,24 @@
 # Vehicle Style public trial
 
+## Search presentation
+
+The visible description, free-trial terms and app entity are shared through
+`src/lib/vehicle-style/public-info.ts`. Home retains the existing editor and
+position; its explanatory footer is server-rendered, not hidden SEO text.
+The public guide and original-file upload label both use the 15 MB limit.
+That is not the separate server request limit: the editor resizes/re-encodes
+before submission. No API, authentication, provider or quota behavior changes.
+
+Home and `/vehicle-style` emit the same `WebApplication` entity ID. The guide's
+WebPage identifies the app as its main entity; Home mentions that app alongside
+its existing editorial content. `/vehicle-style/studio` remains noindex and out
+of the sitemap. No fabricated reviews, ratings, screenshot, operating-system
+support or unlimited-use claims are added. Schema.org validity does not establish
+Google Software App rich-result eligibility, indexing, ranking or AI citations.
+
+Validate with `tsx --test scripts/test-vehicle-style-public-info.ts` and, against
+a built server or production origin, `BASE_URL=... node --test scripts/test-vehicle-style-search.mjs`.
+
 The owner explicitly requested Home use without either API keys or studio codes.
 Home directly renders the Thai MagicPath editor, without an extra launch button;
 `/vehicle-style/studio` also opens the same editor without authentication.

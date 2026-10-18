@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { ArrowRight, Camera, CircleCheck, Palette, SlidersHorizontal } from 'lucide-react';
 import { withPublicMetadata } from '@/lib/public-metadata';
+import VehicleStyleStructuredData from '@/components/VehicleStyleStructuredData';
+import { VEHICLE_STYLE_MAX_UPLOAD_MB, vehicleStylePublicInfo as info } from '@/lib/vehicle-style/public-info';
 
-const title = 'Vehicle Style: ลองสีรถและล้อจากรูปของคุณ | EVSELECTS';
-const description = 'ลองเปลี่ยนสีรถ สีล้อ ขนาดและดีไซน์ล้อจากรูปคันเดิมด้วย AI เทียบก่อน–หลังในภาพเดียว ใช้บนมือถือได้ พร้อมข้อจำกัดของภาพแนวคิดก่อนแต่งจริง';
+const title = 'แอปลองแต่งรถด้วย AI ทดลองใช้ฟรี | EVSELECTS Vehicle Style';
+const description = 'ลองแต่งรถด้วย AI จากรูปของคุณ เปลี่ยนสีรถ สีล้อ และดีไซน์ล้อ เทียบก่อน–หลังได้ผ่านเว็บ ทดลองใช้ฟรีตามโควตารายวัน ไม่ต้องใส่รหัสสตูดิโอ';
 const studioPath = '/vehicle-style/studio';
 
 export const metadata = withPublicMetadata('/vehicle-style', {
@@ -15,7 +17,7 @@ export const metadata = withPublicMetadata('/vehicle-style', {
 });
 
 const steps = [
-  { icon: Camera, title: 'เลือกรูปรถคันเดิม', text: 'ใช้รูปมุมเฉียงหน้าหรือด้านข้างที่เห็นตัวรถและล้อชัด รองรับ JPG, PNG และ WebP สูงสุด 10 MB' },
+  { icon: Camera, title: 'เลือกรูปรถคันเดิม', text: `ใช้รูปมุมเฉียงหน้าหรือด้านข้างที่เห็นตัวรถและล้อชัด รองรับ JPG, PNG และ WebP สูงสุด ${VEHICLE_STYLE_MAX_UPLOAD_MB} MB ระบบย่อภาพก่อนส่งให้ AI` },
   { icon: Palette, title: 'ลองสีและสไตล์ที่ชอบ', text: 'เลือกสีรถหรือพิมพ์สีเอง เลือกขอบและความกว้างล้อ แล้วพิมพ์รุ่นหรือดีไซน์ที่อยากลอง' },
   { icon: SlidersHorizontal, title: 'ลากเทียบ แล้วบันทึกภาพ', text: 'ใช้สไลเดอร์เดียวบนภาพเพื่อเทียบก่อน–หลัง แล้วบันทึกภาพแนวคิดไว้ดูต่อได้' },
 ];
@@ -23,6 +25,7 @@ const steps = [
 export default function VehicleStylePage() {
   return (
     <div className="bg-[#0b0d10] text-slate-100 selection:bg-lime-300 selection:text-slate-950">
+      <VehicleStyleStructuredData pagePath="/vehicle-style" />
       <section className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="vehicle-style-title">
         <nav aria-label="เส้นทางหน้านี้" className="mb-8 flex flex-wrap items-center gap-2 text-sm text-slate-300">
           <Link href="/" prefetch={false} className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-lime-300">หน้าแรก</Link>
@@ -30,17 +33,17 @@ export default function VehicleStylePage() {
         </nav>
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <div>
-            <p className="mb-4 text-sm font-semibold tracking-wide text-lime-300">VEHICLE STYLE · ภาพแนวคิดจากรถของคุณ</p>
+            <p className="mb-4 text-sm font-semibold tracking-wide text-lime-300"><Link href="/" prefetch={false} className="underline underline-offset-4">EVSELECTS</Link> Vehicle Style · แอปลองแต่งรถด้วย AI</p>
             <h1 id="vehicle-style-title" className="text-3xl font-bold leading-snug tracking-tight sm:text-5xl">ลองสีรถและล้อ<br /><span className="text-lime-300">ให้เห็นภาพก่อนแต่งจริง</span></h1>
-            <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">เริ่มจากรูปคันเดิม แล้วลองสีตัวรถ สีล้อ หรือดีไซน์ล้อที่อยากได้ ให้ AI ช่วยทำภาพแนวคิดก่อนตัดสินใจเลือกของจริง</p>
+            <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">{info.description}</p>
             <a href={studioPath} className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-lime-300 px-6 py-3 font-semibold text-slate-950 hover:bg-lime-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-300 sm:w-auto">เข้าสู่ Vehicle Style <ArrowRight size={20} aria-hidden="true" /></a>
-            <p className="mt-3 text-sm leading-7 text-slate-300">ไม่ต้องกรอก API key หรือรหัสสตูดิโอ · ทดลอง 1 ครั้งต่อเครือข่ายต่อวัน รวม 5 ครั้งต่อวัน</p>
+            <p className="mt-3 text-sm leading-7 text-slate-300">{info.trial} · {info.quota}</p>
             <Link href="/#vehicle-style" prefetch={false} className="mt-2 inline-flex min-h-11 items-center text-sm text-lime-300 underline underline-offset-4 hover:text-lime-200">เปิดเครื่องมือจากหน้าแรก</Link>
           </div>
           <div className="rounded-2xl border border-slate-600 bg-[#14181d] p-6 sm:p-8">
             <h2 className="text-xl font-semibold">ลองลุคใหม่ได้ในหน้าเดียว</h2>
             <ul className="mt-6 space-y-5 text-sm leading-7 text-slate-300">
-              {['เลือกสีสำเร็จรูป หรือพิมพ์ชื่อสีและฟินิชเอง', 'เลือกขอบและความกว้างล้อ พร้อมพิมพ์รุ่นหรือดีไซน์', 'ลากเส้นบนภาพเพื่อเทียบรถเดิมกับภาพแนวคิด', 'เปิดบนมือถือ Android หรือคอมพิวเตอร์ได้'].map(text => <li key={text} className="flex gap-3"><CircleCheck className="mt-1 shrink-0 text-lime-300" size={20} aria-hidden="true" /><span>{text}</span></li>)}
+              {info.features.map(text => <li key={text} className="flex gap-3"><CircleCheck className="mt-1 shrink-0 text-lime-300" size={20} aria-hidden="true" /><span>{text}</span></li>)}
             </ul>
             <p className="mt-7 border-t border-slate-600 pt-5 text-sm leading-7 text-slate-300"><strong className="font-semibold text-lime-300">Concept preview</strong><br />ภาพใช้สื่อไอเดีย อาจเปลี่ยนรายละเอียดรถ และไม่ยืนยันขนาดจริง การติดตั้ง หรือ fitment</p>
           </div>

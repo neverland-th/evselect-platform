@@ -7,6 +7,7 @@ import Link from 'next/link';
 import NextImage, { getImageProps } from 'next/image';
 import './EVSELECTSStudio.css';
 import { WHEEL_DIAMETERS, WHEEL_WIDTHS } from '@/lib/vehicle-style/options.js';
+import { VEHICLE_STYLE_MAX_UPLOAD_MB } from '@/lib/vehicle-style/public-info';
 const carbonAfter = '/vehicle-style/demo-red-user.webp';
 const demoBefore = getImageProps({
   src: '/images/home/tesla-model-3-white-user.png',
@@ -458,8 +459,8 @@ export const EVSELECTSStudio = () => {
       setError('รองรับ JPG, PNG และ WebP เท่านั้น');
       return;
     }
-    if (file.size > 15 * 1024 * 1024) {
-      setError('ไฟล์ใหญ่เกิน 15 MB กรุณาลดขนาดก่อน');
+    if (file.size > VEHICLE_STYLE_MAX_UPLOAD_MB * 1024 * 1024) {
+      setError(`ไฟล์ใหญ่เกิน ${VEHICLE_STYLE_MAX_UPLOAD_MB} MB กรุณาลดขนาดก่อน`);
       return;
     }
     const r = new FileReader();
@@ -737,7 +738,7 @@ export const EVSELECTSStudio = () => {
  <div className="lt-upload-card" onDragOver={e => e.preventDefault()} onDrop={e => {
             e.preventDefault();
             loadFile(e.dataTransfer.files[0]);
-          }}><span className="lt-upload-icon"><Icon name="upload" size={23} /></span><div><h3>ลองกับรถของคุณ</h3><p>ลากรูปมาวาง หรือเลือกรูปจากเครื่อง<span>JPG, PNG, WebP · สูงสุด 15 MB</span></p></div><button disabled={generating} onClick={() => input.current?.click()}>อัปโหลดรูป<Icon name="plus" size={17} /></button></div><div className="lt-note"><Icon name="shield" size={15} /><span>เมื่อกด สร้างภาพลุคใหม่ รูปและคำอธิบายจะส่งให้ OpenAI เพื่อสร้างภาพ · Concept preview ไม่ยืนยันขนาดหรือการติดตั้ง</span></div></section>
+          }}><span className="lt-upload-icon"><Icon name="upload" size={23} /></span><div><h3>ลองกับรถของคุณ</h3><p>ลากรูปมาวาง หรือเลือกรูปจากเครื่อง<span>JPG, PNG, WebP · สูงสุด {VEHICLE_STYLE_MAX_UPLOAD_MB} MB</span></p></div><button disabled={generating} onClick={() => input.current?.click()}>อัปโหลดรูป<Icon name="plus" size={17} /></button></div><div className="lt-note"><Icon name="shield" size={15} /><span>เมื่อกด สร้างภาพลุคใหม่ รูปและคำอธิบายจะส่งให้ OpenAI เพื่อสร้างภาพ · Concept preview ไม่ยืนยันขนาดหรือการติดตั้ง</span></div></section>
  <aside className="lt-panel"><div className="lt-panel-title"><div><h3>แต่งให้เป็นคุณ</h3><p>รายละเอียดเล็ก ๆ ที่เปลี่ยนทั้งคัน</p></div><span><Icon name="spark" size={21} /></span></div><div className="lt-tabs">{[['wheels', 'wheel', 'ล้อแม็ก'], ['paint', 'paint', 'สีรถ'], ['style', 'layers', 'สไตล์']].map(([id, icon, label]) => <button key={id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)}><Icon name={icon} size={17} />{label}</button>)}</div><fieldset className="lt-panel-body" disabled={generating} aria-label="ตัวเลือกแต่งรถ">
  {tab === 'wheels' && <><div className="lt-field-label"><h4>สีล้อ</h4><span>{colorLabel}</span></div><div className="lt-swatches">{COLORS.map(c => <button key={c.hex} aria-label={c.name} title={c.name} onClick={() => update({
                   color: c.hex,
