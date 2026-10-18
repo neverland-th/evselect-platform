@@ -1,7 +1,7 @@
 # Vehicle Style public trial
 
 The owner explicitly requested Home use without either API keys or studio codes.
-The Home button mounts the existing Thai editor in an isolated ShadowRoot;
+Home directly renders the Thai MagicPath editor, without an extra launch button;
 `/vehicle-style/studio` also opens the same editor without authentication.
 The noindex tool is excluded from the sitemap; `/vehicle-style` remains the
 public guide. The main site keeps its established layout and security headers.
@@ -15,10 +15,24 @@ backend. No credential is sent to the visitor, saved in the frontend, or checked
 into source. Responses are streamed and never cached. No image is stored by the
 Home editor or quota database; users must save results before leaving.
 
-`src/lib/vehicle-style/client.js`, `options.js`, `input.mjs`, and the scoped CSS
-reuse the existing standalone app implementation. Keep option IDs and validation
-compatible with that private service. Test fixtures and service credentials must
-never be copied into public assets.
+The owner supplied `https://designs.magicpath.ai/v1/crisp-wave-3071`. Its exact
+revision `462367477918224384` was imported as the namespaced React component
+`src/components/vehicle-style/EVSELECTSStudio.tsx` and CSS, without importing the
+Vite scaffold, external fonts, global reset or unused package dependencies.
+Wheel controls retain the existing diameter/width choices and free text design.
+The imported component calls only the same-origin public facade. Its styling text
+maps to the existing `notes` field (600 characters), preserving the established
+image-service request and cost settings. Explicit consent and quota readiness are
+required before submission; no requests retry automatically. The single image
+comparison, custom colours, local upload and labelled PNG export remain available.
+The two demo images supplied with that revision are hosted as
+`public/vehicle-style/demo-original.jpg` and `demo-concept.webp`. Google Storage
+did not provide canvas CORS access from the website; same-origin copies permit
+both the comparison and local PNG export without a proxy or credentials. They
+are labelled example/concept images, not a newly paid result or fitment evidence.
+The previous vanilla client/template remain for reference and compatibility; they
+are no longer mounted on Home. Keep option IDs and validation compatible with the
+private service. Test fixtures and credentials must never enter public assets.
 
 ## Shared quota
 
@@ -43,3 +57,13 @@ public copy, llms index, and tests together.
 - `BASE_URL=... node --test scripts/test-homepage-content.mjs scripts/test-llms.mjs`.
 - Review the actual Home editor at Android widths and desktop; distinguish local
   fixtures, real image calls, and physical Android picker/export evidence.
+
+2026-10-18 MagicPath integration review: actual rendered desktop (1440px) and
+mobile (390px), all three panels, help text and both supplied images reviewed.
+The imported cross-origin image failure and an unlinked loading-state brand were
+fixed. Local browser fixtures verified consent gating, custom colours, diameter,
+width, free-text design, same-origin request fields, reset, file upload, PNG
+download (2304x1408), keyboard comparison and touch comparison. Widths
+320/360/390/412/768/1440 had no horizontal overflow. No new paid generation was
+submitted for this UI change; the previously verified public service is reused.
+Physical Android device testing remains outstanding.
