@@ -31,8 +31,12 @@ const nextConfig: NextConfig = {
       // Optional agent discovery, not a crawler permission or ranking directive.
       ...['/', '/articles/:path*'].map(source => ({
         source,
-        headers: [{ key: 'Link', value: '</llms.txt>; rel="describedby"' }],
+        headers: [{ key: 'Link', value: '</llms.txt>; rel="describedby", </.well-known/ard.json>; rel="ard", </.well-known/ai-catalog.json>; rel="ai-catalog"' }],
       })),
+      {
+        source: '/vehicle-style/:path*',
+        headers: [{ key: 'Link', value: '</.well-known/ard.json>; rel="ard", </.well-known/ai-catalog.json>; rel="ai-catalog"' }],
+      },
       {
         source: '/(.*)',
         headers: [

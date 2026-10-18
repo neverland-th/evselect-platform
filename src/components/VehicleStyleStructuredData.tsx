@@ -1,6 +1,6 @@
 import { serializeImageMetadata } from '@/lib/image-credits';
 import { siteOrigin } from '@/lib/public-site-routes';
-import { vehicleStylePublicInfo as info } from '@/lib/vehicle-style/public-info';
+import { getVehicleStyleApplicationSchema } from '@/lib/vehicle-style/structured-data';
 
 // One app entity across its embedded Home experience and public guide.
 // No ratings or reviews are invented to satisfy Google's rich-result requirements.
@@ -21,28 +21,7 @@ export default function VehicleStyleStructuredData({ pagePath }: { pagePath: '/'
           ? { mainEntity: { '@id': appId } }
           : { mentions: { '@id': appId } }),
       },
-      {
-        '@type': 'WebApplication',
-        '@id': appId,
-        name: info.name,
-        alternateName: 'Vehicle Style',
-        url: guideUrl,
-        description: `${info.description} ${info.trial} · ${info.usage} ${info.disclaimer}`,
-        inLanguage: 'th-TH',
-        applicationCategory: 'DesignApplication',
-        browserRequirements: 'ต้องเปิด JavaScript และเชื่อมต่ออินเทอร์เน็ต',
-        publisher: { '@id': `${siteOrigin}/#organization` },
-        mainEntityOfPage: { '@id': `${guideUrl}#webpage` },
-        featureList: [...info.features],
-        isAccessibleForFree: true,
-        offers: {
-          '@type': 'Offer',
-          price: 0,
-          priceCurrency: 'THB',
-          description: `${info.trial} · ${info.usage}`,
-          url: `${siteOrigin}/#vehicle-style`,
-        },
-      },
+      getVehicleStyleApplicationSchema(),
     ],
   };
   return <script data-vehicle-style-schema type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeImageMetadata(graph) }} />;

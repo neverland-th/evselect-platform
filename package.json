@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run verify:images && npm run test:content-links && npm run test:image-metadata && npm run test:vehicle-style && prisma generate && next build && npm run audit:content -- --build --strict && npm run verify:attribution -- --build",
+    "build": "npm run verify:images && npm run test:content-links && npm run test:image-metadata && npm run test:vehicle-style && npm run test:agent-discovery && prisma generate && next build && npm run audit:content -- --build --strict && npm run verify:attribution -- --build",
     "postinstall": "prisma generate",
     "start": "next start",
     "lint": "eslint",
@@ -19,7 +19,8 @@
     "generate-posts": "tsx scripts/generate-posts.ts",
     "test:shopee": "node scripts/shopee_ev_select/test.js",
     "verify:shopee": "node scripts/shopee_ev_select/verify.test.js",
-    "test:vehicle-style": "tsx --test scripts/test-vehicle-style-api.ts"
+    "test:vehicle-style": "tsx --test scripts/test-vehicle-style-api.ts",
+    "test:agent-discovery": "tsx --test scripts/test-agent-discovery.ts"
   },
   "dependencies": {
     "@next/env": "^16.3.6",

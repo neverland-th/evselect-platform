@@ -1,6 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
+import { registerVehicleStyleAgentTools, type VehicleStyleModelContext } from '@/lib/vehicle-style/agent-tools';
 // Keep the app's geometry in the initial HTML/CSS rather than a late,
 // render-blocking stylesheet belonging to the dynamic JavaScript chunk.
 import './vehicle-style/EVSELECTSStudio.css';
@@ -11,5 +13,9 @@ const Studio = dynamic(
 );
 
 export default function VehicleStyleEditor() {
+  useEffect(() => {
+    const context = (document as Document & { modelContext?: VehicleStyleModelContext }).modelContext;
+    return registerVehicleStyleAgentTools(context);
+  }, []);
   return <><Studio /><noscript><p>กรุณาเปิด JavaScript เพื่อเลือกรูปและลองแต่งรถ</p></noscript></>;
 }
