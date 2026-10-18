@@ -551,7 +551,7 @@ export const EVSELECTSStudio = () => {
       }
       x.fillStyle = '#141617';
       x.fillRect(0, H, W, 64);
-      x.fillStyle = '#cab08a';
+      x.fillStyle = '#bef264';
       x.font = '18px sans-serif';
       x.fillText('EVSELECTS / ลองแต่งรถ — Styling concept · ภาพจำลอง', 24, H + 39);
       c.toBlob(blob => {
@@ -726,7 +726,7 @@ export const EVSELECTSStudio = () => {
                 }} onPointerUp={e => {
                   if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
                 }} /></>}
- {masking && <svg className="lt-mask" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none"><polygon points={mask.map(p => `${p.x * W},${p.y * H}`).join(' ')} fill="#c69e5d44" stroke="#f5c985" strokeWidth="3" />{mask.map((p, i) => <circle key={i} cx={p.x * W} cy={p.y * H} r="7" fill="#e4b574" />)}</svg>}
+ {masking && <svg className="lt-mask" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none"><polygon points={mask.map(p => `${p.x * W},${p.y * H}`).join(' ')} fill="#84cc1644" stroke="#bef264" strokeWidth="3" />{mask.map((p, i) => <circle key={i} cx={p.x * W} cy={p.y * H} r="7" fill="#a3e635" />)}</svg>}
  {placing !== null && wheels.map((w, i) => <span key={i} className={'lt-wheel-target ' + (placing === i ? 'active' : '')} style={{
                 left: w.x * 100 + '%',
                 top: w.y * 100 + '%'
@@ -776,7 +776,7 @@ export const EVSELECTSStudio = () => {
                 setPlacing(null);
                 setMode('concept');
               }}>เลือกพื้นที่ตัวถัง<Icon name="plus" size={16} /></button>{masking && <div className="lt-mask-actions"><button onClick={() => setMask(m => m.slice(0, -1))}>ลบจุดล่าสุด</button><button disabled={mask.length < 3} onClick={() => setMasking(false)}>ใช้พื้นที่นี้</button></div>}</>}
- {tab === 'style' && <><div className="lt-field-label"><h4>อยากแต่งรถแบบไหน?</h4><span>YOUR DESIGN</span></div><p className="lt-panel-copy">พิมพ์แนวแต่งหรือจุดที่อยากเปลี่ยน แล้วสร้างภาพใหม่จากรถของคุณ</p><label className="lt-style-label" htmlFor="vehicle-style-prompt">รายละเอียดการแต่ง</label><textarea ref={promptInput} id="vehicle-style-prompt" className="lt-style-input" value={stylePrompt} maxLength={2000} rows={7} disabled={generating} aria-describedby="style-prompt-hint" placeholder="เช่น Tesla สีขาว โหลดเตี้ย ล้อบรอนซ์ BBS ฝากระโปรงและชุดแต่ง carbon fiber คงฉากและมุมกล้องเดิม" onChange={e => {
+ {tab === 'style' && <><div className="lt-field-label"><h4>อยากแต่งรถแบบไหน?</h4><span>YOUR DESIGN</span></div><p className="lt-panel-copy">พิมพ์แนวแต่งหรือจุดที่อยากเปลี่ยน แล้วสร้างภาพใหม่จากรถของคุณ</p><label className="lt-style-label" htmlFor="vehicle-style-prompt">รายละเอียดการแต่ง</label><textarea ref={promptInput} id="vehicle-style-prompt" className="lt-style-input" value={stylePrompt} maxLength={2000} rows={7} disabled={generating} aria-describedby="style-prompt-hint" placeholder="เช่น Tesla Model 3 สีแดงสด โหลดเตี้ย ล้อบรอนซ์ ฝากระโปรงและชุดแต่งคาร์บอน คงฉากและมุมกล้องเดิม" onChange={e => {
                 setStylePrompt(e.target.value);
                 setGenerationError('');
               }} /><div className="lt-prompt-meta"><span id="style-prompt-hint">ภาษาไทยหรือ English ได้</span><span>{stylePrompt.length} / 2,000</span></div><p className="lt-style-hint">ข้อความนี้มีลำดับสำคัญกว่าสีและล้อที่เลือกไว้ ใช้รูปต้นฉบับสร้างใหม่ทุกครั้ง</p><div className="lt-prompt-tip"><Icon name="spark" size={17} /><span>ระบุสี ล้อ ชุดแต่ง และความสูงรถให้ชัด เพื่อให้ภาพใกล้ไอเดียที่ต้องการ</span></div></>}
