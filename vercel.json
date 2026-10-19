@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.evselects.com" }],
+      "destination": "https://evselects.com/:path*",
+      "permanent": true
+    }
+  ],
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "node scripts/build-frontend.mjs"
 }
