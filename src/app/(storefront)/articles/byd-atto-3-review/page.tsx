@@ -110,6 +110,7 @@ export default function Atto3ArticlePage() {
 
       <section className="space-y-5 rounded-2xl border border-lime-200 bg-lime-50 p-5 sm:p-7" aria-labelledby="decision">
         <h2 id="decision" className={headingStyle}>ก่อนจอง ให้ตอบได้สามข้อ</h2>
+        <p>หากยังมองครอสโอเวอร์ไฟฟ้าคันอื่นด้วย อ่าน <Link href="/articles/zeekr-x-review" className={linkStyle}>ZEEKR X สเปกไทยและความต่างของสองรุ่น</Link> ประกอบการเลือกรถไปลองนั่ง เทียบพื้นที่ใช้สอย อุปกรณ์ และค่าใช้จ่ายจากรถกับข้อเสนอจริง</p>
         <ol className="list-decimal space-y-3 pl-6">
           <li><strong>ชาร์จที่ไหน:</strong> มีที่ชาร์จประจำที่ติดตั้งและใช้งานได้จริง หรือมีสถานีสะดวกพร้อมแผนสำรองหรือยัง?</li>
           <li><strong>แบตเตอรี่เพิ่มช่วยอะไร:</strong> เทียบเส้นทางที่ขับบ่อยกับส่วนต่างราคาในใบเสนอราคา ไม่ใช้ระยะ NEDC เป็นคำสัญญาว่าจะขับถึงทุกครั้ง</li>

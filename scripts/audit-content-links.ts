@@ -6,6 +6,7 @@ import { once } from 'node:events';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { inspectPage, parseSitemap, blockingPages } from './lib/content-links.mjs';
+import { buildLinkGraph } from './lib/link-graph.mjs';
 import { publicSiteRoutes, pendingPublicRoutes, supportingPublicRoutes, siteOrigin } from '../src/lib/public-site-routes';
 
 const args = new Set(process.argv.slice(2));
@@ -97,6 +98,13 @@ async function main() {
     if (link.target && link.target.path !== page.route && incoming.has(link.target.path)) incoming.get(link.target.path)!.push(page.route);
   }
   for (const page of pages) if (page.route.startsWith('/articles/') && !incoming.get(page.route)?.length) page.issues.push({ code: 'orphan-article', detail: 'No incoming internal link from audited pages' });
+  const requiredPaths = JSON.parse(await readFile('scripts/required-reading-paths.json', 'utf8'));
+  const linkGraph = buildLinkGraph(pages, publicSiteRoutes, requiredPaths);
+  for (const missing of linkGraph.missingRequiredPaths) {
+    const source = byRoute.get(missing.source);
+    assert.ok(source, `Required reading-path source not audited: ${missing.source}`);
+    source.issues.push({ code: 'missing-reviewed-reading-path', detail: `${missing.destination}${missing.hash ? '#' + missing.hash : ''}` });
+  }
   // Destination changes must invalidate legacy allowances even if the source HTML is unchanged.
   for (const page of pages) page.fingerprint = createHash('sha256').update(JSON.stringify([page.fingerprint, page.issues])).digest('hex');
 
@@ -127,12 +135,15 @@ async function main() {
     links: pages.reduce((sum, p) => sum + p.links.length, 0),
     internalLinks: pages.reduce((sum, p) => sum + p.links.filter(l => l.target).length, 0),
     contextualCandidates: pages.reduce((sum, p) => sum + p.links.filter(l => l.scope === 'contextual-candidate').length, 0),
+    articlesWithoutContextualIncoming: linkGraph.warnings.filter((w: { code: string }) => w.code === 'no-contextual-incoming').length,
+    articleAppEntryLinks: linkGraph.appEntryLinks.filter((edge: { source: string }) => edge.source.startsWith('/articles/')).length,
+    missingReviewedReadingPaths: linkGraph.missingRequiredPaths.length,
     issueCounts: pages.flatMap(p => p.issues).reduce((counts, issue) => ({ ...counts, [issue.code]: (counts[issue.code] || 0) + 1 }), {} as Record<string, number>),
     blockerRoutes: blockers.map((p: ReturnType<typeof inspectPage>) => p.route),
     baselinePolicy: args.has('--strict') ? 'Strict: every finding blocks publication. No legacy exceptions.' : 'Historical compatibility mode: only unchanged fingerprints may retain documented legacy findings.',
   };
   await mkdir(path.dirname(output), { recursive: true });
-  await writeFile(output, JSON.stringify({ base, checkedAt: new Date().toISOString(), scope: 'All public SSR anchors plus contextual candidates; not proof of semantic relevance, external fact checking, browser states or reader review.', summary, sitemapChecks, pages }, null, 2));
+  await writeFile(output, JSON.stringify({ base, checkedAt: new Date().toISOString(), scope: 'All public SSR anchors plus contextual candidates; not proof of semantic relevance, external fact checking, browser states or reader review.', summary, sitemapChecks, linkGraph, pages }, null, 2));
   const csvCell = (value: string) => `"${value.replace(/^[=+@-]/, match => `'${match}`).replaceAll('"', '""')}"`;
   const csvRows = [['source', 'anchor', 'destination', 'scope', 'destinationTitle', 'target', 'rel'],
     ...pages.flatMap(page => page.links.filter(link => link.target).map(link => [page.route, link.text || link.label, link.href, link.scope, link.destinationTitle, link.openTarget, link.rel]))];

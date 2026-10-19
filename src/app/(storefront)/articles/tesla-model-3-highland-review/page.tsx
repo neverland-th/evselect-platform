@@ -90,6 +90,7 @@ export default function TeslaModel3HighlandReviewPage() {
       </section>
       <section id="choose-trim" className="mb-12 scroll-mt-24">
         <h2 className="text-2xl font-extrabold mb-3">เลือกรุ่นจากสิ่งที่ใช้งานจริง</h2>
+        <p className="mb-4 text-slate-600 leading-relaxed">ถ้ายังไม่ได้ตัดสินใจว่าจะเลือก Model 3 ลองอ่าน <Link href="/articles/byd-seal-review" className="underline text-lime-800">ความต่างของรุ่นย่อย BYD Seal สเปกไทย</Link> และ <Link href="/articles/mg-im5-review" className="underline text-lime-800">MG IM5 สเปกไทยและข้อควรรู้ก่อนซื้อ</Link> ประกอบการเลือกรถไปทดลองขับ โดยเทียบราคาและมาตรฐานระยะวิ่งให้ตรงกัน</p>
         <p className="text-sm text-slate-600 mb-5 leading-relaxed">แนวทางด้านล่างเป็นมุมมองประกอบการเลือกจากอุปกรณ์ที่ระบุ ควรทดลองขับและเทียบค่าใช้จ่ายก่อนตัดสินใจ</p>
         <div className="grid sm:grid-cols-2 gap-5">{trims.map(trim => <section key={trim.id} data-trim={trim.id} className={`rounded-3xl border p-6 flex flex-col ${trim.id === 'performance' ? 'bg-slate-900 border-slate-800 text-white' : trim.id === 'long-range-rwd' ? 'bg-lime-50/50 border-lime-300' : 'bg-white border-slate-200'}`}>
           <span className={`text-xs font-bold mb-3 ${trim.id === 'performance' ? 'text-lime-300' : 'text-lime-800'}`}>{trim.label}</span>
@@ -112,6 +113,7 @@ export default function TeslaModel3HighlandReviewPage() {
       </section>
       <section id="wheels-and-chassis" className="mb-12 max-w-4xl space-y-4 leading-relaxed text-slate-600">
         <h2 className="text-2xl font-extrabold text-slate-900">คิดเรื่องล้อ ช่วงล่าง และเบรกต่อจากสเปก</h2>
+        <p>อยากเห็นว่าสีรถหรือสีล้อแบบไหนเข้ากับคันของคุณ? <Link href="/#vehicle-style" className="underline text-lime-800">ลองสีรถและล้อจากรูปของคุณฟรี</Link> แล้วเทียบภาพก่อน–หลังได้ ภาพจาก AI เป็นเพียงแนวคิด ไม่ยืนยันขนาดหรือการติดตั้งจริง หากเพิ่งเริ่มใช้ ดู <Link href="/vehicle-style" className="underline text-lime-800">วิธีใช้แอปลองแต่งรถ</Link> ก่อนอัปโหลดรูป</p>
         <p>ถ้าสนใจ Performance หรือกำลังจะเปลี่ยนล้อ ลองอ่าน <Link href="/articles/ev-tyre-and-coilover-selection-guide" className="underline text-lime-800">ยาง EV กับยาง Performance เลือกแบบไหน</Link> เพื่อดูขนาดยาง น้ำหนักบรรทุก และสิ่งที่ต้องตรวจร่วมกับรถจริง ส่วนอาการเด้ง ย้วย หรือกระแทก ควรแยกสาเหตุก่อนเริ่ม <Link href="/articles/ev-damper-tuning-bump-rebound-guide" className="underline text-lime-800">ปรับแดมเปอร์ Bump และ Rebound</Link></p>
         <p>หากกำลังเล็งชุดเบรกใหม่ บทความ <Link href="/articles/ev-carbon-ceramic-brakes-guide" className="underline text-lime-800">Carbon Ceramic คุ้มไหม? ก่อนจ่ายหลักแสนอัปเกรดเบรก EV</Link> จะช่วยแยกเรื่องฟีลเบรก ความร้อน ฝุ่น และค่าใช้จ่าย พร้อมเคส ENDLESS จาน 375 mm บน Model 3 Performance Highland ของเจ้าของรถ</p>
       </section>

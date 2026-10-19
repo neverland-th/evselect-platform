@@ -1,8 +1,51 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { inspectPage, internalTarget, parseSitemap, blockingPages, imageIdentity } from './lib/content-links.mjs';
+import { buildLinkGraph } from './lib/link-graph.mjs';
 
 const page = body => `<html><head><title>Test</title><meta name="description" content="EVSELECT"></head><body><main><h1>เรื่องโช้ค</h1>${body}</main></body></html>`;
+
+test('Editorial headers and footers inside main are content, not site navigation', () => {
+  const result = inspectPage(page('<header><p>เริ่มจาก <a href="/articles/guide">คู่มือช่วงล่าง</a> ก่อนเลือกรุ่น</p></header><footer><p>ลองอ่าน <a href="/articles/tyres">วิธีเลือกยาง</a> ก่อนซื้อชุดใหม่</p></footer><nav><p>เลือก <a href="/articles/menu">เมนูบทความ</a> ที่นี่</p></nav>'), '/articles/test');
+  assert.deepEqual(result.links.map(link => link.inline), [true, true, false]);
+  assert.equal(result.links.filter(link => link.scope === 'contextual-candidate').length, 2);
+});
+
+test('Graph separates discovery from contextual incoming and deduplicates source pages', () => {
+  const pages = [
+    inspectPage(page('<nav><a href="/articles/a">บทความ A</a></nav>'), '/'),
+    inspectPage(page('<p>อ่าน <a href="/articles/b">บทความ B</a> เพื่อเข้าใจเพิ่ม</p><p>ทบทวน <a href="/articles/b">เรื่อง B</a> ก่อนเลือก</p><p>ดูภาพจาก <a href="/#vehicle-style">แอปแต่งรถฟรี</a> ก่อนตัดสินใจ</p>'), '/articles/a'),
+    inspectPage(page('<nav><a href="/articles/a">กลับบทความ A</a></nav>'), '/articles/b'),
+  ];
+  const required = [{ source: '/articles/a', destination: '/', hash: 'vehicle-style' }];
+  const graph = buildLinkGraph(pages, pages.map(p => p.route), required);
+  const b = graph.nodes.find(n => n.route === '/articles/b');
+  assert.deepEqual(b.contextualArticleSources, ['/articles/a']);
+  assert.equal(b.depthFromHome, 2);
+  assert.equal(b.bodyDepthFromHome, null);
+  assert.equal(graph.appEntryLinks.length, 1);
+  assert.equal(graph.missingRequiredPaths.length, 0);
+  assert.ok(graph.warnings.some(w => w.route === '/articles/a' && w.code === 'no-contextual-incoming'));
+  assert.equal(buildLinkGraph(pages, pages.map(p => p.route), [{ ...required[0], hash: 'wrong' }]).missingRequiredPaths.length, 1);
+});
+
+test('Navigation and nofollow links cannot satisfy reviewed inline reading paths', () => {
+  const result = inspectPage(page('<nav><a href="/articles/b">เรื่อง B</a></nav><p>ลองอ่าน <a href="/articles/c" rel="nofollow">เรื่อง C</a> ก่อนเลือก</p>'), '/articles/a');
+  const paths = ['b', 'c'].map(slug => ({ source: result.route, destination: '/articles/' + slug }));
+  assert.equal(buildLinkGraph([result], [result.route], paths).missingRequiredPaths.length, 2);
+});
+
+test('Noindex body destinations are reported except for the intentionally noindex studio', () => {
+  const source = inspectPage(page('<p>อ่าน <a href="/pending">หน้านี้</a> หรือใช้ <a href="/vehicle-style/studio">สตูดิโอ</a> เพื่อดูภาพ</p>'), '/');
+  const hidden = route => ({ ...inspectPage(page(''), route), robots: 'noindex, follow' });
+  const graph = buildLinkGraph([source, hidden('/pending'), hidden('/vehicle-style/studio')], ['/']);
+  assert.deepEqual(graph.warnings.filter(w => w.code === 'body-link-to-noindex').map(w => w.detail), ['/pending']);
+});
+
+test('Generic full-review labels are flagged despite descriptive card links elsewhere', () => {
+  const result = inspectPage(page('<a href="/articles/a">อ่านรีวิวฉบับเต็ม</a><a href="/articles/b">อ่านบทความฉบับเต็ม</a>'), '/articles');
+  assert.equal(result.issues.filter(i => i.code === 'generic-anchor').length, 2);
+});
 test('Internal URLs preserve queries and decode fragments; external links stay external', () => {
   assert.deepEqual(internalTarget('https://www.evselects.com/articles?category=reviews#%E0%B9%84%E0%B8%97%E0%B8%A2'), { path: '/articles', query: '?category=reviews', hash: 'ไทย' });
   assert.equal(internalTarget('https://manufacturer.com/specs'), null);

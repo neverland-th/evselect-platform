@@ -150,6 +150,7 @@ export default function EVTyreAndCoiloverSelectionGuidePage() {
       </Section>
 
       <Section id="before-you-buy" title="6. เลือกให้ตรงรถและการขับในไทย ก่อนเลือกว่าเอา EV หรือ Performance">
+        <p>ถ้าจะเปลี่ยนล้อพร้อมยางและยังนึกภาพสีหรือลายล้อไม่ออก ลอง <Link href="/#vehicle-style" className={linkStyle}>ดูภาพรถของคุณกับแนวแต่งที่อยากได้</Link> ผ่านแอปฟรีก่อนได้ แต่ภาพจาก AI ไม่ได้ตรวจขนาดล้อ พิกัดยาง หรือระยะเคลียร์ ต้องยืนยันข้อมูลเหล่านี้กับคู่มือและผู้ติดตั้งแยกกัน</p>
         <ol className="list-decimal space-y-4 pl-6">
           <li><strong>เริ่มจากรถคันจริง:</strong> จดรุ่น ปี รุ่นย่อย ขนาดล้อ และยางหน้า–หลัง ตรวจป้ายรถกับคู่มือ เพราะบางรุ่นใช้ขนาดหน้าและหลังต่างกัน ตัวอย่างดูได้จาก <Source href={sources.manual}>คู่มือ Model 3 ภาษาไทย</Source></li>
           <li><strong>ขอรหัสยางเต็ม:</strong> ขนาด, Load Index, Speed Rating, XL/HL, เครื่องหมาย OE และเทคโนโลยีของสเปกนั้น เช่น Acoustic, Elect หรือระบบที่ช่วยเมื่อยางสูญเสียแรงดัน</li>

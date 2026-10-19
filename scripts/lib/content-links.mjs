@@ -55,14 +55,16 @@ export function inspectPage(html, route) {
     const imageAlt = normalize([...a.querySelectorAll('img')].map(img => img.getAttribute('alt')).join(' '));
     const label = text || imageAlt || normalize(a.getAttribute('aria-label'));
     const target = internalTarget(href, route);
-    const global = !a.closest('main') || !!a.closest('nav,footer,header,[role="navigation"]');
+    // A header/footer inside main can be editorial content, not site navigation.
+    const global = !a.closest('main') || !!a.closest('nav,[role="navigation"]');
     const paragraph = a.closest('p,li,td,dd');
     const context = paragraph ? textOf(paragraph) : '';
-    const contextual = !global && !!paragraph && context.length > text.length + 8 && !!target && target.path.startsWith('/articles/') && target.path !== route;
+    const inline = !global && !!paragraph && context.length > text.length + 8;
+    const contextual = inline && !!target && target.path.startsWith('/articles/') && target.path !== route;
     const scope = global ? 'navigation' : contextual ? 'contextual-candidate' : 'body-navigation';
     const openTarget = a.getAttribute('target') || '';
     const rel = a.getAttribute('rel') || '';
-    links.push({ href, text, label, target, scope, openTarget, rel, destinationTitle: '', ...(contextual ? { context } : {}) });
+    links.push({ href, text, label, target, scope, inline, openTarget, rel, destinationTitle: '', ...(inline ? { context } : {}) });
     if (href && target) {
       if (openTarget && openTarget !== '_self') add('internal-new-tab', `${text || label} → ${href}`);
     } else if (/^(https?:)?\/\//i.test(href)) {
@@ -71,7 +73,7 @@ export function inspectPage(html, route) {
     }
     if (!href || /^(javascript:|#$)/i.test(href)) add('invalid-href', label || '(empty)');
     if (!label) add('empty-anchor', href);
-    if (target && /^(คลิกที่นี่|อ่านต่อ|อ่านเพิ่มเติม|เพิ่มเติม|click here|read more)[\s→↗!]*$/i.test(text)) add('generic-anchor', `${text} → ${href}`);
+    if (target && /^(คลิกที่นี่|อ่านต่อ|อ่านเพิ่มเติม|เพิ่มเติม|อ่านรีวิวฉบับเต็ม|อ่านบทความฉบับเต็ม|click here|read more)[\s→↗!]*$/i.test(text)) add('generic-anchor', `${text} → ${href}`);
     if (a.querySelector('a')) add('nested-anchor', href);
   }
   const brands = [];

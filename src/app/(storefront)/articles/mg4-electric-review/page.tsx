@@ -139,6 +139,7 @@ export default function MG4ElectricReviewPage() {
 
       <section className="space-y-4" aria-labelledby="next-step">
         <h2 id="next-step" className={headingStyle}>ก่อนจอง ให้ได้คำตอบว่ารุ่นไหนเหมาะกับคุณ</h2>
+        <p>ถ้าโจทย์หลักคือเดินทางในเมืองและอยากลองรถอีกขนาด อ่าน <Link href="/articles/geely-ex2-review" className={linkStyle}>Geely EX2 รุ่น Pro กับ Max เลือกแบบไหนดี</Link> แล้วนำขนาดที่จอด คนที่นั่งประจำ และสัมภาระไปเทียบกับรถจริง ไม่จำเป็นต้องเลือกจากกำลังมอเตอร์เพียงอย่างเดียว</p>
         <p>ขอทดลองรถรุ่นย่อยที่สนใจ เทียบรายการส่งมอบ และใช้ใบเสนอราคาชุดเดียวกันคุยเรื่องค่าใช้จ่าย หาก D ตอบงานครบอยู่แล้ว ความประหยัดส่วนต่างมีความหมาย แต่ถ้าระยะสำรองและอุปกรณ์ของ X ช่วยการเดินทางของคุณจริง นั่นคือเหตุผลที่ชัดเจนกว่าเลือกจากรุ่นท็อปเพียงอย่างเดียว</p>
         <div className="rounded-2xl border border-lime-200 bg-lime-50 p-5">
           <h3 className="text-lg font-bold text-slate-950">อุปกรณ์เสริมของเราอยู่ระหว่างเตรียมเปิดตัว</h3>

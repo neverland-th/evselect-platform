@@ -1116,7 +1116,7 @@ export default async function ArticlesIndexPage({ searchParams }: PageProps) {
                 <div className="flex items-center justify-between gap-3 text-xs text-slate-500 pt-3.5 border-t border-slate-100">
                   <span>{article.dateDisplay}</span>
                   <Link href={`/articles/${article.slug}`} className="min-h-11 text-sm font-semibold text-lime-700 hover:text-lime-800 inline-flex items-center gap-1 group/btn">
-                    <span>{article.categorySlug === 'reviews' ? 'อ่านรีวิวฉบับเต็ม' : 'อ่านบทความฉบับเต็ม'}</span>
+                    <span>{article.categorySlug === 'reviews' ? 'อ่านรีวิว' : 'อ่านเรื่อง'} {article.shortTitle.replace(/^รีวิว\s*/, '')}</span>
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>

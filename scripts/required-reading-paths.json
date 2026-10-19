@@ -1,0 +1,73 @@
+[
+  {
+    "source": "/articles/tesla-model-3-highland-review",
+    "destination": "/articles/byd-seal-review"
+  },
+  {
+    "source": "/articles/tesla-model-3-highland-review",
+    "destination": "/articles/mg-im5-review"
+  },
+  {
+    "source": "/articles/tesla-model-3-highland-review",
+    "destination": "/",
+    "hash": "vehicle-style"
+  },
+  {
+    "source": "/articles/tesla-model-3-highland-review",
+    "destination": "/vehicle-style"
+  },
+  {
+    "source": "/articles/deepal-s05-review",
+    "destination": "/articles/byd-atto-3-review"
+  },
+  {
+    "source": "/articles/deepal-s05-review",
+    "destination": "/articles/deepal-s07-review"
+  },
+  {
+    "source": "/articles/byd-atto-3-review",
+    "destination": "/articles/zeekr-x-review"
+  },
+  {
+    "source": "/articles/mg4-electric-review",
+    "destination": "/articles/geely-ex2-review"
+  },
+  {
+    "source": "/articles/geely-ex2-review",
+    "destination": "/articles/mg4-electric-review"
+  },
+  {
+    "source": "/articles/tesla-model-y-l-premium-6-seater-review",
+    "destination": "/articles/zeekr-009-review"
+  },
+  {
+    "source": "/articles/hybrid-to-ev-chassis-dynamics-transition",
+    "destination": "/articles/ev-performance-driving-techniques"
+  },
+  {
+    "source": "/articles/zeekr-x-review",
+    "destination": "/",
+    "hash": "vehicle-style"
+  },
+  {
+    "source": "/articles/ev-tyre-and-coilover-selection-guide",
+    "destination": "/",
+    "hash": "vehicle-style"
+  },
+  {
+    "source": "/articles/ev-damper-tuning-bump-rebound-guide",
+    "destination": "/articles/optimizing-ev-suspension-thai-roads"
+  },
+  {
+    "source": "/articles/ev-damper-tuning-bump-rebound-guide",
+    "destination": "/articles/shock-absorber-types-monotube-twintube-air-ev"
+  },
+  {
+    "source": "/articles/ev-damper-tuning-bump-rebound-guide",
+    "destination": "/articles/ev-camber-adjustment-wheel-alignment-guide"
+  },
+  {
+    "source": "/articles/ev-damper-tuning-bump-rebound-guide",
+    "destination": "/articles/ev-suspension-tuning-guide"
+  }
+]
